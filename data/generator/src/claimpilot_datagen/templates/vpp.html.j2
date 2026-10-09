@@ -1,0 +1,10 @@
+{% extends "_layout.html.j2" %}
+{% block style %} body { font: 9.5pt/1.4 Georgia, serif; } h2 { border: none; font-size: 10.5pt; margin: 4mm 0 1mm; } .par { margin: 0 0 1.5mm; text-align: justify; } {% endblock %}
+{% block body %}
+<div class="head"><div class="logo">{{ insurer }}</div><div class="muted">{{ terms_id }}</div></div>
+<h1>{{ title }}</h1>
+{% for a in articles %}
+<h2>Článok {{ a.number }}<br>{{ a.title }}</h2>
+{% for p in a.paragraphs %}<p class="par">({{ loop.index }}) {{ p }}</p>{% endfor %}
+{% endfor %}
+{% endblock %}
