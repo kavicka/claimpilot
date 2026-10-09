@@ -1,0 +1,31 @@
+# Routing rules, first match wins. The decision table in docs/discovery/decision-table.md mirrors
+# this file; thresholds are hypotheses to validate with claims handlers.
+thresholds:
+  fast_track_max_eur: 500
+  senior_min_eur: 3000
+  early_claim_days: 3          # event within N days after the policy was concluded
+  date_gap_days: 2             # claim form event date vs medical report date
+  fast_track_min_confidence: 0.9
+
+# Words in medical reports (any language in the dataset) that point to an exclusion (VPP A5, A11).
+signals:
+  alcohol: ["alkohol", "alcol", "alcohol", "promil", "‰", "ebbrezza", "intoxicated", "alkoholiz", "blutalkohol"]
+  extreme_sport: ["paragl", "parapendio", "paraglaj", "paraglid", "fallschirm", "bungee", "skydiv", "tandemflug", "tandem flight"]
+  pre_existing: ["bekannte", "known arterial", "nota,", "ipertensione arteriosa nota", "poznata", "známá", "znama", "seit 20", "since 20", "dal 20", "od 20", "dispenzariz"]
+
+required_documents:
+  medical: [[claim_form], [medical_report], [medical_invoice]]
+  accident: [[claim_form], [medical_report]]
+  luggage: [[claim_form], [property_irregularity_report, police_report]]
+  cancellation: [[claim_form], [booking_confirmation], [medical_report]]
+
+rules:
+  - { id: R1, queue: fraud_review, when: "same file or same invoice number already used in another claim", clause: A13.4 }
+  - { id: R2, queue: fraud_review, when: "event date on the claim form and the medical report differ by more than date_gap_days" }
+  - { id: R3, queue: fraud_review, when: "event within early_claim_days after the policy was concluded" }
+  - { id: R4, status: NEEDS_INFO, when: "a required document is missing", clause: A13.2 }
+  - { id: R5, queue: senior, when: "claimed total above senior_min_eur" }
+  - { id: R6, queue: senior, when: "on a medical or accident claim, a medical report mentions an exclusion signal (alcohol, extreme sport, pre-existing condition)" }
+  - { id: R7, queue: standard, when: "cancellation claim" }
+  - { id: R8, queue: fast_track, when: "total up to fast_track_max_eur, every critical field grounded with confidence at least fast_track_min_confidence, no rule above" }
+  - { id: R9, queue: standard, when: "anything else; the LLM reviews these and may move them to senior or fraud_review" }

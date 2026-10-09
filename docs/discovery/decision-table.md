@@ -12,7 +12,7 @@ version lives in `config/routing.yaml` and `data/policies/products.yaml`; this t
 | R3 | Event within 3 days after the policy was concluded (issue date, not start date: a trip-day-1 event under a policy bought weeks earlier is normal) | fraud_review | Fraud signal |
 | R4 | Required document missing | NEEDS_INFO (no queue) | VPP A13.2, A13.3 |
 | R5 | Claimed total above 3,000 EUR | senior | Authority limit |
-| R6 | Possible exclusion (alcohol, extreme sport, pre-existing condition) mentioned in a medical report | senior | Needs judgement |
+| R6 | Medical or accident claim whose medical report mentions a possible exclusion (alcohol, extreme sport, pre-existing condition) | senior | Needs judgement; a known reason on a cancellation is decided in coverage (A9.4) |
 | R7 | Cancellation claim | standard | Always needs a reason check |
 | R8 | All extracted fields grounded, confidence ≥ 0.9, total ≤ 500 EUR, no rule hit | fast_track | Straight-through candidate |
 | R9 | Anything else | standard | |
