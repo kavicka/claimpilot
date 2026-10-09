@@ -1,0 +1,18 @@
+{
+ "step": "doc_type",
+ "prompt_id": "doc_type/classify",
+ "prompt_hash": "1ae7e9f6bb774a99696d2f049238213451f7cc1a36c3e3b1c064e6eaaa6b574f",
+ "model": "ollama:qwen3:4b-instruct",
+ "response": {
+  "text": "{ \"doc_type\": \"pharmacy_receipt\" }",
+  "thinking": "The document text \"Payment due on receipt\" is a statement about when payment is expected. It does not mention any specific type of travel insurance claim, policy, medical report, invoice, receipt, airline baggage issue, police incident, or booking confirmation.\n\nIt is a general payment instruction, likely from a vendor or service provider, indicating that payment will be due once the item or service is received.\n\nGiven the labels, none of the listed categories directly describe a payment due on receipt statement. However, such a statement is most commonly associated with a receipt or invoice from a pharmacy, clinic, or service provider where payment is due upon receipt of goods or services.\n\nAmong the options:\n- \"pharmacy_receipt\" is a till receipt from a pharmacy, drugstore or shop.\n- \"medical_invoice\" is an invoice from a clinic or hospital for treatment.\n- \"property_irregularity_report\", \"police_report\", \"booking_confirmation\", \"claim_form\", \"policy_certificate\", \"medical_report\" are not relevant to a simple payment instruction.\n\nThe phrase \"Payment due on receipt\" is most consistent with a receipt or invoice from a pharmacy or medical service, where payment is due when the item is received.\n\nTherefore, the best match is \"pharmacy_receipt\" as it is a receipt from a pharmacy, and such statements are common in pharmacy transactions.\n\nHowever, if the context is medical treatment, \"medical_invoice\" would be more appropriate.\n\nBut the text does not specify a medical context. It is a general payment instruction.\n\nGiven that \"pharmacy_receipt\" is a receipt from a pharmacy, and such receipts often include \"payment due on receipt\", it is the most likely category.\n\nThus, the label is \"pharmacy_receipt\".\n",
+  "model": "qwen3:4b-instruct",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 173,
+   "tokens_out": 365,
+   "latency_ms": 5123
+  },
+  "cached": false
+ }
+}

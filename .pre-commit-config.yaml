@@ -5,7 +5,9 @@ repos:
       - id: check-yaml
         exclude: ^infra/
       - id: end-of-file-fixer
+        exclude: ^(data/cache|data/synthetic|evals/cassettes|evals/reports|evals/baselines)/
       - id: trailing-whitespace
+        exclude: ^(data/cache|data/synthetic|evals/cassettes|evals/reports|evals/baselines)/
       - id: check-added-large-files
         args: [--maxkb=2048]
       - id: detect-private-key

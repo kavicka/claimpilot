@@ -1,0 +1,18 @@
+{
+ "step": "doc_type",
+ "prompt_id": "doc_type/classify",
+ "prompt_hash": "1ae7e9f6bb774a99696d2f049238213451f7cc1a36c3e3b1c064e6eaaa6b574f",
+ "model": "ollama:qwen3:4b-instruct",
+ "response": {
+  "text": "{ \"doc_type\": \"medical_report\" }",
+  "thinking": "The document provided is a medical report. It includes a clinical examination, findings, and treatment recommendations. It mentions a doctor's assessment, diagnosis (e.g., temporary confusion and memory loss), and treatment (e.g., medication for headaches, outpatient follow-up). The presence of a doctor's name and signature indicates it is a doctor's report.\n\nThe labels include:\n- medical_report: a doctor's or hospital report with diagnosis and findings\n- medical_invoice: an invoice from a clinic or hospital for treatment\n- pharmacy_receipt: a till receipt from a pharmacy\n- etc.\n\nThis document is clearly a medical report with diagnostic findings and treatment advice, not an invoice, receipt, or administrative form.\n\nTherefore, the correct label is \"medical_report\".\n",
+  "model": "qwen3:4b-instruct",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 380,
+   "tokens_out": 167,
+   "latency_ms": 2716
+  },
+  "cached": false
+ }
+}

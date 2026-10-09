@@ -26,6 +26,11 @@ jobs:
         with:
           enable-cache: true
       - run: uv sync --frozen
+      - name: Cache the NER model for the PII guard
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-wikineural-multilingual-ner
       - name: Lint
         run: |
           uv run ruff check .
@@ -37,7 +42,8 @@ jobs:
       - name: Unit and database tests
         run: uv run pytest -m "not smoke and not live"
       - name: Eval gate on recorded responses
-        # Replays cassettes; a prompt change without a fresh recording fails here as stale.
+        # Replays cassettes on the committed ground truth and parse cache (no PDFs, no Docling run);
+        # a prompt change without a fresh recording fails here as stale.
         run: |
           if ls evals/baselines/*.json >/dev/null 2>&1; then
             uv run claimpilot-eval run --suite all --split dev --replay

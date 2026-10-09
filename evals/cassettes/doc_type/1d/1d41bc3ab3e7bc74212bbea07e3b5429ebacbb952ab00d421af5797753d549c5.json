@@ -1,0 +1,18 @@
+{
+ "step": "doc_type",
+ "prompt_id": "doc_type/classify",
+ "prompt_hash": "1ae7e9f6bb774a99696d2f049238213451f7cc1a36c3e3b1c064e6eaaa6b574f",
+ "model": "ollama:qwen3:4b-instruct",
+ "response": {
+  "text": "{ \"doc_type\": \"medical_invoice\" }",
+  "thinking": "The document provided contains a list of medical treatments and their associated costs, including specific items like \"Ošetření na pohotovosti\" (emergency treatment), \"CT vyšetření\" (CT examination), \"Laboratorní vyšetřeni\" (laboratory examination), and \"Infuzní terapie\" (infusion therapy). It also includes a total amount due and a payment deadline.\n\nThis type of document is a detailed breakdown of medical expenses incurred by a patient, which is typically issued by a clinic or hospital. It includes diagnostic and treatment services and is structured as an invoice or receipt for medical services.\n\nGiven the labels, \"medical_invoice\" refers to an invoice from a clinic or hospital for treatment, which matches the content and structure of this document.\n\nOther labels like \"medical_report\" refer to doctor's reports with diagnosis and findings, which are not present here. \"Policy_certificate\" or \"claim_form\" are not relevant as they pertain to insurance documents, not medical treatment invoices.\n\nTherefore, the most appropriate label is \"medical_invoice\".\n",
+  "model": "qwen3:4b-instruct",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 374,
+   "tokens_out": 239,
+   "latency_ms": 3705
+  },
+  "cached": false
+ }
+}
