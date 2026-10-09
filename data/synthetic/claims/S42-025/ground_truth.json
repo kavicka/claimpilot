@@ -1,0 +1,538 @@
+{
+ "scenario_id": "S42-025",
+ "split": "dev",
+ "archetype": "date_inconsistency",
+ "edge_cases": [
+  "date_inconsistency",
+  "foreign_currency"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP26297533",
+ "duplicate_of": null,
+ "destination": "CZ",
+ "trip": {
+  "start": "2026-03-19",
+  "end": "2026-03-31"
+ },
+ "event_date": "2026-03-20",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R2",
+  "total_payout_eur": "164.08",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "164.08"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliklinika Veselá",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "5245.00",
+   "currency": "CZK",
+   "amount_eur": "214.08",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "b9a63879decc12cf6c22f419d4a9300664483cbe5d6494f62e4301c48ff97852",
+   "fields": {
+    "policy_number": {
+     "printed": "CP26297533",
+     "norm": "CP26297533"
+    },
+    "insured_name": {
+     "printed": "Demeter Dudek",
+     "norm": "Demeter Dudek"
+    },
+    "insured_birth_number": {
+     "printed": "800403/9274",
+     "norm": "800403/9274"
+    },
+    "insured_address": {
+     "printed": "Priemyselná 1, 962 32 Hozelec",
+     "norm": "Priemyselná 1, 962 32 Hozelec"
+    },
+    "insured_phone": {
+     "printed": "+421 935 420 410",
+     "norm": "+421 935 420 410"
+    },
+    "insured_email": {
+     "printed": "demeter.dudek79@example.com",
+     "norm": "demeter.dudek79@example.com"
+    },
+    "iban": {
+     "printed": "SK17 3100 0635 7047 4170 3187",
+     "norm": "SK1731000635704741703187"
+    },
+    "destination_country": {
+     "printed": "Česko",
+     "norm": "CZ"
+    },
+    "trip_start": {
+     "printed": "19. 3. 2026",
+     "norm": "2026-03-19"
+    },
+    "trip_end": {
+     "printed": "31. 3. 2026",
+     "norm": "2026-03-31"
+    },
+    "event_date": {
+     "printed": "25. 3. 2026",
+     "norm": "2026-03-25"
+    },
+    "event_place": {
+     "printed": "Špindlerův Mlýn, Česko",
+     "norm": "Špindlerův Mlýn, Česko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Špindlerův Mlýn, Česko, kde sa mi vyvinula akútna gastroenteritída. Cítil som silný nevoľnosť a zvracanie. Zdravotné problémy sa objavili počas pobytu v tejto lokalite.",
+     "norm": "Bol som v Špindlerův Mlýn, Česko, kde sa mi vyvinula akútna gastroenteritída. Cítil som silný nevoľnosť a zvracanie. Zdravotné problémy sa objavili počas pobytu v tejto lokalite."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliklinika Veselá",
+       "norm": "Liečebné náklady – Poliklinika Veselá"
+      },
+      "amount": {
+       "printed": "5 245,00",
+       "norm": "5245.00"
+      },
+      "currency": {
+       "printed": "CZK",
+       "norm": "CZK"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "11. 4. 2026",
+     "norm": "2026-04-11"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Demeter Dudek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        373.6,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "800403/9274",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Priemyselná 1",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        366.3,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 935 420 410",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "demeter.dudek79@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        450.0,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK17 3100 0635 7047 4170 3187",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "9cfb7e81839ad040d1afb161a026211d1ea67f7c84ffe9cea0137b0d665fb5b0",
+   "fields": {
+    "policy_number": {
+     "printed": "CP26297533",
+     "norm": "CP26297533"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "19. 3. 2026",
+     "norm": "2026-03-19"
+    },
+    "policy_end": {
+     "printed": "31. 3. 2026",
+     "norm": "2026-03-31"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Demeter Dudek",
+       "norm": "Demeter Dudek"
+      },
+      "birth_number": {
+       "printed": "800403/9274",
+       "norm": "800403/9274"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "14,30 EUR",
+     "norm": "14.30"
+    },
+    "issue_date": {
+     "printed": "9. 2. 2026",
+     "norm": "2026-02-09"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Demeter Dudek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        123.8,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "800403/9274",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "cs",
+   "locale": "cs",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "33ab6172e1beef4f7a2183c943ae008d1b579303c5b1e518ecd87bfb8ec2c6b5",
+   "fields": {
+    "facility_name": {
+     "printed": "Poliklinika Veselá",
+     "norm": "Poliklinika Veselá"
+    },
+    "facility_country": {
+     "printed": "Česká republika",
+     "norm": "CZ"
+    },
+    "patient_name": {
+     "printed": "Demeter Dudek",
+     "norm": "Demeter Dudek"
+    },
+    "patient_birth_date": {
+     "printed": "3. 4. 1980",
+     "norm": "1980-04-03"
+    },
+    "visit_date": {
+     "printed": "20. 3. 2026",
+     "norm": "2026-03-20"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Akutní gastroenteritida",
+     "norm": "A09"
+    },
+    "icd10_code": {
+     "printed": "A09",
+     "norm": "A09"
+    },
+    "anamnesis": {
+     "printed": "Bez významných předchozích onemocnění. Trvalou medikaci neužívá.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Při vyšetření byla potvrzena akutní gastroenteritida, přítomna byla bolest břicha, zvracení a průjem. Výsledky laboratorních testů ukázaly lehkou leukocytózi a zvýšené hodnoty CRP. Pacientovi byla doporučena hydratace, základní diéta a příjem léků proti průjmu. Byl doporučen odpočinek a sledování stavu. V případě horšení se má pacient obrátit na lékaře.",
+     "norm": "Při vyšetření byla potvrzena akutní gastroenteritida, přítomna byla bolest břicha, zvracení a průjem. Výsledky laboratorních testů ukázaly lehkou leukocytózi a zvýšené hodnoty CRP. Pacientovi byla doporučena hydratace, základní diéta a příjem léků proti průjmu. Byl doporučen odpočinek a sledování stavu. V případě horšení se má pacient obrátit na lékaře."
+    },
+    "physician_name": {
+     "printed": "Petr Křížová",
+     "norm": "Petr Křížová"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Demeter Dudek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        127.6,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Petr Křížová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        75.7,
+        414.7,
+        119.0,
+        424.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "cs",
+   "locale": "cs",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "7ec3f1cb4b119639772f2bafd06a6c5c3e5e96e3ca54375e67af1e97256b0012",
+   "fields": {
+    "invoice_number": {
+     "printed": "FV-2026-15871",
+     "norm": "FV-2026-15871"
+    },
+    "issue_date": {
+     "printed": "21. 3. 2026",
+     "norm": "2026-03-21"
+    },
+    "provider_name": {
+     "printed": "Poliklinika Veselá",
+     "norm": "Poliklinika Veselá"
+    },
+    "provider_country": {
+     "printed": "Česká republika",
+     "norm": "CZ"
+    },
+    "patient_name": {
+     "printed": "Demeter Dudek",
+     "norm": "Demeter Dudek"
+    },
+    "service_date": {
+     "printed": "20. 3. 2026",
+     "norm": "2026-03-20"
+    },
+    "currency": {
+     "printed": "Kč",
+     "norm": "CZK"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Ambulantní vyšetření",
+       "norm": "Ambulantní vyšetření"
+      },
+      "amount": {
+       "printed": "1 587,00",
+       "norm": "1587.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzní terapie",
+       "norm": "Infuzní terapie"
+      },
+      "amount": {
+       "printed": "3 658,00",
+       "norm": "3658.00"
+      }
+     }
+    ],
+    "total": {
+     "printed": "5 245,00",
+     "norm": "5245.00"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Demeter Dudek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        127.6,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Demeter Dudek",
+  "birth_number": "800403/9274",
+  "birth_date": "1980-04-03",
+  "address": "Priemyselná 1, 962 32 Hozelec",
+  "phone": "+421 935 420 410",
+  "email": "demeter.dudek79@example.com",
+  "iban": "SK1731000635704741703187",
+  "id_card": "PA692194",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "A09",
+  "claimed_event_date": "2026-03-25"
+ }
+}

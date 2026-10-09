@@ -1,0 +1,558 @@
+{
+ "scenario_id": "S42-035",
+ "split": "dev",
+ "archetype": "date_inconsistency",
+ "edge_cases": [
+  "date_inconsistency",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP37542226",
+ "duplicate_of": null,
+ "destination": "AT",
+ "trip": {
+  "start": "2026-07-25",
+  "end": "2026-08-04"
+ },
+ "event_date": "2026-07-27",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R2",
+  "total_payout_eur": "866.18",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "866.18"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Rauter",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "916.18",
+   "currency": "EUR",
+   "amount_eur": "916.18",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "268430d437e77c643c69ada35128eaf9d77687f9107708ae5e81918ae9a6f062",
+   "fields": {
+    "policy_number": {
+     "printed": "CP37542226",
+     "norm": "CP37542226"
+    },
+    "insured_name": {
+     "printed": "Vincent Cibulka",
+     "norm": "Vincent Cibulka"
+    },
+    "insured_birth_number": {
+     "printed": "560227/0256",
+     "norm": "560227/0256"
+    },
+    "insured_address": {
+     "printed": "Gronárska 491, 945 39 Bohunice",
+     "norm": "Gronárska 491, 945 39 Bohunice"
+    },
+    "insured_phone": {
+     "printed": "+421 907 800 266",
+     "norm": "+421 907 800 266"
+    },
+    "insured_email": {
+     "printed": "vincent.cibulka67@posta.example.sk",
+     "norm": "vincent.cibulka67@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK22 8330 0000 0016 3810 8149",
+     "norm": "SK2283300000001638108149"
+    },
+    "destination_country": {
+     "printed": "Rakúsko",
+     "norm": "AT"
+    },
+    "trip_start": {
+     "printed": "25. 7. 2026",
+     "norm": "2026-07-25"
+    },
+    "trip_end": {
+     "printed": "4. 8. 2026",
+     "norm": "2026-08-04"
+    },
+    "event_date": {
+     "printed": "4. 8. 2026",
+     "norm": "2026-08-04"
+    },
+    "event_place": {
+     "printed": "Wien, Rakúsko",
+     "norm": "Wien, Rakúsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Wieni, kde som utrpel otras mozgu. Po udalosti som sa obrátil na miestne zdravotníctvo.",
+     "norm": "Bol som v Wieni, kde som utrpel otras mozgu. Po udalosti som sa obrátil na miestne zdravotníctvo."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Rauter",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Rauter"
+      },
+      "amount": {
+       "printed": "916,18",
+       "norm": "916.18"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "13. 8. 2026",
+     "norm": "2026-08-13"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Vincent Cibulka",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        373.2,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "560227/0256",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Gronárska 491",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        369.3,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 907 800 266",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "vincent.cibulka67@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        468.5,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK22 8330 0000 0016 3810 8149",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "3d45a9d721d8d74fa2ac004158247187490e1d0803417f0f6a297052228315c7",
+   "fields": {
+    "policy_number": {
+     "printed": "CP37542226",
+     "norm": "CP37542226"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "celoročné",
+     "norm": "annual"
+    },
+    "policy_start": {
+     "printed": "3. 10. 2025",
+     "norm": "2025-10-03"
+    },
+    "policy_end": {
+     "printed": "2. 10. 2026",
+     "norm": "2026-10-02"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Vincent Cibulka",
+       "norm": "Vincent Cibulka"
+      },
+      "birth_number": {
+       "printed": "560227/0256",
+       "norm": "560227/0256"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "49,00 EUR",
+     "norm": "49.00"
+    },
+    "issue_date": {
+     "printed": "24. 9. 2025",
+     "norm": "2025-09-24"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Vincent Cibulka",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        123.4,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "560227/0256",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "ffc53e2b92665ccbf6644431728f156cd81763690385790f8dd7bfcb1e9d09ea",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Rauter",
+     "norm": "Medizinisches Zentrum Rauter"
+    },
+    "facility_country": {
+     "printed": "Österreich",
+     "norm": "AT"
+    },
+    "patient_name": {
+     "printed": "Vincent Cibulka",
+     "norm": "Vincent Cibulka"
+    },
+    "patient_birth_date": {
+     "printed": "27.02.1956",
+     "norm": "1956-02-27"
+    },
+    "visit_date": {
+     "printed": "27.07.2026",
+     "norm": "2026-07-27"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Gehirnerschütterung",
+     "norm": "S06.0"
+    },
+    "icd10_code": {
+     "printed": "S06.0",
+     "norm": "S06.0"
+    },
+    "anamnesis": {
+     "printed": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergaben keine Verletzungen. Die durchgeführte Bildgebung (CT des Schädels) zeigte keine Frakturen oder intrakranielle Blutungen. Der Patient erhielt eine ambulante Nachbeobachtung sowie medikamentöse Unterstützung zur Linderung von Kopfschmerzen. Es wurde eine vorübergehende Arbeitsunfähigkeit empfohlen und eine Rückkehr zur ambulanten Nachsorge in 48 Stunden.",
+     "norm": "Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergaben keine Verletzungen. Die durchgeführte Bildgebung (CT des Schädels) zeigte keine Frakturen oder intrakranielle Blutungen. Der Patient erhielt eine ambulante Nachbeobachtung sowie medikamentöse Unterstützung zur Linderung von Kopfschmerzen. Es wurde eine vorübergehende Arbeitsunfähigkeit empfohlen und eine Rückkehr zur ambulanten Nachsorge in 48 Stunden."
+    },
+    "physician_name": {
+     "printed": "Linnea Staudinger",
+     "norm": "Linnea Staudinger"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Vincent Cibulka",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        127.2,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Linnea Staudinger",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        440.3,
+        212.8,
+        449.6
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "de",
+   "locale": "de",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "b026e83a63fbd81730b534b8b1ebb569b60dfe52aeef7b4423b1acf67cbf85f8",
+   "fields": {
+    "invoice_number": {
+     "printed": "RE-2026-19964",
+     "norm": "RE-2026-19964"
+    },
+    "issue_date": {
+     "printed": "27.07.2026",
+     "norm": "2026-07-27"
+    },
+    "provider_name": {
+     "printed": "Medizinisches Zentrum Rauter",
+     "norm": "Medizinisches Zentrum Rauter"
+    },
+    "provider_country": {
+     "printed": "Österreich",
+     "norm": "AT"
+    },
+    "patient_name": {
+     "printed": "Vincent Cibulka",
+     "norm": "Vincent Cibulka"
+    },
+    "service_date": {
+     "printed": "27.07.2026",
+     "norm": "2026-07-27"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Notfallbehandlung",
+       "norm": "Notfallbehandlung"
+      },
+      "amount": {
+       "printed": "152,46",
+       "norm": "152.46"
+      }
+     },
+     {
+      "description": {
+       "printed": "Computertomographie",
+       "norm": "Computertomographie"
+      },
+      "amount": {
+       "printed": "586,18",
+       "norm": "586.18"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboruntersuchung",
+       "norm": "Laboruntersuchung"
+      },
+      "amount": {
+       "printed": "40,28",
+       "norm": "40.28"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "137,26",
+       "norm": "137.26"
+      }
+     }
+    ],
+    "total": {
+     "printed": "916,18",
+     "norm": "916.18"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Vincent Cibulka",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        128.1,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Vincent Cibulka",
+  "birth_number": "560227/0256",
+  "birth_date": "1956-02-27",
+  "address": "Gronárska 491, 945 39 Bohunice",
+  "phone": "+421 907 800 266",
+  "email": "vincent.cibulka67@posta.example.sk",
+  "iban": "SK2283300000001638108149",
+  "id_card": "JD516192",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S06.0",
+  "claimed_event_date": "2026-08-04"
+ }
+}

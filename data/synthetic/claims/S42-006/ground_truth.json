@@ -1,0 +1,434 @@
+{
+ "scenario_id": "S42-006",
+ "split": "dev",
+ "archetype": "cancellation_known_reason",
+ "edge_cases": [
+  "exclusion_known_reason",
+  "scanned_documents"
+ ],
+ "claim_type": "cancellation",
+ "product": "standard",
+ "policy_number": "CP35714784",
+ "duplicate_of": null,
+ "destination": "GR",
+ "trip": {
+  "start": "2026-07-28",
+  "end": "2026-08-03"
+ },
+ "event_date": "2026-07-11",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R7",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Stornovací poplatok",
+   "coverage": "cancellation",
+   "category": "cancellation_fee",
+   "amount": "1051.40",
+   "currency": "EUR",
+   "amount_eur": "1051.40",
+   "doc_id": "D2",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A9.4"
+   ],
+   "exclusion": "cancellation_known_reason",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "fc48bc7438e2ea68a881b4013374c518528f6466a6cfa68b4aea22685c05224e",
+   "fields": {
+    "policy_number": {
+     "printed": "CP35714784",
+     "norm": "CP35714784"
+    },
+    "insured_name": {
+     "printed": "Alexej Máčik",
+     "norm": "Alexej Máčik"
+    },
+    "insured_birth_number": {
+     "printed": "690223/0027",
+     "norm": "690223/0027"
+    },
+    "insured_address": {
+     "printed": "F. Kostku 82, 827 16 Kolbasov",
+     "norm": "F. Kostku 82, 827 16 Kolbasov"
+    },
+    "insured_phone": {
+     "printed": "+421 908 852 117",
+     "norm": "+421 908 852 117"
+    },
+    "insured_email": {
+     "printed": "alexej.macik44@posta.example.sk",
+     "norm": "alexej.macik44@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK39 5600 7371 7093 7616 5192",
+     "norm": "SK3956007371709376165192"
+    },
+    "destination_country": {
+     "printed": "Grécko",
+     "norm": "GR"
+    },
+    "trip_start": {
+     "printed": "28. 7. 2026",
+     "norm": "2026-07-28"
+    },
+    "trip_end": {
+     "printed": "3. 8. 2026",
+     "norm": "2026-08-03"
+    },
+    "event_date": {
+     "printed": "11. 7. 2026",
+     "norm": "2026-07-11"
+    },
+    "event_place": {
+     "printed": "Chania, Grécko",
+     "norm": "Chania, Grécko"
+    },
+    "claim_types": {
+     "printed": [
+      "Storno cesty"
+     ],
+     "norm": [
+      "cancellation"
+     ]
+    },
+    "event_description": {
+     "printed": "Počas prípravy na cestu som sa ochorel/a na lumbálnu diskopatia L4/L5 s koreňovým dráždením. Lekár mi cestovanie neodporučil, preto som cestu stornoval/a v cestovnej kancelárii.",
+     "norm": "Počas prípravy na cestu som sa ochorel/a na lumbálnu diskopatia L4/L5 s koreňovým dráždením. Lekár mi cestovanie neodporučil, preto som cestu stornoval/a v cestovnej kancelárii."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Stornovací poplatok",
+       "norm": "Stornovací poplatok"
+      },
+      "amount": {
+       "printed": "1 051,40",
+       "norm": "1051.40"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "19. 8. 2026",
+     "norm": "2026-08-19"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Alexej Máčik",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        360.0,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "690223/0027",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "F. Kostku 82",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        358.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 908 852 117",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "alexej.macik44@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        456.8,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK39 5600 7371 7093 7616 5192",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_booking_confirmation.pdf",
+   "doc_type": "booking_confirmation",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e334146acffc2d206973c1d678bfc173618af8ba56706206154dc625f1829d93",
+   "fields": {
+    "booking_number": {
+     "printed": "2026051",
+     "norm": "2026051"
+    },
+    "agency_name": {
+     "printed": "Cestovná kancelária Horizont Tour, s. r. o.",
+     "norm": "Cestovná kancelária Horizont Tour, s. r. o."
+    },
+    "traveler_names": {
+     "printed": [
+      "Alexej Máčik"
+     ],
+     "norm": [
+      "Alexej Máčik"
+     ]
+    },
+    "destination": {
+     "printed": "Chania, Grécko",
+     "norm": "Chania, Grécko"
+    },
+    "trip_start": {
+     "printed": "28. 7. 2026",
+     "norm": "2026-07-28"
+    },
+    "trip_end": {
+     "printed": "3. 8. 2026",
+     "norm": "2026-08-03"
+    },
+    "total_price": {
+     "printed": "1 502,00",
+     "norm": "1502.00"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "cancellation_date": {
+     "printed": "11. 7. 2026",
+     "norm": "2026-07-11"
+    },
+    "cancellation_fee": {
+     "printed": "1 051,40",
+     "norm": "1051.40"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Alexej Máčik",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.4,
+        114.0,
+        213.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "480a9468c5546470cdf8896f8ee9c7c0c4706babaafc415bd161c3ca6d8aaf55",
+   "fields": {
+    "facility_name": {
+     "printed": "Ambulancia všeobecného lekára Martinecová",
+     "norm": "Ambulancia všeobecného lekára Martinecová"
+    },
+    "facility_country": {
+     "printed": "Slovenská republika",
+     "norm": "SK"
+    },
+    "patient_name": {
+     "printed": "Alexej Máčik",
+     "norm": "Alexej Máčik"
+    },
+    "patient_birth_date": {
+     "printed": "23. 2. 1969",
+     "norm": "1969-02-23"
+    },
+    "visit_date": {
+     "printed": "11. 7. 2026",
+     "norm": "2026-07-11"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Lumbálna diskopatia L4/L5 s koreňovým dráždením",
+     "norm": "M51.2"
+    },
+    "icd10_code": {
+     "printed": "M51.2",
+     "norm": "M51.2"
+    },
+    "anamnesis": {
+     "printed": "Pacient je dispenzarizovaný pre diskopatiu L4/L5 od marca 2025, opakovane liečený pre bolesti chrbta.",
+     "norm": "known_reason"
+    },
+    "treatment": {
+     "printed": "Pozorovanie: Pacient prezentoval bolesť v spodnej časti chrbta, radikulárnu bolesť po pravej strane, zhoršenú pri pohybe. Pri fyzikálnom vyšetrení bola pozorovaná znížená sily v svalu pohybovom šľape, pozitívne známky Lasegueho a Slump testu. Neprítomnosť neurologických deficitov. Diagnostické vyšetrenie MRI lumbosakrálnych segmentov ukázalo degeneratívne zmeny disku L4/L5 so stlačením žilných štruktúr. Uvedené nálezy potvrdzujú diagnostiku. Zákroky: konzervatívna liečba s cieľom znížiť záťaž na disky, účinná analgetika, fyzikálna terapia a zavedenie postihnutých svalov. Odporúča sa opakovanie vyšetrenia po 6 týždňoch a v prípade nedostatočného výsledku zvážiť ďalšie opcie.",
+     "norm": "Pozorovanie: Pacient prezentoval bolesť v spodnej časti chrbta, radikulárnu bolesť po pravej strane, zhoršenú pri pohybe. Pri fyzikálnom vyšetrení bola pozorovaná znížená sily v svalu pohybovom šľape, pozitívne známky Lasegueho a Slump testu. Neprítomnosť neurologických deficitov. Diagnostické vyšetrenie MRI lumbosakrálnych segmentov ukázalo degeneratívne zmeny disku L4/L5 so stlačením žilných štruktúr. Uvedené nálezy potvrdzujú diagnostiku. Zákroky: konzervatívna liečba s cieľom znížiť záťaž na disky, účinná analgetika, fyzikálna terapia a zavedenie postihnutých svalov. Odporúča sa opakovanie vyšetrenia po 6 týždňoch a v prípade nedostatočného výsledku zvážiť ďalšie opcie."
+    },
+    "physician_name": {
+     "printed": "MUDr. Xénia Zachariašová",
+     "norm": "MUDr. Xénia Zachariašová"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Alexej Máčik",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        114.0,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Xénia Zachariašová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        100.4,
+        453.2,
+        170.2,
+        462.5
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Alexej Máčik",
+  "birth_number": "690223/0027",
+  "birth_date": "1969-02-23",
+  "address": "F. Kostku 82, 827 16 Kolbasov",
+  "phone": "+421 908 852 117",
+  "email": "alexej.macik44@posta.example.sk",
+  "iban": "SK3956007371709376165192",
+  "id_card": "PL622307",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "M51.2",
+  "price": "1502.00"
+ }
+}

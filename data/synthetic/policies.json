@@ -1,0 +1,868 @@
+[
+ {
+  "policy_number": "CP11646234",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-08-15",
+  "end": "2026-08-27",
+  "issue_date": "2026-08-02",
+  "premium": "41.60",
+  "insured": [
+   {
+    "name": "Zdenka Hlaváčová",
+    "birth_number": "725107/7867"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP13895645",
+  "product": "premium",
+  "kind": "annual",
+  "start": "2025-12-21",
+  "end": "2026-12-20",
+  "issue_date": "2025-12-14",
+  "premium": "149.00",
+  "insured": [
+   {
+    "name": "Zoltán Pavlíček",
+    "birth_number": "841102/1894"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP15917225",
+  "product": "standard",
+  "kind": "annual",
+  "start": "2025-12-18",
+  "end": "2026-12-17",
+  "issue_date": "2025-12-14",
+  "premium": "89.00",
+  "insured": [
+   {
+    "name": "Metod Jakubčík",
+    "birth_number": "691027/6208"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP18429833",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-01-17",
+  "end": "2026-01-25",
+  "issue_date": "2025-12-12",
+  "premium": "28.80",
+  "insured": [
+   {
+    "name": "Ingrida Pašeková",
+    "birth_number": "816104/6619"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP19673809",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-05-13",
+  "end": "2026-05-26",
+  "issue_date": "2026-04-14",
+  "premium": "26.60",
+  "insured": [
+   {
+    "name": "Zuzana Strýčeková",
+    "birth_number": "795905/8470"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP20200074",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-06-27",
+  "end": "2026-07-08",
+  "issue_date": "2026-06-08",
+  "premium": "38.40",
+  "insured": [
+   {
+    "name": "Emília Králová",
+    "birth_number": "926025/9690"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP24972279",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-07-16",
+  "end": "2026-07-25",
+  "issue_date": "2026-06-18",
+  "premium": "19.00",
+  "insured": [
+   {
+    "name": "Gabriela Salajová",
+    "birth_number": "655817/8396"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP25014631",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-01-10",
+  "end": "2026-01-19",
+  "issue_date": "2026-01-10",
+  "premium": "48.00",
+  "insured": [
+   {
+    "name": "Igor Opluštil",
+    "birth_number": "720928/9648"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP25585427",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-01-16",
+  "end": "2026-01-21",
+  "issue_date": "2025-12-09",
+  "premium": "6.60",
+  "insured": [
+   {
+    "name": "Zina Janečeková",
+    "birth_number": "636122/7741"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP26297533",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-03-19",
+  "end": "2026-03-31",
+  "issue_date": "2026-02-09",
+  "premium": "14.30",
+  "insured": [
+   {
+    "name": "Demeter Dudek",
+    "birth_number": "800403/9274"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP26821075",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-04-25",
+  "end": "2026-05-01",
+  "issue_date": "2026-04-25",
+  "premium": "38.40",
+  "insured": [
+   {
+    "name": "Adolf Lepšík",
+    "birth_number": "560312/8586"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP26944487",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-04-13",
+  "end": "2026-04-20",
+  "issue_date": "2026-04-04",
+  "premium": "15.20",
+  "insured": [
+   {
+    "name": "Fridrich Kubička",
+    "birth_number": "680222/5397"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP27013243",
+  "product": "basic",
+  "kind": "annual",
+  "start": "2025-11-07",
+  "end": "2026-11-06",
+  "issue_date": "2025-11-07",
+  "premium": "49.00",
+  "insured": [
+   {
+    "name": "Izabela Fabiánová",
+    "birth_number": "776104/5710"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP30182766",
+  "product": "premium",
+  "kind": "annual",
+  "start": "2026-02-16",
+  "end": "2027-02-15",
+  "issue_date": "2026-02-07",
+  "premium": "149.00",
+  "insured": [
+   {
+    "name": "Alexander Beňuš",
+    "birth_number": "600311/0113"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP30509175",
+  "product": "basic",
+  "kind": "annual",
+  "start": "2025-10-30",
+  "end": "2026-10-29",
+  "issue_date": "2025-10-24",
+  "premium": "49.00",
+  "insured": [
+   {
+    "name": "Drahomíra Senková",
+    "birth_number": "745611/4589"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP33776150",
+  "product": "basic",
+  "kind": "annual",
+  "start": "2026-02-15",
+  "end": "2027-02-14",
+  "issue_date": "2026-02-14",
+  "premium": "49.00",
+  "insured": [
+   {
+    "name": "Slavomír Horáček",
+    "birth_number": "690518/7630"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP34359060",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-05-05",
+  "end": "2026-05-18",
+  "issue_date": "2026-04-11",
+  "premium": "15.40",
+  "insured": [
+   {
+    "name": "Boleslav Stejskal",
+    "birth_number": "821011/0260"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP35556386",
+  "product": "basic",
+  "kind": "annual",
+  "start": "2025-12-31",
+  "end": "2026-12-30",
+  "issue_date": "2025-12-25",
+  "premium": "49.00",
+  "insured": [
+   {
+    "name": "Servác Kocák",
+    "birth_number": "590916/4844"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP35714784",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-07-28",
+  "end": "2026-08-03",
+  "issue_date": "2026-07-06",
+  "premium": "13.30",
+  "insured": [
+   {
+    "name": "Alexej Máčik",
+    "birth_number": "690223/0027"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP37542226",
+  "product": "basic",
+  "kind": "annual",
+  "start": "2025-10-03",
+  "end": "2026-10-02",
+  "issue_date": "2025-09-24",
+  "premium": "49.00",
+  "insured": [
+   {
+    "name": "Vincent Cibulka",
+    "birth_number": "560227/0256"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP38688676",
+  "product": "basic",
+  "kind": "annual",
+  "start": "2026-01-03",
+  "end": "2027-01-02",
+  "issue_date": "2025-12-27",
+  "premium": "49.00",
+  "insured": [
+   {
+    "name": "Otília Havranová",
+    "birth_number": "975212/5130"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP40406092",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-04-02",
+  "end": "2026-04-14",
+  "issue_date": "2026-03-08",
+  "premium": "41.60",
+  "insured": [
+   {
+    "name": "Roland Dudek",
+    "birth_number": "570909/5139"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP40532691",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-01-22",
+  "end": "2026-01-30",
+  "issue_date": "2025-12-28",
+  "premium": "28.80",
+  "insured": [
+   {
+    "name": "Alena Králiková",
+    "birth_number": "805516/4040"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP41690501",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-03-01",
+  "end": "2026-03-13",
+  "issue_date": "2026-01-25",
+  "premium": "41.60",
+  "insured": [
+   {
+    "name": "Barbora Vacková",
+    "birth_number": "775901/6683"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP43635675",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-04-03",
+  "end": "2026-04-16",
+  "issue_date": "2026-03-22",
+  "premium": "15.40",
+  "insured": [
+   {
+    "name": "Cyril Rusnak",
+    "birth_number": "620726/2600"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP44269370",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-03-14",
+  "end": "2026-03-17",
+  "issue_date": "2026-03-14",
+  "premium": "14.30",
+  "insured": [
+   {
+    "name": "Bruno Veterník",
+    "birth_number": "860331/0947"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP45186708",
+  "product": "basic",
+  "kind": "annual",
+  "start": "2025-12-04",
+  "end": "2026-12-03",
+  "issue_date": "2025-11-24",
+  "premium": "49.00",
+  "insured": [
+   {
+    "name": "Marta Sedláčková",
+    "birth_number": "765526/3341"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP48412328",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-07-23",
+  "end": "2026-07-28",
+  "issue_date": "2026-06-15",
+  "premium": "19.20",
+  "insured": [
+   {
+    "name": "Sofia Rubíková",
+    "birth_number": "635713/2947"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP49823450",
+  "product": "premium",
+  "kind": "annual",
+  "start": "2026-05-27",
+  "end": "2027-05-26",
+  "issue_date": "2026-05-24",
+  "premium": "149.00",
+  "insured": [
+   {
+    "name": "Irena Machnáčová",
+    "birth_number": "565719/1111"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP51837852",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-04-23",
+  "end": "2026-05-01",
+  "issue_date": "2026-04-04",
+  "premium": "28.80",
+  "insured": [
+   {
+    "name": "Vojtech Rys",
+    "birth_number": "950514/1701"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP52213778",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-01-14",
+  "end": "2026-01-26",
+  "issue_date": "2025-12-06",
+  "premium": "41.60",
+  "insured": [
+   {
+    "name": "Zoja Nižnánská",
+    "birth_number": "965329/2891"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP55568701",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-05-19",
+  "end": "2026-05-25",
+  "issue_date": "2026-04-23",
+  "premium": "13.30",
+  "insured": [
+   {
+    "name": "Uršuľa Harvanová",
+    "birth_number": "836009/9704"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP57130035",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-08-14",
+  "end": "2026-08-20",
+  "issue_date": "2026-07-21",
+  "premium": "13.30",
+  "insured": [
+   {
+    "name": "Nora Tomanová",
+    "birth_number": "068105/7333"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP58024342",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-02-06",
+  "end": "2026-02-11",
+  "issue_date": "2026-01-28",
+  "premium": "11.40",
+  "insured": [
+   {
+    "name": "Maroš Šimek",
+    "birth_number": "930808/3048"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP58181396",
+  "product": "basic",
+  "kind": "annual",
+  "start": "2025-12-07",
+  "end": "2026-12-06",
+  "issue_date": "2025-12-06",
+  "premium": "49.00",
+  "insured": [
+   {
+    "name": "Bruno Paška",
+    "birth_number": "681129/9825"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP58518659",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-08-10",
+  "end": "2026-08-17",
+  "issue_date": "2026-07-23",
+  "premium": "15.20",
+  "insured": [
+   {
+    "name": "Šimon Menšík",
+    "birth_number": "590708/3347"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP59251188",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-07-19",
+  "end": "2026-07-25",
+  "issue_date": "2026-06-09",
+  "premium": "13.30",
+  "insured": [
+   {
+    "name": "Dobromila Ružičková",
+    "birth_number": "866127/8945"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP59597086",
+  "product": "standard",
+  "kind": "annual",
+  "start": "2025-09-18",
+  "end": "2026-09-17",
+  "issue_date": "2025-09-15",
+  "premium": "89.00",
+  "insured": [
+   {
+    "name": "Šárka Jandová",
+    "birth_number": "057228/4867"
+   }
+  ],
+  "prior_paid": {
+   "luggage": "759.00"
+  }
+ },
+ {
+  "policy_number": "CP60885459",
+  "product": "premium",
+  "kind": "annual",
+  "start": "2025-11-23",
+  "end": "2026-11-22",
+  "issue_date": "2025-11-18",
+  "premium": "149.00",
+  "insured": [
+   {
+    "name": "Alana Lukáčová",
+    "birth_number": "656214/1014"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP61604364",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-06-19",
+  "end": "2026-06-25",
+  "issue_date": "2026-05-11",
+  "premium": "7.70",
+  "insured": [
+   {
+    "name": "Silvia Jedľovská",
+    "birth_number": "895216/9149"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP65144509",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-07-31",
+  "end": "2026-08-07",
+  "issue_date": "2026-07-22",
+  "premium": "25.60",
+  "insured": [
+   {
+    "name": "Vieroslava Palovová",
+    "birth_number": "715623/3084"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP65913331",
+  "product": "basic",
+  "kind": "annual",
+  "start": "2025-10-24",
+  "end": "2026-10-23",
+  "issue_date": "2025-10-15",
+  "premium": "49.00",
+  "insured": [
+   {
+    "name": "Božidara Paulovičová",
+    "birth_number": "936212/7841"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP66267415",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-03-09",
+  "end": "2026-03-23",
+  "issue_date": "2026-02-25",
+  "premium": "48.00",
+  "insured": [
+   {
+    "name": "Miloslav Tomečko",
+    "birth_number": "690801/7094"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP67061186",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-07-25",
+  "end": "2026-08-08",
+  "issue_date": "2026-07-06",
+  "premium": "28.50",
+  "insured": [
+   {
+    "name": "Oľga Danová",
+    "birth_number": "846011/3838"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP68716573",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-03-15",
+  "end": "2026-03-27",
+  "issue_date": "2026-02-27",
+  "premium": "14.30",
+  "insured": [
+   {
+    "name": "Eduard Bernolák",
+    "birth_number": "720914/6406"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP71308842",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-04-21",
+  "end": "2026-05-03",
+  "issue_date": "2026-03-30",
+  "premium": "41.60",
+  "insured": [
+   {
+    "name": "Levoslav Špilár",
+    "birth_number": "860303/2614"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP72962895",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-03-19",
+  "end": "2026-03-31",
+  "issue_date": "2026-03-04",
+  "premium": "14.30",
+  "insured": [
+   {
+    "name": "Antónia Dušeková",
+    "birth_number": "575715/5910"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP74672520",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-05-16",
+  "end": "2026-05-22",
+  "issue_date": "2026-05-16",
+  "premium": "32.00",
+  "insured": [
+   {
+    "name": "Jaromíra Pavková",
+    "birth_number": "916023/1278"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP78064830",
+  "product": "premium",
+  "kind": "single",
+  "start": "2026-03-26",
+  "end": "2026-04-01",
+  "issue_date": "2026-02-28",
+  "premium": "22.40",
+  "insured": [
+   {
+    "name": "Arnold Zúbek",
+    "birth_number": "910409/0523"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP80794454",
+  "product": "standard",
+  "kind": "single",
+  "start": "2026-07-20",
+  "end": "2026-07-29",
+  "issue_date": "2026-06-11",
+  "premium": "19.00",
+  "insured": [
+   {
+    "name": "Karina Mariánová",
+    "birth_number": "915508/1672"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP84377016",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-05-19",
+  "end": "2026-06-01",
+  "issue_date": "2026-04-10",
+  "premium": "15.40",
+  "insured": [
+   {
+    "name": "Juliana Harváneková",
+    "birth_number": "866125/2820"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP91480362",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-03-15",
+  "end": "2026-03-27",
+  "issue_date": "2026-02-05",
+  "premium": "14.30",
+  "insured": [
+   {
+    "name": "Félix Boška",
+    "birth_number": "560210/8336"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP93955206",
+  "product": "standard",
+  "kind": "annual",
+  "start": "2025-09-26",
+  "end": "2026-09-25",
+  "issue_date": "2025-09-23",
+  "premium": "89.00",
+  "insured": [
+   {
+    "name": "Nataša Pavúková",
+    "birth_number": "886101/1049"
+   }
+  ],
+  "prior_paid": {}
+ },
+ {
+  "policy_number": "CP99913412",
+  "product": "basic",
+  "kind": "single",
+  "start": "2026-07-12",
+  "end": "2026-07-22",
+  "issue_date": "2026-06-09",
+  "premium": "12.10",
+  "insured": [
+   {
+    "name": "Helena Šoltýsová",
+    "birth_number": "746127/2423"
+   }
+  ],
+  "prior_paid": {}
+ }
+]

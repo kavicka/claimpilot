@@ -1,0 +1,558 @@
+{
+ "scenario_id": "S42-021",
+ "split": "dev",
+ "archetype": "date_inconsistency",
+ "edge_cases": [
+  "date_inconsistency",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "standard",
+ "policy_number": "CP93955206",
+ "duplicate_of": null,
+ "destination": "DE",
+ "trip": {
+  "start": "2026-05-30",
+  "end": "2026-06-13"
+ },
+ "event_date": "2026-06-03",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R2",
+  "total_payout_eur": "754.57",
+  "deductible_eur": "30.00",
+  "by_coverage": {
+   "medical": "754.57"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Röhricht",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "784.57",
+   "currency": "EUR",
+   "amount_eur": "784.57",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "6b7c8e8c33a736cf60f08412389c08a8eb19108b6cf253630bf644a4c1dcfd7c",
+   "fields": {
+    "policy_number": {
+     "printed": "CP93955206",
+     "norm": "CP93955206"
+    },
+    "insured_name": {
+     "printed": "Nataša Pavúková",
+     "norm": "Nataša Pavúková"
+    },
+    "insured_birth_number": {
+     "printed": "886101/1049",
+     "norm": "886101/1049"
+    },
+    "insured_address": {
+     "printed": "Smikova 977, 900 12 Zbudza",
+     "norm": "Smikova 977, 900 12 Zbudza"
+    },
+    "insured_phone": {
+     "printed": "+421 908 111 635",
+     "norm": "+421 908 111 635"
+    },
+    "insured_email": {
+     "printed": "natasa.pavukova77@posta.example.sk",
+     "norm": "natasa.pavukova77@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK26 0200 0000 0038 2132 1366",
+     "norm": "SK2602000000003821321366"
+    },
+    "destination_country": {
+     "printed": "Nemecko",
+     "norm": "DE"
+    },
+    "trip_start": {
+     "printed": "30. 5. 2026",
+     "norm": "2026-05-30"
+    },
+    "trip_end": {
+     "printed": "13. 6. 2026",
+     "norm": "2026-06-13"
+    },
+    "event_date": {
+     "printed": "12. 6. 2026",
+     "norm": "2026-06-12"
+    },
+    "event_place": {
+     "printed": "Garmisch-Partenkirchen, Nemecko",
+     "norm": "Garmisch-Partenkirchen, Nemecko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Garmisch-Partenkirchen, Nemecko, a skôr alebo neskôr som sa zranil hlavou. Po zranení som sa cítil zle a musel som sa zdravotne vyšetriť. Diagnóza bola otok mozgu.",
+     "norm": "Bol som v Garmisch-Partenkirchen, Nemecko, a skôr alebo neskôr som sa zranil hlavou. Po zranení som sa cítil zle a musel som sa zdravotne vyšetriť. Diagnóza bola otok mozgu."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Röhricht",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Röhricht"
+      },
+      "amount": {
+       "printed": "784,57",
+       "norm": "784.57"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "20. 6. 2026",
+     "norm": "2026-06-20"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Nataša Pavúková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        381.5,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "886101/1049",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Smikova 977",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        361.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 908 111 635",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "natasa.pavukova77@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        477.3,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK26 0200 0000 0038 2132 1366",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "398d709d998bc1402384f1f1c11209990d8bd45b13b6a61b5777350df3522031",
+   "fields": {
+    "policy_number": {
+     "printed": "CP93955206",
+     "norm": "CP93955206"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Standard",
+     "norm": "standard"
+    },
+    "policy_type": {
+     "printed": "celoročné",
+     "norm": "annual"
+    },
+    "policy_start": {
+     "printed": "26. 9. 2025",
+     "norm": "2025-09-26"
+    },
+    "policy_end": {
+     "printed": "25. 9. 2026",
+     "norm": "2026-09-25"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Nataša Pavúková",
+       "norm": "Nataša Pavúková"
+      },
+      "birth_number": {
+       "printed": "886101/1049",
+       "norm": "886101/1049"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "89,00 EUR",
+     "norm": "89.00"
+    },
+    "issue_date": {
+     "printed": "23. 9. 2025",
+     "norm": "2025-09-23"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Nataša Pavúková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        131.3,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "886101/1049",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        332.5,
+        287.5,
+        388.5,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "30676fbaeb919235348f3b7d2457cb6774e9bd0559d396baa6b63b2c3f9b49b5",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Röhricht",
+     "norm": "Medizinisches Zentrum Röhricht"
+    },
+    "facility_country": {
+     "printed": "Deutschland",
+     "norm": "DE"
+    },
+    "patient_name": {
+     "printed": "Nataša Pavúková",
+     "norm": "Nataša Pavúková"
+    },
+    "patient_birth_date": {
+     "printed": "01.11.1988",
+     "norm": "1988-11-01"
+    },
+    "visit_date": {
+     "printed": "03.06.2026",
+     "norm": "2026-06-03"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Gehirnerschütterung",
+     "norm": "S06.0"
+    },
+    "icd10_code": {
+     "printed": "S06.0",
+     "norm": "S06.0"
+    },
+    "anamnesis": {
+     "printed": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergaben keine Verletzungen. Die durchgeführte Bildgebung (CT des Schädels) zeigte keine Frakturen oder intrakranielle Blutungen. Der Patient erhielt eine ambulante Nachbeobachtung sowie medikamentöse Unterstützung zur Linderung von Kopfschmerzen. Es wurde eine vorübergehende Arbeitsunfähigkeit empfohlen und eine Rückkehr zur ambulanten Nachsorge in 48 Stunden.",
+     "norm": "Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergaben keine Verletzungen. Die durchgeführte Bildgebung (CT des Schädels) zeigte keine Frakturen oder intrakranielle Blutungen. Der Patient erhielt eine ambulante Nachbeobachtung sowie medikamentöse Unterstützung zur Linderung von Kopfschmerzen. Es wurde eine vorübergehende Arbeitsunfähigkeit empfohlen und eine Rückkehr zur ambulanten Nachsorge in 48 Stunden."
+    },
+    "physician_name": {
+     "printed": "Melanie Wilms",
+     "norm": "Melanie Wilms"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Nataša Pavúková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        135.5,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Melanie Wilms",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        440.3,
+        199.8,
+        449.6
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "de",
+   "locale": "de",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e8bf741866e25091754b3ed410b044b78fa7981a10223e85c16fd5d450d06071",
+   "fields": {
+    "invoice_number": {
+     "printed": "RE-2026-05278",
+     "norm": "RE-2026-05278"
+    },
+    "issue_date": {
+     "printed": "03.06.2026",
+     "norm": "2026-06-03"
+    },
+    "provider_name": {
+     "printed": "Medizinisches Zentrum Röhricht",
+     "norm": "Medizinisches Zentrum Röhricht"
+    },
+    "provider_country": {
+     "printed": "Deutschland",
+     "norm": "DE"
+    },
+    "patient_name": {
+     "printed": "Nataša Pavúková",
+     "norm": "Nataša Pavúková"
+    },
+    "service_date": {
+     "printed": "03.06.2026",
+     "norm": "2026-06-03"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Notfallbehandlung",
+       "norm": "Notfallbehandlung"
+      },
+      "amount": {
+       "printed": "154,44",
+       "norm": "154.44"
+      }
+     },
+     {
+      "description": {
+       "printed": "Computertomographie",
+       "norm": "Computertomographie"
+      },
+      "amount": {
+       "printed": "418,90",
+       "norm": "418.90"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboruntersuchung",
+       "norm": "Laboruntersuchung"
+      },
+      "amount": {
+       "printed": "108,94",
+       "norm": "108.94"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "102,29",
+       "norm": "102.29"
+      }
+     }
+    ],
+    "total": {
+     "printed": "784,57",
+     "norm": "784.57"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Nataša Pavúková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        133.1,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Nataša Pavúková",
+  "birth_number": "886101/1049",
+  "birth_date": "1988-11-01",
+  "address": "Smikova 977, 900 12 Zbudza",
+  "phone": "+421 908 111 635",
+  "email": "natasa.pavukova77@posta.example.sk",
+  "iban": "SK2602000000003821321366",
+  "id_card": "NB553487",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S06.0",
+  "claimed_event_date": "2026-06-12"
+ }
+}

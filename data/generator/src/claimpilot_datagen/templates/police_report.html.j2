@@ -1,0 +1,18 @@
+{% extends "_layout.html.j2" %}
+{% block body %}
+<div class="head"><div class="logo">{{ police_station }}</div><div class="muted">{{ L.case }} {{ report_number }}<br>{{ L.date }}: {{ report_date }}</div></div>
+<h1>{{ L.police }}</h1>
+<table class="grid">
+<tr><td style="width:50%"><div class="label">{{ L.complainant }}</div><div class="val">{{ complainant_name }}, {{ L.born }} {{ birth }}</div></td>
+<td><div class="label">{{ L.id_card }}</div><div class="val">{{ id_card }}</div></td></tr>
+<tr><td colspan="2"><div class="label">{{ L.address }}</div><div class="val">{{ address }}</div></td></tr>
+<tr><td><div class="label">{{ L.incident_date }}</div><div class="val">{{ incident_date }}</div></td>
+<td><div class="label">{{ L.place }}</div><div class="val">{{ incident_place }}</div></td></tr>
+{% if vehicle_plate %}<tr><td colspan="2"><div class="label">{{ L.vehicle }}</div><div class="val">{{ vehicle_plate }}</div></td></tr>{% endif %}
+</table>
+<h2>{{ L.description }}</h2><p>{{ incident_description }}</p>
+<h2>{{ L.stolen }}</h2>
+<table class="lines"><tr><th>#</th><th>{{ L.item }}</th><th class="num">{{ L.value }}</th></tr>
+{% for x in stolen %}<tr><td>{{ loop.index }}</td><td>{{ x.description }}</td><td class="num">{{ x.value }}</td></tr>{% endfor %}</table>
+<div class="sign"><div>{{ L.officer }}: {{ officer }}</div><div>{{ L.complainant }}</div></div>
+{% endblock %}

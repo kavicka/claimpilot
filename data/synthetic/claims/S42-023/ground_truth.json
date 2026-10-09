@@ -1,0 +1,555 @@
+{
+ "scenario_id": "S42-023",
+ "split": "dev",
+ "archetype": "pre_existing",
+ "edge_cases": [
+  "exclusion_pre_existing",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP34359060",
+ "duplicate_of": null,
+ "destination": "GR",
+ "trip": {
+  "start": "2026-05-05",
+  "end": "2026-05-18"
+ },
+ "event_date": "2026-05-15",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "senior",
+  "rule": "R6",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Singh International Medical Centre",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "523.94",
+   "currency": "EUR",
+   "amount_eur": "523.94",
+   "doc_id": "D4",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A5.1"
+   ],
+   "exclusion": "pre_existing_condition",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "06d5324768f031ae6fe3ef757a58836e0761bd3da57cc8587f88ba13b7395786",
+   "fields": {
+    "policy_number": {
+     "printed": "CP34359060",
+     "norm": "CP34359060"
+    },
+    "insured_name": {
+     "printed": "Boleslav Stejskal",
+     "norm": "Boleslav Stejskal"
+    },
+    "insured_birth_number": {
+     "printed": "821011/0260",
+     "norm": "821011/0260"
+    },
+    "insured_address": {
+     "printed": "Žherská 4, 891 58 Smiřice",
+     "norm": "Žherská 4, 891 58 Smiřice"
+    },
+    "insured_phone": {
+     "printed": "+421 919 133 227",
+     "norm": "+421 919 133 227"
+    },
+    "insured_email": {
+     "printed": "boleslav.stejskal83@mail.example.sk",
+     "norm": "boleslav.stejskal83@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK28 6500 0000 0041 7801 9546",
+     "norm": "SK2865000000004178019546"
+    },
+    "destination_country": {
+     "printed": "Grécko",
+     "norm": "GR"
+    },
+    "trip_start": {
+     "printed": "5. 5. 2026",
+     "norm": "2026-05-05"
+    },
+    "trip_end": {
+     "printed": "18. 5. 2026",
+     "norm": "2026-05-18"
+    },
+    "event_date": {
+     "printed": "15. 5. 2026",
+     "norm": "2026-05-15"
+    },
+    "event_place": {
+     "printed": "Chania, Grécko",
+     "norm": "Chania, Grécko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Chanie, Grécko, kvôli zdravotnej probléme – nestabilnej angíne pektoris. Prešiel som lekárskou kontrolou a liečbou v mieste udalosti.",
+     "norm": "Bol som v Chanie, Grécko, kvôli zdravotnej probléme – nestabilnej angíne pektoris. Prešiel som lekárskou kontrolou a liečbou v mieste udalosti."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Singh International Medical Centre",
+       "norm": "Liečebné náklady – Singh International Medical Centre"
+      },
+      "amount": {
+       "printed": "523,94",
+       "norm": "523.94"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "4. 6. 2026",
+     "norm": "2026-06-04"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Boleslav Stejskal",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        379.1,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "821011/0260",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Žherská 4",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        347.8,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 919 133 227",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "boleslav.stejskal83@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        467.1,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK28 6500 0000 0041 7801 9546",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "8a2c8e32bf536f70a86db3a80a1ec9001153243bb58645a202fb81b9d03433fb",
+   "fields": {
+    "policy_number": {
+     "printed": "CP34359060",
+     "norm": "CP34359060"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "5. 5. 2026",
+     "norm": "2026-05-05"
+    },
+    "policy_end": {
+     "printed": "18. 5. 2026",
+     "norm": "2026-05-18"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Boleslav Stejskal",
+       "norm": "Boleslav Stejskal"
+      },
+      "birth_number": {
+       "printed": "821011/0260",
+       "norm": "821011/0260"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "15,40 EUR",
+     "norm": "15.40"
+    },
+    "issue_date": {
+     "printed": "11. 4. 2026",
+     "norm": "2026-04-11"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Boleslav Stejskal",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        129.0,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "821011/0260",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        329.2,
+        287.5,
+        385.2,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "89e785346dcea6f2cb836495ef1a06adc94fef7d61d738a7223aac2295bb2dce",
+   "fields": {
+    "facility_name": {
+     "printed": "Singh International Medical Centre",
+     "norm": "Singh International Medical Centre"
+    },
+    "facility_country": {
+     "printed": "Greece",
+     "norm": "GR"
+    },
+    "patient_name": {
+     "printed": "Boleslav Stejskal",
+     "norm": "Boleslav Stejskal"
+    },
+    "patient_birth_date": {
+     "printed": "11/10/1982",
+     "norm": "1982-10-11"
+    },
+    "visit_date": {
+     "printed": "15/05/2026",
+     "norm": "2026-05-15"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Unstable angina",
+     "norm": "I20.0"
+    },
+    "icd10_code": {
+     "printed": "I20.0",
+     "norm": "I20.0"
+    },
+    "anamnesis": {
+     "printed": "Known arterial hypertension treated since 2024; cardiology check-up two months ago for chest pain.",
+     "norm": "pre_existing"
+    },
+    "treatment": {
+     "printed": "Examination revealed central chest pain with radiation to the left arm, occurring at rest and unrelieved by nitroglycerin. Electrocardiogram showed non-specific ST-T changes. Cardiac enzymes were within normal limits. Stress echo was not performed due to patient's inability to exercise. Treatment included sublingual nitroglycerin, oral beta-blocker, and dual antiplatelet therapy. Patient was advised to present to the emergency department immediately if symptoms worsened or persisted.",
+     "norm": "Examination revealed central chest pain with radiation to the left arm, occurring at rest and unrelieved by nitroglycerin. Electrocardiogram showed non-specific ST-T changes. Cardiac enzymes were within normal limits. Stress echo was not performed due to patient's inability to exercise. Treatment included sublingual nitroglycerin, oral beta-blocker, and dual antiplatelet therapy. Patient was advised to present to the emergency department immediately if symptoms worsened or persisted."
+    },
+    "physician_name": {
+     "printed": "Ross Sutton",
+     "norm": "Ross Sutton"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Boleslav Stejskal",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        133.1,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Ross Sutton",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        126.3,
+        427.5,
+        170.3,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "18f0a58e50898526ddedf3dd0b0d4aa30c0cb5f41b2da57d6465f8f6ed9ace4f",
+   "fields": {
+    "invoice_number": {
+     "printed": "INV-2026-91921",
+     "norm": "INV-2026-91921"
+    },
+    "issue_date": {
+     "printed": "16/05/2026",
+     "norm": "2026-05-16"
+    },
+    "provider_name": {
+     "printed": "Singh International Medical Centre",
+     "norm": "Singh International Medical Centre"
+    },
+    "provider_country": {
+     "printed": "Greece",
+     "norm": "GR"
+    },
+    "patient_name": {
+     "printed": "Boleslav Stejskal",
+     "norm": "Boleslav Stejskal"
+    },
+    "service_date": {
+     "printed": "15/05/2026",
+     "norm": "2026-05-15"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Emergency room treatment",
+       "norm": "Emergency room treatment"
+      },
+      "amount": {
+       "printed": "193.33",
+       "norm": "193.33"
+      }
+     },
+     {
+      "description": {
+       "printed": "ECG",
+       "norm": "ECG"
+      },
+      "amount": {
+       "printed": "88.56",
+       "norm": "88.56"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratory tests",
+       "norm": "Laboratory tests"
+      },
+      "amount": {
+       "printed": "125.77",
+       "norm": "125.77"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrasound",
+       "norm": "Ultrasound"
+      },
+      "amount": {
+       "printed": "116.28",
+       "norm": "116.28"
+      }
+     }
+    ],
+    "total": {
+     "printed": "523.94",
+     "norm": "523.94"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Boleslav Stejskal",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        131.1,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Boleslav Stejskal",
+  "birth_number": "821011/0260",
+  "birth_date": "1982-10-11",
+  "address": "Žherská 4, 891 58 Smiřice",
+  "phone": "+421 919 133 227",
+  "email": "boleslav.stejskal83@mail.example.sk",
+  "iban": "SK2865000000004178019546",
+  "id_card": "EE891177",
+  "czech": true
+ },
+ "facts": {
+  "diagnosis": "I20.0"
+ }
+}

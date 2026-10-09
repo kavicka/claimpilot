@@ -1,0 +1,21 @@
+{% extends "_layout.html.j2" %}
+{% block body %}
+{% set en = lang == 'en' %}
+<div class="head"><div class="logo">{{ agency_name }}</div><div class="muted">{{ 'Booking and cancellation confirmation' if en else 'Potvrdenie rezervácie a storna' }}</div></div>
+<h1>{{ 'Cancellation confirmation' if en else 'Potvrdenie o stornovaní zájazdu' }}</h1>
+<table class="grid">
+<tr><td style="width:50%"><div class="label">{{ 'Booking number' if en else 'Číslo rezervácie' }}</div><div class="val">{{ booking_number }}</div></td>
+<td><div class="label">{{ 'Destination' if en else 'Destinácia' }}</div><div class="val">{{ destination }}</div></td></tr>
+<tr><td><div class="label">{{ 'Departure' if en else 'Odchod' }}</div><div class="val">{{ trip_start }}</div></td>
+<td><div class="label">{{ 'Return' if en else 'Návrat' }}</div><div class="val">{{ trip_end }}</div></td></tr>
+<tr><td colspan="2"><div class="label">{{ 'Travellers' if en else 'Cestujúci' }}</div><div class="val">{{ travelers|join(', ') }}</div></td></tr>
+</table>
+<h2>{{ 'Price and cancellation' if en else 'Cena a storno' }}</h2>
+<table class="lines">
+<tr><th>{{ 'Item' if en else 'Položka' }}</th><th class="num">{{ 'Amount' if en else 'Suma' }} ({{ currency }})</th></tr>
+<tr><td>{{ 'Total trip price' if en else 'Celková cena zájazdu' }}</td><td class="num">{{ total_price }}</td></tr>
+<tr><td>{{ 'Cancelled on' if en else 'Dátum stornovania' }}: {{ cancellation_date }}</td><td></td></tr>
+<tr class="total"><td>{{ 'Cancellation fee charged' if en else 'Stornovací poplatok' }}</td><td class="num">{{ cancellation_fee }}</td></tr>
+</table>
+<p class="muted">{{ 'The cancellation fee follows the agency terms valid on the booking date.' if en else 'Výška stornovacieho poplatku je určená podľa všeobecných podmienok cestovnej kancelárie platných v deň rezervácie.' }}</p>
+{% endblock %}

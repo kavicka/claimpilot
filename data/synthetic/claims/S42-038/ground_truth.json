@@ -1,0 +1,443 @@
+{
+ "scenario_id": "S42-038",
+ "split": "dev",
+ "archetype": "dup_hash",
+ "edge_cases": [
+  "duplicate_invoice",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "standard",
+ "policy_number": "CP26944487",
+ "duplicate_of": "S42-027",
+ "destination": "GR",
+ "trip": {
+  "start": "2026-04-13",
+  "end": "2026-04-20"
+ },
+ "event_date": "2026-04-18",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R1",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Andrews International Medical Centre",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "252.45",
+   "currency": "EUR",
+   "amount_eur": "252.45",
+   "doc_id": "D3",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A13.4"
+   ],
+   "exclusion": "duplicate_document",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "3297e7e7008ea17d97ad9be78aa6d698ff8b69a8e6418d485faca50919d6ee47",
+   "fields": {
+    "policy_number": {
+     "printed": "CP26944487",
+     "norm": "CP26944487"
+    },
+    "insured_name": {
+     "printed": "Fridrich Kubička",
+     "norm": "Fridrich Kubička"
+    },
+    "insured_birth_number": {
+     "printed": "680222/5397",
+     "norm": "680222/5397"
+    },
+    "insured_address": {
+     "printed": "Zlatá 34, 963 47 Jasová",
+     "norm": "Zlatá 34, 963 47 Jasová"
+    },
+    "insured_phone": {
+     "printed": "+421 948 170 480",
+     "norm": "+421 948 170 480"
+    },
+    "insured_email": {
+     "printed": "fridrich.kubicka79@mail.example.sk",
+     "norm": "fridrich.kubicka79@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK18 0900 0000 0014 7132 3518",
+     "norm": "SK1809000000001471323518"
+    },
+    "destination_country": {
+     "printed": "Grécko",
+     "norm": "GR"
+    },
+    "trip_start": {
+     "printed": "13. 4. 2026",
+     "norm": "2026-04-13"
+    },
+    "trip_end": {
+     "printed": "20. 4. 2026",
+     "norm": "2026-04-20"
+    },
+    "event_date": {
+     "printed": "18. 4. 2026",
+     "norm": "2026-04-18"
+    },
+    "event_place": {
+     "printed": "Chania, Grécko",
+     "norm": "Chania, Grécko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Podvrtnutie členkového kĺbu sa mi stalo v Chanie, Grécko. Udalosť sa diala v prírodnom prostredí. Po nehode som sa okamžite obrátil na miestne zdravotnícke zariadenie.",
+     "norm": "Podvrtnutie členkového kĺbu sa mi stalo v Chanie, Grécko. Udalosť sa diala v prírodnom prostredí. Po nehode som sa okamžite obrátil na miestne zdravotnícke zariadenie."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Andrews International Medical Centre",
+       "norm": "Liečebné náklady – Andrews International Medical Centre"
+      },
+      "amount": {
+       "printed": "252,45",
+       "norm": "252.45"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "10. 5. 2026",
+     "norm": "2026-05-10"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Fridrich Kubička",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        376.3,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "680222/5397",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Zlatá 34",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        339.7,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 948 170 480",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "fridrich.kubicka79@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        463.3,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK18 0900 0000 0014 7132 3518",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": "S42-027/D3",
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "7970b1e7852499a63ec7dfa65eb24a9b9d965e68ace250538b6216573321531d",
+   "fields": {
+    "facility_name": {
+     "printed": "Andrews International Medical Centre",
+     "norm": "Andrews International Medical Centre"
+    },
+    "facility_country": {
+     "printed": "Greece",
+     "norm": "GR"
+    },
+    "patient_name": {
+     "printed": "Fridrich Kubička",
+     "norm": "Fridrich Kubička"
+    },
+    "patient_birth_date": {
+     "printed": "22/02/1968",
+     "norm": "1968-02-22"
+    },
+    "visit_date": {
+     "printed": "18/04/2026",
+     "norm": "2026-04-18"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Sprain of the ankle",
+     "norm": "S93.4"
+    },
+    "icd10_code": {
+     "printed": "S93.4",
+     "norm": "S93.4"
+    },
+    "anamnesis": {
+     "printed": "No relevant previous illnesses. No regular medication.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment.",
+     "norm": "Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment."
+    },
+    "physician_name": {
+     "printed": "Toby Lewis",
+     "norm": "Toby Lewis"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Fridrich Kubička",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        130.3,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Toby Lewis",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        126.3,
+        427.5,
+        166.2,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": "S42-027/D4",
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "1c114de87e2a03007f794301b2c7a65c894a52c9e0841df042b3f8e63b6ab7e4",
+   "fields": {
+    "invoice_number": {
+     "printed": "INV-2026-54736",
+     "norm": "INV-2026-54736"
+    },
+    "issue_date": {
+     "printed": "20/04/2026",
+     "norm": "2026-04-20"
+    },
+    "provider_name": {
+     "printed": "Andrews International Medical Centre",
+     "norm": "Andrews International Medical Centre"
+    },
+    "provider_country": {
+     "printed": "Greece",
+     "norm": "GR"
+    },
+    "patient_name": {
+     "printed": "Fridrich Kubička",
+     "norm": "Fridrich Kubička"
+    },
+    "service_date": {
+     "printed": "18/04/2026",
+     "norm": "2026-04-18"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Outpatient consultation",
+       "norm": "Outpatient consultation"
+      },
+      "amount": {
+       "printed": "102.98",
+       "norm": "102.98"
+      }
+     },
+     {
+      "description": {
+       "printed": "X-ray",
+       "norm": "X-ray"
+      },
+      "amount": {
+       "printed": "149.47",
+       "norm": "149.47"
+      }
+     }
+    ],
+    "total": {
+     "printed": "252.45",
+     "norm": "252.45"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Fridrich Kubička",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        130.3,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Fridrich Kubička",
+  "birth_number": "680222/5397",
+  "birth_date": "1968-02-22",
+  "address": "Zlatá 34, 963 47 Jasová",
+  "phone": "+421 948 170 480",
+  "email": "fridrich.kubicka79@mail.example.sk",
+  "iban": "SK1809000000001471323518",
+  "id_card": "NH960393",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S93.4"
+ }
+}

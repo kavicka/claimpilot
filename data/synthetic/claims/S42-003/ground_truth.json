@@ -1,0 +1,466 @@
+{
+ "scenario_id": "S42-003",
+ "split": "dev",
+ "archetype": "early_claim",
+ "edge_cases": [
+  "early_claim",
+  "foreign_currency",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP25014631",
+ "duplicate_of": null,
+ "destination": "CZ",
+ "trip": {
+  "start": "2026-01-05",
+  "end": "2026-01-19"
+ },
+ "event_date": "2026-01-11",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R3",
+  "total_payout_eur": "792.29",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "medical": "792.29"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliklinika Kašparová",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "19411.00",
+   "currency": "CZK",
+   "amount_eur": "792.29",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "9c247b91a72e8f765fc397a87239e0cff193667628352eb8737259126a553a1a",
+   "fields": {
+    "policy_number": {
+     "printed": "CP25014631",
+     "norm": "CP25014631"
+    },
+    "insured_name": {
+     "printed": "Igor Opluštil",
+     "norm": "Igor Opluštil"
+    },
+    "insured_birth_number": {
+     "printed": "720928/9648",
+     "norm": "720928/9648"
+    },
+    "insured_address": {
+     "printed": "Košická 8, 815 22 Žakarovce",
+     "norm": "Košická 8, 815 22 Žakarovce"
+    },
+    "insured_phone": {
+     "printed": "+421 918 381 178",
+     "norm": "+421 918 381 178"
+    },
+    "insured_email": {
+     "printed": "igor.oplustil67@example.com",
+     "norm": "igor.oplustil67@example.com"
+    },
+    "iban": {
+     "printed": "SK88 0200 0000 0079 6964 8149",
+     "norm": "SK8802000000007969648149"
+    },
+    "destination_country": {
+     "printed": "Česko",
+     "norm": "CZ"
+    },
+    "trip_start": {
+     "printed": "5. 1. 2026",
+     "norm": "2026-01-05"
+    },
+    "trip_end": {
+     "printed": "19. 1. 2026",
+     "norm": "2026-01-19"
+    },
+    "event_date": {
+     "printed": "11. 1. 2026",
+     "norm": "2026-01-11"
+    },
+    "event_place": {
+     "printed": "Praha, Česko",
+     "norm": "Praha, Česko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Prahe, Česko, a došlo k otasu mozgu. Po nehode som bol hospitalizovaný a prešiel niekoľkými lekárskymi vyšetreniami. V súčasnosti sa zotavujem pod dohľadom lekára.",
+     "norm": "Bol som v Prahe, Česko, a došlo k otasu mozgu. Po nehode som bol hospitalizovaný a prešiel niekoľkými lekárskymi vyšetreniami. V súčasnosti sa zotavujem pod dohľadom lekára."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliklinika Kašparová",
+       "norm": "Liečebné náklady – Poliklinika Kašparová"
+      },
+      "amount": {
+       "printed": "19 411,00",
+       "norm": "19411.00"
+      },
+      "currency": {
+       "printed": "CZK",
+       "norm": "CZK"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "28. 1. 2026",
+     "norm": "2026-01-28"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Igor Opluštil",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        357.6,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "720928/9648",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Košická 8",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        347.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 918 381 178",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "igor.oplustil67@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        434.0,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK88 0200 0000 0079 6964 8149",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "cs",
+   "locale": "cs",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "8a49edb232d163d4464f081fc74f4ce6c205f99efc79cdce75fe972ef0683bc4",
+   "fields": {
+    "facility_name": {
+     "printed": "Poliklinika Kašparová",
+     "norm": "Poliklinika Kašparová"
+    },
+    "facility_country": {
+     "printed": "Česká republika",
+     "norm": "CZ"
+    },
+    "patient_name": {
+     "printed": "Igor Opluštil",
+     "norm": "Igor Opluštil"
+    },
+    "patient_birth_date": {
+     "printed": "28. 9. 1972",
+     "norm": "1972-09-28"
+    },
+    "visit_date": {
+     "printed": "11. 1. 2026",
+     "norm": "2026-01-11"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Otřes mozku",
+     "norm": "S06.0"
+    },
+    "icd10_code": {
+     "printed": "S06.0",
+     "norm": "S06.0"
+    },
+    "anamnesis": {
+     "printed": "Bez významných předchozích onemocnění. Trvalou medikaci neužívá.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Pacient při vyšetření prezentoval mírnou závratě, zhoršenou koncentraci a narušenou koordinaci. Neurologické vyšetření bylo v zásadě normální, žádné známky focálního poruchy. Výsledky neuroobrazového vyšetření nepotvrdily zlomeniny ani jiné strukturální změny. Pacient byl hospitalizován na dohled a doporučeno bylo odpočívat a omezit fyzickou i mentální zátěž. Doporučeno je sledovat stav pacienta a opakovat vyšetření po 24 hodinách.",
+     "norm": "Pacient při vyšetření prezentoval mírnou závratě, zhoršenou koncentraci a narušenou koordinaci. Neurologické vyšetření bylo v zásadě normální, žádné známky focálního poruchy. Výsledky neuroobrazového vyšetření nepotvrdily zlomeniny ani jiné strukturální změny. Pacient byl hospitalizován na dohled a doporučeno bylo odpočívat a omezit fyzickou i mentální zátěž. Doporučeno je sledovat stav pacienta a opakovat vyšetření po 24 hodinách."
+    },
+    "physician_name": {
+     "printed": "Mária Němcová",
+     "norm": "Mária Němcová"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Igor Opluštil",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        111.6,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Mária Němcová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        75.7,
+        414.7,
+        132.0,
+        424.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "cs",
+   "locale": "cs",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "9bbf734ebe89aefba35c9d6cefb27f587b8132d88964a2888a7cdfee872e1a02",
+   "fields": {
+    "invoice_number": {
+     "printed": "FV-2026-70822",
+     "norm": "FV-2026-70822"
+    },
+    "issue_date": {
+     "printed": "11. 1. 2026",
+     "norm": "2026-01-11"
+    },
+    "provider_name": {
+     "printed": "Poliklinika Kašparová",
+     "norm": "Poliklinika Kašparová"
+    },
+    "provider_country": {
+     "printed": "Česká republika",
+     "norm": "CZ"
+    },
+    "patient_name": {
+     "printed": "Igor Opluštil",
+     "norm": "Igor Opluštil"
+    },
+    "service_date": {
+     "printed": "11. 1. 2026",
+     "norm": "2026-01-11"
+    },
+    "currency": {
+     "printed": "Kč",
+     "norm": "CZK"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Ošetření na pohotovosti",
+       "norm": "Ošetření na pohotovosti"
+      },
+      "amount": {
+       "printed": "8 044,00",
+       "norm": "8044.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "CT vyšetření",
+       "norm": "CT vyšetření"
+      },
+      "amount": {
+       "printed": "7 573,00",
+       "norm": "7573.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorní vyšetření",
+       "norm": "Laboratorní vyšetření"
+      },
+      "amount": {
+       "printed": "2 171,00",
+       "norm": "2171.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzní terapie",
+       "norm": "Infuzní terapie"
+      },
+      "amount": {
+       "printed": "1 623,00",
+       "norm": "1623.00"
+      }
+     }
+    ],
+    "total": {
+     "printed": "19 411,00",
+     "norm": "19411.00"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Igor Opluštil",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        111.6,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Igor Opluštil",
+  "birth_number": "720928/9648",
+  "birth_date": "1972-09-28",
+  "address": "Košická 8, 815 22 Žakarovce",
+  "phone": "+421 918 381 178",
+  "email": "igor.oplustil67@example.com",
+  "iban": "SK8802000000007969648149",
+  "id_card": "BM785755",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S06.0"
+ }
+}

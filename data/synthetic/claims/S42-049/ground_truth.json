@@ -1,0 +1,546 @@
+{
+ "scenario_id": "S42-049",
+ "split": "test",
+ "archetype": "alcohol",
+ "edge_cases": [
+  "exclusion_alcohol",
+  "foreign_currency",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "standard",
+ "policy_number": "CP80794454",
+ "duplicate_of": null,
+ "destination": "CH",
+ "trip": {
+  "start": "2026-07-20",
+  "end": "2026-07-29"
+ },
+ "event_date": "2026-07-27",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "senior",
+  "rule": "R6",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Hofmann",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "878.17",
+   "currency": "CHF",
+   "amount_eur": "934.22",
+   "doc_id": "D4",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A11.2"
+   ],
+   "exclusion": "alcohol_or_drugs",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "87d19512ad26e7df45accbc9c43ff10114b0eb27cd2256bdd7e0d68df006a54e",
+   "fields": {
+    "policy_number": {
+     "printed": "CP80794454",
+     "norm": "CP80794454"
+    },
+    "insured_name": {
+     "printed": "Karina Mariánová",
+     "norm": "Karina Mariánová"
+    },
+    "insured_birth_number": {
+     "printed": "915508/1672",
+     "norm": "915508/1672"
+    },
+    "insured_address": {
+     "printed": "Záhradkárska 94, 934 88 Valkovce",
+     "norm": "Záhradkárska 94, 934 88 Valkovce"
+    },
+    "insured_phone": {
+     "printed": "+421 910 881 840",
+     "norm": "+421 910 881 840"
+    },
+    "insured_email": {
+     "printed": "karina.marianova88@mail.example.sk",
+     "norm": "karina.marianova88@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK15 0900 0000 0032 6064 1250",
+     "norm": "SK1509000000003260641250"
+    },
+    "destination_country": {
+     "printed": "Švajčiarsko",
+     "norm": "CH"
+    },
+    "trip_start": {
+     "printed": "20. 7. 2026",
+     "norm": "2026-07-20"
+    },
+    "trip_end": {
+     "printed": "29. 7. 2026",
+     "norm": "2026-07-29"
+    },
+    "event_date": {
+     "printed": "27. 7. 2026",
+     "norm": "2026-07-27"
+    },
+    "event_place": {
+     "printed": "Luzern, Švajčiarsko",
+     "norm": "Luzern, Švajčiarsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Luzern, Švajčiarsko, kde som sa zrazil a utrpel otras mozgu. Po nehode som sa vyžiadal o lekárske pomocné opatrenia.",
+     "norm": "Bol som v Luzern, Švajčiarsko, kde som sa zrazil a utrpel otras mozgu. Po nehode som sa vyžiadal o lekárske pomocné opatrenia."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Hofmann",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Hofmann"
+      },
+      "amount": {
+       "printed": "878,17",
+       "norm": "878.17"
+      },
+      "currency": {
+       "printed": "CHF",
+       "norm": "CHF"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "8. 8. 2026",
+     "norm": "2026-08-08"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Karina Mariánová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        381.5,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "915508/1672",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Záhradkárska 94",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        378.6,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 910 881 840",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "karina.marianova88@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        471.0,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK15 0900 0000 0032 6064 1250",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "959540aeb1a11dc0d40041a38b9b9102baa0abaa5502d915d1c8b6adf11fae8e",
+   "fields": {
+    "policy_number": {
+     "printed": "CP80794454",
+     "norm": "CP80794454"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Standard",
+     "norm": "standard"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "20. 7. 2026",
+     "norm": "2026-07-20"
+    },
+    "policy_end": {
+     "printed": "29. 7. 2026",
+     "norm": "2026-07-29"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Karina Mariánová",
+       "norm": "Karina Mariánová"
+      },
+      "birth_number": {
+       "printed": "915508/1672",
+       "norm": "915508/1672"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "19,00 EUR",
+     "norm": "19.00"
+    },
+    "issue_date": {
+     "printed": "11. 6. 2026",
+     "norm": "2026-06-11"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Karina Mariánová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        131.3,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "915508/1672",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        332.5,
+        287.5,
+        388.5,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de-ch",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "372c4d5e444c68c65bee20b4f78483640def3dabf71c8f56aad2743635e44a2a",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Hofmann",
+     "norm": "Medizinisches Zentrum Hofmann"
+    },
+    "facility_country": {
+     "printed": "Schweiz",
+     "norm": "CH"
+    },
+    "patient_name": {
+     "printed": "Karina Mariánová",
+     "norm": "Karina Mariánová"
+    },
+    "patient_birth_date": {
+     "printed": "08.05.1991",
+     "norm": "1991-05-08"
+    },
+    "visit_date": {
+     "printed": "27.07.2026",
+     "norm": "2026-07-27"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Gehirnerschütterung",
+     "norm": "S06.0"
+    },
+    "icd10_code": {
+     "printed": "S06.0",
+     "norm": "S06.0"
+    },
+    "anamnesis": {
+     "printed": "Patient bei Aufnahme alkoholisiert, Atemalkohol 1,4 Promille.",
+     "norm": "alcohol"
+    },
+    "treatment": {
+     "printed": "Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergaben keine Verletzungen. Die durchgeführte Bildgebung (CT des Schädels) zeigte keine Frakturen oder intrakranielle Blutungen. Der Patient erhielt eine ambulante Nachbeobachtung sowie medikamentöse Unterstützung zur Linderung von Kopfschmerzen. Es wurde eine vorübergehende Arbeitsunfähigkeit empfohlen und eine Rückkehr zur ambulanten Nachsorge in 48 Stunden.",
+     "norm": "Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergaben keine Verletzungen. Die durchgeführte Bildgebung (CT des Schädels) zeigte keine Frakturen oder intrakranielle Blutungen. Der Patient erhielt eine ambulante Nachbeobachtung sowie medikamentöse Unterstützung zur Linderung von Kopfschmerzen. Es wurde eine vorübergehende Arbeitsunfähigkeit empfohlen und eine Rückkehr zur ambulanten Nachsorge in 48 Stunden."
+    },
+    "physician_name": {
+     "printed": "Frank Kuhn",
+     "norm": "Frank Kuhn"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Karina Mariánová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        135.5,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Frank Kuhn",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        440.3,
+        189.0,
+        449.6
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.png",
+   "doc_type": "medical_invoice",
+   "language": "de",
+   "locale": "de-ch",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": "png",
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "dd1a678d6352dcf49540a39255db1125cd02d84de5518bed4ca5a953763d6a2a",
+   "fields": {
+    "invoice_number": {
+     "printed": "RE-2026-94244",
+     "norm": "RE-2026-94244"
+    },
+    "issue_date": {
+     "printed": "29.07.2026",
+     "norm": "2026-07-29"
+    },
+    "provider_name": {
+     "printed": "Medizinisches Zentrum Hofmann",
+     "norm": "Medizinisches Zentrum Hofmann"
+    },
+    "provider_country": {
+     "printed": "Schweiz",
+     "norm": "CH"
+    },
+    "patient_name": {
+     "printed": "Karina Mariánová",
+     "norm": "Karina Mariánová"
+    },
+    "service_date": {
+     "printed": "27.07.2026",
+     "norm": "2026-07-27"
+    },
+    "currency": {
+     "printed": "Fr.",
+     "norm": "CHF"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Notfallbehandlung",
+       "norm": "Notfallbehandlung"
+      },
+      "amount": {
+       "printed": "212.19",
+       "norm": "212.19"
+      }
+     },
+     {
+      "description": {
+       "printed": "Röntgen",
+       "norm": "Röntgen"
+      },
+      "amount": {
+       "printed": "104.18",
+       "norm": "104.18"
+      }
+     },
+     {
+      "description": {
+       "printed": "Computertomographie",
+       "norm": "Computertomographie"
+      },
+      "amount": {
+       "printed": "561.80",
+       "norm": "561.80"
+      }
+     }
+    ],
+    "total": {
+     "printed": "878.17",
+     "norm": "878.17"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Karina Mariánová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        135.5,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Karina Mariánová",
+  "birth_number": "915508/1672",
+  "birth_date": "1991-05-08",
+  "address": "Záhradkárska 94, 934 88 Valkovce",
+  "phone": "+421 910 881 840",
+  "email": "karina.marianova88@mail.example.sk",
+  "iban": "SK1509000000003260641250",
+  "id_card": "AA113706",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S06.0"
+ }
+}

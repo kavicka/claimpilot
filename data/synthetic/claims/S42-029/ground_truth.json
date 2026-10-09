@@ -1,0 +1,639 @@
+{
+ "scenario_id": "S42-029",
+ "split": "dev",
+ "archetype": "early_claim",
+ "edge_cases": [
+  "early_claim",
+  "foreign_currency",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP44269370",
+ "duplicate_of": null,
+ "destination": "HU",
+ "trip": {
+  "start": "2026-03-05",
+  "end": "2026-03-17"
+ },
+ "event_date": "2026-03-16",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R3",
+  "total_payout_eur": "222.49",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "222.49"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Horváth International Medical Centre",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "97020.00",
+   "currency": "HUF",
+   "amount_eur": "245.62",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Lieky z lekárne",
+   "coverage": "medical",
+   "category": "medication",
+   "amount": "10614.00",
+   "currency": "HUF",
+   "amount_eur": "26.87",
+   "doc_id": "D5",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "851312a9d9d74af6b29c06e559bbb0cdba66744f051e6c09ce8eb46e268afc51",
+   "fields": {
+    "policy_number": {
+     "printed": "CP44269370",
+     "norm": "CP44269370"
+    },
+    "insured_name": {
+     "printed": "Bruno Veterník",
+     "norm": "Bruno Veterník"
+    },
+    "insured_birth_number": {
+     "printed": "860331/0947",
+     "norm": "860331/0947"
+    },
+    "insured_address": {
+     "printed": "Jahodová 877, 985 70 Nižný Lánec",
+     "norm": "Jahodová 877, 985 70 Nižný Lánec"
+    },
+    "insured_phone": {
+     "printed": "+421 928 821 752",
+     "norm": "+421 928 821 752"
+    },
+    "insured_email": {
+     "printed": "bruno.veternik2@mail.example.sk",
+     "norm": "bruno.veternik2@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK14 1100 0000 0024 1036 5086",
+     "norm": "SK1411000000002410365086"
+    },
+    "destination_country": {
+     "printed": "Maďarsko",
+     "norm": "HU"
+    },
+    "trip_start": {
+     "printed": "5. 3. 2026",
+     "norm": "2026-03-05"
+    },
+    "trip_end": {
+     "printed": "17. 3. 2026",
+     "norm": "2026-03-17"
+    },
+    "event_date": {
+     "printed": "16. 3. 2026",
+     "norm": "2026-03-16"
+    },
+    "event_place": {
+     "printed": "Hévíz, Maďarsko",
+     "norm": "Hévíz, Maďarsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Hévíze, Maďarsko, kde sa u mňa vyvinula akútna gastroenteritída. Cítil som sa veľmi ťažko a musel som sa zdržať v lekárskej inštitúcii. Zdravotný stav sa postupne zlepšil a po niekoľkých dňoch som sa vrátil domov.",
+     "norm": "Bol som v Hévíze, Maďarsko, kde sa u mňa vyvinula akútna gastroenteritída. Cítil som sa veľmi ťažko a musel som sa zdržať v lekárskej inštitúcii. Zdravotný stav sa postupne zlepšil a po niekoľkých dňoch som sa vrátil domov."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Horváth International Medical Centre",
+       "norm": "Liečebné náklady – Horváth International Medical Centre"
+      },
+      "amount": {
+       "printed": "97 020,00",
+       "norm": "97020.00"
+      },
+      "currency": {
+       "printed": "HUF",
+       "norm": "HUF"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lieky z lekárne",
+       "norm": "Lieky z lekárne"
+      },
+      "amount": {
+       "printed": "10 614,00",
+       "norm": "10614.00"
+      },
+      "currency": {
+       "printed": "HUF",
+       "norm": "HUF"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "21. 3. 2026",
+     "norm": "2026-03-21"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Bruno Veterník",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        369.3,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "860331/0947",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Jahodová 877",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        366.9,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 928 821 752",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "bruno.veternik2@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        453.4,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK14 1100 0000 0024 1036 5086",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "19e434779ef633a1892da773befbb99f35a98eb5adb7c2b57956519f7d8a212c",
+   "fields": {
+    "policy_number": {
+     "printed": "CP44269370",
+     "norm": "CP44269370"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "14. 3. 2026",
+     "norm": "2026-03-14"
+    },
+    "policy_end": {
+     "printed": "17. 3. 2026",
+     "norm": "2026-03-17"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Bruno Veterník",
+       "norm": "Bruno Veterník"
+      },
+      "birth_number": {
+       "printed": "860331/0947",
+       "norm": "860331/0947"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "14,30 EUR",
+     "norm": "14.30"
+    },
+    "issue_date": {
+     "printed": "14. 3. 2026",
+     "norm": "2026-03-14"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Bruno Veterník",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        119.7,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "860331/0947",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "05482bb92557fe12456019bc2a4482c245cb812b28c8f2dd04add45a87dadeb3",
+   "fields": {
+    "facility_name": {
+     "printed": "Horváth International Medical Centre",
+     "norm": "Horváth International Medical Centre"
+    },
+    "facility_country": {
+     "printed": "Hungary",
+     "norm": "HU"
+    },
+    "patient_name": {
+     "printed": "Bruno Veterník",
+     "norm": "Bruno Veterník"
+    },
+    "patient_birth_date": {
+     "printed": "31/03/1986",
+     "norm": "1986-03-31"
+    },
+    "visit_date": {
+     "printed": "16/03/2026",
+     "norm": "2026-03-16"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Acute gastroenteritis",
+     "norm": "A09"
+    },
+    "icd10_code": {
+     "printed": "A09",
+     "norm": "A09"
+    },
+    "anamnesis": {
+     "printed": "No relevant previous illnesses. No regular medication.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "The patient presented with acute onset of diarrhea and vomiting. Examination revealed mild dehydration and tenderness in the epigastrium. Stool examination was negative for parasites and bacterial pathogens. Viral antigen testing was not performed. Treatment included oral rehydration solution, ondansetron for nausea, and symptomatic care. The patient was advised to maintain hydration and return if symptoms worsen or persist beyond 72 hours.",
+     "norm": "The patient presented with acute onset of diarrhea and vomiting. Examination revealed mild dehydration and tenderness in the epigastrium. Stool examination was negative for parasites and bacterial pathogens. Viral antigen testing was not performed. Treatment included oral rehydration solution, ondansetron for nausea, and symptomatic care. The patient was advised to maintain hydration and return if symptoms worsen or persist beyond 72 hours."
+    },
+    "physician_name": {
+     "printed": "Alexandra Nagy",
+     "norm": "Alexandra Nagy"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Bruno Veterník",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        123.3,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Alexandra Nagy",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        126.3,
+        414.7,
+        183.1,
+        424.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "a1208b74a8b2f308bdc0d28debb9efaf380d2e5ad281bff6113938d6848f1f50",
+   "fields": {
+    "invoice_number": {
+     "printed": "INV-2026-56615",
+     "norm": "INV-2026-56615"
+    },
+    "issue_date": {
+     "printed": "18/03/2026",
+     "norm": "2026-03-18"
+    },
+    "provider_name": {
+     "printed": "Horváth International Medical Centre",
+     "norm": "Horváth International Medical Centre"
+    },
+    "provider_country": {
+     "printed": "Hungary",
+     "norm": "HU"
+    },
+    "patient_name": {
+     "printed": "Bruno Veterník",
+     "norm": "Bruno Veterník"
+    },
+    "service_date": {
+     "printed": "16/03/2026",
+     "norm": "2026-03-16"
+    },
+    "currency": {
+     "printed": "HUF",
+     "norm": "HUF"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Outpatient consultation",
+       "norm": "Outpatient consultation"
+      },
+      "amount": {
+       "printed": "62,687.00",
+       "norm": "62687.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "IV infusion",
+       "norm": "IV infusion"
+      },
+      "amount": {
+       "printed": "34,333.00",
+       "norm": "34333.00"
+      }
+     }
+    ],
+    "total": {
+     "printed": "97,020.00",
+     "norm": "97020.00"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Bruno Veterník",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        125.7,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D5",
+   "file": "D5_pharmacy_receipt.jpg",
+   "doc_type": "pharmacy_receipt",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": "jpg",
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "6e90da41c67d2372f1466f6da75f3518269f09c09231ae69df7ad51f81765d60",
+   "fields": {
+    "receipt_number": {
+     "printed": "5847/48696",
+     "norm": "5847/48696"
+    },
+    "issue_date": {
+     "printed": "16/03/2026 09:53",
+     "norm": "2026-03-16"
+    },
+    "pharmacy_name": {
+     "printed": "Kiss Pharmacy",
+     "norm": "Kiss Pharmacy"
+    },
+    "currency": {
+     "printed": "Ft",
+     "norm": "HUF"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Paracetamol 500mg",
+       "norm": "Paracetamol 500mg"
+      },
+      "amount": {
+       "printed": "1,789.00",
+       "norm": "1789.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elastic bandage",
+       "norm": "Elastic bandage"
+      },
+      "amount": {
+       "printed": "3,425.00",
+       "norm": "3425.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Amoxicillin 1g",
+       "norm": "Amoxicillin 1g"
+      },
+      "amount": {
+       "printed": "5,400.00",
+       "norm": "5400.00"
+      }
+     }
+    ],
+    "total": {
+     "printed": "10,614.00",
+     "norm": "10614.00"
+    }
+   },
+   "pii": []
+  }
+ ],
+ "insured": {
+  "name": "Bruno Veterník",
+  "birth_number": "860331/0947",
+  "birth_date": "1986-03-31",
+  "address": "Jahodová 877, 985 70 Nižný Lánec",
+  "phone": "+421 928 821 752",
+  "email": "bruno.veternik2@mail.example.sk",
+  "iban": "SK1411000000002410365086",
+  "id_card": "HE649628",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "A09"
+ }
+}

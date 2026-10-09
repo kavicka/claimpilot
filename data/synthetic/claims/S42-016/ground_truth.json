@@ -1,0 +1,582 @@
+{
+ "scenario_id": "S42-016",
+ "split": "dev",
+ "archetype": "luggage_over_limit",
+ "edge_cases": [
+  "above_product_limit",
+  "scanned_documents"
+ ],
+ "claim_type": "luggage",
+ "product": "basic",
+ "policy_number": "CP30509175",
+ "duplicate_of": null,
+ "destination": "DE",
+ "trip": {
+  "start": "2026-05-23",
+  "end": "2026-05-29"
+ },
+ "event_date": "2026-05-25",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R9",
+  "total_payout_eur": "332.34",
+  "deductible_eur": "30.00",
+  "by_coverage": {
+   "luggage": "332.34"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Fotoaparát",
+   "coverage": "luggage",
+   "category": "valuables",
+   "amount": "808.09",
+   "currency": "EUR",
+   "amount_eur": "808.09",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": true
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Mobilný telefón",
+   "coverage": "luggage",
+   "category": "valuables",
+   "amount": "553.16",
+   "currency": "EUR",
+   "amount_eur": "553.16",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": true
+  },
+  {
+   "ref": "I3",
+   "description_sk": "Notebook",
+   "coverage": "luggage",
+   "category": "valuables",
+   "amount": "1227.35",
+   "currency": "EUR",
+   "amount_eur": "1227.35",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": true
+  },
+  {
+   "ref": "I4",
+   "description_sk": "Cestovný kufor",
+   "coverage": "luggage",
+   "category": "luggage",
+   "amount": "250.83",
+   "currency": "EUR",
+   "amount_eur": "250.83",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I5",
+   "description_sk": "Topánky",
+   "coverage": "luggage",
+   "category": "luggage",
+   "amount": "62.34",
+   "currency": "EUR",
+   "amount_eur": "62.34",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": true,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "7973d552e088bf1ec9e155ee02334a05e1e9ab24eff91ebfdbb882595c5f6928",
+   "fields": {
+    "policy_number": {
+     "printed": "CP30509175",
+     "norm": "CP30509175"
+    },
+    "insured_name": {
+     "printed": "Drahomíra Senková",
+     "norm": "Drahomíra Senková"
+    },
+    "insured_birth_number": {
+     "printed": "745611/4589",
+     "norm": "745611/4589"
+    },
+    "insured_address": {
+     "printed": "Ulica padlých hrdino 404, 978 12 Nechválova Polianka",
+     "norm": "Ulica padlých hrdino 404, 978 12 Nechválova Polianka"
+    },
+    "insured_phone": {
+     "printed": "+421 943 791 656",
+     "norm": "+421 943 791 656"
+    },
+    "insured_email": {
+     "printed": "drahomira.senkova55@mail.example.sk",
+     "norm": "drahomira.senkova55@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK26 0200 0000 0011 8429 6341",
+     "norm": "SK2602000000001184296341"
+    },
+    "destination_country": {
+     "printed": "Nemecko",
+     "norm": "DE"
+    },
+    "trip_start": {
+     "printed": "23. 5. 2026",
+     "norm": "2026-05-23"
+    },
+    "trip_end": {
+     "printed": "29. 5. 2026",
+     "norm": "2026-05-29"
+    },
+    "event_date": {
+     "printed": "25. 5. 2026",
+     "norm": "2026-05-25"
+    },
+    "event_place": {
+     "printed": "Hamburg, Nemecko",
+     "norm": "Hamburg, Nemecko"
+    },
+    "claim_types": {
+     "printed": [
+      "Batožina"
+     ],
+     "norm": [
+      "luggage"
+     ]
+    },
+    "event_description": {
+     "printed": "Na letisku v Hamburgu som stratil/a batožinu. Letecká spoločnosť ju nezabezpečila a na mieste som spísal/a záznam o udalosti.",
+     "norm": "Na letisku v Hamburgu som stratil/a batožinu. Letecká spoločnosť ju nezabezpečila a na mieste som spísal/a záznam o udalosti."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Fotoaparát",
+       "norm": "Fotoaparát"
+      },
+      "amount": {
+       "printed": "808,09",
+       "norm": "808.09"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Mobilný telefón",
+       "norm": "Mobilný telefón"
+      },
+      "amount": {
+       "printed": "553,16",
+       "norm": "553.16"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Notebook",
+       "norm": "Notebook"
+      },
+      "amount": {
+       "printed": "1 227,35",
+       "norm": "1227.35"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Cestovný kufor",
+       "norm": "Cestovný kufor"
+      },
+      "amount": {
+       "printed": "250,83",
+       "norm": "250.83"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Topánky",
+       "norm": "Topánky"
+      },
+      "amount": {
+       "printed": "62,34",
+       "norm": "62.34"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "18. 6. 2026",
+     "norm": "2026-06-18"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Drahomíra Senková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.5,
+        404.2,
+        182.9
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "745611/4589",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        202.6,
+        130.9,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Ulica padlých hrdino 404",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        202.6,
+        433.8,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 943 791 656",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        252.2,
+        158.5,
+        266.6
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "drahomira.senkova55@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        252.2,
+        504.0,
+        266.6
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK26 0200 0000 0011 8429 6341",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        286.3,
+        234.2,
+        300.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "c0fbcc6ac215392e7be360ef52e1962623d546f699488ba6cff4444d33345b02",
+   "fields": {
+    "policy_number": {
+     "printed": "CP30509175",
+     "norm": "CP30509175"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "celoročné",
+     "norm": "annual"
+    },
+    "policy_start": {
+     "printed": "30. 10. 2025",
+     "norm": "2025-10-30"
+    },
+    "policy_end": {
+     "printed": "29. 10. 2026",
+     "norm": "2026-10-29"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Drahomíra Senková",
+       "norm": "Drahomíra Senková"
+      },
+      "birth_number": {
+       "printed": "745611/4589",
+       "norm": "745611/4589"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "49,00 EUR",
+     "norm": "49.00"
+    },
+    "issue_date": {
+     "printed": "24. 10. 2025",
+     "norm": "2025-10-24"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Drahomíra Senková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        140.9,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "745611/4589",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        345.2,
+        287.5,
+        401.2,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_property_irregularity_report.jpg",
+   "doc_type": "property_irregularity_report",
+   "language": "en",
+   "locale": "en-iso",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": "jpg",
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "8514aace87ccd01372e4fe7dd7c4b78fcf03fb0e8e89efaa9459fa49d232f38c",
+   "fields": {
+    "file_reference": {
+     "printed": "MUCDN61116",
+     "norm": "MUCDN61116"
+    },
+    "airline": {
+     "printed": "Danubia Air",
+     "norm": "Danubia Air"
+    },
+    "flight_number": {
+     "printed": "DN6965",
+     "norm": "DN6965"
+    },
+    "flight_date": {
+     "printed": "23 May 2026",
+     "norm": "2026-05-23"
+    },
+    "passenger_name": {
+     "printed": "SENKOVA/DRAHOMIRA MS",
+     "norm": "Drahomíra Senková"
+    },
+    "bag_tag": {
+     "printed": "DN664365",
+     "norm": "DN664365"
+    },
+    "status": {
+     "printed": "LOST",
+     "norm": "lost"
+    },
+    "arrival_time": {
+     "printed": "23MAY26 1235",
+     "norm": "2026-05-23T12:35"
+    },
+    "delivery_time": {
+     "printed": null,
+     "norm": null
+    },
+    "remarks": {
+     "printed": "Bag not delivered on arrival. Contents declared by passenger: Camera, Mobile phone, Laptop, Suitcase, Shoes.",
+     "norm": "Bag not delivered on arrival. Contents declared by passenger: Camera, Mobile phone, Laptop, Suitcase, Shoes."
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "SENKOVA/DRAHOMIRA MS",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        167.7,
+        171.5,
+        178.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Ulica padlých hrdino 404",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        264.8,
+        194.3,
+        275.6
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 943 791 656",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        264.8,
+        394.8,
+        275.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Drahomíra Senková",
+  "birth_number": "745611/4589",
+  "birth_date": "1974-06-11",
+  "address": "Ulica padlých hrdino 404, 978 12 Nechválova Polianka",
+  "phone": "+421 943 791 656",
+  "email": "drahomira.senkova55@mail.example.sk",
+  "iban": "SK2602000000001184296341",
+  "id_card": "CC476133",
+  "czech": false
+ },
+ "facts": {}
+}

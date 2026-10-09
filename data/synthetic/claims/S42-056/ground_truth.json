@@ -1,0 +1,558 @@
+{
+ "scenario_id": "S42-056",
+ "split": "test",
+ "archetype": "early_claim",
+ "edge_cases": [
+  "early_claim",
+  "foreign_currency",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP26821075",
+ "duplicate_of": null,
+ "destination": "CH",
+ "trip": {
+  "start": "2026-04-20",
+  "end": "2026-05-01"
+ },
+ "event_date": "2026-04-26",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R3",
+  "total_payout_eur": "1038.80",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "medical": "1038.80"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Gerber",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "976.47",
+   "currency": "CHF",
+   "amount_eur": "1038.80",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "7992ddbc0ea2e8a2d97c0c0044f54c3c2fc4d26ca3d5bf456e1f645da3e3ba68",
+   "fields": {
+    "policy_number": {
+     "printed": "CP26821075",
+     "norm": "CP26821075"
+    },
+    "insured_name": {
+     "printed": "Adolf Lepšík",
+     "norm": "Adolf Lepšík"
+    },
+    "insured_birth_number": {
+     "printed": "560312/8586",
+     "norm": "560312/8586"
+    },
+    "insured_address": {
+     "printed": "Pekníkova 80, 829 78 Ostrov",
+     "norm": "Pekníkova 80, 829 78 Ostrov"
+    },
+    "insured_phone": {
+     "printed": "+421 901 162 886",
+     "norm": "+421 901 162 886"
+    },
+    "insured_email": {
+     "printed": "adolf.lepsik90@example.com",
+     "norm": "adolf.lepsik90@example.com"
+    },
+    "iban": {
+     "printed": "SK15 8330 0000 0050 2153 2489",
+     "norm": "SK1583300000005021532489"
+    },
+    "destination_country": {
+     "printed": "Švajčiarsko",
+     "norm": "CH"
+    },
+    "trip_start": {
+     "printed": "20. 4. 2026",
+     "norm": "2026-04-20"
+    },
+    "trip_end": {
+     "printed": "1. 5. 2026",
+     "norm": "2026-05-01"
+    },
+    "event_date": {
+     "printed": "26. 4. 2026",
+     "norm": "2026-04-26"
+    },
+    "event_place": {
+     "printed": "Davos, Švajčiarsko",
+     "norm": "Davos, Švajčiarsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Davos, Švajčiarsko, kde sa u mňa vyvinula akútna gastroenteritída. Cítil som sa veľmi zle, preto som sa obrátil na lokálneho lekára. Lekár mi poskytol potrebnú starostlivosť a liečbu.",
+     "norm": "Bol som v Davos, Švajčiarsko, kde sa u mňa vyvinula akútna gastroenteritída. Cítil som sa veľmi zle, preto som sa obrátil na lokálneho lekára. Lekár mi poskytol potrebnú starostlivosť a liečbu."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Gerber",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Gerber"
+      },
+      "amount": {
+       "printed": "976,47",
+       "norm": "976.47"
+      },
+      "currency": {
+       "printed": "CHF",
+       "norm": "CHF"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "19. 5. 2026",
+     "norm": "2026-05-19"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Adolf Lepšík",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        358.9,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "560312/8586",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Pekníkova 80",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        363.6,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 901 162 886",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "adolf.lepsik90@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        434.0,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK15 8330 0000 0050 2153 2489",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e370ea314ea0ed8ccc0519177248bc6d6b1278347df3e16e8ac781cd6e079331",
+   "fields": {
+    "policy_number": {
+     "printed": "CP26821075",
+     "norm": "CP26821075"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Premium",
+     "norm": "premium"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "25. 4. 2026",
+     "norm": "2026-04-25"
+    },
+    "policy_end": {
+     "printed": "1. 5. 2026",
+     "norm": "2026-05-01"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Adolf Lepšík",
+       "norm": "Adolf Lepšík"
+      },
+      "birth_number": {
+       "printed": "560312/8586",
+       "norm": "560312/8586"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "38,40 EUR",
+     "norm": "38.40"
+    },
+    "issue_date": {
+     "printed": "25. 4. 2026",
+     "norm": "2026-04-25"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Adolf Lepšík",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        109.9,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "560312/8586",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de-ch",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "387631a7611ff3bbe49d431d9d57ff57b9fd50b85d6cf5fef8dcdd86fe89b98f",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Gerber",
+     "norm": "Medizinisches Zentrum Gerber"
+    },
+    "facility_country": {
+     "printed": "Schweiz",
+     "norm": "CH"
+    },
+    "patient_name": {
+     "printed": "Adolf Lepšík",
+     "norm": "Adolf Lepšík"
+    },
+    "patient_birth_date": {
+     "printed": "12.03.1956",
+     "norm": "1956-03-12"
+    },
+    "visit_date": {
+     "printed": "26.04.2026",
+     "norm": "2026-04-26"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Akute Gastroenteritis",
+     "norm": "A09"
+    },
+    "icd10_code": {
+     "printed": "A09",
+     "norm": "A09"
+    },
+    "anamnesis": {
+     "printed": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen.",
+     "norm": "Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen."
+    },
+    "physician_name": {
+     "printed": "Joel Pfister",
+     "norm": "Joel Pfister"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Adolf Lepšík",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        112.9,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Joel Pfister",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        427.5,
+        187.8,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.jpg",
+   "doc_type": "medical_invoice",
+   "language": "de",
+   "locale": "de-ch",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": "jpg",
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "fa49abaa63aee64cb4274cbec630223d943ad2df65f8797fcc8b49f98da9912d",
+   "fields": {
+    "invoice_number": {
+     "printed": "RE-2026-17912",
+     "norm": "RE-2026-17912"
+    },
+    "issue_date": {
+     "printed": "27.04.2026",
+     "norm": "2026-04-27"
+    },
+    "provider_name": {
+     "printed": "Medizinisches Zentrum Gerber",
+     "norm": "Medizinisches Zentrum Gerber"
+    },
+    "provider_country": {
+     "printed": "Schweiz",
+     "norm": "CH"
+    },
+    "patient_name": {
+     "printed": "Adolf Lepšík",
+     "norm": "Adolf Lepšík"
+    },
+    "service_date": {
+     "printed": "26.04.2026",
+     "norm": "2026-04-26"
+    },
+    "currency": {
+     "printed": "Fr.",
+     "norm": "CHF"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Notfallbehandlung",
+       "norm": "Notfallbehandlung"
+      },
+      "amount": {
+       "printed": "294.36",
+       "norm": "294.36"
+      }
+     },
+     {
+      "description": {
+       "printed": "Computertomographie",
+       "norm": "Computertomographie"
+      },
+      "amount": {
+       "printed": "512.57",
+       "norm": "512.57"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboruntersuchung",
+       "norm": "Laboruntersuchung"
+      },
+      "amount": {
+       "printed": "97.74",
+       "norm": "97.74"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "71.80",
+       "norm": "71.80"
+      }
+     }
+    ],
+    "total": {
+     "printed": "976.47",
+     "norm": "976.47"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Adolf Lepšík",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        112.9,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Adolf Lepšík",
+  "birth_number": "560312/8586",
+  "birth_date": "1956-03-12",
+  "address": "Pekníkova 80, 829 78 Ostrov",
+  "phone": "+421 901 162 886",
+  "email": "adolf.lepsik90@example.com",
+  "iban": "SK1583300000005021532489",
+  "id_card": "CK100545",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "A09"
+ }
+}

@@ -20,7 +20,7 @@ done
 [[ ${#dirs[@]} -eq 0 ]] && exit 0
 uniq_dirs=$(printf '%s\n' "${dirs[@]}" | sort -u | while read -r d; do [[ -d "$d" ]] && echo "$d"; done)
 [[ -z "$uniq_dirs" ]] && exit 0
-if ! out=$(uv run --quiet pytest -q -x $uniq_dirs 2>&1); then
+if ! out=$(uv run --quiet --no-sync pytest -q -x $uniq_dirs 2>&1); then
   printf 'Tests failing in %s:\n%s\n' "$(echo $uniq_dirs)" "$(printf '%s' "$out" | tail -25)" >&2
   exit 2
 fi

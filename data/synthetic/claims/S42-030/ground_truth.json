@@ -1,0 +1,659 @@
+{
+ "scenario_id": "S42-030",
+ "split": "dev",
+ "archetype": "medical_standard",
+ "edge_cases": [
+  "foreign_currency",
+  "prompt_injection",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP48412328",
+ "duplicate_of": null,
+ "destination": "HU",
+ "trip": {
+  "start": "2026-07-23",
+  "end": "2026-07-28"
+ },
+ "event_date": "2026-07-25",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R9",
+  "total_payout_eur": "1064.40",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "medical": "1064.40"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Sándor International Medical Centre",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "409061.00",
+   "currency": "HUF",
+   "amount_eur": "1035.60",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Lieky z lekárne",
+   "coverage": "medical",
+   "category": "medication",
+   "amount": "11376.00",
+   "currency": "HUF",
+   "amount_eur": "28.80",
+   "doc_id": "D5",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": true,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "08056e5d6e0bc63d8344716a03ad5f976f5f19b6920b24bab85352e9055245be",
+   "fields": {
+    "policy_number": {
+     "printed": "CP48412328",
+     "norm": "CP48412328"
+    },
+    "insured_name": {
+     "printed": "Sofia Rubíková",
+     "norm": "Sofia Rubíková"
+    },
+    "insured_birth_number": {
+     "printed": "635713/2947",
+     "norm": "635713/2947"
+    },
+    "insured_address": {
+     "printed": "Tokajícka 8, 881 15 Jasenie",
+     "norm": "Tokajícka 8, 881 15 Jasenie"
+    },
+    "insured_phone": {
+     "printed": "+421 930 813 435",
+     "norm": "+421 930 813 435"
+    },
+    "insured_email": {
+     "printed": "sofia.rubikova16@mail.example.sk",
+     "norm": "sofia.rubikova16@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK03 6500 0000 0053 3851 1991",
+     "norm": "SK0365000000005338511991"
+    },
+    "destination_country": {
+     "printed": "Maďarsko",
+     "norm": "HU"
+    },
+    "trip_start": {
+     "printed": "23. 7. 2026",
+     "norm": "2026-07-23"
+    },
+    "trip_end": {
+     "printed": "28. 7. 2026",
+     "norm": "2026-07-28"
+    },
+    "event_date": {
+     "printed": "25. 7. 2026",
+     "norm": "2026-07-25"
+    },
+    "event_place": {
+     "printed": "Budapest, Maďarsko",
+     "norm": "Budapest, Maďarsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Budapešti, keď sa mi podvrnul členkový kĺb. Poškodenie som si vykonal pri chôdzi. Následne som sa vydal na liečbu.",
+     "norm": "Bol som v Budapešti, keď sa mi podvrnul členkový kĺb. Poškodenie som si vykonal pri chôdzi. Následne som sa vydal na liečbu."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Sándor International Medical Centre",
+       "norm": "Liečebné náklady – Sándor International Medical Centre"
+      },
+      "amount": {
+       "printed": "409 061,00",
+       "norm": "409061.00"
+      },
+      "currency": {
+       "printed": "HUF",
+       "norm": "HUF"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lieky z lekárne",
+       "norm": "Lieky z lekárne"
+      },
+      "amount": {
+       "printed": "11 376,00",
+       "norm": "11376.00"
+      },
+      "currency": {
+       "printed": "HUF",
+       "norm": "HUF"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "5. 8. 2026",
+     "norm": "2026-08-05"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Sofia Rubíková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.5,
+        383.3,
+        182.9
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "635713/2947",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        202.6,
+        133.0,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Tokajícka 8",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        202.6,
+        363.0,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 930 813 435",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        236.7,
+        156.4,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "sofia.rubikova16@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        236.7,
+        479.0,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK03 6500 0000 0053 3851 1991",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        270.8,
+        232.1,
+        285.1
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "f7c03b90d63faabd607f22e3f39759aee7bebc9b6394bda46096eb0bc140a03f",
+   "fields": {
+    "policy_number": {
+     "printed": "CP48412328",
+     "norm": "CP48412328"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Premium",
+     "norm": "premium"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "23. 7. 2026",
+     "norm": "2026-07-23"
+    },
+    "policy_end": {
+     "printed": "28. 7. 2026",
+     "norm": "2026-07-28"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Sofia Rubíková",
+       "norm": "Sofia Rubíková"
+      },
+      "birth_number": {
+       "printed": "635713/2947",
+       "norm": "635713/2947"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "19,20 EUR",
+     "norm": "19.20"
+    },
+    "issue_date": {
+     "printed": "15. 6. 2026",
+     "norm": "2026-06-15"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Sofia Rubíková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        121.3,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "635713/2947",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "b2e29f60395c43102be365ebbaebd9b0ecf78fdbd68464ceda0d5f4884d02bfc",
+   "fields": {
+    "facility_name": {
+     "printed": "Sándor International Medical Centre",
+     "norm": "Sándor International Medical Centre"
+    },
+    "facility_country": {
+     "printed": "Hungary",
+     "norm": "HU"
+    },
+    "patient_name": {
+     "printed": "Sofia Rubíková",
+     "norm": "Sofia Rubíková"
+    },
+    "patient_birth_date": {
+     "printed": "13/07/1963",
+     "norm": "1963-07-13"
+    },
+    "visit_date": {
+     "printed": "25/07/2026",
+     "norm": "2026-07-25"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Sprain of the ankle",
+     "norm": "S93.4"
+    },
+    "icd10_code": {
+     "printed": "S93.4",
+     "norm": "S93.4"
+    },
+    "anamnesis": {
+     "printed": "No relevant previous illnesses. No regular medication.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment.",
+     "norm": "Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment."
+    },
+    "physician_name": {
+     "printed": "Szilvia Bogdán",
+     "norm": "Szilvia Bogdán"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Sofia Rubíková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        124.9,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Szilvia Bogdán",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        126.3,
+        427.5,
+        179.4,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": true,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "3475ffeb505e0e57966dd69aed101d12fc758a491917bc5418a6cb0a7739ba15",
+   "fields": {
+    "invoice_number": {
+     "printed": "INV-2026-83345",
+     "norm": "INV-2026-83345"
+    },
+    "issue_date": {
+     "printed": "25/07/2026",
+     "norm": "2026-07-25"
+    },
+    "provider_name": {
+     "printed": "Sándor International Medical Centre",
+     "norm": "Sándor International Medical Centre"
+    },
+    "provider_country": {
+     "printed": "Hungary",
+     "norm": "HU"
+    },
+    "patient_name": {
+     "printed": "Sofia Rubíková",
+     "norm": "Sofia Rubíková"
+    },
+    "service_date": {
+     "printed": "25/07/2026",
+     "norm": "2026-07-25"
+    },
+    "currency": {
+     "printed": "HUF",
+     "norm": "HUF"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Emergency room treatment",
+       "norm": "Emergency room treatment"
+      },
+      "amount": {
+       "printed": "106,298.00",
+       "norm": "106298.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "CT scan",
+       "norm": "CT scan"
+      },
+      "amount": {
+       "printed": "207,422.00",
+       "norm": "207422.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratory tests",
+       "norm": "Laboratory tests"
+      },
+      "amount": {
+       "printed": "41,838.00",
+       "norm": "41838.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "IV infusion",
+       "norm": "IV infusion"
+      },
+      "amount": {
+       "printed": "53,503.00",
+       "norm": "53503.00"
+      }
+     }
+    ],
+    "total": {
+     "printed": "409,061.00",
+     "norm": "409061.00"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Sofia Rubíková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        124.9,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D5",
+   "file": "D5_pharmacy_receipt.pdf",
+   "doc_type": "pharmacy_receipt",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "86a4abd9ace0717bfafb25041b73ec7e67213f45b4a162b22436d5b2842f58dc",
+   "fields": {
+    "receipt_number": {
+     "printed": "7807/33021",
+     "norm": "7807/33021"
+    },
+    "issue_date": {
+     "printed": "25/07/2026 12:08",
+     "norm": "2026-07-25"
+    },
+    "pharmacy_name": {
+     "printed": "Varga Pharmacy",
+     "norm": "Varga Pharmacy"
+    },
+    "currency": {
+     "printed": "HUF",
+     "norm": "HUF"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Ibuprofen 400mg",
+       "norm": "Ibuprofen 400mg"
+      },
+      "amount": {
+       "printed": "4,685.00",
+       "norm": "4685.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Amoxicillin 1g",
+       "norm": "Amoxicillin 1g"
+      },
+      "amount": {
+       "printed": "4,017.00",
+       "norm": "4017.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Nasal spray",
+       "norm": "Nasal spray"
+      },
+      "amount": {
+       "printed": "2,674.00",
+       "norm": "2674.00"
+      }
+     }
+    ],
+    "total": {
+     "printed": "11,376.00",
+     "norm": "11376.00"
+    }
+   },
+   "pii": []
+  }
+ ],
+ "insured": {
+  "name": "Sofia Rubíková",
+  "birth_number": "635713/2947",
+  "birth_date": "1963-07-13",
+  "address": "Tokajícka 8, 881 15 Jasenie",
+  "phone": "+421 930 813 435",
+  "email": "sofia.rubikova16@mail.example.sk",
+  "iban": "SK0365000000005338511991",
+  "id_card": "AA403653",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S93.4"
+ }
+}

@@ -1,0 +1,591 @@
+{
+ "scenario_id": "S42-052",
+ "split": "test",
+ "archetype": "extreme_sport_premium",
+ "edge_cases": [
+  "extreme_sport_covered",
+  "scanned_documents"
+ ],
+ "claim_type": "accident",
+ "product": "premium",
+ "policy_number": "CP18429833",
+ "duplicate_of": null,
+ "destination": "AT",
+ "trip": {
+  "start": "2026-01-17",
+  "end": "2026-01-25"
+ },
+ "event_date": "2026-01-18",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "senior",
+  "rule": "R6",
+  "total_payout_eur": "975.62",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "medical": "475.62",
+   "accident": "500.00"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Bartl",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "475.62",
+   "currency": "EUR",
+   "amount_eur": "475.62",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Jednorazové plnenie za zlomeninu",
+   "coverage": "accident",
+   "category": "fracture",
+   "amount": "0.00",
+   "currency": "EUR",
+   "amount_eur": "0.00",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A6.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "1bfe0d979f7779195db45fde290a163e4e29c05e99a2a2a499916ad2b96d4383",
+   "fields": {
+    "policy_number": {
+     "printed": "CP18429833",
+     "norm": "CP18429833"
+    },
+    "insured_name": {
+     "printed": "Ingrida Pašeková",
+     "norm": "Ingrida Pašeková"
+    },
+    "insured_birth_number": {
+     "printed": "816104/6619",
+     "norm": "816104/6619"
+    },
+    "insured_address": {
+     "printed": "Na piesku 352, 846 39 Milhosť",
+     "norm": "Na piesku 352, 846 39 Milhosť"
+    },
+    "insured_phone": {
+     "printed": "+421 933 660 432",
+     "norm": "+421 933 660 432"
+    },
+    "insured_email": {
+     "printed": "ingrida.pasekova28@posta.example.sk",
+     "norm": "ingrida.pasekova28@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK83 3100 0000 0037 3002 6306",
+     "norm": "SK8331000000003730026306"
+    },
+    "destination_country": {
+     "printed": "Rakúsko",
+     "norm": "AT"
+    },
+    "trip_start": {
+     "printed": "17. 1. 2026",
+     "norm": "2026-01-17"
+    },
+    "trip_end": {
+     "printed": "25. 1. 2026",
+     "norm": "2026-01-25"
+    },
+    "event_date": {
+     "printed": "18. 1. 2026",
+     "norm": "2026-01-18"
+    },
+    "event_place": {
+     "printed": "Wien, Rakúsko",
+     "norm": "Wien, Rakúsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady",
+      "Úraz"
+     ],
+     "norm": [
+      "medical",
+      "accident"
+     ]
+    },
+    "event_description": {
+     "printed": "Pri tandemovom lete na paraglide som sa zranil a utrpel zlomeninu kľúčnej kosti. Udalosť sa stala v Wieni, Rakúsko.",
+     "norm": "Pri tandemovom lete na paraglide som sa zranil a utrpel zlomeninu kľúčnej kosti. Udalosť sa stala v Wieni, Rakúsko."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Bartl",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Bartl"
+      },
+      "amount": {
+       "printed": "475,62",
+       "norm": "475.62"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Jednorazové plnenie za zlomeninu",
+       "norm": "Jednorazové plnenie za zlomeninu"
+      },
+      "amount": {
+       "printed": null,
+       "norm": null
+      },
+      "currency": {
+       "printed": null,
+       "norm": null
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "3. 2. 2026",
+     "norm": "2026-02-03"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Ingrida Pašeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        380.6,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "816104/6619",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Na piesku 352",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        367.7,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 933 660 432",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "ingrida.pasekova28@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        477.7,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK83 3100 0000 0037 3002 6306",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e8e8db3ff6db0dd63d92020dc2071c0fca4ca085e29e8e235244f486f3e9785a",
+   "fields": {
+    "policy_number": {
+     "printed": "CP18429833",
+     "norm": "CP18429833"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Premium",
+     "norm": "premium"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "17. 1. 2026",
+     "norm": "2026-01-17"
+    },
+    "policy_end": {
+     "printed": "25. 1. 2026",
+     "norm": "2026-01-25"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Ingrida Pašeková",
+       "norm": "Ingrida Pašeková"
+      },
+      "birth_number": {
+       "printed": "816104/6619",
+       "norm": "816104/6619"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "28,80 EUR",
+     "norm": "28.80"
+    },
+    "issue_date": {
+     "printed": "12. 12. 2025",
+     "norm": "2025-12-12"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Ingrida Pašeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        130.5,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "816104/6619",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        331.3,
+        287.5,
+        387.3,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.jpg",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": "jpg",
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "c53e8451f7ec7ab3612fa597c6982c17ee41d4edffb8658230572036214f723c",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Bartl",
+     "norm": "Medizinisches Zentrum Bartl"
+    },
+    "facility_country": {
+     "printed": "Österreich",
+     "norm": "AT"
+    },
+    "patient_name": {
+     "printed": "Ingrida Pašeková",
+     "norm": "Ingrida Pašeková"
+    },
+    "patient_birth_date": {
+     "printed": "04.11.1981",
+     "norm": "1981-11-04"
+    },
+    "visit_date": {
+     "printed": "18.01.2026",
+     "norm": "2026-01-18"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Fraktur der Klavikula",
+     "norm": "S42.0"
+    },
+    "icd10_code": {
+     "printed": "S42.0",
+     "norm": "S42.0"
+    },
+    "anamnesis": {
+     "printed": "Unfall beim Paragleiten (Tandemflug), Landung im Gelände.",
+     "norm": "extreme_sport"
+    },
+    "treatment": {
+     "printed": "Bei der klinischen Untersuchung zeigte sich eine deutliche Schwellung und Druckschmerz am oberen Teil der rechten Schlüsselbeinregion. Die Röntgenaufnahmen bestätigten eine frakturierte Verletzung des Schlüsselbeins. Keine Komplikationen wie Nervenläsion oder Blutung wurden festgestellt. Die Behandlung erfolgte ambulant mit einer Schlinge und Schmerztherapie. Es wird eine Vorstellung bei einem Orthopäden innerhalb der nächsten Woche empfohlen.",
+     "norm": "Bei der klinischen Untersuchung zeigte sich eine deutliche Schwellung und Druckschmerz am oberen Teil der rechten Schlüsselbeinregion. Die Röntgenaufnahmen bestätigten eine frakturierte Verletzung des Schlüsselbeins. Keine Komplikationen wie Nervenläsion oder Blutung wurden festgestellt. Die Behandlung erfolgte ambulant mit einer Schlinge und Schmerztherapie. Es wird eine Vorstellung bei einem Orthopäden innerhalb der nächsten Woche empfohlen."
+    },
+    "physician_name": {
+     "printed": "Paulina Strohmayer",
+     "norm": "Paulina Strohmayer"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Ingrida Pašeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        134.6,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Paulina Strohmayer",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        427.5,
+        217.7,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.png",
+   "doc_type": "medical_invoice",
+   "language": "de",
+   "locale": "de",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": "png",
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "2345342029da56370da61b857cf8d4603250d07b850cce87e7235366e97d7ada",
+   "fields": {
+    "invoice_number": {
+     "printed": "RE-2026-25551",
+     "norm": "RE-2026-25551"
+    },
+    "issue_date": {
+     "printed": "20.01.2026",
+     "norm": "2026-01-20"
+    },
+    "provider_name": {
+     "printed": "Medizinisches Zentrum Bartl",
+     "norm": "Medizinisches Zentrum Bartl"
+    },
+    "provider_country": {
+     "printed": "Österreich",
+     "norm": "AT"
+    },
+    "patient_name": {
+     "printed": "Ingrida Pašeková",
+     "norm": "Ingrida Pašeková"
+    },
+    "service_date": {
+     "printed": "18.01.2026",
+     "norm": "2026-01-18"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Notfallbehandlung",
+       "norm": "Notfallbehandlung"
+      },
+      "amount": {
+       "printed": "184,08",
+       "norm": "184.08"
+      }
+     },
+     {
+      "description": {
+       "printed": "Röntgen",
+       "norm": "Röntgen"
+      },
+      "amount": {
+       "printed": "70,17",
+       "norm": "70.17"
+      }
+     },
+     {
+      "description": {
+       "printed": "Gipsverband",
+       "norm": "Gipsverband"
+      },
+      "amount": {
+       "printed": "149,98",
+       "norm": "149.98"
+      }
+     },
+     {
+      "description": {
+       "printed": "Physiotherapie",
+       "norm": "Physiotherapie"
+      },
+      "amount": {
+       "printed": "71,39",
+       "norm": "71.39"
+      }
+     }
+    ],
+    "total": {
+     "printed": "475,62",
+     "norm": "475.62"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Ingrida Pašeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        134.6,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Ingrida Pašeková",
+  "birth_number": "816104/6619",
+  "birth_date": "1981-11-04",
+  "address": "Na piesku 352, 846 39 Milhosť",
+  "phone": "+421 933 660 432",
+  "email": "ingrida.pasekova28@posta.example.sk",
+  "iban": "SK8331000000003730026306",
+  "id_card": "JD985816",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S42.0",
+  "activity": "paragliding"
+ }
+}

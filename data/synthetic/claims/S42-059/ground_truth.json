@@ -1,0 +1,442 @@
+{
+ "scenario_id": "S42-059",
+ "split": "test",
+ "archetype": "dup_hash",
+ "edge_cases": [
+  "duplicate_invoice"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP65144509",
+ "duplicate_of": "S42-048",
+ "destination": "GR",
+ "trip": {
+  "start": "2026-07-31",
+  "end": "2026-08-07"
+ },
+ "event_date": "2026-08-03",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R1",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Stevens International Medical Centre",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "208.35",
+   "currency": "EUR",
+   "amount_eur": "208.35",
+   "doc_id": "D3",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A13.4"
+   ],
+   "exclusion": "duplicate_document",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "beea7f46fca09804329dfa3b74bb7f19258d6d1bab1c2ccf3b14487d514ada23",
+   "fields": {
+    "policy_number": {
+     "printed": "CP65144509",
+     "norm": "CP65144509"
+    },
+    "insured_name": {
+     "printed": "Vieroslava Palovová",
+     "norm": "Vieroslava Palovová"
+    },
+    "insured_birth_number": {
+     "printed": "715623/3084",
+     "norm": "715623/3084"
+    },
+    "insured_address": {
+     "printed": "Jadranská 9, 927 45 Župčany",
+     "norm": "Jadranská 9, 927 45 Župčany"
+    },
+    "insured_phone": {
+     "printed": "+421 940 667 325",
+     "norm": "+421 940 667 325"
+    },
+    "insured_email": {
+     "printed": "vieroslava.palovova28@posta.example.sk",
+     "norm": "vieroslava.palovova28@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK04 0900 0000 0044 7906 4947",
+     "norm": "SK0409000000004479064947"
+    },
+    "destination_country": {
+     "printed": "Grécko",
+     "norm": "GR"
+    },
+    "trip_start": {
+     "printed": "31. 7. 2026",
+     "norm": "2026-07-31"
+    },
+    "trip_end": {
+     "printed": "7. 8. 2026",
+     "norm": "2026-08-07"
+    },
+    "event_date": {
+     "printed": "3. 8. 2026",
+     "norm": "2026-08-03"
+    },
+    "event_place": {
+     "printed": "Rodos, Grécko",
+     "norm": "Rodos, Grécko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som na dovolenke na ostrove Rodos, keď sa mi začal vyvíjať zápal stredného ucha. Cítil som bolesť a zúženie ucha, preto som sa obrátil na lokálny zdravotnícky zariadenie. Zdravotníci mi vykonali potrebné vyšetrenia a začali liečbu.",
+     "norm": "Bol som na dovolenke na ostrove Rodos, keď sa mi začal vyvíjať zápal stredného ucha. Cítil som bolesť a zúženie ucha, preto som sa obrátil na lokálny zdravotnícky zariadenie. Zdravotníci mi vykonali potrebné vyšetrenia a začali liečbu."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Stevens International Medical Centre",
+       "norm": "Liečebné náklady – Stevens International Medical Centre"
+      },
+      "amount": {
+       "printed": "208,35",
+       "norm": "208.35"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "13. 8. 2026",
+     "norm": "2026-08-13"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Vieroslava Palovová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        392.6,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "715623/3084",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Jadranská 9",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        358.2,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 940 667 325",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "vieroslava.palovova28@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        489.2,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK04 0900 0000 0044 7906 4947",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": "S42-048/D3",
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "33c6eb543c37c44d62bd53b1619f438ac1ba57f6507009f23b78d0d60b44962a",
+   "fields": {
+    "facility_name": {
+     "printed": "Stevens International Medical Centre",
+     "norm": "Stevens International Medical Centre"
+    },
+    "facility_country": {
+     "printed": "Greece",
+     "norm": "GR"
+    },
+    "patient_name": {
+     "printed": "Vieroslava Palovová",
+     "norm": "Vieroslava Palovová"
+    },
+    "patient_birth_date": {
+     "printed": "23/06/1971",
+     "norm": "1971-06-23"
+    },
+    "visit_date": {
+     "printed": "03/08/2026",
+     "norm": "2026-08-03"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Otitis media",
+     "norm": "H66.9"
+    },
+    "icd10_code": {
+     "printed": "H66.9",
+     "norm": "H66.9"
+    },
+    "anamnesis": {
+     "printed": "No relevant previous illnesses. No regular medication.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Right ear examination revealed mild erythema and bulging of the tympanic membrane with limited mobility. No purulent discharge observed. Pure tone audiometry showed mild conductive hearing loss in the right ear. No signs of complications such as mastoid tenderness or facial nerve involvement. Treatment included a course of oral amoxicillin-clavulanate and analgesic therapy. Patient advised to return for re-evaluation in 48 hours if symptoms persist or worsen.",
+     "norm": "Right ear examination revealed mild erythema and bulging of the tympanic membrane with limited mobility. No purulent discharge observed. Pure tone audiometry showed mild conductive hearing loss in the right ear. No signs of complications such as mastoid tenderness or facial nerve involvement. Treatment included a course of oral amoxicillin-clavulanate and analgesic therapy. Patient advised to return for re-evaluation in 48 hours if symptoms persist or worsen."
+    },
+    "physician_name": {
+     "printed": "Ian Whitehouse",
+     "norm": "Ian Whitehouse"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Vieroslava Palovová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        146.6,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Ian Whitehouse",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        126.3,
+        427.5,
+        181.6,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": "S42-048/D4",
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "a0cac644ca43c1b024aeb0dde97f7db298cda749bef554794ec5860eb52e8c74",
+   "fields": {
+    "invoice_number": {
+     "printed": "INV-2026-62474",
+     "norm": "INV-2026-62474"
+    },
+    "issue_date": {
+     "printed": "03/08/2026",
+     "norm": "2026-08-03"
+    },
+    "provider_name": {
+     "printed": "Stevens International Medical Centre",
+     "norm": "Stevens International Medical Centre"
+    },
+    "provider_country": {
+     "printed": "Greece",
+     "norm": "GR"
+    },
+    "patient_name": {
+     "printed": "Vieroslava Palovová",
+     "norm": "Vieroslava Palovová"
+    },
+    "service_date": {
+     "printed": "03/08/2026",
+     "norm": "2026-08-03"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Outpatient consultation",
+       "norm": "Outpatient consultation"
+      },
+      "amount": {
+       "printed": "87.49",
+       "norm": "87.49"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratory tests",
+       "norm": "Laboratory tests"
+      },
+      "amount": {
+       "printed": "120.86",
+       "norm": "120.86"
+      }
+     }
+    ],
+    "total": {
+     "printed": "208.35",
+     "norm": "208.35"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Vieroslava Palovová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        145.8,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Vieroslava Palovová",
+  "birth_number": "715623/3084",
+  "birth_date": "1971-06-23",
+  "address": "Jadranská 9, 927 45 Župčany",
+  "phone": "+421 940 667 325",
+  "email": "vieroslava.palovova28@posta.example.sk",
+  "iban": "SK0409000000004479064947",
+  "id_card": "LH432553",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "H66.9"
+ }
+}

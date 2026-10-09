@@ -1,0 +1,557 @@
+{
+ "scenario_id": "S42-054",
+ "split": "test",
+ "archetype": "missing_document",
+ "edge_cases": [
+  "missing_document",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "standard",
+ "policy_number": "CP59251188",
+ "duplicate_of": null,
+ "destination": "HR",
+ "trip": {
+  "start": "2026-07-19",
+  "end": "2026-07-25"
+ },
+ "event_date": "2026-07-23",
+ "expected": {
+  "status": "NEEDS_INFO",
+  "queue": null,
+  "rule": "R4",
+  "total_payout_eur": null,
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliklinika Ivšić",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "821.10",
+   "currency": "EUR",
+   "amount_eur": "821.10",
+   "doc_id": "D4",
+   "verdict": "needs_review",
+   "clause_ids": [
+    "A13.3"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Lieky z lekárne",
+   "coverage": "medical",
+   "category": "medication",
+   "amount": "28.90",
+   "currency": "EUR",
+   "amount_eur": "28.90",
+   "doc_id": "D5",
+   "verdict": "needs_review",
+   "clause_ids": [
+    "A13.3"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "33f11130f73d64542d301a0a817529251261317ab38c620f2ae1d51c461c32d9",
+   "fields": {
+    "policy_number": {
+     "printed": "CP59251188",
+     "norm": "CP59251188"
+    },
+    "insured_name": {
+     "printed": "Dobromila Ružičková",
+     "norm": "Dobromila Ružičková"
+    },
+    "insured_birth_number": {
+     "printed": "866127/8945",
+     "norm": "866127/8945"
+    },
+    "insured_address": {
+     "printed": "Pajštúnska 4, 808 59 Pusté Sady",
+     "norm": "Pajštúnska 4, 808 59 Pusté Sady"
+    },
+    "insured_phone": {
+     "printed": "+421 937 962 132",
+     "norm": "+421 937 962 132"
+    },
+    "insured_email": {
+     "printed": "dobromila.ruzickova72@example.com",
+     "norm": "dobromila.ruzickova72@example.com"
+    },
+    "iban": {
+     "printed": "SK48 6500 0000 0024 6385 4004",
+     "norm": "SK4865000000002463854004"
+    },
+    "destination_country": {
+     "printed": "Chorvátsko",
+     "norm": "HR"
+    },
+    "trip_start": {
+     "printed": "19. 7. 2026",
+     "norm": "2026-07-19"
+    },
+    "trip_end": {
+     "printed": "25. 7. 2026",
+     "norm": "2026-07-25"
+    },
+    "event_date": {
+     "printed": "23. 7. 2026",
+     "norm": "2026-07-23"
+    },
+    "event_place": {
+     "printed": "Makarska, Chorvátsko",
+     "norm": "Makarska, Chorvátsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Makarske, Chorvátsko, kde som utrpel otras mozgu. Po udalosti som sa zdržiaval v nemocnici a potreboval som lekárske vyšetrenie. Poistné zdravotné starostlivosti som si vyžiadal v súvislosti s touto udalosťou.",
+     "norm": "Bol som v Makarske, Chorvátsko, kde som utrpel otras mozgu. Po udalosti som sa zdržiaval v nemocnici a potreboval som lekárske vyšetrenie. Poistné zdravotné starostlivosti som si vyžiadal v súvislosti s touto udalosťou."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliklinika Ivšić",
+       "norm": "Liečebné náklady – Poliklinika Ivšić"
+      },
+      "amount": {
+       "printed": "821,10",
+       "norm": "821.10"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lieky z lekárne",
+       "norm": "Lieky z lekárne"
+      },
+      "amount": {
+       "printed": "28,90",
+       "norm": "28.90"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "27. 7. 2026",
+     "norm": "2026-07-27"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Dobromila Ružičková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        398.4,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "866127/8945",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Pajštúnska 4",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        360.8,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 937 962 132",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "dobromila.ruzickova72@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        473.3,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK48 6500 0000 0024 6385 4004",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "837a5bab3f655ae09d344a6df9b754215b605496b1a93a80a74a4f6332f98433",
+   "fields": {
+    "policy_number": {
+     "printed": "CP59251188",
+     "norm": "CP59251188"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Standard",
+     "norm": "standard"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "19. 7. 2026",
+     "norm": "2026-07-19"
+    },
+    "policy_end": {
+     "printed": "25. 7. 2026",
+     "norm": "2026-07-25"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Dobromila Ružičková",
+       "norm": "Dobromila Ružičková"
+      },
+      "birth_number": {
+       "printed": "866127/8945",
+       "norm": "866127/8945"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "13,30 EUR",
+     "norm": "13.30"
+    },
+    "issue_date": {
+     "printed": "9. 6. 2026",
+     "norm": "2026-06-09"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Dobromila Ružičková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        147.3,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "866127/8945",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        353.0,
+        287.5,
+        409.0,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "b3e6ff8f95d92ad0f84910dd7b7b7a216e524867483522d106870db76478a80e",
+   "fields": {
+    "facility_name": {
+     "printed": "Poliklinika Ivšić",
+     "norm": "Poliklinika Ivšić"
+    },
+    "facility_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Dobromila Ružičková",
+     "norm": "Dobromila Ružičková"
+    },
+    "patient_birth_date": {
+     "printed": "27.11.1986.",
+     "norm": "1986-11-27"
+    },
+    "visit_date": {
+     "printed": "23.07.2026.",
+     "norm": "2026-07-23"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Potres mozga",
+     "norm": "S06.0"
+    },
+    "icd10_code": {
+     "printed": "S06.0",
+     "norm": "S06.0"
+    },
+    "anamnesis": {
+     "printed": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Pacijent prikazuje znakove konusije, uključujući kratkotrajnu gubitku svijesti i disocijaciju. Neurološki pregled nije pokazao znakove ozbiljnijih ozljeda. MRI glave nije pokazao frakture, krvarenja ili druge strukturne promjene. Pacijentu je propisan repozicija i praćenje simptoma tijekom sljedećih 24 sata. Preporučeno je izbjegavanje fizičke aktivnosti i intenzivnog mentalnog napora te obrazovanje o znakovima koje zahtijevaju hitnu medicinsku pomoć.",
+     "norm": "Pacijent prikazuje znakove konusije, uključujući kratkotrajnu gubitku svijesti i disocijaciju. Neurološki pregled nije pokazao znakove ozbiljnijih ozljeda. MRI glave nije pokazao frakture, krvarenja ili druge strukturne promjene. Pacijentu je propisan repozicija i praćenje simptoma tijekom sljedećih 24 sata. Preporučeno je izbjegavanje fizičke aktivnosti i intenzivnog mentalnog napora te obrazovanje o znakovima koje zahtijevaju hitnu medicinsku pomoć."
+    },
+    "physician_name": {
+     "printed": "Suzana Ćorić",
+     "norm": "Suzana Ćorić"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Dobromila Ružičková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        152.3,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Suzana Ćorić",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.8,
+        414.7,
+        130.6,
+        424.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D5",
+   "file": "D5_pharmacy_receipt.pdf",
+   "doc_type": "pharmacy_receipt",
+   "language": "hr",
+   "locale": "hr",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "b95500dd5bd4026e59e3f25133c2338a6684318821184ce5497a594fcaa43ff6",
+   "fields": {
+    "receipt_number": {
+     "printed": "2438/99381",
+     "norm": "2438/99381"
+    },
+    "issue_date": {
+     "printed": "23.07.2026. 14:42",
+     "norm": "2026-07-23"
+    },
+    "pharmacy_name": {
+     "printed": "Ljekarna Maloča",
+     "norm": "Ljekarna Maloča"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Sprej za nos",
+       "norm": "Sprej za nos"
+      },
+      "amount": {
+       "printed": "5,81",
+       "norm": "5.81"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elastični zavoj",
+       "norm": "Elastični zavoj"
+      },
+      "amount": {
+       "printed": "6,52",
+       "norm": "6.52"
+      }
+     },
+     {
+      "description": {
+       "printed": "Paracetamol 500 mg",
+       "norm": "Paracetamol 500 mg"
+      },
+      "amount": {
+       "printed": "4,86",
+       "norm": "4.86"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ibuprofen 400 mg",
+       "norm": "Ibuprofen 400 mg"
+      },
+      "amount": {
+       "printed": "11,71",
+       "norm": "11.71"
+      }
+     }
+    ],
+    "total": {
+     "printed": "28,90",
+     "norm": "28.90"
+    }
+   },
+   "pii": []
+  }
+ ],
+ "insured": {
+  "name": "Dobromila Ružičková",
+  "birth_number": "866127/8945",
+  "birth_date": "1986-11-27",
+  "address": "Pajštúnska 4, 808 59 Pusté Sady",
+  "phone": "+421 937 962 132",
+  "email": "dobromila.ruzickova72@example.com",
+  "iban": "SK4865000000002463854004",
+  "id_card": "KH135764",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S06.0",
+  "missing": "medical_invoice"
+ }
+}

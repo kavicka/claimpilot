@@ -1,0 +1,969 @@
+{
+ "scenario_id": "S42-001",
+ "split": "dev",
+ "archetype": "hospital_large",
+ "edge_cases": [
+  "above_senior_threshold",
+  "multi_page_invoice",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP58181396",
+ "duplicate_of": null,
+ "destination": "IT",
+ "trip": {
+  "start": "2026-07-19",
+  "end": "2026-07-29"
+ },
+ "event_date": "2026-07-25",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "senior",
+  "rule": "R5",
+  "total_payout_eur": "6870.28",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "6870.28"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Ospedale Civile Schiavone",
+   "coverage": "medical",
+   "category": "hospital",
+   "amount": "6920.28",
+   "currency": "EUR",
+   "amount_eur": "6920.28",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1",
+    "A4.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "384c593556ed0d34e9518986ce243af63df9034dade970f26d4944cc1911744a",
+   "fields": {
+    "policy_number": {
+     "printed": "CP58181396",
+     "norm": "CP58181396"
+    },
+    "insured_name": {
+     "printed": "Bruno Paška",
+     "norm": "Bruno Paška"
+    },
+    "insured_birth_number": {
+     "printed": "681129/9825",
+     "norm": "681129/9825"
+    },
+    "insured_address": {
+     "printed": "Brnianska 25, 918 48 Virt",
+     "norm": "Brnianska 25, 918 48 Virt"
+    },
+    "insured_phone": {
+     "printed": "+421 942 815 911",
+     "norm": "+421 942 815 911"
+    },
+    "insured_email": {
+     "printed": "bruno.paska13@mail.example.sk",
+     "norm": "bruno.paska13@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK93 0200 0000 0077 7153 2252",
+     "norm": "SK9302000000007771532252"
+    },
+    "destination_country": {
+     "printed": "Taliansko",
+     "norm": "IT"
+    },
+    "trip_start": {
+     "printed": "19. 7. 2026",
+     "norm": "2026-07-19"
+    },
+    "trip_end": {
+     "printed": "29. 7. 2026",
+     "norm": "2026-07-29"
+    },
+    "event_date": {
+     "printed": "25. 7. 2026",
+     "norm": "2026-07-25"
+    },
+    "event_place": {
+     "printed": "Rimini, Taliansko",
+     "norm": "Rimini, Taliansko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Rimini, Taliansko, kde sa mi vyvinul zápal pľúc. Počas pobytu som zažil ťažké dýchanie a vysokú teplotu. Som na liečbe u lokálneho lekára.",
+     "norm": "Bol som v Rimini, Taliansko, kde sa mi vyvinul zápal pľúc. Počas pobytu som zažil ťažké dýchanie a vysokú teplotu. Som na liečbe u lokálneho lekára."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Ospedale Civile Schiavone",
+       "norm": "Liečebné náklady – Ospedale Civile Schiavone"
+      },
+      "amount": {
+       "printed": "6 920,28",
+       "norm": "6920.28"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "17. 8. 2026",
+     "norm": "2026-08-17"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Bruno Paška",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        360.8,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "681129/9825",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Brnianska 25",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        362.1,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 942 815 911",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "bruno.paska13@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        450.5,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK93 0200 0000 0077 7153 2252",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "1d94896cbfa807f51c84b8cfdf232b697c726321d081e196b5c9123831977e49",
+   "fields": {
+    "policy_number": {
+     "printed": "CP58181396",
+     "norm": "CP58181396"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "celoročné",
+     "norm": "annual"
+    },
+    "policy_start": {
+     "printed": "7. 12. 2025",
+     "norm": "2025-12-07"
+    },
+    "policy_end": {
+     "printed": "6. 12. 2026",
+     "norm": "2026-12-06"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Bruno Paška",
+       "norm": "Bruno Paška"
+      },
+      "birth_number": {
+       "printed": "681129/9825",
+       "norm": "681129/9825"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "49,00 EUR",
+     "norm": "49.00"
+    },
+    "issue_date": {
+     "printed": "6. 12. 2025",
+     "norm": "2025-12-06"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Bruno Paška",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        111.6,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "681129/9825",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.png",
+   "doc_type": "medical_report",
+   "language": "it",
+   "locale": "it",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": "png",
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "60a8fd70b74e94e506cb1b7f94b8ab7d910bd76389a8d9e566738f1256cc8830",
+   "fields": {
+    "facility_name": {
+     "printed": "Ospedale Civile Schiavone",
+     "norm": "Ospedale Civile Schiavone"
+    },
+    "facility_country": {
+     "printed": "Italia",
+     "norm": "IT"
+    },
+    "patient_name": {
+     "printed": "Bruno Paška",
+     "norm": "Bruno Paška"
+    },
+    "patient_birth_date": {
+     "printed": "29/11/1968",
+     "norm": "1968-11-29"
+    },
+    "visit_date": {
+     "printed": "25/07/2026",
+     "norm": "2026-07-25"
+    },
+    "discharge_date": {
+     "printed": "31/07/2026",
+     "norm": "2026-07-31"
+    },
+    "diagnosis": {
+     "printed": "Polmonite",
+     "norm": "J18.9"
+    },
+    "icd10_code": {
+     "printed": "J18.9",
+     "norm": "J18.9"
+    },
+    "anamnesis": {
+     "printed": "Nessuna patologia pregressa rilevante. Nessuna terapia cronica.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Esami obiettivi: febbre, tosse con espettorato, crepitii basali bilaterali. Radiografia torace: infiltrati polmonari periferici. Esami del sangue: leucocitosi. Pneumonia confermata. Trattamento: antibiotico per via endovenosa, ossigenoterapia e terapia di supporto. Raccomandato controllo radiologico dopo 48 ore e completamento del ciclo antibiotico.",
+     "norm": "Esami obiettivi: febbre, tosse con espettorato, crepitii basali bilaterali. Radiografia torace: infiltrati polmonari periferici. Esami del sangue: leucocitosi. Pneumonia confermata. Trattamento: antibiotico per via endovenosa, ossigenoterapia e terapia di supporto. Raccomandato controllo radiologico dopo 48 ore e completamento del ciclo antibiotico."
+    },
+    "physician_name": {
+     "printed": "Nina Milanesi",
+     "norm": "Nina Milanesi"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Bruno Paška",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        114.8,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Nina Milanesi",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.5,
+        414.7,
+        130.3,
+        424.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "it",
+   "locale": "it",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 2,
+   "sha256": "db77837f27f92d3f8a9f2d1e3fc460bd59015d2489e21c7520a05c44cbbe0e02",
+   "fields": {
+    "invoice_number": {
+     "printed": "FT-2026-02504",
+     "norm": "FT-2026-02504"
+    },
+    "issue_date": {
+     "printed": "02/08/2026",
+     "norm": "2026-08-02"
+    },
+    "provider_name": {
+     "printed": "Ospedale Civile Schiavone",
+     "norm": "Ospedale Civile Schiavone"
+    },
+    "provider_country": {
+     "printed": "Italia",
+     "norm": "IT"
+    },
+    "patient_name": {
+     "printed": "Bruno Paška",
+     "norm": "Bruno Paška"
+    },
+    "service_date": {
+     "printed": "25/07/2026",
+     "norm": "2026-07-25"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Degenza, giornata 1",
+       "norm": "Degenza, giornata 1"
+      },
+      "amount": {
+       "printed": "783,99",
+       "norm": "783.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "Degenza, giornata 2",
+       "norm": "Degenza, giornata 2"
+      },
+      "amount": {
+       "printed": "783,99",
+       "norm": "783.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "Degenza, giornata 3",
+       "norm": "Degenza, giornata 3"
+      },
+      "amount": {
+       "printed": "783,99",
+       "norm": "783.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "Degenza, giornata 4",
+       "norm": "Degenza, giornata 4"
+      },
+      "amount": {
+       "printed": "783,99",
+       "norm": "783.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "Degenza, giornata 5",
+       "norm": "Degenza, giornata 5"
+      },
+      "amount": {
+       "printed": "783,99",
+       "norm": "783.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "Degenza, giornata 6",
+       "norm": "Degenza, giornata 6"
+      },
+      "amount": {
+       "printed": "783,99",
+       "norm": "783.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "Pronto soccorso",
+       "norm": "Pronto soccorso"
+      },
+      "amount": {
+       "printed": "137,34",
+       "norm": "137.34"
+      }
+     },
+     {
+      "description": {
+       "printed": "TAC",
+       "norm": "TAC"
+      },
+      "amount": {
+       "printed": "379,68",
+       "norm": "379.68"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "102,86",
+       "norm": "102.86"
+      }
+     },
+     {
+      "description": {
+       "printed": "Trasporto in ambulanza",
+       "norm": "Trasporto in ambulanza"
+      },
+      "amount": {
+       "printed": "596,16",
+       "norm": "596.16"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "14,86",
+       "norm": "14.86"
+      }
+     },
+     {
+      "description": {
+       "printed": "Farmaci",
+       "norm": "Farmaci"
+      },
+      "amount": {
+       "printed": "19,17",
+       "norm": "19.17"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "41,84",
+       "norm": "41.84"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "26,00",
+       "norm": "26.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elettrocardiogramma",
+       "norm": "Elettrocardiogramma"
+      },
+      "amount": {
+       "printed": "28,77",
+       "norm": "28.77"
+      }
+     },
+     {
+      "description": {
+       "printed": "Terapia infusionale",
+       "norm": "Terapia infusionale"
+      },
+      "amount": {
+       "printed": "24,88",
+       "norm": "24.88"
+      }
+     },
+     {
+      "description": {
+       "printed": "Terapia infusionale",
+       "norm": "Terapia infusionale"
+      },
+      "amount": {
+       "printed": "26,29",
+       "norm": "26.29"
+      }
+     },
+     {
+      "description": {
+       "printed": "Terapia infusionale",
+       "norm": "Terapia infusionale"
+      },
+      "amount": {
+       "printed": "41,05",
+       "norm": "41.05"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "33,64",
+       "norm": "33.64"
+      }
+     },
+     {
+      "description": {
+       "printed": "Farmaci",
+       "norm": "Farmaci"
+      },
+      "amount": {
+       "printed": "14,79",
+       "norm": "14.79"
+      }
+     },
+     {
+      "description": {
+       "printed": "Farmaci",
+       "norm": "Farmaci"
+      },
+      "amount": {
+       "printed": "8,00",
+       "norm": "8.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elettrocardiogramma",
+       "norm": "Elettrocardiogramma"
+      },
+      "amount": {
+       "printed": "20,85",
+       "norm": "20.85"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ecografia",
+       "norm": "Ecografia"
+      },
+      "amount": {
+       "printed": "34,72",
+       "norm": "34.72"
+      }
+     },
+     {
+      "description": {
+       "printed": "Terapia infusionale",
+       "norm": "Terapia infusionale"
+      },
+      "amount": {
+       "printed": "45,29",
+       "norm": "45.29"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "20,97",
+       "norm": "20.97"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "40,17",
+       "norm": "40.17"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elettrocardiogramma",
+       "norm": "Elettrocardiogramma"
+      },
+      "amount": {
+       "printed": "20,80",
+       "norm": "20.80"
+      }
+     },
+     {
+      "description": {
+       "printed": "Farmaci",
+       "norm": "Farmaci"
+      },
+      "amount": {
+       "printed": "21,74",
+       "norm": "21.74"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ecografia",
+       "norm": "Ecografia"
+      },
+      "amount": {
+       "printed": "58,80",
+       "norm": "58.80"
+      }
+     },
+     {
+      "description": {
+       "printed": "Terapia infusionale",
+       "norm": "Terapia infusionale"
+      },
+      "amount": {
+       "printed": "26,38",
+       "norm": "26.38"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elettrocardiogramma",
+       "norm": "Elettrocardiogramma"
+      },
+      "amount": {
+       "printed": "23,57",
+       "norm": "23.57"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elettrocardiogramma",
+       "norm": "Elettrocardiogramma"
+      },
+      "amount": {
+       "printed": "18,10",
+       "norm": "18.10"
+      }
+     },
+     {
+      "description": {
+       "printed": "Farmaci",
+       "norm": "Farmaci"
+      },
+      "amount": {
+       "printed": "9,52",
+       "norm": "9.52"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ecografia",
+       "norm": "Ecografia"
+      },
+      "amount": {
+       "printed": "46,43",
+       "norm": "46.43"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ecografia",
+       "norm": "Ecografia"
+      },
+      "amount": {
+       "printed": "42,38",
+       "norm": "42.38"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ecografia",
+       "norm": "Ecografia"
+      },
+      "amount": {
+       "printed": "41,31",
+       "norm": "41.31"
+      }
+     },
+     {
+      "description": {
+       "printed": "Farmaci",
+       "norm": "Farmaci"
+      },
+      "amount": {
+       "printed": "23,28",
+       "norm": "23.28"
+      }
+     },
+     {
+      "description": {
+       "printed": "Farmaci",
+       "norm": "Farmaci"
+      },
+      "amount": {
+       "printed": "14,34",
+       "norm": "14.34"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "38,53",
+       "norm": "38.53"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "18,43",
+       "norm": "18.43"
+      }
+     },
+     {
+      "description": {
+       "printed": "Farmaci",
+       "norm": "Farmaci"
+      },
+      "amount": {
+       "printed": "19,52",
+       "norm": "19.52"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elettrocardiogramma",
+       "norm": "Elettrocardiogramma"
+      },
+      "amount": {
+       "printed": "27,92",
+       "norm": "27.92"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elettrocardiogramma",
+       "norm": "Elettrocardiogramma"
+      },
+      "amount": {
+       "printed": "23,27",
+       "norm": "23.27"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elettrocardiogramma",
+       "norm": "Elettrocardiogramma"
+      },
+      "amount": {
+       "printed": "26,46",
+       "norm": "26.46"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ecografia",
+       "norm": "Ecografia"
+      },
+      "amount": {
+       "printed": "58,23",
+       "norm": "58.23"
+      }
+     }
+    ],
+    "total": {
+     "printed": "6.920,28",
+     "norm": "6920.28"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Bruno Paška",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        114.8,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Bruno Paška",
+  "birth_number": "681129/9825",
+  "birth_date": "1968-11-29",
+  "address": "Brnianska 25, 918 48 Virt",
+  "phone": "+421 942 815 911",
+  "email": "bruno.paska13@mail.example.sk",
+  "iban": "SK9302000000007771532252",
+  "id_card": "MK738570",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "J18.9"
+ }
+}

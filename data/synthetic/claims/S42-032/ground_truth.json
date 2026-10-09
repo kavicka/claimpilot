@@ -1,0 +1,446 @@
+{
+ "scenario_id": "S42-032",
+ "split": "dev",
+ "archetype": "missing_document",
+ "edge_cases": [
+  "missing_document",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP45186708",
+ "duplicate_of": null,
+ "destination": "DE",
+ "trip": {
+  "start": "2026-03-13",
+  "end": "2026-03-26"
+ },
+ "event_date": "2026-03-23",
+ "expected": {
+  "status": "NEEDS_INFO",
+  "queue": null,
+  "rule": "R4",
+  "total_payout_eur": null,
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Krebs",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "1044.69",
+   "currency": "EUR",
+   "amount_eur": "1044.69",
+   "doc_id": "D4",
+   "verdict": "needs_review",
+   "clause_ids": [
+    "A13.3"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "fd79ef49838a7d56e9c298a9e48d37ce659a30a5882704557c97fe35ff34c228",
+   "fields": {
+    "policy_number": {
+     "printed": "CP45186708",
+     "norm": "CP45186708"
+    },
+    "insured_name": {
+     "printed": "Marta Sedláčková",
+     "norm": "Marta Sedláčková"
+    },
+    "insured_birth_number": {
+     "printed": "765526/3341",
+     "norm": "765526/3341"
+    },
+    "insured_address": {
+     "printed": "Habartovská 586, 983 96 Libušín",
+     "norm": "Habartovská 586, 983 96 Libušín"
+    },
+    "insured_phone": {
+     "printed": "+421 931 738 531",
+     "norm": "+421 931 738 531"
+    },
+    "insured_email": {
+     "printed": "marta.sedlackova71@example.com",
+     "norm": "marta.sedlackova71@example.com"
+    },
+    "iban": {
+     "printed": "SK07 6500 0969 1123 3973 9843",
+     "norm": "SK0765000969112339739843"
+    },
+    "destination_country": {
+     "printed": "Nemecko",
+     "norm": "DE"
+    },
+    "trip_start": {
+     "printed": "13. 3. 2026",
+     "norm": "2026-03-13"
+    },
+    "trip_end": {
+     "printed": "26. 3. 2026",
+     "norm": "2026-03-26"
+    },
+    "event_date": {
+     "printed": "23. 3. 2026",
+     "norm": "2026-03-23"
+    },
+    "event_place": {
+     "printed": "München, Nemecko",
+     "norm": "München, Nemecko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v München, kde sa mi podvrnul členkový kĺb. Zdravotný problém som vyriešil v lokálnej nemocnici.",
+     "norm": "Bol som v München, kde sa mi podvrnul členkový kĺb. Zdravotný problém som vyriešil v lokálnej nemocnici."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Krebs",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Krebs"
+      },
+      "amount": {
+       "printed": "1 044,69",
+       "norm": "1044.69"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "4. 4. 2026",
+     "norm": "2026-04-04"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Marta Sedláčková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        384.3,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "765526/3341",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Habartovská 586",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        379.7,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 931 738 531",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "marta.sedlackova71@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        462.2,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK07 6500 0969 1123 3973 9843",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "4646406013b68da33c3b0bc6a0c75e7aa79ae61cb5fd37f9a5e7c457bebcfe62",
+   "fields": {
+    "policy_number": {
+     "printed": "CP45186708",
+     "norm": "CP45186708"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "celoročné",
+     "norm": "annual"
+    },
+    "policy_start": {
+     "printed": "4. 12. 2025",
+     "norm": "2025-12-04"
+    },
+    "policy_end": {
+     "printed": "3. 12. 2026",
+     "norm": "2026-12-03"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Marta Sedláčková",
+       "norm": "Marta Sedláčková"
+      },
+      "birth_number": {
+       "printed": "765526/3341",
+       "norm": "765526/3341"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "49,00 EUR",
+     "norm": "49.00"
+    },
+    "issue_date": {
+     "printed": "24. 11. 2025",
+     "norm": "2025-11-24"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Marta Sedláčková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        134.0,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "765526/3341",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        336.2,
+        287.5,
+        392.2,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "41d8869fdfd8a71d13b84da40230ce55d0e050e85113fe108fb6a25b3dcee52d",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Krebs",
+     "norm": "Medizinisches Zentrum Krebs"
+    },
+    "facility_country": {
+     "printed": "Deutschland",
+     "norm": "DE"
+    },
+    "patient_name": {
+     "printed": "Marta Sedláčková",
+     "norm": "Marta Sedláčková"
+    },
+    "patient_birth_date": {
+     "printed": "26.05.1976",
+     "norm": "1976-05-26"
+    },
+    "visit_date": {
+     "printed": "23.03.2026",
+     "norm": "2026-03-23"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Distorsion des oberen Sprunggelenks",
+     "norm": "S93.4"
+    },
+    "icd10_code": {
+     "printed": "S93.4",
+     "norm": "S93.4"
+    },
+    "anamnesis": {
+     "printed": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Bei der klinischen Untersuchung zeigten sich Schwellung, Druckschmerz und begrenzte Beweglichkeit im linken Sprunggelenk. Die MRT bestätigte eine Verletzung der lateralen Bandapparate ohne Fraktur. Der Patient erhielt eine Gipsfixation und eine Schiene zur Schonung. Physiotherapie wurde verordnet, um die Funktion des Gelenks zu erhalten. Nach 6 Wochen erfolgt eine Kontrolle zur Beurteilung der Genesung.",
+     "norm": "Bei der klinischen Untersuchung zeigten sich Schwellung, Druckschmerz und begrenzte Beweglichkeit im linken Sprunggelenk. Die MRT bestätigte eine Verletzung der lateralen Bandapparate ohne Fraktur. Der Patient erhielt eine Gipsfixation und eine Schiene zur Schonung. Physiotherapie wurde verordnet, um die Funktion des Gelenks zu erhalten. Nach 6 Wochen erfolgt eine Kontrolle zur Beurteilung der Genesung."
+    },
+    "physician_name": {
+     "printed": "Iris Mangold",
+     "norm": "Iris Mangold"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Marta Sedláčková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        138.3,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Iris Mangold",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        414.7,
+        192.1,
+        424.0
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Marta Sedláčková",
+  "birth_number": "765526/3341",
+  "birth_date": "1976-05-26",
+  "address": "Habartovská 586, 983 96 Libušín",
+  "phone": "+421 931 738 531",
+  "email": "marta.sedlackova71@example.com",
+  "iban": "SK0765000969112339739843",
+  "id_card": "NH789575",
+  "czech": true
+ },
+ "facts": {
+  "diagnosis": "S93.4",
+  "missing": "medical_invoice"
+ }
+}

@@ -1,0 +1,582 @@
+{
+ "scenario_id": "S42-010",
+ "split": "dev",
+ "archetype": "luggage_aggregate_limit",
+ "edge_cases": [
+  "aggregate_limit",
+  "scanned_documents"
+ ],
+ "claim_type": "luggage",
+ "product": "standard",
+ "policy_number": "CP59597086",
+ "duplicate_of": null,
+ "destination": "TR",
+ "trip": {
+  "start": "2026-02-07",
+  "end": "2026-02-17"
+ },
+ "event_date": "2026-02-12",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R9",
+  "total_payout_eur": "241.00",
+  "deductible_eur": "20.00",
+  "by_coverage": {
+   "luggage": "241.00"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Kozmetika",
+   "coverage": "luggage",
+   "category": "luggage",
+   "amount": "85.91",
+   "currency": "EUR",
+   "amount_eur": "85.91",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Hodinky",
+   "coverage": "luggage",
+   "category": "valuables",
+   "amount": "196.61",
+   "currency": "EUR",
+   "amount_eur": "196.61",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": true
+  },
+  {
+   "ref": "I3",
+   "description_sk": "Fotoaparát",
+   "coverage": "luggage",
+   "category": "valuables",
+   "amount": "832.97",
+   "currency": "EUR",
+   "amount_eur": "832.97",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": true
+  },
+  {
+   "ref": "I4",
+   "description_sk": "Cestovný kufor",
+   "coverage": "luggage",
+   "category": "luggage",
+   "amount": "134.96",
+   "currency": "EUR",
+   "amount_eur": "134.96",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I5",
+   "description_sk": "Kniha a čítačka",
+   "coverage": "luggage",
+   "category": "valuables",
+   "amount": "170.07",
+   "currency": "EUR",
+   "amount_eur": "170.07",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": true
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "f23eee67e7f42296ea912010ec8024b4ed62f432f241c13c7944ed98681860bb",
+   "fields": {
+    "policy_number": {
+     "printed": "CP59597086",
+     "norm": "CP59597086"
+    },
+    "insured_name": {
+     "printed": "Šárka Jandová",
+     "norm": "Šárka Jandová"
+    },
+    "insured_birth_number": {
+     "printed": "057228/4867",
+     "norm": "057228/4867"
+    },
+    "insured_address": {
+     "printed": "Neužilova 74, 963 20 Bohušovice nad Ohří",
+     "norm": "Neužilova 74, 963 20 Bohušovice nad Ohří"
+    },
+    "insured_phone": {
+     "printed": "+421 918 683 784",
+     "norm": "+421 918 683 784"
+    },
+    "insured_email": {
+     "printed": "sarka.jandova57@mail.example.sk",
+     "norm": "sarka.jandova57@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK91 5600 7887 6213 0274 3100",
+     "norm": "SK9156007887621302743100"
+    },
+    "destination_country": {
+     "printed": "Turecko",
+     "norm": "TR"
+    },
+    "trip_start": {
+     "printed": "7. 2. 2026",
+     "norm": "2026-02-07"
+    },
+    "trip_end": {
+     "printed": "17. 2. 2026",
+     "norm": "2026-02-17"
+    },
+    "event_date": {
+     "printed": "12. 2. 2026",
+     "norm": "2026-02-12"
+    },
+    "event_place": {
+     "printed": "Bodrum, Turecko",
+     "norm": "Bodrum, Turecko"
+    },
+    "claim_types": {
+     "printed": [
+      "Batožina"
+     ],
+     "norm": [
+      "luggage"
+     ]
+    },
+    "event_description": {
+     "printed": "Na letisku v Bodrumi som stratil/a batožinu. Letecká spoločnosť ju nezabezpečila a na letisku som spísal/a záznam o strate.",
+     "norm": "Na letisku v Bodrumi som stratil/a batožinu. Letecká spoločnosť ju nezabezpečila a na letisku som spísal/a záznam o strate."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Kozmetika",
+       "norm": "Kozmetika"
+      },
+      "amount": {
+       "printed": "85,91",
+       "norm": "85.91"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Hodinky",
+       "norm": "Hodinky"
+      },
+      "amount": {
+       "printed": "196,61",
+       "norm": "196.61"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Fotoaparát",
+       "norm": "Fotoaparát"
+      },
+      "amount": {
+       "printed": "832,97",
+       "norm": "832.97"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Cestovný kufor",
+       "norm": "Cestovný kufor"
+      },
+      "amount": {
+       "printed": "134,96",
+       "norm": "134.96"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Kniha a čítačka",
+       "norm": "Kniha a čítačka"
+      },
+      "amount": {
+       "printed": "170,07",
+       "norm": "170.07"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "8. 3. 2026",
+     "norm": "2026-03-08"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Šárka Jandová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        370.2,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "057228/4867",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Neužilova 74",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        361.0,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 918 683 784",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "sarka.jandova57@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        457.0,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK91 5600 7887 6213 0274 3100",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "5ec0027ac923b905b84287fd0caa9f7c3f0548a36b85d74cab15ba1a58bf7951",
+   "fields": {
+    "policy_number": {
+     "printed": "CP59597086",
+     "norm": "CP59597086"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Standard",
+     "norm": "standard"
+    },
+    "policy_type": {
+     "printed": "celoročné",
+     "norm": "annual"
+    },
+    "policy_start": {
+     "printed": "18. 9. 2025",
+     "norm": "2025-09-18"
+    },
+    "policy_end": {
+     "printed": "17. 9. 2026",
+     "norm": "2026-09-17"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Šárka Jandová",
+       "norm": "Šárka Jandová"
+      },
+      "birth_number": {
+       "printed": "057228/4867",
+       "norm": "057228/4867"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "89,00 EUR",
+     "norm": "89.00"
+    },
+    "issue_date": {
+     "printed": "15. 9. 2025",
+     "norm": "2025-09-15"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Šárka Jandová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        120.6,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "057228/4867",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_property_irregularity_report.pdf",
+   "doc_type": "property_irregularity_report",
+   "language": "en",
+   "locale": "en-iso",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "c8338c4bf60cc79fb03ffaa26654767066f5dbfcbee242959900231152e2d8fe",
+   "fields": {
+    "file_reference": {
+     "printed": "AYTAY54942",
+     "norm": "AYTAY54942"
+    },
+    "airline": {
+     "printed": "Adria Sky",
+     "norm": "Adria Sky"
+    },
+    "flight_number": {
+     "printed": "AY3435",
+     "norm": "AY3435"
+    },
+    "flight_date": {
+     "printed": "07 Feb 2026",
+     "norm": "2026-02-07"
+    },
+    "passenger_name": {
+     "printed": "JANDOVA/SARKA MS",
+     "norm": "Šárka Jandová"
+    },
+    "bag_tag": {
+     "printed": "AY820892",
+     "norm": "AY820892"
+    },
+    "status": {
+     "printed": "LOST",
+     "norm": "lost"
+    },
+    "arrival_time": {
+     "printed": "07FEB26 1620",
+     "norm": "2026-02-07T16:20"
+    },
+    "delivery_time": {
+     "printed": null,
+     "norm": null
+    },
+    "remarks": {
+     "printed": "Bag not delivered on arrival. Contents declared by passenger: Toiletries, Wristwatch, Camera, Suitcase, E-reader.",
+     "norm": "Bag not delivered on arrival. Contents declared by passenger: Toiletries, Wristwatch, Camera, Suitcase, E-reader."
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "JANDOVA/SARKA MS",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        167.7,
+        148.7,
+        178.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Neužilova 74",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        264.8,
+        125.9,
+        275.6
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 918 683 784",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        264.8,
+        394.8,
+        275.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Šárka Jandová",
+  "birth_number": "057228/4867",
+  "birth_date": "2005-02-28",
+  "address": "Neužilova 74, 963 20 Bohušovice nad Ohří",
+  "phone": "+421 918 683 784",
+  "email": "sarka.jandova57@mail.example.sk",
+  "iban": "SK9156007887621302743100",
+  "id_card": "PK565626",
+  "czech": true
+ },
+ "facts": {}
+}

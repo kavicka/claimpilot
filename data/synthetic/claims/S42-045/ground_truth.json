@@ -1,0 +1,666 @@
+{
+ "scenario_id": "S42-045",
+ "split": "test",
+ "archetype": "outside_period",
+ "edge_cases": [
+  "outside_period",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP61604364",
+ "duplicate_of": null,
+ "destination": "HR",
+ "trip": {
+  "start": "2026-06-19",
+  "end": "2026-06-29"
+ },
+ "event_date": "2026-06-27",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R9",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliklinika Licul",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "720.85",
+   "currency": "EUR",
+   "amount_eur": "720.85",
+   "doc_id": "D4",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A3.2"
+   ],
+   "exclusion": "outside_policy_period",
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Lieky z lekárne",
+   "coverage": "medical",
+   "category": "medication",
+   "amount": "35.03",
+   "currency": "EUR",
+   "amount_eur": "35.03",
+   "doc_id": "D5",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A3.2"
+   ],
+   "exclusion": "outside_policy_period",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "7b48a62958065ab83c844f8086ada3240b3a51fe27a99756606b03ecac741b37",
+   "fields": {
+    "policy_number": {
+     "printed": "CP61604364",
+     "norm": "CP61604364"
+    },
+    "insured_name": {
+     "printed": "Silvia Jedľovská",
+     "norm": "Silvia Jedľovská"
+    },
+    "insured_birth_number": {
+     "printed": "895216/9149",
+     "norm": "895216/9149"
+    },
+    "insured_address": {
+     "printed": "Nové pálenisko 425, 975 19 Košúty",
+     "norm": "Nové pálenisko 425, 975 19 Košúty"
+    },
+    "insured_phone": {
+     "printed": "+421 947 828 335",
+     "norm": "+421 947 828 335"
+    },
+    "insured_email": {
+     "printed": "silvia.jedlovska40@posta.example.sk",
+     "norm": "silvia.jedlovska40@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK22 5600 0000 0025 4350 8278",
+     "norm": "SK2256000000002543508278"
+    },
+    "destination_country": {
+     "printed": "Chorvátsko",
+     "norm": "HR"
+    },
+    "trip_start": {
+     "printed": "19. 6. 2026",
+     "norm": "2026-06-19"
+    },
+    "trip_end": {
+     "printed": "29. 6. 2026",
+     "norm": "2026-06-29"
+    },
+    "event_date": {
+     "printed": "27. 6. 2026",
+     "norm": "2026-06-27"
+    },
+    "event_place": {
+     "printed": "Dubrovnik, Chorvátsko",
+     "norm": "Dubrovnik, Chorvátsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Dubrovniku, keď sa mi podvrnul členkový kĺb. Poškodenie som si všimol okamžite a okamžite som sa obrátil na miestne zdravotníckeho pracovníka. Zdravotný problém som vyriešil v lokálnom zdravotníctve.",
+     "norm": "Bol som v Dubrovniku, keď sa mi podvrnul členkový kĺb. Poškodenie som si všimol okamžite a okamžite som sa obrátil na miestne zdravotníckeho pracovníka. Zdravotný problém som vyriešil v lokálnom zdravotníctve."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliklinika Licul",
+       "norm": "Liečebné náklady – Poliklinika Licul"
+      },
+      "amount": {
+       "printed": "720,85",
+       "norm": "720.85"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lieky z lekárne",
+       "norm": "Lieky z lekárne"
+      },
+      "amount": {
+       "printed": "35,03",
+       "norm": "35.03"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "16. 7. 2026",
+     "norm": "2026-07-16"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Silvia Jedľovská",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        375.7,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "895216/9149",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Nové pálenisko 425",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        391.7,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 947 828 335",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "silvia.jedlovska40@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        468.4,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK22 5600 0000 0025 4350 8278",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "4c818bab0ae0babe284fa1b64ba12caaa356fca27505fc43d55b0b91d8530e45",
+   "fields": {
+    "policy_number": {
+     "printed": "CP61604364",
+     "norm": "CP61604364"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "19. 6. 2026",
+     "norm": "2026-06-19"
+    },
+    "policy_end": {
+     "printed": "25. 6. 2026",
+     "norm": "2026-06-25"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Silvia Jedľovská",
+       "norm": "Silvia Jedľovská"
+      },
+      "birth_number": {
+       "printed": "895216/9149",
+       "norm": "895216/9149"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "7,70 EUR",
+     "norm": "7.70"
+    },
+    "issue_date": {
+     "printed": "11. 5. 2026",
+     "norm": "2026-05-11"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Silvia Jedľovská",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        125.8,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "895216/9149",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "hr",
+   "locale": "hr",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "42b8e415323f6daf9cf93c2ad61d3eef008b215be006f626af5837246b8cbe5d",
+   "fields": {
+    "facility_name": {
+     "printed": "Poliklinika Licul",
+     "norm": "Poliklinika Licul"
+    },
+    "facility_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Silvia Jedľovská",
+     "norm": "Silvia Jedľovská"
+    },
+    "patient_birth_date": {
+     "printed": "16.02.1989.",
+     "norm": "1989-02-16"
+    },
+    "visit_date": {
+     "printed": "27.06.2026.",
+     "norm": "2026-06-27"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Uganuće gležnja",
+     "norm": "S93.4"
+    },
+    "icd10_code": {
+     "printed": "S93.4",
+     "norm": "S93.4"
+    },
+    "anamnesis": {
+     "printed": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Pregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak.",
+     "norm": "Pregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak."
+    },
+    "physician_name": {
+     "printed": "Mara Glavan",
+     "norm": "Mara Glavan"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Silvia Jedľovská",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        129.6,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Mara Glavan",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.8,
+        427.5,
+        128.1,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "hr",
+   "locale": "hr",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "3fffd1b0e696c80e60870372a4223413f27a190b741adb59fd40b90d9dc55f2a",
+   "fields": {
+    "invoice_number": {
+     "printed": "R-2026-94626",
+     "norm": "R-2026-94626"
+    },
+    "issue_date": {
+     "printed": "27.06.2026.",
+     "norm": "2026-06-27"
+    },
+    "provider_name": {
+     "printed": "Poliklinika Licul",
+     "norm": "Poliklinika Licul"
+    },
+    "provider_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Silvia Jedľovská",
+     "norm": "Silvia Jedľovská"
+    },
+    "service_date": {
+     "printed": "27.06.2026.",
+     "norm": "2026-06-27"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Hitni prijem",
+       "norm": "Hitni prijem"
+      },
+      "amount": {
+       "printed": "330,70",
+       "norm": "330.70"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "85,05",
+       "norm": "85.05"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "132,99",
+       "norm": "132.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "172,11",
+       "norm": "172.11"
+      }
+     }
+    ],
+    "total": {
+     "printed": "720,85",
+     "norm": "720.85"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Silvia Jedľovská",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        129.6,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D5",
+   "file": "D5_pharmacy_receipt.pdf",
+   "doc_type": "pharmacy_receipt",
+   "language": "hr",
+   "locale": "hr",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "08d745f4f427cad8815bac2f827beb1c365650ef76a051402e7e4d5e6d2a6eb0",
+   "fields": {
+    "receipt_number": {
+     "printed": "1857/92691",
+     "norm": "1857/92691"
+    },
+    "issue_date": {
+     "printed": "27.06.2026. 19:21",
+     "norm": "2026-06-27"
+    },
+    "pharmacy_name": {
+     "printed": "Ljekarna Meić",
+     "norm": "Ljekarna Meić"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Elastični zavoj",
+       "norm": "Elastični zavoj"
+      },
+      "amount": {
+       "printed": "8,61",
+       "norm": "8.61"
+      }
+     },
+     {
+      "description": {
+       "printed": "Oralna rehidracijska otopina",
+       "norm": "Oralna rehidracijska otopina"
+      },
+      "amount": {
+       "printed": "6,98",
+       "norm": "6.98"
+      }
+     },
+     {
+      "description": {
+       "printed": "Paracetamol 500 mg",
+       "norm": "Paracetamol 500 mg"
+      },
+      "amount": {
+       "printed": "6,04",
+       "norm": "6.04"
+      }
+     },
+     {
+      "description": {
+       "printed": "Amoksicilin 1 g",
+       "norm": "Amoksicilin 1 g"
+      },
+      "amount": {
+       "printed": "13,40",
+       "norm": "13.40"
+      }
+     }
+    ],
+    "total": {
+     "printed": "35,03",
+     "norm": "35.03"
+    }
+   },
+   "pii": []
+  }
+ ],
+ "insured": {
+  "name": "Silvia Jedľovská",
+  "birth_number": "895216/9149",
+  "birth_date": "1989-02-16",
+  "address": "Nové pálenisko 425, 975 19 Košúty",
+  "phone": "+421 947 828 335",
+  "email": "silvia.jedlovska40@posta.example.sk",
+  "iban": "SK2256000000002543508278",
+  "id_card": "JA146577",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S93.4"
+ }
+}

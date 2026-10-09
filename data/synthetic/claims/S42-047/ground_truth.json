@@ -1,0 +1,528 @@
+{
+ "scenario_id": "S42-047",
+ "split": "test",
+ "archetype": "cancellation",
+ "edge_cases": [
+  "scanned_documents"
+ ],
+ "claim_type": "cancellation",
+ "product": "premium",
+ "policy_number": "CP40406092",
+ "duplicate_of": null,
+ "destination": "IT",
+ "trip": {
+  "start": "2026-04-02",
+  "end": "2026-04-14"
+ },
+ "event_date": "2026-03-14",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R7",
+  "total_payout_eur": "552.96",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "cancellation": "552.96"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Stornovací poplatok",
+   "coverage": "cancellation",
+   "category": "cancellation_fee",
+   "amount": "691.20",
+   "currency": "EUR",
+   "amount_eur": "691.20",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A9.1",
+    "A9.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "254f2af79d8b535b9d4bf77e7886f43825f1481a6d86307d8c1c567433f2015b",
+   "fields": {
+    "policy_number": {
+     "printed": "CP40406092",
+     "norm": "CP40406092"
+    },
+    "insured_name": {
+     "printed": "Roland Dudek",
+     "norm": "Roland Dudek"
+    },
+    "insured_birth_number": {
+     "printed": "570909/5139",
+     "norm": "570909/5139"
+    },
+    "insured_address": {
+     "printed": "Opletalova 3, 872 91 Blhovce",
+     "norm": "Opletalova 3, 872 91 Blhovce"
+    },
+    "insured_phone": {
+     "printed": "+421 932 211 620",
+     "norm": "+421 932 211 620"
+    },
+    "insured_email": {
+     "printed": "roland.dudek49@example.com",
+     "norm": "roland.dudek49@example.com"
+    },
+    "iban": {
+     "printed": "SK90 0900 3123 0844 9890 4765",
+     "norm": "SK9009003123084498904765"
+    },
+    "destination_country": {
+     "printed": "Taliansko",
+     "norm": "IT"
+    },
+    "trip_start": {
+     "printed": "2. 4. 2026",
+     "norm": "2026-04-02"
+    },
+    "trip_end": {
+     "printed": "14. 4. 2026",
+     "norm": "2026-04-14"
+    },
+    "event_date": {
+     "printed": "14. 3. 2026",
+     "norm": "2026-03-14"
+    },
+    "event_place": {
+     "printed": "Livigno, Taliansko",
+     "norm": "Livigno, Taliansko"
+    },
+    "claim_types": {
+     "printed": [
+      "Storno cesty"
+     ],
+     "norm": [
+      "cancellation"
+     ]
+    },
+    "event_description": {
+     "printed": "Pred odchodom som sa ochorel, lekár mi cestovanie neodporučil. Cestu som stornoval v cestovnej kancelárii. Udalosť sa stala v Livigno, v Taliansku.",
+     "norm": "Pred odchodom som sa ochorel, lekár mi cestovanie neodporučil. Cestu som stornoval v cestovnej kancelárii. Udalosť sa stala v Livigno, v Taliansku."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Stornovací poplatok",
+       "norm": "Stornovací poplatok"
+      },
+      "amount": {
+       "printed": "691,20",
+       "norm": "691.20"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "20. 4. 2026",
+     "norm": "2026-04-20"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Roland Dudek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        367.1,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "570909/5139",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Opletalova 3",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        359.9,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 932 211 620",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "roland.dudek49@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        441.8,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK90 0900 3123 0844 9890 4765",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "6bc6f4368070840add71dc2040d92a67759d40e8326c8708bf752ea90a25baea",
+   "fields": {
+    "policy_number": {
+     "printed": "CP40406092",
+     "norm": "CP40406092"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Premium",
+     "norm": "premium"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "2. 4. 2026",
+     "norm": "2026-04-02"
+    },
+    "policy_end": {
+     "printed": "14. 4. 2026",
+     "norm": "2026-04-14"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Roland Dudek",
+       "norm": "Roland Dudek"
+      },
+      "birth_number": {
+       "printed": "570909/5139",
+       "norm": "570909/5139"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "41,60 EUR",
+     "norm": "41.60"
+    },
+    "issue_date": {
+     "printed": "8. 3. 2026",
+     "norm": "2026-03-08"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Roland Dudek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        117.6,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "570909/5139",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_booking_confirmation.pdf",
+   "doc_type": "booking_confirmation",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "9fd1e328da34977065fd386028ed1d34e82c963d86ed4f179637f6ce946277b7",
+   "fields": {
+    "booking_number": {
+     "printed": "2026166",
+     "norm": "2026166"
+    },
+    "agency_name": {
+     "printed": "CK Slnečné pobrežie, s. r. o.",
+     "norm": "CK Slnečné pobrežie, s. r. o."
+    },
+    "traveler_names": {
+     "printed": [
+      "Roland Dudek"
+     ],
+     "norm": [
+      "Roland Dudek"
+     ]
+    },
+    "destination": {
+     "printed": "Livigno, Taliansko",
+     "norm": "Livigno, Taliansko"
+    },
+    "trip_start": {
+     "printed": "2. 4. 2026",
+     "norm": "2026-04-02"
+    },
+    "trip_end": {
+     "printed": "14. 4. 2026",
+     "norm": "2026-04-14"
+    },
+    "total_price": {
+     "printed": "2 304,00",
+     "norm": "2304.00"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "cancellation_date": {
+     "printed": "16. 3. 2026",
+     "norm": "2026-03-16"
+    },
+    "cancellation_fee": {
+     "printed": "691,20",
+     "norm": "691.20"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Roland Dudek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.4,
+        121.1,
+        213.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_report.jpg",
+   "doc_type": "medical_report",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": "jpg",
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "999181c206046580c71d45e05889deaf53cbf945b288dc13b517deef34f99f22",
+   "fields": {
+    "facility_name": {
+     "printed": "Ambulancia všeobecného lekára Štefunko",
+     "norm": "Ambulancia všeobecného lekára Štefunko"
+    },
+    "facility_country": {
+     "printed": "Slovenská republika",
+     "norm": "SK"
+    },
+    "patient_name": {
+     "printed": "Roland Dudek",
+     "norm": "Roland Dudek"
+    },
+    "patient_birth_date": {
+     "printed": "9. 9. 1957",
+     "norm": "1957-09-09"
+    },
+    "visit_date": {
+     "printed": "14. 3. 2026",
+     "norm": "2026-03-14"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Zápal pľúc",
+     "norm": "J18.9"
+    },
+    "icd10_code": {
+     "printed": "J18.9",
+     "norm": "J18.9"
+    },
+    "anamnesis": {
+     "printed": "Bez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Pacient prezentoval horúčku, kašľavosť a dyspnoéiu. Priebežný lekársky vyšetrenie ukázalo zvýšené dýchanie, šmúrovanie a zvýšenú rezistenciu pri dýchaní. Radiologické vyšetrenie potvrdilo prítomnosť infiltrátov v dolných častiach obidvoch pľúc. Vykonané laboratórne testy ukázali zvýšenú hromadnosť leukocytov a zvýšenú rýchlosť sedimentácie erytrocytov. Pacientovi bol predpísaný antibiotikum z triedy makrolidov, antipyretikum a liečba kašľavosti. Odporúča sa liečba doma so súčasným sledovaním stavu a opakovaným vyšetrením po 48 hodinách.",
+     "norm": "Pacient prezentoval horúčku, kašľavosť a dyspnoéiu. Priebežný lekársky vyšetrenie ukázalo zvýšené dýchanie, šmúrovanie a zvýšenú rezistenciu pri dýchaní. Radiologické vyšetrenie potvrdilo prítomnosť infiltrátov v dolných častiach obidvoch pľúc. Vykonané laboratórne testy ukázali zvýšenú hromadnosť leukocytov a zvýšenú rýchlosť sedimentácie erytrocytov. Pacientovi bol predpísaný antibiotikum z triedy makrolidov, antipyretikum a liečba kašľavosti. Odporúča sa liečba doma so súčasným sledovaním stavu a opakovaným vyšetrením po 48 hodinách."
+    },
+    "physician_name": {
+     "printed": "MUDr. Tichomír Lubina",
+     "norm": "MUDr. Tichomír Lubina"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Roland Dudek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        121.1,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Tichomír Lubina",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        100.4,
+        427.5,
+        157.8,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Roland Dudek",
+  "birth_number": "570909/5139",
+  "birth_date": "1957-09-09",
+  "address": "Opletalova 3, 872 91 Blhovce",
+  "phone": "+421 932 211 620",
+  "email": "roland.dudek49@example.com",
+  "iban": "SK9009003123084498904765",
+  "id_card": "KE737375",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "J18.9",
+  "price": "2304.00"
+ }
+}

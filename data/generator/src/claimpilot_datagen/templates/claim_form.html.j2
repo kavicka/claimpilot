@@ -1,0 +1,35 @@
+{% extends "_layout.html.j2" %}
+{% block body %}
+<div class="head"><div class="logo">{{ insurer }}</div><div class="muted">Hlásenie poistnej udalosti<br>Cestovné poistenie</div></div>
+<h1>Hlásenie poistnej udalosti z cestovného poistenia</h1>
+<div class="{{ 'hw' if handwriting else '' }}">
+<h2>1. Poistený</h2>
+<table class="grid">
+<tr><td style="width:50%"><div class="label">Číslo poistnej zmluvy</div><div class="val">{{ policy_number }}</div></td>
+<td><div class="label">Meno a priezvisko</div><div class="val">{{ insured_name }}</div></td></tr>
+<tr><td><div class="label">Rodné číslo</div><div class="val">{{ insured_birth_number }}</div></td>
+<td><div class="label">Adresa</div><div class="val">{{ insured_address }}</div></td></tr>
+<tr><td><div class="label">Telefón</div><div class="val">{{ insured_phone }}</div></td>
+<td><div class="label">E-mail</div><div class="val">{{ insured_email }}</div></td></tr>
+<tr><td colspan="2"><div class="label">IBAN na výplatu poistného plnenia</div><div class="val">{{ iban }}</div></td></tr>
+</table>
+<h2>2. Cesta a udalosť</h2>
+<table class="grid">
+<tr><td style="width:34%"><div class="label">Krajina cesty</div><div class="val">{{ destination_country }}</div></td>
+<td style="width:33%"><div class="label">Cesta od</div><div class="val">{{ trip_start }}</div></td>
+<td><div class="label">Cesta do</div><div class="val">{{ trip_end }}</div></td></tr>
+<tr><td><div class="label">Dátum vzniku udalosti</div><div class="val">{{ event_date }}</div></td>
+<td colspan="2"><div class="label">Miesto vzniku udalosti</div><div class="val">{{ event_place }}</div></td></tr>
+<tr><td colspan="3"><div class="label">Druh udalosti</div><div class="val" style="font-family:'Helvetica Neue',Arial;font-size:9pt;color:#111">
+{% for key, label in all_types.items() %}<span class="check">{{ 'X' if key in checked else '' }}</span>{{ label }}&nbsp;&nbsp;&nbsp; {% endfor %}</div></td></tr>
+<tr><td colspan="3"><div class="label">Popis udalosti</div><div class="val">{{ event_description }}</div></td></tr>
+</table>
+<h2>3. Uplatňované náklady a veci</h2>
+<table class="grid">
+<tr><th>Popis</th><th class="num">Suma</th><th>Mena</th></tr>
+{% for r in rows %}<tr><td class="v">{{ r.description }}</td><td class="num v">{{ r.amount or '—' }}</td><td class="v">{{ r.currency or '' }}</td></tr>{% endfor %}
+</table>
+</div>
+<p class="muted">Vyhlasujem, že všetky údaje sú pravdivé a úplné. Beriem na vedomie, že poisťovňa spracúva moje osobné údaje na účel likvidácie poistnej udalosti.</p>
+<div class="sign {{ 'hw' if handwriting else '' }}"><div>Dátum: <span class="val">{{ signature_date }}</span></div><div>Podpis poisteného</div></div>
+{% endblock %}

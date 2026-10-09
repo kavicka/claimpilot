@@ -1,0 +1,446 @@
+{
+ "scenario_id": "S42-033",
+ "split": "dev",
+ "archetype": "missing_document",
+ "edge_cases": [
+  "missing_document",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP25585427",
+ "duplicate_of": null,
+ "destination": "AT",
+ "trip": {
+  "start": "2026-01-16",
+  "end": "2026-01-21"
+ },
+ "event_date": "2026-01-17",
+ "expected": {
+  "status": "NEEDS_INFO",
+  "queue": null,
+  "rule": "R4",
+  "total_payout_eur": null,
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Werner",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "1093.83",
+   "currency": "EUR",
+   "amount_eur": "1093.83",
+   "doc_id": "D4",
+   "verdict": "needs_review",
+   "clause_ids": [
+    "A13.3"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "08455cf54fbab7f37cbd7611d27d73676c6ecbaf5bd984b36665af05097d513b",
+   "fields": {
+    "policy_number": {
+     "printed": "CP25585427",
+     "norm": "CP25585427"
+    },
+    "insured_name": {
+     "printed": "Zina Janečeková",
+     "norm": "Zina Janečeková"
+    },
+    "insured_birth_number": {
+     "printed": "636122/7741",
+     "norm": "636122/7741"
+    },
+    "insured_address": {
+     "printed": "Sudová 97, 965 79 Štrkovec",
+     "norm": "Sudová 97, 965 79 Štrkovec"
+    },
+    "insured_phone": {
+     "printed": "+421 903 312 196",
+     "norm": "+421 903 312 196"
+    },
+    "insured_email": {
+     "printed": "zina.janecekova50@mail.example.sk",
+     "norm": "zina.janecekova50@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK87 1100 7662 0542 8442 5887",
+     "norm": "SK8711007662054284425887"
+    },
+    "destination_country": {
+     "printed": "Rakúsko",
+     "norm": "AT"
+    },
+    "trip_start": {
+     "printed": "16. 1. 2026",
+     "norm": "2026-01-16"
+    },
+    "trip_end": {
+     "printed": "21. 1. 2026",
+     "norm": "2026-01-21"
+    },
+    "event_date": {
+     "printed": "17. 1. 2026",
+     "norm": "2026-01-17"
+    },
+    "event_place": {
+     "printed": "Schladming, Rakúsko",
+     "norm": "Schladming, Rakúsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Schladmingu, Rakúsko, a bol som ochorený akútnou gastroenteritídou. Cítil som sa veľmi ťažko, s výraznou bolesťou v bruši a častým príznakom nevoľnosti. Vyhľadal som lekára, ktorý mi poskytol potrebnú starostlivosť.",
+     "norm": "Bol som v Schladmingu, Rakúsko, a bol som ochorený akútnou gastroenteritídou. Cítil som sa veľmi ťažko, s výraznou bolesťou v bruši a častým príznakom nevoľnosti. Vyhľadal som lekára, ktorý mi poskytol potrebnú starostlivosť."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Werner",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Werner"
+      },
+      "amount": {
+       "printed": "1 093,83",
+       "norm": "1093.83"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "3. 2. 2026",
+     "norm": "2026-02-03"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zina Janečeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        379.1,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "636122/7741",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Sudová 97",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        351.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 903 312 196",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "zina.janecekova50@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        466.0,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK87 1100 7662 0542 8442 5887",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "f46a8d416927b8e8c2af5a8b9b446b0fca1b6949498ed7c30526512645d783b5",
+   "fields": {
+    "policy_number": {
+     "printed": "CP25585427",
+     "norm": "CP25585427"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "16. 1. 2026",
+     "norm": "2026-01-16"
+    },
+    "policy_end": {
+     "printed": "21. 1. 2026",
+     "norm": "2026-01-21"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Zina Janečeková",
+       "norm": "Zina Janečeková"
+      },
+      "birth_number": {
+       "printed": "636122/7741",
+       "norm": "636122/7741"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "6,60 EUR",
+     "norm": "6.60"
+    },
+    "issue_date": {
+     "printed": "9. 12. 2025",
+     "norm": "2025-12-09"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zina Janečeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        129.1,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "636122/7741",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        329.3,
+        287.5,
+        385.2,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "34d8906c93357cf04da5971db3f8d8c4a6ef4383a93ced9309fcec89cd4031c3",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Werner",
+     "norm": "Medizinisches Zentrum Werner"
+    },
+    "facility_country": {
+     "printed": "Österreich",
+     "norm": "AT"
+    },
+    "patient_name": {
+     "printed": "Zina Janečeková",
+     "norm": "Zina Janečeková"
+    },
+    "patient_birth_date": {
+     "printed": "22.11.1963",
+     "norm": "1963-11-22"
+    },
+    "visit_date": {
+     "printed": "17.01.2026",
+     "norm": "2026-01-17"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Akute Gastroenteritis",
+     "norm": "A09"
+    },
+    "icd10_code": {
+     "printed": "A09",
+     "norm": "A09"
+    },
+    "anamnesis": {
+     "printed": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen.",
+     "norm": "Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen."
+    },
+    "physician_name": {
+     "printed": "Philippa Steinberger",
+     "norm": "Philippa Steinberger"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zina Janečeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        133.1,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Philippa Steinberger",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        427.5,
+        220.1,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Zina Janečeková",
+  "birth_number": "636122/7741",
+  "birth_date": "1963-11-22",
+  "address": "Sudová 97, 965 79 Štrkovec",
+  "phone": "+421 903 312 196",
+  "email": "zina.janecekova50@mail.example.sk",
+  "iban": "SK8711007662054284425887",
+  "id_card": "DJ577892",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "A09",
+  "missing": "medical_invoice"
+ }
+}

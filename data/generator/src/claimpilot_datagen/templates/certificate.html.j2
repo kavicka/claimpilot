@@ -1,0 +1,20 @@
+{% extends "_layout.html.j2" %}
+{% block body %}
+<div class="head"><div class="logo">{{ insurer }}</div><div class="muted">Poistný certifikát<br>{{ terms_id }}</div></div>
+<h1>Poistný certifikát – {{ product_name }}</h1>
+<table class="grid">
+<tr><td style="width:50%"><div class="label">Číslo poistnej zmluvy</div><div class="val">{{ policy_number }}</div></td>
+<td><div class="label">Druh poistenia</div><div class="val">{{ policy_type }}</div></td></tr>
+<tr><td><div class="label">Začiatok poistenia</div><div class="val">{{ policy_start }}</div></td>
+<td><div class="label">Koniec poistenia</div><div class="val">{{ policy_end }}</div></td></tr>
+<tr><td><div class="label">Poistné</div><div class="val">{{ premium }}</div></td>
+<td><div class="label">Dátum uzavretia</div><div class="val">{{ issue_date }}</div></td></tr>
+</table>
+<h2>Poistené osoby</h2>
+<table class="grid"><tr><th>Meno a priezvisko</th><th>Rodné číslo</th></tr>
+{% for p in insured %}<tr><td>{{ p.full_name }}</td><td>{{ p.birth_number }}</td></tr>{% endfor %}</table>
+<h2>Rozsah poistenia a limity</h2>
+<table class="grid"><tr><th>Poistenie</th><th class="num">Limit poistného plnenia</th><th class="num">Spoluúčasť</th></tr>
+{% for c in coverages %}<tr><td>{{ c.name }}</td><td class="num">{{ c.limit }}</td><td class="num">{{ c.deductible }}</td></tr>{% endfor %}</table>
+<p class="muted">Poistenie sa riadi Všeobecnými poistnými podmienkami {{ terms_id }}. Kurzový lístok pre prepočet cudzích mien: referenčné kurzy ECB k 30. 1. 2026 (čl. 12 ods. 1).</p>
+{% endblock %}

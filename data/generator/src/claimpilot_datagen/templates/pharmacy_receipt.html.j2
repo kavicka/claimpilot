@@ -1,0 +1,11 @@
+{% extends "_layout.html.j2" %}
+{% block style %}@page { size: 80mm 170mm; margin: 6mm 5mm; @bottom-right { content: none; } } body { font: 8.5pt/1.35 "Courier New", monospace; } .c { text-align: center; }{% endblock %}
+{% block body %}
+<div class="c"><strong>{{ pharmacy_name }}</strong><br>{{ city }}</div>
+<p class="c">{{ L.receipt }}<br>{{ L.receipt_no }} {{ receipt_number }}<br>{{ issue_date }}</p>
+<table>
+{% for ln in lines %}<tr><td>{{ ln.description }}</td><td class="num">{{ ln.amount }}</td></tr>{% endfor %}
+<tr class="total"><td>{{ L.total }} {{ currency }}</td><td class="num">{{ total }}</td></tr>
+</table>
+<p class="c muted">{{ L.vat }}<br>{{ L.thanks }}</p>
+{% endblock %}

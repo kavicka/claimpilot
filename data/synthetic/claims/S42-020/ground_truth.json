@@ -1,0 +1,666 @@
+{
+ "scenario_id": "S42-020",
+ "split": "dev",
+ "archetype": "outside_period",
+ "edge_cases": [
+  "outside_period",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP11646234",
+ "duplicate_of": null,
+ "destination": "IT",
+ "trip": {
+  "start": "2026-08-15",
+  "end": "2026-09-02"
+ },
+ "event_date": "2026-08-29",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R9",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliambulatorio Sagnelli",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "560.96",
+   "currency": "EUR",
+   "amount_eur": "560.96",
+   "doc_id": "D4",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A3.2"
+   ],
+   "exclusion": "outside_policy_period",
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Lieky z lekárne",
+   "coverage": "medical",
+   "category": "medication",
+   "amount": "41.70",
+   "currency": "EUR",
+   "amount_eur": "41.70",
+   "doc_id": "D5",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A3.2"
+   ],
+   "exclusion": "outside_policy_period",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "b4ef6e686cb52972330cbcaf3f903fa949ae3f2534bad00b2d4e4ad06cc61085",
+   "fields": {
+    "policy_number": {
+     "printed": "CP11646234",
+     "norm": "CP11646234"
+    },
+    "insured_name": {
+     "printed": "Zdenka Hlaváčová",
+     "norm": "Zdenka Hlaváčová"
+    },
+    "insured_birth_number": {
+     "printed": "725107/7867",
+     "norm": "725107/7867"
+    },
+    "insured_address": {
+     "printed": "Botanická 184, 828 10 Sabinov",
+     "norm": "Botanická 184, 828 10 Sabinov"
+    },
+    "insured_phone": {
+     "printed": "+421 928 179 572",
+     "norm": "+421 928 179 572"
+    },
+    "insured_email": {
+     "printed": "zdenka.hlavacova14@posta.example.sk",
+     "norm": "zdenka.hlavacova14@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK06 5600 6871 4675 4727 6750",
+     "norm": "SK0656006871467547276750"
+    },
+    "destination_country": {
+     "printed": "Taliansko",
+     "norm": "IT"
+    },
+    "trip_start": {
+     "printed": "15. 8. 2026",
+     "norm": "2026-08-15"
+    },
+    "trip_end": {
+     "printed": "2. 9. 2026",
+     "norm": "2026-09-02"
+    },
+    "event_date": {
+     "printed": "29. 8. 2026",
+     "norm": "2026-08-29"
+    },
+    "event_place": {
+     "printed": "Roma, Taliansko",
+     "norm": "Roma, Taliansko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Romách, v Taliansku, kde sa mi vyvinula akútna infekcia horných dýchacích ciest. Preto som sa obrátil na miestne zdravotnícke zariadenie na vyšetrenie a liečbu.",
+     "norm": "Bol som v Romách, v Taliansku, kde sa mi vyvinula akútna infekcia horných dýchacích ciest. Preto som sa obrátil na miestne zdravotnícke zariadenie na vyšetrenie a liečbu."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliambulatorio Sagnelli",
+       "norm": "Liečebné náklady – Poliambulatorio Sagnelli"
+      },
+      "amount": {
+       "printed": "560,96",
+       "norm": "560.96"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lieky z lekárne",
+       "norm": "Lieky z lekárne"
+      },
+      "amount": {
+       "printed": "41,70",
+       "norm": "41.70"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "5. 9. 2026",
+     "norm": "2026-09-05"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zdenka Hlaváčová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        386.5,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "725107/7867",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Botanická 184",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        367.8,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 928 179 572",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "zdenka.hlavacova14@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        481.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK06 5600 6871 4675 4727 6750",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "de7df50096ddb0a2aeaa12ca9428446eb8f661bf922e45f672243bc499aef9e8",
+   "fields": {
+    "policy_number": {
+     "printed": "CP11646234",
+     "norm": "CP11646234"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Premium",
+     "norm": "premium"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "15. 8. 2026",
+     "norm": "2026-08-15"
+    },
+    "policy_end": {
+     "printed": "27. 8. 2026",
+     "norm": "2026-08-27"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Zdenka Hlaváčová",
+       "norm": "Zdenka Hlaváčová"
+      },
+      "birth_number": {
+       "printed": "725107/7867",
+       "norm": "725107/7867"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "41,60 EUR",
+     "norm": "41.60"
+    },
+    "issue_date": {
+     "printed": "2. 8. 2026",
+     "norm": "2026-08-02"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zdenka Hlaváčová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        136.1,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "725107/7867",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        339.1,
+        287.5,
+        395.0,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "it",
+   "locale": "it",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "8bfedf7c973f96780eca33609db433a4ff6ddffa60c777d1e5b060198b3b48bb",
+   "fields": {
+    "facility_name": {
+     "printed": "Poliambulatorio Sagnelli",
+     "norm": "Poliambulatorio Sagnelli"
+    },
+    "facility_country": {
+     "printed": "Italia",
+     "norm": "IT"
+    },
+    "patient_name": {
+     "printed": "Zdenka Hlaváčová",
+     "norm": "Zdenka Hlaváčová"
+    },
+    "patient_birth_date": {
+     "printed": "07/01/1972",
+     "norm": "1972-01-07"
+    },
+    "visit_date": {
+     "printed": "29/08/2026",
+     "norm": "2026-08-29"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Infezione acuta delle vie respiratorie superiori",
+     "norm": "J06.9"
+    },
+    "icd10_code": {
+     "printed": "J06.9",
+     "norm": "J06.9"
+    },
+    "anamnesis": {
+     "printed": "Nessuna patologia pregressa rilevante. Nessuna terapia cronica.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Esame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore.",
+     "norm": "Esame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore."
+    },
+    "physician_name": {
+     "printed": "Mattia Caboto",
+     "norm": "Mattia Caboto"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zdenka Hlaváčová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        140.5,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Mattia Caboto",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.5,
+        401.9,
+        133.6,
+        411.2
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "it",
+   "locale": "it",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "d20194a57e545f800e6e7867d67a5fff51e417cc65f185f7995a00e7bc8f225c",
+   "fields": {
+    "invoice_number": {
+     "printed": "FT-2026-76631",
+     "norm": "FT-2026-76631"
+    },
+    "issue_date": {
+     "printed": "31/08/2026",
+     "norm": "2026-08-31"
+    },
+    "provider_name": {
+     "printed": "Poliambulatorio Sagnelli",
+     "norm": "Poliambulatorio Sagnelli"
+    },
+    "provider_country": {
+     "printed": "Italia",
+     "norm": "IT"
+    },
+    "patient_name": {
+     "printed": "Zdenka Hlaváčová",
+     "norm": "Zdenka Hlaváčová"
+    },
+    "service_date": {
+     "printed": "29/08/2026",
+     "norm": "2026-08-29"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Pronto soccorso",
+       "norm": "Pronto soccorso"
+      },
+      "amount": {
+       "printed": "309,58",
+       "norm": "309.58"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "51,41",
+       "norm": "51.41"
+      }
+     },
+     {
+      "description": {
+       "printed": "Terapia infusionale",
+       "norm": "Terapia infusionale"
+      },
+      "amount": {
+       "printed": "65,88",
+       "norm": "65.88"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ecografia",
+       "norm": "Ecografia"
+      },
+      "amount": {
+       "printed": "134,09",
+       "norm": "134.09"
+      }
+     }
+    ],
+    "total": {
+     "printed": "560,96",
+     "norm": "560.96"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zdenka Hlaváčová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        140.5,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D5",
+   "file": "D5_pharmacy_receipt.pdf",
+   "doc_type": "pharmacy_receipt",
+   "language": "it",
+   "locale": "it",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "1e1f27020f4e79169eae666dc98699a00fcd366472cf3696aa0f780b4f121835",
+   "fields": {
+    "receipt_number": {
+     "printed": "9561/59856",
+     "norm": "9561/59856"
+    },
+    "issue_date": {
+     "printed": "29/08/2026 16:58",
+     "norm": "2026-08-29"
+    },
+    "pharmacy_name": {
+     "printed": "Farmacia Grossi",
+     "norm": "Farmacia Grossi"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Spray nasale",
+       "norm": "Spray nasale"
+      },
+      "amount": {
+       "printed": "8,35",
+       "norm": "8.35"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ibuprofene 400 mg",
+       "norm": "Ibuprofene 400 mg"
+      },
+      "amount": {
+       "printed": "9,33",
+       "norm": "9.33"
+      }
+     },
+     {
+      "description": {
+       "printed": "Paracetamolo 500 mg",
+       "norm": "Paracetamolo 500 mg"
+      },
+      "amount": {
+       "printed": "6,98",
+       "norm": "6.98"
+      }
+     },
+     {
+      "description": {
+       "printed": "Amoxicillina 1 g",
+       "norm": "Amoxicillina 1 g"
+      },
+      "amount": {
+       "printed": "17,04",
+       "norm": "17.04"
+      }
+     }
+    ],
+    "total": {
+     "printed": "41,70",
+     "norm": "41.70"
+    }
+   },
+   "pii": []
+  }
+ ],
+ "insured": {
+  "name": "Zdenka Hlaváčová",
+  "birth_number": "725107/7867",
+  "birth_date": "1972-01-07",
+  "address": "Botanická 184, 828 10 Sabinov",
+  "phone": "+421 928 179 572",
+  "email": "zdenka.hlavacova14@posta.example.sk",
+  "iban": "SK0656006871467547276750",
+  "id_card": "AN962467",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "J06.9"
+ }
+}
