@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-serif: var(--font-plex-serif), ui-serif, Georgia, serif;
+
+  /* Desk: warm paper shell, white sheets, near-black ink, highlighter for "look here". */
+  --color-desk: #ecebe6;
+  --color-sheet: #ffffff;
+  --color-ink: #17181c;
+  --color-ink-2: #55575e;
+  --color-ink-3: #8a8b90;
+  --color-line: #e4e2dc;
+  --color-line-2: #d3d0c8;
+  --color-marker: #ffd23f;
+  --color-marker-soft: #fff6cf;
+  --color-marker-edge: #e0a800;
+
+  --animate-rise: rise 360ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-mark: mark 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-toast: toast-in 260ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes mark {
+    0% {
+      opacity: 0;
+      transform: scaleX(0.2);
+      transform-origin: left center;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: scaleX(1);
+      transform-origin: left center;
+    }
+  }
+
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background: var(--color-desk);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss02";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-marker);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+
+  dialog::backdrop {
+    background: rgb(23 24 28 / 0.35);
+    backdrop-filter: blur(2px);
+  }
+}
+
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Thin, quiet scrollbars inside the panes. */
+@utility pane-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-2) transparent;
+}
+
+/* Faint ruled-paper grain behind the document pages. */
+@utility viewer-bg {
+  background-color: #e6e4de;
+  background-image: radial-gradient(rgb(23 24 28 / 0.07) 1px, transparent 1px);
+  background-size: 14px 14px;
+}

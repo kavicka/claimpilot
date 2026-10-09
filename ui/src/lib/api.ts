@@ -1,0 +1,106 @@
+// Tiny typed client. Every call goes to this origin; next.config.ts rewrites /api to the API host.
+
+import type {
+  ActionResult,
+  ClaimAction,
+  ClaimDetail,
+  ClaimRow,
+  Clause,
+  EvalReport,
+  FieldPatchResult,
+  Ops,
+  User,
+} from "./types";
+
+export class ApiError extends Error {
+  readonly status: number;
+
+  constructor(status: number, message: string) {
+    super(message);
+    this.status = status;
+  }
+}
+
+function detailOf(body: unknown, status: number): string {
+  if (body && typeof body === "object" && "detail" in body) {
+    const detail = (body as { detail: unknown }).detail;
+    if (typeof detail === "string") return detail;
+    // FastAPI validation errors: [{loc, msg, type}]
+    if (Array.isArray(detail) && detail.length > 0) {
+      const first = detail[0] as { msg?: string };
+      if (first?.msg) return first.msg;
+    }
+  }
+  return `Request failed (HTTP ${status})`;
+}
+
+export function loginPath(): string {
+  if (typeof window === "undefined") return "/login";
+  const here = window.location.pathname + window.location.search;
+  return here === "/" ? "/login" : `/login?next=${encodeURIComponent(here)}`;
+}
+
+async function request<T>(method: string, path: string, body?: unknown): Promise<T> {
+  const res = await fetch(path, {
+    method,
+    credentials: "same-origin",
+    cache: "no-store",
+    headers: body === undefined ? undefined : { "content-type": "application/json" },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  if (res.status === 401 && !path.startsWith("/api/auth/login")) {
+    if (typeof window !== "undefined" && window.location.pathname !== "/login") {
+      window.location.assign(loginPath());
+    }
+    throw new ApiError(401, "Your session has ended. Log in again.");
+  }
+  const text = await res.text();
+  let parsed: unknown = null;
+  if (text) {
+    try {
+      parsed = JSON.parse(text);
+    } catch {
+      parsed = null;
+    }
+  }
+  if (!res.ok) throw new ApiError(res.status, detailOf(parsed, res.status));
+  return parsed as T;
+}
+
+function query(params: Record<string, string | undefined>): string {
+  const q = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) if (v) q.set(k, v);
+  const s = q.toString();
+  return s ? `?${s}` : "";
+}
+
+export const api = {
+  login: (username: string, password: string) =>
+    request<User>("POST", "/api/auth/login", { username, password }),
+  logout: () => request<{ ok: boolean }>("POST", "/api/auth/logout"),
+  me: () => request<User>("GET", "/api/auth/me"),
+
+  claims: (params: { queue?: string; status?: string } = {}) =>
+    request<ClaimRow[]>("GET", `/api/review/claims${query(params)}`),
+  claim: (id: string) => request<ClaimDetail>("GET", `/api/review/claims/${encodeURIComponent(id)}`),
+  clause: (clauseId: string) =>
+    request<Clause>("GET", `/api/review/clauses/${encodeURIComponent(clauseId)}`),
+  patchField: (fieldId: number, value: string) =>
+    request<FieldPatchResult>("PATCH", `/api/review/fields/${fieldId}`, { value }),
+  act: (claimId: string, action: ClaimAction, note?: string) =>
+    request<ActionResult>(
+      "POST",
+      `/api/review/claims/${encodeURIComponent(claimId)}/actions/${action}`,
+      { note: note?.trim() ? note.trim() : null },
+    ),
+
+  ops: () => request<Ops>("GET", "/api/review/ops"),
+  evals: () => request<EvalReport[]>("GET", "/api/review/evals"),
+};
+
+export function errorMessage(err: unknown): string {
+  if (err instanceof ApiError) return err.message;
+  if (err instanceof TypeError) return "The API did not answer. Is it running on port 4400?";
+  if (err instanceof Error) return err.message;
+  return "Unexpected error.";
+}

@@ -19,6 +19,8 @@ COPY packages packages
 COPY services/api services/api
 COPY config config
 COPY prompts prompts
+# Policy terms for the clause viewer (synthetic, ADR-008)
+COPY data/policies data/policies
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev --package claimpilot-api
 

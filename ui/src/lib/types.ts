@@ -1,0 +1,213 @@
+// Handwritten mirror of the review API JSON (services/api/src/claimpilot_api/review.py).
+// Amounts are decimal strings in EUR unless a currency says otherwise.
+
+export type ClaimStatus =
+  | "RECEIVED"
+  | "PARSED"
+  | "REDACTED"
+  | "EXTRACTED"
+  | "ROUTED"
+  | "ASSESSED"
+  | "IN_REVIEW"
+  | "APPROVED"
+  | "SUBMITTED"
+  | "REJECTED"
+  | "NEEDS_INFO"
+  | "FAILED";
+
+export type QueueName = "fast_track" | "standard" | "senior" | "fraud_review";
+
+export type Role = "handler" | "senior";
+
+export interface User {
+  username: string;
+  name: string;
+  role: Role | string;
+}
+
+export interface ClaimRow {
+  id: string;
+  reference: string;
+  status: ClaimStatus;
+  queue: QueueName | null;
+  claim_type: string | null;
+  product: string | null;
+  insured: string | null;
+  claimed_total_eur: string | null;
+  payout_eur: string | null;
+  straight_through: boolean;
+  age_hours: number;
+  error: string | null;
+}
+
+export interface BBox {
+  x0: number;
+  y0: number;
+  x1: number;
+  y1: number;
+}
+
+export interface Field {
+  id: number;
+  field: string;
+  value: string | null;
+  value_norm: string | null;
+  quote: string | null;
+  page: number | null;
+  bbox: BBox | null;
+  grounded: boolean;
+  confidence: number | null;
+  checks: Record<string, boolean>;
+  corrected: boolean;
+}
+
+export interface ClaimDocument {
+  id: string;
+  filename: string;
+  doc_type: string | null;
+  language: string | null;
+  pages: string[];
+  fields: Field[];
+}
+
+export interface RuleHit {
+  rule: string;
+  detail: string;
+}
+
+export interface Routing {
+  queue: string;
+  rule_hits: RuleHit[];
+  llm_used: boolean;
+  rationale: string | null;
+}
+
+export type Verdict = "covered" | "not_covered" | "needs_review";
+
+export interface CoverageItem {
+  ref: string;
+  description: string | null;
+  coverage: string;
+  verdict: Verdict;
+  clauses: string[];
+  claimed: string;
+  currency: string;
+  payout_eur: string;
+  rationale: string | null;
+}
+
+export interface Assessment {
+  total_payout_eur: string | null;
+  deductible_eur: string | null;
+  held_eur: string | null;
+  by_coverage: Record<string, string>;
+  explanation: string[];
+}
+
+export type SummaryKind = "handler" | "client_letter" | "group" | "info_request";
+
+export interface FactViolation {
+  kind: string;
+  text: string;
+}
+
+export interface Summary {
+  kind: SummaryKind;
+  language: string;
+  text: string | null;
+  fact_violations: FactViolation[];
+}
+
+export interface StepRun {
+  step: string;
+  status: string;
+  attempt: number;
+  latency_ms: number | null;
+  tokens: number;
+  models: string[];
+  error: string | null;
+}
+
+export interface AuditEntry {
+  action: string;
+  details: Record<string, unknown> | null;
+  at: string;
+}
+
+export interface ClaimFacts {
+  claim_type?: string | null;
+  claimed_total_eur?: string | null;
+  event_date?: string | null;
+  min_critical_confidence?: number | null;
+  critical_grounded?: boolean | null;
+  policy?: Record<string, unknown> | null;
+}
+
+export interface ClaimDetail {
+  id: string;
+  reference: string;
+  status: ClaimStatus;
+  queue: QueueName | null;
+  claim_type: string | null;
+  product: string | null;
+  policy_number: string | null;
+  error: string | null;
+  core_claim_id: string | null;
+  insured: string | null;
+  facts: ClaimFacts | null;
+  assessment: Assessment | null;
+  needs_reassessment: boolean;
+  documents: ClaimDocument[];
+  routing: Routing | null;
+  coverage: CoverageItem[];
+  summaries: Summary[];
+  steps: StepRun[];
+  trace_url: string | null;
+  audit: AuditEntry[];
+}
+
+export interface Clause {
+  clause_id: string;
+  display: string;
+  heading: string;
+  text: string;
+}
+
+export interface FieldPatchResult {
+  id: number;
+  value: string | null;
+  value_norm: string | null;
+}
+
+export type ClaimAction = "approve" | "reject" | "request-info" | "escalate" | "reassess";
+
+export interface ActionResult {
+  status: ClaimStatus;
+  queue: QueueName | null;
+}
+
+export interface Ops {
+  claims: number;
+  by_queue: Record<string, number>;
+  by_status: Record<string, number>;
+  straight_through_rate: number | null;
+  latency_p50_s: number | null;
+  latency_p95_s: number | null;
+  tokens_per_claim: number | null;
+  dead_letter: { id: string; reference: string; error: string | null }[];
+}
+
+export interface Metric {
+  value: number;
+  num: number;
+  den: number;
+}
+
+export interface EvalReport {
+  suite: string;
+  created: string | null;
+  metrics: Record<string, Metric>;
+  ops: Record<string, unknown>;
+  models: string[] | null;
+  notes: string[];
+}
