@@ -145,8 +145,8 @@ async def check_tools(gw: LLMGateway) -> tuple[bool, str, dict]:
             )
         ],
     )
-    _, message = await gw.client.chat(req, tools=tools)
-    calls = message.get("tool_calls") or []
+    resp = await gw.complete(req, tools=tools)  # through the gateway: guard, trace, cassette
+    calls = resp.tool_calls
     ok = bool(calls) and calls[0]["function"]["name"] == "get_code_list"
     args = calls[0]["function"].get("arguments") if calls else None
     return ok, f"tool_calls={json.dumps(calls, ensure_ascii=False)[:200]}", {"args": args}

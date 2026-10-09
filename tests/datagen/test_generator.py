@@ -54,7 +54,22 @@ def test_rare_queues_are_oversampled(scenarios):
 def test_at_least_30_percent_edge_cases(scenarios):
     routing_edges = {"missing_document", "duplicate_invoice", "date_inconsistency", "early_claim"}
     exclusions = {e for s in scenarios for e in s.edge_cases if e.startswith("exclusion_")}
-    flagged = [s for s in scenarios if set(s.edge_cases) & (routing_edges | exclusions | {"above_product_limit", "aggregate_limit", "outside_policy_period", "outside_trip", "prompt_injection"})]  # fmt: skip
+    flagged = [
+        s
+        for s in scenarios
+        if set(s.edge_cases)
+        & (
+            routing_edges
+            | exclusions
+            | {
+                "above_product_limit",
+                "aggregate_limit",
+                "outside_policy_period",
+                "outside_trip",
+                "prompt_injection",
+            }
+        )
+    ]
     assert len(flagged) / len(scenarios) >= 0.30
 
 

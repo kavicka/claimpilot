@@ -75,3 +75,33 @@ def test_leak_check_ignores_diacritics(value):
     rec = PayloadRecorder()
     rec.payloads.append('{"messages": [{"content": "Jana Kovacova"}]}')
     assert rec.leaks([value]) == [value]
+
+
+def test_list_rows_are_matched_by_content_not_position():
+    from types import SimpleNamespace
+
+    from claimpilot_evals.suites.extraction import align_rows
+
+    gt = {
+        "total": {"printed": "30,00", "norm": "30.00"},
+        "line_items[0].description": {"printed": "EKG", "norm": "EKG"},
+        "line_items[0].amount": {"printed": "10,00", "norm": "10.00"},
+        "line_items[1].description": {"printed": "Lijekovi", "norm": "Lijekovi"},
+        "line_items[1].amount": {"printed": "20,00", "norm": "20.00"},
+    }
+
+    def f(v):
+        return SimpleNamespace(value_raw=v)
+
+    pred = {
+        "total": f("30,00"),
+        "line_items[0].description": f("Lijekovi"),
+        "line_items[0].amount": f("20,00"),
+        "line_items[1].description": f("EKG"),
+        "line_items[1].amount": f("10,00"),
+        "line_items[2].description": f("Extra"),
+    }
+    out = align_rows(pred, gt, {}, None)
+    assert out["line_items[0].description"].value_raw == "EKG"
+    assert out["line_items[1].amount"].value_raw == "20,00"
+    assert out["line_items[2].description"].value_raw == "Extra"  # unmatched rows stay extra

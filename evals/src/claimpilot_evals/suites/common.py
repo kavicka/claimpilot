@@ -46,6 +46,7 @@ class RunContext:
     limit: int | None = None
     overrides: dict[str, str] = field(default_factory=dict)
     cassette_mode: CassetteMode = CassetteMode.OFF
+    options: dict[str, str] = field(default_factory=dict)
     dataset: Dataset = field(default_factory=Dataset)
     recorder: PayloadRecorder = field(default_factory=PayloadRecorder)
     _gateway: LLMGateway | None = None

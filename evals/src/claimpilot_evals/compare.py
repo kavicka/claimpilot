@@ -15,7 +15,7 @@ from typing import Any
 import yaml
 
 from claimpilot_core.settings import repo_root
-from claimpilot_evals.report import latest, load
+from claimpilot_evals.report import Metric, latest, load
 
 BASELINES = repo_root() / "evals" / "baselines"
 
@@ -66,23 +66,17 @@ def check(report: dict[str, Any], baseline: dict[str, Any] | None) -> list[str]:
     return problems
 
 
+def _show(m: dict[str, Any]) -> str:
+    return Metric(m["value"], m["num"], m["den"]).show()
+
+
 def deltas(report: dict[str, Any], baseline: dict[str, Any] | None) -> list[str]:
     out = []
     for name, m in report["metrics"].items():
         if baseline and name in baseline["metrics"]:
-            b = baseline["metrics"][name]
-            if m["den"]:
-                out.append(
-                    f"  {name}: {b['value']:.1%} -> {m['value']:.1%} ({m['num']}/{m['den']})"
-                )
-            else:
-                out.append(f"  {name}: {b['num']} -> {m['num']}")
+            out.append(f"  {name}: {_show(baseline['metrics'][name])} -> {_show(m)}")
         else:
-            out.append(
-                f"  {name}: {m['value']:.1%} ({m['num']}/{m['den']})"
-                if m["den"]
-                else f"  {name}: {m['num']}"
-            )
+            out.append(f"  {name}: {_show(m)}")
     return out
 
 

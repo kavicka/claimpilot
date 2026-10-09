@@ -23,7 +23,9 @@ class Metric:
     den: int
 
     def show(self) -> str:
-        return f"{self.value:.1%} ({self.num}/{self.den})" if self.den else f"{self.num}"
+        if self.den:
+            return f"{self.value:.1%} ({self.num}/{self.den})"
+        return f"{self.num}" if self.value == self.num else f"{self.value:.3f} (n={self.num})"
 
 
 @dataclass
@@ -125,11 +127,44 @@ def _md(r: Report) -> str:
     return "\n".join(lines) + "\n"
 
 
+def calibration_plot(bins: list[dict], target: Path) -> None:
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    fig, ax = plt.subplots(figsize=(4.2, 4.2), dpi=120)
+    ax.plot([0, 1], [0, 1], color="#999", linewidth=1, linestyle="--", label="perfect")
+    xs = [b["mean_conf"] for b in bins]
+    ys = [b["accuracy"] for b in bins]
+    ax.plot(xs, ys, marker="o", color="#1d4e89", label="extraction")
+    for b in bins:
+        ax.annotate(
+            f"n={b['n']}",
+            (b["mean_conf"], b["accuracy"]),
+            textcoords="offset points",
+            xytext=(4, -10),
+            fontsize=7,
+            color="#555",
+        )
+    ax.set_xlabel("confidence")
+    ax.set_ylabel("share correct")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1.02)
+    ax.legend(loc="upper left", fontsize=8, frameon=False)
+    ax.set_title("Field confidence vs. accuracy (dev)", fontsize=9)
+    fig.tight_layout()
+    fig.savefig(target)
+    plt.close(fig)
+
+
 def write(r: Report) -> Path:
     REPORTS.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     r.meta.setdefault("created", stamp)
     base = REPORTS / f"{stamp}-{r.suite}-{r.split}"
+    if r.meta.get("calibration_bins"):
+        calibration_plot(r.meta["calibration_bins"], base.with_name(base.name + "-calibration.png"))
     data = asdict(r)
     base.with_suffix(".json").write_text(
         json.dumps(data, ensure_ascii=False, indent=1, default=str), "utf-8"
