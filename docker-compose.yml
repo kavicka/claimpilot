@@ -1,0 +1,90 @@
+name: claimpilot
+
+# Ollama and the worker run natively on macOS (Metal/MPS is not available inside containers).
+# Everything here is infrastructure plus the light services.
+
+include:
+  - path: infra/langfuse/docker-compose.yml
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: claimpilot
+      POSTGRES_PASSWORD: claimpilot
+      POSTGRES_DB: claimpilot
+    ports:
+      - "127.0.0.1:5438:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./infra/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U claimpilot -d claimpilot"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7.4-alpine
+    ports:
+      - "127.0.0.1:6389:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    environment:
+      CLAIMPILOT_DATABASE_URL: postgresql+psycopg://claimpilot:claimpilot@postgres:5432/claimpilot
+      CLAIMPILOT_REDIS_URL: redis://redis:6379/0
+      CLAIMPILOT_STORAGE_DIR: /data/storage
+      CLAIMPILOT_CONFIG_DIR: /app/config
+      CLAIMPILOT_PROMPTS_DIR: /app/prompts
+      CLAIMPILOT_PII_VAULT_KEY: ${CLAIMPILOT_PII_VAULT_KEY:-}
+      CLAIMPILOT_CORE_MOCK_URL: http://core_mock:8000
+    ports:
+      - "127.0.0.1:4400:8000"
+    volumes:
+      # Shared with the native worker, which reads uploads from the same directory.
+      - ./data/storage:/data/storage
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+  core_mock:
+    build:
+      context: .
+      dockerfile: services/core_mock/Dockerfile
+    ports:
+      - "127.0.0.1:4401:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+  mcp_server:
+    build:
+      context: .
+      dockerfile: services/mcp_server/Dockerfile
+    environment:
+      CLAIMPILOT_API_URL: http://api:8000
+    ports:
+      - "127.0.0.1:4402:8000"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  pgdata:

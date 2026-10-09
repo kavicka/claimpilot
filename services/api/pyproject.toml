@@ -1,0 +1,19 @@
+[project]
+name = "claimpilot-api"
+version = "0.1.0"
+description = "Upload, claims, review and auth API"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "claimpilot-core",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "python-multipart>=0.0.17",
+    "arq>=0.26",
+]
+
+[tool.uv.sources]
+claimpilot-core = { workspace = true }
+
+[build-system]
+requires = ["uv_build>=0.9.0,<0.10.0"]
+build-backend = "uv_build"

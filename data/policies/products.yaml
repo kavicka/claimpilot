@@ -1,0 +1,117 @@
+# Three travel-insurance products of the fictional "Vzorová poisťovňa, a. s.".
+# Amounts in EUR. Clause IDs (A<article>.<paragraph>) point into vpp_cp_2026.yaml.
+# The payout engine reads limits from here; the generator reads the same file, so terms and ground truth agree.
+
+insurer: "Vzorová poisťovňa, a. s."
+terms_id: "VPP-CP 2026"
+fx_snapshot: "config/fx_rates.yaml"
+
+products:
+  basic:
+    name: "Cestovné poistenie Basic"
+    coverages:
+      medical:
+        limit: 60000
+        deductible: 50
+        sublimits: { dental: 150 }
+        clauses: [A4.1, A4.2, A4.3]
+      accident:
+        fracture_benefit: 150
+        clauses: [A6.1, A6.2]
+      luggage:
+        limit: 500
+        per_item_limit: 150
+        valuables_share: 0.3      # electronics and jewellery, share of the luggage limit
+        deductible: 30
+        clauses: [A7.1, A7.2, A7.3]
+      delay: null
+      cancellation: null
+      liability:
+        limit: 30000
+        deductible: 100
+        clauses: [A10.1]
+    extreme_sports: false
+
+  standard:
+    name: "Cestovné poistenie Standard"
+    coverages:
+      medical:
+        limit: 150000
+        deductible: 30
+        sublimits: { dental: 300 }
+        clauses: [A4.1, A4.2, A4.3]
+      accident:
+        fracture_benefit: 300
+        clauses: [A6.1, A6.2]
+      luggage:
+        limit: 1000
+        per_item_limit: 300
+        valuables_share: 0.3
+        deductible: 20
+        clauses: [A7.1, A7.2, A7.3]
+      delay:
+        limit: 150
+        min_hours: 12
+        clauses: [A8.1, A8.2]
+      cancellation:
+        limit: 1000
+        reimbursement_rate: 0.8
+        clauses: [A9.1, A9.2, A9.3]
+      liability:
+        limit: 60000
+        deductible: 100
+        clauses: [A10.1]
+    extreme_sports: false
+
+  premium:
+    name: "Cestovné poistenie Premium"
+    coverages:
+      medical:
+        limit: 300000
+        deductible: 0
+        sublimits: { dental: 500 }
+        clauses: [A4.1, A4.2, A4.3]
+      accident:
+        fracture_benefit: 500
+        clauses: [A6.1, A6.2]
+      luggage:
+        limit: 2000
+        per_item_limit: 500
+        valuables_share: 0.3
+        deductible: 0
+        clauses: [A7.1, A7.2, A7.3]
+      delay:
+        limit: 300
+        min_hours: 12
+        clauses: [A8.1, A8.2]
+      cancellation:
+        limit: 3000
+        reimbursement_rate: 0.8
+        clauses: [A9.1, A9.2, A9.3]
+      liability:
+        limit: 120000
+        deductible: 0
+        clauses: [A10.1]
+    extreme_sports: true
+
+# Exclusions shared by all products. `clause` decides a "not covered" item; generator edge cases use these codes.
+exclusions:
+  pre_existing_condition: { clause: A5.1, coverages: [medical] }
+  planned_treatment:      { clause: A5.2, coverages: [medical] }
+  dental_over_sublimit:   { clause: A4.4, coverages: [medical] }
+  alcohol_or_drugs:       { clause: A11.2, coverages: [medical, accident, luggage, liability] }
+  extreme_sport:          { clause: A11.3, coverages: [medical, accident], unless_product_flag: extreme_sports }
+  outside_policy_period:  { clause: A3.2, coverages: [medical, accident, luggage, delay, cancellation, liability] }
+  outside_trip:           { clause: A3.3, coverages: [medical, accident, luggage, delay, liability] }
+  unattended_valuables:   { clause: A7.5, coverages: [luggage] }
+  cash_and_documents:     { clause: A7.6, coverages: [luggage] }
+  delay_under_minimum:    { clause: A8.3, coverages: [delay] }
+  cancellation_known_reason: { clause: A9.4, coverages: [cancellation] }
+
+# Documents the handler needs per claim type (A13.2); a missing one sends the claim to NEEDS_INFO.
+required_documents:
+  medical: [claim_form, medical_report, medical_invoice]
+  accident: [claim_form, medical_report]
+  luggage: [claim_form, property_irregularity_report]
+  luggage_theft: [claim_form, police_report]
+  cancellation: [claim_form, booking_confirmation, medical_report]

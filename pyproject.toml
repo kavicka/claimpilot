@@ -1,0 +1,87 @@
+[project]
+name = "claimpilot"
+version = "0.1.0"
+description = "AI pipeline for travel-insurance claims: intake to handler-approved decision"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "claimpilot-core[pii]",
+    "claimpilot-api",
+    "claimpilot-worker",
+    "claimpilot-core-mock",
+    "claimpilot-mcp",
+    "claimpilot-datagen",
+    "claimpilot-evals",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "pytest-cov>=5.0",
+    "hypothesis>=6.112",
+    "respx>=0.21",
+    "ruff>=0.7",
+    "pyright>=1.1.390",
+    "pre-commit>=4.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/*", "services/*", "data/generator", "evals"]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+# Linux (CI and the Phase 2 image) gets CPU-only torch; macOS keeps the default MPS build.
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+claimpilot-core = { workspace = true }
+claimpilot-api = { workspace = true }
+claimpilot-worker = { workspace = true }
+claimpilot-core-mock = { workspace = true }
+claimpilot-mcp = { workspace = true }
+claimpilot-datagen = { workspace = true }
+claimpilot-evals = { workspace = true }
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["ui", "data/synthetic", "evals/cassettes"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF", "ASYNC", "S", "N", "PT"]
+ignore = ["S101", "RUF001", "RUF002", "RUF003", "S311"]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "claimpilot_core", "claimpilot_api", "claimpilot_worker", "claimpilot_core_mock",
+    "claimpilot_mcp", "claimpilot_datagen", "claimpilot_evals",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "N802"]
+"**/alembic/versions/*.py" = ["E501"]
+
+[tool.pyright]
+include = ["packages", "services", "data/generator", "evals", "tests"]
+exclude = ["**/node_modules", "ui", "**/.venv", "data/synthetic"]
+pythonVersion = "3.12"
+typeCheckingMode = "standard"
+venvPath = "."
+venv = ".venv"
+reportMissingTypeStubs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = "-ra --strict-markers -m 'not smoke and not live'"
+markers = [
+    "smoke: needs a running Ollama with the configured models",
+    "live: calls a live model; run with -m live",
+    "db: needs the Postgres from docker compose",
+]

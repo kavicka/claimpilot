@@ -1,0 +1,24 @@
+[project]
+name = "claimpilot-datagen"
+version = "0.1.0"
+description = "Synthetic travel-insurance claims with exact ground truth"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "claimpilot-core",
+    "faker>=30",
+    "jinja2>=3.1",
+    "weasyprint>=63",
+    "pillow>=11",
+    "numpy>=2.1",
+    "pymupdf>=1.25",
+]
+
+[project.scripts]
+claimpilot-datagen = "claimpilot_datagen.cli:main"
+
+[tool.uv.sources]
+claimpilot-core = { workspace = true }
+
+[build-system]
+requires = ["uv_build>=0.9.0,<0.10.0"]
+build-backend = "uv_build"

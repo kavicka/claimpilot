@@ -1,0 +1,25 @@
+[project]
+name = "claimpilot-worker"
+version = "0.1.0"
+description = "arq worker that runs every pipeline step and owns every model call"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "claimpilot-core[pii]",
+    "arq>=0.26",
+    "docling>=2.15",
+    "pymupdf>=1.25",
+    "rapidfuzz>=3.10",
+    "sentence-transformers>=3.3",
+    "torch>=2.5",
+    "pydantic-ai-slim[openai]>=0.0.20",
+]
+
+[project.scripts]
+claimpilot-worker = "claimpilot_worker.cli:main"
+
+[tool.uv.sources]
+claimpilot-core = { workspace = true }
+
+[build-system]
+requires = ["uv_build>=0.9.0,<0.10.0"]
+build-backend = "uv_build"

@@ -1,0 +1,24 @@
+# Model per pipeline step. Phase 1 runs everything on local Ollama models; Phase 2 adds Bedrock
+# as a second provider. Evals compare configurations with `--model step=model` overrides.
+defaults:
+  provider: ollama
+  temperature: 0.0
+  num_ctx: 16384
+  think: false   # Qwen3 reasoning tokens add latency to every call; turn on per step only when an eval shows a gain
+  seed: 7
+
+steps:
+  doc_type:          { model: "qwen3:4b-instruct", num_ctx: 8192 }
+  extraction:        { model: "qwen3:14b" }
+  extraction_vision: { model: "qwen3-vl:8b" }
+  routing:           { model: "qwen3:14b", num_ctx: 8192 }
+  coverage_map:      { model: "qwen3:14b", num_ctx: 8192 }
+  coverage_decide:   { model: "qwen3:14b" }
+  summaries:         { model: "qwen3:30b-a3b-instruct-2507-q4_K_M" }
+  judge:             { model: "qwen3:30b-a3b-instruct-2507-q4_K_M" }
+  submission:        { model: "qwen3:14b" }
+  narrative:         { model: "qwen3:14b", temperature: 0.7, num_ctx: 4096 }
+  smoke:             { model: "qwen3:14b", num_ctx: 4096 }
+
+embeddings:
+  model: "bge-m3"

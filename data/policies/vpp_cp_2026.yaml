@@ -1,0 +1,110 @@
+# Synthetic general terms for travel insurance (VPP-CP 2026) of the fictional "Vzorová poisťovňa, a. s.".
+# Written for ClaimPilot; structure follows Slovak travel VPP documents, text is original (ADR-008).
+# Clause ID = A<article>.<paragraph>. Limits and deductibles are in products.yaml, not in the text,
+# except where the text names the rule that applies them.
+
+terms_id: "VPP-CP 2026"
+title: "Všeobecné poistné podmienky pre cestovné poistenie VPP-CP 2026"
+insurer: "Vzorová poisťovňa, a. s."
+articles:
+  - number: 1
+    title: "Úvodné ustanovenia"
+    paragraphs:
+      - "Tieto všeobecné poistné podmienky upravujú cestovné poistenie, ktoré Vzorová poisťovňa, a. s. (ďalej len „poisťovňa“) dojednáva v produktoch Basic, Standard a Premium."
+      - "Rozsah poistenia, limity poistného plnenia a spoluúčasť pre jednotlivé produkty sú uvedené v poistnej zmluve a v tabuľke limitov, ktorá je jej súčasťou."
+
+  - number: 2
+    title: "Výklad pojmov"
+    paragraphs:
+      - "Poistenou osobou je osoba uvedená v poistnej zmluve, na ktorej život, zdravie alebo majetok sa poistenie vzťahuje."
+      - "Cestou sa rozumie pobyt poistenej osoby mimo územia Slovenskej republiky v čase uvedenom v poistnej zmluve ako začiatok a koniec cesty."
+      - "Akútnym ochorením je náhla zmena zdravotného stavu, ktorá vznikla počas cesty a vyžaduje neodkladné ošetrenie."
+      - "Úrazom je neočakávané a náhle pôsobenie vonkajších síl alebo vlastnej telesnej sily, ktoré poistenej osobe nezávisle od jej vôle spôsobilo poškodenie zdravia."
+      - "Spoluúčasťou je suma, ktorou sa poistená osoba podieľa na každej poistnej udalosti a o ktorú poisťovňa znižuje poistné plnenie."
+      - "Predchádzajúcim zdravotným stavom je ochorenie, pre ktoré bola poistená osoba liečená alebo vyšetrovaná v posledných šiestich mesiacoch pred začiatkom cesty."
+      - "Extrémnym športom sa rozumie najmä paragliding, zoskok padákom, bungee jumping, skialpinizmus mimo vyznačených tratí a potápanie do hĺbky nad 40 metrov."
+
+  - number: 3
+    title: "Územná a časová platnosť"
+    paragraphs:
+      - "Poistenie sa vzťahuje na poistné udalosti, ktoré nastanú v zahraničí počas cesty."
+      - "Poisťovňa neposkytne poistné plnenie za udalosť, ktorá nastala pred začiatkom alebo po skončení poistnej doby uvedenej v poistnej zmluve."
+      - "Poisťovňa neposkytne poistné plnenie za udalosť, ktorá nastala mimo dátumov cesty uvedených v poistnej zmluve, aj keď poistná doba ešte trvá; to neplatí pre poistenie storna cesty."
+
+  - number: 4
+    title: "Poistenie liečebných nákladov v zahraničí"
+    paragraphs:
+      - "Poisťovňa uhradí primerané a nevyhnutné náklady na ambulantné ošetrenie, hospitalizáciu a lekárom predpísané lieky, ak boli vynaložené v dôsledku akútneho ochorenia alebo úrazu počas cesty."
+      - "Poisťovňa uhradí náklady na prevoz poistenej osoby do najbližšieho zdravotníckeho zariadenia, ktoré je schopné poskytnúť potrebnú starostlivosť."
+      - "Poistné plnenie je obmedzené limitom pre liečebné náklady podľa produktu a znižuje sa o spoluúčasť; ak poistnú udalosť tvorí viac položiek, spoluúčasť sa odpočíta raz."
+      - "Náklady na akútne zubné ošetrenie poisťovňa uhradí najviac do sublimitu pre zubné ošetrenie podľa produktu; náklady nad tento sublimit neuhradí."
+
+  - number: 5
+    title: "Výluky z poistenia liečebných nákladov"
+    paragraphs:
+      - "Poisťovňa neuhradí náklady na liečenie predchádzajúceho zdravotného stavu ani jeho komplikácií."
+      - "Poisťovňa neuhradí náklady na plánované vyšetrenia a liečenie, kvôli ktorým poistená osoba vycestovala, ani na kozmetické zákroky."
+
+  - number: 6
+    title: "Poistenie úrazu"
+    paragraphs:
+      - "Ak poistená osoba utrpí počas cesty úraz, ktorého následkom je zlomenina kosti potvrdená lekárskou správou, poisťovňa vyplatí jednorazové plnenie za zlomeninu vo výške podľa produktu."
+      - "Plnenie za zlomeninu sa vyplatí raz za jednu poistnú udalosť bez ohľadu na počet zlomenín a nezahŕňa liečebné náklady, ktoré sa posudzujú podľa článku 4."
+
+  - number: 7
+    title: "Poistenie batožiny"
+    paragraphs:
+      - "Poisťovňa uhradí škodu na batožine poistenej osoby, ktorá vznikla jej stratou počas prepravy dopravcom, krádežou alebo poškodením počas cesty."
+      - "Poistné plnenie za jednu vec je obmedzené limitom na jednu vec a celkové plnenie limitom pre batožinu podľa produktu; plnenie sa znižuje o spoluúčasť raz za poistnú udalosť."
+      - "Za elektroniku, šperky a hodinky poisťovňa plní najviac do 30 % limitu pre batožinu."
+      - "Pri strate batožiny dopravcom je poistená osoba povinná predložiť záznam o nepravidelnosti batožiny (Property Irregularity Report), pri krádeži policajný protokol."
+      - "Poisťovňa neuhradí krádež cenných vecí a elektroniky ponechaných bez dozoru vo vozidle alebo na verejne prístupnom mieste."
+      - "Poistenie sa nevzťahuje na hotovosť, platobné karty, cestovné doklady a cenné papiere."
+
+  - number: 8
+    title: "Poistenie oneskorenia batožiny"
+    paragraphs:
+      - "Ak dopravca doručí batožinu poistenej osobe v zahraničí s oneskorením, poisťovňa uhradí preukázané náklady na nevyhnutné hygienické potreby a oblečenie."
+      - "Plnenie je obmedzené limitom pre oneskorenie batožiny podľa produktu; produkt Basic toto poistenie nezahŕňa."
+      - "Poisťovňa neplní, ak oneskorenie nepresiahlo 12 hodín od príletu poistenej osoby."
+
+  - number: 9
+    title: "Poistenie storna cesty"
+    paragraphs:
+      - "Poisťovňa uhradí stornovacie poplatky, ktoré poistenej osobe vznikli zrušením cesty pred jej začiatkom z dôvodu akútneho ochorenia alebo úrazu poistenej osoby, úmrtia blízkej osoby alebo vážnej škody na majetku poistenej osoby."
+      - "Poistné plnenie predstavuje 80 % stornovacieho poplatku a je obmedzené limitom pre storno cesty podľa produktu; produkt Basic toto poistenie nezahŕňa."
+      - "Nárok na plnenie vzniká, ak poistená osoba zrušila cestu bez zbytočného odkladu, najneskôr do troch pracovných dní od vzniku dôvodu."
+      - "Poisťovňa neuhradí stornovacie poplatky, ak dôvod zrušenia cesty existoval alebo bol poistenej osobe známy v čase uzavretia poistnej zmluvy."
+
+  - number: 10
+    title: "Poistenie zodpovednosti za škodu"
+    paragraphs:
+      - "Poisťovňa uhradí za poistenú osobu škodu na zdraví alebo majetku tretej osoby, za ktorú poistená osoba zodpovedá podľa právnych predpisov krajiny pobytu, najviac do limitu podľa produktu."
+
+  - number: 11
+    title: "Všeobecné výluky"
+    paragraphs:
+      - "Poisťovňa neposkytne plnenie, ak poistnú udalosť spôsobila poistená osoba úmyselne."
+      - "Poisťovňa neposkytne plnenie za udalosť, ktorá vznikla pod vplyvom alkoholu s hladinou nad 0,5 promile, omamných alebo psychotropných látok."
+      - "Poisťovňa neposkytne plnenie za udalosť, ktorá vznikla pri vykonávaní extrémneho športu; to neplatí, ak poistná zmluva dojednaná v produkte Premium extrémne športy zahŕňa."
+      - "Poisťovňa neposkytne plnenie za udalosti spôsobené vojnou, terorizmom alebo jadrovou udalosťou."
+
+  - number: 12
+    title: "Mena poistného plnenia"
+    paragraphs:
+      - "Poisťovňa vypláca poistné plnenie v eurách. Náklady v cudzej mene prepočíta referenčným výmenným kurzom Európskej centrálnej banky podľa kurzového lístka uvedeného v poistnej zmluve."
+      - "Ak poistná zmluva neurčuje kurzový lístok, použije sa kurz platný v deň vzniku poistnej udalosti."
+
+  - number: 13
+    title: "Povinnosti poistenej osoby pri poistnej udalosti"
+    paragraphs:
+      - "Poistená osoba je povinná oznámiť poistnú udalosť poisťovni bez zbytočného odkladu, najneskôr do 30 dní od návratu z cesty."
+      - "K oznámeniu poistnej udalosti je poistená osoba povinná priložiť doklady podľa druhu udalosti: pri liečebných nákladoch lekársku správu a originál faktúry, pri úraze lekársku správu, pri strate batožiny záznam dopravcu, pri krádeži policajný protokol a pri storne cesty potvrdenie o rezervácii a stornovacom poplatku spolu s lekárskou správou."
+      - "Ak poistená osoba nepredloží požadované doklady, poisťovňa ju vyzve na ich doplnenie a lehota na vyšetrenie poistnej udalosti neplynie, kým doklady nedoplní."
+      - "Poistená osoba nesmie uplatniť ten istý doklad v dvoch poistných udalostiach. Opakované uplatnenie dokladu poisťovňa posudzuje ako pokus o poistný podvod."
+
+  - number: 14
+    title: "Poistné plnenie"
+    paragraphs:
+      - "Poisťovňa vyplatí poistné plnenie do 15 dní od skončenia šetrenia potrebného na zistenie rozsahu jej povinnosti plniť."
+      - "Poisťovňa môže poistné plnenie znížiť alebo zamietnuť, ak poistená osoba uviedla nepravdivé alebo neúplné údaje podstatné pre posúdenie poistnej udalosti."

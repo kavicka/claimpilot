@@ -1,0 +1,13 @@
+# Fixed snapshot of ECB reference rates (units of currency per 1 EUR), so payouts are deterministic.
+# Values approximate early-2026 levels; they are a fixture, not market data.
+snapshot_date: "2026-01-30"
+source: "ECB euro foreign exchange reference rates (fixture values)"
+rates:
+  EUR: 1.0
+  CZK: 24.50
+  HUF: 395.0
+  PLN: 4.25
+  TRY: 45.80
+  USD: 1.08
+  GBP: 0.85
+  CHF: 0.94
