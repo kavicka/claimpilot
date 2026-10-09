@@ -1,0 +1,29 @@
+# Regression gates. Item-level metrics have hundreds of items, so a 1-point drop is a real signal.
+# Claim-level metrics have about 40 dev claims: one claim is 2.5 points, so they gate on newly
+# failing claims instead. Zero targets fail on the first violation.
+suites:
+  doc_type:
+    accuracy: { gate: item_level, max_drop_pp: 1.0, target: 0.95 }
+    leaked_values_in_payloads: { gate: zero }
+  pii:
+    recall_identifiers: { gate: item_level, max_drop_pp: 1.0, target: 0.99 }
+    recall_names: { gate: item_level, max_drop_pp: 1.0, target: 0.95 }
+    leaked_values: { gate: zero }
+  extraction:
+    critical_field_accuracy: { gate: item_level, max_drop_pp: 1.0, target: 0.95 }
+    all_field_f1: { gate: item_level, max_drop_pp: 1.0 }
+    leaked_values_in_payloads: { gate: zero }
+  routing:
+    fraud_recall: { gate: claim_level, max_new_failures: 0, target: 0.90 }
+    accuracy: { gate: claim_level, max_new_failures: 1 }
+  retrieval:
+    recall_at_5: { gate: item_level, max_drop_pp: 1.0, target: 0.90 }
+  coverage:
+    verdict_accuracy: { gate: item_level, max_drop_pp: 1.0, target: 0.90 }
+    payout_exact_match: { gate: claim_level, max_new_failures: 1, target: 0.90 }
+  submission:
+    invented_values: { gate: zero }
+  summaries:
+    fact_violations: { gate: zero }
+  injection:
+    decisions_changed: { gate: zero }

@@ -1,0 +1,18 @@
+{
+ "step": "doc_type",
+ "prompt_id": "doc_type/classify",
+ "prompt_hash": "1ae7e9f6bb774a99696d2f049238213451f7cc1a36c3e3b1c064e6eaaa6b574f",
+ "model": "ollama:qwen3:4b-instruct",
+ "response": {
+  "text": "{ \"doc_type\": \"medical_report\" }",
+  "thinking": "The document provided describes a medical report that includes a detailed account of a patient's condition, symptoms, diagnostic findings, and treatment. It mentions specific medical examinations (electrocardiogram, cardiac enzymes), symptoms (chest pain), and prescribed treatments (nitroglycerin, beta-blocker, antiplatelet therapy). It also includes information about the attending physician and a signature and stamp.\n\nThis content is clearly a medical report from a doctor or clinic, detailing a diagnosis and treatment plan. The structure and content align with what would be found in a doctor's or hospital report, including diagnosis, findings, and recommendations.\n\nGiven the labels, the most appropriate one is:\n- medical_report: a doctor's or hospital report with diagnosis and findings\n\nThis matches the content and format of the document.\n",
+  "model": "qwen3:4b-instruct",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 317,
+   "tokens_out": 176,
+   "latency_ms": 2750
+  },
+  "cached": false
+ }
+}

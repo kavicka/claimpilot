@@ -1,0 +1,18 @@
+{
+ "step": "doc_type",
+ "prompt_id": "doc_type/classify",
+ "prompt_hash": "1ae7e9f6bb774a99696d2f049238213451f7cc1a36c3e3b1c064e6eaaa6b574f",
+ "model": "ollama:qwen3:4b-instruct",
+ "response": {
+  "text": "{ \"doc_type\": \"medical_invoice\" }",
+  "thinking": "The document provided appears to be a medical bill or invoice from a hospital. It includes detailed service items (like \"Bolnički dan\", \"CT snimanje\", \"EKG\", \"Laboratorijske pretrage\", \"Infuzijska terapija\", \"Ultrazvuk\", \"Lijekovi\") with specific costs in euros. The structure includes a patient name (tokenized as <PERSON_1>), location (Split, Hrvatska), and a breakdown of services and their prices, culminating in a total amount to be paid.\n\nGiven the labels:\n- claim_form: the insurer's claim form filled in by the client (Slovak)\n- policy_certificate: the insurance certificate with policy number, period and limits\n- medical_report: a doctor's or hospital report with diagnosis and findings\n- medical_invoice: an invoice from a clinic or hospital for treatment\n- pharmacy_receipt: a till receipt from a pharmacy, drugstore or shop\n- property_irregularity_report: an airline report about delayed, lost or damaged baggage\n- police_report: a police record of a theft or other crime\n- booking_confirmation: a travel agency booking or cancellation confirmation\n\nThe document is clearly an invoice from a hospital (Opéa bolnica Milotić) listing medical services and their costs. It does not contain a diagnosis, claim form, policy details, police report, or travel booking information.\n\nTherefore, the most accurate label is \"medical_invoice\".\n",
+  "model": "qwen3:4b-instruct",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1093,
+   "tokens_out": 324,
+   "latency_ms": 6156
+  },
+  "cached": false
+ }
+}
