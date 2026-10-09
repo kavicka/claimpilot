@@ -1,0 +1,17 @@
+{% extends "_layout.html.j2" %}
+{% block style %}{% if style == 'b' %} body { font-family: Georgia, serif; } .lines th { background: #eef2f6; } h1 { color: #1d3c6e; }{% endif %}{% endblock %}
+{% block body %}
+<div class="head"><div><div class="logo">{{ provider_name }}</div><div class="muted">{{ city }}, {{ provider_country }}</div></div>
+<div style="text-align:right"><div style="font-size:14pt;font-weight:700">{{ L.invoice }}</div>
+<div>{{ L.invoice_no }} {{ invoice_number }}</div><div>{{ L.date }}: {{ issue_date }}</div></div></div>
+<table class="grid" style="margin-bottom:5mm">
+<tr><td style="width:55%"><div class="label">{{ L.patient }}</div><div class="val">{{ patient_name }}, {{ L.born }} {{ patient_born }}</div></td>
+<td><div class="label">{{ L.service_date }}</div><div class="val">{{ service_date }}</div></td></tr>
+</table>
+<table class="lines">
+<thead><tr><th style="width:8%">#</th><th>{{ L.item }}</th><th class="num">{{ L.amount }} ({{ currency }})</th></tr></thead>
+{% for ln in lines %}<tr><td>{{ loop.index }}</td><td>{{ ln.description }}</td><td class="num">{{ ln.amount }}</td></tr>{% endfor %}
+<tr class="total"><td></td><td>{{ L.total }}</td><td class="num">{{ total }} {{ currency }}</td></tr>
+</table>
+<p class="muted" style="margin-top:6mm">{{ L.payment }}</p>
+{% endblock %}

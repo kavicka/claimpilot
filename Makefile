@@ -66,7 +66,7 @@ eval-fast:  ## Gated suites on the dev split, then compare against baselines
 	uv run claimpilot-eval-compare --latest
 
 eval:  ## Full live eval run (records cassettes)
-	CLAIMPILOT_LLM_CASSETTE_MODE=record uv run claimpilot-eval run --suite $(SUITE) --split $(SPLIT)
+	uv run claimpilot-eval run --suite $(SUITE) --split $(SPLIT) --record
 	uv run claimpilot-eval-compare --latest
 
 vault-key:  ## Print a new Fernet key for CLAIMPILOT_PII_VAULT_KEY

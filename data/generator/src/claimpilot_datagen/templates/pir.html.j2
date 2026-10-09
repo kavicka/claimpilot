@@ -1,0 +1,20 @@
+{% extends "_layout.html.j2" %}
+{% block style %} body { font: 9pt/1.3 "Courier New", monospace; } .val { font-size: 9.5pt; } {% endblock %}
+{% block body %}
+<div class="head"><div class="logo" style="font-family:'Helvetica Neue',Arial">{{ airline }}</div><div class="muted">Baggage Services {{ airport }}</div></div>
+<h1 style="font-family:'Helvetica Neue',Arial">PROPERTY IRREGULARITY REPORT</h1>
+<table class="grid">
+<tr><td style="width:50%"><div class="label">File reference</div><div class="val">{{ file_reference }}</div></td>
+<td><div class="label">Bag status</div><div class="val">{{ status }}</div></td></tr>
+<tr><td><div class="label">Passenger name</div><div class="val">{{ passenger_name }}</div></td>
+<td><div class="label">Bag tag</div><div class="val">{{ bag_tag }}</div></td></tr>
+<tr><td><div class="label">Flight / date</div><div class="val">{{ flight_number }} / {{ flight_date }}</div></td>
+<td><div class="label">Arrival (local time)</div><div class="val">{{ arrival_time }}</div></td></tr>
+<tr><td><div class="label">Delivered to passenger</div><div class="val">{{ delivery_time or 'NOT DELIVERED' }}</div></td>
+<td><div class="label">Delivery address</div><div class="val">HOTEL {{ hotel_city|upper }}</div></td></tr>
+<tr><td><div class="label">Permanent address</div><div class="val">{{ address }}</div></td>
+<td><div class="label">Phone</div><div class="val">{{ phone }}</div></td></tr>
+<tr><td colspan="2"><div class="label">Remarks</div><div class="val">{{ remarks }}</div></td></tr>
+</table>
+<p class="muted">This report does not constitute an admission of liability by the carrier.</p>
+{% endblock %}

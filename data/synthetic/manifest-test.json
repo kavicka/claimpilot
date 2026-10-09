@@ -1,0 +1,470 @@
+{
+ "seed": 42,
+ "generator": "1.0",
+ "claims": [
+  {
+   "scenario_id": "S42-041",
+   "archetype": "date_inconsistency",
+   "expected_queue": "fraud_review",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "17393838a2dc598ca885a7b4a18c21e2bbb3f5cb912166dd7e7ad14ce38c8d13"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "4a427cb296643944d86ae5f7fe0115fa34da2a90fda1f26d079259160ce632dc"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "7e2b809da7aad69c2626811a78658ee2df10ac18b4738082c64b6c2e39ff80a8"
+    },
+    {
+     "file": "D4_medical_invoice.pdf",
+     "sha256": "69e3dbf59628b774607cd0a83ad1fdac5b473784eaf97339f1d50cf0c95abda4"
+    },
+    {
+     "file": "D5_pharmacy_receipt.pdf",
+     "sha256": "2033c328418375dae3b11eed042bffc4871a5c21289e6ec18c714f96a0390a54"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-042",
+   "archetype": "luggage_delay_small",
+   "expected_queue": "fast_track",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "0d8fa4705f36d10661e171bc641f20930e85d404d5ebd3b5aa74d4da2fa6d372"
+    },
+    {
+     "file": "D2_property_irregularity_report.pdf",
+     "sha256": "5de3b1bab2382450d9ea3de3ac52bfbfcf51e18420e9781bb3841b88bbc1b1d8"
+    },
+    {
+     "file": "D3_pharmacy_receipt.pdf",
+     "sha256": "e43381b74bb4ce66180349662b6ff6555bbfa08903f324536470b5ffab0b973c"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-043",
+   "archetype": "accident_fracture",
+   "expected_queue": "standard",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "3d1d2ea45d09b40ca072383495c3678696f197a39db2f2433495dd01fbe3dfe3"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "a0db09a59efd92463cb346c00c19f5da8602e0141586646e3160286ef6760c93"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "ff11c0337618ec2ccdb5addb0123eb9b7859a799849e2ddc399abea644bede7e"
+    },
+    {
+     "file": "D4_medical_invoice.pdf",
+     "sha256": "a8bd16218b6f146ae165316ded8523ff7fa88276f0993d3657bfdacfc58312ce"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-044",
+   "archetype": "medical_small",
+   "expected_queue": "fast_track",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "d4081b0cf4c44790ede1f0b71db681e71e1b4e39ed8451d4e9575a6edea684e3"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "3ed2c8d3b66580edf67f50f5c529d1a652084b099ea73142f431cf2998229d70"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "b92bdc33d4aa28f53314a36cf7cec8d18809f3023e9ca7af422c8194395230a8"
+    },
+    {
+     "file": "D4_medical_invoice.pdf",
+     "sha256": "78d367aecc5648b004df65240060cb23a4249e8404cbdd3ed2a3c5e39fceb0dd"
+    },
+    {
+     "file": "D5_pharmacy_receipt.pdf",
+     "sha256": "2dcaf8a3413526a8c9f3ac38c884911dc67608bac13c28d9ad13a5d1f4ac326d"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-045",
+   "archetype": "outside_period",
+   "expected_queue": "standard",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "7b48a62958065ab83c844f8086ada3240b3a51fe27a99756606b03ecac741b37"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "4c818bab0ae0babe284fa1b64ba12caaa356fca27505fc43d55b0b91d8530e45"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "42b8e415323f6daf9cf93c2ad61d3eef008b215be006f626af5837246b8cbe5d"
+    },
+    {
+     "file": "D4_medical_invoice.pdf",
+     "sha256": "3fffd1b0e696c80e60870372a4223413f27a190b741adb59fd40b90d9dc55f2a"
+    },
+    {
+     "file": "D5_pharmacy_receipt.pdf",
+     "sha256": "08d745f4f427cad8815bac2f827beb1c365650ef76a051402e7e4d5e6d2a6eb0"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-046",
+   "archetype": "luggage_lost",
+   "expected_queue": "standard",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "f109a7f0c672281ae4bda8318643f025e4f0308e438e44b2f11760ec2feb804a"
+    },
+    {
+     "file": "D2_property_irregularity_report.pdf",
+     "sha256": "e65f06f03e768fcfe1c904c3a41135072d47cfd706eec058417f54e4df307e66"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-047",
+   "archetype": "cancellation",
+   "expected_queue": "standard",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "254f2af79d8b535b9d4bf77e7886f43825f1481a6d86307d8c1c567433f2015b"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "6bc6f4368070840add71dc2040d92a67759d40e8326c8708bf752ea90a25baea"
+    },
+    {
+     "file": "D3_booking_confirmation.pdf",
+     "sha256": "9fd1e328da34977065fd386028ed1d34e82c963d86ed4f179637f6ce946277b7"
+    },
+    {
+     "file": "D4_medical_report.jpg",
+     "sha256": "999181c206046580c71d45e05889deaf53cbf945b288dc13b517deef34f99f22"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-048",
+   "archetype": "medical_small",
+   "expected_queue": "fast_track",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "90dafb12c337ba5879711feb3d7e9be3b30e63d9b179ee091a960d0a4f164297"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "d7c7f181b32f8517606c3764d86e585933f5449a1b7f86c3354f1e74c5f5cf56"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "33c6eb543c37c44d62bd53b1619f438ac1ba57f6507009f23b78d0d60b44962a"
+    },
+    {
+     "file": "D4_medical_invoice.pdf",
+     "sha256": "a0cac644ca43c1b024aeb0dde97f7db298cda749bef554794ec5860eb52e8c74"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-049",
+   "archetype": "alcohol",
+   "expected_queue": "senior",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "87d19512ad26e7df45accbc9c43ff10114b0eb27cd2256bdd7e0d68df006a54e"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "959540aeb1a11dc0d40041a38b9b9102baa0abaa5502d915d1c8b6adf11fae8e"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "372c4d5e444c68c65bee20b4f78483640def3dabf71c8f56aad2743635e44a2a"
+    },
+    {
+     "file": "D4_medical_invoice.png",
+     "sha256": "dd1a678d6352dcf49540a39255db1125cd02d84de5518bed4ca5a953763d6a2a"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-050",
+   "archetype": "missing_document",
+   "expected_queue": null,
+   "expected_status": "NEEDS_INFO",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "1f54fb021ae1cce9fb7046a068cf70b4e4e2a9c4c8aebc331c17be24b7209963"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "08e50816480bc524fd9ee06f5222b59ffa485f2717b7c872c92735edd1179741"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "1b814a4cbba32312dfec130eee496db152bb00f6eb55a747831e601b63de1114"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-051",
+   "archetype": "medical_small",
+   "expected_queue": "fast_track",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "e081ca058b548c085780b629af57ce47a1b7a436585f68f16b297faed22972c3"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "4825bb8e6eaab4ad29f301d74da34c1d4318780c10670a3f8a0c68c77c5f2c32"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "c395b7ee20e9983c082258457729c67b799f18f5bc5610d186a44549f6b84ee6"
+    },
+    {
+     "file": "D4_medical_invoice.pdf",
+     "sha256": "e08f6bb598623cf30d5a91c40de5fa1eea75239bf7c33fd06d63f25b7345c9c8"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-052",
+   "archetype": "extreme_sport_premium",
+   "expected_queue": "senior",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "1bfe0d979f7779195db45fde290a163e4e29c05e99a2a2a499916ad2b96d4383"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "e8e8db3ff6db0dd63d92020dc2071c0fca4ca085e29e8e235244f486f3e9785a"
+    },
+    {
+     "file": "D3_medical_report.jpg",
+     "sha256": "c53e8451f7ec7ab3612fa597c6982c17ee41d4edffb8658230572036214f723c"
+    },
+    {
+     "file": "D4_medical_invoice.png",
+     "sha256": "2345342029da56370da61b857cf8d4603250d07b850cce87e7235366e97d7ada"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-053",
+   "archetype": "hospital_large",
+   "expected_queue": "senior",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "1f6fa66e58aa843269dde019990ed1855ee95c7769454a1c9cb6419fd3fe82d0"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "62acac184b72cafcda6fcf065409f6bb59c5232982caddbff3320c9da102ea86"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "98597681ad61a189035fabad817a9a6f058a28a44d5c44741bd764dc4e00e4bd"
+    },
+    {
+     "file": "D4_medical_invoice.pdf",
+     "sha256": "d71da3c5c8477e85ed70714d3d167451e7bc47df69ce443a69a8df112784a8c8"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-054",
+   "archetype": "missing_document",
+   "expected_queue": null,
+   "expected_status": "NEEDS_INFO",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "33f11130f73d64542d301a0a817529251261317ab38c620f2ae1d51c461c32d9"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "837a5bab3f655ae09d344a6df9b754215b605496b1a93a80a74a4f6332f98433"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "b3e6ff8f95d92ad0f84910dd7b7b7a216e524867483522d106870db76478a80e"
+    },
+    {
+     "file": "D5_pharmacy_receipt.pdf",
+     "sha256": "b95500dd5bd4026e59e3f25133c2338a6684318821184ce5497a594fcaa43ff6"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-055",
+   "archetype": "luggage_theft",
+   "expected_queue": "standard",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "07b893c0574734d36d89a127763e8a2c13d7b28997caa6158aeb02d693a1f904"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "b691669e75cac08986af8d50c6efa507db33362658e9b991bdab6fa3101c1689"
+    },
+    {
+     "file": "D3_police_report.png",
+     "sha256": "f67d7ef84c572f192a94e89c5d2cd12ccc1f5010b821badc064010ab253b05a8"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-056",
+   "archetype": "early_claim",
+   "expected_queue": "fraud_review",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "7992ddbc0ea2e8a2d97c0c0044f54c3c2fc4d26ca3d5bf456e1f645da3e3ba68"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "e370ea314ea0ed8ccc0519177248bc6d6b1278347df3e16e8ac781cd6e079331"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "387631a7611ff3bbe49d431d9d57ff57b9fd50b85d6cf5fef8dcdd86fe89b98f"
+    },
+    {
+     "file": "D4_medical_invoice.jpg",
+     "sha256": "fa49abaa63aee64cb4274cbec630223d943ad2df65f8797fcc8b49f98da9912d"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-057",
+   "archetype": "date_inconsistency",
+   "expected_queue": "fraud_review",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "f1e1a5b39a4ef2f09b40c2d7f1ea59a13e737099b2b73ec9c1b2b2a031352104"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "95e1dbadd6d4254d906bf8c3d767fc941f39f1a08ae985f96fca44948ecce133"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "86265ee1d23124ce8a17f8e319da5936ac000cc9f47abd7ea7d17dd807b1240c"
+    },
+    {
+     "file": "D4_medical_invoice.pdf",
+     "sha256": "85b0d65a64fcc39bec8adf763e0fd1670fd35c76ffe33202f8829f2880e028d4"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-058",
+   "archetype": "hospital_large",
+   "expected_queue": "senior",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "125e8c911c5741cb9ee0fb02b31de61c666be474d7d51314f24102a576c49f11"
+    },
+    {
+     "file": "D2_policy_certificate.pdf",
+     "sha256": "e9e969598904dc6ac6307cbfb0660337ba76f4851b28640987ca0c18e7bb46c9"
+    },
+    {
+     "file": "D3_medical_report.pdf",
+     "sha256": "0d56972656f6a0f571955b5350b66cdba0bd83dcd8533809fded11d5ea2cf203"
+    },
+    {
+     "file": "D4_medical_invoice.pdf",
+     "sha256": "1baad4847c16f80ed80c5ea47bc7bece67c82cfb9bb56199305b42b33e310b11"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-059",
+   "archetype": "dup_hash",
+   "expected_queue": "fraud_review",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "beea7f46fca09804329dfa3b74bb7f19258d6d1bab1c2ccf3b14487d514ada23"
+    },
+    {
+     "file": "D2_medical_report.pdf",
+     "sha256": "33c6eb543c37c44d62bd53b1619f438ac1ba57f6507009f23b78d0d60b44962a"
+    },
+    {
+     "file": "D3_medical_invoice.pdf",
+     "sha256": "a0cac644ca43c1b024aeb0dde97f7db298cda749bef554794ec5860eb52e8c74"
+    }
+   ]
+  },
+  {
+   "scenario_id": "S42-060",
+   "archetype": "dup_number",
+   "expected_queue": "fraud_review",
+   "expected_status": "IN_REVIEW",
+   "files": [
+    {
+     "file": "D1_claim_form.pdf",
+     "sha256": "b7643c55b6da78fa0a8f13381cf863ca0792f83cb6bf4e22da9e361bebe2cdeb"
+    },
+    {
+     "file": "D2_medical_report.pdf",
+     "sha256": "c395b7ee20e9983c082258457729c67b799f18f5bc5610d186a44549f6b84ee6"
+    },
+    {
+     "file": "D3_medical_invoice.pdf",
+     "sha256": "10372e0e17b7acbaded4975994505956ce8c83192fcc0ddecccd074529ec5e94"
+    }
+   ]
+  }
+ ]
+}

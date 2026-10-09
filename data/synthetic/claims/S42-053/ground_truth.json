@@ -1,0 +1,999 @@
+{
+ "scenario_id": "S42-053",
+ "split": "test",
+ "archetype": "hospital_large",
+ "edge_cases": [
+  "above_senior_threshold",
+  "multi_page_invoice",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP84377016",
+ "duplicate_of": null,
+ "destination": "HR",
+ "trip": {
+  "start": "2026-05-19",
+  "end": "2026-06-01"
+ },
+ "event_date": "2026-05-20",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "senior",
+  "rule": "R5",
+  "total_payout_eur": "3890.61",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "3890.61"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Opća bolnica Vučetić",
+   "coverage": "medical",
+   "category": "hospital",
+   "amount": "3940.61",
+   "currency": "EUR",
+   "amount_eur": "3940.61",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1",
+    "A4.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": true,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "1f6fa66e58aa843269dde019990ed1855ee95c7769454a1c9cb6419fd3fe82d0",
+   "fields": {
+    "policy_number": {
+     "printed": "CP84377016",
+     "norm": "CP84377016"
+    },
+    "insured_name": {
+     "printed": "Juliana Harváneková",
+     "norm": "Juliana Harváneková"
+    },
+    "insured_birth_number": {
+     "printed": "866125/2820",
+     "norm": "866125/2820"
+    },
+    "insured_address": {
+     "printed": "Milana Pišúta 200, 919 76 Hontianske Nemce",
+     "norm": "Milana Pišúta 200, 919 76 Hontianske Nemce"
+    },
+    "insured_phone": {
+     "printed": "+421 914 508 382",
+     "norm": "+421 914 508 382"
+    },
+    "insured_email": {
+     "printed": "juliana.harvanekova81@mail.example.sk",
+     "norm": "juliana.harvanekova81@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK29 5600 0000 0073 5373 6212",
+     "norm": "SK2956000000007353736212"
+    },
+    "destination_country": {
+     "printed": "Chorvátsko",
+     "norm": "HR"
+    },
+    "trip_start": {
+     "printed": "19. 5. 2026",
+     "norm": "2026-05-19"
+    },
+    "trip_end": {
+     "printed": "1. 6. 2026",
+     "norm": "2026-06-01"
+    },
+    "event_date": {
+     "printed": "20. 5. 2026",
+     "norm": "2026-05-20"
+    },
+    "event_place": {
+     "printed": "Split, Chorvátsko",
+     "norm": "Split, Chorvátsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. Diagnozovaný som s zápalom pľúc. Som na liečbe v mieste udalosti.",
+     "norm": "Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. Diagnozovaný som s zápalom pľúc. Som na liečbe v mieste udalosti."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Opća bolnica Vučetić",
+       "norm": "Liečebné náklady – Opća bolnica Vučetić"
+      },
+      "amount": {
+       "printed": "3 940,61",
+       "norm": "3940.61"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "14. 6. 2026",
+     "norm": "2026-06-14"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Juliana Harváneková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.5,
+        410.4,
+        182.9
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "866125/2820",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        202.6,
+        130.9,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Milana Pišúta 200",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        202.6,
+        398.9,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 914 508 382",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        252.2,
+        156.2,
+        266.6
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "juliana.harvanekova81@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        252.2,
+        510.2,
+        266.6
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK29 5600 0000 0073 5373 6212",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        286.3,
+        238.4,
+        300.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "62acac184b72cafcda6fcf065409f6bb59c5232982caddbff3320c9da102ea86",
+   "fields": {
+    "policy_number": {
+     "printed": "CP84377016",
+     "norm": "CP84377016"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "19. 5. 2026",
+     "norm": "2026-05-19"
+    },
+    "policy_end": {
+     "printed": "1. 6. 2026",
+     "norm": "2026-06-01"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Juliana Harváneková",
+       "norm": "Juliana Harváneková"
+      },
+      "birth_number": {
+       "printed": "866125/2820",
+       "norm": "866125/2820"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "15,40 EUR",
+     "norm": "15.40"
+    },
+    "issue_date": {
+     "printed": "10. 4. 2026",
+     "norm": "2026-04-10"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Juliana Harváneková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        145.4,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "866125/2820",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        350.8,
+        287.5,
+        406.7,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "hr",
+   "locale": "hr",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "98597681ad61a189035fabad817a9a6f058a28a44d5c44741bd764dc4e00e4bd",
+   "fields": {
+    "facility_name": {
+     "printed": "Opća bolnica Vučetić",
+     "norm": "Opća bolnica Vučetić"
+    },
+    "facility_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Juliana Harváneková",
+     "norm": "Juliana Harváneková"
+    },
+    "patient_birth_date": {
+     "printed": "25.11.1986.",
+     "norm": "1986-11-25"
+    },
+    "visit_date": {
+     "printed": "20.05.2026.",
+     "norm": "2026-05-20"
+    },
+    "discharge_date": {
+     "printed": "23.05.2026.",
+     "norm": "2026-05-23"
+    },
+    "diagnosis": {
+     "printed": "Upala pluća",
+     "norm": "J18.9"
+    },
+    "icd10_code": {
+     "printed": "J18.9",
+     "norm": "J18.9"
+    },
+    "anamnesis": {
+     "printed": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Lijecenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davano uputnica za nadzor u ambulantnoj klinici.",
+     "norm": "Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Lijecenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davano uputnica za nadzor u ambulantnoj klinici."
+    },
+    "physician_name": {
+     "printed": "Slavica Ivšić",
+     "norm": "Slavica Ivšić"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Juliana Harváneková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        150.3,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Slavica Ivšić",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.8,
+        427.5,
+        126.8,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "hr",
+   "locale": "hr",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 2,
+   "sha256": "d71da3c5c8477e85ed70714d3d167451e7bc47df69ce443a69a8df112784a8c8",
+   "fields": {
+    "invoice_number": {
+     "printed": "R-2026-21111",
+     "norm": "R-2026-21111"
+    },
+    "issue_date": {
+     "printed": "25.05.2026.",
+     "norm": "2026-05-25"
+    },
+    "provider_name": {
+     "printed": "Opća bolnica Vučetić",
+     "norm": "Opća bolnica Vučetić"
+    },
+    "provider_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Juliana Harváneková",
+     "norm": "Juliana Harváneková"
+    },
+    "service_date": {
+     "printed": "20.05.2026.",
+     "norm": "2026-05-20"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Bolnički dan 1",
+       "norm": "Bolnički dan 1"
+      },
+      "amount": {
+       "printed": "595,67",
+       "norm": "595.67"
+      }
+     },
+     {
+      "description": {
+       "printed": "Bolnički dan 2",
+       "norm": "Bolnički dan 2"
+      },
+      "amount": {
+       "printed": "595,67",
+       "norm": "595.67"
+      }
+     },
+     {
+      "description": {
+       "printed": "Bolnički dan 3",
+       "norm": "Bolnički dan 3"
+      },
+      "amount": {
+       "printed": "595,67",
+       "norm": "595.67"
+      }
+     },
+     {
+      "description": {
+       "printed": "Hitni prijem",
+       "norm": "Hitni prijem"
+      },
+      "amount": {
+       "printed": "198,56",
+       "norm": "198.56"
+      }
+     },
+     {
+      "description": {
+       "printed": "CT snimanje",
+       "norm": "CT snimanje"
+      },
+      "amount": {
+       "printed": "302,97",
+       "norm": "302.97"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "64,11",
+       "norm": "64.11"
+      }
+     },
+     {
+      "description": {
+       "printed": "Prijevoz vozilom hitne pomoći",
+       "norm": "Prijevoz vozilom hitne pomoći"
+      },
+      "amount": {
+       "printed": "488,84",
+       "norm": "488.84"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "24,00",
+       "norm": "24.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "36,38",
+       "norm": "36.38"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "20,22",
+       "norm": "20.22"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "36,25",
+       "norm": "36.25"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "28,69",
+       "norm": "28.69"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "6,16",
+       "norm": "6.16"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "15,80",
+       "norm": "15.80"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "5,80",
+       "norm": "5.80"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "21,24",
+       "norm": "21.24"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "48,00",
+       "norm": "48.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "41,27",
+       "norm": "41.27"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "44,02",
+       "norm": "44.02"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "38,44",
+       "norm": "38.44"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "10,25",
+       "norm": "10.25"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "42,19",
+       "norm": "42.19"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "28,20",
+       "norm": "28.20"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "33,11",
+       "norm": "33.11"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "31,11",
+       "norm": "31.11"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "22,35",
+       "norm": "22.35"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "14,10",
+       "norm": "14.10"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "22,96",
+       "norm": "22.96"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "36,45",
+       "norm": "36.45"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "37,57",
+       "norm": "37.57"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "27,69",
+       "norm": "27.69"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "15,00",
+       "norm": "15.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "23,08",
+       "norm": "23.08"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "39,83",
+       "norm": "39.83"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "33,38",
+       "norm": "33.38"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "18,61",
+       "norm": "18.61"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "22,62",
+       "norm": "22.62"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "37,56",
+       "norm": "37.56"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "38,45",
+       "norm": "38.45"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "20,95",
+       "norm": "20.95"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "15,83",
+       "norm": "15.83"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "22,87",
+       "norm": "22.87"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "22,47",
+       "norm": "22.47"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "20,56",
+       "norm": "20.56"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "15,75",
+       "norm": "15.75"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "21,20",
+       "norm": "21.20"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "30,86",
+       "norm": "30.86"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "27,85",
+       "norm": "27.85"
+      }
+     }
+    ],
+    "total": {
+     "printed": "3.940,61",
+     "norm": "3940.61"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Juliana Harváneková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        151.4,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Juliana Harváneková",
+  "birth_number": "866125/2820",
+  "birth_date": "1986-11-25",
+  "address": "Milana Pišúta 200, 919 76 Hontianske Nemce",
+  "phone": "+421 914 508 382",
+  "email": "juliana.harvanekova81@mail.example.sk",
+  "iban": "SK2956000000007353736212",
+  "id_card": "PJ391126",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "J18.9"
+ }
+}

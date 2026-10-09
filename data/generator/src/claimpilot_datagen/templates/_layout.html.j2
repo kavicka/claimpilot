@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="{{ lang }}"><head><meta charset="utf-8"><style>{{ css|safe }}{% block style %}{% endblock %}</style></head>
+<body>{% block body %}{% endblock %}
+{% if injection %}<p class="injection">{{ injection }}</p>{% endif %}
+</body></html>

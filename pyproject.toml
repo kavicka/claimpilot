@@ -63,7 +63,18 @@ known-first-party = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**" = ["S", "N802"]
+"tests/**" = ["S", "N802", "PT018", "E501"]
+# Vocabulary tables: one entry per line reads better than wrapped literals.
+"data/generator/src/claimpilot_datagen/catalog.py" = ["E501"]
+"data/generator/src/claimpilot_datagen/i18n.py" = ["E501"]
+"data/generator/src/claimpilot_datagen/model.py" = ["E501"]
+"data/generator/src/claimpilot_datagen/narrative.py" = ["E501"]
+# WeasyPrint must be imported after the macOS dlopen shim.
+"data/generator/src/claimpilot_datagen/render.py" = ["E402"]
+"services/worker/src/claimpilot_worker/ingest/doctype.py" = ["E501"]
+"services/worker/src/claimpilot_worker/ingest/language.py" = ["E501"]
+"packages/claimpilot_core/src/claimpilot_core/pii/recognizers.py" = ["E501"]
+"packages/claimpilot_core/src/claimpilot_core/normalize.py" = ["E501", "SIM108"]
 "**/alembic/versions/*.py" = ["E501"]
 
 [tool.pyright]

@@ -1,0 +1,444 @@
+{
+ "scenario_id": "S42-037",
+ "split": "dev",
+ "archetype": "dup_hash",
+ "edge_cases": [
+  "duplicate_invoice",
+  "foreign_currency",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "standard",
+ "policy_number": "CP15917225",
+ "duplicate_of": "S42-011",
+ "destination": "CH",
+ "trip": {
+  "start": "2026-08-09",
+  "end": "2026-08-14"
+ },
+ "event_date": "2026-08-10",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R1",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Stalder",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "172.94",
+   "currency": "CHF",
+   "amount_eur": "183.98",
+   "doc_id": "D3",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A13.4"
+   ],
+   "exclusion": "duplicate_document",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "d436086ce9866e9406341e4f464d3ea4947875dad017f5a9b3ea0ace4ec7a891",
+   "fields": {
+    "policy_number": {
+     "printed": "CP15917225",
+     "norm": "CP15917225"
+    },
+    "insured_name": {
+     "printed": "Metod Jakubčík",
+     "norm": "Metod Jakubčík"
+    },
+    "insured_birth_number": {
+     "printed": "691027/6208",
+     "norm": "691027/6208"
+    },
+    "insured_address": {
+     "printed": "Bojnická 74, 990 04 Makovce",
+     "norm": "Bojnická 74, 990 04 Makovce"
+    },
+    "insured_phone": {
+     "printed": "+421 941 210 918",
+     "norm": "+421 941 210 918"
+    },
+    "insured_email": {
+     "printed": "metod.jakubcik82@example.com",
+     "norm": "metod.jakubcik82@example.com"
+    },
+    "iban": {
+     "printed": "SK30 1111 6403 5655 5400 2894",
+     "norm": "SK3011116403565554002894"
+    },
+    "destination_country": {
+     "printed": "Švajčiarsko",
+     "norm": "CH"
+    },
+    "trip_start": {
+     "printed": "9. 8. 2026",
+     "norm": "2026-08-09"
+    },
+    "trip_end": {
+     "printed": "14. 8. 2026",
+     "norm": "2026-08-14"
+    },
+    "event_date": {
+     "printed": "10. 8. 2026",
+     "norm": "2026-08-10"
+    },
+    "event_place": {
+     "printed": "Luzern, Švajčiarsko",
+     "norm": "Luzern, Švajčiarsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Luzern, Švajčiarsko, kde som sa zranil na uchu. Diagnozované mi bol zápal stredného ucha. Som v súčasnosti na liečbe u lekára.",
+     "norm": "Bol som v Luzern, Švajčiarsko, kde som sa zranil na uchu. Diagnozované mi bol zápal stredného ucha. Som v súčasnosti na liečbe u lekára."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Stalder",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Stalder"
+      },
+      "amount": {
+       "printed": "172,94",
+       "norm": "172.94"
+      },
+      "currency": {
+       "printed": "CHF",
+       "norm": "CHF"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "20. 8. 2026",
+     "norm": "2026-08-20"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Metod Jakubčík",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        375.3,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "691027/6208",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Bojnická 74",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        356.0,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 941 210 918",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "metod.jakubcik82@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        451.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK30 1111 6403 5655 5400 2894",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de-ch",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": "S42-011/D3",
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "bb0a91d69b6ad5cb06ebae8948753a99850075530f618a8b9a77e27f64b31158",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Stalder",
+     "norm": "Medizinisches Zentrum Stalder"
+    },
+    "facility_country": {
+     "printed": "Schweiz",
+     "norm": "CH"
+    },
+    "patient_name": {
+     "printed": "Metod Jakubčík",
+     "norm": "Metod Jakubčík"
+    },
+    "patient_birth_date": {
+     "printed": "27.10.1969",
+     "norm": "1969-10-27"
+    },
+    "visit_date": {
+     "printed": "10.08.2026",
+     "norm": "2026-08-10"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Mittelohrentzündung",
+     "norm": "H66.9"
+    },
+    "icd10_code": {
+     "printed": "H66.9",
+     "norm": "H66.9"
+    },
+    "anamnesis": {
+     "printed": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Bei der Untersuchung wurden rechtsseitig begrenzte Schmerzen beim Drücken am äußeren Ohrläppchen sowie ein leichtes Überdruckgefühl im Mittelohr festgestellt. Die Trommemembran zeigte eine leichte Rötung und Verdickung, keine Perforation. Die Hörleistungen waren nicht eingeschränkt. Ein Ohrenschmalzabstrich ergab keine bakterielle Besiedlung. Die Diagnose Otitis media wurde bestätigt. Die Patientin erhielt eine orale Antibiotikatherapie mit Amoxicillin und eine antipyrinhaltige Schmerzmitteltherapie. Nach 48 Stunden war eine deutliche Besserung der Beschwerden zu verzeichnen. Die Weiterbehandlung erfolgt ambulant mit Kontrolle in 7 Tagen.",
+     "norm": "Bei der Untersuchung wurden rechtsseitig begrenzte Schmerzen beim Drücken am äußeren Ohrläppchen sowie ein leichtes Überdruckgefühl im Mittelohr festgestellt. Die Trommemembran zeigte eine leichte Rötung und Verdickung, keine Perforation. Die Hörleistungen waren nicht eingeschränkt. Ein Ohrenschmalzabstrich ergab keine bakterielle Besiedlung. Die Diagnose Otitis media wurde bestätigt. Die Patientin erhielt eine orale Antibiotikatherapie mit Amoxicillin und eine antipyrinhaltige Schmerzmitteltherapie. Nach 48 Stunden war eine deutliche Besserung der Beschwerden zu verzeichnen. Die Weiterbehandlung erfolgt ambulant mit Kontrolle in 7 Tagen."
+    },
+    "physician_name": {
+     "printed": "Ernesto Lehmann",
+     "norm": "Ernesto Lehmann"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Metod Jakubčík",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        129.2,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Ernesto Lehmann",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        440.3,
+        210.9,
+        449.6
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "de",
+   "locale": "de-ch",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": "S42-011/D4",
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "3bd7a8ebc677b03adfe531fe8afb6736c3dd436d29c3378176171daba25559b7",
+   "fields": {
+    "invoice_number": {
+     "printed": "RE-2026-91573",
+     "norm": "RE-2026-91573"
+    },
+    "issue_date": {
+     "printed": "10.08.2026",
+     "norm": "2026-08-10"
+    },
+    "provider_name": {
+     "printed": "Medizinisches Zentrum Stalder",
+     "norm": "Medizinisches Zentrum Stalder"
+    },
+    "provider_country": {
+     "printed": "Schweiz",
+     "norm": "CH"
+    },
+    "patient_name": {
+     "printed": "Metod Jakubčík",
+     "norm": "Metod Jakubčík"
+    },
+    "service_date": {
+     "printed": "10.08.2026",
+     "norm": "2026-08-10"
+    },
+    "currency": {
+     "printed": "Fr.",
+     "norm": "CHF"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Ambulante Untersuchung",
+       "norm": "Ambulante Untersuchung"
+      },
+      "amount": {
+       "printed": "107.07",
+       "norm": "107.07"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "65.87",
+       "norm": "65.87"
+      }
+     }
+    ],
+    "total": {
+     "printed": "172.94",
+     "norm": "172.94"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Metod Jakubčík",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        129.2,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Metod Jakubčík",
+  "birth_number": "691027/6208",
+  "birth_date": "1969-10-27",
+  "address": "Bojnická 74, 990 04 Makovce",
+  "phone": "+421 941 210 918",
+  "email": "metod.jakubcik82@example.com",
+  "iban": "SK3011116403565554002894",
+  "id_card": "BN342607",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "H66.9"
+ }
+}

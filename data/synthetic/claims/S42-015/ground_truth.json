@@ -1,0 +1,959 @@
+{
+ "scenario_id": "S42-015",
+ "split": "dev",
+ "archetype": "hospital_large",
+ "edge_cases": [
+  "above_senior_threshold",
+  "multi_page_invoice",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP78064830",
+ "duplicate_of": null,
+ "destination": "HR",
+ "trip": {
+  "start": "2026-03-26",
+  "end": "2026-04-01"
+ },
+ "event_date": "2026-03-29",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "senior",
+  "rule": "R5",
+  "total_payout_eur": "6483.40",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "medical": "6483.40"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Opća bolnica Medved",
+   "coverage": "medical",
+   "category": "hospital",
+   "amount": "6483.40",
+   "currency": "EUR",
+   "amount_eur": "6483.40",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1",
+    "A4.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": true,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "c2d7bc55e6468aa372313e41690dbdf865a2c69e72bea232478b454d0a33a74d",
+   "fields": {
+    "policy_number": {
+     "printed": "CP78064830",
+     "norm": "CP78064830"
+    },
+    "insured_name": {
+     "printed": "Arnold Zúbek",
+     "norm": "Arnold Zúbek"
+    },
+    "insured_birth_number": {
+     "printed": "910409/0523",
+     "norm": "910409/0523"
+    },
+    "insured_address": {
+     "printed": "Tyršovo nábrežie 3, 896 74 Porúbka",
+     "norm": "Tyršovo nábrežie 3, 896 74 Porúbka"
+    },
+    "insured_phone": {
+     "printed": "+421 928 746 570",
+     "norm": "+421 928 746 570"
+    },
+    "insured_email": {
+     "printed": "arnold.zubek72@mail.example.sk",
+     "norm": "arnold.zubek72@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK76 0200 0000 0073 8512 5298",
+     "norm": "SK7602000000007385125298"
+    },
+    "destination_country": {
+     "printed": "Chorvátsko",
+     "norm": "HR"
+    },
+    "trip_start": {
+     "printed": "26. 3. 2026",
+     "norm": "2026-03-26"
+    },
+    "trip_end": {
+     "printed": "1. 4. 2026",
+     "norm": "2026-04-01"
+    },
+    "event_date": {
+     "printed": "29. 3. 2026",
+     "norm": "2026-03-29"
+    },
+    "event_place": {
+     "printed": "Zadar, Chorvátsko",
+     "norm": "Zadar, Chorvátsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Zadare, v Chorvátsku, a skôr, ako som sa vrátil domov, začal ma trápiť zápal pľúc. Cítim sa zle, mám horek a kašľem. V tej chvíli som si uvedomil, že by som mal ako cudzinec v zahraničí zavolať lekárovi.",
+     "norm": "Bol som v Zadare, v Chorvátsku, a skôr, ako som sa vrátil domov, začal ma trápiť zápal pľúc. Cítim sa zle, mám horek a kašľem. V tej chvíli som si uvedomil, že by som mal ako cudzinec v zahraničí zavolať lekárovi."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Opća bolnica Medved",
+       "norm": "Liečebné náklady – Opća bolnica Medved"
+      },
+      "amount": {
+       "printed": "6 483,40",
+       "norm": "6483.40"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "12. 4. 2026",
+     "norm": "2026-04-12"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Arnold Zúbek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.5,
+        376.9,
+        182.9
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "910409/0523",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        202.6,
+        128.2,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Tyršovo nábrežie 3",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        202.6,
+        398.8,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 928 746 570",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        236.7,
+        159.7,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "arnold.zubek72@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        236.7,
+        475.4,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK76 0200 0000 0073 8512 5298",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        270.8,
+        236.5,
+        285.1
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "3fcbc7b6a7f3f7bcc714d17e030e1fe506558264af401566a11bc0149800d1b0",
+   "fields": {
+    "policy_number": {
+     "printed": "CP78064830",
+     "norm": "CP78064830"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Premium",
+     "norm": "premium"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "26. 3. 2026",
+     "norm": "2026-03-26"
+    },
+    "policy_end": {
+     "printed": "1. 4. 2026",
+     "norm": "2026-04-01"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Arnold Zúbek",
+       "norm": "Arnold Zúbek"
+      },
+      "birth_number": {
+       "printed": "910409/0523",
+       "norm": "910409/0523"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "22,40 EUR",
+     "norm": "22.40"
+    },
+    "issue_date": {
+     "printed": "28. 2. 2026",
+     "norm": "2026-02-28"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Arnold Zúbek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        114.6,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "910409/0523",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "9825ad2efdd1df6bf10b407613404e4563c8617c915c39f4ebe21140b7db78ae",
+   "fields": {
+    "facility_name": {
+     "printed": "Opća bolnica Medved",
+     "norm": "Opća bolnica Medved"
+    },
+    "facility_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Arnold Zúbek",
+     "norm": "Arnold Zúbek"
+    },
+    "patient_birth_date": {
+     "printed": "09.04.1991.",
+     "norm": "1991-04-09"
+    },
+    "visit_date": {
+     "printed": "29.03.2026.",
+     "norm": "2026-03-29"
+    },
+    "discharge_date": {
+     "printed": "02.04.2026.",
+     "norm": "2026-04-02"
+    },
+    "diagnosis": {
+     "printed": "Upala pluća",
+     "norm": "J18.9"
+    },
+    "icd10_code": {
+     "printed": "J18.9",
+     "norm": "J18.9"
+    },
+    "anamnesis": {
+     "printed": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Lijecenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davano uputnica za nadzor u ambulantnoj klinici.",
+     "norm": "Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Lijecenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davano uputnica za nadzor u ambulantnoj klinici."
+    },
+    "physician_name": {
+     "printed": "Marijan Solomun",
+     "norm": "Marijan Solomun"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Arnold Zúbek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        117.9,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Marijan Solomun",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.8,
+        427.5,
+        143.1,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "hr",
+   "locale": "hr",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 2,
+   "sha256": "1ec016ef2559b582120989408a894dbb05ca9918290c8087e5b0addbe7011a4d",
+   "fields": {
+    "invoice_number": {
+     "printed": "R-2026-11155",
+     "norm": "R-2026-11155"
+    },
+    "issue_date": {
+     "printed": "04.04.2026.",
+     "norm": "2026-04-04"
+    },
+    "provider_name": {
+     "printed": "Opća bolnica Medved",
+     "norm": "Opća bolnica Medved"
+    },
+    "provider_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Arnold Zúbek",
+     "norm": "Arnold Zúbek"
+    },
+    "service_date": {
+     "printed": "29.03.2026.",
+     "norm": "2026-03-29"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Bolnički dan 1",
+       "norm": "Bolnički dan 1"
+      },
+      "amount": {
+       "printed": "969,33",
+       "norm": "969.33"
+      }
+     },
+     {
+      "description": {
+       "printed": "Bolnički dan 2",
+       "norm": "Bolnički dan 2"
+      },
+      "amount": {
+       "printed": "969,33",
+       "norm": "969.33"
+      }
+     },
+     {
+      "description": {
+       "printed": "Bolnički dan 3",
+       "norm": "Bolnički dan 3"
+      },
+      "amount": {
+       "printed": "969,33",
+       "norm": "969.33"
+      }
+     },
+     {
+      "description": {
+       "printed": "Bolnički dan 4",
+       "norm": "Bolnički dan 4"
+      },
+      "amount": {
+       "printed": "969,33",
+       "norm": "969.33"
+      }
+     },
+     {
+      "description": {
+       "printed": "Hitni prijem",
+       "norm": "Hitni prijem"
+      },
+      "amount": {
+       "printed": "212,50",
+       "norm": "212.50"
+      }
+     },
+     {
+      "description": {
+       "printed": "CT snimanje",
+       "norm": "CT snimanje"
+      },
+      "amount": {
+       "printed": "599,72",
+       "norm": "599.72"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "107,73",
+       "norm": "107.73"
+      }
+     },
+     {
+      "description": {
+       "printed": "Prijevoz vozilom hitne pomoći",
+       "norm": "Prijevoz vozilom hitne pomoći"
+      },
+      "amount": {
+       "printed": "604,32",
+       "norm": "604.32"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "26,87",
+       "norm": "26.87"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "23,46",
+       "norm": "23.46"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "12,88",
+       "norm": "12.88"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "48,91",
+       "norm": "48.91"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "33,95",
+       "norm": "33.95"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "29,64",
+       "norm": "29.64"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "44,02",
+       "norm": "44.02"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "17,08",
+       "norm": "17.08"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "35,46",
+       "norm": "35.46"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "38,96",
+       "norm": "38.96"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "17,33",
+       "norm": "17.33"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "19,79",
+       "norm": "19.79"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "5,45",
+       "norm": "5.45"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "23,04",
+       "norm": "23.04"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "57,82",
+       "norm": "57.82"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "28,51",
+       "norm": "28.51"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "33,80",
+       "norm": "33.80"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "25,71",
+       "norm": "25.71"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "7,71",
+       "norm": "7.71"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "43,09",
+       "norm": "43.09"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "39,28",
+       "norm": "39.28"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "8,22",
+       "norm": "8.22"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "43,70",
+       "norm": "43.70"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "35,80",
+       "norm": "35.80"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "28,55",
+       "norm": "28.55"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "29,46",
+       "norm": "29.46"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "48,50",
+       "norm": "48.50"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "28,27",
+       "norm": "28.27"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "42,31",
+       "norm": "42.31"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "43,02",
+       "norm": "43.02"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "18,63",
+       "norm": "18.63"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "24,75",
+       "norm": "24.75"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "20,40",
+       "norm": "20.40"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "42,97",
+       "norm": "42.97"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "44,44",
+       "norm": "44.44"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "10,03",
+       "norm": "10.03"
+      }
+     }
+    ],
+    "total": {
+     "printed": "6.483,40",
+     "norm": "6483.40"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Arnold Zúbek",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        118.2,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Arnold Zúbek",
+  "birth_number": "910409/0523",
+  "birth_date": "1991-04-09",
+  "address": "Tyršovo nábrežie 3, 896 74 Porúbka",
+  "phone": "+421 928 746 570",
+  "email": "arnold.zubek72@mail.example.sk",
+  "iban": "SK7602000000007385125298",
+  "id_card": "LN211733",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "J18.9"
+ }
+}

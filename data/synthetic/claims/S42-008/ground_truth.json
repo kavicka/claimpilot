@@ -1,0 +1,555 @@
+{
+ "scenario_id": "S42-008",
+ "split": "dev",
+ "archetype": "outside_trip",
+ "edge_cases": [
+  "outside_trip",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP49823450",
+ "duplicate_of": null,
+ "destination": "GR",
+ "trip": {
+  "start": "2026-06-23",
+  "end": "2026-07-05"
+ },
+ "event_date": "2026-07-08",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R9",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Roberts International Medical Centre",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "616.36",
+   "currency": "EUR",
+   "amount_eur": "616.36",
+   "doc_id": "D4",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A3.3"
+   ],
+   "exclusion": "outside_trip",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "b53cd2b005d41a0bf4bca6d2cb749e2a070b45a6153c4c1cc3bab608f988613d",
+   "fields": {
+    "policy_number": {
+     "printed": "CP49823450",
+     "norm": "CP49823450"
+    },
+    "insured_name": {
+     "printed": "Irena Machnáčová",
+     "norm": "Irena Machnáčová"
+    },
+    "insured_birth_number": {
+     "printed": "565719/1111",
+     "norm": "565719/1111"
+    },
+    "insured_address": {
+     "printed": "Na pažiti 18, 979 29 Nižná Hutka",
+     "norm": "Na pažiti 18, 979 29 Nižná Hutka"
+    },
+    "insured_phone": {
+     "printed": "+421 907 679 737",
+     "norm": "+421 907 679 737"
+    },
+    "insured_email": {
+     "printed": "irena.machnacova54@posta.example.sk",
+     "norm": "irena.machnacova54@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK60 0200 0000 0057 9487 7613",
+     "norm": "SK6002000000005794877613"
+    },
+    "destination_country": {
+     "printed": "Grécko",
+     "norm": "GR"
+    },
+    "trip_start": {
+     "printed": "23. 6. 2026",
+     "norm": "2026-06-23"
+    },
+    "trip_end": {
+     "printed": "5. 7. 2026",
+     "norm": "2026-07-05"
+    },
+    "event_date": {
+     "printed": "8. 7. 2026",
+     "norm": "2026-07-08"
+    },
+    "event_place": {
+     "printed": "Thessaloniki, Grécko",
+     "norm": "Thessaloniki, Grécko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Thessaloniki, Grécko, kde som sa nedávno nedokázal cítiť dobre. Zdravotný problém, ktorý som mal, bol akútna infekcia horných dýchacích ciest. Som v lekárni, kde mi pomáhajú s liečením.",
+     "norm": "Bol som v Thessaloniki, Grécko, kde som sa nedávno nedokázal cítiť dobre. Zdravotný problém, ktorý som mal, bol akútna infekcia horných dýchacích ciest. Som v lekárni, kde mi pomáhajú s liečením."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Roberts International Medical Centre",
+       "norm": "Liečebné náklady – Roberts International Medical Centre"
+      },
+      "amount": {
+       "printed": "616,36",
+       "norm": "616.36"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "25. 7. 2026",
+     "norm": "2026-07-25"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Irena Machnáčová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        385.8,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "565719/1111",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Na pažiti 18",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        356.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 907 679 737",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "irena.machnacova54@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        483.3,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK60 0200 0000 0057 9487 7613",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "5fc5a912c8bf83808e09db1059819040ed960e0d6ca9e71b5af63fc887bc47f6",
+   "fields": {
+    "policy_number": {
+     "printed": "CP49823450",
+     "norm": "CP49823450"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Premium",
+     "norm": "premium"
+    },
+    "policy_type": {
+     "printed": "celoročné",
+     "norm": "annual"
+    },
+    "policy_start": {
+     "printed": "27. 5. 2026",
+     "norm": "2026-05-27"
+    },
+    "policy_end": {
+     "printed": "26. 5. 2027",
+     "norm": "2027-05-26"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Irena Machnáčová",
+       "norm": "Irena Machnáčová"
+      },
+      "birth_number": {
+       "printed": "565719/1111",
+       "norm": "565719/1111"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "149,00 EUR",
+     "norm": "149.00"
+    },
+    "issue_date": {
+     "printed": "24. 5. 2026",
+     "norm": "2026-05-24"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Irena Machnáčová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        135.4,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "565719/1111",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        338.1,
+        287.5,
+        394.1,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.jpg",
+   "doc_type": "medical_report",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": "jpg",
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "ee6bcc4f3849261a1d067e20d8a13c55cf41b4e1ca07bdbaa16ec2d4d19e14ed",
+   "fields": {
+    "facility_name": {
+     "printed": "Roberts International Medical Centre",
+     "norm": "Roberts International Medical Centre"
+    },
+    "facility_country": {
+     "printed": "Greece",
+     "norm": "GR"
+    },
+    "patient_name": {
+     "printed": "Irena Machnáčová",
+     "norm": "Irena Machnáčová"
+    },
+    "patient_birth_date": {
+     "printed": "19/07/1956",
+     "norm": "1956-07-19"
+    },
+    "visit_date": {
+     "printed": "08/07/2026",
+     "norm": "2026-07-08"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Acute upper respiratory infection",
+     "norm": "J06.9"
+    },
+    "icd10_code": {
+     "printed": "J06.9",
+     "norm": "J06.9"
+    },
+    "anamnesis": {
+     "printed": "No relevant previous illnesses. No regular medication.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Physical examination reveals mild pharyngeal erythema, clear nasal discharge, and bilateral tender anterior cervical lymphadenopathy. A complete blood count shows a mild lymphocytosis, consistent with a viral etiology. Chest X-ray is unremarkable. The patient was prescribed symptomatic treatment including paracetamol for fever and throat discomfort, and nasal decongestants. The patient is advised to rest, maintain hydration, and return for follow-up if symptoms persist or worsen.",
+     "norm": "Physical examination reveals mild pharyngeal erythema, clear nasal discharge, and bilateral tender anterior cervical lymphadenopathy. A complete blood count shows a mild lymphocytosis, consistent with a viral etiology. Chest X-ray is unremarkable. The patient was prescribed symptomatic treatment including paracetamol for fever and throat discomfort, and nasal decongestants. The patient is advised to rest, maintain hydration, and return for follow-up if symptoms persist or worsen."
+    },
+    "physician_name": {
+     "printed": "Stacey Martin",
+     "norm": "Stacey Martin"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Irena Machnáčová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        139.8,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Stacey Martin",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        126.3,
+        427.5,
+        175.8,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "bf716bdc0a18432a1ae46438ec567db74b512ec7f950ff3218e6983ed8b55ce3",
+   "fields": {
+    "invoice_number": {
+     "printed": "INV-2026-25356",
+     "norm": "INV-2026-25356"
+    },
+    "issue_date": {
+     "printed": "08/07/2026",
+     "norm": "2026-07-08"
+    },
+    "provider_name": {
+     "printed": "Roberts International Medical Centre",
+     "norm": "Roberts International Medical Centre"
+    },
+    "provider_country": {
+     "printed": "Greece",
+     "norm": "GR"
+    },
+    "patient_name": {
+     "printed": "Irena Machnáčová",
+     "norm": "Irena Machnáčová"
+    },
+    "service_date": {
+     "printed": "08/07/2026",
+     "norm": "2026-07-08"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Emergency room treatment",
+       "norm": "Emergency room treatment"
+      },
+      "amount": {
+       "printed": "322.27",
+       "norm": "322.27"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratory tests",
+       "norm": "Laboratory tests"
+      },
+      "amount": {
+       "printed": "93.11",
+       "norm": "93.11"
+      }
+     },
+     {
+      "description": {
+       "printed": "IV infusion",
+       "norm": "IV infusion"
+      },
+      "amount": {
+       "printed": "65.12",
+       "norm": "65.12"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrasound",
+       "norm": "Ultrasound"
+      },
+      "amount": {
+       "printed": "135.86",
+       "norm": "135.86"
+      }
+     }
+    ],
+    "total": {
+     "printed": "616.36",
+     "norm": "616.36"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Irena Machnáčová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        139.8,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Irena Machnáčová",
+  "birth_number": "565719/1111",
+  "birth_date": "1956-07-19",
+  "address": "Na pažiti 18, 979 29 Nižná Hutka",
+  "phone": "+421 907 679 737",
+  "email": "irena.machnacova54@posta.example.sk",
+  "iban": "SK6002000000005794877613",
+  "id_card": "JJ210626",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "J06.9"
+ }
+}

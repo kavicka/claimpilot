@@ -1,0 +1,443 @@
+{
+ "scenario_id": "S42-040",
+ "split": "dev",
+ "archetype": "dup_number",
+ "edge_cases": [
+  "duplicate_invoice",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "standard",
+ "policy_number": "CP57130035",
+ "duplicate_of": "S42-014",
+ "destination": "HR",
+ "trip": {
+  "start": "2026-08-14",
+  "end": "2026-08-20"
+ },
+ "event_date": "2026-08-19",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R1",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliklinika Tomičić",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "172.71",
+   "currency": "EUR",
+   "amount_eur": "172.71",
+   "doc_id": "D3",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A13.4"
+   ],
+   "exclusion": "duplicate_document",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "0228f9336b20c55a890ab509ae479e8bc4968d319b5353cf6ae0887e87198a85",
+   "fields": {
+    "policy_number": {
+     "printed": "CP57130035",
+     "norm": "CP57130035"
+    },
+    "insured_name": {
+     "printed": "Nora Tomanová",
+     "norm": "Nora Tomanová"
+    },
+    "insured_birth_number": {
+     "printed": "068105/7333",
+     "norm": "068105/7333"
+    },
+    "insured_address": {
+     "printed": "U Mlýnského Rybníka 993, 982 25 Poběžovice",
+     "norm": "U Mlýnského Rybníka 993, 982 25 Poběžovice"
+    },
+    "insured_phone": {
+     "printed": "+421 916 611 497",
+     "norm": "+421 916 611 497"
+    },
+    "insured_email": {
+     "printed": "nora.tomanova68@posta.example.sk",
+     "norm": "nora.tomanova68@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK40 3100 0000 0071 6601 4333",
+     "norm": "SK4031000000007166014333"
+    },
+    "destination_country": {
+     "printed": "Chorvátsko",
+     "norm": "HR"
+    },
+    "trip_start": {
+     "printed": "14. 8. 2026",
+     "norm": "2026-08-14"
+    },
+    "trip_end": {
+     "printed": "20. 8. 2026",
+     "norm": "2026-08-20"
+    },
+    "event_date": {
+     "printed": "19. 8. 2026",
+     "norm": "2026-08-19"
+    },
+    "event_place": {
+     "printed": "Split, Chorvátsko",
+     "norm": "Split, Chorvátsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Split, Chorvátsko, kvôli zdravotnej probléme akútna infekcia horných dýchacích ciest. Prešiel som liečbou u lokálneho lekára.",
+     "norm": "Bol som v Split, Chorvátsko, kvôli zdravotnej probléme akútna infekcia horných dýchacích ciest. Prešiel som liečbou u lokálneho lekára."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliklinika Tomičić",
+       "norm": "Liečebné náklady – Poliklinika Tomičić"
+      },
+      "amount": {
+       "printed": "172,71",
+       "norm": "172.71"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "24. 8. 2026",
+     "norm": "2026-08-24"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Nora Tomanová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        373.9,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "068105/7333",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "U Mlýnského Rybníka 993",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        420.3,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 916 611 497",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "nora.tomanova68@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        468.8,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK40 3100 0000 0071 6601 4333",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": "S42-014/D3",
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "9ef74a8b2af4ffd5c2419692dd65b697a266748bc5528ae8d21c4eae3232515e",
+   "fields": {
+    "facility_name": {
+     "printed": "Poliklinika Tomičić",
+     "norm": "Poliklinika Tomičić"
+    },
+    "facility_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Nora Tomanová",
+     "norm": "Nora Tomanová"
+    },
+    "patient_birth_date": {
+     "printed": "05.11.2006.",
+     "norm": "2006-11-05"
+    },
+    "visit_date": {
+     "printed": "19.08.2026.",
+     "norm": "2026-08-19"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Akutna infekcija gornjih dišnih puteva",
+     "norm": "J06.9"
+    },
+    "icd10_code": {
+     "printed": "J06.9",
+     "norm": "J06.9"
+    },
+    "anamnesis": {
+     "printed": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Pregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. Povraćajni sindrom i suženje bronha. Uzorci izdaha pokazali su prisutnost leukocita i eozinocita. Uzeta su zračenja i analize krvi. Poboljšanje uočeno je nakon terapije s antiinflamatorima i bronhodilatatorima. Preporučeno je nadaljevodno praćenje i izbjegavanje agresivnih faktora okoliša.",
+     "norm": "Pregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. Povraćajni sindrom i suženje bronha. Uzorci izdaha pokazali su prisutnost leukocita i eozinocita. Uzeta su zračenja i analize krvi. Poboljšanje uočeno je nakon terapije s antiinflamatorima i bronhodilatatorima. Preporučeno je nadaljevodno praćenje i izbjegavanje agresivnih faktora okoliša."
+    },
+    "physician_name": {
+     "printed": "Mislav Lukša",
+     "norm": "Mislav Lukša"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Nora Tomanová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        127.9,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Mislav Lukša",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.8,
+        414.7,
+        129.1,
+        424.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "hr",
+   "locale": "hr",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": "S42-014/D4",
+   "pages": 1,
+   "sha256": "cbdd7f911e95f63dc9ebcb867a35430476bc74c655447a56df95de724824e94b",
+   "fields": {
+    "invoice_number": {
+     "printed": "R-2026-46309",
+     "norm": "R-2026-46309"
+    },
+    "issue_date": {
+     "printed": "21.08.2026.",
+     "norm": "2026-08-21"
+    },
+    "provider_name": {
+     "printed": "Poliklinika Tomičić",
+     "norm": "Poliklinika Tomičić"
+    },
+    "provider_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Nora Tomanová",
+     "norm": "Nora Tomanová"
+    },
+    "service_date": {
+     "printed": "19.08.2026.",
+     "norm": "2026-08-19"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Ambulantni pregled",
+       "norm": "Ambulantni pregled"
+      },
+      "amount": {
+       "printed": "59,02",
+       "norm": "59.02"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "113,69",
+       "norm": "113.69"
+      }
+     }
+    ],
+    "total": {
+     "printed": "172,71",
+     "norm": "172.71"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Nora Tomanová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        128.9,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Nora Tomanová",
+  "birth_number": "068105/7333",
+  "birth_date": "2006-11-05",
+  "address": "U Mlýnského Rybníka 993, 982 25 Poběžovice",
+  "phone": "+421 916 611 497",
+  "email": "nora.tomanova68@posta.example.sk",
+  "iban": "SK4031000000007166014333",
+  "id_card": "EB982482",
+  "czech": true
+ },
+ "facts": {
+  "diagnosis": "J06.9"
+ }
+}

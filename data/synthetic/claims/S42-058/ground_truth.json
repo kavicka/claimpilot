@@ -1,0 +1,968 @@
+{
+ "scenario_id": "S42-058",
+ "split": "test",
+ "archetype": "hospital_large",
+ "edge_cases": [
+  "above_senior_threshold",
+  "multi_page_invoice"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP65913331",
+ "duplicate_of": null,
+ "destination": "AT",
+ "trip": {
+  "start": "2026-01-16",
+  "end": "2026-01-30"
+ },
+ "event_date": "2026-01-26",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "senior",
+  "rule": "R5",
+  "total_payout_eur": "7197.08",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "7197.08"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Landesklinikum Gindl",
+   "coverage": "medical",
+   "category": "hospital",
+   "amount": "7247.08",
+   "currency": "EUR",
+   "amount_eur": "7247.08",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1",
+    "A4.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "125e8c911c5741cb9ee0fb02b31de61c666be474d7d51314f24102a576c49f11",
+   "fields": {
+    "policy_number": {
+     "printed": "CP65913331",
+     "norm": "CP65913331"
+    },
+    "insured_name": {
+     "printed": "Božidara Paulovičová",
+     "norm": "Božidara Paulovičová"
+    },
+    "insured_birth_number": {
+     "printed": "936212/7841",
+     "norm": "936212/7841"
+    },
+    "insured_address": {
+     "printed": "Kalištná 92, 837 88 Krná",
+     "norm": "Kalištná 92, 837 88 Krná"
+    },
+    "insured_phone": {
+     "printed": "+421 931 554 692",
+     "norm": "+421 931 554 692"
+    },
+    "insured_email": {
+     "printed": "bozidara.paulovicova33@mail.example.sk",
+     "norm": "bozidara.paulovicova33@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK24 5200 0000 0058 5450 4561",
+     "norm": "SK2452000000005854504561"
+    },
+    "destination_country": {
+     "printed": "Rakúsko",
+     "norm": "AT"
+    },
+    "trip_start": {
+     "printed": "16. 1. 2026",
+     "norm": "2026-01-16"
+    },
+    "trip_end": {
+     "printed": "30. 1. 2026",
+     "norm": "2026-01-30"
+    },
+    "event_date": {
+     "printed": "26. 1. 2026",
+     "norm": "2026-01-26"
+    },
+    "event_place": {
+     "printed": "Schladming, Rakúsko",
+     "norm": "Schladming, Rakúsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som na dovolenke v Schladmingu, Rakúsko, keď sa u mňa vyvinul zápal pľúc. Počas pobytu som začal mať ťažké dýchanie a horečku. Som v nemocnici, kde mi lekári diagnostikovali zápal pľúc.",
+     "norm": "Bol som na dovolenke v Schladmingu, Rakúsko, keď sa u mňa vyvinul zápal pľúc. Počas pobytu som začal mať ťažké dýchanie a horečku. Som v nemocnici, kde mi lekári diagnostikovali zápal pľúc."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Landesklinikum Gindl",
+       "norm": "Liečebné náklady – Landesklinikum Gindl"
+      },
+      "amount": {
+       "printed": "7 247,08",
+       "norm": "7247.08"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "10. 2. 2026",
+     "norm": "2026-02-10"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Božidara Paulovičová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        400.0,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "936212/7841",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Kalištná 92",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        353.0,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 931 554 692",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "bozidara.paulovicova33@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        489.7,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK24 5200 0000 0058 5450 4561",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e9e969598904dc6ac6307cbfb0660337ba76f4851b28640987ca0c18e7bb46c9",
+   "fields": {
+    "policy_number": {
+     "printed": "CP65913331",
+     "norm": "CP65913331"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "celoročné",
+     "norm": "annual"
+    },
+    "policy_start": {
+     "printed": "24. 10. 2025",
+     "norm": "2025-10-24"
+    },
+    "policy_end": {
+     "printed": "23. 10. 2026",
+     "norm": "2026-10-23"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Božidara Paulovičová",
+       "norm": "Božidara Paulovičová"
+      },
+      "birth_number": {
+       "printed": "936212/7841",
+       "norm": "936212/7841"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "49,00 EUR",
+     "norm": "49.00"
+    },
+    "issue_date": {
+     "printed": "15. 10. 2025",
+     "norm": "2025-10-15"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Božidara Paulovičová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        148.9,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "936212/7841",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        354.8,
+        287.5,
+        410.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "0d56972656f6a0f571955b5350b66cdba0bd83dcd8533809fded11d5ea2cf203",
+   "fields": {
+    "facility_name": {
+     "printed": "Landesklinikum Gindl",
+     "norm": "Landesklinikum Gindl"
+    },
+    "facility_country": {
+     "printed": "Österreich",
+     "norm": "AT"
+    },
+    "patient_name": {
+     "printed": "Božidara Paulovičová",
+     "norm": "Božidara Paulovičová"
+    },
+    "patient_birth_date": {
+     "printed": "12.12.1993",
+     "norm": "1993-12-12"
+    },
+    "visit_date": {
+     "printed": "26.01.2026",
+     "norm": "2026-01-26"
+    },
+    "discharge_date": {
+     "printed": "01.02.2026",
+     "norm": "2026-02-01"
+    },
+    "diagnosis": {
+     "printed": "Pneumonie",
+     "norm": "J18.9"
+    },
+    "icd10_code": {
+     "printed": "J18.9",
+     "norm": "J18.9"
+    },
+    "anamnesis": {
+     "printed": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Bei Aufnahme wurden Atemnot, Fieber und Husten beobachtet. Die Röntgenaufnahme des Thorax zeigte ein lappengenes Lungenödem im rechten Unterlappen. Die bakterielle Keimung im Sputum ergab einen grampositiven Keim. Die Blutwerte zeigten eine leichte Leukozytose. Der Patient erhielt intravenös antibiotische Therapie sowie antipyretika und ausreichende Flüssigkeitsversorgung. Nach 5 Tagen stationärer Behandlung zeigte sich klinische Besserung, sodass der Patient entlassen werden konnte. Es wird eine ambulante Nachkontrolle und eine abschließende Röntgenuntersuchung empfohlen.",
+     "norm": "Bei Aufnahme wurden Atemnot, Fieber und Husten beobachtet. Die Röntgenaufnahme des Thorax zeigte ein lappengenes Lungenödem im rechten Unterlappen. Die bakterielle Keimung im Sputum ergab einen grampositiven Keim. Die Blutwerte zeigten eine leichte Leukozytose. Der Patient erhielt intravenös antibiotische Therapie sowie antipyretika und ausreichende Flüssigkeitsversorgung. Nach 5 Tagen stationärer Behandlung zeigte sich klinische Besserung, sodass der Patient entlassen werden konnte. Es wird eine ambulante Nachkontrolle und eine abschließende Röntgenuntersuchung empfohlen."
+    },
+    "physician_name": {
+     "printed": "Ruth Seiler",
+     "norm": "Ruth Seiler"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Božidara Paulovičová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        154.0,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Ruth Seiler",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        440.3,
+        187.0,
+        449.6
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "de",
+   "locale": "de",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 2,
+   "sha256": "1baad4847c16f80ed80c5ea47bc7bece67c82cfb9bb56199305b42b33e310b11",
+   "fields": {
+    "invoice_number": {
+     "printed": "RE-2026-13672",
+     "norm": "RE-2026-13672"
+    },
+    "issue_date": {
+     "printed": "02.02.2026",
+     "norm": "2026-02-02"
+    },
+    "provider_name": {
+     "printed": "Landesklinikum Gindl",
+     "norm": "Landesklinikum Gindl"
+    },
+    "provider_country": {
+     "printed": "Österreich",
+     "norm": "AT"
+    },
+    "patient_name": {
+     "printed": "Božidara Paulovičová",
+     "norm": "Božidara Paulovičová"
+    },
+    "service_date": {
+     "printed": "26.01.2026",
+     "norm": "2026-01-26"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Stationärer Aufenthalt, Pflegetag 1",
+       "norm": "Stationärer Aufenthalt, Pflegetag 1"
+      },
+      "amount": {
+       "printed": "873,50",
+       "norm": "873.50"
+      }
+     },
+     {
+      "description": {
+       "printed": "Stationärer Aufenthalt, Pflegetag 2",
+       "norm": "Stationärer Aufenthalt, Pflegetag 2"
+      },
+      "amount": {
+       "printed": "873,50",
+       "norm": "873.50"
+      }
+     },
+     {
+      "description": {
+       "printed": "Stationärer Aufenthalt, Pflegetag 3",
+       "norm": "Stationärer Aufenthalt, Pflegetag 3"
+      },
+      "amount": {
+       "printed": "873,50",
+       "norm": "873.50"
+      }
+     },
+     {
+      "description": {
+       "printed": "Stationärer Aufenthalt, Pflegetag 4",
+       "norm": "Stationärer Aufenthalt, Pflegetag 4"
+      },
+      "amount": {
+       "printed": "873,50",
+       "norm": "873.50"
+      }
+     },
+     {
+      "description": {
+       "printed": "Stationärer Aufenthalt, Pflegetag 5",
+       "norm": "Stationärer Aufenthalt, Pflegetag 5"
+      },
+      "amount": {
+       "printed": "873,50",
+       "norm": "873.50"
+      }
+     },
+     {
+      "description": {
+       "printed": "Stationärer Aufenthalt, Pflegetag 6",
+       "norm": "Stationärer Aufenthalt, Pflegetag 6"
+      },
+      "amount": {
+       "printed": "873,50",
+       "norm": "873.50"
+      }
+     },
+     {
+      "description": {
+       "printed": "Notfallbehandlung",
+       "norm": "Notfallbehandlung"
+      },
+      "amount": {
+       "printed": "185,44",
+       "norm": "185.44"
+      }
+     },
+     {
+      "description": {
+       "printed": "Computertomographie",
+       "norm": "Computertomographie"
+      },
+      "amount": {
+       "printed": "304,81",
+       "norm": "304.81"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboruntersuchung",
+       "norm": "Laboruntersuchung"
+      },
+      "amount": {
+       "printed": "45,99",
+       "norm": "45.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "Krankentransport",
+       "norm": "Krankentransport"
+      },
+      "amount": {
+       "printed": "386,61",
+       "norm": "386.61"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "38,20",
+       "norm": "38.20"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "45,84",
+       "norm": "45.84"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "42,03",
+       "norm": "42.03"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "49,26",
+       "norm": "49.26"
+      }
+     },
+     {
+      "description": {
+       "printed": "Medikamente",
+       "norm": "Medikamente"
+      },
+      "amount": {
+       "printed": "18,95",
+       "norm": "18.95"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultraschall",
+       "norm": "Ultraschall"
+      },
+      "amount": {
+       "printed": "47,26",
+       "norm": "47.26"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "27,25",
+       "norm": "27.25"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboruntersuchung",
+       "norm": "Laboruntersuchung"
+      },
+      "amount": {
+       "printed": "22,25",
+       "norm": "22.25"
+      }
+     },
+     {
+      "description": {
+       "printed": "Medikamente",
+       "norm": "Medikamente"
+      },
+      "amount": {
+       "printed": "7,58",
+       "norm": "7.58"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboruntersuchung",
+       "norm": "Laboruntersuchung"
+      },
+      "amount": {
+       "printed": "23,01",
+       "norm": "23.01"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "33,72",
+       "norm": "33.72"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "20,38",
+       "norm": "20.38"
+      }
+     },
+     {
+      "description": {
+       "printed": "Medikamente",
+       "norm": "Medikamente"
+      },
+      "amount": {
+       "printed": "19,91",
+       "norm": "19.91"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultraschall",
+       "norm": "Ultraschall"
+      },
+      "amount": {
+       "printed": "53,11",
+       "norm": "53.11"
+      }
+     },
+     {
+      "description": {
+       "printed": "Medikamente",
+       "norm": "Medikamente"
+      },
+      "amount": {
+       "printed": "18,99",
+       "norm": "18.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "36,58",
+       "norm": "36.58"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "25,81",
+       "norm": "25.81"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "34,92",
+       "norm": "34.92"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboruntersuchung",
+       "norm": "Laboruntersuchung"
+      },
+      "amount": {
+       "printed": "44,84",
+       "norm": "44.84"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultraschall",
+       "norm": "Ultraschall"
+      },
+      "amount": {
+       "printed": "43,43",
+       "norm": "43.43"
+      }
+     },
+     {
+      "description": {
+       "printed": "Medikamente",
+       "norm": "Medikamente"
+      },
+      "amount": {
+       "printed": "8,94",
+       "norm": "8.94"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "21,46",
+       "norm": "21.46"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "34,85",
+       "norm": "34.85"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "21,19",
+       "norm": "21.19"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboruntersuchung",
+       "norm": "Laboruntersuchung"
+      },
+      "amount": {
+       "printed": "41,57",
+       "norm": "41.57"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "17,90",
+       "norm": "17.90"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infusionstherapie",
+       "norm": "Infusionstherapie"
+      },
+      "amount": {
+       "printed": "41,83",
+       "norm": "41.83"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "22,93",
+       "norm": "22.93"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "16,11",
+       "norm": "16.11"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultraschall",
+       "norm": "Ultraschall"
+      },
+      "amount": {
+       "printed": "33,80",
+       "norm": "33.80"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultraschall",
+       "norm": "Ultraschall"
+      },
+      "amount": {
+       "printed": "37,25",
+       "norm": "37.25"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "25,93",
+       "norm": "25.93"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultraschall",
+       "norm": "Ultraschall"
+      },
+      "amount": {
+       "printed": "36,92",
+       "norm": "36.92"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultraschall",
+       "norm": "Ultraschall"
+      },
+      "amount": {
+       "printed": "51,61",
+       "norm": "51.61"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboruntersuchung",
+       "norm": "Laboruntersuchung"
+      },
+      "amount": {
+       "printed": "17,62",
+       "norm": "17.62"
+      }
+     }
+    ],
+    "total": {
+     "printed": "7.247,08",
+     "norm": "7247.08"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Božidara Paulovičová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        152.1,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Božidara Paulovičová",
+  "birth_number": "936212/7841",
+  "birth_date": "1993-12-12",
+  "address": "Kalištná 92, 837 88 Krná",
+  "phone": "+421 931 554 692",
+  "email": "bozidara.paulovicova33@mail.example.sk",
+  "iban": "SK2452000000005854504561",
+  "id_card": "KB984932",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "J18.9"
+ }
+}

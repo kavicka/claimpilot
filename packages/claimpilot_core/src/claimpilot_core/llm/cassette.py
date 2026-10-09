@@ -17,6 +17,7 @@ class CassetteMode(StrEnum):
     OFF = "off"
     RECORD = "record"
     REPLAY = "replay"
+    AUTO = "auto"  # replay when recorded, otherwise call the model and record
 
 
 class CassetteMissingError(LookupError):
@@ -51,11 +52,13 @@ class CassetteStore:
         return self.root / req.step / f"{key[:2]}" / f"{key}.json"
 
     def load(self, req: LLMRequest) -> LLMResponse | None:
-        if self.mode is not CassetteMode.REPLAY:
+        if self.mode not in (CassetteMode.REPLAY, CassetteMode.AUTO):
             return None
         key = cassette_key(req)
         path = self._path(req, key)
         if not path.exists():
+            if self.mode is CassetteMode.AUTO:
+                return None
             raise CassetteMissingError(key, req)
         data = json.loads(path.read_text(encoding="utf-8"))
         response = LLMResponse.model_validate(data["response"])
@@ -63,7 +66,7 @@ class CassetteStore:
         return response
 
     def save(self, req: LLMRequest, response: LLMResponse) -> None:
-        if self.mode is not CassetteMode.RECORD:
+        if self.mode not in (CassetteMode.RECORD, CassetteMode.AUTO):
             return
         key = cassette_key(req)
         path = self._path(req, key)

@@ -1,0 +1,947 @@
+{
+ "scenario_id": "S42-019",
+ "split": "dev",
+ "archetype": "hospital_large",
+ "edge_cases": [
+  "above_senior_threshold",
+  "multi_page_invoice",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP20200074",
+ "duplicate_of": null,
+ "destination": "HR",
+ "trip": {
+  "start": "2026-06-27",
+  "end": "2026-07-08"
+ },
+ "event_date": "2026-07-07",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "senior",
+  "rule": "R5",
+  "total_payout_eur": "4833.46",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "medical": "4833.46"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Opća bolnica Alković",
+   "coverage": "medical",
+   "category": "hospital",
+   "amount": "4833.46",
+   "currency": "EUR",
+   "amount_eur": "4833.46",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1",
+    "A4.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 150,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "839e7005c5cefba42419a104363e8700d937ade04b5890f671e979578b28f24e",
+   "fields": {
+    "policy_number": {
+     "printed": "CP20200074",
+     "norm": "CP20200074"
+    },
+    "insured_name": {
+     "printed": "Emília Králová",
+     "norm": "Emília Králová"
+    },
+    "insured_birth_number": {
+     "printed": "926025/9690",
+     "norm": "926025/9690"
+    },
+    "insured_address": {
+     "printed": "Dankovského 53, 960 91 Zlatník",
+     "norm": "Dankovského 53, 960 91 Zlatník"
+    },
+    "insured_phone": {
+     "printed": "+421 926 779 436",
+     "norm": "+421 926 779 436"
+    },
+    "insured_email": {
+     "printed": "emilia.kralova59@mail.example.sk",
+     "norm": "emilia.kralova59@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK02 8330 0000 0096 6214 3091",
+     "norm": "SK0283300000009662143091"
+    },
+    "destination_country": {
+     "printed": "Chorvátsko",
+     "norm": "HR"
+    },
+    "trip_start": {
+     "printed": "27. 6. 2026",
+     "norm": "2026-06-27"
+    },
+    "trip_end": {
+     "printed": "8. 7. 2026",
+     "norm": "2026-07-08"
+    },
+    "event_date": {
+     "printed": "7. 7. 2026",
+     "norm": "2026-07-07"
+    },
+    "event_place": {
+     "printed": "Split, Chorvátsko",
+     "norm": "Split, Chorvátsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. Diagnozovaný som s zápalom pľúc. Som na liečbe v mieste udalosti.",
+     "norm": "Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. Diagnozovaný som s zápalom pľúc. Som na liečbe v mieste udalosti."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Opća bolnica Alković",
+       "norm": "Liečebné náklady – Opća bolnica Alković"
+      },
+      "amount": {
+       "printed": "4 833,46",
+       "norm": "4833.46"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "13. 7. 2026",
+     "norm": "2026-07-13"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Emília Králová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        366.7,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "926025/9690",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Dankovského 53",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        378.2,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 926 779 436",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "emilia.kralova59@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        455.7,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK02 8330 0000 0096 6214 3091",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "39c99db7b67adfa2c90666d7ebd7c07105db96b96ca1f23b7920b824335cb0c9",
+   "fields": {
+    "facility_name": {
+     "printed": "Opća bolnica Alković",
+     "norm": "Opća bolnica Alković"
+    },
+    "facility_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Emília Králová",
+     "norm": "Emília Králová"
+    },
+    "patient_birth_date": {
+     "printed": "25.10.1992.",
+     "norm": "1992-10-25"
+    },
+    "visit_date": {
+     "printed": "07.07.2026.",
+     "norm": "2026-07-07"
+    },
+    "discharge_date": {
+     "printed": "10.07.2026.",
+     "norm": "2026-07-10"
+    },
+    "diagnosis": {
+     "printed": "Upala pluća",
+     "norm": "J18.9"
+    },
+    "icd10_code": {
+     "printed": "J18.9",
+     "norm": "J18.9"
+    },
+    "anamnesis": {
+     "printed": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Lijecenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davano uputnica za nadzor u ambulantnoj klinici.",
+     "norm": "Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Lijecenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davano uputnica za nadzor u ambulantnoj klinici."
+    },
+    "physician_name": {
+     "printed": "Jasminka Štifanić",
+     "norm": "Jasminka Štifanić"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Emília Králová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        120.7,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Jasminka Štifanić",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.8,
+        427.5,
+        145.6,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 2,
+   "sha256": "dcf992228866be614b9d8c01d4185cab59b0b439a35575ccfbe15459ad528363",
+   "fields": {
+    "invoice_number": {
+     "printed": "R-2026-06965",
+     "norm": "R-2026-06965"
+    },
+    "issue_date": {
+     "printed": "10.07.2026.",
+     "norm": "2026-07-10"
+    },
+    "provider_name": {
+     "printed": "Opća bolnica Alković",
+     "norm": "Opća bolnica Alković"
+    },
+    "provider_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Emília Králová",
+     "norm": "Emília Králová"
+    },
+    "service_date": {
+     "printed": "07.07.2026.",
+     "norm": "2026-07-07"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Bolnički dan 1",
+       "norm": "Bolnički dan 1"
+      },
+      "amount": {
+       "printed": "769,10",
+       "norm": "769.10"
+      }
+     },
+     {
+      "description": {
+       "printed": "Bolnički dan 2",
+       "norm": "Bolnički dan 2"
+      },
+      "amount": {
+       "printed": "769,10",
+       "norm": "769.10"
+      }
+     },
+     {
+      "description": {
+       "printed": "Bolnički dan 3",
+       "norm": "Bolnički dan 3"
+      },
+      "amount": {
+       "printed": "769,10",
+       "norm": "769.10"
+      }
+     },
+     {
+      "description": {
+       "printed": "Hitni prijem",
+       "norm": "Hitni prijem"
+      },
+      "amount": {
+       "printed": "196,38",
+       "norm": "196.38"
+      }
+     },
+     {
+      "description": {
+       "printed": "CT snimanje",
+       "norm": "CT snimanje"
+      },
+      "amount": {
+       "printed": "425,65",
+       "norm": "425.65"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "77,06",
+       "norm": "77.06"
+      }
+     },
+     {
+      "description": {
+       "printed": "Prijevoz vozilom hitne pomoći",
+       "norm": "Prijevoz vozilom hitne pomoći"
+      },
+      "amount": {
+       "printed": "417,80",
+       "norm": "417.80"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "32,82",
+       "norm": "32.82"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "27,78",
+       "norm": "27.78"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "39,07",
+       "norm": "39.07"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "30,33",
+       "norm": "30.33"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "18,82",
+       "norm": "18.82"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "62,07",
+       "norm": "62.07"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "38,48",
+       "norm": "38.48"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "55,07",
+       "norm": "55.07"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "24,44",
+       "norm": "24.44"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "36,51",
+       "norm": "36.51"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "20,23",
+       "norm": "20.23"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "22,63",
+       "norm": "22.63"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "20,28",
+       "norm": "20.28"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "27,35",
+       "norm": "27.35"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "22,29",
+       "norm": "22.29"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "33,44",
+       "norm": "33.44"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "13,94",
+       "norm": "13.94"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "43,93",
+       "norm": "43.93"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "28,39",
+       "norm": "28.39"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "52,38",
+       "norm": "52.38"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "36,67",
+       "norm": "36.67"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "61,43",
+       "norm": "61.43"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "21,38",
+       "norm": "21.38"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "25,59",
+       "norm": "25.59"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "17,66",
+       "norm": "17.66"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "24,71",
+       "norm": "24.71"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "16,44",
+       "norm": "16.44"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "12,41",
+       "norm": "12.41"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "10,61",
+       "norm": "10.61"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "40,20",
+       "norm": "40.20"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "46,13",
+       "norm": "46.13"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "36,59",
+       "norm": "36.59"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "38,80",
+       "norm": "38.80"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "20,87",
+       "norm": "20.87"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "26,92",
+       "norm": "26.92"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "10,79",
+       "norm": "10.79"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "61,53",
+       "norm": "61.53"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "8,51",
+       "norm": "8.51"
+      }
+     },
+     {
+      "description": {
+       "printed": "EKG",
+       "norm": "EKG"
+      },
+      "amount": {
+       "printed": "20,99",
+       "norm": "20.99"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "62,48",
+       "norm": "62.48"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "48,55",
+       "norm": "48.55"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorijske pretrage",
+       "norm": "Laboratorijske pretrage"
+      },
+      "amount": {
+       "printed": "41,09",
+       "norm": "41.09"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzijska terapija",
+       "norm": "Infuzijska terapija"
+      },
+      "amount": {
+       "printed": "26,82",
+       "norm": "26.82"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lijekovi",
+       "norm": "Lijekovi"
+      },
+      "amount": {
+       "printed": "10,54",
+       "norm": "10.54"
+      }
+     },
+     {
+      "description": {
+       "printed": "Ultrazvuk",
+       "norm": "Ultrazvuk"
+      },
+      "amount": {
+       "printed": "31,31",
+       "norm": "31.31"
+      }
+     }
+    ],
+    "total": {
+     "printed": "4.833,46",
+     "norm": "4833.46"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Emília Králová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        123.4,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Emília Králová",
+  "birth_number": "926025/9690",
+  "birth_date": "1992-10-25",
+  "address": "Dankovského 53, 960 91 Zlatník",
+  "phone": "+421 926 779 436",
+  "email": "emilia.kralova59@mail.example.sk",
+  "iban": "SK0283300000009662143091",
+  "id_card": "MP313878",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "J18.9"
+ }
+}

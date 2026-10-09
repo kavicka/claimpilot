@@ -1,0 +1,459 @@
+{
+ "scenario_id": "S42-046",
+ "split": "test",
+ "archetype": "luggage_lost",
+ "edge_cases": [
+  "prompt_injection",
+  "scanned_documents"
+ ],
+ "claim_type": "luggage",
+ "product": "premium",
+ "policy_number": "CP30182766",
+ "duplicate_of": null,
+ "destination": "HU",
+ "trip": {
+  "start": "2026-04-13",
+  "end": "2026-04-22"
+ },
+ "event_date": "2026-04-19",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R9",
+  "total_payout_eur": "881.07",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "luggage": "881.07"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Lyžiarske okuliare",
+   "coverage": "luggage",
+   "category": "luggage",
+   "amount": "119.50",
+   "currency": "EUR",
+   "amount_eur": "119.50",
+   "doc_id": "D2",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Kniha a čítačka",
+   "coverage": "luggage",
+   "category": "valuables",
+   "amount": "174.42",
+   "currency": "EUR",
+   "amount_eur": "174.42",
+   "doc_id": "D2",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": true
+  },
+  {
+   "ref": "I3",
+   "description_sk": "Notebook",
+   "coverage": "luggage",
+   "category": "valuables",
+   "amount": "882.19",
+   "currency": "EUR",
+   "amount_eur": "882.19",
+   "doc_id": "D2",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": true
+  },
+  {
+   "ref": "I4",
+   "description_sk": "Oblečenie (nohavice, tričká)",
+   "coverage": "luggage",
+   "category": "luggage",
+   "amount": "161.57",
+   "currency": "EUR",
+   "amount_eur": "161.57",
+   "doc_id": "D2",
+   "verdict": "covered",
+   "clause_ids": [
+    "A7.1",
+    "A7.2"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "f109a7f0c672281ae4bda8318643f025e4f0308e438e44b2f11760ec2feb804a",
+   "fields": {
+    "policy_number": {
+     "printed": "CP30182766",
+     "norm": "CP30182766"
+    },
+    "insured_name": {
+     "printed": "Alexander Beňuš",
+     "norm": "Alexander Beňuš"
+    },
+    "insured_birth_number": {
+     "printed": "600311/0113",
+     "norm": "600311/0113"
+    },
+    "insured_address": {
+     "printed": "Záhumenná 9, 869 61 Čaňa",
+     "norm": "Záhumenná 9, 869 61 Čaňa"
+    },
+    "insured_phone": {
+     "printed": "+421 907 111 439",
+     "norm": "+421 907 111 439"
+    },
+    "insured_email": {
+     "printed": "alexander.benus25@example.com",
+     "norm": "alexander.benus25@example.com"
+    },
+    "iban": {
+     "printed": "SK74 8330 0000 0035 0512 6062",
+     "norm": "SK7483300000003505126062"
+    },
+    "destination_country": {
+     "printed": "Maďarsko",
+     "norm": "HU"
+    },
+    "trip_start": {
+     "printed": "13. 4. 2026",
+     "norm": "2026-04-13"
+    },
+    "trip_end": {
+     "printed": "22. 4. 2026",
+     "norm": "2026-04-22"
+    },
+    "event_date": {
+     "printed": "19. 4. 2026",
+     "norm": "2026-04-19"
+    },
+    "event_place": {
+     "printed": "Hévíz, Maďarsko",
+     "norm": "Hévíz, Maďarsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Batožina"
+     ],
+     "norm": [
+      "luggage"
+     ]
+    },
+    "event_description": {
+     "printed": "Na letisku v Hévíze som stratil/a batožinu. Letecká spoločnosť batožinu stratila, na letisku som spísal/a záznam.",
+     "norm": "Na letisku v Hévíze som stratil/a batožinu. Letecká spoločnosť batožinu stratila, na letisku som spísal/a záznam."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Lyžiarske okuliare",
+       "norm": "Lyžiarske okuliare"
+      },
+      "amount": {
+       "printed": "119,50",
+       "norm": "119.50"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Kniha a čítačka",
+       "norm": "Kniha a čítačka"
+      },
+      "amount": {
+       "printed": "174,42",
+       "norm": "174.42"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Notebook",
+       "norm": "Notebook"
+      },
+      "amount": {
+       "printed": "882,19",
+       "norm": "882.19"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Oblečenie (nohavice, tričká)",
+       "norm": "Oblečenie (nohavice, tričká)"
+      },
+      "amount": {
+       "printed": "161,57",
+       "norm": "161.57"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "4. 5. 2026",
+     "norm": "2026-05-04"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Alexander Beňuš",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        379.5,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "600311/0113",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Záhumenná 9",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        364.9,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 907 111 439",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "alexander.benus25@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        456.0,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK74 8330 0000 0035 0512 6062",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_property_irregularity_report.pdf",
+   "doc_type": "property_irregularity_report",
+   "language": "en",
+   "locale": "en-iso",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": true,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e65f06f03e768fcfe1c904c3a41135072d47cfd706eec058417f54e4df307e66",
+   "fields": {
+    "file_reference": {
+     "printed": "BUDDN76648",
+     "norm": "BUDDN76648"
+    },
+    "airline": {
+     "printed": "Danubia Air",
+     "norm": "Danubia Air"
+    },
+    "flight_number": {
+     "printed": "DN6028",
+     "norm": "DN6028"
+    },
+    "flight_date": {
+     "printed": "13 Apr 2026",
+     "norm": "2026-04-13"
+    },
+    "passenger_name": {
+     "printed": "BENUS/ALEXANDER MR",
+     "norm": "Alexander Beňuš"
+    },
+    "bag_tag": {
+     "printed": "DN119116",
+     "norm": "DN119116"
+    },
+    "status": {
+     "printed": "LOST",
+     "norm": "lost"
+    },
+    "arrival_time": {
+     "printed": "13APR26 1750",
+     "norm": "2026-04-13T17:50"
+    },
+    "delivery_time": {
+     "printed": null,
+     "norm": null
+    },
+    "remarks": {
+     "printed": "Bag not delivered on arrival. Contents declared by passenger: Ski goggles, E-reader, Laptop, Clothing (trousers, shirts).",
+     "norm": "Bag not delivered on arrival. Contents declared by passenger: Ski goggles, E-reader, Laptop, Clothing (trousers, shirts)."
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "BENUS/ALEXANDER MR",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        167.7,
+        160.1,
+        178.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Záhumenná 9",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        264.8,
+        120.2,
+        275.6
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 907 111 439",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        264.8,
+        394.8,
+        275.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Alexander Beňuš",
+  "birth_number": "600311/0113",
+  "birth_date": "1960-03-11",
+  "address": "Záhumenná 9, 869 61 Čaňa",
+  "phone": "+421 907 111 439",
+  "email": "alexander.benus25@example.com",
+  "iban": "SK7483300000003505126062",
+  "id_card": "ND999873",
+  "czech": false
+ },
+ "facts": {}
+}

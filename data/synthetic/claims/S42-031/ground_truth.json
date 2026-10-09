@@ -1,0 +1,537 @@
+{
+ "scenario_id": "S42-031",
+ "split": "dev",
+ "archetype": "early_claim",
+ "edge_cases": [
+  "early_claim",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP74672520",
+ "duplicate_of": null,
+ "destination": "HR",
+ "trip": {
+  "start": "2026-05-13",
+  "end": "2026-05-22"
+ },
+ "event_date": "2026-05-18",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R3",
+  "total_payout_eur": "321.10",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "medical": "321.10"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliklinika Ćurić",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "321.10",
+   "currency": "EUR",
+   "amount_eur": "321.10",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "266dacc375685c59d32306de6aecc962d7346be8036f07b16e679eefa0165a98",
+   "fields": {
+    "policy_number": {
+     "printed": "CP74672520",
+     "norm": "CP74672520"
+    },
+    "insured_name": {
+     "printed": "Jaromíra Pavková",
+     "norm": "Jaromíra Pavková"
+    },
+    "insured_birth_number": {
+     "printed": "916023/1278",
+     "norm": "916023/1278"
+    },
+    "insured_address": {
+     "printed": "Pasienková 73, 860 87 Hermanovce",
+     "norm": "Pasienková 73, 860 87 Hermanovce"
+    },
+    "insured_phone": {
+     "printed": "+421 908 159 812",
+     "norm": "+421 908 159 812"
+    },
+    "insured_email": {
+     "printed": "jaromira.pavkova94@example.com",
+     "norm": "jaromira.pavkova94@example.com"
+    },
+    "iban": {
+     "printed": "SK85 3100 0000 0087 3079 4243",
+     "norm": "SK8531000000008730794243"
+    },
+    "destination_country": {
+     "printed": "Chorvátsko",
+     "norm": "HR"
+    },
+    "trip_start": {
+     "printed": "13. 5. 2026",
+     "norm": "2026-05-13"
+    },
+    "trip_end": {
+     "printed": "22. 5. 2026",
+     "norm": "2026-05-22"
+    },
+    "event_date": {
+     "printed": "18. 5. 2026",
+     "norm": "2026-05-18"
+    },
+    "event_place": {
+     "printed": "Split, Chorvátsko",
+     "norm": "Split, Chorvátsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Podvrtnutie členkového kĺbu sa mi stalo počas prechádzky v Split, Chorvátsko. V tom čase som necítil žiadnu veľkú bolesť, ale neskôr sa mi začal kĺb zahrievat a zotrvávalo v ňom nepohodlie. V tej chvíli som sa rozhodol, že sa vyžiadam o lekársku starostlivosť.",
+     "norm": "Podvrtnutie členkového kĺbu sa mi stalo počas prechádzky v Split, Chorvátsko. V tom čase som necítil žiadnu veľkú bolesť, ale neskôr sa mi začal kĺb zahrievat a zotrvávalo v ňom nepohodlie. V tej chvíli som sa rozhodol, že sa vyžiadam o lekársku starostlivosť."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliklinika Ćurić",
+       "norm": "Liečebné náklady – Poliklinika Ćurić"
+      },
+      "amount": {
+       "printed": "321,10",
+       "norm": "321.10"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "26. 5. 2026",
+     "norm": "2026-05-26"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Jaromíra Pavková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        383.4,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "916023/1278",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Pasienková 73",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        368.8,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 908 159 812",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "jaromira.pavkova94@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        459.4,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK85 3100 0000 0087 3079 4243",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "37d3204edf42fdb5e21e77563f41e9febe7b1b317983451ac451b979d1a00222",
+   "fields": {
+    "policy_number": {
+     "printed": "CP74672520",
+     "norm": "CP74672520"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Premium",
+     "norm": "premium"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "16. 5. 2026",
+     "norm": "2026-05-16"
+    },
+    "policy_end": {
+     "printed": "22. 5. 2026",
+     "norm": "2026-05-22"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Jaromíra Pavková",
+       "norm": "Jaromíra Pavková"
+      },
+      "birth_number": {
+       "printed": "916023/1278",
+       "norm": "916023/1278"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "32,00 EUR",
+     "norm": "32.00"
+    },
+    "issue_date": {
+     "printed": "16. 5. 2026",
+     "norm": "2026-05-16"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Jaromíra Pavková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        133.1,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "916023/1278",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        335.0,
+        287.5,
+        391.0,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e5994438dea1b923ed4ae98b29ada0166a4f10c70e3b1ff3834a04018d74f09d",
+   "fields": {
+    "facility_name": {
+     "printed": "Poliklinika Ćurić",
+     "norm": "Poliklinika Ćurić"
+    },
+    "facility_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Jaromíra Pavková",
+     "norm": "Jaromíra Pavková"
+    },
+    "patient_birth_date": {
+     "printed": "23.10.1991.",
+     "norm": "1991-10-23"
+    },
+    "visit_date": {
+     "printed": "18.05.2026.",
+     "norm": "2026-05-18"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Uganuće gležnja",
+     "norm": "S93.4"
+    },
+    "icd10_code": {
+     "printed": "S93.4",
+     "norm": "S93.4"
+    },
+    "anamnesis": {
+     "printed": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Pregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak.",
+     "norm": "Pregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak."
+    },
+    "physician_name": {
+     "printed": "Nada Milovac",
+     "norm": "Nada Milovac"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Jaromíra Pavková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        137.3,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Nada Milovac",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.8,
+        427.5,
+        131.8,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "feb87d8d29a47bb5e8f027e218b42b24f933a576b55529e7bda0df90c05b14df",
+   "fields": {
+    "invoice_number": {
+     "printed": "R-2026-95924",
+     "norm": "R-2026-95924"
+    },
+    "issue_date": {
+     "printed": "20.05.2026.",
+     "norm": "2026-05-20"
+    },
+    "provider_name": {
+     "printed": "Poliklinika Ćurić",
+     "norm": "Poliklinika Ćurić"
+    },
+    "provider_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Jaromíra Pavková",
+     "norm": "Jaromíra Pavková"
+    },
+    "service_date": {
+     "printed": "18.05.2026.",
+     "norm": "2026-05-18"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Ambulantni pregled",
+       "norm": "Ambulantni pregled"
+      },
+      "amount": {
+       "printed": "156,48",
+       "norm": "156.48"
+      }
+     },
+     {
+      "description": {
+       "printed": "Rendgensko snimanje",
+       "norm": "Rendgensko snimanje"
+      },
+      "amount": {
+       "printed": "164,62",
+       "norm": "164.62"
+      }
+     }
+    ],
+    "total": {
+     "printed": "321,10",
+     "norm": "321.10"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Jaromíra Pavková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        137.4,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Jaromíra Pavková",
+  "birth_number": "916023/1278",
+  "birth_date": "1991-10-23",
+  "address": "Pasienková 73, 860 87 Hermanovce",
+  "phone": "+421 908 159 812",
+  "email": "jaromira.pavkova94@example.com",
+  "iban": "SK8531000000008730794243",
+  "id_card": "JH185992",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S93.4"
+ }
+}

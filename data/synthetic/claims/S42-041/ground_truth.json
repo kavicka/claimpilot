@@ -1,0 +1,670 @@
+{
+ "scenario_id": "S42-041",
+ "split": "test",
+ "archetype": "date_inconsistency",
+ "edge_cases": [
+  "date_inconsistency",
+  "foreign_currency",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP91480362",
+ "duplicate_of": null,
+ "destination": "TR",
+ "trip": {
+  "start": "2026-03-15",
+  "end": "2026-03-27"
+ },
+ "event_date": "2026-03-23",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R2",
+  "total_payout_eur": "851.50",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "851.50"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Akdeniz International Medical Centre",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "39466.78",
+   "currency": "TRY",
+   "amount_eur": "861.72",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Lieky z lekárne",
+   "coverage": "medical",
+   "category": "medication",
+   "amount": "1821.93",
+   "currency": "TRY",
+   "amount_eur": "39.78",
+   "doc_id": "D5",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": true,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "17393838a2dc598ca885a7b4a18c21e2bbb3f5cb912166dd7e7ad14ce38c8d13",
+   "fields": {
+    "policy_number": {
+     "printed": "CP91480362",
+     "norm": "CP91480362"
+    },
+    "insured_name": {
+     "printed": "Félix Boška",
+     "norm": "Félix Boška"
+    },
+    "insured_birth_number": {
+     "printed": "560210/8336",
+     "norm": "560210/8336"
+    },
+    "insured_address": {
+     "printed": "Závodníkova 641, 876 90 Malé Vozokany",
+     "norm": "Závodníkova 641, 876 90 Malé Vozokany"
+    },
+    "insured_phone": {
+     "printed": "+421 905 807 699",
+     "norm": "+421 905 807 699"
+    },
+    "insured_email": {
+     "printed": "felix.boska29@mail.example.sk",
+     "norm": "felix.boska29@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK98 5600 9838 9611 3038 6114",
+     "norm": "SK9856009838961130386114"
+    },
+    "destination_country": {
+     "printed": "Turecko",
+     "norm": "TR"
+    },
+    "trip_start": {
+     "printed": "15. 3. 2026",
+     "norm": "2026-03-15"
+    },
+    "trip_end": {
+     "printed": "27. 3. 2026",
+     "norm": "2026-03-27"
+    },
+    "event_date": {
+     "printed": "16. 3. 2026",
+     "norm": "2026-03-16"
+    },
+    "event_place": {
+     "printed": "Antalya, Turecko",
+     "norm": "Antalya, Turecko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Antalye, kde sa mi podvrnul členkový kĺb. Na mieste som sa obrátil na lekára, ktorý mi poskytol prvočasné zdravotné starostlivosti.",
+     "norm": "Bol som v Antalye, kde sa mi podvrnul členkový kĺb. Na mieste som sa obrátil na lekára, ktorý mi poskytol prvočasné zdravotné starostlivosti."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Akdeniz International Medical Centre",
+       "norm": "Liečebné náklady – Akdeniz International Medical Centre"
+      },
+      "amount": {
+       "printed": "39 466,78",
+       "norm": "39466.78"
+      },
+      "currency": {
+       "printed": "TRY",
+       "norm": "TRY"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lieky z lekárne",
+       "norm": "Lieky z lekárne"
+      },
+      "amount": {
+       "printed": "1 821,93",
+       "norm": "1821.93"
+      },
+      "currency": {
+       "printed": "TRY",
+       "norm": "TRY"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "1. 4. 2026",
+     "norm": "2026-04-01"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Félix Boška",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.5,
+        361.5,
+        182.9
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "560210/8336",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        202.6,
+        130.2,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Závodníkova 641",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        202.6,
+        395.7,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 905 807 699",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        236.7,
+        156.3,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "felix.boska29@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        236.7,
+        460.8,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK98 5600 9838 9611 3038 6114",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        270.8,
+        234.1,
+        285.1
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "4a427cb296643944d86ae5f7fe0115fa34da2a90fda1f26d079259160ce632dc",
+   "fields": {
+    "policy_number": {
+     "printed": "CP91480362",
+     "norm": "CP91480362"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "15. 3. 2026",
+     "norm": "2026-03-15"
+    },
+    "policy_end": {
+     "printed": "27. 3. 2026",
+     "norm": "2026-03-27"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Félix Boška",
+       "norm": "Félix Boška"
+      },
+      "birth_number": {
+       "printed": "560210/8336",
+       "norm": "560210/8336"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "14,30 EUR",
+     "norm": "14.30"
+    },
+    "issue_date": {
+     "printed": "5. 2. 2026",
+     "norm": "2026-02-05"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Félix Boška",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        106.3,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "560210/8336",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "7e2b809da7aad69c2626811a78658ee2df10ac18b4738082c64b6c2e39ff80a8",
+   "fields": {
+    "facility_name": {
+     "printed": "Akdeniz International Medical Centre",
+     "norm": "Akdeniz International Medical Centre"
+    },
+    "facility_country": {
+     "printed": "Türkiye",
+     "norm": "TR"
+    },
+    "patient_name": {
+     "printed": "Félix Boška",
+     "norm": "Félix Boška"
+    },
+    "patient_birth_date": {
+     "printed": "10/02/1956",
+     "norm": "1956-02-10"
+    },
+    "visit_date": {
+     "printed": "23/03/2026",
+     "norm": "2026-03-23"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Sprain of the ankle",
+     "norm": "S93.4"
+    },
+    "icd10_code": {
+     "printed": "S93.4",
+     "norm": "S93.4"
+    },
+    "anamnesis": {
+     "printed": "No relevant previous illnesses. No regular medication.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment.",
+     "norm": "Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment."
+    },
+    "physician_name": {
+     "printed": "Öztürk Akçay",
+     "norm": "Öztürk Akçay"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Félix Boška",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        109.2,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Öztürk Akçay",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        126.3,
+        427.5,
+        174.2,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "69e3dbf59628b774607cd0a83ad1fdac5b473784eaf97339f1d50cf0c95abda4",
+   "fields": {
+    "invoice_number": {
+     "printed": "INV-2026-41425",
+     "norm": "INV-2026-41425"
+    },
+    "issue_date": {
+     "printed": "23/03/2026",
+     "norm": "2026-03-23"
+    },
+    "provider_name": {
+     "printed": "Akdeniz International Medical Centre",
+     "norm": "Akdeniz International Medical Centre"
+    },
+    "provider_country": {
+     "printed": "Türkiye",
+     "norm": "TR"
+    },
+    "patient_name": {
+     "printed": "Félix Boška",
+     "norm": "Félix Boška"
+    },
+    "service_date": {
+     "printed": "23/03/2026",
+     "norm": "2026-03-23"
+    },
+    "currency": {
+     "printed": "TRY",
+     "norm": "TRY"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Emergency room treatment",
+       "norm": "Emergency room treatment"
+      },
+      "amount": {
+       "printed": "6,613.52",
+       "norm": "6613.52"
+      }
+     },
+     {
+      "description": {
+       "printed": "CT scan",
+       "norm": "CT scan"
+      },
+      "amount": {
+       "printed": "23,385.02",
+       "norm": "23385.02"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratory tests",
+       "norm": "Laboratory tests"
+      },
+      "amount": {
+       "printed": "4,548.40",
+       "norm": "4548.40"
+      }
+     },
+     {
+      "description": {
+       "printed": "IV infusion",
+       "norm": "IV infusion"
+      },
+      "amount": {
+       "printed": "4,919.84",
+       "norm": "4919.84"
+      }
+     }
+    ],
+    "total": {
+     "printed": "39,466.78",
+     "norm": "39466.78"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Félix Boška",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        109.2,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D5",
+   "file": "D5_pharmacy_receipt.pdf",
+   "doc_type": "pharmacy_receipt",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "2033c328418375dae3b11eed042bffc4871a5c21289e6ec18c714f96a0390a54",
+   "fields": {
+    "receipt_number": {
+     "printed": "2965/11013",
+     "norm": "2965/11013"
+    },
+    "issue_date": {
+     "printed": "23/03/2026 16:47",
+     "norm": "2026-03-23"
+    },
+    "pharmacy_name": {
+     "printed": "Türk Pharmacy",
+     "norm": "Türk Pharmacy"
+    },
+    "currency": {
+     "printed": "TL",
+     "norm": "TRY"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Ibuprofen 400mg",
+       "norm": "Ibuprofen 400mg"
+      },
+      "amount": {
+       "printed": "621.05",
+       "norm": "621.05"
+      }
+     },
+     {
+      "description": {
+       "printed": "Rehydration salts",
+       "norm": "Rehydration salts"
+      },
+      "amount": {
+       "printed": "474.95",
+       "norm": "474.95"
+      }
+     },
+     {
+      "description": {
+       "printed": "Paracetamol 500mg",
+       "norm": "Paracetamol 500mg"
+      },
+      "amount": {
+       "printed": "358.16",
+       "norm": "358.16"
+      }
+     },
+     {
+      "description": {
+       "printed": "Elastic bandage",
+       "norm": "Elastic bandage"
+      },
+      "amount": {
+       "printed": "367.77",
+       "norm": "367.77"
+      }
+     }
+    ],
+    "total": {
+     "printed": "1,821.93",
+     "norm": "1821.93"
+    }
+   },
+   "pii": []
+  }
+ ],
+ "insured": {
+  "name": "Félix Boška",
+  "birth_number": "560210/8336",
+  "birth_date": "1956-02-10",
+  "address": "Závodníkova 641, 876 90 Malé Vozokany",
+  "phone": "+421 905 807 699",
+  "email": "felix.boska29@mail.example.sk",
+  "iban": "SK9856009838961130386114",
+  "id_card": "MA795839",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S93.4",
+  "claimed_event_date": "2026-03-16"
+ }
+}

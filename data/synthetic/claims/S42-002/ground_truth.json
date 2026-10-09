@@ -1,0 +1,497 @@
+{
+ "scenario_id": "S42-002",
+ "split": "dev",
+ "archetype": "extreme_sport",
+ "edge_cases": [
+  "exclusion_extreme_sport",
+  "foreign_currency",
+  "scanned_documents"
+ ],
+ "claim_type": "accident",
+ "product": "standard",
+ "policy_number": "CP24972279",
+ "duplicate_of": null,
+ "destination": "CH",
+ "trip": {
+  "start": "2026-07-16",
+  "end": "2026-07-25"
+ },
+ "event_date": "2026-07-21",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "senior",
+  "rule": "R6",
+  "total_payout_eur": "0.00",
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Frei",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "560.19",
+   "currency": "CHF",
+   "amount_eur": "595.95",
+   "doc_id": "D3",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A11.3"
+   ],
+   "exclusion": "extreme_sport",
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Jednorazové plnenie za zlomeninu",
+   "coverage": "accident",
+   "category": "fracture",
+   "amount": "0.00",
+   "currency": "EUR",
+   "amount_eur": "0.00",
+   "doc_id": "D2",
+   "verdict": "not_covered",
+   "clause_ids": [
+    "A11.3"
+   ],
+   "exclusion": "extreme_sport",
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": true,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "b924a1cdd1040fdb1899261f489bf0856c2d5716724292e7f967a576ca55dab0",
+   "fields": {
+    "policy_number": {
+     "printed": "CP24972279",
+     "norm": "CP24972279"
+    },
+    "insured_name": {
+     "printed": "Gabriela Salajová",
+     "norm": "Gabriela Salajová"
+    },
+    "insured_birth_number": {
+     "printed": "655817/8396",
+     "norm": "655817/8396"
+    },
+    "insured_address": {
+     "printed": "Skýcovská 7, 831 49 Trenčianske Mitice",
+     "norm": "Skýcovská 7, 831 49 Trenčianske Mitice"
+    },
+    "insured_phone": {
+     "printed": "+421 909 198 264",
+     "norm": "+421 909 198 264"
+    },
+    "insured_email": {
+     "printed": "gabriela.salajova66@mail.example.sk",
+     "norm": "gabriela.salajova66@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK65 3100 0000 0060 7596 2803",
+     "norm": "SK6531000000006075962803"
+    },
+    "destination_country": {
+     "printed": "Švajčiarsko",
+     "norm": "CH"
+    },
+    "trip_start": {
+     "printed": "16. 7. 2026",
+     "norm": "2026-07-16"
+    },
+    "trip_end": {
+     "printed": "25. 7. 2026",
+     "norm": "2026-07-25"
+    },
+    "event_date": {
+     "printed": "21. 7. 2026",
+     "norm": "2026-07-21"
+    },
+    "event_place": {
+     "printed": "Davos, Švajčiarsko",
+     "norm": "Davos, Švajčiarsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady",
+      "Úraz"
+     ],
+     "norm": [
+      "medical",
+      "accident"
+     ]
+    },
+    "event_description": {
+     "printed": "Pri tandemovom lete na paraglide sa mi zlomil dolný koniec vretennej kosti. Udalosť sa diala v Davos, v Švajčiarsku. Po úraze som bol hospitalizovaný a podstúpil lečbu.",
+     "norm": "Pri tandemovom lete na paraglide sa mi zlomil dolný koniec vretennej kosti. Udalosť sa diala v Davos, v Švajčiarsku. Po úraze som bol hospitalizovaný a podstúpil lečbu."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Frei",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Frei"
+      },
+      "amount": {
+       "printed": "560,19",
+       "norm": "560.19"
+      },
+      "currency": {
+       "printed": "CHF",
+       "norm": "CHF"
+      }
+     },
+     {
+      "description": {
+       "printed": "Jednorazové plnenie za zlomeninu",
+       "norm": "Jednorazové plnenie za zlomeninu"
+      },
+      "amount": {
+       "printed": null,
+       "norm": null
+      },
+      "currency": {
+       "printed": null,
+       "norm": null
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "4. 8. 2026",
+     "norm": "2026-08-04"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Gabriela Salajová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.5,
+        392.7,
+        182.9
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "655817/8396",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        202.6,
+        131.2,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Skýcovská 7",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        202.6,
+        371.6,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 909 198 264",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        236.7,
+        155.6,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "gabriela.salajova66@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        236.7,
+        492.2,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK65 3100 0000 0060 7596 2803",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        270.8,
+        235.7,
+        285.1
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de-ch",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "c48d7169defb9a85066d356e892577ce3206bcbbd5ea5e6382c1b65565253961",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Frei",
+     "norm": "Medizinisches Zentrum Frei"
+    },
+    "facility_country": {
+     "printed": "Schweiz",
+     "norm": "CH"
+    },
+    "patient_name": {
+     "printed": "Gabriela Salajová",
+     "norm": "Gabriela Salajová"
+    },
+    "patient_birth_date": {
+     "printed": "17.08.1965",
+     "norm": "1965-08-17"
+    },
+    "visit_date": {
+     "printed": "21.07.2026",
+     "norm": "2026-07-21"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Fraktur des distalen Radius",
+     "norm": "S52.5"
+    },
+    "icd10_code": {
+     "printed": "S52.5",
+     "norm": "S52.5"
+    },
+    "anamnesis": {
+     "printed": "Unfall beim Paragleiten (Tandemflug), Landung im Gelände.",
+     "norm": "extreme_sport"
+    },
+    "treatment": {
+     "printed": "Bei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verletzung im Bereich des distalen Radius mit eingeschränkter Beweglichkeit. Die Röntgenaufnahmen bestätigten eine Fraktur des distalen Radius. Es wurden keine Komplikationen wie Nerven- oder Gefäßschäden festgestellt. Die Patientin erhielt eine konservative Behandlung mit Gipsfixation im neutralen Verband. Eine nachfolgende Kontrolle nach vier Wochen ist empfohlen.",
+     "norm": "Bei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verletzung im Bereich des distalen Radius mit eingeschränkter Beweglichkeit. Die Röntgenaufnahmen bestätigten eine Fraktur des distalen Radius. Es wurden keine Komplikationen wie Nerven- oder Gefäßschäden festgestellt. Die Patientin erhielt eine konservative Behandlung mit Gipsfixation im neutralen Verband. Eine nachfolgende Kontrolle nach vier Wochen ist empfohlen."
+    },
+    "physician_name": {
+     "printed": "Volker Fuchs",
+     "norm": "Volker Fuchs"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Gabriela Salajová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        135.5,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Volker Fuchs",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        414.7,
+        193.9,
+        424.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "de",
+   "locale": "de-ch",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "f9a7865020bc6aa0e57a2b71adbd5a09899813d0e316beb17f13456a1bd81de0",
+   "fields": {
+    "invoice_number": {
+     "printed": "RE-2026-84748",
+     "norm": "RE-2026-84748"
+    },
+    "issue_date": {
+     "printed": "23.07.2026",
+     "norm": "2026-07-23"
+    },
+    "provider_name": {
+     "printed": "Medizinisches Zentrum Frei",
+     "norm": "Medizinisches Zentrum Frei"
+    },
+    "provider_country": {
+     "printed": "Schweiz",
+     "norm": "CH"
+    },
+    "patient_name": {
+     "printed": "Gabriela Salajová",
+     "norm": "Gabriela Salajová"
+    },
+    "service_date": {
+     "printed": "21.07.2026",
+     "norm": "2026-07-21"
+    },
+    "currency": {
+     "printed": "Fr.",
+     "norm": "CHF"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Notfallbehandlung",
+       "norm": "Notfallbehandlung"
+      },
+      "amount": {
+       "printed": "270.37",
+       "norm": "270.37"
+      }
+     },
+     {
+      "description": {
+       "printed": "Röntgen",
+       "norm": "Röntgen"
+      },
+      "amount": {
+       "printed": "118.29",
+       "norm": "118.29"
+      }
+     },
+     {
+      "description": {
+       "printed": "Gipsverband",
+       "norm": "Gipsverband"
+      },
+      "amount": {
+       "printed": "101.60",
+       "norm": "101.60"
+      }
+     },
+     {
+      "description": {
+       "printed": "Physiotherapie",
+       "norm": "Physiotherapie"
+      },
+      "amount": {
+       "printed": "69.93",
+       "norm": "69.93"
+      }
+     }
+    ],
+    "total": {
+     "printed": "560.19",
+     "norm": "560.19"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Gabriela Salajová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        135.5,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Gabriela Salajová",
+  "birth_number": "655817/8396",
+  "birth_date": "1965-08-17",
+  "address": "Skýcovská 7, 831 49 Trenčianske Mitice",
+  "phone": "+421 909 198 264",
+  "email": "gabriela.salajova66@mail.example.sk",
+  "iban": "SK6531000000006075962803",
+  "id_card": "CJ726227",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S52.5",
+  "activity": "paragliding"
+ }
+}

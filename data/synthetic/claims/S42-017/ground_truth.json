@@ -1,0 +1,369 @@
+{
+ "scenario_id": "S42-017",
+ "split": "dev",
+ "archetype": "missing_document",
+ "edge_cases": [
+  "foreign_currency",
+  "missing_document",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "premium",
+ "policy_number": "CP13895645",
+ "duplicate_of": null,
+ "destination": "CZ",
+ "trip": {
+  "start": "2026-03-02",
+  "end": "2026-03-14"
+ },
+ "event_date": "2026-03-09",
+ "expected": {
+  "status": "NEEDS_INFO",
+  "queue": null,
+  "rule": "R4",
+  "total_payout_eur": null,
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliklinika Horáková",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "25512.00",
+   "currency": "CZK",
+   "amount_eur": "1041.31",
+   "doc_id": "D3",
+   "verdict": "needs_review",
+   "clause_ids": [
+    "A13.3"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": true,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "0231633204c7deb36f53cce14d549c7e8ee8cd0e70930b202390897606f1e550",
+   "fields": {
+    "policy_number": {
+     "printed": "CP13895645",
+     "norm": "CP13895645"
+    },
+    "insured_name": {
+     "printed": "Zoltán Pavlíček",
+     "norm": "Zoltán Pavlíček"
+    },
+    "insured_birth_number": {
+     "printed": "841102/1894",
+     "norm": "841102/1894"
+    },
+    "insured_address": {
+     "printed": "Vlárska 969, 805 81 Hrčeľ",
+     "norm": "Vlárska 969, 805 81 Hrčeľ"
+    },
+    "insured_phone": {
+     "printed": "+421 922 309 432",
+     "norm": "+421 922 309 432"
+    },
+    "insured_email": {
+     "printed": "zoltan.pavlicek16@mail.example.sk",
+     "norm": "zoltan.pavlicek16@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK63 0900 0000 0019 0835 7275",
+     "norm": "SK6309000000001908357275"
+    },
+    "destination_country": {
+     "printed": "Česko",
+     "norm": "CZ"
+    },
+    "trip_start": {
+     "printed": "2. 3. 2026",
+     "norm": "2026-03-02"
+    },
+    "trip_end": {
+     "printed": "14. 3. 2026",
+     "norm": "2026-03-14"
+    },
+    "event_date": {
+     "printed": "9. 3. 2026",
+     "norm": "2026-03-09"
+    },
+    "event_place": {
+     "printed": "Špindlerův Mlýn, Česko",
+     "norm": "Špindlerův Mlýn, Česko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Špindlerův Mlýn, Česko, a skončil som s otrom mozgu. Po udalosti som sa obrátil na miestne zdravotníctvo, kde som bol podrobne prešetovaný. Diagnóza otrom mozgu bola potvrdená po vyšetrení.",
+     "norm": "Bol som v Špindlerův Mlýn, Česko, a skončil som s otrom mozgu. Po udalosti som sa obrátil na miestne zdravotníctvo, kde som bol podrobne prešetovaný. Diagnóza otrom mozgu bola potvrdená po vyšetrení."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliklinika Horáková",
+       "norm": "Liečebné náklady – Poliklinika Horáková"
+      },
+      "amount": {
+       "printed": "25 512,00",
+       "norm": "25512.00"
+      },
+      "currency": {
+       "printed": "CZK",
+       "norm": "CZK"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "30. 3. 2026",
+     "norm": "2026-03-30"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zoltán Pavlíček",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.5,
+        385.4,
+        182.9
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "841102/1894",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        202.6,
+        127.7,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Vlárska 969",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        202.6,
+        366.4,
+        217.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 922 309 432",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        236.7,
+        157.7,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "zoltan.pavlicek16@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        236.7,
+        483.5,
+        251.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK63 0900 0000 0019 0835 7275",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        270.8,
+        235.2,
+        285.1
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "cs",
+   "locale": "cs",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "5bc024aad942e63e16ef44828782e739fb6300c6d29c95dfcf06e1e5c5ec6870",
+   "fields": {
+    "invoice_number": {
+     "printed": "FV-2026-87900",
+     "norm": "FV-2026-87900"
+    },
+    "issue_date": {
+     "printed": "9. 3. 2026",
+     "norm": "2026-03-09"
+    },
+    "provider_name": {
+     "printed": "Poliklinika Horáková",
+     "norm": "Poliklinika Horáková"
+    },
+    "provider_country": {
+     "printed": "Česká republika",
+     "norm": "CZ"
+    },
+    "patient_name": {
+     "printed": "Zoltán Pavlíček",
+     "norm": "Zoltán Pavlíček"
+    },
+    "service_date": {
+     "printed": "9. 3. 2026",
+     "norm": "2026-03-09"
+    },
+    "currency": {
+     "printed": "CZK",
+     "norm": "CZK"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Ošetření na pohotovosti",
+       "norm": "Ošetření na pohotovosti"
+      },
+      "amount": {
+       "printed": "8 226,00",
+       "norm": "8226.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "CT vyšetření",
+       "norm": "CT vyšetření"
+      },
+      "amount": {
+       "printed": "11 309,00",
+       "norm": "11309.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratorní vyšetření",
+       "norm": "Laboratorní vyšetření"
+      },
+      "amount": {
+       "printed": "3 202,00",
+       "norm": "3202.00"
+      }
+     },
+     {
+      "description": {
+       "printed": "Infuzní terapie",
+       "norm": "Infuzní terapie"
+      },
+      "amount": {
+       "printed": "2 775,00",
+       "norm": "2775.00"
+      }
+     }
+    ],
+    "total": {
+     "printed": "25 512,00",
+     "norm": "25512.00"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zoltán Pavlíček",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        125.7,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Zoltán Pavlíček",
+  "birth_number": "841102/1894",
+  "birth_date": "1984-11-02",
+  "address": "Vlárska 969, 805 81 Hrčeľ",
+  "phone": "+421 922 309 432",
+  "email": "zoltan.pavlicek16@mail.example.sk",
+  "iban": "SK6309000000001908357275",
+  "id_card": "KA112027",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S06.0",
+  "missing": "medical_report"
+ }
+}

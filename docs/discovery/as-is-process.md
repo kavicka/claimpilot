@@ -17,6 +17,6 @@ Not validated with a handler yet; each step lists the question that would confir
 Hypotheses ClaimPilot builds on:
 - H1. Most handling time goes to steps 3–6 (reading, checking, calculating), not to the decision itself.
 - H2. Missing documents (step 3) cause the longest waits.
-- H3. Fraud signals are mostly mechanical (duplicate invoice, dates that do not line up, event days after
-  the policy started) and can be checked by rules.
+- H3. Fraud signals are mostly mechanical (duplicate invoice, dates that do not line up, an event days after
+  the policy was bought) and can be checked by rules.
 - H4. Handlers trust a pre-filled claim only if every value links back to where it was read.

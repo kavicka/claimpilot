@@ -1,0 +1,425 @@
+{
+ "scenario_id": "S42-042",
+ "split": "test",
+ "archetype": "luggage_delay_small",
+ "edge_cases": [],
+ "claim_type": "luggage",
+ "product": "standard",
+ "policy_number": "CP19673809",
+ "duplicate_of": null,
+ "destination": "GR",
+ "trip": {
+  "start": "2026-05-13",
+  "end": "2026-05-26"
+ },
+ "event_date": "2026-05-13",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fast_track",
+  "rule": "R8",
+  "total_payout_eur": "26.39",
+  "deductible_eur": "0.00",
+  "by_coverage": {
+   "delay": "26.39"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Nákup nevyhnutných vecí",
+   "coverage": "delay",
+   "category": "essentials",
+   "amount": "26.39",
+   "currency": "EUR",
+   "amount_eur": "26.39",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A8.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "0d8fa4705f36d10661e171bc641f20930e85d404d5ebd3b5aa74d4da2fa6d372",
+   "fields": {
+    "policy_number": {
+     "printed": "CP19673809",
+     "norm": "CP19673809"
+    },
+    "insured_name": {
+     "printed": "Zuzana Strýčeková",
+     "norm": "Zuzana Strýčeková"
+    },
+    "insured_birth_number": {
+     "printed": "795905/8470",
+     "norm": "795905/8470"
+    },
+    "insured_address": {
+     "printed": "Stuhová 8, 885 06 Kmeťovo",
+     "norm": "Stuhová 8, 885 06 Kmeťovo"
+    },
+    "insured_phone": {
+     "printed": "+421 917 181 607",
+     "norm": "+421 917 181 607"
+    },
+    "insured_email": {
+     "printed": "zuzana.strycekova90@posta.example.sk",
+     "norm": "zuzana.strycekova90@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK42 1111 0000 0088 0574 1128",
+     "norm": "SK4211110000008805741128"
+    },
+    "destination_country": {
+     "printed": "Grécko",
+     "norm": "GR"
+    },
+    "trip_start": {
+     "printed": "13. 5. 2026",
+     "norm": "2026-05-13"
+    },
+    "trip_end": {
+     "printed": "26. 5. 2026",
+     "norm": "2026-05-26"
+    },
+    "event_date": {
+     "printed": "13. 5. 2026",
+     "norm": "2026-05-13"
+    },
+    "event_place": {
+     "printed": "Rodos, Grécko",
+     "norm": "Rodos, Grécko"
+    },
+    "claim_types": {
+     "printed": [
+      "Oneskorenie batožiny"
+     ],
+     "norm": [
+      "delay"
+     ]
+    },
+    "event_description": {
+     "printed": "Batožina prišla s veľkým oneskorením, približne 16 hodín. Musel som si kúpiť hygienu a oblečenie, lebo som nemal žiadne vlastné.",
+     "norm": "Batožina prišla s veľkým oneskorením, približne 16 hodín. Musel som si kúpiť hygienu a oblečenie, lebo som nemal žiadne vlastné."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Nákup nevyhnutných vecí",
+       "norm": "Nákup nevyhnutných vecí"
+      },
+      "amount": {
+       "printed": "26,39",
+       "norm": "26.39"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "11. 6. 2026",
+     "norm": "2026-06-11"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Zuzana Strýčeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        389.1,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "795905/8470",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Stuhová 8",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        348.8,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 917 181 607",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "zuzana.strycekova90@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        484.3,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK42 1111 0000 0088 0574 1128",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_property_irregularity_report.pdf",
+   "doc_type": "property_irregularity_report",
+   "language": "en",
+   "locale": "en-iso",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "5de3b1bab2382450d9ea3de3ac52bfbfcf51e18420e9781bb3841b88bbc1b1d8",
+   "fields": {
+    "file_reference": {
+     "printed": "HERAY63008",
+     "norm": "HERAY63008"
+    },
+    "airline": {
+     "printed": "Adria Sky",
+     "norm": "Adria Sky"
+    },
+    "flight_number": {
+     "printed": "AY6943",
+     "norm": "AY6943"
+    },
+    "flight_date": {
+     "printed": "13 May 2026",
+     "norm": "2026-05-13"
+    },
+    "passenger_name": {
+     "printed": "STRYCEKOVA/ZUZANA MS",
+     "norm": "Zuzana Strýčeková"
+    },
+    "bag_tag": {
+     "printed": "AY403578",
+     "norm": "AY403578"
+    },
+    "status": {
+     "printed": "DELAYED",
+     "norm": "delayed"
+    },
+    "arrival_time": {
+     "printed": "13MAY26 1650",
+     "norm": "2026-05-13T16:50"
+    },
+    "delivery_time": {
+     "printed": "14MAY26 0926",
+     "norm": "2026-05-14T09:26"
+    },
+    "remarks": {
+     "printed": "Bag missing on arrival, located at transfer station and forwarded to the passenger's hotel.",
+     "norm": "Bag missing on arrival, located at transfer station and forwarded to the passenger's hotel."
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "STRYCEKOVA/ZUZANA MS",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        167.7,
+        171.5,
+        178.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Stuhová 8",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        264.8,
+        108.8,
+        275.6
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 917 181 607",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        264.8,
+        394.8,
+        275.6
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_pharmacy_receipt.pdf",
+   "doc_type": "pharmacy_receipt",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e43381b74bb4ce66180349662b6ff6555bbfa08903f324536470b5ffab0b973c",
+   "fields": {
+    "receipt_number": {
+     "printed": "8538/57428",
+     "norm": "8538/57428"
+    },
+    "issue_date": {
+     "printed": "13/05/2026 10:27",
+     "norm": "2026-05-13"
+    },
+    "pharmacy_name": {
+     "printed": "Haynes Mini Market",
+     "norm": "Haynes Mini Market"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Underwear",
+       "norm": "Underwear"
+      },
+      "amount": {
+       "printed": "21.53",
+       "norm": "21.53"
+      }
+     },
+     {
+      "description": {
+       "printed": "Toothbrush and toothpaste",
+       "norm": "Toothbrush and toothpaste"
+      },
+      "amount": {
+       "printed": "4.86",
+       "norm": "4.86"
+      }
+     }
+    ],
+    "total": {
+     "printed": "26.39",
+     "norm": "26.39"
+    }
+   },
+   "pii": []
+  }
+ ],
+ "insured": {
+  "name": "Zuzana Strýčeková",
+  "birth_number": "795905/8470",
+  "birth_date": "1979-09-05",
+  "address": "Stuhová 8, 885 06 Kmeťovo",
+  "phone": "+421 917 181 607",
+  "email": "zuzana.strycekova90@posta.example.sk",
+  "iban": "SK4211110000008805741128",
+  "id_card": "DH740387",
+  "czech": false
+ },
+ "facts": {
+  "delay_hours": 16
+ }
+}

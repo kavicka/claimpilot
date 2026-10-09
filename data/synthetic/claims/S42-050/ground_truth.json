@@ -1,0 +1,446 @@
+{
+ "scenario_id": "S42-050",
+ "split": "test",
+ "archetype": "missing_document",
+ "edge_cases": [
+  "missing_document",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP68716573",
+ "duplicate_of": null,
+ "destination": "GR",
+ "trip": {
+  "start": "2026-03-15",
+  "end": "2026-03-27"
+ },
+ "event_date": "2026-03-17",
+ "expected": {
+  "status": "NEEDS_INFO",
+  "queue": null,
+  "rule": "R4",
+  "total_payout_eur": null,
+  "deductible_eur": "0.00",
+  "by_coverage": {}
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Carpenter International Medical Centre",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "823.79",
+   "currency": "EUR",
+   "amount_eur": "823.79",
+   "doc_id": "D4",
+   "verdict": "needs_review",
+   "clause_ids": [
+    "A13.3"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "1f54fb021ae1cce9fb7046a068cf70b4e4e2a9c4c8aebc331c17be24b7209963",
+   "fields": {
+    "policy_number": {
+     "printed": "CP68716573",
+     "norm": "CP68716573"
+    },
+    "insured_name": {
+     "printed": "Eduard Bernolák",
+     "norm": "Eduard Bernolák"
+    },
+    "insured_birth_number": {
+     "printed": "720914/6406",
+     "norm": "720914/6406"
+    },
+    "insured_address": {
+     "printed": "Očovská 65, 978 14 Liptovská Porúbka",
+     "norm": "Očovská 65, 978 14 Liptovská Porúbka"
+    },
+    "insured_phone": {
+     "printed": "+421 900 987 695",
+     "norm": "+421 900 987 695"
+    },
+    "insured_email": {
+     "printed": "eduard.bernolak69@mail.example.sk",
+     "norm": "eduard.bernolak69@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK85 5600 0000 0098 8819 3787",
+     "norm": "SK8556000000009888193787"
+    },
+    "destination_country": {
+     "printed": "Grécko",
+     "norm": "GR"
+    },
+    "trip_start": {
+     "printed": "15. 3. 2026",
+     "norm": "2026-03-15"
+    },
+    "trip_end": {
+     "printed": "27. 3. 2026",
+     "norm": "2026-03-27"
+    },
+    "event_date": {
+     "printed": "17. 3. 2026",
+     "norm": "2026-03-17"
+    },
+    "event_place": {
+     "printed": "Rodos, Grécko",
+     "norm": "Rodos, Grécko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som na dovolenke na ostrove Rodos, keď som si poškodil hlavu. Po nehode som sa cítil zle a bol som hospitalizovaný. Diagnozovaný som s otrom mozgu.",
+     "norm": "Bol som na dovolenke na ostrove Rodos, keď som si poškodil hlavu. Po nehode som sa cítil zle a bol som hospitalizovaný. Diagnozovaný som s otrom mozgu."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Carpenter International Medical Centre",
+       "norm": "Liečebné náklady – Carpenter International Medical Centre"
+      },
+      "amount": {
+       "printed": "823,79",
+       "norm": "823.79"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "11. 4. 2026",
+     "norm": "2026-04-11"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Eduard Bernolák",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        378.2,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "720914/6406",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Očovská 65",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        356.7,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 900 987 695",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "eduard.bernolak69@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        467.7,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK85 5600 0000 0098 8819 3787",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "08e50816480bc524fd9ee06f5222b59ffa485f2717b7c872c92735edd1179741",
+   "fields": {
+    "policy_number": {
+     "printed": "CP68716573",
+     "norm": "CP68716573"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "15. 3. 2026",
+     "norm": "2026-03-15"
+    },
+    "policy_end": {
+     "printed": "27. 3. 2026",
+     "norm": "2026-03-27"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Eduard Bernolák",
+       "norm": "Eduard Bernolák"
+      },
+      "birth_number": {
+       "printed": "720914/6406",
+       "norm": "720914/6406"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "14,30 EUR",
+     "norm": "14.30"
+    },
+    "issue_date": {
+     "printed": "27. 2. 2026",
+     "norm": "2026-02-27"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Eduard Bernolák",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        128.2,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "720914/6406",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        328.0,
+        287.5,
+        384.0,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "1b814a4cbba32312dfec130eee496db152bb00f6eb55a747831e601b63de1114",
+   "fields": {
+    "facility_name": {
+     "printed": "Carpenter International Medical Centre",
+     "norm": "Carpenter International Medical Centre"
+    },
+    "facility_country": {
+     "printed": "Greece",
+     "norm": "GR"
+    },
+    "patient_name": {
+     "printed": "Eduard Bernolák",
+     "norm": "Eduard Bernolák"
+    },
+    "patient_birth_date": {
+     "printed": "14/09/1972",
+     "norm": "1972-09-14"
+    },
+    "visit_date": {
+     "printed": "17/03/2026",
+     "norm": "2026-03-17"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Concussion",
+     "norm": "S06.0"
+    },
+    "icd10_code": {
+     "printed": "S06.0",
+     "norm": "S06.0"
+    },
+    "anamnesis": {
+     "printed": "No relevant previous illnesses. No regular medication.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Patient presented with headache and dizziness following minor head trauma. Neurological examination was unremarkable, with no focal deficits or abnormal reflexes. Imaging confirmed no intracranial fracture or hemorrhage. Patient was advised to rest and avoid physical and cognitive exertion for 24 to 48 hours. Symptomatic treatment with acetaminophen was initiated, and follow-up was scheduled in 48 hours.",
+     "norm": "Patient presented with headache and dizziness following minor head trauma. Neurological examination was unremarkable, with no focal deficits or abnormal reflexes. Imaging confirmed no intracranial fracture or hemorrhage. Patient was advised to rest and avoid physical and cognitive exertion for 24 to 48 hours. Symptomatic treatment with acetaminophen was initiated, and follow-up was scheduled in 48 hours."
+    },
+    "physician_name": {
+     "printed": "Ashleigh Freeman",
+     "norm": "Ashleigh Freeman"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Eduard Bernolák",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        132.2,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Ashleigh Freeman",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        126.3,
+        414.7,
+        190.3,
+        424.0
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Eduard Bernolák",
+  "birth_number": "720914/6406",
+  "birth_date": "1972-09-14",
+  "address": "Očovská 65, 978 14 Liptovská Porúbka",
+  "phone": "+421 900 987 695",
+  "email": "eduard.bernolak69@mail.example.sk",
+  "iban": "SK8556000000009888193787",
+  "id_card": "MD967501",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S06.0",
+  "missing": "medical_invoice"
+ }
+}

@@ -1,0 +1,635 @@
+{
+ "scenario_id": "S42-044",
+ "split": "test",
+ "archetype": "medical_small",
+ "edge_cases": [],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP33776150",
+ "duplicate_of": null,
+ "destination": "HR",
+ "trip": {
+  "start": "2026-02-18",
+  "end": "2026-03-04"
+ },
+ "event_date": "2026-03-03",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fast_track",
+  "rule": "R8",
+  "total_payout_eur": "241.35",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "241.35"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliklinika Šarić",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "264.14",
+   "currency": "EUR",
+   "amount_eur": "264.14",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Lieky z lekárne",
+   "coverage": "medical",
+   "category": "medication",
+   "amount": "27.21",
+   "currency": "EUR",
+   "amount_eur": "27.21",
+   "doc_id": "D5",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "d4081b0cf4c44790ede1f0b71db681e71e1b4e39ed8451d4e9575a6edea684e3",
+   "fields": {
+    "policy_number": {
+     "printed": "CP33776150",
+     "norm": "CP33776150"
+    },
+    "insured_name": {
+     "printed": "Slavomír Horáček",
+     "norm": "Slavomír Horáček"
+    },
+    "insured_birth_number": {
+     "printed": "690518/7630",
+     "norm": "690518/7630"
+    },
+    "insured_address": {
+     "printed": "U Nového Dvora 67, 997 86 Lovosice",
+     "norm": "U Nového Dvora 67, 997 86 Lovosice"
+    },
+    "insured_phone": {
+     "printed": "+421 942 904 679",
+     "norm": "+421 942 904 679"
+    },
+    "insured_email": {
+     "printed": "slavomir.horacek95@example.com",
+     "norm": "slavomir.horacek95@example.com"
+    },
+    "iban": {
+     "printed": "SK06 1100 0000 0048 6423 6116",
+     "norm": "SK0611000000004864236116"
+    },
+    "destination_country": {
+     "printed": "Chorvátsko",
+     "norm": "HR"
+    },
+    "trip_start": {
+     "printed": "18. 2. 2026",
+     "norm": "2026-02-18"
+    },
+    "trip_end": {
+     "printed": "4. 3. 2026",
+     "norm": "2026-03-04"
+    },
+    "event_date": {
+     "printed": "3. 3. 2026",
+     "norm": "2026-03-03"
+    },
+    "event_place": {
+     "printed": "Dubrovnik, Chorvátsko",
+     "norm": "Dubrovnik, Chorvátsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Dubrovniku, keď sa mi podvrnul členkový kĺb. Poškodenie som si všimol okamžite a okamžite som sa obrátil na miestne zdravotníckeho pracovníka. Zdravotný problém som vyriešil v lokálnom zdravotníctve.",
+     "norm": "Bol som v Dubrovniku, keď sa mi podvrnul členkový kĺb. Poškodenie som si všimol okamžite a okamžite som sa obrátil na miestne zdravotníckeho pracovníka. Zdravotný problém som vyriešil v lokálnom zdravotníctve."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliklinika Šarić",
+       "norm": "Liečebné náklady – Poliklinika Šarić"
+      },
+      "amount": {
+       "printed": "264,14",
+       "norm": "264.14"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Lieky z lekárne",
+       "norm": "Lieky z lekárne"
+      },
+      "amount": {
+       "printed": "27,21",
+       "norm": "27.21"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "24. 3. 2026",
+     "norm": "2026-03-24"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Slavomír Horáček",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        382.8,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "690518/7630",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "U Nového Dvora 67",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        391.3,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 942 904 679",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "slavomir.horacek95@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        458.3,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK06 1100 0000 0048 6423 6116",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "3ed2c8d3b66580edf67f50f5c529d1a652084b099ea73142f431cf2998229d70",
+   "fields": {
+    "policy_number": {
+     "printed": "CP33776150",
+     "norm": "CP33776150"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "celoročné",
+     "norm": "annual"
+    },
+    "policy_start": {
+     "printed": "15. 2. 2026",
+     "norm": "2026-02-15"
+    },
+    "policy_end": {
+     "printed": "14. 2. 2027",
+     "norm": "2027-02-14"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Slavomír Horáček",
+       "norm": "Slavomír Horáček"
+      },
+      "birth_number": {
+       "printed": "690518/7630",
+       "norm": "690518/7630"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "49,00 EUR",
+     "norm": "49.00"
+    },
+    "issue_date": {
+     "printed": "14. 2. 2026",
+     "norm": "2026-02-14"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Slavomír Horáček",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        132.6,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "690518/7630",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        334.3,
+        287.5,
+        390.2,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "b92bdc33d4aa28f53314a36cf7cec8d18809f3023e9ca7af422c8194395230a8",
+   "fields": {
+    "facility_name": {
+     "printed": "Poliklinika Šarić",
+     "norm": "Poliklinika Šarić"
+    },
+    "facility_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Slavomír Horáček",
+     "norm": "Slavomír Horáček"
+    },
+    "patient_birth_date": {
+     "printed": "18.05.1969.",
+     "norm": "1969-05-18"
+    },
+    "visit_date": {
+     "printed": "03.03.2026.",
+     "norm": "2026-03-03"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Uganuće gležnja",
+     "norm": "S93.4"
+    },
+    "icd10_code": {
+     "printed": "S93.4",
+     "norm": "S93.4"
+    },
+    "anamnesis": {
+     "printed": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Pregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak.",
+     "norm": "Pregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak."
+    },
+    "physician_name": {
+     "printed": "Miroslav Karamarko",
+     "norm": "Miroslav Karamarko"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Slavomír Horáček",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        136.8,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Miroslav Karamarko",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.8,
+        427.5,
+        154.0,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "78d367aecc5648b004df65240060cb23a4249e8404cbdd3ed2a3c5e39fceb0dd",
+   "fields": {
+    "invoice_number": {
+     "printed": "R-2026-83210",
+     "norm": "R-2026-83210"
+    },
+    "issue_date": {
+     "printed": "04.03.2026.",
+     "norm": "2026-03-04"
+    },
+    "provider_name": {
+     "printed": "Poliklinika Šarić",
+     "norm": "Poliklinika Šarić"
+    },
+    "provider_country": {
+     "printed": "Hrvatska",
+     "norm": "HR"
+    },
+    "patient_name": {
+     "printed": "Slavomír Horáček",
+     "norm": "Slavomír Horáček"
+    },
+    "service_date": {
+     "printed": "03.03.2026.",
+     "norm": "2026-03-03"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Ambulantni pregled",
+       "norm": "Ambulantni pregled"
+      },
+      "amount": {
+       "printed": "158,59",
+       "norm": "158.59"
+      }
+     },
+     {
+      "description": {
+       "printed": "Rendgensko snimanje",
+       "norm": "Rendgensko snimanje"
+      },
+      "amount": {
+       "printed": "105,55",
+       "norm": "105.55"
+      }
+     }
+    ],
+    "total": {
+     "printed": "264,14",
+     "norm": "264.14"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Slavomír Horáček",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        136.8,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D5",
+   "file": "D5_pharmacy_receipt.pdf",
+   "doc_type": "pharmacy_receipt",
+   "language": "hr",
+   "locale": "hr",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "2dcaf8a3413526a8c9f3ac38c884911dc67608bac13c28d9ad13a5d1f4ac326d",
+   "fields": {
+    "receipt_number": {
+     "printed": "8565/69233",
+     "norm": "8565/69233"
+    },
+    "issue_date": {
+     "printed": "03.03.2026. 09:03",
+     "norm": "2026-03-03"
+    },
+    "pharmacy_name": {
+     "printed": "Ljekarna Hrženjak",
+     "norm": "Ljekarna Hrženjak"
+    },
+    "currency": {
+     "printed": "EUR",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Elastični zavoj",
+       "norm": "Elastični zavoj"
+      },
+      "amount": {
+       "printed": "10,14",
+       "norm": "10.14"
+      }
+     },
+     {
+      "description": {
+       "printed": "Sprej za nos",
+       "norm": "Sprej za nos"
+      },
+      "amount": {
+       "printed": "7,11",
+       "norm": "7.11"
+      }
+     },
+     {
+      "description": {
+       "printed": "Amoksicilin 1 g",
+       "norm": "Amoksicilin 1 g"
+      },
+      "amount": {
+       "printed": "9,96",
+       "norm": "9.96"
+      }
+     }
+    ],
+    "total": {
+     "printed": "27,21",
+     "norm": "27.21"
+    }
+   },
+   "pii": []
+  }
+ ],
+ "insured": {
+  "name": "Slavomír Horáček",
+  "birth_number": "690518/7630",
+  "birth_date": "1969-05-18",
+  "address": "U Nového Dvora 67, 997 86 Lovosice",
+  "phone": "+421 942 904 679",
+  "email": "slavomir.horacek95@example.com",
+  "iban": "SK0611000000004864236116",
+  "id_card": "HJ321169",
+  "czech": true
+ },
+ "facts": {
+  "diagnosis": "S93.4"
+ }
+}

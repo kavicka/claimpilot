@@ -1,0 +1,558 @@
+{
+ "scenario_id": "S42-057",
+ "split": "test",
+ "archetype": "date_inconsistency",
+ "edge_cases": [
+  "date_inconsistency",
+  "scanned_documents"
+ ],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP43635675",
+ "duplicate_of": null,
+ "destination": "ES",
+ "trip": {
+  "start": "2026-04-03",
+  "end": "2026-04-16"
+ },
+ "event_date": "2026-04-07",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fraud_review",
+  "rule": "R2",
+  "total_payout_eur": "799.93",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "799.93"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Merino International Medical Centre",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "849.93",
+   "currency": "EUR",
+   "amount_eur": "849.93",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "f1e1a5b39a4ef2f09b40c2d7f1ea59a13e737099b2b73ec9c1b2b2a031352104",
+   "fields": {
+    "policy_number": {
+     "printed": "CP43635675",
+     "norm": "CP43635675"
+    },
+    "insured_name": {
+     "printed": "Cyril Rusnak",
+     "norm": "Cyril Rusnak"
+    },
+    "insured_birth_number": {
+     "printed": "620726/2600",
+     "norm": "620726/2600"
+    },
+    "insured_address": {
+     "printed": "Kórejská 524, 880 98 Plavé Vozokany",
+     "norm": "Kórejská 524, 880 98 Plavé Vozokany"
+    },
+    "insured_phone": {
+     "printed": "+421 905 791 308",
+     "norm": "+421 905 791 308"
+    },
+    "insured_email": {
+     "printed": "cyril.rusnak5@mail.example.sk",
+     "norm": "cyril.rusnak5@mail.example.sk"
+    },
+    "iban": {
+     "printed": "SK14 5600 0000 0022 6037 2406",
+     "norm": "SK1456000000002260372406"
+    },
+    "destination_country": {
+     "printed": "Španielsko",
+     "norm": "ES"
+    },
+    "trip_start": {
+     "printed": "3. 4. 2026",
+     "norm": "2026-04-03"
+    },
+    "trip_end": {
+     "printed": "16. 4. 2026",
+     "norm": "2026-04-16"
+    },
+    "event_date": {
+     "printed": "3. 4. 2026",
+     "norm": "2026-04-03"
+    },
+    "event_place": {
+     "printed": "Barcelona, Španielsko",
+     "norm": "Barcelona, Španielsko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Počas cesty som sa v Barcelone podvrtil členkovému kĺbu. Už na mieste som sa obrátil na lekára, ktorý mi poskytol potrebnú pomoc. Následne som sa vyžiadal o ďalšie vyšetrenie v miestnej nemocnici.",
+     "norm": "Počas cesty som sa v Barcelone podvrtil členkovému kĺbu. Už na mieste som sa obrátil na lekára, ktorý mi poskytol potrebnú pomoc. Následne som sa vyžiadal o ďalšie vyšetrenie v miestnej nemocnici."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Merino International Medical Centre",
+       "norm": "Liečebné náklady – Merino International Medical Centre"
+      },
+      "amount": {
+       "printed": "849,93",
+       "norm": "849.93"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "27. 4. 2026",
+     "norm": "2026-04-27"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Cyril Rusnak",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        359.9,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "620726/2600",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Kórejská 524",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        361.7,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 905 791 308",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "cyril.rusnak5@mail.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        440.1,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK14 5600 0000 0022 6037 2406",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "95e1dbadd6d4254d906bf8c3d767fc941f39f1a08ae985f96fca44948ecce133",
+   "fields": {
+    "policy_number": {
+     "printed": "CP43635675",
+     "norm": "CP43635675"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "3. 4. 2026",
+     "norm": "2026-04-03"
+    },
+    "policy_end": {
+     "printed": "16. 4. 2026",
+     "norm": "2026-04-16"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Cyril Rusnak",
+       "norm": "Cyril Rusnak"
+      },
+      "birth_number": {
+       "printed": "620726/2600",
+       "norm": "620726/2600"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "15,40 EUR",
+     "norm": "15.40"
+    },
+    "issue_date": {
+     "printed": "22. 3. 2026",
+     "norm": "2026-03-22"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Cyril Rusnak",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        110.8,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "620726/2600",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        324.9,
+        287.5,
+        380.8,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "en",
+   "locale": "en",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "86265ee1d23124ce8a17f8e319da5936ac000cc9f47abd7ea7d17dd807b1240c",
+   "fields": {
+    "facility_name": {
+     "printed": "Merino International Medical Centre",
+     "norm": "Merino International Medical Centre"
+    },
+    "facility_country": {
+     "printed": "Spain",
+     "norm": "ES"
+    },
+    "patient_name": {
+     "printed": "Cyril Rusnak",
+     "norm": "Cyril Rusnak"
+    },
+    "patient_birth_date": {
+     "printed": "26/07/1962",
+     "norm": "1962-07-26"
+    },
+    "visit_date": {
+     "printed": "07/04/2026",
+     "norm": "2026-04-07"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Sprain of the ankle",
+     "norm": "S93.4"
+    },
+    "icd10_code": {
+     "printed": "S93.4",
+     "norm": "S93.4"
+    },
+    "anamnesis": {
+     "printed": "No relevant previous illnesses. No regular medication.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment.",
+     "norm": "Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment."
+    },
+    "physician_name": {
+     "printed": "Macario Vara",
+     "norm": "Macario Vara"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Cyril Rusnak",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        113.8,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Macario Vara",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        126.3,
+        427.5,
+        173.1,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "en",
+   "locale": "en",
+   "scan": true,
+   "scan_dpi": 170,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "85b0d65a64fcc39bec8adf763e0fd1670fd35c76ffe33202f8829f2880e028d4",
+   "fields": {
+    "invoice_number": {
+     "printed": "INV-2026-23439",
+     "norm": "INV-2026-23439"
+    },
+    "issue_date": {
+     "printed": "09/04/2026",
+     "norm": "2026-04-09"
+    },
+    "provider_name": {
+     "printed": "Merino International Medical Centre",
+     "norm": "Merino International Medical Centre"
+    },
+    "provider_country": {
+     "printed": "Spain",
+     "norm": "ES"
+    },
+    "patient_name": {
+     "printed": "Cyril Rusnak",
+     "norm": "Cyril Rusnak"
+    },
+    "service_date": {
+     "printed": "07/04/2026",
+     "norm": "2026-04-07"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Emergency room treatment",
+       "norm": "Emergency room treatment"
+      },
+      "amount": {
+       "printed": "140.55",
+       "norm": "140.55"
+      }
+     },
+     {
+      "description": {
+       "printed": "CT scan",
+       "norm": "CT scan"
+      },
+      "amount": {
+       "printed": "497.94",
+       "norm": "497.94"
+      }
+     },
+     {
+      "description": {
+       "printed": "Laboratory tests",
+       "norm": "Laboratory tests"
+      },
+      "amount": {
+       "printed": "99.18",
+       "norm": "99.18"
+      }
+     },
+     {
+      "description": {
+       "printed": "IV infusion",
+       "norm": "IV infusion"
+      },
+      "amount": {
+       "printed": "112.26",
+       "norm": "112.26"
+      }
+     }
+    ],
+    "total": {
+     "printed": "849.93",
+     "norm": "849.93"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Cyril Rusnak",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.2,
+        114.6,
+        145.6
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Cyril Rusnak",
+  "birth_number": "620726/2600",
+  "birth_date": "1962-07-26",
+  "address": "Kórejská 524, 880 98 Plavé Vozokany",
+  "phone": "+421 905 791 308",
+  "email": "cyril.rusnak5@mail.example.sk",
+  "iban": "SK1456000000002260372406",
+  "id_card": "EL163738",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S93.4",
+  "claimed_event_date": "2026-04-03"
+ }
+}

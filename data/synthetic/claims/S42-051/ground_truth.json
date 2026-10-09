@@ -1,0 +1,534 @@
+{
+ "scenario_id": "S42-051",
+ "split": "test",
+ "archetype": "medical_small",
+ "edge_cases": [],
+ "claim_type": "medical",
+ "product": "basic",
+ "policy_number": "CP72962895",
+ "duplicate_of": null,
+ "destination": "IT",
+ "trip": {
+  "start": "2026-03-19",
+  "end": "2026-03-31"
+ },
+ "event_date": "2026-03-27",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "fast_track",
+  "rule": "R8",
+  "total_payout_eur": "175.34",
+  "deductible_eur": "50.00",
+  "by_coverage": {
+   "medical": "175.34"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Poliambulatorio Iannelli",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "225.34",
+   "currency": "EUR",
+   "amount_eur": "225.34",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e081ca058b548c085780b629af57ce47a1b7a436585f68f16b297faed22972c3",
+   "fields": {
+    "policy_number": {
+     "printed": "CP72962895",
+     "norm": "CP72962895"
+    },
+    "insured_name": {
+     "printed": "Antónia Dušeková",
+     "norm": "Antónia Dušeková"
+    },
+    "insured_birth_number": {
+     "printed": "575715/5910",
+     "norm": "575715/5910"
+    },
+    "insured_address": {
+     "printed": "Sadová 888, 830 57 Chminianska Nová Ves",
+     "norm": "Sadová 888, 830 57 Chminianska Nová Ves"
+    },
+    "insured_phone": {
+     "printed": "+421 910 225 702",
+     "norm": "+421 910 225 702"
+    },
+    "insured_email": {
+     "printed": "antonia.dusekova11@example.com",
+     "norm": "antonia.dusekova11@example.com"
+    },
+    "iban": {
+     "printed": "SK52 5200 0000 0014 8203 7773",
+     "norm": "SK5252000000001482037773"
+    },
+    "destination_country": {
+     "printed": "Taliansko",
+     "norm": "IT"
+    },
+    "trip_start": {
+     "printed": "19. 3. 2026",
+     "norm": "2026-03-19"
+    },
+    "trip_end": {
+     "printed": "31. 3. 2026",
+     "norm": "2026-03-31"
+    },
+    "event_date": {
+     "printed": "27. 3. 2026",
+     "norm": "2026-03-27"
+    },
+    "event_place": {
+     "printed": "Rimini, Taliansko",
+     "norm": "Rimini, Taliansko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady"
+     ],
+     "norm": [
+      "medical"
+     ]
+    },
+    "event_description": {
+     "printed": "Bol som v Rimini, Taliansko, kde som sa ocitol s akútnou infekciou horných dýchacích ciest. Počas pobytu som sa cítil zle a začal ma trápiť kašel a horečka. Preto som sa obrátil na lokálny zdravotnícky zariadenie.",
+     "norm": "Bol som v Rimini, Taliansko, kde som sa ocitol s akútnou infekciou horných dýchacích ciest. Počas pobytu som sa cítil zle a začal ma trápiť kašel a horečka. Preto som sa obrátil na lokálny zdravotnícky zariadenie."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Poliambulatorio Iannelli",
+       "norm": "Liečebné náklady – Poliambulatorio Iannelli"
+      },
+      "amount": {
+       "printed": "225,34",
+       "norm": "225.34"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "10. 4. 2026",
+     "norm": "2026-04-10"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Antónia Dušeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        384.7,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "575715/5910",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Sadová 888",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        356.9,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 910 225 702",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "antonia.dusekova11@example.com",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        462.0,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK52 5200 0000 0014 8203 7773",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "4825bb8e6eaab4ad29f301d74da34c1d4318780c10670a3f8a0c68c77c5f2c32",
+   "fields": {
+    "policy_number": {
+     "printed": "CP72962895",
+     "norm": "CP72962895"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Basic",
+     "norm": "basic"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "19. 3. 2026",
+     "norm": "2026-03-19"
+    },
+    "policy_end": {
+     "printed": "31. 3. 2026",
+     "norm": "2026-03-31"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Antónia Dušeková",
+       "norm": "Antónia Dušeková"
+      },
+      "birth_number": {
+       "printed": "575715/5910",
+       "norm": "575715/5910"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "14,30 EUR",
+     "norm": "14.30"
+    },
+    "issue_date": {
+     "printed": "4. 3. 2026",
+     "norm": "2026-03-04"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Antónia Dušeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        134.3,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "575715/5910",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        336.7,
+        287.5,
+        392.7,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "it",
+   "locale": "it",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "c395b7ee20e9983c082258457729c67b799f18f5bc5610d186a44549f6b84ee6",
+   "fields": {
+    "facility_name": {
+     "printed": "Poliambulatorio Iannelli",
+     "norm": "Poliambulatorio Iannelli"
+    },
+    "facility_country": {
+     "printed": "Italia",
+     "norm": "IT"
+    },
+    "patient_name": {
+     "printed": "Antónia Dušeková",
+     "norm": "Antónia Dušeková"
+    },
+    "patient_birth_date": {
+     "printed": "15/07/1957",
+     "norm": "1957-07-15"
+    },
+    "visit_date": {
+     "printed": "27/03/2026",
+     "norm": "2026-03-27"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Infezione acuta delle vie respiratorie superiori",
+     "norm": "J06.9"
+    },
+    "icd10_code": {
+     "printed": "J06.9",
+     "norm": "J06.9"
+    },
+    "anamnesis": {
+     "printed": "Nessuna patologia pregressa rilevante. Nessuna terapia cronica.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Esame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore.",
+     "norm": "Esame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore."
+    },
+    "physician_name": {
+     "printed": "Ignazio Venturi",
+     "norm": "Ignazio Venturi"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Antónia Dušeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        138.7,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Ignazio Venturi",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        82.5,
+        401.9,
+        134.9,
+        411.2
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "it",
+   "locale": "it",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "e08f6bb598623cf30d5a91c40de5fa1eea75239bf7c33fd06d63f25b7345c9c8",
+   "fields": {
+    "invoice_number": {
+     "printed": "FT-2026-70176",
+     "norm": "FT-2026-70176"
+    },
+    "issue_date": {
+     "printed": "28/03/2026",
+     "norm": "2026-03-28"
+    },
+    "provider_name": {
+     "printed": "Poliambulatorio Iannelli",
+     "norm": "Poliambulatorio Iannelli"
+    },
+    "provider_country": {
+     "printed": "Italia",
+     "norm": "IT"
+    },
+    "patient_name": {
+     "printed": "Antónia Dušeková",
+     "norm": "Antónia Dušeková"
+    },
+    "service_date": {
+     "printed": "27/03/2026",
+     "norm": "2026-03-27"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Visita ambulatoriale",
+       "norm": "Visita ambulatoriale"
+      },
+      "amount": {
+       "printed": "112,62",
+       "norm": "112.62"
+      }
+     },
+     {
+      "description": {
+       "printed": "Esami di laboratorio",
+       "norm": "Esami di laboratorio"
+      },
+      "amount": {
+       "printed": "112,72",
+       "norm": "112.72"
+      }
+     }
+    ],
+    "total": {
+     "printed": "225,34",
+     "norm": "225.34"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Antónia Dušeková",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        138.7,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Antónia Dušeková",
+  "birth_number": "575715/5910",
+  "birth_date": "1957-07-15",
+  "address": "Sadová 888, 830 57 Chminianska Nová Ves",
+  "phone": "+421 910 225 702",
+  "email": "antonia.dusekova11@example.com",
+  "iban": "SK5252000000001482037773",
+  "id_card": "AK194657",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "J06.9"
+ }
+}

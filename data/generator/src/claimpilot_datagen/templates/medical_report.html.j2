@@ -1,0 +1,16 @@
+{% extends "_layout.html.j2" %}
+{% block body %}
+<div class="head"><div><div class="logo">{{ facility_name }}</div><div class="muted">{{ city }}, {{ facility_country }}</div></div><div class="muted">{{ L.report }}</div></div>
+<h1>{{ L.report }}</h1>
+<table class="grid">
+<tr><td style="width:55%"><div class="label">{{ L.patient }}</div><div class="val">{{ patient_name }}</div></td>
+<td><div class="label">{{ L.born }}</div><div class="val">{{ patient_birth_date }}</div></td></tr>
+<tr><td><div class="label">{{ L.visit }}</div><div class="val">{{ visit_date }}</div></td>
+<td><div class="label">{{ L.discharge }}</div><div class="val">{{ discharge_date or '—' }}</div></td></tr>
+<tr><td><div class="label">{{ L.diagnosis }}</div><div class="val">{{ diagnosis }}</div></td>
+<td><div class="label">{{ L.icd }}</div><div class="val">{{ icd10_code }}</div></td></tr>
+</table>
+<h2>{{ L.anamnesis }}</h2><p>{{ anamnesis }}</p>
+<h2>{{ L.treatment }}</h2><p>{{ treatment }}</p>
+<div class="sign"><div>{{ L.physician }}: {{ physician_name }}</div><div>{{ L.signature }}</div></div>
+{% endblock %}

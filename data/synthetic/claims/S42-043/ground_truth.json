@@ -1,0 +1,590 @@
+{
+ "scenario_id": "S42-043",
+ "split": "test",
+ "archetype": "accident_fracture",
+ "edge_cases": [
+  "scanned_documents"
+ ],
+ "claim_type": "accident",
+ "product": "standard",
+ "policy_number": "CP55568701",
+ "duplicate_of": null,
+ "destination": "DE",
+ "trip": {
+  "start": "2026-05-19",
+  "end": "2026-05-25"
+ },
+ "event_date": "2026-05-21",
+ "expected": {
+  "status": "IN_REVIEW",
+  "queue": "standard",
+  "rule": "R9",
+  "total_payout_eur": "830.44",
+  "deductible_eur": "30.00",
+  "by_coverage": {
+   "medical": "530.44",
+   "accident": "300.00"
+  }
+ },
+ "items": [
+  {
+   "ref": "I1",
+   "description_sk": "Liečebné náklady – Medizinisches Zentrum Ruppert",
+   "coverage": "medical",
+   "category": "treatment",
+   "amount": "560.44",
+   "currency": "EUR",
+   "amount_eur": "560.44",
+   "doc_id": "D4",
+   "verdict": "covered",
+   "clause_ids": [
+    "A4.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  },
+  {
+   "ref": "I2",
+   "description_sk": "Jednorazové plnenie za zlomeninu",
+   "coverage": "accident",
+   "category": "fracture",
+   "amount": "0.00",
+   "currency": "EUR",
+   "amount_eur": "0.00",
+   "doc_id": "D3",
+   "verdict": "covered",
+   "clause_ids": [
+    "A6.1"
+   ],
+   "exclusion": null,
+   "valuables": false
+  }
+ ],
+ "documents": [
+  {
+   "doc_id": "D1",
+   "file": "D1_claim_form.pdf",
+   "doc_type": "claim_form",
+   "language": "sk",
+   "locale": "sk",
+   "scan": true,
+   "scan_dpi": 200,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "3d1d2ea45d09b40ca072383495c3678696f197a39db2f2433495dd01fbe3dfe3",
+   "fields": {
+    "policy_number": {
+     "printed": "CP55568701",
+     "norm": "CP55568701"
+    },
+    "insured_name": {
+     "printed": "Uršuľa Harvanová",
+     "norm": "Uršuľa Harvanová"
+    },
+    "insured_birth_number": {
+     "printed": "836009/9704",
+     "norm": "836009/9704"
+    },
+    "insured_address": {
+     "printed": "Podunajská 791, 915 34 Sielnica",
+     "norm": "Podunajská 791, 915 34 Sielnica"
+    },
+    "insured_phone": {
+     "printed": "+421 927 220 761",
+     "norm": "+421 927 220 761"
+    },
+    "insured_email": {
+     "printed": "ursula.harvanova78@posta.example.sk",
+     "norm": "ursula.harvanova78@posta.example.sk"
+    },
+    "iban": {
+     "printed": "SK84 6500 0000 0045 4989 7138",
+     "norm": "SK8465000000004549897138"
+    },
+    "destination_country": {
+     "printed": "Nemecko",
+     "norm": "DE"
+    },
+    "trip_start": {
+     "printed": "19. 5. 2026",
+     "norm": "2026-05-19"
+    },
+    "trip_end": {
+     "printed": "25. 5. 2026",
+     "norm": "2026-05-25"
+    },
+    "event_date": {
+     "printed": "21. 5. 2026",
+     "norm": "2026-05-21"
+    },
+    "event_place": {
+     "printed": "München, Nemecko",
+     "norm": "München, Nemecko"
+    },
+    "claim_types": {
+     "printed": [
+      "Liečebné náklady",
+      "Úraz"
+     ],
+     "norm": [
+      "medical",
+      "accident"
+     ]
+    },
+    "event_description": {
+     "printed": "Pri lyžovaní na zjazdovke v Münchenu som sa spadol a zlomil si kľúčnu kost. Na mieste udalosti som sa snažil o sebaobrany, ale zranenie bolo veľké. Som v nemocnici a čakám na ďalšie vyšetrenia.",
+     "norm": "Pri lyžovaní na zjazdovke v Münchenu som sa spadol a zlomil si kľúčnu kost. Na mieste udalosti som sa snažil o sebaobrany, ale zranenie bolo veľké. Som v nemocnici a čakám na ďalšie vyšetrenia."
+    },
+    "claimed_items": [
+     {
+      "description": {
+       "printed": "Liečebné náklady – Medizinisches Zentrum Ruppert",
+       "norm": "Liečebné náklady – Medizinisches Zentrum Ruppert"
+      },
+      "amount": {
+       "printed": "560,44",
+       "norm": "560.44"
+      },
+      "currency": {
+       "printed": "EUR",
+       "norm": "EUR"
+      }
+     },
+     {
+      "description": {
+       "printed": "Jednorazové plnenie za zlomeninu",
+       "norm": "Jednorazové plnenie za zlomeninu"
+      },
+      "amount": {
+       "printed": null,
+       "norm": null
+      },
+      "currency": {
+       "printed": null,
+       "norm": null
+      }
+     }
+    ],
+    "signature_date": {
+     "printed": "30. 5. 2026",
+     "norm": "2026-05-30"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Uršuľa Harvanová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        168.9,
+        383.8,
+        180.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "836009/9704",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        201.6,
+        116.5,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "ADDRESS",
+     "value": "Podunajská 791",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        201.6,
+        375.4,
+        213.2
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PHONE",
+     "value": "+421 927 220 761",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        234.3,
+        138.6,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "EMAIL",
+     "value": "ursula.harvanova78@posta.example.sk",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        303.6,
+        234.3,
+        477.7,
+        246.0
+       ]
+      }
+     ]
+    },
+    {
+     "type": "IBAN",
+     "value": "SK84 6500 0000 0045 4989 7138",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        267.1,
+        206.9,
+        278.7
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D2",
+   "file": "D2_policy_certificate.pdf",
+   "doc_type": "policy_certificate",
+   "language": "sk",
+   "locale": "sk",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "a0db09a59efd92463cb346c00c19f5da8602e0141586646e3160286ef6760c93",
+   "fields": {
+    "policy_number": {
+     "printed": "CP55568701",
+     "norm": "CP55568701"
+    },
+    "product_name": {
+     "printed": "Cestovné poistenie Standard",
+     "norm": "standard"
+    },
+    "policy_type": {
+     "printed": "jednorazové",
+     "norm": "single"
+    },
+    "policy_start": {
+     "printed": "19. 5. 2026",
+     "norm": "2026-05-19"
+    },
+    "policy_end": {
+     "printed": "25. 5. 2026",
+     "norm": "2026-05-25"
+    },
+    "insured_persons": [
+     {
+      "name": {
+       "printed": "Uršuľa Harvanová",
+       "norm": "Uršuľa Harvanová"
+      },
+      "birth_number": {
+       "printed": "836009/9704",
+       "norm": "836009/9704"
+      }
+     }
+    ],
+    "premium": {
+     "printed": "13,30 EUR",
+     "norm": "13.30"
+    },
+    "issue_date": {
+     "printed": "23. 4. 2026",
+     "norm": "2026-04-23"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Uršuľa Harvanová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.3,
+        287.5,
+        133.5,
+        298.5
+       ]
+      }
+     ]
+    },
+    {
+     "type": "BIRTH_NUMBER",
+     "value": "836009/9704",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        335.5,
+        287.5,
+        391.5,
+        298.5
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D3",
+   "file": "D3_medical_report.pdf",
+   "doc_type": "medical_report",
+   "language": "de",
+   "locale": "de",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "ff11c0337618ec2ccdb5addb0123eb9b7859a799849e2ddc399abea644bede7e",
+   "fields": {
+    "facility_name": {
+     "printed": "Medizinisches Zentrum Ruppert",
+     "norm": "Medizinisches Zentrum Ruppert"
+    },
+    "facility_country": {
+     "printed": "Deutschland",
+     "norm": "DE"
+    },
+    "patient_name": {
+     "printed": "Uršuľa Harvanová",
+     "norm": "Uršuľa Harvanová"
+    },
+    "patient_birth_date": {
+     "printed": "09.10.1983",
+     "norm": "1983-10-09"
+    },
+    "visit_date": {
+     "printed": "21.05.2026",
+     "norm": "2026-05-21"
+    },
+    "discharge_date": {
+     "printed": null,
+     "norm": null
+    },
+    "diagnosis": {
+     "printed": "Fraktur der Klavikula",
+     "norm": "S42.0"
+    },
+    "icd10_code": {
+     "printed": "S42.0",
+     "norm": "S42.0"
+    },
+    "anamnesis": {
+     "printed": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+     "norm": "none"
+    },
+    "treatment": {
+     "printed": "Bei der klinischen Untersuchung zeigte sich eine deutliche Schwellung und Druckschmerz am oberen Teil der rechten Schlüsselbeinregion. Die Röntgenaufnahmen bestätigten eine frakturierte Verletzung des Schlüsselbeins. Keine Komplikationen wie Nervenläsion oder Blutung wurden festgestellt. Die Behandlung erfolgte ambulant mit einer Schlinge und Schmerztherapie. Es wird eine Vorstellung bei einem Orthopäden innerhalb der nächsten Woche empfohlen.",
+     "norm": "Bei der klinischen Untersuchung zeigte sich eine deutliche Schwellung und Druckschmerz am oberen Teil der rechten Schlüsselbeinregion. Die Röntgenaufnahmen bestätigten eine frakturierte Verletzung des Schlüsselbeins. Keine Komplikationen wie Nervenläsion oder Blutung wurden festgestellt. Die Behandlung erfolgte ambulant mit einer Schlinge und Schmerztherapie. Es wird eine Vorstellung bei einem Orthopäden innerhalb der nächsten Woche empfohlen."
+    },
+    "physician_name": {
+     "printed": "Rouven Vollbrecht",
+     "norm": "Rouven Vollbrecht"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Uršuľa Harvanová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        146.7,
+        137.8,
+        158.4
+       ]
+      }
+     ]
+    },
+    {
+     "type": "PERSON",
+     "value": "Rouven Vollbrecht",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        147.9,
+        427.5,
+        212.8,
+        436.8
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "doc_id": "D4",
+   "file": "D4_medical_invoice.pdf",
+   "doc_type": "medical_invoice",
+   "language": "de",
+   "locale": "de",
+   "scan": false,
+   "scan_dpi": null,
+   "image_format": null,
+   "handwriting": false,
+   "injection": false,
+   "copy_of": null,
+   "reprint_of": null,
+   "pages": 1,
+   "sha256": "a8bd16218b6f146ae165316ded8523ff7fa88276f0993d3657bfdacfc58312ce",
+   "fields": {
+    "invoice_number": {
+     "printed": "RE-2026-85599",
+     "norm": "RE-2026-85599"
+    },
+    "issue_date": {
+     "printed": "21.05.2026",
+     "norm": "2026-05-21"
+    },
+    "provider_name": {
+     "printed": "Medizinisches Zentrum Ruppert",
+     "norm": "Medizinisches Zentrum Ruppert"
+    },
+    "provider_country": {
+     "printed": "Deutschland",
+     "norm": "DE"
+    },
+    "patient_name": {
+     "printed": "Uršuľa Harvanová",
+     "norm": "Uršuľa Harvanová"
+    },
+    "service_date": {
+     "printed": "21.05.2026",
+     "norm": "2026-05-21"
+    },
+    "currency": {
+     "printed": "€",
+     "norm": "EUR"
+    },
+    "line_items": [
+     {
+      "description": {
+       "printed": "Notfallbehandlung",
+       "norm": "Notfallbehandlung"
+      },
+      "amount": {
+       "printed": "162,66",
+       "norm": "162.66"
+      }
+     },
+     {
+      "description": {
+       "printed": "Röntgen",
+       "norm": "Röntgen"
+      },
+      "amount": {
+       "printed": "155,39",
+       "norm": "155.39"
+      }
+     },
+     {
+      "description": {
+       "printed": "Gipsverband",
+       "norm": "Gipsverband"
+      },
+      "amount": {
+       "printed": "149,69",
+       "norm": "149.69"
+      }
+     },
+     {
+      "description": {
+       "printed": "Physiotherapie",
+       "norm": "Physiotherapie"
+      },
+      "amount": {
+       "printed": "92,70",
+       "norm": "92.70"
+      }
+     }
+    ],
+    "total": {
+     "printed": "560,44",
+     "norm": "560.44"
+    }
+   },
+   "pii": [
+    {
+     "type": "PERSON",
+     "value": "Uršuľa Harvanová",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        57.5,
+        134.1,
+        137.8,
+        145.8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "insured": {
+  "name": "Uršuľa Harvanová",
+  "birth_number": "836009/9704",
+  "birth_date": "1983-10-09",
+  "address": "Podunajská 791, 915 34 Sielnica",
+  "phone": "+421 927 220 761",
+  "email": "ursula.harvanova78@posta.example.sk",
+  "iban": "SK8465000000004549897138",
+  "id_card": "AK534413",
+  "czech": false
+ },
+ "facts": {
+  "diagnosis": "S42.0",
+  "activity": "skiing"
+ }
+}
