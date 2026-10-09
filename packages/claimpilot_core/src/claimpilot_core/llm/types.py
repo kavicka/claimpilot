@@ -7,6 +7,10 @@ class ChatMessage(BaseModel):
     role: Literal["system", "user", "assistant", "tool"]
     content: str
     images: list[str] = Field(default_factory=list)  # base64 PNG/JPEG, local models only
+    tool_calls: list[dict[str, Any]] = Field(
+        default_factory=list
+    )  # assistant turns that call tools
+    tool_name: str | None = None  # tool result turns
 
 
 class ModelSpec(BaseModel):
@@ -42,6 +46,7 @@ class Usage(BaseModel):
 class LLMResponse(BaseModel):
     text: str
     thinking: str | None = None
+    tool_calls: list[dict[str, Any]] = Field(default_factory=list)
     model: str
     provider: str
     usage: Usage = Field(default_factory=Usage)

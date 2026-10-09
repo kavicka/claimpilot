@@ -1,0 +1,60 @@
+[
+ {
+  "source": "S42-006/D2",
+  "text": "=== Page 1 ===\nCestovná kancelária Horizont Tour, s. r. o.\nPotvrdenie o stornovaní zájazdu\nČÍSLO REZERVÁCIE 2026051 | DESTINÁCIA Chania, Grécko\nODCHOD 28. 7. 2026 | NÁVRAT 3. 8. 2026\nCESTUJÚCI <PERSON_1>\nCena a storno\nPoložka | Suma (EUR)\nCelková cena zájazdu | 1 502,00\nDátum stornovania: 11. 7. 2026\nStornovací poplatok | 1 051,40\nVýška stornovacieho poplatku je určená podľa všeobecných podmienok cestovnej kancelárie platných v deň rezervácie.",
+  "output": {
+   "booking_number": {
+    "value": "2026051",
+    "quote": "ČÍSLO REZERVÁCIE 2026051 | DESTINÁCIA Chania, Grécko",
+    "page": 1
+   },
+   "agency_name": {
+    "value": "Cestovná kancelária Horizont Tour, s. r. o.",
+    "quote": "Cestovná kancelária Horizont Tour, s. r. o.",
+    "page": 1
+   },
+   "traveler_names": {
+    "values": [
+     "<PERSON_1>"
+    ],
+    "quote": "CESTUJÚCI <PERSON_1>",
+    "page": 1
+   },
+   "destination": {
+    "value": "Chania, Grécko",
+    "quote": "ČÍSLO REZERVÁCIE 2026051 | DESTINÁCIA Chania, Grécko",
+    "page": 1
+   },
+   "trip_start": {
+    "value": "28. 7. 2026",
+    "quote": "ODCHOD 28. 7. 2026 | NÁVRAT 3. 8. 2026",
+    "page": 1
+   },
+   "trip_end": {
+    "value": "3. 8. 2026",
+    "quote": "ODCHOD 28. 7. 2026 | NÁVRAT 3. 8. 2026",
+    "page": 1
+   },
+   "total_price": {
+    "value": "1 502,00",
+    "quote": "Celková cena zájazdu | 1 502,00",
+    "page": 1
+   },
+   "currency": {
+    "value": "EUR",
+    "quote": "Položka | Suma (EUR)",
+    "page": 1
+   },
+   "cancellation_date": {
+    "value": "11. 7. 2026",
+    "quote": "Dátum stornovania: 11. 7. 2026",
+    "page": 1
+   },
+   "cancellation_fee": {
+    "value": "1 051,40",
+    "quote": "Stornovací poplatok | 1 051,40",
+    "page": 1
+   }
+  }
+ }
+]

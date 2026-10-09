@@ -2,10 +2,10 @@ SHELL := /bin/bash
 SEED ?= 42
 SUITE ?= all
 SPLIT ?= dev
-MODELS := qwen3:14b qwen3-vl:8b bge-m3 qwen3:4b-instruct qwen3:30b-a3b-instruct-2507-q4_K_M
+MODELS := qwen3:14b qwen3-vl:8b bge-m3 qwen3:4b-instruct qwen3:30b-a3b-instruct-2507-q4_K_M gemma3:12b
 
 .PHONY: help up up-obs down logs ps migrate worker api test test-db lint fmt typecheck check \
-        smoke data eval-fast eval compare vault-key models ui
+        smoke data eval-fast eval compare vault-key models ui seed mcp fewshot corrections
 
 help:  ## List targets
 	@grep -E '^[a-z-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-12s %s\n", $$1, $$2}'
@@ -77,3 +77,15 @@ models:  ## Pull the local models
 
 ui:  ## Review UI dev server on :4410
 	pnpm --dir ui dev
+
+seed:  ## Upload N synthetic dev claims through the api (N=5)
+	uv run claimpilot-eval seed --split dev --n $(or $(N),5)
+
+mcp:  ## Read-only MCP server on stdio (for Claude Code / Claude Desktop)
+	uv run claimpilot-mcp
+
+fewshot:  ## Rebuild extraction few-shot examples from dev
+	uv run claimpilot-eval fewshot
+
+corrections:  ## Export handler corrections as a dataset
+	uv run claimpilot-eval export-corrections

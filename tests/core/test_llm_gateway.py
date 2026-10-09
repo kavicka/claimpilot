@@ -170,7 +170,7 @@ async def test_answer_in_thinking_field_is_used_when_thinking_is_off(tmp_setting
 
 def test_spec_for_uses_step_config_and_overrides(tmp_settings):
     gw = LLMGateway(tmp_settings)
-    assert gw.spec_for("extraction").model == "qwen3:14b"
+    assert gw.spec_for("routing").model == "qwen3:14b"
     assert gw.spec_for("extraction").think is False
     over = LLMGateway(tmp_settings, overrides={"extraction": "gemma3:12b"})
     assert over.spec_for("extraction").model == "gemma3:12b"
@@ -187,3 +187,19 @@ def test_cassette_key_changes_with_model():
     )
     other = base.model_copy(update={"spec": ModelSpec(model="b")})
     assert cassette_key(base) != cassette_key(other)
+
+
+def test_an_image_and_its_hash_reference_share_a_cassette_key():
+    from claimpilot_core.llm.cassette import IMAGE_REF, cassette_key, image_digest
+    from claimpilot_core.llm.types import ChatMessage, LLMRequest, ModelSpec
+
+    def req(image: str) -> LLMRequest:
+        return LLMRequest(
+            step="extraction_vision",
+            spec=ModelSpec(model="qwen3-vl:8b"),
+            messages=[ChatMessage(role="user", content="read", images=[image])],
+        )
+
+    image = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk"
+    assert cassette_key(req(image)) == cassette_key(req(IMAGE_REF + image_digest(image)))
+    assert cassette_key(req(image)) != cassette_key(req(image + "AA"))

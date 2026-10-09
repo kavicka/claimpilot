@@ -15,12 +15,10 @@ from functools import lru_cache
 
 from claimpilot_core.logging import register_secret
 from claimpilot_core.pii.recognizers import pattern_recognizers
+from claimpilot_core.pii.tokens import TOKEN_PREFIX, TOKEN_RE, rehydrate
 
-TOKEN_PREFIX = {
-    "PERSON": "PERSON", "BIRTH_NUMBER": "RC", "IBAN": "IBAN", "PHONE": "PHONE",
-    "EMAIL_ADDRESS": "EMAIL", "ADDRESS": "ADDRESS", "ID_CARD": "ID", "LICENCE_PLATE": "PLATE",
-}  # fmt: skip
-TOKEN_RE = re.compile(r"<(PERSON|RC|IBAN|PHONE|EMAIL|ADDRESS|ID|PLATE)_\d+>")
+__all__ = ["TOKEN_RE", "ClaimRedactor", "Span", "fold", "rehydrate"]
+
 NER_MIN_SCORE = 0.75
 # Form labels and common nouns the NER model mistakes for names ("Suma Mena" is a table header).
 NOT_NAMES = {
@@ -152,6 +150,24 @@ class ClaimRedactor:
         self.entities: list[Entity] = []
         self._counters: dict[str, int] = {}
 
+    @classmethod
+    def from_mapping(
+        cls, mapping: dict[str, tuple[str, str]], ner: NerFn | None = transformer_ner
+    ) -> "ClaimRedactor":
+        """A redactor that continues a claim's token registry (from the vault)."""
+        r = cls(ner)
+        for token, (entity, value) in mapping.items():
+            r.entities.append(Entity(token, entity, value, _variants(entity, value)))
+            prefix, n = token[1:-1].rsplit("_", 1)
+            r._counters[prefix] = max(r._counters.get(prefix, 0), int(n))
+        return r
+
+    def tokenize(self, value: str) -> str:
+        """A value read from a page image: OCR may have missed it, so detect entities in the value
+        itself before replacing them."""
+        self.observe([value])
+        return self.redact(value)
+
     def _register(self, entity: str, value: str) -> None:
         value = value.strip()
         if entity == "PERSON":
@@ -210,7 +226,3 @@ class ClaimRedactor:
     def mapping(self) -> dict[str, tuple[str, str]]:
         """token -> (entity type, original value), for the vault."""
         return {e.token: (e.entity, e.value) for e in self.entities}
-
-
-def rehydrate(text: str, mapping: dict[str, str]) -> str:
-    return TOKEN_RE.sub(lambda m: mapping.get(m.group(0), m.group(0)), text)

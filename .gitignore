@@ -17,3 +17,4 @@ data/synthetic/claims/**/*.png
 data/storage/
 *.log
 data/cache/renders/
+data/corrections/

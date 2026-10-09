@@ -1,0 +1,59 @@
+[
+ {
+  "source": "S42-014/D5",
+  "text": "=== Page 1 ===\nLjekarna Hodak\nSplit\nRačun Broj računa 4228/57739 19.08.2026. 15:04\nIbuprofen 400 mg | 6,36\nElastični zavoj | 9,05\nParacetamol 500 mg | 6,60\nAmoksicilin 1 g | 19,48\nUkupno za platiti EUR\n41,49\nPDV uključen Hvala na kupnji",
+  "output": {
+   "receipt_number": {
+    "value": "4228/57739",
+    "quote": "Račun Broj računa 4228/57739 19.08.2026. 15:04",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "19.08.2026. 15:04",
+    "quote": "Račun Broj računa 4228/57739 19.08.2026. 15:04",
+    "page": 1
+   },
+   "pharmacy_name": {
+    "value": "Ljekarna Hodak",
+    "quote": "Ljekarna Hodak",
+    "page": 1
+   },
+   "currency": {
+    "value": "EUR",
+    "quote": "Ukupno za platiti EUR",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Ibuprofen 400 mg",
+     "amount": "6,36",
+     "quote": "Ibuprofen 400 mg | 6,36",
+     "page": 1
+    },
+    {
+     "description": "Elastični zavoj",
+     "amount": "9,05",
+     "quote": "Elastični zavoj | 9,05",
+     "page": 1
+    },
+    {
+     "description": "Paracetamol 500 mg",
+     "amount": "6,60",
+     "quote": "Paracetamol 500 mg | 6,60",
+     "page": 1
+    },
+    {
+     "description": "Amoksicilin 1 g",
+     "amount": "19,48",
+     "quote": "Amoksicilin 1 g | 19,48",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "41,49",
+    "quote": "41,49",
+    "page": 1
+   }
+  }
+ }
+]

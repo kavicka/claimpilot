@@ -109,3 +109,11 @@ def test_vault_round_trip_and_missing_key():
     assert v.decrypt(blob) == "905605/0003"
     with pytest.raises(VaultKeyMissingError):
         Vault("")
+
+
+def test_doctor_name_after_a_label_is_redacted_without_the_signature_words():
+    from claimpilot_core.pii.recognizers import LabeledNameRecognizer
+
+    text = "Behandelnde/r Ärztin/Arzt: Rouven Vollbrecht Unterschrift, Stempel"
+    found = [text[r.start : r.end] for r in LabeledNameRecognizer().analyze(text, ["PERSON"])]
+    assert found == ["Rouven Vollbrecht"]

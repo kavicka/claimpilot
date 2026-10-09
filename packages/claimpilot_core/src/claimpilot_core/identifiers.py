@@ -80,9 +80,23 @@ def generate_rodne_cislo(
 # --- IBAN -------------------------------------------------------------------------------------
 
 IBAN_LENGTHS = {
-    "SK": 24, "CZ": 24, "AT": 20, "DE": 22, "IT": 27, "HR": 21, "HU": 28, "PL": 28,
-    "SI": 19, "ES": 24, "FR": 27, "GR": 27, "CH": 21, "TR": 26, "GB": 22, "NL": 18,
-}  # fmt: skip
+    "SK": 24,
+    "CZ": 24,
+    "AT": 20,
+    "DE": 22,
+    "IT": 27,
+    "HR": 21,
+    "HU": 28,
+    "PL": 28,
+    "SI": 19,
+    "ES": 24,
+    "FR": 27,
+    "GR": 27,
+    "CH": 21,
+    "TR": 26,
+    "GB": 22,
+    "NL": 18,
+}
 
 SK_BANK_CODES = ["0200", "0900", "1100", "1111", "5600", "6500", "7500", "8330", "3100", "5200"]
 
@@ -113,3 +127,15 @@ def generate_sk_iban(rng: random.Random) -> str:
 def format_iban(iban: str) -> str:
     compact = iban.replace(" ", "")
     return " ".join(compact[i : i + 4] for i in range(0, len(compact), 4))
+
+
+# Countries whose IBAN is all digits after the country code, so OCR letter/digit mix-ups can be
+# undone before the checksum: "SKO3 6500..." (letter O) is "SK03 6500...".
+NUMERIC_BBAN = frozenset({"SK", "CZ", "AT", "DE", "HR", "HU", "PL", "SI", "TR"})
+
+
+def repair_iban_ocr(text: str) -> str:
+    compact = text.replace(" ", "")
+    if compact[:2] not in NUMERIC_BBAN:
+        return compact
+    return compact[:2] + compact[2:].translate(str.maketrans("OoIlSB", "001158"))

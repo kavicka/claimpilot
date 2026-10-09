@@ -9,13 +9,13 @@ defaults:
 
 steps:
   doc_type:          { model: "qwen3:4b-instruct", num_ctx: 8192 }
-  extraction:        { model: "qwen3:14b" }
+  extraction:        { model: "qwen3:30b-a3b-instruct-2507-q4_K_M" }  # same accuracy as 14b, 2.4x faster (MoE, 3B active)
   extraction_vision: { model: "qwen3-vl:8b" }
   routing:           { model: "qwen3:14b", num_ctx: 8192 }
   coverage_map:      { model: "qwen3:14b", num_ctx: 8192 }
   coverage_decide:   { model: "qwen3:14b" }
   summaries:         { model: "qwen3:30b-a3b-instruct-2507-q4_K_M" }
-  judge:             { model: "qwen3:30b-a3b-instruct-2507-q4_K_M" }
+  judge:             { model: "gemma3:12b" }  # another model family than the writer, so it does not grade its own texts
   submission:        { model: "qwen3:14b" }
   narrative:         { model: "qwen3:14b", temperature: 0.7, num_ctx: 4096 }
   smoke:             { model: "qwen3:14b", num_ctx: 4096 }

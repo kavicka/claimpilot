@@ -24,6 +24,7 @@ class Settings(BaseSettings):
     redis_url: str = "redis://127.0.0.1:6389/0"
     ollama_url: str = "http://127.0.0.1:11434"
     api_url: str = "http://127.0.0.1:4400"
+    intake_token: str = ""
     core_mock_url: str = "http://127.0.0.1:4401"
 
     storage_dir: Path = Field(default_factory=lambda: repo_root() / "data" / "storage")
@@ -37,6 +38,12 @@ class Settings(BaseSettings):
     # record: call the model and write a cassette; replay: read cassettes only, fail if
     # missing; off: call the model, write nothing.
     llm_cassette_mode: str = "off"
+
+    # Finished claims older than this are erased by the worker's daily purge job.
+    retention_days: int = 3650
+    # Scans and photos: "vision" reads page images with the local vision model (critical fields
+    # 97.6 % vs 81.1 % through OCR text on the dev scans, 2026-10-09); "text" uses the OCR text.
+    scan_path: str = "vision"
 
     langfuse_host: str = ""
     langfuse_public_key: str = ""

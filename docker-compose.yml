@@ -46,11 +46,18 @@ services:
       CLAIMPILOT_PROMPTS_DIR: /app/prompts
       CLAIMPILOT_PII_VAULT_KEY: ${CLAIMPILOT_PII_VAULT_KEY:-}
       CLAIMPILOT_CORE_MOCK_URL: http://core_mock:8000
+      CLAIMPILOT_DEMO_PASSWORD: ${CLAIMPILOT_DEMO_PASSWORD:-}
+      CLAIMPILOT_SESSION_SECRET: ${CLAIMPILOT_SESSION_SECRET:-}
+      CLAIMPILOT_INTAKE_TOKEN: ${CLAIMPILOT_INTAKE_TOKEN:-}
+      CLAIMPILOT_LANGFUSE_HOST: http://localhost:4420
+      CLAIMPILOT_MCP_TOKEN: ${CLAIMPILOT_MCP_TOKEN:-}
     ports:
       - "127.0.0.1:4400:8000"
     volumes:
       # Shared with the native worker, which reads uploads from the same directory.
       - ./data/storage:/data/storage
+      # Latest eval reports for the Evals page; written by the runner on the host.
+      - ./evals/reports:/app/evals/reports:ro
     depends_on:
       postgres:
         condition: service_healthy
@@ -68,6 +75,10 @@ services:
       dockerfile: services/core_mock/Dockerfile
     ports:
       - "127.0.0.1:4401:8000"
+    volumes:
+      # The core system's own data: the policy register and its product definitions.
+      - ./data/synthetic/policies.json:/app/data/policies.json:ro
+      - ./data/policies/products.yaml:/app/data/products.yaml:ro
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
       interval: 10s
@@ -80,6 +91,7 @@ services:
       dockerfile: services/mcp_server/Dockerfile
     environment:
       CLAIMPILOT_API_URL: http://api:8000
+      CLAIMPILOT_MCP_TOKEN: ${CLAIMPILOT_MCP_TOKEN:-}
     ports:
       - "127.0.0.1:4402:8000"
     depends_on:

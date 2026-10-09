@@ -21,6 +21,7 @@ from claimpilot_core.llm.cassette import CassetteMode, CassetteStore
 from claimpilot_core.llm.ollama import EventHook, OllamaClient
 from claimpilot_core.llm.prompts import Prompt, load_prompt
 from claimpilot_core.llm.types import ChatMessage, LLMRequest, LLMResponse, ModelSpec
+from claimpilot_core.observability import get_tracer
 from claimpilot_core.settings import Settings, get_settings
 
 log = structlog.get_logger(__name__)
@@ -109,12 +110,26 @@ class LLMGateway:
     async def complete(
         self, req: LLMRequest, *, tools: list[dict[str, Any]] | None = None
     ) -> LLMResponse:
-        cached = self.cassettes.load(req)
-        if cached is not None:
-            response = cached
-        else:
-            response, _ = await self.client.chat(req, tools=tools)
-            self.cassettes.save(req, response)
+        with get_tracer().generation(
+            name=f"llm:{req.step}",
+            model=req.spec.key,
+            prompt=req.prompt_id and f"{req.prompt_id}@{(req.prompt_hash or '')[:8]}",
+            messages=[m.model_dump() for m in req.messages],
+        ) as gen:
+            cached = self.cassettes.load(req, tools)
+            if cached is not None:
+                response = cached
+            else:
+                response, _ = await self.client.chat(req, tools=tools)
+                self.cassettes.save(req, response, tools)
+            gen.update(
+                output=response.text or response.tool_calls,
+                usage_details={
+                    "input": response.usage.tokens_in,
+                    "output": response.usage.tokens_out,
+                },
+                metadata={"cached": response.cached, "latency_ms": response.usage.latency_ms},
+            )
         calls = _calls.get()
         if calls is not None:
             calls.append(
@@ -216,10 +231,32 @@ class LLMGateway:
         return Generation(response.text.strip(), response, prompt, req.spec)
 
     async def embed(self, texts: list[str], *, batch: int = 32) -> list[list[float]]:
-        out: list[list[float]] = []
-        for i in range(0, len(texts), batch):
-            out.extend(await self.client.embed(self.embedding_model, texts[i : i + batch]))
-        return out
+        """Embeddings, cached per text like cassettes so retrieval evals replay without a model."""
+        import hashlib
+
+        model = self.embedding_model
+        folder = self.settings.cassettes_dir / "embeddings" / model.replace(":", "_")
+        mode = self.cassettes.mode
+        out: list[list[float] | None] = [None] * len(texts)
+        todo: list[int] = []
+        for i, text in enumerate(texts):
+            path = folder / f"{hashlib.sha256(text.encode()).hexdigest()[:32]}.json"
+            if mode in (CassetteMode.REPLAY, CassetteMode.AUTO) and path.exists():
+                out[i] = json.loads(path.read_text("utf-8"))
+            elif mode is CassetteMode.REPLAY:
+                raise LookupError(f"no embedding cassette for {text[:60]!r}")
+            else:
+                todo.append(i)
+        for start in range(0, len(todo), batch):
+            idx = todo[start : start + batch]
+            vectors = await self.client.embed(model, [texts[i] for i in idx])
+            for i, vec in zip(idx, vectors, strict=True):
+                out[i] = vec
+                if mode in (CassetteMode.RECORD, CassetteMode.AUTO):
+                    path = folder / f"{hashlib.sha256(texts[i].encode()).hexdigest()[:32]}.json"
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_text(json.dumps([round(x, 6) for x in vec]), "utf-8")
+        return [v for v in out if v is not None]
 
 
 def dumps(value: Any) -> str:

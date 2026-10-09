@@ -1,0 +1,200 @@
+[
+ {
+  "source": "S42-026/D1",
+  "text": "=== Page 1 ===\nVzorová poisťovňa, a. s.\nHlásenie poistnej udalosti z cestovného poistenia\n1. Poistený\nČÍSLO POISTNEJ ZMLUVY\nCP71308842\nMENO A PRIEZVISKO\n<PERSON_1>\nRODNÉ ČÍSLO\n<RC_1>\nADRESA\n<ADDRESS_1>, 837 84 Ráztočno\nTELEFÓN\n<PHONE_1>\nE-MAIL\n<EMAIL_1>\nIBAN NA VÝPLATU POISTNÉHO PLNENIA\n<IBAN_1>\n2. Cesta a udalosť\nKRAJINA CESTY\nTurecko\nDÁTUM VZNIKU UDALOSTI\n21. 4. 2026\nDRUH UDALOSTI\nLiečebné náklady Úraz Batožina X Oneskorenie batožiny\nCESTA DO\n3. 5. 2026\nStorno cesty\nPOPIS UDALOSTI\nBatožina prišla s veľkým oneskorením, asi 35 hodín. Musel som si kúpiť hygienu a oblečenie, pretože ma batožina nedostala.\nCESTA OD\n21. 4. 2026\nMIESTO VZNIKU UDALOSTI\nAntalya, Turecko\n3. Uplatňované náklady a veci\nPopis | Suma | Mena\nNákup nevyhnutných vecí | 1 949,24 | TRY\nNákup nevyhnutných vecí | 2 451,21 | TRY\nVyhlasujem, že všetky údaje sú pravdivé a úplné. Beriem na vedomie, že poisťovňa spracúva moje osobné údaje na účel likvidácie poistnej udalosti.\nDátum: 21. 5. 2026\nPodpis poisteného",
+  "output": {
+   "policy_number": {
+    "value": "CP71308842",
+    "quote": "CP71308842",
+    "page": 1
+   },
+   "insured_name": {
+    "value": "<PERSON_1>",
+    "quote": "<PERSON_1>",
+    "page": 1
+   },
+   "insured_birth_number": {
+    "value": "<RC_1>",
+    "quote": "<RC_1>",
+    "page": 1
+   },
+   "insured_address": {
+    "value": "<ADDRESS_1>, 837 84 Ráztočno",
+    "quote": "<ADDRESS_1>, 837 84 Ráztočno",
+    "page": 1
+   },
+   "insured_phone": {
+    "value": "<PHONE_1>",
+    "quote": "<PHONE_1>",
+    "page": 1
+   },
+   "insured_email": {
+    "value": "<EMAIL_1>",
+    "quote": "<EMAIL_1>",
+    "page": 1
+   },
+   "iban": {
+    "value": "<IBAN_1>",
+    "quote": "<IBAN_1>",
+    "page": 1
+   },
+   "destination_country": {
+    "value": "Turecko",
+    "quote": "Turecko",
+    "page": 1
+   },
+   "trip_start": {
+    "value": "21. 4. 2026",
+    "quote": "21. 4. 2026",
+    "page": 1
+   },
+   "trip_end": {
+    "value": "3. 5. 2026",
+    "quote": "3. 5. 2026",
+    "page": 1
+   },
+   "event_date": {
+    "value": "21. 4. 2026",
+    "quote": "21. 4. 2026",
+    "page": 1
+   },
+   "event_place": {
+    "value": "Antalya, Turecko",
+    "quote": "Antalya, Turecko",
+    "page": 1
+   },
+   "claim_types": {
+    "values": [
+     "Oneskorenie batožiny"
+    ],
+    "quote": "Liečebné náklady Úraz Batožina X Oneskorenie batožiny",
+    "page": 1
+   },
+   "event_description": {
+    "value": "Batožina prišla s veľkým oneskorením, asi 35 hodín. Musel som si kúpiť hygienu a oblečenie, pretože ma batožina nedostala.",
+    "quote": "Batožina prišla s veľkým oneskorením, asi 35 hodín. Musel som si kúpiť hygienu a oblečenie, pretože ma batožina nedostala.",
+    "page": 1
+   },
+   "claimed_items": [
+    {
+     "description": "Nákup nevyhnutných vecí",
+     "amount": "1 949,24",
+     "currency": "TRY",
+     "quote": "Nákup nevyhnutných vecí | 1 949,24 | TRY",
+     "page": 1
+    },
+    {
+     "description": "Nákup nevyhnutných vecí",
+     "amount": "2 451,21",
+     "currency": "TRY",
+     "quote": "Nákup nevyhnutných vecí | 1 949,24 | TRY",
+     "page": 1
+    }
+   ],
+   "signature_date": {
+    "value": "21. 5. 2026",
+    "quote": "Dátum: 21. 5. 2026",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-004/D1",
+  "text": "=== Page 1 ===\nVzorová poisťovňa, a. s.\nHlásenie poistnej udalosti z cestovného poistenia\n1. Poistený\nHlásenie poistnej udalosti Cestovné poistenie\nČÍSLO POISTNEJ ZMLUVY\nCP51837852\nRODNÉ ČÍSLO\n<RC_1>\nTELEFÓN\n<PHONE_1>\nIBAN NA VÝPLATU POISTNÉHO PLNENIA\n<IBAN_1>\n2. Cesta a udalosť\nKRAJINA CESTY\nUSA\nDÁTUM VZNIKU UDALOSTI\n27. 4. 2026\nDRUH UDALOSTI\nX Liečebné náklady Úraz Batožina Oneskorenie batožiny\nMENO A PRIEZVISKO\n<PERSON_1>\nADRESA\n<ADDRESS_1>, 832 11 Láb\nE-MAIL\n<EMAIL_1>\nCESTA DO\nCESTA OD\n23. 4. 2026\nMIESTO VZNIKU UDALOSTI\nMiami, USA\n1. 5. 2026\nStorno cesty\nPOPIS UDALOSTI\nBol som v Miami, USA, kde sa mi podvrhlo členkové kĺbo. Zdravotný problém som si vyriešil lokálne.\n3. Uplatňované náklady a veci\nPopis Suma Mena\nLiečebné náklady - Marquez International Medical Centre | 144,75 | USD\nLieky z lekárne | 43,92 | USD\nVyhlasujem, že všetky údaje sú pravdivé a úplné. Beriem na vedomie, že poisťovňa spracúva moje osobné údaje na účel likvidácie poistnej udalosti.\nDátum: 6. 5. 2026\nPodpis poisteného",
+  "output": {
+   "policy_number": {
+    "value": "CP51837852",
+    "quote": "CP51837852",
+    "page": 1
+   },
+   "insured_name": {
+    "value": "<PERSON_1>",
+    "quote": "<PERSON_1>",
+    "page": 1
+   },
+   "insured_birth_number": {
+    "value": "<RC_1>",
+    "quote": "<RC_1>",
+    "page": 1
+   },
+   "insured_address": {
+    "value": "<ADDRESS_1>, 832 11 Láb",
+    "quote": "<ADDRESS_1>, 832 11 Láb",
+    "page": 1
+   },
+   "insured_phone": {
+    "value": "<PHONE_1>",
+    "quote": "<PHONE_1>",
+    "page": 1
+   },
+   "insured_email": {
+    "value": "<EMAIL_1>",
+    "quote": "<EMAIL_1>",
+    "page": 1
+   },
+   "iban": {
+    "value": "<IBAN_1>",
+    "quote": "<IBAN_1>",
+    "page": 1
+   },
+   "destination_country": {
+    "value": "USA",
+    "quote": "USA",
+    "page": 1
+   },
+   "trip_start": {
+    "value": "23. 4. 2026",
+    "quote": "23. 4. 2026",
+    "page": 1
+   },
+   "trip_end": {
+    "value": "1. 5. 2026",
+    "quote": "1. 5. 2026",
+    "page": 1
+   },
+   "event_date": {
+    "value": "27. 4. 2026",
+    "quote": "27. 4. 2026",
+    "page": 1
+   },
+   "event_place": {
+    "value": "Miami, USA",
+    "quote": "Miami, USA",
+    "page": 1
+   },
+   "claim_types": {
+    "values": [
+     "Liečebné náklady"
+    ],
+    "quote": "X Liečebné náklady Úraz Batožina Oneskorenie batožiny",
+    "page": 1
+   },
+   "event_description": {
+    "value": "Bol som v Miami, USA, kde sa mi podvrhlo členkové kĺbo. Zdravotný problém som si vyriešil lokálne.",
+    "quote": "Bol som v Miami, USA, kde sa mi podvrhlo členkové kĺbo. Zdravotný problém som si vyriešil lokálne.",
+    "page": 1
+   },
+   "claimed_items": [
+    {
+     "description": "Liečebné náklady – Marquez International Medical Centre",
+     "amount": "144,75",
+     "currency": "USD",
+     "quote": "Liečebné náklady – Marquez International Medical Centre",
+     "page": 1
+    },
+    {
+     "description": "Lieky z lekárne",
+     "amount": "43,92",
+     "currency": "USD",
+     "quote": "Lieky z lekárne | 43,92 | USD",
+     "page": 1
+    }
+   ],
+   "signature_date": {
+    "value": "6. 5. 2026",
+    "quote": "Dátum: 6. 5. 2026",
+    "page": 1
+   }
+  }
+ }
+]

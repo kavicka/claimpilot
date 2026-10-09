@@ -41,6 +41,10 @@ class OllamaClient:
         out: dict[str, Any] = {"role": m.role, "content": m.content}
         if m.images:
             out["images"] = m.images
+        if m.tool_calls:
+            out["tool_calls"] = m.tool_calls
+        if m.tool_name:
+            out["tool_name"] = m.tool_name
         return out
 
     def chat_payload(self, req: LLMRequest, *, tools: list[dict[str, Any]] | None = None) -> dict:
@@ -84,6 +88,7 @@ class OllamaClient:
         response = LLMResponse(
             text=text,
             thinking=thinking,
+            tool_calls=message.get("tool_calls") or [],
             model=data.get("model", req.spec.model),
             provider=self.provider,
             usage=Usage(

@@ -1,0 +1,92 @@
+[
+ {
+  "source": "S42-018/D5",
+  "text": "=== Page 1 ===\nHançer Mini Market Alanya\nReceipt Receipt No. 2876/31465 13/04/2026 13:06\nUnderwear\n858.29\nT-shirt\n534.94\nTotal due TRY\n1,393.23\nVAT included Thank you for shopping with us",
+  "output": {
+   "receipt_number": {
+    "value": "2876/31465",
+    "quote": "Receipt Receipt No. 2876/31465 13/04/2026 13:06",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "13/04/2026 13:06",
+    "quote": "Receipt Receipt No. 2876/31465 13/04/2026 13:06",
+    "page": 1
+   },
+   "pharmacy_name": {
+    "value": "Hançer Mini Market",
+    "quote": "Hançer Mini Market Alanya",
+    "page": 1
+   },
+   "currency": {
+    "value": "TRY",
+    "quote": "Total due TRY",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Underwear",
+     "amount": "858.29",
+     "quote": "Underwear",
+     "page": 1
+    },
+    {
+     "description": "T-shirt",
+     "amount": "534.94",
+     "quote": "T-shirt",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "1,393.23",
+    "quote": "1,393.23",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-018/D4",
+  "text": "=== Page 1 ===\nDuran Mini Market\nAlanya\nReceipt Receipt No. 4908/26544 12/04/2026 16:42\nShower gel | 291.29\nDeodorant | 251.44\nTotal due TRY | 542.73\nVAT included Thank you for shopping with us",
+  "output": {
+   "receipt_number": {
+    "value": "4908/26544",
+    "quote": "Receipt Receipt No. 4908/26544 12/04/2026 16:42",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "12/04/2026 16:42",
+    "quote": "Receipt Receipt No. 4908/26544 12/04/2026 16:42",
+    "page": 1
+   },
+   "pharmacy_name": {
+    "value": "Duran Mini Market",
+    "quote": "Duran Mini Market",
+    "page": 1
+   },
+   "currency": {
+    "value": "TRY",
+    "quote": "Total due TRY | 542.73",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Shower gel",
+     "amount": "291.29",
+     "quote": "Shower gel | 291.29",
+     "page": 1
+    },
+    {
+     "description": "Deodorant",
+     "amount": "251.44",
+     "quote": "Deodorant | 251.44",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "542.73",
+    "quote": "Total due TRY | 542.73",
+    "page": 1
+   }
+  }
+ }
+]

@@ -1,0 +1,124 @@
+[
+ {
+  "source": "S42-025/D3",
+  "text": "=== Page 1 ===\nPoliklinika Veselá\nŠpindlerův Mlýn, Česká republika\nLékařská zpráva\nLékařská zpráva\nPACIENT <PERSON_1> | NAR. 3. 4.\nDATUM VYŠETŘENÍ / PŘIJETÍ 20. 3. 2026 | 1980\nPROPUŠTĚNÍ -\nDIAGNÓZA Akutní gastroenteritida | MKN-10 A09\nAnamnéza\nBez významných předchozích onemocnění. Trvalou medikaci neužívá.\nNález a léčba\nPři vyšetření byla potvrzena akutní gastroenteritida, přítomna byla bolest břicha, zvracení a průjem. Výsledky laboratorních testů ukázaly lehkou leukocytózi a zvýšené hodnoty CRP. Pacientovi byla doporučena hydratace, základní diéta a příjem léků proti průjmu. Byl doporučen odpočinek a sledování stavu. V případě horšení se má pacient obrátit na lékaře.\nLékař: <PERSON_2>\nPodpis, razítko",
+  "output": {
+   "facility_name": {
+    "value": "Poliklinika Veselá",
+    "quote": "Poliklinika Veselá",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Česká republika",
+    "quote": "Špindlerův Mlýn, Česká republika",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PACIENT <PERSON_1> | NAR. 3. 4.",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "3. 4. 1980",
+    "quote": "3. 4. 1980",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "20. 3. 2026",
+    "quote": "DATUM VYŠETŘENÍ / PŘIJETÍ 20. 3. 2026 | 1980",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Akutní gastroenteritida",
+    "quote": "DIAGNÓZA Akutní gastroenteritida | MKN-10 A09",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "A09",
+    "quote": "DIAGNÓZA Akutní gastroenteritida | MKN-10 A09",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Bez významných předchozích onemocnění. Trvalou medikaci neužívá.",
+    "quote": "Bez významných předchozích onemocnění. Trvalou medikaci neužívá.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "Při vyšetření byla potvrzena akutní gastroenteritida, přítomna byla bolest břicha, zvracení a průjem. Výsledky laboratorních testů ukázaly lehkou leukocytózi a zvýšené hodnoty CRP. Pacientovi byla doporučena hydratace, základní diéta a příjem léků proti průjmu. Byl doporučen odpočinek a sledování stavu. V případě horšení se má pacient obrátit na lékaře.",
+    "quote": "Při vyšetření byla potvrzena akutní gastroenteritida, přítomna byla bolest břicha, zvracení a průjem. Výsledky laboratorních testů ukázaly lehkou leukocytózi a ",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "<PERSON_2>",
+    "quote": "Lékař: <PERSON_2>",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-003/D2",
+  "text": "=== Page 1 ===\nPoliklinika Kašparová\nPraha, Česká republika Lékařská zpráva\nLékařská zpráva\nPACIENT <PERSON_1> | NAR. 28. 9. 1972\nDATUM VYŠETŘENÍ / PŘIJETÍ\n11. 1. 2026 | PROPUŠTĚNÍ -\nDIAGNÓZA\nMKN-10\nOtřes mozku | S06.0\nAnamnéza\nBez významných předchozích onemocnění. Trvalou medikaci neužívá.\nNález a léčba\nPacient při vyšetření prezentoval mírnou závratě, zhoršenou koncentraci a narušenou koordinaci. Neurologické vyšetření bylo v zásadě normální, žádné známky focálního poruchy. Výsledky neuroobrazového vyšetření nepotvrdily zlomeniny ani jiné strukturální změny. Pacient byl hospitalizován na dohled a doporučeno bylo odpočívat a omezit fyzickou i mentální zátěž. Doporučeno je sledovat stav pacienta a opakovat vyšetření po 24 hodinách.\nLékař: <PERSON_2>\nPodpis, razítko",
+  "output": {
+   "facility_name": {
+    "value": "Poliklinika Kašparová",
+    "quote": "Poliklinika Kašparová",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Česká republika",
+    "quote": "Praha, Česká republika Lékařská zpráva",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PACIENT <PERSON_1> | NAR. 28. 9. 1972",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "28. 9. 1972",
+    "quote": "PACIENT <PERSON_1> | NAR. 28. 9. 1972",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "11. 1. 2026",
+    "quote": "11. 1. 2026 | PROPUŠTĚNÍ -",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Otřes mozku",
+    "quote": "Otřes mozku | S06.0",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "S06.0",
+    "quote": "Otřes mozku | S06.0",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Bez významných předchozích onemocnění. Trvalou medikaci neužívá.",
+    "quote": "Bez významných předchozích onemocnění. Trvalou medikaci neužívá.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "Pacient při vyšetření prezentoval mírnou závratě, zhoršenou koncentraci a narušenou koordinaci. Neurologické vyšetření bylo v zásadě normální, žádné známky focálního poruchy. Výsledky neuroobrazového vyšetření nepotvrdily zlomeniny ani jiné strukturální změny. Pacient byl hospitalizován na dohled a doporučeno bylo odpočívat a omezit fyzickou i mentální zátěž. Doporučeno je sledovat stav pacienta a opakovat vyšetření po 24 hodinách.",
+    "quote": "Pacient při vyšetření prezentoval mírnou závratě, zhoršenou koncentraci a narušenou koordinaci. Neurologické vyšetření bylo v zásadě normální, žádné známky focá",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "<PERSON_2>",
+    "quote": "Lékař: <PERSON_2>",
+    "page": 1
+   }
+  }
+ }
+]

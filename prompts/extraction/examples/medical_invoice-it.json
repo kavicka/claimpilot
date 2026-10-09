@@ -1,0 +1,386 @@
+[
+ {
+  "source": "S42-012/D3",
+  "text": "=== Page 1 ===\nPoliambulatorio Donati\nRimini, Italia\nFATTURA\nFattura n. FT-2026-32029\nData: 08/02/2026\nPAZIENTE <PERSON_1>, nato/a il 08/08/1993 | PRESTAZIONE\n# | Prestazione | Importo (EUR)\n1 | Pronto soccorso | 209,40\n2 | Radiografia | 138,27\n3 | TAC | 332,55\nTotale da pagare | 680,22 EUR\nPagamento a vista.",
+  "output": {
+   "invoice_number": {
+    "value": "FT-2026-32029",
+    "quote": "Fattura n. FT-2026-32029",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "08/02/2026",
+    "quote": "Data: 08/02/2026",
+    "page": 1
+   },
+   "provider_name": {
+    "value": "Poliambulatorio Donati",
+    "quote": "Poliambulatorio Donati",
+    "page": 1
+   },
+   "provider_country": {
+    "value": "Italia",
+    "quote": "Rimini, Italia",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PAZIENTE <PERSON_1>, nato/a il 08/08/1993 | PRESTAZIONE",
+    "page": 1
+   },
+   "service_date": {
+    "value": "08/02/2026",
+    "quote": "Data: 08/02/2026",
+    "page": 1
+   },
+   "currency": {
+    "value": "EUR",
+    "quote": "# | Prestazione | Importo (EUR)",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Pronto soccorso",
+     "amount": "209,40",
+     "quote": "1 | Pronto soccorso | 209,40",
+     "page": 1
+    },
+    {
+     "description": "Radiografia",
+     "amount": "138,27",
+     "quote": "2 | Radiografia | 138,27",
+     "page": 1
+    },
+    {
+     "description": "TAC",
+     "amount": "332,55",
+     "quote": "3 | TAC | 332,55",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "680,22",
+    "quote": "Totale da pagare | 680,22 EUR",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-001/D4",
+  "text": "=== Page 1 ===\nOspedale Civile Schiavone\nRimini, Italia\nFATTURA\nFattura n. FT-2026-02504 Data: 02/08/2026\nPAZIENTE <PERSON_1>, nato/a il 29/11/1968 | DATA PRESTAZIONE 25/07/2026\n# | Prestazione | Importo (€)\n1 | Degenza, giornata 1 | 783,99\n2 | Degenza, giornata 2 | 783,99\n3 | Degenza, giornata 3 | 783,99\n4 | Degenza, giornata 4 | 783,99\n5 | Degenza, giornata 5 | 783,99\n6 | Degenza, giornata 6 | 783,99\n7 | Pronto soccorso | 137,34\n8 | TAC | 379,68\n9 | Esami di laboratorio | 102,86\n10 | Trasporto in ambulanza | 596,16\n11 | Esami di laboratorio | 14,86\n12 | Farmaci | 19,17\n13 | Esami di laboratorio | 41,84\n14 | Esami di laboratorio | 26,00\n15 | Elettrocardiogramma | 28,77\n16 | Terapia infusionale | 24,88\n17 | Terapia infusionale | 26,29\n18 | Terapia infusionale | 41,05\n19 | Esami di laboratorio | 33,64\n20 | Farmaci | 14,79\n21 | Farmaci | 8,00\n22 | Elettrocardiogramma | 20,85\n23 | Ecografia | 34,72\n24 | Terapia infusionale | 45,29\n25 | Esami di laboratorio | 20,97\n26 | Esami di laboratorio | 40,17\n27 | Elettrocardiogramma | 20,80\n28 | Farmaci | 21,74\n=== Page 2 ===\n# | Prestazione | Importo (€)\n29 | Ecografia | 58,80\n30 | Terapia infusionale | 26,38\n31 | Elettrocardiogramma | 23,57\n32 | Elettrocardiogramma | 18,10\n33 | Farmaci | 9,52\n34 | Ecografia | 46,43\n35 | Ecografia | 42,38\n36 | Ecografia | 41,31\n37 | Farmaci | 23,28\n38 | Farmaci | 14,34\n39 | Esami di laboratorio | 38,53\n40 | Esami di laboratorio | 18,43\n41 | Farmaci | 19,52\n42 | Elettrocardiogramma | 27,92\n43 | Elettrocardiogramma | 23,27\n44 | Elettrocardiogramma | 26,46\n45 | Ecografia | 58,23\nTotale da pagare | 6.920,28 €\nPagamento a vista.",
+  "output": {
+   "invoice_number": {
+    "value": "FT-2026-02504",
+    "quote": "Fattura n. FT-2026-02504 Data: 02/08/2026",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "02/08/2026",
+    "quote": "Fattura n. FT-2026-02504 Data: 02/08/2026",
+    "page": 1
+   },
+   "provider_name": {
+    "value": "Ospedale Civile Schiavone",
+    "quote": "Ospedale Civile Schiavone",
+    "page": 1
+   },
+   "provider_country": {
+    "value": "Italia",
+    "quote": "Rimini, Italia",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PAZIENTE <PERSON_1>, nato/a il 29/11/1968 | DATA PRESTAZIONE 25/07/2026",
+    "page": 1
+   },
+   "service_date": {
+    "value": "25/07/2026",
+    "quote": "PAZIENTE <PERSON_1>, nato/a il 29/11/1968 | DATA PRESTAZIONE 25/07/2026",
+    "page": 1
+   },
+   "currency": {
+    "value": "€",
+    "quote": "# | Prestazione | Importo (€)",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Degenza, giornata 1",
+     "amount": "783,99",
+     "quote": "1 | Degenza, giornata 1 | 783,99",
+     "page": 1
+    },
+    {
+     "description": "Degenza, giornata 2",
+     "amount": "783,99",
+     "quote": "2 | Degenza, giornata 2 | 783,99",
+     "page": 1
+    },
+    {
+     "description": "Degenza, giornata 3",
+     "amount": "783,99",
+     "quote": "3 | Degenza, giornata 3 | 783,99",
+     "page": 1
+    },
+    {
+     "description": "Degenza, giornata 4",
+     "amount": "783,99",
+     "quote": "4 | Degenza, giornata 4 | 783,99",
+     "page": 1
+    },
+    {
+     "description": "Degenza, giornata 5",
+     "amount": "783,99",
+     "quote": "5 | Degenza, giornata 5 | 783,99",
+     "page": 1
+    },
+    {
+     "description": "Degenza, giornata 6",
+     "amount": "783,99",
+     "quote": "6 | Degenza, giornata 6 | 783,99",
+     "page": 1
+    },
+    {
+     "description": "Pronto soccorso",
+     "amount": "137,34",
+     "quote": "7 | Pronto soccorso | 137,34",
+     "page": 1
+    },
+    {
+     "description": "TAC",
+     "amount": "379,68",
+     "quote": "8 | TAC | 379,68",
+     "page": 1
+    },
+    {
+     "description": "Esami di laboratorio",
+     "amount": "102,86",
+     "quote": "9 | Esami di laboratorio | 102,86",
+     "page": 1
+    },
+    {
+     "description": "Trasporto in ambulanza",
+     "amount": "596,16",
+     "quote": "10 | Trasporto in ambulanza | 596,16",
+     "page": 1
+    },
+    {
+     "description": "Esami di laboratorio",
+     "amount": "14,86",
+     "quote": "9 | Esami di laboratorio | 102,86",
+     "page": 1
+    },
+    {
+     "description": "Farmaci",
+     "amount": "19,17",
+     "quote": "12 | Farmaci | 19,17",
+     "page": 1
+    },
+    {
+     "description": "Esami di laboratorio",
+     "amount": "41,84",
+     "quote": "9 | Esami di laboratorio | 102,86",
+     "page": 1
+    },
+    {
+     "description": "Esami di laboratorio",
+     "amount": "26,00",
+     "quote": "9 | Esami di laboratorio | 102,86",
+     "page": 1
+    },
+    {
+     "description": "Elettrocardiogramma",
+     "amount": "28,77",
+     "quote": "15 | Elettrocardiogramma | 28,77",
+     "page": 1
+    },
+    {
+     "description": "Terapia infusionale",
+     "amount": "24,88",
+     "quote": "16 | Terapia infusionale | 24,88",
+     "page": 1
+    },
+    {
+     "description": "Terapia infusionale",
+     "amount": "26,29",
+     "quote": "16 | Terapia infusionale | 24,88",
+     "page": 1
+    },
+    {
+     "description": "Terapia infusionale",
+     "amount": "41,05",
+     "quote": "16 | Terapia infusionale | 24,88",
+     "page": 1
+    },
+    {
+     "description": "Esami di laboratorio",
+     "amount": "33,64",
+     "quote": "9 | Esami di laboratorio | 102,86",
+     "page": 1
+    },
+    {
+     "description": "Farmaci",
+     "amount": "14,79",
+     "quote": "12 | Farmaci | 19,17",
+     "page": 1
+    },
+    {
+     "description": "Farmaci",
+     "amount": "8,00",
+     "quote": "12 | Farmaci | 19,17",
+     "page": 1
+    },
+    {
+     "description": "Elettrocardiogramma",
+     "amount": "20,85",
+     "quote": "15 | Elettrocardiogramma | 28,77",
+     "page": 1
+    },
+    {
+     "description": "Ecografia",
+     "amount": "34,72",
+     "quote": "23 | Ecografia | 34,72",
+     "page": 1
+    },
+    {
+     "description": "Terapia infusionale",
+     "amount": "45,29",
+     "quote": "16 | Terapia infusionale | 24,88",
+     "page": 1
+    },
+    {
+     "description": "Esami di laboratorio",
+     "amount": "20,97",
+     "quote": "9 | Esami di laboratorio | 102,86",
+     "page": 1
+    },
+    {
+     "description": "Esami di laboratorio",
+     "amount": "40,17",
+     "quote": "9 | Esami di laboratorio | 102,86",
+     "page": 1
+    },
+    {
+     "description": "Elettrocardiogramma",
+     "amount": "20,80",
+     "quote": "15 | Elettrocardiogramma | 28,77",
+     "page": 1
+    },
+    {
+     "description": "Farmaci",
+     "amount": "21,74",
+     "quote": "12 | Farmaci | 19,17",
+     "page": 1
+    },
+    {
+     "description": "Ecografia",
+     "amount": "58,80",
+     "quote": "23 | Ecografia | 34,72",
+     "page": 1
+    },
+    {
+     "description": "Terapia infusionale",
+     "amount": "26,38",
+     "quote": "16 | Terapia infusionale | 24,88",
+     "page": 1
+    },
+    {
+     "description": "Elettrocardiogramma",
+     "amount": "23,57",
+     "quote": "15 | Elettrocardiogramma | 28,77",
+     "page": 1
+    },
+    {
+     "description": "Elettrocardiogramma",
+     "amount": "18,10",
+     "quote": "15 | Elettrocardiogramma | 28,77",
+     "page": 1
+    },
+    {
+     "description": "Farmaci",
+     "amount": "9,52",
+     "quote": "12 | Farmaci | 19,17",
+     "page": 1
+    },
+    {
+     "description": "Ecografia",
+     "amount": "46,43",
+     "quote": "23 | Ecografia | 34,72",
+     "page": 1
+    },
+    {
+     "description": "Ecografia",
+     "amount": "42,38",
+     "quote": "23 | Ecografia | 34,72",
+     "page": 1
+    },
+    {
+     "description": "Ecografia",
+     "amount": "41,31",
+     "quote": "23 | Ecografia | 34,72",
+     "page": 1
+    },
+    {
+     "description": "Farmaci",
+     "amount": "23,28",
+     "quote": "12 | Farmaci | 19,17",
+     "page": 1
+    },
+    {
+     "description": "Farmaci",
+     "amount": "14,34",
+     "quote": "12 | Farmaci | 19,17",
+     "page": 1
+    },
+    {
+     "description": "Esami di laboratorio",
+     "amount": "38,53",
+     "quote": "9 | Esami di laboratorio | 102,86",
+     "page": 1
+    },
+    {
+     "description": "Esami di laboratorio",
+     "amount": "18,43",
+     "quote": "9 | Esami di laboratorio | 102,86",
+     "page": 1
+    },
+    {
+     "description": "Farmaci",
+     "amount": "19,52",
+     "quote": "12 | Farmaci | 19,17",
+     "page": 1
+    },
+    {
+     "description": "Elettrocardiogramma",
+     "amount": "27,92",
+     "quote": "15 | Elettrocardiogramma | 28,77",
+     "page": 1
+    },
+    {
+     "description": "Elettrocardiogramma",
+     "amount": "23,27",
+     "quote": "15 | Elettrocardiogramma | 28,77",
+     "page": 1
+    },
+    {
+     "description": "Elettrocardiogramma",
+     "amount": "26,46",
+     "quote": "15 | Elettrocardiogramma | 28,77",
+     "page": 1
+    },
+    {
+     "description": "Ecografia",
+     "amount": "58,23",
+     "quote": "23 | Ecografia | 34,72",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "6.920,28",
+    "quote": "Totale da pagare | 6.920,28 €",
+    "page": 2
+   }
+  }
+ }
+]

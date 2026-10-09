@@ -1,0 +1,124 @@
+[
+ {
+  "source": "S42-014/D3",
+  "text": "=== Page 1 ===\nPoliklinika Tomičić\nSplit, Hrvatska\nMedicinsko izvješće\nPACIJENT Nora | ROĐEN/A 05.11.2006.\nTomanová\nDATUM PREGLEDA / PRIJEMA | OTPUST\n19.08.2026. | -\nDIJAGNOZA | MKB-10\nAkutna infekcija gornjih dišnih puteva | J06.9\nAnamneza\nBez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\nStatus i terapija\nPregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. Povraćajni sindrom i suženje bronha. Uzorci izdaha pokazali su prisutnost leukocita i eozinocita. Uzeta su zračenja i analize krvi. Poboljšanje uočeno je nakon terapije s antiinflamatorima i bronhodilatatorima. Preporučeno je nadaljevodno praćenje i izbjegavanje agresivnih faktora okoliša.\nLiječnik: <PERSON_2> Potpis i pečat",
+  "output": {
+   "facility_name": {
+    "value": "Poliklinika Tomičić",
+    "quote": "Poliklinika Tomičić",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Hrvatska",
+    "quote": "Split, Hrvatska",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "<PERSON_1>",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "05.11.2006.",
+    "quote": "PACIJENT Nora | ROĐEN/A 05.11.2006.",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "19.08.2026.",
+    "quote": "19.08.2026. | -",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Akutna infekcija gornjih dišnih puteva",
+    "quote": "Akutna infekcija gornjih dišnih puteva | J06.9",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "J06.9",
+    "quote": "Akutna infekcija gornjih dišnih puteva | J06.9",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+    "quote": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "Pregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. Povraćajni sindrom i suženje bronha. Uzorci izdaha pokazali su prisutnost leukocita i eozinocita. Uzeta su zračenja i analize krvi. Poboljšanje uočeno je nakon terapije s antiinflamatorima i bronhodilatatorima. Preporučeno je nadaljevodno praćenje i izbjegavanje agresivnih faktora okoliša.",
+    "quote": "Pregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. Povraćajni sindrom i suženje bronha. Uzorci izdaha pokazali su prisutnost leukoci",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "<PERSON_2>",
+    "quote": "Liječnik: <PERSON_2> Potpis i pečat",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-031/D3",
+  "text": "=== Page 1 ===\nPoliklinika Ćurić\nSplit, Hrvatska\nMedicinsko izvješće\nPACIJENT <PERSON_1> | ROĐEN/A 23.10.1991.\nDATUM PREGLEDA / PRIJEMA | OTPUST\n18.05.2026. | -\nDIJAGNOZA | MKB-10\nUganuće gležnja | S93.4\nAnamneza\nBez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\nStatus i terapija\nPregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak.\nLiječnik: <PERSON_2> Potpis i pečat",
+  "output": {
+   "facility_name": {
+    "value": "Poliklinika Ćurić",
+    "quote": "Poliklinika Ćurić",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Hrvatska",
+    "quote": "Split, Hrvatska",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PACIJENT <PERSON_1> | ROĐEN/A 23.10.1991.",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "23.10.1991.",
+    "quote": "PACIJENT <PERSON_1> | ROĐEN/A 23.10.1991.",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "18.05.2026.",
+    "quote": "18.05.2026. | -",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Uganuće gležnja",
+    "quote": "Uganuće gležnja | S93.4",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "S93.4",
+    "quote": "Uganuće gležnja | S93.4",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+    "quote": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "Pregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak.",
+    "quote": "Pregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "<PERSON_2>",
+    "quote": "Liječnik: <PERSON_2> Potpis i pečat",
+    "page": 1
+   }
+  }
+ }
+]

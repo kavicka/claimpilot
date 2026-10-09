@@ -1,0 +1,122 @@
+[
+ {
+  "source": "S42-031/D4",
+  "text": "=== Page 1 ===\nPoliklinika Ćurić\nSplit, Hrvatska\nRAČUN\nRačun br. R-2026-95924\nDatum: 20.05.2026.\nPACIJENT <PERSON_1>, rođen/a 23.10.1991. | DATUM USLUGE 18.05.2026.\n# | Usluga | Iznos (€)\n1 | Ambulantni pregled | 156,48\n2 | Rendgensko snimanje | 164,62\nUkupno za platiti | 321,10 €\nPlaćanje u roku od 8 dana.",
+  "output": {
+   "invoice_number": {
+    "value": "R-2026-95924",
+    "quote": "Račun br. R-2026-95924",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "20.05.2026.",
+    "quote": "Datum: 20.05.2026.",
+    "page": 1
+   },
+   "provider_name": {
+    "value": "Poliklinika Ćurić",
+    "quote": "Poliklinika Ćurić",
+    "page": 1
+   },
+   "provider_country": {
+    "value": "Hrvatska",
+    "quote": "Split, Hrvatska",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PACIJENT <PERSON_1>, rođen/a 23.10.1991. | DATUM USLUGE 18.05.2026.",
+    "page": 1
+   },
+   "service_date": {
+    "value": "18.05.2026.",
+    "quote": "PACIJENT <PERSON_1>, rođen/a 23.10.1991. | DATUM USLUGE 18.05.2026.",
+    "page": 1
+   },
+   "currency": {
+    "value": "€",
+    "quote": "# | Usluga | Iznos (€)",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Ambulantni pregled",
+     "amount": "156,48",
+     "quote": "1 | Ambulantni pregled | 156,48",
+     "page": 1
+    },
+    {
+     "description": "Rendgensko snimanje",
+     "amount": "164,62",
+     "quote": "2 | Rendgensko snimanje | 164,62",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "321,10",
+    "quote": "Ukupno za platiti | 321,10 €",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-014/D4",
+  "text": "=== Page 1 ===\nPoliklinika Tomičić RAČUN\nSplit, Hrvatska Račun br. R-2026-46309\nDatum: 21.08.2026.\nPACIJENT <PERSON_1>, rođen/a 05.11.2006. | DATUM USLUGE 19.08.2026.\n# | Usluga | Iznos (€)\n1 | Ambulantni pregled | 59,02\n2 | Infuzijska terapija | 113,69\nUkupno za platiti | 172,71 €\nPlaćanje u roku od 8 dana.",
+  "output": {
+   "invoice_number": {
+    "value": "R-2026-46309",
+    "quote": "Split, Hrvatska Račun br. R-2026-46309",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "21.08.2026.",
+    "quote": "Datum: 21.08.2026.",
+    "page": 1
+   },
+   "provider_name": {
+    "value": "Poliklinika Tomičić",
+    "quote": "Poliklinika Tomičić RAČUN",
+    "page": 1
+   },
+   "provider_country": {
+    "value": "Hrvatska",
+    "quote": "Split, Hrvatska Račun br. R-2026-46309",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PACIJENT <PERSON_1>, rođen/a 05.11.2006. | DATUM USLUGE 19.08.2026.",
+    "page": 1
+   },
+   "service_date": {
+    "value": "19.08.2026.",
+    "quote": "PACIJENT <PERSON_1>, rođen/a 05.11.2006. | DATUM USLUGE 19.08.2026.",
+    "page": 1
+   },
+   "currency": {
+    "value": "€",
+    "quote": "# | Usluga | Iznos (€)",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Ambulantni pregled",
+     "amount": "59,02",
+     "quote": "1 | Ambulantni pregled | 59,02",
+     "page": 1
+    },
+    {
+     "description": "Infuzijska terapija",
+     "amount": "113,69",
+     "quote": "2 | Infuzijska terapija | 113,69",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "172,71",
+    "quote": "Ukupno za platiti | 172,71 €",
+    "page": 1
+   }
+  }
+ }
+]

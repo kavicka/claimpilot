@@ -1,0 +1,124 @@
+[
+ {
+  "source": "S42-024/D4",
+  "text": "=== Page 1 ===\nAmbulancia všeobecného lekára Vašeková\nVysoká pri Morave, Slovenská republika\nLekárska správa\nLekárska správa\nPACIENT Zoja | NAR.\nNižnánská | 29. 3. 1996\nDÁTUM VYŠETRENIA | PREPUSTENIE\n25. 12. 2025 | -\nDIAGNÓZA | MKCH-10\nPodvrtnutie členkového kĺbu | S93.4\nAnamnéza\nBez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\nNález a liečba\nPohyb byl obmedzený, s výraznou bolestí pri tlake a otokom. Výsledky RTG nepotvrďujú zlomeninu, rentgenový obraz ukazuje zvýšenú jazvu a mierny opuch. Pacient bol podrobený ultrazvuku, ktorý potvrdil zranenie väzov. Látal bol zafixovaný elastickej bandáži a pacient bol predpisovaný analgetiká a protizápalové lieky. Odporúčame odpočinok, chladenie a opakované vyšetrenie po 10 dňoch.\nLekár: MUDr. <PERSON_2>\nPodpis, pečiatka",
+  "output": {
+   "facility_name": {
+    "value": "Ambulancia všeobecného lekára Vašeková",
+    "quote": "Ambulancia všeobecného lekára Vašeková",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Slovenská republika",
+    "quote": "Vysoká pri Morave, Slovenská republika",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "<PERSON_1>",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "29. 3. 1996",
+    "quote": "Nižnánská | 29. 3. 1996",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "25. 12. 2025",
+    "quote": "25. 12. 2025 | -",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Podvrtnutie členkového kĺbu",
+    "quote": "Podvrtnutie členkového kĺbu | S93.4",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "S93.4",
+    "quote": "Podvrtnutie členkového kĺbu | S93.4",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Bez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.",
+    "quote": "Bez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "Pohyb byl obmedzený, s výraznou bolestí pri tlake a otokom. Výsledky RTG nepotvrďujú zlomeninu, rentgenový obraz ukazuje zvýšenú jazvu a mierny opuch. Pacient bol podrobený ultrazvuku, ktorý potvrdil zranenie väzov. Látal bol zafixovaný elastickej bandáži a pacient bol predpisovaný analgetiká a protizápalové lieky. Odporúčame odpočinok, chladenie a opakované vyšetrenie po 10 dňoch.",
+    "quote": "Pohyb byl obmedzený, s výraznou bolestí pri tlake a otokom. Výsledky RTG nepotvrďujú zlomeninu, rentgenový obraz ukazuje zvýšenú jazvu a mierny opuch. Pacient b",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "MUDr. <PERSON_2>",
+    "quote": "Lekár: MUDr. <PERSON_2>",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-034/D3",
+  "text": "=== Page 1 ===\nAmbulancia všeobecného lekára Melicherčíková\nRajhrad, Slovenská republika\nLekárska správa\nLekárska správa\nPACIENT <PERSON_1> | NAR. 1. 9. 1977\nDÁTUM VYŠETRENIA 25. 2. 2026 | PREPUSTENIE -\nDIAGNÓZA Zápal pľúc | MKCH-10 J18.9\nAnamnéza\nBez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\nNález a liečba\nPacient prezentoval horúčku, kašľavosť a dyspnoéiu. Priebežný lekársky vyšetrenie ukázalo zvýšené dýchanie, šmúrovanie a zvýšenú rezistenciu pri dýchaní. Radiologické vyšetrenie potvrdilo prítomnosť infiltrátov v dolných častiach obidvoch pľúc. Vykonané laboratórne testy ukázali zvýšenú hromadnosť leukocytov a zvýšenú rýchlosť sedimentácie erytrocytov. Pacientovi bol predpísaný antibiotikum z triedy makrolidov, antipyretikum a liečba kašľavosti. Odporúča sa liečba doma so súčasným sledovaním stavu a opakovaným vyšetrením po 48 hodinách.\nLekár: MUDr. <PERSON_2>\nPodpis, pečiatka",
+  "output": {
+   "facility_name": {
+    "value": "Ambulancia všeobecného lekára Melicherčíková",
+    "quote": "Ambulancia všeobecného lekára Melicherčíková",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Slovenská republika",
+    "quote": "Rajhrad, Slovenská republika",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PACIENT <PERSON_1> | NAR. 1. 9. 1977",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "1. 9. 1977",
+    "quote": "PACIENT <PERSON_1> | NAR. 1. 9. 1977",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "25. 2. 2026",
+    "quote": "DÁTUM VYŠETRENIA 25. 2. 2026 | PREPUSTENIE -",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Zápal pľúc",
+    "quote": "DIAGNÓZA Zápal pľúc | MKCH-10 J18.9",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "J18.9",
+    "quote": "DIAGNÓZA Zápal pľúc | MKCH-10 J18.9",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Bez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.",
+    "quote": "Bez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "Pacient prezentoval horúčku, kašľavosť a dyspnoéiu. Priebežný lekársky vyšetrenie ukázalo zvýšené dýchanie, šmúrovanie a zvýšenú rezistenciu pri dýchaní. Radiologické vyšetrenie potvrdilo prítomnosť infiltrátov v dolných častiach obidvoch pľúc. Vykonané laboratórne testy ukázali zvýšenú hromadnosť leukocytov a zvýšenú rýchlosť sedimentácie erytrocytov. Pacientovi bol predpísaný antibiotikum z triedy makrolidov, antipyretikum a liečba kašľavosti. Odporúča sa liečba doma so súčasným sledovaním stavu a opakovaným vyšetrením po 48 hodinách.",
+    "quote": "Pacient prezentoval horúčku, kašľavosť a dyspnoéiu. Priebežný lekársky vyšetrenie ukázalo zvýšené dýchanie, šmúrovanie a zvýšenú rezistenciu pri dýchaní. Radiol",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "MUDr. <PERSON_2>",
+    "quote": "Lekár: MUDr. <PERSON_2>",
+    "page": 1
+   }
+  }
+ }
+]

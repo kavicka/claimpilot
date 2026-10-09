@@ -1,0 +1,128 @@
+[
+ {
+  "source": "S42-011/D4",
+  "text": "=== Page 1 ===\nMedizinisches Zentrum Stalder\nLuzern, Schweiz\nRECHNUNG\nRechnung Nr. RE-2026-91573\nDatum: 10.08.2026\nPATIENT/IN | BEHANDLUNGSDATUM\n<PERSON_1>, geb. 27.10.1969 | 10.08.2026\n# | Leistung | Betrag (Fr.)\n1 | Ambulante Untersuchung | 107.07\n2 | Infusionstherapie | 65.87\nGesamtbetrag | 172.94 Fr.\nZahlbar innerhalb von 14 Tagen ohne Abzug.",
+  "output": {
+   "invoice_number": {
+    "value": "RE-2026-91573",
+    "quote": "Rechnung Nr. RE-2026-91573",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "10.08.2026",
+    "quote": "Datum: 10.08.2026",
+    "page": 1
+   },
+   "provider_name": {
+    "value": "Medizinisches Zentrum Stalder",
+    "quote": "Medizinisches Zentrum Stalder",
+    "page": 1
+   },
+   "provider_country": {
+    "value": "Schweiz",
+    "quote": "Luzern, Schweiz",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "<PERSON_1>, geb. 27.10.1969 | 10.08.2026",
+    "page": 1
+   },
+   "service_date": {
+    "value": "10.08.2026",
+    "quote": "Datum: 10.08.2026",
+    "page": 1
+   },
+   "currency": {
+    "value": "Fr.",
+    "quote": "# | Leistung | Betrag (Fr.)",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Ambulante Untersuchung",
+     "amount": "107.07",
+     "quote": "1 | Ambulante Untersuchung | 107.07",
+     "page": 1
+    },
+    {
+     "description": "Infusionstherapie",
+     "amount": "65.87",
+     "quote": "2 | Infusionstherapie | 65.87",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "172.94",
+    "quote": "Gesamtbetrag | 172.94 Fr.",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-013/D3",
+  "text": "=== Page 1 ===\nMedizinisches Zentrum Stark\nKitzbühel, Österreich\nRECHNUNG\nRechnung Nr. RE-2026-41001\nDatum: 16.07.2026\nPATIENT/IN\n<PERSON_1>, geb. 27.11.1974\nBEHANDLUNGSDATUM\n16.07.2026\n# | Leistung | Betrag (€)\n1 | Notfallbehandlung | 168,94\n2 | Röntgen | 159,82\n3 | Computertomographie | 436,50\nGesamtbetrag | 765,26 €\nZahlbar innerhalb von 14 Tagen ohne Abzug.",
+  "output": {
+   "invoice_number": {
+    "value": "RE-2026-41001",
+    "quote": "Rechnung Nr. RE-2026-41001",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "16.07.2026",
+    "quote": "Datum: 16.07.2026",
+    "page": 1
+   },
+   "provider_name": {
+    "value": "Medizinisches Zentrum Stark",
+    "quote": "Medizinisches Zentrum Stark",
+    "page": 1
+   },
+   "provider_country": {
+    "value": "Österreich",
+    "quote": "Kitzbühel, Österreich",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "<PERSON_1>, geb. 27.11.1974",
+    "page": 1
+   },
+   "service_date": {
+    "value": "16.07.2026",
+    "quote": "Datum: 16.07.2026",
+    "page": 1
+   },
+   "currency": {
+    "value": "€",
+    "quote": "# | Leistung | Betrag (€)",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Notfallbehandlung",
+     "amount": "168,94",
+     "quote": "1 | Notfallbehandlung | 168,94",
+     "page": 1
+    },
+    {
+     "description": "Röntgen",
+     "amount": "159,82",
+     "quote": "2 | Röntgen | 159,82",
+     "page": 1
+    },
+    {
+     "description": "Computertomographie",
+     "amount": "436,50",
+     "quote": "3 | Computertomographie | 436,50",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "765,26",
+    "quote": "Gesamtbetrag | 765,26 €",
+    "page": 1
+   }
+  }
+ }
+]

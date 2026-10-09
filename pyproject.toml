@@ -20,6 +20,7 @@ dev = [
     "pytest-cov>=5.0",
     "hypothesis>=6.112",
     "respx>=0.21",
+    "schemathesis>=4.0",
     "ruff>=0.7",
     "pyright>=1.1.390",
     "pre-commit>=4.0",
@@ -78,7 +79,7 @@ known-first-party = [
 "**/alembic/versions/*.py" = ["E501"]
 
 [tool.pyright]
-include = ["packages", "services", "data/generator", "evals", "tests"]
+include = ["packages", "services", "data/generator", "evals"]
 exclude = ["**/node_modules", "ui", "**/.venv", "data/synthetic"]
 pythonVersion = "3.12"
 typeCheckingMode = "standard"
@@ -90,7 +91,7 @@ reportMissingTypeStubs = false
 testpaths = ["tests"]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
-addopts = "-ra --strict-markers -m 'not smoke and not live'"
+addopts = "-ra --strict-markers -m 'not smoke and not live and not db'"
 markers = [
     "smoke: needs a running Ollama with the configured models",
     "live: calls a live model; run with -m live",

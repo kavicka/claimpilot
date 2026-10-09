@@ -1,0 +1,122 @@
+[
+ {
+  "source": "S42-004/D4",
+  "text": "=== Page 1 ===\nMarquez International Medical Centre\nMiami, USA\nINVOICE\nInvoice No. INV-2026-73603\nDate: 04/27/2026\nPATIENT <PERSON_1>, DOB 05/14/1995 | DATE OF SERVICE 04/27/2026\n# | Description Amount (USD)\n1 | Outpatient consultation 66.66\n2 | X-ray 78.09\nTotal due 144.75 USD\nPayment due on receipt.",
+  "output": {
+   "invoice_number": {
+    "value": "INV-2026-73603",
+    "quote": "Invoice No. INV-2026-73603",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "04/27/2026",
+    "quote": "Date: 04/27/2026",
+    "page": 1
+   },
+   "provider_name": {
+    "value": "Marquez International Medical Centre",
+    "quote": "Marquez International Medical Centre",
+    "page": 1
+   },
+   "provider_country": {
+    "value": "USA",
+    "quote": "Miami, USA",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PATIENT <PERSON_1>, DOB 05/14/1995 | DATE OF SERVICE 04/27/2026",
+    "page": 1
+   },
+   "service_date": {
+    "value": "04/27/2026",
+    "quote": "Date: 04/27/2026",
+    "page": 1
+   },
+   "currency": {
+    "value": "USD",
+    "quote": "# | Description Amount (USD)",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Outpatient consultation",
+     "amount": "66.66",
+     "quote": "1 | Outpatient consultation 66.66",
+     "page": 1
+    },
+    {
+     "description": "X-ray",
+     "amount": "78.09",
+     "quote": "2 | X-ray 78.09",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "144.75",
+    "quote": "Total due 144.75 USD",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-007/D3",
+  "text": "=== Page 1 ===\nSullivan International Medical Centre\nNew York, USA\nINVOICE\nInvoice No. INV-2026-60638\nDate: 02/05/2026\nPATIENT <PERSON_1>, DOB 02/12/1997 | DATE OF SERVICE 02/04/2026\n# | Description | Amount (USD)\n1 | Outpatient consultation | 89.48\n2 | X-ray | 168.75\nTotal due | 258.23 USD\nPayment due on receipt.",
+  "output": {
+   "invoice_number": {
+    "value": "INV-2026-60638",
+    "quote": "Invoice No. INV-2026-60638",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "02/05/2026",
+    "quote": "Date: 02/05/2026",
+    "page": 1
+   },
+   "provider_name": {
+    "value": "Sullivan International Medical Centre",
+    "quote": "Sullivan International Medical Centre",
+    "page": 1
+   },
+   "provider_country": {
+    "value": "USA",
+    "quote": "New York, USA",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PATIENT <PERSON_1>, DOB 02/12/1997 | DATE OF SERVICE 02/04/2026",
+    "page": 1
+   },
+   "service_date": {
+    "value": "02/04/2026",
+    "quote": "PATIENT <PERSON_1>, DOB 02/12/1997 | DATE OF SERVICE 02/04/2026",
+    "page": 1
+   },
+   "currency": {
+    "value": "USD",
+    "quote": "# | Description | Amount (USD)",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Outpatient consultation",
+     "amount": "89.48",
+     "quote": "1 | Outpatient consultation | 89.48",
+     "page": 1
+    },
+    {
+     "description": "X-ray",
+     "amount": "168.75",
+     "quote": "2 | X-ray | 168.75",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "258.23",
+    "quote": "Total due | 258.23 USD",
+    "page": 1
+   }
+  }
+ }
+]

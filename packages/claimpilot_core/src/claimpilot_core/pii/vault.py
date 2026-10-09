@@ -12,6 +12,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from claimpilot_core.db.models import VaultEntry
 from claimpilot_core.logging import register_secret
+from claimpilot_core.pii.tokens import next_token
 
 
 class VaultKeyMissingError(RuntimeError):
@@ -44,11 +45,33 @@ class Vault:
                 )
             )
 
+    async def add(self, session: AsyncSession, claim_id: uuid.UUID, entity: str, value: str) -> str:
+        """A value the handler typed that the vault does not hold yet: give it the next token."""
+        existing = (
+            await session.scalars(select(VaultEntry.token).where(VaultEntry.claim_id == claim_id))
+        ).all()
+        token = next_token(entity, list(existing))
+        session.add(
+            VaultEntry(
+                claim_id=claim_id,
+                token=token,
+                entity_type=entity,
+                value_encrypted=self.encrypt(value),
+            )
+        )
+        return token
+
     async def load(self, session: AsyncSession, claim_id: uuid.UUID) -> dict[str, str]:
+        return {t: v for t, (_, v) in (await self.load_entries(session, claim_id)).items()}
+
+    async def load_entries(
+        self, session: AsyncSession, claim_id: uuid.UUID
+    ) -> dict[str, tuple[str, str]]:
+        """token -> (entity type, value)."""
         rows = await session.scalars(select(VaultEntry).where(VaultEntry.claim_id == claim_id))
         out = {}
         for row in rows:
             value = self.decrypt(row.value_encrypted)
             register_secret(value)
-            out[row.token] = value
+            out[row.token] = (row.entity_type, value)
         return out

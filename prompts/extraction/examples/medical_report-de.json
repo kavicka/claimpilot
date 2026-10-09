@@ -1,0 +1,124 @@
+[
+ {
+  "source": "S42-032/D3",
+  "text": "=== Page 1 ===\nMedizinisches Zentrum Krebs\nMünchen, Deutschland\nÄrztlicher Befundbericht\nPATIENT/IN <PERSON_1> | GEB. 26.05.1976\nUNTERSUCHUNG /\nAUFNAHME 23.03.2026 | ENTLASSUNG -\nDIAGNOSE | ICD-10\nDistorsion des oberen Sprunggelenks | S93.4\nAnamnese\nKeine relevanten Vorerkrankungen. Keine Dauermedikation.\nBefund und Therapie\nBei der klinischen Untersuchung zeigten sich Schwellung, Druckschmerz und begrenzte Beweglichkeit im linken Sprunggelenk. Die MRT bestätigte eine Verletzung der lateralen Bandapparate ohne Fraktur. Der Patient erhielt eine Gipsfixation und eine Schiene zur Schonung. Physiotherapie wurde verordnet, um die Funktion des Gelenks zu erhalten. Nach 6 Wochen erfolgt eine Kontrolle zur Beurteilung der Genesung.\nBehandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
+  "output": {
+   "facility_name": {
+    "value": "Medizinisches Zentrum Krebs",
+    "quote": "Medizinisches Zentrum Krebs",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Deutschland",
+    "quote": "München, Deutschland",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. 26.05.1976",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "26.05.1976",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. 26.05.1976",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "23.03.2026",
+    "quote": "AUFNAHME 23.03.2026 | ENTLASSUNG -",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Distorsion des oberen Sprunggelenks",
+    "quote": "Distorsion des oberen Sprunggelenks | S93.4",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "S93.4",
+    "quote": "Distorsion des oberen Sprunggelenks | S93.4",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+    "quote": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "Bei der klinischen Untersuchung zeigten sich Schwellung, Druckschmerz und begrenzte Beweglichkeit im linken Sprunggelenk. Die MRT bestätigte eine Verletzung der lateralen Bandapparate ohne Fraktur. Der Patient erhielt eine Gipsfixation und eine Schiene zur Schonung. Physiotherapie wurde verordnet, um die Funktion des Gelenks zu erhalten. Nach 6 Wochen erfolgt eine Kontrolle zur Beurteilung der Genesung.",
+    "quote": "Bei der klinischen Untersuchung zeigten sich Schwellung, Druckschmerz und begrenzte Beweglichkeit im linken Sprunggelenk. Die MRT bestätigte eine Verletzung der",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "<PERSON_2>",
+    "quote": "Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-002/D2",
+  "text": "=== Page 1 ===\nMedizinisches Zentrum Frei\nDavos, Schweiz\nÄrztlicher Befundbericht\nPATIENT/IN <PERSON_1> | GEB. 17.08.1965\nUNTERSUCHUNG / AUFNAHME | ENTLASSUNG\n21.07.2026 | -\nDIAGNOSE | ICD-10\nFraktur des distalen Radius | S52.5\nAnamnese\nUnfall beim Paragleiten (Tandemflug), Landung im Gelände.\nBefund und Therapie\nBei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verletzung im Bereich des distalen Radius mit eingeschränkter Beweglichkeit. Die Röntgenaufnahmen bestätigten eine Fraktur des distalen Radius. Es wurden keine Komplikationen wie Nerven- oder Gefäßschäden festgestellt. Die Patientin erhielt eine konservative Behandlung mit Gipsfixation im neutralen Verband. Eine nachfolgende Kontrolle nach vier Wochen ist empfohlen.\nBehandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
+  "output": {
+   "facility_name": {
+    "value": "Medizinisches Zentrum Frei",
+    "quote": "Medizinisches Zentrum Frei",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Schweiz",
+    "quote": "Davos, Schweiz",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. 17.08.1965",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "17.08.1965",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. 17.08.1965",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "21.07.2026",
+    "quote": "21.07.2026 | -",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Fraktur des distalen Radius",
+    "quote": "Fraktur des distalen Radius | S52.5",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "S52.5",
+    "quote": "Fraktur des distalen Radius | S52.5",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Unfall beim Paragleiten (Tandemflug), Landung im Gelände.",
+    "quote": "Unfall beim Paragleiten (Tandemflug), Landung im Gelände.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "Bei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verletzung im Bereich des distalen Radius mit eingeschränkter Beweglichkeit. Die Röntgenaufnahmen bestätigten eine Fraktur des distalen Radius. Es wurden keine Komplikationen wie Nerven- oder Gefäßschäden festgestellt. Die Patientin erhielt eine konservative Behandlung mit Gipsfixation im neutralen Verband. Eine nachfolgende Kontrolle nach vier Wochen ist empfohlen.",
+    "quote": "Bei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verletzung im Bereich des distalen Radius mit eingeschränkter Beweglichkeit. Die Rön",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "<PERSON_2>",
+    "quote": "Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
+    "page": 1
+   }
+  }
+ }
+]

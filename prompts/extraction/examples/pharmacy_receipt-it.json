@@ -1,0 +1,59 @@
+[
+ {
+  "source": "S42-020/D5",
+  "text": "=== Page 1 ===\nFarmacia Grossi Roma\nScontrino Documento n. 9561/59856 29/08/2026 16:58\nSpray nasale | 8,35\nIbuprofene 400 mg | 9,33\nParacetamolo 500 mg | 6,98\nAmoxicillina 1 g | 17,04\nTotale da pagare EUR | 41,70\nIVA inclusa Grazie e arrivederci",
+  "output": {
+   "receipt_number": {
+    "value": "9561/59856",
+    "quote": "Scontrino Documento n. 9561/59856 29/08/2026 16:58",
+    "page": 1
+   },
+   "issue_date": {
+    "value": "29/08/2026 16:58",
+    "quote": "Scontrino Documento n. 9561/59856 29/08/2026 16:58",
+    "page": 1
+   },
+   "pharmacy_name": {
+    "value": "Farmacia Grossi",
+    "quote": "Farmacia Grossi Roma",
+    "page": 1
+   },
+   "currency": {
+    "value": "EUR",
+    "quote": "Totale da pagare EUR | 41,70",
+    "page": 1
+   },
+   "line_items": [
+    {
+     "description": "Spray nasale",
+     "amount": "8,35",
+     "quote": "Spray nasale | 8,35",
+     "page": 1
+    },
+    {
+     "description": "Ibuprofene 400 mg",
+     "amount": "9,33",
+     "quote": "Ibuprofene 400 mg | 9,33",
+     "page": 1
+    },
+    {
+     "description": "Paracetamolo 500 mg",
+     "amount": "6,98",
+     "quote": "Paracetamolo 500 mg | 6,98",
+     "page": 1
+    },
+    {
+     "description": "Amoxicillina 1 g",
+     "amount": "17,04",
+     "quote": "Amoxicillina 1 g | 17,04",
+     "page": 1
+    }
+   ],
+   "total": {
+    "value": "41,70",
+    "quote": "Totale da pagare EUR | 41,70",
+    "page": 1
+   }
+  }
+ }
+]

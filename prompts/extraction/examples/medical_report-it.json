@@ -1,0 +1,124 @@
+[
+ {
+  "source": "S42-020/D3",
+  "text": "=== Page 1 ===\nPoliambulatorio Sagnelli\nRoma, Italia\nReferto medico\nPAZIENTE <PERSON_1> | NATO/A IL 07/01/1972\nDATA VISITA / RICOVERO 29/08/2026 | DIMISSIONE -\nDIAGNOSI Infezione acuta delle vie respiratorie superiori | ICD-10 J06.9\nAnamnesi\nNessuna patologia pregressa rilevante. Nessuna terapia cronica.\nEsame obiettivo e terapia\nEsame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore.\nMedico: <PERSON_2> Firma e timbro",
+  "output": {
+   "facility_name": {
+    "value": "Poliambulatorio Sagnelli",
+    "quote": "Poliambulatorio Sagnelli",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Italia",
+    "quote": "Roma, Italia",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "PAZIENTE <PERSON_1> | NATO/A IL 07/01/1972",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "07/01/1972",
+    "quote": "PAZIENTE <PERSON_1> | NATO/A IL 07/01/1972",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "29/08/2026",
+    "quote": "DATA VISITA / RICOVERO 29/08/2026 | DIMISSIONE -",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Infezione acuta delle vie respiratorie superiori",
+    "quote": "DIAGNOSI Infezione acuta delle vie respiratorie superiori | ICD-10 J06.9",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "J06.9",
+    "quote": "DIAGNOSI Infezione acuta delle vie respiratorie superiori | ICD-10 J06.9",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Nessuna patologia pregressa rilevante. Nessuna terapia cronica.",
+    "quote": "Nessuna patologia pregressa rilevante. Nessuna terapia cronica.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "Esame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore.",
+    "quote": "Esame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "<PERSON_2>",
+    "quote": "Medico: <PERSON_2> Firma e timbro",
+    "page": 1
+   }
+  }
+ },
+ {
+  "source": "S42-012/D2",
+  "text": "=== Page 1 ===\nPoliambulatorio Donati\nRimini, Italia\nReferto medico\nPAZIENTE Maroš | NATO/A IL 08/08/1993\nŠimek\nDATA VISITA / RICOVERO 08/02/2026 | DIMISSIONE -\nDIAGNOSI | ICD-10\nFrattura dell'estremità distale del radio | S52.5\nAnamnesi\nPaziente in stato di ebbrezza all'arrivo, alcolemia 1,4 g/l.\nEsame obiettivo e terapia\nAll'escursione, si riscontrava dolore, gonfiore e limitata mobilità alla regione distale del radio. L'esame radiografico confermava la presenza di una frattura del radio distale, senza coinvolgimento delle articolazioni. Sono state eseguite radiografie in due proiezioni, che hanno evidenziato una frattura non displasica, con buona allineamento. È stato prescritto un gesso a gomito flesso e si è consigliato il riposo completo per le prime tre settimane. Si raccomanda il controllo radiologico dopo due settimane e la visita di follow-up per valutare la guarigione e la rimozione del gesso.\nMedico: <PERSON_2> Firma e timbro",
+  "output": {
+   "facility_name": {
+    "value": "Poliambulatorio Donati",
+    "quote": "Poliambulatorio Donati",
+    "page": 1
+   },
+   "facility_country": {
+    "value": "Italia",
+    "quote": "Rimini, Italia",
+    "page": 1
+   },
+   "patient_name": {
+    "value": "<PERSON_1>",
+    "quote": "<PERSON_1>",
+    "page": 1
+   },
+   "patient_birth_date": {
+    "value": "08/08/1993",
+    "quote": "PAZIENTE Maroš | NATO/A IL 08/08/1993",
+    "page": 1
+   },
+   "visit_date": {
+    "value": "08/02/2026",
+    "quote": "DATA VISITA / RICOVERO 08/02/2026 | DIMISSIONE -",
+    "page": 1
+   },
+   "discharge_date": {
+    "value": null,
+    "quote": null,
+    "page": null
+   },
+   "diagnosis": {
+    "value": "Frattura dell'estremità distale del radio",
+    "quote": "Frattura dell'estremità distale del radio | S52.5",
+    "page": 1
+   },
+   "icd10_code": {
+    "value": "S52.5",
+    "quote": "Frattura dell'estremità distale del radio | S52.5",
+    "page": 1
+   },
+   "anamnesis": {
+    "value": "Paziente in stato di ebbrezza all'arrivo, alcolemia 1,4 g/l.",
+    "quote": "Paziente in stato di ebbrezza all'arrivo, alcolemia 1,4 g/l.",
+    "page": 1
+   },
+   "treatment": {
+    "value": "All'escursione, si riscontrava dolore, gonfiore e limitata mobilità alla regione distale del radio. L'esame radiografico confermava la presenza di una frattura del radio distale, senza coinvolgimento delle articolazioni. Sono state eseguite radiografie in due proiezioni, che hanno evidenziato una frattura non displasica, con buona allineamento. È stato prescritto un gesso a gomito flesso e si è consigliato il riposo completo per le prime tre settimane. Si raccomanda il controllo radiologico dopo due settimane e la visita di follow-up per valutare la guarigione e la rimozione del gesso.",
+    "quote": "All'escursione, si riscontrava dolore, gonfiore e limitata mobilità alla regione distale del radio. L'esame radiografico confermava la presenza di una frattura ",
+    "page": 1
+   },
+   "physician_name": {
+    "value": "<PERSON_2>",
+    "quote": "Medico: <PERSON_2> Firma e timbro",
+    "page": 1
+   }
+  }
+ }
+]

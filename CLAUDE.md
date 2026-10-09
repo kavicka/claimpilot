@@ -16,7 +16,8 @@ portfolio project. The plan and build steps live in the ClaimPilot Implementatio
 - `ui/`: Next.js review app on :4410.
 
 Pipeline: RECEIVED → PARSED → REDACTED → EXTRACTED → ROUTED → ASSESSED → IN_REVIEW → (handler)
-APPROVED → SUBMITTED | REJECTED | NEEDS_INFO. All moves go through `claimpilot_core.state_machine`.
+APPROVED → SUBMITTED | REJECTED | NEEDS_INFO; after corrections a handler sends the claim back to
+EXTRACTED (reassess). All moves go through `claimpilot_core.state_machine`.
 
 Ports: Postgres 5438 (a native Postgres owns 5432), Redis 6389, api 4400, core_mock 4401,
 mcp 4402, ui 4410, Langfuse 4420, Ollama 11434.
@@ -33,7 +34,14 @@ make smoke       # live Ollama smoke checks
 make data SEED=42
 make eval-fast   # gated suites on dev, compare with baselines
 make eval        # live run that records cassettes
+make seed N=5    # upload synthetic claims through the api
+make mcp         # read-only MCP server (stdio)
 ```
+
+Eval suites (`claimpilot-eval run --suite <name>`): doc_type, pii, extraction, routing, retrieval,
+coverage, submission, summaries, injection. Options: `--model step=model`, `--opt scan_path=vision
+--opt only_scans=1` (vision path on scans), `--opt rerank=off`. Run GPU-heavy suites one at a time:
+two large models plus Docker do not fit in 48 GB.
 
 ## Rules
 

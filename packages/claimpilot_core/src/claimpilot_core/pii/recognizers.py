@@ -10,7 +10,7 @@ import re
 from presidio_analyzer import Pattern, PatternRecognizer, RecognizerResult
 from presidio_analyzer.predefined_recognizers import EmailRecognizer
 
-from claimpilot_core.identifiers import is_valid_iban, parse_rodne_cislo
+from claimpilot_core.identifiers import is_valid_iban, parse_rodne_cislo, repair_iban_ocr
 
 # Presidio defaults to IGNORECASE; identifiers here are case-sensitive (an IBAN must not swallow
 # the lowercase word after it).
@@ -48,16 +48,9 @@ class IbanRecognizerSk(PatternRecognizer):
             global_regex_flags=CASE_SENSITIVE,
         )
 
-    # Countries whose IBAN is all digits after the country code, so OCR letter/digit mix-ups can be
-    # undone before the checksum: "SKO3 6500..." (letter O) is "SK03 6500...".
-    NUMERIC_BBAN = frozenset({"SK", "CZ", "AT", "DE", "HR", "HU", "PL", "SI", "TR"})
-
-    @classmethod
-    def repair_ocr(cls, text: str) -> str:
-        compact = text.replace(" ", "")
-        if compact[:2] not in cls.NUMERIC_BBAN:
-            return compact
-        return compact[:2] + compact[2:].translate(str.maketrans("OoIlSB", "001158"))
+    @staticmethod
+    def repair_ocr(text: str) -> str:
+        return repair_iban_ocr(text)
 
     def validate_result(self, pattern_text: str) -> bool:
         return is_valid_iban(pattern_text) or is_valid_iban(self.repair_ocr(pattern_text))
@@ -143,6 +136,57 @@ class AddressRecognizer(PatternRecognizer):
         return out
 
 
+class LabeledNameRecognizer(PatternRecognizer):
+    """A person's name right after a form label (doctor, patient) in the six document languages.
+    The NER model misses some of these, e.g. a German doctor's name in a signature line."""
+
+    LABEL = (
+        r"(?i:arzt|ärztin|lekár|lékař|medico(?:\s+curante)?|liječnik|lijecnik|physician|doctor"
+        r"|pacient|patient|paziente|pacijent)"
+    )
+    WORD = r"[A-ZÁÄČĎÉÍĹĽŇÓÔŔŠŤÚÝŽÖÜĆĐ][a-zäöüßáčďéíĺľňóôŕšťúýžěćđ'\-]+"
+    PATTERN = re.compile(rf"{LABEL}\s*:\s*(?:(?:MUDr|Dr|Dott)\.\s*)?({WORD}(?:\s{WORD}){{1,2}})")
+
+    def __init__(self) -> None:
+        super().__init__(
+            supported_entity="PERSON",
+            patterns=[Pattern("labeled_name", r"(?!x)x", 0.0)],  # matching happens in analyze
+            supported_language="any",
+        )
+
+    # Form words that follow the name on a signature line
+    STOP = frozenset(
+        {
+            "unterschrift",
+            "stempel",
+            "podpis",
+            "pečiatka",
+            "razítko",
+            "firma",
+            "timbro",
+            "potpis",
+            "pečat",
+            "signature",
+            "stamp",
+            "datum",
+            "dátum",
+            "date",
+            "data",
+        }
+    )
+
+    def analyze(self, text, entities, nlp_artifacts=None, regex_flags=None):
+        out = []
+        for m in self.PATTERN.finditer(text):
+            words = m.group(1).split(" ")
+            while words and words[-1].lower() in self.STOP:
+                words.pop()
+            if len(words) >= 2:
+                start = m.start(1)
+                out.append(RecognizerResult("PERSON", start, start + len(" ".join(words)), 0.7))
+        return out
+
+
 def pattern_recognizers() -> list[PatternRecognizer]:
     email = EmailRecognizer(supported_language="any")
     return [
@@ -152,6 +196,7 @@ def pattern_recognizers() -> list[PatternRecognizer]:
         IdCardRecognizer(),
         LicencePlateRecognizer(),
         AddressRecognizer(),
+        LabeledNameRecognizer(),
         email,
     ]
 

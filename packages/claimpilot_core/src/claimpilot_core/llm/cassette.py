@@ -9,6 +9,7 @@ import hashlib
 import json
 from enum import StrEnum
 from pathlib import Path
+from typing import Any
 
 from claimpilot_core.llm.types import LLMRequest, LLMResponse
 
@@ -30,15 +31,37 @@ class CassetteMissingError(LookupError):
         self.request = request
 
 
-def cassette_key(req: LLMRequest) -> str:
+IMAGE_REF = "sha256:"
+
+
+def image_digest(image: str) -> str:
+    """Images are keyed by their hash. An eval run without the page files (CI) passes
+    "sha256:<hex>" references from the committed page index instead of the images."""
+    if image.startswith(IMAGE_REF):
+        return image[len(IMAGE_REF) :]
+    return hashlib.sha256(image.encode()).hexdigest()
+
+
+def _message(m: Any, legacy: bool = False) -> dict[str, Any]:
+    out = {k: v for k, v in m.model_dump().items() if k not in ("tool_calls", "tool_name") or v}
+    if out.get("images") and not legacy:
+        out["images"] = [image_digest(i) for i in out["images"]]
+    return out
+
+
+def cassette_key(req: LLMRequest, tools: list[dict] | None = None, *, legacy: bool = False) -> str:
+    tools_key = [t.get("function", {}).get("name") for t in tools] if tools else None
     material = {
         "provider": req.spec.provider,
         "model": req.spec.model,
         "think": req.spec.think,
         "prompt_hash": req.prompt_hash,
-        "messages": [m.model_dump() for m in req.messages],
+        # Tool fields only when used, so keys of plain requests did not change when they were added.
+        "messages": [_message(m, legacy) for m in req.messages],
         "schema": req.json_schema,
     }
+    if tools_key:  # only tool-calling requests carry it, so other keys stay stable
+        material["tools"] = tools_key
     blob = json.dumps(material, sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(blob.encode()).hexdigest()
 
@@ -51,12 +74,18 @@ class CassetteStore:
     def _path(self, req: LLMRequest, key: str) -> Path:
         return self.root / req.step / f"{key[:2]}" / f"{key}.json"
 
-    def load(self, req: LLMRequest) -> LLMResponse | None:
+    def load(self, req: LLMRequest, tools: list[dict] | None = None) -> LLMResponse | None:
         if self.mode not in (CassetteMode.REPLAY, CassetteMode.AUTO):
             return None
-        key = cassette_key(req)
+        key = cassette_key(req, tools)
         path = self._path(req, key)
+        legacy = self._path(req, cassette_key(req, tools, legacy=True))
+        if not path.exists() and legacy.exists():  # MIGRATION: full-image keys -> image hashes
+            path.parent.mkdir(parents=True, exist_ok=True)
+            legacy.rename(path)
         if not path.exists():
+            if any(i.startswith(IMAGE_REF) for m in req.messages for i in m.images):
+                raise CassetteMissingError(key, req)  # no page files here, nothing to send
             if self.mode is CassetteMode.AUTO:
                 return None
             raise CassetteMissingError(key, req)
@@ -65,10 +94,10 @@ class CassetteStore:
         response.cached = True
         return response
 
-    def save(self, req: LLMRequest, response: LLMResponse) -> None:
+    def save(self, req: LLMRequest, response: LLMResponse, tools: list[dict] | None = None) -> None:
         if self.mode not in (CassetteMode.RECORD, CassetteMode.AUTO):
             return
-        key = cassette_key(req)
+        key = cassette_key(req, tools)
         path = self._path(req, key)
         path.parent.mkdir(parents=True, exist_ok=True)
         record = {

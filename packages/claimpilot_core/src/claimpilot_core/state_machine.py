@@ -33,6 +33,9 @@ ALLOWED: frozenset[tuple[S, S, Actor]] = frozenset(
         (S.IN_REVIEW, S.APPROVED, Actor.HANDLER),
         (S.IN_REVIEW, S.REJECTED, Actor.HANDLER),
         (S.IN_REVIEW, S.NEEDS_INFO, Actor.HANDLER),
+        # After corrections the handler sends the claim back through routing and assessment;
+        # extraction does not run again, so the corrections stay.
+        (S.IN_REVIEW, S.EXTRACTED, Actor.HANDLER),
     }
     | {(S.APPROVED, S.SUBMITTED, Actor.SYSTEM)}
     # A new upload restarts the pipeline; a handler can retry a failed claim.

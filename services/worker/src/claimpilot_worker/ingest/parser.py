@@ -90,9 +90,15 @@ def parse(path: Path) -> ParsedDocument:
         text = " ".join(text.split())
         if text:
             blocks.append(
-                Block(page=page, seq=len(blocks), kind=kind, text=text, bbox=box,
-                      ocr=pages[page].text_chars == 0)
-            )  # fmt: skip
+                Block(
+                    page=page,
+                    seq=len(blocks),
+                    kind=kind,
+                    text=text,
+                    bbox=box,
+                    ocr=pages[page].text_chars == 0,
+                )
+            )
 
     for item, _level in doc.iterate_items():
         provs = getattr(item, "prov", None)

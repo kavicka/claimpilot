@@ -12,7 +12,6 @@ dependencies = [
     "rapidfuzz>=3.10",
     "sentence-transformers>=3.3",
     "torch>=2.5",
-    "pydantic-ai-slim[openai]>=0.0.20",
 ]
 
 [project.scripts]
