@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"R-2026-94626\", \"quote\": \"Račun br. R-2026-94626\", \"page\": 1}, \"issue_date\": {\"value\": \"27.06.2026.\", \"quote\": \"Datum: 27.06.2026.\", \"page\": 1}, \"provider_name\": {\"value\": \"Poliklinika Licul\", \"quote\": \"Poliklinika Licul\", \"page\": 1}, \"provider_country\": {\"value\": \"Hrvatska\", \"quote\": \"Dubrovnik, Hrvatska\", \"page\": 1}, \"patient_name\": {\"value\": \"Silvia Jedfovská\", \"quote\": \"Silvia Jedfovská, rođen/a 16.02.1989.\", \"page\": 1}, \"service_date\": {\"value\": \"27.06.2026.\", \"quote\": \"DATUM USLUGE 27.06.2026.\", \"page\": 1}, \"currency\": {\"value\": \"€\", \"quote\": \"720,85 €\", \"page\": 1}, \"line_items\": [{\"description\": \"Hitni prijem\", \"amount\": \"330,70\", \"quote\": \"1 Hitni prijem 330,70\", \"page\": 1}, {\"description\": \"Laboratorijske pretrage\", \"amount\": \"85,05\", \"quote\": \"2 Laboratorijske pretrage 85,05\", \"page\": 1}, {\"description\": \"Infuzijska terapija\", \"amount\": \"132,99\", \"quote\": \"3 Infuzijska terapija 132,99\", \"page\": 1}, {\"description\": \"Ultrazvuk\", \"amount\": \"172,11\", \"quote\": \"4 Ultrazvuk 172,11\", \"page\": 1}], \"total\": {\"value\": \"720,85\", \"quote\": \"Ukupno za platiti 720,85 €\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 507,
+   "latency_ms": 22281
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Known arterial hypertension treated since 2024; cardiology check-up two months ago for chest pain.\",\n    \"value\": \"Known arterial hypertension treated since 2024; cardiology check-up two months ago for chest pain.\"\n  },\n  \"diagnosis\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Chania, Greece\",\n    \"value\": \"Greece\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Singh International Medical Centre\",\n    \"value\": \"Singh International Medical Centre\"\n  },\n  \"icd10_code\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"patient_birth_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"patient_name\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Attending physician: <PERSON_2> Signature and stamp\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Examination revealed central chest pain with radiation to the left arm, occurring at rest and unrelieved by nitroglycerin. Electrocardiogram showed non-specific ST-T changes. Cardiac enzymes were within normal limits. Stress echo was not performed due to patient's inability to exercise. Treatment included sublingual nitroglycerin, oral beta-blocker, and dual antiplatelet therapy. Patient was advised to present to the emergency department immediately if symptoms worsened or persisted.\",\n    \"value\": \"Examination revealed central chest pain with radiation to the left arm, occurring at rest and unrelieved by nitroglycerin. Electrocardiogram showed non-specific ST-T changes. Cardiac enzymes were within normal limits. Stress echo was not performed due to patient's inability to exercise. Treatment included sublingual nitroglycerin, oral beta-blocker, and dual antiplatelet therapy. Patient was advised to present to the emergency department immediately if symptoms worsened or persisted.\"\n  },\n  \"visit_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2005,
+   "tokens_out": 568,
+   "latency_ms": 9844
+  },
+  "cached": false
+ }
+}

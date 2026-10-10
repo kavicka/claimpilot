@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"facility_name\": {\"value\": \"Ambulancia všeobecného lekára Martinecová\", \"quote\": \"Ambulancia všeobecného lekára Martinecová\", \"page\": 1}, \"facility_country\": {\"value\": \"Slovenská republika\", \"quote\": \"Slovenská republika\", \"page\": 1}, \"patient_name\": {\"value\": \"Alexej Máčik\", \"quote\": \"Alexej Máčik\", \"page\": 1}, \"patient_birth_date\": {\"value\": \"29. 2. 1969\", \"quote\": \"29. 2. 1969\", \"page\": 1}, \"visit_date\": {\"value\": \"11. 7. 2026\", \"quote\": \"11. 7. 2026\", \"page\": 1}, \"discharge_date\": {\"value\": null, \"quote\": null, \"page\": null}, \"diagnosis\": {\"value\": \"Lumbálna diskopatia L4/L5 s koreňovým dráždením\", \"quote\": \"Lumbálna diskopatia L4/L5 s koreňovým dráždením\", \"page\": 1}, \"icd10_code\": {\"value\": \"MKCH-10 M51.2\", \"quote\": \"MKCH-10 M51.2\", \"page\": 1}, \"anamnesis\": {\"value\": \"Pacient je dispenzarizovaný pre diskopatiu L4/L5 od marca 2025, opakovane liečený pre bolesti chrbta.\", \"quote\": \"Pacient je dispenzarizovaný pre diskopatiu L4/L5 od marca 2025, opakovane liečený pre bolesti chrbta.\", \"page\": 1}, \"treatment\": {\"value\": \"Pozorovanie: Pacient prezentoval bolesť v spodnej časti chrbta, radikulárnu bolesť po pravej strane, zhoršenú pri pohybe. Pri fyzikálnom vyšetrení bola pozorovaná znížená sily v svalu pohybovom šľape, pozitívne známky Lasègueho a Slump testu. Nepriťomnosť neurologických deficitov. Diagnostické vyšetrenie MRI lumbosakrálnych segmentov ukázalo degeneratívne zmeny disku L4/L5 so stlačením žilných štruktúr. Uvedené nálezy potvrdzujú diagnostiku. Zákroky: konzervatívna liečba s cieľom znížiť záťaž na disky, účinná analgetika, fyzikálna terapia a zavedenie postihnutých svalov. Odporúča sa opakovanie vyšetrenia po 6 týždňoch a v prípade nedostatočného výsledku zvážiť ďalšie opcie.\", \"quote\": \"Pozorovanie: Pacient prezentoval bolesť v spodnej časti chrbta, radikulárnu bolesť po pravej strane, zhoršenú pri pohybe. Pri fyzikálnom vyšetrení bola pozorovaná znížená sily v svalu pohybovom šľape, pozitívne známky Lasègueho a Slump testu. Nepriťomnosť neurologických deficitov. Diagnostické vyšetrenie MRI lumbosakrálnych segmentov ukázalo degeneratívne zmeny disku L4/L5 so stlačením žilných štruktúr. Uvedené nálezy potvrdzujú diagnostiku. Zákroky: konzervatívna liečba s cieľom znížiť záťaž na disky, účinná analgetika, fyzikálna terapia a zavedenie postihnutých svalov. Odporúča sa opakovanie vyšetrenia po 6 týždňoch a v prípade nedostatočného výsledku zvážiť ďalšie opcie.\", \"page\": 1}, \"physician_name\": {\"value\": \"MUDr. Xénia Zachariašová\", \"quote\": \"MUDr. Xénia Zachariašová\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2086,
+   "tokens_out": 1106,
+   "latency_ms": 39279
+  },
+  "cached": false
+ }
+}

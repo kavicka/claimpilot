@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Bez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\",\n    \"value\": \"Bez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"DIAGNÓZA Zápal plúc | MKCH-10 J18.9\",\n    \"value\": \"Zápal plúc\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Blhovce, Slovenská republika\",\n    \"value\": \"Slovenská republika\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Ambulancia všeobecného lekára Štefunko\",\n    \"value\": \"Ambulancia všeobecného lekára Štefunko\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"DIAGNÓZA Zápal plúc | MKCH-10 J18.9\",\n    \"value\": \"J18.9\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PACIENT <PERSON_1> | NAR. 9. 9. 1957\",\n    \"value\": \"9. 9. 1957\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PACIENT <PERSON_1> | NAR. 9. 9. 1957\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Lekár: MUDr. <PERSON_2>\",\n    \"value\": \"MUDr. <PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Pacient prezentoval horúčku, kašl'avost a dyspnoéiu. Priebežný lekársky vyšetrenie ukázalo zvýšené dýchanie, šmúrovanie a zvýšenú rezistenciu pri dýchaní. Radiologické vyšetrenie potvrdilo prítomnost infiltrátov v dolných častiach obidvoch plúc. Vykonané laboratórne testy ukázali zvýšenú hromadnost leukocytov a zvýšenú rýchlost sedimentácie erytrocytov. Pacientovi bol predpísaný antibiotikum z triedy makrolidov, antipyretikum a liečba kašl'avosti. Odporúča sa liečba doma so súčasným sledovaním stavu a opakovaným vyšetrením po 48 hodinách.\",\n    \"value\": \"Pacient prezentoval horúčku, kašl'avost a dyspnoéiu. Priebežný lekársky vyšetrenie ukázalo zvýšené dýchanie, šmúrovanie a zvýšenú rezistenciu pri dýchaní. Radiologické vyšetrenie potvrdilo prítomnost infiltrátov v dolných častiach obidvoch plúc. Vykonané laboratórne testy ukázali zvýšenú hromadnost leukocytov a zvýšenú rýchlost sedimentácie erytrocytov. Pacientovi bol predpísaný antibiotikum z triedy makrolidov, antipyretikum a liečba kašl'avosti. Odporúča sa liečba doma so súčasným sledovaním stavu a opakovaným vyšetrením po 48 hodinách.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"DÁTUM VYŠETRENIA 14. 3. 2026 | PREPUSTENIE -\",\n    \"value\": \"14. 3. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3274,
+   "tokens_out": 1061,
+   "latency_ms": 25911
+  },
+  "cached": false
+ }
+}

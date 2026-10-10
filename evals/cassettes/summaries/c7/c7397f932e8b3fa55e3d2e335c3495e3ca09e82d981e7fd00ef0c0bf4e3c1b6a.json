@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 18. 4. 2026 v súvislosti s liečebnými nákladmi v Andrews International Medical Centre, kde boli uplatnené sumy 252,45 EUR za liečbu a 40,94 EUR za lieky. Poistné plnenie je poskytnuté v súlade s článkom 4 ods. 1 VPP. Liečebné náklady boli plnené v plnej výške 252,45 EUR. Lieky z lekárne boli plnené len v sume 10,94 EUR, pričom poistný podiel činí 30,00 EUR. Rozdiel medzi uplatnenou sumou 40,94 EUR a plnenou sumou 10,94 EUR je vysvetlený podľa podmienok poistnej zmluvy, ktorá stanovuje limit pre lieky. Rizikové signály a chýbajúce informácie nie sú zaznamenané. Plnenie je odporúčané v sume 263,39 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 561,
+   "tokens_out": 301,
+   "latency_ms": 4967
+  },
+  "cached": false
+ }
+}

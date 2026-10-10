@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for an ankle sprain sustained during a walk in New York, USA. According to clause [A4.1], the insurance covers reasonable and necessary costs for outpatient treatment, hospitalization, and medications prescribed by a doctor, provided they were incurred as a result of an acute illness or injury during the trip. The evidence confirms that the injury was acute and occurred during the trip, and the treatment provided (ice, compression, elevation, and nonsteroidal anti-inflammatory medication) is consistent with the coverage under this clause. No exclusions apply, as there is no indication of pre-existing conditions, alcohol use, extreme sports, or other excluded events.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1150,
+   "tokens_out": 159,
+   "latency_ms": 13846
+  },
+  "cached": false
+ }
+}

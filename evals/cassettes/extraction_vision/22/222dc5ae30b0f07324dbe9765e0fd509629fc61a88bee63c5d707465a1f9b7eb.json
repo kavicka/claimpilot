@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"facility_name\": {\"value\": \"Horváth International Medical Centre\", \"quote\": \"Horváth International Medical Centre\", \"page\": 1}, \"facility_country\": {\"value\": \"Hévíz, Hungary\", \"quote\": \"Hévíz, Hungary\", \"page\": 1}, \"patient_name\": {\"value\": \"Bruno Veternik\", \"quote\": \"Bruno Veternik\", \"page\": 1}, \"patient_birth_date\": {\"value\": \"31/03/1986\", \"quote\": \"31/03/1986\", \"page\": 1}, \"visit_date\": {\"value\": \"16/03/2026\", \"quote\": \"16/03/2026\", \"page\": 1}, \"discharge_date\": {\"value\": null, \"quote\": null, \"page\": 1}, \"diagnosis\": {\"value\": \"Acute gastroenteritis\", \"quote\": \"Acute gastroenteritis\", \"page\": 1}, \"icd10_code\": {\"value\": \"A09\", \"quote\": \"A09\", \"page\": 1}, \"anamnesis\": {\"value\": \"No relevant previous illnesses. No regular medication.\", \"quote\": \"No relevant previous illnesses. No regular medication.\", \"page\": 1}, \"treatment\": {\"value\": \"The patient presented with acute onset of diarrhea and vomiting. Examination revealed mild dehydration and tenderness in the epigastrium. Stool examination was negative for parasites and bacterial pathogens. Viral antigen testing was not performed. Treatment included oral rehydration solution, ondansetron for nausea, and symptomatic care. The patient was advised to maintain hydration and return if symptoms worsen or persist beyond 72 hours.\", \"quote\": \"The patient presented with acute onset of diarrhea and vomiting. Examination revealed mild dehydration and tenderness in the epigastrium. Stool examination was negative for parasites and bacterial pathogens. Viral antigen testing was not performed. Treatment included oral rehydration solution, ondansetron for nausea, and symptomatic care. The patient was advised to maintain hydration and return if symptoms worsen or persist beyond 72 hours.\", \"page\": 1}, \"physician_name\": {\"value\": \"Alexandra Nagy\", \"quote\": \"Attending physician: Alexandra Nagy\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2086,
+   "tokens_out": 516,
+   "latency_ms": 22846
+  },
+  "cached": false
+ }
+}

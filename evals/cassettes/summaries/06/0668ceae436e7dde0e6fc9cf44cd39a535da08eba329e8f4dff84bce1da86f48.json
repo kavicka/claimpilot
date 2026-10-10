@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "14. 3. 2026 došlo k zrušeniu cesty, za ktoré bol uplatnený stornovací poplatok vo výške 691,20 EUR. Poistenie Cestovné poistenie Premium zahŕňa pokrytie stornovacích poplatkov podľa článku 9 ods. 1 a 9 ods. 2 VPP, ak je zrušenie spôsobené poistným rizikom. Uplatnená suma 691,20 EUR bola čiastočne pokrytá v sume 552,96 EUR, čo zodpovedá podmienkam poistnej zmluvy. Poistné riziko je v súlade s článkom 9 ods. 1 VPP, pretože zrušenie bola spôsobené okolnosťami, ktoré sú v zmysle poistnej zmluvy poistným rizikom. Rizikové signály a chýbajúce informácie nie sú zaznamenané. Odporúča sa plnenie vo výške 552,96 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 545,
+   "tokens_out": 306,
+   "latency_ms": 11212
+  },
+  "cached": false
+ }
+}

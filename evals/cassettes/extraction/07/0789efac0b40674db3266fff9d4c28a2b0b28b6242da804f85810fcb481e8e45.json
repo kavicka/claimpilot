@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Ukupno za platiti EUR\",\n    \"value\": \"EUR\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Račun Broj računa 8565/69233 03.03.2026. 09:03\",\n    \"value\": \"03.03.2026. 09:03\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"10,14\",\n      \"description\": \"Elastični zavoj\",\n      \"page\": 1,\n      \"quote\": \"Elastični zavoj | 10,14\"\n    },\n    {\n      \"amount\": \"7,11\",\n      \"description\": \"Sprej za nos\",\n      \"page\": 1,\n      \"quote\": \"Sprej za nos | 7,11\"\n    },\n    {\n      \"amount\": \"9,96\",\n      \"description\": \"Amoksicilin 1 g\",\n      \"page\": 1,\n      \"quote\": \"Amoksicilin 1 g | 9,96\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Ljekarna Hrženjak Dubrovnik\",\n    \"value\": \"Ljekarna Hrženjak Dubrovnik\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Račun Broj računa 8565/69233 03.03.2026. 09:03\",\n    \"value\": \"8565/69233\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"27,21\",\n    \"value\": \"27,21\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1048,
+   "tokens_out": 448,
+   "latency_ms": 8384
+  },
+  "cached": false
+ }
+}

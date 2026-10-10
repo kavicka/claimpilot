@@ -1,0 +1,19 @@
+{
+ "step": "judge",
+ "prompt_id": "summaries/judge",
+ "prompt_hash": "a14837a638786f48a97a5930f8a3a86558d06fc9eb071acda8f07687ed318ecb",
+ "model": "ollama:gemma3:12b",
+ "response": {
+  "text": "{\"completeness\": 4, \"tone\": 5, \"no_overpromise\": 5, \"note\": \"The completeness score is only a 4 because while the letter states the decision, amounts, and reasons, it could be improved by explicitly mentioning the *lack* of coverage for the 'one-time fracture payment' rather than just stating it wasn't paid out.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "gemma3:12b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 845,
+   "tokens_out": 82,
+   "latency_ms": 6242
+  },
+  "cached": false
+ }
+}

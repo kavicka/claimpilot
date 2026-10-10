@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"invoice_number\": {\n    \"value\": \"INV-2026-25356\",\n    \"quote\": \"Invoice No. INV-2026-25356\",\n    \"page\": 1\n  },\n  \"issue_date\": {\n    \"value\": \"08/07/2026\",\n    \"quote\": \"Date: 08/07/2026\",\n    \"page\": 1\n  },\n  \"provider_name\": {\n    \"value\": \"Roberts International Medical Centre\",\n    \"quote\": \"Roberts International Medical Centre\",\n    \"page\": 1\n  },\n  \"provider_country\": {\n    \"value\": \"Greece\",\n    \"quote\": \"Thessaloniki, Greece\",\n    \"page\": 1\n  },\n  \"patient_name\": {\n    \"value\": \"<PERSON_1>\",\n    \"quote\": \"PATIENT <PERSON_1>, DOB 19/07/1956 | DATE OF SERVICE 08/07/2026\",\n    \"page\": 1\n  },\n  \"service_date\": {\n    \"value\": \"08/07/2026\",\n    \"quote\": \"PATIENT <PERSON_1>, DOB 19/07/1956 | DATE OF SERVICE 08/07/2026\",\n    \"page\": 1\n  },\n  \"currency\": {\n    \"value\": \"EUR\",\n    \"quote\": \"# | Description | Amount (EUR)\",\n    \"page\": 1\n  },\n  \"line_items\": [\n    {\n      \"description\": \"Emergency room treatment\",\n      \"amount\": \"322.27\",\n      \"quote\": \"1 | Emergency room treatment | 322.27\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Laboratory tests\",\n      \"amount\": \"93.11\",\n      \"quote\": \"2 | Laboratory tests | 93.11\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"IV infusion\",\n      \"amount\": \"65.12\",\n      \"quote\": \"3 | IV infusion | 65.12\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Ultrasound\",\n      \"amount\": \"135.86\",\n      \"quote\": \"4 | Ultrasound | 135.86\",\n      \"page\": 1\n    }\n  ],\n  \"total\": {\n    \"value\": \"616.36\",\n    \"quote\": \"Total due | 616.36 EUR\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1634,
+   "tokens_out": 595,
+   "latency_ms": 26577
+  },
+  "cached": false
+ }
+}

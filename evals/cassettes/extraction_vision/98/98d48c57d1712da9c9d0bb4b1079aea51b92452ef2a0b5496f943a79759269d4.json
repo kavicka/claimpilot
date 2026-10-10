@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP40532691\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP40532691\", \"page\": 1}, \"insured_name\": {\"value\": \"Alena Králiková\", \"quote\": \"MENO A PRIEZVISKO Alena Králiková\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"805516/4040\", \"quote\": \"RODNÉ ČÍSLO 805516/4040\", \"page\": 1}, \"insured_address\": {\"value\": \"Gercenova 4, 838 81 Podrečany\", \"quote\": \"ADRESA Gercenova 4, 838 81 Podrečany\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 929 708 815\", \"quote\": \"TELEFÓN +421 929 708 815\", \"page\": 1}, \"insured_email\": {\"value\": \"alena.kralikova89@example.com\", \"quote\": \"E-MAIL alena.kralikova89@example.com\", \"page\": 1}, \"iban\": {\"value\": \"SK86 5200 0000 0045 2035 1283\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK86 5200 0000 0045 2035 1283\", \"page\": 1}, \"destination_country\": {\"value\": \"Taliansko\", \"quote\": \"KRAJINA CESTY Taliansko\", \"page\": 1}, \"trip_start\": {\"value\": \"22. 1. 2026\", \"quote\": \"CESTA OD 22. 1. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"30. 1. 2026\", \"quote\": \"CESTA DO 30. 1. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"28. 1. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 28. 1. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Rimini, Taliansko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Rimini, Taliansko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Batožina\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol mi ukradnutý záväzok z zaparkovaného auta v Rimini, Taliansko. Krádež som nahlásil/a na polícii.\", \"quote\": \"POPIS UDALOSTI Bol mi ukradnutý záväzok z zaparkovaného auta v Rimini, Taliansko. Krádež som nahlásil/a na polícii.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Knih a čitačka\", \"amount\": \"171,31\", \"currency\": \"EUR\", \"quote\": \"Knih a čitačka 171,31 EUR\", \"page\": 1}, {\"description\": \"Zimná bunda\", \"amount\": \"129,20\", \"currency\": \"EUR\", \"quote\": \"Zimná bunda 129,20 EUR\", \"page\": 1}, {\"description\": \"Mobilný telefón\", \"amount\": \"817,49\", \"currency\": \"EUR\", \"quote\": \"Mobilný telefón 817,49 EUR\", \"page\": 1}, {\"description\": \"Oblečenie (nohavice, tríčka)\", \"amount\": \"145,74\", \"currency\": \"EUR\", \"quote\": \"Oblečenie (nohavice, tríčka) 145,74 EUR\", \"page\": 1}, {\"description\": \"Kozmetika\", \"amount\": \"52,49\", \"currency\": \"EUR\", \"quote\": \"Kozmetika 52,49 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"5. 2. 2026\", \"quote\": \"Dátum: 5. 2. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1124,
+   "latency_ms": 37330
+  },
+  "cached": false
+ }
+}

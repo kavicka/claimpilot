@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Farkas International Medical Centre sú preplatené v sume 106 954,00 HUF podľa článku 4 ods. 1 a článku 4 ods. 4 zákona o poistení. Poisťovňa prepláca sumu 100,00 EUR, čo zodpovedá uplatnenej sume v huf. Spoluplatnosť vo výške 50,00 EUR je podľa podmienok poistenia nevyplácaná.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 534,
+   "tokens_out": 147,
+   "latency_ms": 3041
+  },
+  "cached": false
+ }
+}

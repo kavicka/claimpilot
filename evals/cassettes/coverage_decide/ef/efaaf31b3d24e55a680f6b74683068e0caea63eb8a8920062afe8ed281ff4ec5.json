@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\", \"A11.3\"], \"rationale\": \"The claim involves medical treatment for a fracture of the clavicle caused by an accident during a tandem paragliding flight, which is an extreme sport. The policy explicitly includes coverage for extreme sports in the Premium product, so the exclusion in A11.3 does not apply. The treatment (ambulatory care with a sling and pain therapy) is covered under A4.1, which covers medical expenses resulting from an accident during the trip.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1188,
+   "tokens_out": 122,
+   "latency_ms": 12479
+  },
+  "cached": false
+ }
+}

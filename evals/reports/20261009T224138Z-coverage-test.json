@@ -1,0 +1,964 @@
+{
+ "suite": "coverage",
+ "split": "test",
+ "metrics": {
+  "verdict_accuracy": {
+   "value": 0.9285714285714286,
+   "num": 26,
+   "den": 28
+  },
+  "verdict_only": {
+   "value": 0.9285714285714286,
+   "num": 26,
+   "den": 28
+  },
+  "clause_match": {
+   "value": 0.9642857142857143,
+   "num": 27,
+   "den": 28
+  },
+  "payout_exact_match": {
+   "value": 0.8888888888888888,
+   "num": 16,
+   "den": 18
+  }
+ },
+ "items": [
+  {
+   "id": "S42-041/I1",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [
+     "A4.2",
+     "A4.1",
+     "A4.3",
+     "A5.1",
+     "A5.2"
+    ],
+    "rationale": "The claim involves treatment for an acute injury (ankle sprain) that occurred during the trip. Clause A4.1 covers 'primerané a nevyhnutné náklady na ambulantné ošetrenie... ak boli vynaložené v dôsled",
+    "archetype": "date_inconsistency"
+   }
+  },
+  {
+   "id": "S42-041/I2",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/medication",
+    "expected_map": "medical/medication",
+    "retrieved": [
+     "A4.1",
+     "A5.1",
+     "A5.2",
+     "A4.2",
+     "A4.3"
+    ],
+    "rationale": "The claim involves medication (nonsteroidal anti-inflammatory drugs) prescribed by a doctor for an acute injury (ankle sprain) that occurred during the trip. Clause A4.1 explicitly covers the cost of ",
+    "archetype": "date_inconsistency"
+   }
+  },
+  {
+   "id": "S42-041/payout",
+   "ok": true,
+   "expected": "851.50",
+   "got": "851.50",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "date_inconsistency"
+   }
+  },
+  {
+   "id": "S42-042/I1",
+   "ok": true,
+   "expected": "covered ['A8.1']",
+   "got": "covered ['A8.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "delay/essentials",
+    "expected_map": "delay/essentials",
+    "retrieved": [
+     "A8.1",
+     "A8.3",
+     "A8.2",
+     "A7.5",
+     "A7.1"
+    ],
+    "rationale": "The claim is for the purchase of essential hygiene items and clothing due to a significant delay in luggage arrival (approximately 16 hours). Clause A8.1 explicitly covers such expenses when the lugga",
+    "archetype": "luggage_delay_small"
+   }
+  },
+  {
+   "id": "S42-042/payout",
+   "ok": true,
+   "expected": "26.39",
+   "got": "26.39",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "luggage_delay_small"
+   }
+  },
+  {
+   "id": "S42-043/I1",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [
+     "A4.1",
+     "A4.2",
+     "A5.2",
+     "A5.1",
+     "A4.3"
+    ],
+    "rationale": "The claim involves medical treatment (ambulantné ošetrenie) for a fracture of the clavicle caused by an accident during a trip (spadol a zlomil si klúčnu kost). Clause A4.1 explicitly covers reasonabl",
+    "archetype": "accident_fracture"
+   }
+  },
+  {
+   "id": "S42-043/I2",
+   "ok": true,
+   "expected": "covered ['A6.1']",
+   "got": "covered ['A6.1', 'A6.2']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "accident/fracture",
+    "expected_map": "accident/fracture",
+    "retrieved": [
+     "A6.1",
+     "A6.2",
+     "A11.4",
+     "A11.3",
+     "A3.3"
+    ],
+    "rationale": "The evidence confirms a fracture of the clavicle (klavikula) caused by an accident during skiing (lyžovaní), which is covered under the accident coverage section. The medical report confirms the fract",
+    "archetype": "accident_fracture"
+   }
+  },
+  {
+   "id": "S42-043/payout",
+   "ok": true,
+   "expected": "830.44",
+   "got": "830.44",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "accident_fracture"
+   }
+  },
+  {
+   "id": "S42-044/I1",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [
+     "A5.1",
+     "A4.3",
+     "A4.1",
+     "A5.2",
+     "A4.2"
+    ],
+    "rationale": "The claim involves medical treatment for an injury (ankle sprain) that occurred during the trip. Clause A4.1 explicitly covers 'appropriate and necessary costs for outpatient care, hospitalization, an",
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-044/I2",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/medication",
+    "expected_map": "medical/medication",
+    "retrieved": [
+     "A4.1",
+     "A6.1",
+     "A2.3",
+     "A5.1",
+     "A4.2"
+    ],
+    "rationale": "The claim involves medication prescribed as part of treatment for an injury (ankle sprain) that occurred during the trip. Clause A4.1 explicitly covers the cost of medications prescribed by a doctor f",
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-044/payout",
+   "ok": true,
+   "expected": "241.35",
+   "got": "241.35",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-045/I1",
+   "ok": true,
+   "expected": "not_covered ['A3.2']",
+   "got": "not_covered ['A3.2']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "precheck",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [],
+    "rationale": "event on 2026-06-27 is outside the policy period 2026-06-19 to 2026-06-25",
+    "archetype": "outside_period"
+   }
+  },
+  {
+   "id": "S42-045/I2",
+   "ok": true,
+   "expected": "not_covered ['A3.2']",
+   "got": "not_covered ['A3.2']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "precheck",
+    "mapped": "medical/medication",
+    "expected_map": "medical/medication",
+    "retrieved": [],
+    "rationale": "event on 2026-06-27 is outside the policy period 2026-06-19 to 2026-06-25",
+    "archetype": "outside_period"
+   }
+  },
+  {
+   "id": "S42-045/payout",
+   "ok": true,
+   "expected": "0.00",
+   "got": "0.00",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "outside_period"
+   }
+  },
+  {
+   "id": "S42-046/I1",
+   "ok": true,
+   "expected": "covered ['A7.1', 'A7.2']",
+   "got": "covered ['A7.1', 'A7.3']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "luggage/valuables",
+    "expected_map": "luggage/luggage",
+    "retrieved": [
+     "A7.3",
+     "A7.4",
+     "A7.1",
+     "A7.2",
+     "A7.5"
+    ],
+    "rationale": "The item (ski goggles) is listed in the property irregularity report as part of the lost luggage. According to clause A7.1, the insurer covers damage, loss, or theft of luggage during transportation. ",
+    "archetype": "luggage_lost"
+   }
+  },
+  {
+   "id": "S42-046/I2",
+   "ok": false,
+   "expected": "covered ['A7.1', 'A7.2']",
+   "got": "needs_review ['A7.1', 'A7.5', 'A11.3']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": false,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "luggage/valuables",
+    "expected_map": "luggage/valuables",
+    "retrieved": [
+     "A7.4",
+     "A7.1",
+     "A7.2",
+     "A7.5",
+     "A7.3"
+    ],
+    "rationale": "The claim involves the loss of luggage, including an e-reader (a valuable item). Clause A7.1 provides coverage for loss of luggage during transport. However, clause A7.5 excludes coverage for theft of",
+    "archetype": "luggage_lost"
+   }
+  },
+  {
+   "id": "S42-046/I3",
+   "ok": true,
+   "expected": "covered ['A7.1', 'A7.2']",
+   "got": "covered ['A7.1', 'A7.4']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "luggage/valuables",
+    "expected_map": "luggage/valuables",
+    "retrieved": [
+     "A7.4",
+     "A7.1",
+     "A7.2",
+     "A7.5",
+     "A7.6"
+    ],
+    "rationale": "The claim involves the loss of luggage during transportation, which is covered under clause A7.1. The passenger provided a Property Irregularity Report as required by clause A7.4. There is no indicati",
+    "archetype": "luggage_lost"
+   }
+  },
+  {
+   "id": "S42-046/I4",
+   "ok": true,
+   "expected": "covered ['A7.1', 'A7.2']",
+   "got": "covered ['A7.1', 'A8.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "luggage/luggage",
+    "expected_map": "luggage/luggage",
+    "retrieved": [
+     "A7.4",
+     "A7.1",
+     "A8.1",
+     "A7.6",
+     "A7.2"
+    ],
+    "rationale": "The item 'Oblečenie (nohavice, trčká)' falls under the luggage coverage section. According to clause A7.1, the insurer covers damage to luggage caused by loss during transport. Additionally, clause A8",
+    "archetype": "luggage_lost"
+   }
+  },
+  {
+   "id": "S42-046/payout",
+   "ok": false,
+   "expected": "881.07",
+   "got": "761.57",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "luggage_lost"
+   }
+  },
+  {
+   "id": "S42-047/I1",
+   "ok": true,
+   "expected": "covered ['A9.1', 'A9.2']",
+   "got": "covered ['A9.1', 'A9.3']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "cancellation/cancellation_fee",
+    "expected_map": "cancellation/cancellation_fee",
+    "retrieved": [
+     "A9.1",
+     "A9.2",
+     "A9.4",
+     "A3.3",
+     "A9.3"
+    ],
+    "rationale": "The claim is for a cancellation fee due to an acute illness (pneumonia) that occurred before the trip began. Clause A9.1 covers cancellation due to acute illness, and the medical report confirms the i",
+    "archetype": "cancellation"
+   }
+  },
+  {
+   "id": "S42-047/payout",
+   "ok": true,
+   "expected": "552.96",
+   "got": "552.96",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "cancellation"
+   }
+  },
+  {
+   "id": "S42-048/I1",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [
+     "A4.1",
+     "A4.3",
+     "A4.2",
+     "A5.1",
+     "A5.2"
+    ],
+    "rationale": "The claim involves medical treatment for an acute condition (otitis media) that occurred during the trip. Clause A4.1 explicitly covers the costs of outpatient treatment, hospitalization, and prescrib",
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-048/payout",
+   "ok": true,
+   "expected": "208.35",
+   "got": "208.35",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-049/I1",
+   "ok": true,
+   "expected": "not_covered ['A11.2']",
+   "got": "not_covered ['A11.2']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [
+     "A4.1",
+     "A4.2",
+     "A5.2",
+     "A5.1",
+     "A4.3"
+    ],
+    "rationale": "The claim involves an incident where the insured was under the influence of alcohol (Atemalkohol 1,4 Promille), which exceeds the 0.5 Promille threshold specified in clause A11.2. This exclusion appli",
+    "archetype": "alcohol"
+   }
+  },
+  {
+   "id": "S42-049/payout",
+   "ok": true,
+   "expected": "0.00",
+   "got": "0.00",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "alcohol"
+   }
+  },
+  {
+   "id": "S42-051/I1",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [
+     "A4.1",
+     "A4.2",
+     "A4.3",
+     "A5.1",
+     "A5.2"
+    ],
+    "rationale": "The claim involves acute medical treatment for an upper respiratory tract infection, which is covered under clause A4.1. There is no indication of pre-existing conditions, planned treatment, or any of",
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-051/payout",
+   "ok": true,
+   "expected": "175.34",
+   "got": "175.34",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-052/I1",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1', 'A11.3']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [
+     "A4.1",
+     "A5.1",
+     "A4.2",
+     "A4.3",
+     "A5.2"
+    ],
+    "rationale": "The claim involves medical treatment for a fracture of the clavicle caused by an accident during a tandem paragliding flight, which is an extreme sport. The policy explicitly includes coverage for ext",
+    "archetype": "extreme_sport_premium"
+   }
+  },
+  {
+   "id": "S42-052/I2",
+   "ok": true,
+   "expected": "covered ['A6.1']",
+   "got": "covered ['A6.1', 'A6.2']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "accident/fracture",
+    "expected_map": "accident/fracture",
+    "retrieved": [
+     "A6.1",
+     "A6.2",
+     "A11.2",
+     "A3.2",
+     "A3.3"
+    ],
+    "rationale": "The claim involves a fracture of the clavicle caused by an accident during a tandem paragliding flight, which is covered under the accident coverage section. The policy explicitly covers fractures con",
+    "archetype": "extreme_sport_premium"
+   }
+  },
+  {
+   "id": "S42-052/payout",
+   "ok": true,
+   "expected": "975.62",
+   "got": "975.62",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "extreme_sport_premium"
+   }
+  },
+  {
+   "id": "S42-053/I1",
+   "ok": true,
+   "expected": "covered ['A4.1', 'A4.2']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/hospital",
+    "retrieved": [
+     "A4.2",
+     "A4.3",
+     "A4.1",
+     "A5.2",
+     "A4.4"
+    ],
+    "rationale": "The claim involves medical treatment (pneumonia) received abroad during a trip due to an acute illness. Clause A4.1 explicitly covers 'reasonable and necessary costs for outpatient care, hospitalizati",
+    "archetype": "hospital_large"
+   }
+  },
+  {
+   "id": "S42-053/payout",
+   "ok": true,
+   "expected": "3890.61",
+   "got": "3890.61",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "hospital_large"
+   }
+  },
+  {
+   "id": "S42-055/I1",
+   "ok": true,
+   "expected": "covered ['A7.1', 'A7.2']",
+   "got": "covered ['A7.1', 'A7.4']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "luggage/luggage",
+    "expected_map": "luggage/luggage",
+    "retrieved": [
+     "A7.5",
+     "A7.4",
+     "A7.1",
+     "A7.6",
+     "A7.3"
+    ],
+    "rationale": "The claim involves the theft of shoes from a beach bag, which is covered under clause A7.1 (theft of luggage). The police report (A7.4) confirms the theft and provides necessary documentation. There i",
+    "archetype": "luggage_theft"
+   }
+  },
+  {
+   "id": "S42-055/I2",
+   "ok": false,
+   "expected": "covered ['A7.1', 'A7.2']",
+   "got": "not_covered ['A7.5']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": false,
+    "clause_ok": false,
+    "method": "llm",
+    "mapped": "luggage/valuables",
+    "expected_map": "luggage/valuables",
+    "retrieved": [
+     "A7.5",
+     "A7.4",
+     "A7.6",
+     "A7.1",
+     "A7.3"
+    ],
+    "rationale": "The mobile phone was stolen from a beach bag while the complainant was swimming. According to clause [A7.5], the insurance does not cover theft of valuables and electronics left unattended in a public",
+    "archetype": "luggage_theft"
+   }
+  },
+  {
+   "id": "S42-055/I3",
+   "ok": true,
+   "expected": "covered ['A7.1', 'A7.2']",
+   "got": "covered ['A7.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "luggage/luggage",
+    "expected_map": "luggage/luggage",
+    "retrieved": [
+     "A7.5",
+     "A7.4",
+     "A7.1",
+     "A7.6",
+     "A7.3"
+    ],
+    "rationale": "The claim involves the theft of a suitcase (cestovný kufor) on the beach in Antalya, which is covered under clause A7.1, as it explicitly covers theft of luggage. The police report confirms the theft,",
+    "archetype": "luggage_theft"
+   }
+  },
+  {
+   "id": "S42-055/payout",
+   "ok": false,
+   "expected": "552.77",
+   "got": "252.77",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "luggage_theft"
+   }
+  },
+  {
+   "id": "S42-056/I1",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [
+     "A4.1",
+     "A4.2",
+     "A5.1",
+     "A4.3",
+     "A5.2"
+    ],
+    "rationale": "The claim involves treatment for acute gastroenteritis, which is covered under clause A4.1 as it is an acute illness occurring during the trip. There is no indication of pre-existing conditions, plann",
+    "archetype": "early_claim"
+   }
+  },
+  {
+   "id": "S42-056/payout",
+   "ok": true,
+   "expected": "1038.80",
+   "got": "1038.80",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "early_claim"
+   }
+  },
+  {
+   "id": "S42-057/I1",
+   "ok": true,
+   "expected": "covered ['A4.1']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [
+     "A4.1",
+     "A4.3",
+     "A4.2",
+     "A5.2",
+     "A5.1"
+    ],
+    "rationale": "The claim involves medical treatment for an ankle sprain that occurred during the trip. Clause A4.1 covers the costs of outpatient treatment, hospitalization, and prescribed medications resulting from",
+    "archetype": "date_inconsistency"
+   }
+  },
+  {
+   "id": "S42-057/payout",
+   "ok": true,
+   "expected": "799.93",
+   "got": "799.93",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "date_inconsistency"
+   }
+  },
+  {
+   "id": "S42-058/I1",
+   "ok": true,
+   "expected": "covered ['A4.1', 'A4.2']",
+   "got": "covered ['A4.1']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "llm",
+    "mapped": "medical/hospital",
+    "expected_map": "medical/hospital",
+    "retrieved": [
+     "A4.3",
+     "A4.1",
+     "A4.2",
+     "A5.1",
+     "A5.2"
+    ],
+    "rationale": "The claim involves medical treatment for pneumonia (pneumonie) that occurred during a trip. According to clause A4.1, the insurer covers necessary and appropriate costs for hospitalization resulting f",
+    "archetype": "hospital_large"
+   }
+  },
+  {
+   "id": "S42-058/payout",
+   "ok": true,
+   "expected": "7197.08",
+   "got": "7197.08",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "hospital_large"
+   }
+  },
+  {
+   "id": "S42-059/I1",
+   "ok": true,
+   "expected": "not_covered ['A13.4']",
+   "got": "not_covered ['A13.4']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "precheck",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [],
+    "rationale": "the same invoice was already claimed in another claim",
+    "archetype": "dup_hash"
+   }
+  },
+  {
+   "id": "S42-059/payout",
+   "ok": true,
+   "expected": "0.00",
+   "got": "0.00",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "dup_hash"
+   }
+  },
+  {
+   "id": "S42-060/I1",
+   "ok": true,
+   "expected": "not_covered ['A13.4']",
+   "got": "not_covered ['A13.4']",
+   "tags": [
+    "verdict_accuracy"
+   ],
+   "detail": {
+    "verdict_ok": true,
+    "clause_ok": true,
+    "method": "precheck",
+    "mapped": "medical/treatment",
+    "expected_map": "medical/treatment",
+    "retrieved": [],
+    "rationale": "the same invoice was already claimed in another claim",
+    "archetype": "dup_number"
+   }
+  },
+  {
+   "id": "S42-060/payout",
+   "ok": true,
+   "expected": "0.00",
+   "got": "0.00",
+   "tags": [
+    "payout_exact_match"
+   ],
+   "detail": {
+    "archetype": "dup_number"
+   }
+  }
+ ],
+ "meta": {
+  "created": "20261009T224137Z",
+  "git": {
+   "sha": "bab3d7e",
+   "dirty": true
+  },
+  "dataset": "d59d01befdf0",
+  "seed": 42,
+  "cassette_mode": "auto",
+  "overrides": {},
+  "options": {},
+  "prompts": {
+   "coverage/decide": "coverage/decide@1+bb9451c3",
+   "coverage/map": "coverage/map@2+3adfabab",
+   "doc_type/classify": "doc_type/classify@1+1ae7e9f6",
+   "extraction/document": "extraction/document@1+e1460380",
+   "extraction/vision": "extraction/vision@1+81c8af53"
+  },
+  "models": [
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:14b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 121,
+  "cached_calls": 79,
+  "tokens_in": 229917,
+  "tokens_out": 59295,
+  "tokens_per_item": 6287.2,
+  "latency_p50_ms": 9092,
+  "latency_p95_ms": 13633,
+  "worker_peak_rss_mb": 1419,
+  "models": [
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:14b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ]
+ },
+ "notes": [],
+ "stale": []
+}

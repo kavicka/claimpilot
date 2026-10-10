@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"[X] Liečebné náklady\",\n    \"values\": [\n      \"Liečebné náklady\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"784,57\",\n      \"currency\": \"EUR\",\n      \"description\": \"Liečebné náklady – Medizinisches Zentrum Röhricht\",\n      \"page\": 1,\n      \"quote\": \"Liečebné náklady – Medizinisches Zentrum Röhricht\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Nemecko\",\n    \"value\": \"Nemecko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"12. 6. 2026\",\n    \"value\": \"12. 6. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Bol som v Garmisch-Partenkirchen, Nemecko, a skôr alebo neskôr som sa zranil hlavou. Po zranení som sa citil zle a musel som sa zdravotne vyšetrit. Diagnóza bola otok mozgu.\",\n    \"value\": \"Bol som v Garmisch-Partenkirchen, Nemecko, a skôr alebo neskôr som sa zranil hlavou. Po zranení som sa citil zle a musel som sa zdravotne vyšetrit. Diagnóza bola otok mozgu.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Garmisch-Partenkirchen, Nemecko\",\n    \"value\": \"Garmisch-Partenkirchen, Nemecko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 900 12 Zbudza\",\n    \"value\": \"<ADDRESS_1>, 900 12 Zbudza\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP93955206\",\n    \"value\": \"CP93955206\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 20. 6. 2026\",\n    \"value\": \"20. 6. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"13. 6. 2026\",\n    \"value\": \"13. 6. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"30. 5. 2026\",\n    \"value\": \"30. 5. 2026\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3593,
+   "tokens_out": 862,
+   "latency_ms": 16414
+  },
+  "cached": false
+ }
+}

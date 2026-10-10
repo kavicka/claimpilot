@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A6.1\", \"A6.2\"], \"rationale\": \"The claim involves a fracture of the distal radius confirmed by a medical report, which falls under the coverage for bone fractures under the accident section. There is no evidence indicating that the event was caused by alcohol, extreme sports (the policy does not exclude this as it is not the Premium product), intentionally, or due to war/terrorism. The event occurred during a tandem paragliding flight, which is not explicitly excluded under the given policy terms.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 978,
+   "tokens_out": 121,
+   "latency_ms": 9886
+  },
+  "cached": false
+ }
+}

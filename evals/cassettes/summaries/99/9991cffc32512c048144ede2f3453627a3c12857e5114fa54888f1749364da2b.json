@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "20. 3. 2026 došlo k úrazu poistného, pri ktorom boli uplatnené liečebné náklady v sume 775,82 EUR v súlade s článkom 4 ods. 1 VPP. Jednorazové plnenie za zlomeninu v sume 500,00 EUR je vyplatené podľa článku 6 ods. 1 VPP. Celkové plnenie činí 1 275,82 EUR, spolucastenie nie je uplatnené. Rizikové signály nie sú zaznamenané, chýbajúce informácie nie sú identifikované. Plnenie je odporúčané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 575,
+   "tokens_out": 197,
+   "latency_ms": 9404
+  },
+  "cached": false
+ }
+}

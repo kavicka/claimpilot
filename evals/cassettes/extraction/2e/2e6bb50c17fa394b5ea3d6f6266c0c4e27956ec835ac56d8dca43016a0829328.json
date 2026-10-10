@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"receipt_number\": {\n    \"value\": \"8953/38080\",\n    \"quote\": \"Receipt Receipt No. 8953/38080 04/27/2026 05:08 PM\",\n    \"page\": 1\n  },\n  \"issue_date\": {\n    \"value\": \"04/27/2026 05:08 PM\",\n    \"quote\": \"Receipt Receipt No. 8953/38080 04/27/2026 05:08 PM\",\n    \"page\": 1\n  },\n  \"pharmacy_name\": {\n    \"value\": \"Meyer Pharmacy\",\n    \"quote\": \"Meyer Pharmacy Miami\",\n    \"page\": 1\n  },\n  \"currency\": {\n    \"value\": \"$\",\n    \"quote\": \"Total due $ | 43.92\",\n    \"page\": 1\n  },\n  \"line_items\": [\n    {\n      \"description\": \"Rehydration salts\",\n      \"amount\": \"12.25\",\n      \"quote\": \"Rehydration salts | 12.25\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Ibuprofen 400mg\",\n      \"amount\": \"13.91\",\n      \"quote\": \"Ibuprofen 400mg | 13.91\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Paracetamol 500mg\",\n      \"amount\": \"4.70\",\n      \"quote\": \"Paracetamol 500mg | 4.70\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Amoxicillin 1g\",\n      \"amount\": \"13.06\",\n      \"quote\": \"Amoxicillin 1g | 13.06\",\n      \"page\": 1\n    }\n  ],\n  \"total\": {\n    \"value\": \"43.92\",\n    \"quote\": \"Total due $ | 43.92\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1271,
+   "tokens_out": 486,
+   "latency_ms": 26319
+  },
+  "cached": false
+ }
+}

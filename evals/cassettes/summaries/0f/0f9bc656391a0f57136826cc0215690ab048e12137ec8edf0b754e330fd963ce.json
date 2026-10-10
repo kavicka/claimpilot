@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Medizinisches Zentrum Gerber sú preplatené podľa článku 4 ods. 1 VPP, pretože sú súčasťou pokrytých nákladov v rámci cestovného poistenia Premium. Celková suma uplatnená v čase udalosti je 976,47 CHF, čo bolo prepočítané na 1 038,80 EUR. Poisťovňa prepláca uvedenú sumu v súlade s ustanoveniami článku 4 ods. 1 VPP. Žiadne ďalšie informácie nechýbajú, hoci bola zaznamenaná výstraha o skorom nároku (early_claim).",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 526,
+   "tokens_out": 205,
+   "latency_ms": 3489
+  },
+  "cached": false
+ }
+}

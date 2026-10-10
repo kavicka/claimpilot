@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"Liečebné náklady Úraz X Batožina Oneskorenie batožiny\",\n    \"values\": [\n      \"Úraz\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"808,09\",\n      \"currency\": \"EUR\",\n      \"description\": \"Fotoaparát\",\n      \"page\": 1,\n      \"quote\": \"Fotoaparát | 808,09 | EUR\"\n    },\n    {\n      \"amount\": \"553,16\",\n      \"currency\": \"EUR\",\n      \"description\": \"Mobilný telefón\",\n      \"page\": 1,\n      \"quote\": \"Mobilný telefón | 553,16 | EUR\"\n    },\n    {\n      \"amount\": \"1 227,35\",\n      \"currency\": \"EUR\",\n      \"description\": \"Notebook\",\n      \"page\": 1,\n      \"quote\": \"Notebook | 1 227,35 | EUR\"\n    },\n    {\n      \"amount\": \"250,83\",\n      \"currency\": \"EUR\",\n      \"description\": \"Cestovný kufor\",\n      \"page\": 1,\n      \"quote\": \"Cestovný kufor | 250,83 | EUR\"\n    },\n    {\n      \"amount\": \"62,34\",\n      \"currency\": \"EUR\",\n      \"description\": \"Topánky\",\n      \"page\": 1,\n      \"quote\": \"Topánky | 62,34 | EUR\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Nemecko\",\n    \"value\": \"Nemecko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"25. 5. 2026\",\n    \"value\": \"25. 5. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Na letisku v Hamburgu som stratil/a batožinu. Letecká spoločnosť ju nezabezpečila a na mieste som spísal/a záznam o udalosti.\",\n    \"value\": \"Na letisku v Hamburgu som stratil/a batožinu. Letecká spoločnosť ju nezabezpečila a na mieste som spísal/a záznam o udalosti.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Hamburg, Nemecko\",\n    \"value\": \"Hamburg, Nemecko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 978 12 Nechválova Polianka\",\n    \"value\": \"<ADDRESS_1>, 978 12 Nechválova Polianka\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP30509175\",\n    \"value\": \"CP30509175\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 18. 6. 2026\",\n    \"value\": \"18. 6. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"29. 5. 2026\",\n    \"value\": \"29. 5. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"23. 5. 2026\",\n    \"value\": \"23. 5. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3603,
+   "tokens_out": 1060,
+   "latency_ms": 29410
+  },
+  "cached": false
+ }
+}

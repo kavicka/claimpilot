@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"Úraz\\nBatozina\\n· Oneskorenie batožiny\\nX] Liečebné náklady\",\n    \"values\": [\n      \"Úraz\",\n      \"Oneskorenie batožiny\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"321,10\",\n      \"currency\": \"EUR\",\n      \"description\": \"Liecebné náklady - Poliklinika Curié\",\n      \"page\": 1,\n      \"quote\": \"Liecebné náklady - Poliklinika Curié | 321,10 | EUR\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Chorvátsko\",\n    \"value\": \"Chorvátsko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"18. 5. 2026\",\n    \"value\": \"18. 5. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Podvrtnutie členkového kíbu sa mi stalo počas prechádzky v Split, Chorvátsko. V tom čase som necitil žiadnu velkú bolesf, ale neskôr sa mi začal kib zahrievat a zotrvávalo v ñom nepohodlie. V tej chvili som sa rozhodol, že sa vyžiadam o lekársku starostlivost.\",\n    \"value\": \"Podvrtnutie členkového kíbu sa mi stalo počas prechádzky v Split, Chorvátsko. V tom čase som necitil žiadnu velkú bolesf, ale neskôr sa mi začal kib zahrievat a zotrvávalo v ñom nepohodlie. V tej chvili som sa rozhodol, že sa vyžiadam o lekársku starostlivost.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Split, Chorvátsko\",\n    \"value\": \"Split, Chorvátsko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 860 87 Hermanovce\",\n    \"value\": \"<ADDRESS_1>, 860 87 Hermanovce\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP74672520\",\n    \"value\": \"CP74672520\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 26. 5. 2026\",\n    \"value\": \"26. 5. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"22. 5. 2026\",\n    \"value\": \"22. 5. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"13. 5.2026\",\n    \"value\": \"13. 5.2026\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3612,
+   "tokens_out": 973,
+   "latency_ms": 18372
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A7.4\"], \"rationale\": \"The claim involves the theft of shoes from a beach bag, which is covered under clause A7.1 (theft of luggage). The police report (A7.4) confirms the theft and provides necessary documentation. There is no indication of any exclusions applying (e.g., intentional act, alcohol, extreme sports, war, etc.).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 927,
+   "tokens_out": 99,
+   "latency_ms": 9959
+  },
+  "cached": false
+ }
+}

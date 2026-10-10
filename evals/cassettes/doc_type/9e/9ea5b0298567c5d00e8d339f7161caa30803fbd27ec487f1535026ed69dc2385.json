@@ -1,0 +1,19 @@
+{
+ "step": "doc_type",
+ "prompt_id": "doc_type/classify",
+ "prompt_hash": "1ae7e9f6bb774a99696d2f049238213451f7cc1a36c3e3b1c064e6eaaa6b574f",
+ "model": "ollama:qwen3:4b-instruct",
+ "response": {
+  "text": "{ \"doc_type\": \"pharmacy_receipt\" }",
+  "thinking": "The document provided appears to be a receipt from a pharmacy or medical store. It lists items purchased (e.g., \"Elastični zavoj\", \"Sprej za nos\", \"Amoksicilin 1 g\") with prices, and includes a total amount to be paid (EUR 27.21) with PDV (VAT) included. The text ends with \"Hvala na kupnji\" which means \"Thank you for the purchase\" in Croatian.\n\nThis is clearly a till receipt from a pharmacy or drugstore, as it details specific medical products and their prices, and is formatted like a typical pharmacy receipt.\n\nNone of the other labels (e.g., claim form, policy certificate, medical report, etc.) match the content or format of this document.\n\nTherefore, the correct label is \"pharmacy_receipt\".\n",
+  "tool_calls": [],
+  "model": "qwen3:4b-instruct",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 290,
+   "tokens_out": 193,
+   "latency_ms": 4834
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A8.1\"], \"rationale\": \"The claim is for essential purchases due to a luggage delay. The evidence states that the luggage arrived with a significant delay (about 20 hours), and the insured had to buy hygiene items and clothing because their own did not arrive. Clause A8.1 explicitly covers proven costs for essential hygiene items and clothing when luggage is delayed. Clause A8.3 does not apply because the delay exceeded 12 hours. Clause A11.1, A11.2, A11.3, and A11.4 are general exclusions that do not apply here as there is no indication of intentional actions, alcohol, extreme sports, or events related to war, terrorism, or nuclear incidents.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 972,
+   "tokens_out": 168,
+   "latency_ms": 10872
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for unstable angina, which is an acute medical condition occurring during the trip. Clause A4.1 covers 'primerané a nevyhnutné náklady na ambulantné ošetrenie, hospitalizáciu a lekárom predpísané lieky, ak boli vynaložené v dôsledku akútneho ochorenia alebo úrazu počas cesty.' The evidence confirms the treatment was for an acute condition (unstable angina) that occurred during the trip. No exclusions apply, as the condition is not related to a pre-existing state (A5.1), planned treatment (A5.2), or other general exclusions (A11.1–A11.4).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1229,
+   "tokens_out": 196,
+   "latency_ms": 13718
+  },
+  "cached": false
+ }
+}

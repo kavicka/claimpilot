@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Poliambulatorio Donati vo výške 680,22 EUR nie sú preplatené, pretože účel nákladov nebol v súlade s podmienkami poistenia uvedený v článku 11 ods. 2.  \nVýška nákladov na liečbu je 680,22 EUR, avšak poisťovňa neprepláca žiadnu sumu, pretože sa jedná o výdavky výsledného účelu výsledného vplyvu alkoholu, čo je výnimka podľa článku 11 ods. 2.  \nSuma 680,22 EUR nebola preplatená, pretože účel nákladov je vylúčený z poistenia podľa článku 11 ods. 2.  \nCelková suma uplatnených nákladov je 680,22 EUR, avšak poisťovňa neprepláca žiadnu sumu, pretože sa jedná o výdavky spôsobené alkoholom, čo je vylúčené podľa článku 11 ods. 2.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 518,
+   "tokens_out": 332,
+   "latency_ms": 5358
+  },
+  "cached": false
+ }
+}

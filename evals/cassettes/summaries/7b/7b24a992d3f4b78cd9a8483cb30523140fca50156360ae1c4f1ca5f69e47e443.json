@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Poliambulatorio Sagnelli vo výške 560,96 EUR nie sú preplatené, pretože podľa článku 3 ods. 2 VPP sú náklady na liečbu v ambulantných zariadeniach mimo účinnosti poistnej zmluvy.  \nLieky z lekárne vo výške 41,70 EUR nie sú preplatené, pretože podľa článku 3 ods. 2 VPP sú náklady na lieky mimo účinnosti poistnej zmluvy.  \nCelková suma uplatnených nákladov vo výške 602,66 EUR nie je preplatená, pretože žiadna z položiek nie je podľa článku 3 ods. 2 VPP podmienkou pre plnenie.  \nPlnenie vo výške 0,00 EUR je v súlade s rozhodnutím o neuplatnení.  \nSpoluplatnosť vo výške 0,00 EUR nevzniká, pretože poistné plnenie nie je poskytnuté.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 595,
+   "tokens_out": 309,
+   "latency_ms": 5160
+  },
+  "cached": false
+ }
+}

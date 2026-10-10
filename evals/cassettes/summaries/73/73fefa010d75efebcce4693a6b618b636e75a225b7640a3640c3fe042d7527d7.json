@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 16. 3. 2026 došlo k liečebnej udalosti v Horváth International Medical Centre, kde boli uplatnené náklady vo výške 97 020,00 HUF, ktoré sú podľa článku 4 ods. 1 VPP pokryté. Lieky z lekárne vo výške 10 614,00 HUF sú tiež podľa článku 4 ods. 1 VPP pokryté, avšak ich plnenie je nulové. Celkové plnenie činí 222,49 EUR, z toho spolucastník zaplatil 50,00 EUR. Rizikový signál „early_claim“ je prítomný, čo naznačuje riziko podvodného vyúčtovania. Chýbajúce informácie nie sú zaznamenané. Odporúča sa plnenie v sume 222,49 EUR, pretože všetky náklady sú v súlade s podmienkami poistnej zmluvy a článkom 4 ods. 1 VPP.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 579,
+   "tokens_out": 314,
+   "latency_ms": 5653
+  },
+  "cached": false
+ }
+}

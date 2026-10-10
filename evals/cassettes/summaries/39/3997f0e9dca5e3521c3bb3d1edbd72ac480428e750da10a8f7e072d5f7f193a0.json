@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 8. 2. 2026 došlo v rámci cestovného poistenia Standard k nákladom na liečbu v Poliambulatorio Donati vo výške 680,22 EUR. Poistná udalosť nie je podľa článku 11 ods. 2 VPP pokrytá, pretože liečba bola vykonaná v súvislosti s alkoholovým zneužívaním, čo predstavuje výnimku z poistnej ochrany. Rizikový signál „exclusion_alcohol“ potvrdzuje výnimku. Chýbajúce informácie nie sú zaznamenané. Odporúča sa zamietnutie nároku s plnením 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 485,
+   "tokens_out": 211,
+   "latency_ms": 3577
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP13895645\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP13895645\", \"page\": 1}, \"insured_name\": {\"value\": \"Zoltán Pavlíček\", \"quote\": \"MENO A PRIEZVISKO Zoltán Pavlíček\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"841102/1894\", \"quote\": \"RODNÉ ČÍSLO 841102/1894\", \"page\": 1}, \"insured_address\": {\"value\": \"Vlárska 969, 805 81 Hrčel\", \"quote\": \"ADRESA Vlárska 969, 805 81 Hrčel\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 922 309 432\", \"quote\": \"TELEFÓN +421 922 309 432\", \"page\": 1}, \"insured_email\": {\"value\": \"zoltan.pavlicek16@mail.example.sk\", \"quote\": \"E-MAIL zoltan.pavlicek16@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK63 0900 0000 0019 0835 7275\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK63 0900 0000 0019 0835 7275\", \"page\": 1}, \"destination_country\": {\"value\": \"Česko\", \"quote\": \"KRAJINA CESTY Česko\", \"page\": 1}, \"trip_start\": {\"value\": \"2. 3. 2026\", \"quote\": \"CESTA OD 2. 3. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"14. 3. 2026\", \"quote\": \"CESTA DO 14. 3. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"9. 3. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 9. 3. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Špindlerův Mlýn, Česko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Špindlerův Mlýn, Česko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Špindlerův Mlýn, Česko, a skončil som s otrum mozgu. Po udalosti som sa obrátil na miestne zdravotníctvo, kde som bol podrobne prešetovaný. Diagnóza otrum mozgu bola potvrdená po vyšetrení.\", \"quote\": \"POPIS UDALOSTI Bol som v Špindlerův Mlýn, Česko, a skončil som s otrum mozgu. Po udalosti som sa obrátil na miestne zdravotníctvo, kde som bol podrobne prešetovaný. Diagnóza otrum mozgu bola potvrdená po vyšetrení.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady - Poliklinika Horáková\", \"amount\": \"25 512,00\", \"currency\": \"CZK\", \"quote\": \"Liečebné náklady - Poliklinika Horáková 25 512,00 CZK\", \"page\": 1}], \"signature_date\": {\"value\": \"30. 3. 2026\", \"quote\": \"Dátum: 30. 3. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1029,
+   "latency_ms": 35817
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"facility_name\": {\"value\": \"Roberts International Medical Centre\", \"quote\": \"Roberts International Medical Centre\", \"page\": 1}, \"facility_country\": {\"value\": \"Greece\", \"quote\": \"Thessaloniki, Greece\", \"page\": 1}, \"patient_name\": {\"value\": \"Irena Machnácová\", \"quote\": \"Irena Machnácová\", \"page\": 1}, \"patient_birth_date\": {\"value\": \"19/07/1956\", \"quote\": \"19/07/1956\", \"page\": 1}, \"visit_date\": {\"value\": \"08/07/2026\", \"quote\": \"08/07/2026\", \"page\": 1}, \"discharge_date\": {\"value\": null, \"quote\": null, \"page\": 1}, \"diagnosis\": {\"value\": \"Acute upper respiratory infection\", \"quote\": \"Acute upper respiratory infection\", \"page\": 1}, \"icd10_code\": {\"value\": \"J06.9\", \"quote\": \"J06.9\", \"page\": 1}, \"anamnesis\": {\"value\": \"No relevant previous illnesses. No regular medication.\", \"quote\": \"No relevant previous illnesses. No regular medication.\", \"page\": 1}, \"treatment\": {\"value\": \"Physical examination reveals mild pharyngeal erythema, clear nasal discharge, and bilateral tender anterior cervical lymphadenopathy. A complete blood count shows a mild lymphocytosis, consistent with a viral etiology. Chest X-ray is unremarkable. The patient was prescribed symptomatic treatment including paracetamol for fever and throat discomfort, and nasal decongestants. The patient is advised to rest, maintain hydration, and return for follow-up if symptoms persist or worsen.\", \"quote\": \"Physical examination reveals mild pharyngeal erythema, clear nasal discharge, and bilateral tender anterior cervical lymphadenopathy. A complete blood count shows a mild lymphocytosis, consistent with a viral etiology. Chest X-ray is unremarkable. The patient was prescribed symptomatic treatment including paracetamol for fever and throat discomfort, and nasal decongestants. The patient is advised to rest, maintain hydration, and return for follow-up if symptoms persist or worsen.\", \"page\": 1}, \"physician_name\": {\"value\": \"Stacey Martin\", \"quote\": \"Stacey Martin\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2086,
+   "tokens_out": 539,
+   "latency_ms": 45858
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\",\n    \"value\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Distorsion des oberen Sprunggelenks | S93.4\",\n    \"value\": \"Distorsion des oberen Sprunggelenks\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"München, Deutschland\",\n    \"value\": \"Deutschland\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Medizinisches Zentrum Krebs\",\n    \"value\": \"Medizinisches Zentrum Krebs\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Distorsion des oberen Sprunggelenks | S93.4\",\n    \"value\": \"S93.4\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN <PERSON_1> | GEB. 26.05.1976\",\n    \"value\": \"26.05.1976\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN <PERSON_1> | GEB. 26.05.1976\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Bei der klinischen Untersuchung zeigten sich Schwellung, Druckschmerz und begrenzte Beweglichkeit im linken Sprunggelenk. Die MRT bestätigte eine Verletzung der lateralen Bandapparate ohne Fraktur. Der Patient erhielt eine Gipsfixation und eine Schiene zur Schonung. Physiotherapie wurde verordnet, um die Funktion des Gelenks zu erhalten. Nach 6 Wochen erfolgt eine Kontrolle zur Beurteilung der Genesung.\",\n    \"value\": \"Bei der klinischen Untersuchung zeigten sich Schwellung, Druckschmerz und begrenzte Beweglichkeit im linken Sprunggelenk. Die MRT bestätigte eine Verletzung der lateralen Bandapparate ohne Fraktur. Der Patient erhielt eine Gipsfixation und eine Schiene zur Schonung. Physiotherapie wurde verordnet, um die Funktion des Gelenks zu erhalten. Nach 6 Wochen erfolgt eine Kontrolle zur Beurteilung der Genesung.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"23.03.2026 | ENTLASSUNG -\",\n    \"value\": \"23.03.2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1596,
+   "tokens_out": 762,
+   "latency_ms": 14388
+  },
+  "cached": false
+ }
+}

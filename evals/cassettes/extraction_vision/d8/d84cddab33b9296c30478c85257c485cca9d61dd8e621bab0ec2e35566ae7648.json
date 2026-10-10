@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP26944487\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP26944487\", \"page\": 1}, \"insured_name\": {\"value\": \"Fridrich Kubička\", \"quote\": \"MENO A PRIEZVISKO Fridrich Kubička\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"680222/5397\", \"quote\": \"RODNÉ ČÍSLO 680222/5397\", \"page\": 1}, \"insured_address\": {\"value\": \"Zlatá 34, 963 47 Jasová\", \"quote\": \"ADRESA Zlatá 34, 963 47 Jasová\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 948 170 480\", \"quote\": \"TELEFÓN +421 948 170 480\", \"page\": 1}, \"insured_email\": {\"value\": \"fridrich.kubicka79@mail.example.sk\", \"quote\": \"E-MAIL fridrich.kubicka79@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK18 0900 0000 0014 7132 3518\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK18 0900 0000 0014 7132 3518\", \"page\": 1}, \"destination_country\": {\"value\": \"Grécko\", \"quote\": \"KRAJINA CESTY Grécko\", \"page\": 1}, \"trip_start\": {\"value\": \"13. 4. 2026\", \"quote\": \"CESTA OD 13. 4. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"20. 4. 2026\", \"quote\": \"CESTA DO 20. 4. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"18. 4. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 18. 4. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Chania, Grécko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Chania, Grécko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Podvrtnutie členkového kĺbu sa mi stalo v Chanie, Grécko. Udalosť sa diala v prírodnom prostredí. Po nehode som sa okamžite obrátil na miestne zdravotnícke zariadenie.\", \"quote\": \"POPIS UDALOSTI Podvrtnutie členkového kĺbu sa mi stalo v Chanie, Grécko. Udalosť sa diala v prírodnom prostredí. Po nehode som sa okamžite obrátil na miestne zdravotnícke zariadenie.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Andrews International Medical Centre\", \"amount\": \"252,45\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Andrews International Medical Centre 252,45 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"10. 5. 2026\", \"quote\": \"Dátum: 10. 5. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 965,
+   "latency_ms": 34156
+  },
+  "cached": false
+ }
+}

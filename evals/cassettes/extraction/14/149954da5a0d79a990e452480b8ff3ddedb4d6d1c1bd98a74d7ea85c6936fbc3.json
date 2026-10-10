@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"policy_number\": {\n    \"value\": \"CP35714784\",\n    \"quote\": \"CP35714784\",\n    \"page\": 1\n  },\n  \"insured_name\": {\n    \"value\": \"<PERSON_1>\",\n    \"quote\": \"<PERSON_1>\",\n    \"page\": 1\n  },\n  \"insured_birth_number\": {\n    \"value\": \"<RC_1>\",\n    \"quote\": \"<RC_1>\",\n    \"page\": 1\n  },\n  \"insured_address\": {\n    \"value\": \"<ADDRESS_1>, 827 16 Kolbasov\",\n    \"quote\": \"<ADDRESS_1>, 827 16 Kolbasov\",\n    \"page\": 1\n  },\n  \"insured_phone\": {\n    \"value\": \"<PHONE_1>\",\n    \"quote\": \"<PHONE_1>\",\n    \"page\": 1\n  },\n  \"insured_email\": {\n    \"value\": \"<EMAIL_1>\",\n    \"quote\": \"<EMAIL_1>\",\n    \"page\": 1\n  },\n  \"iban\": {\n    \"value\": \"<IBAN_1>\",\n    \"quote\": \"<IBAN_1>\",\n    \"page\": 1\n  },\n  \"destination_country\": {\n    \"value\": \"Grécko\",\n    \"quote\": \"Grécko\",\n    \"page\": 1\n  },\n  \"trip_start\": {\n    \"value\": \"28. 7. 2026\",\n    \"quote\": \"28. 7. 2026\",\n    \"page\": 1\n  },\n  \"trip_end\": {\n    \"value\": \"3. 8. 2026\",\n    \"quote\": \"3. 8. 2026\",\n    \"page\": 1\n  },\n  \"event_date\": {\n    \"value\": \"11. 7. 2026\",\n    \"quote\": \"11. 7. 2026\",\n    \"page\": 1\n  },\n  \"event_place\": {\n    \"value\": \"Chania, Grécko\",\n    \"quote\": \"Chania, Grécko\",\n    \"page\": 1\n  },\n  \"claim_types\": {\n    \"values\": [\"Storno cesty\"],\n    \"quote\": \"Liečebné náklady Úraz Batožina Oneskorenie batožiny X Storno cesty\",\n    \"page\": 1\n  },\n  \"event_description\": {\n    \"value\": \"Počas prípravy na cestu som sa ochorel/a na lumbálnu diskopatia L4/L5 s koreňovým dráždením. Lekár mi cestovanie neodporučil, preto som cestu stornoval/a v cestovnej kancelárii.\",\n    \"quote\": \"Počas prípravy na cestu som sa ochorel/a na lumbálnu diskopatia L4/L5 s koreňovým dráždením. Lekár mi cestovanie neodporučil, preto som cestu stornoval/a v cestovnej kancelárii.\",\n    \"page\": 1\n  },\n  \"claimed_items\": [\n    {\n      \"description\": \"Stornovací poplatok\",\n      \"amount\": \"1 051,40\",\n      \"currency\": \"EUR\",\n      \"quote\": \"Stornovací poplatok 1 051,40 EUR\",\n      \"page\": 1\n    }\n  ],\n  \"signature_date\": {\n    \"value\": \"19. 8. 2026\",\n    \"quote\": \"Dátum: 19. 8. 2026\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3592,
+   "tokens_out": 866,
+   "latency_ms": 41558
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,956 @@
+{
+ "suite": "summaries",
+ "split": "test",
+ "metrics": {
+  "fact_violations": {
+   "value": 0.0,
+   "num": 0,
+   "den": 0
+  },
+  "texts_without_violations": {
+   "value": 1.0,
+   "num": 54,
+   "den": 54
+  },
+  "judge_score": {
+   "value": 4.56,
+   "num": 30,
+   "den": 0
+  },
+  "handler_summaries_over_150_words": {
+   "value": 1.0,
+   "num": 1,
+   "den": 0
+  }
+ },
+ "items": [
+  {
+   "id": "S42-041/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Poistná udalosť sa odohrala 23. 3. 2026 v súvislosti s liečebnými nákladmi v Akdeniz International Medical Centre a nákupom liekov z lekárne. Uplatnená suma činí 41 288,71 TRY, z čoho 851,50 EUR bolo plnené. Liečebné náklady sú pokryté podľa čl. 4 ods. 1 VPP, lieky z lekárne sú tiež pokryté podľa čl. 4 ods. 1, avšak plnenie v EUR je 0,00. V prípade liekov chýba potvrdenie o výdavku v EUR, čo je v rozporu s požiadavkami na dokumentáciu. Rizikový signál date_inconsistency naznačuje nesúlad medzi dátumom udalosti a dátumom vystavenia účtov. Chýbajúce informácie nie sú uvedené. Odporúčanie: plneni",
+    "words": 111,
+    "judge": {
+     "completeness": 3,
+     "tone": 4,
+     "no_overpromise": 5,
+     "note": "The completeness score is lowered because the text doesn't explicitly state the total amount being paid out after considering the deductible or any potential limitations, leaving the client to potentially calculate it themselves."
+    }
+   }
+  },
+  {
+   "id": "S42-041/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-041 Vám poisťovňa vyplatí poistné plnenie 851,50 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Akdeniz International Medical Centre sú preplatené podľa článku 4 ods. 1 zákona o poistení, pretože sú súčasťou účtovnej dokumentácie a výdavky sú v súlade s podmienkami poistenia.  \nLieky z lekárne sú preplatené podľa článku 4 ods. 1 zákona o poistení, pretože sú dokázané a sú súčasťou liečebného postupu.  \nCelková suma poistenia v eurách je 851,50 €, z čoho 50,00 € tvorí spolucastníctvo poisteného.  \nRizikový signál",
+    "words": 140,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 3,
+     "note": "The text doesn't explicitly state the total claimed amount (41,288.71 TRY) or the amount being paid out in TRY, which is a significant omission for clarity and transparency for the client."
+    }
+   }
+  },
+  {
+   "id": "S42-041/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Basic. Ereignis: medizinische Behandlung am 23.3.2026. Entscheidung: Leistungen wurden gewährt. Auszahlungsbetrag: 851,50 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1. Die Gesamtsumme der eingereichten Kosten betrug 41 288,71 TRY, davon wurde 851,50 EUR ausgezahlt. Die Selbstbeteiligung beträgt 50,00 EUR. Risikosignale: date_inconsistency.",
+    "words": 45,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 3,
+     "note": "The text doesn't explain *why* the claim was covered, only *that* it was, which is a missed opportunity to build trust and transparency, especially given the 'date_inconsistency' risk signal."
+    }
+   }
+  },
+  {
+   "id": "S42-042/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "13. 5. 2026 došlo k stratám cestovného batožinu poistného. Poistený uplatnil náklady na nákup nevyhnutných vecí vo výške 26,39 EUR, ktoré sú podľa článku 8 ods. 1 VPP pokryté. Poistná udalosť je v súlade s podmienkami poistného produktu Cestovné poistenie Standard. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Odporúčanie: plnenie vo výške 26,39 EUR.",
+    "words": 57,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the text states the decision and amount, it lacks a clear, concise statement of *why* the facts support the decision beyond referencing a clause, which isn't readily understandable to a layperson."
+    }
+   }
+  },
+  {
+   "id": "S42-042/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-042 Vám poisťovňa vyplatí poistné plnenie 26,39 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nNákup nevyhnutných vecí je preplatený v sume 26,39 EUR podľa článku 8 ods. 1 zákona o poistení. Poisťovňa prepláca uvedenú sumu, pretože udalosť spadá do poistnej udalosti podľa poistnej zmluvy. Všetky požadované dokumenty boli doručené a sú v poriadku. Poistné plnenie je poskytnuté v plnej výške.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte číslo poistnej udalosti a priložte doklady, ktoré rozhodnutie môžu zmen",
+    "words": 101,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is slightly reduced because while the text states the decision, amount, and reasons, it could benefit from explicitly mentioning the type of event (luggage) for enhanced clarity."
+    }
+   }
+  },
+  {
+   "id": "S42-042/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Standard. Ereignis: Gepäckverlust am 13. 5. 2026. Entscheidung: Abdeckung der entstandenen Kosten. Auszahlungsbetrag: 26,39 EUR. Maßgebliche Artikel der Bedingungen (VPP): čl. 8 ods. 1.",
+    "words": 27,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the text states the decision, amount, and relevant clause, it lacks a clear explanation of *why* the facts support the decision, which would strengthen the justification."
+    }
+   }
+  },
+  {
+   "id": "S42-043/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Dňa 21. 5. 2026 došlo k úrazu poistného, ktorý je podľa poistnej zmluvy pokrytý v rámci cestovného poistenia Standard. Liečebné náklady v sume 560,44 EUR na účte Medizinisches Zentrum Ruppert sú podľa článku 4 ods. 1 VPP pokryté, plnenie je 530,44 EUR. Jednorazové plnenie za zlomeninu v sume 300,00 EUR je podľa článku 6 ods. 1 VPP pokryté. Spolu je plnené 830,44 EUR, z toho poistný účastník uhradil 30,00 EUR. Rizikové signály nie sú zaznamenané, chýbajúce informácie nie sú identifikované. Odporúčanie: plnenie v sume 830,44 EUR.",
+    "words": 86,
+    "judge": {
+     "completeness": 5,
+     "tone": 4,
+     "no_overpromise": 5,
+     "note": "The tone, while formal, could be slightly improved by incorporating more empathetic language, which would elevate it from a neutral, factual summary to a more client-focused communication."
+    }
+   }
+  },
+  {
+   "id": "S42-043/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-043 Vám poisťovňa vyplatí poistné plnenie 830,44 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Medizinisches Zentrum Ruppert vo výške 560,44 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení.  \nJednorazové plnenie za zlomeninu vo výške 300,00 EUR je poisťovňou preplatené podľa článku 6 ods. 1 zákona o poistení.  \nSpolu je poisťovňou preplatených 830,44 EUR, z čoho poistný poplatok činí 30,00 EUR.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte číslo poistnej udalosti a ",
+    "words": 108,
+    "judge": {
+     "completeness": 5,
+     "tone": 5,
+     "no_overpromise": 4,
+     "note": "The text receives a '4' for no_overpromise because while generally accurate, it doesn't explicitly mention the reduction in the medical expense reimbursement (530.44 EUR vs. 560.44 EUR claimed), which could be perceived as an overpromise if the client isn't aware of the difference."
+    }
+   }
+  },
+  {
+   "id": "S42-043/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Standard. Ereignis: Unfall am 21. 5. 2026. Entscheidung: Leistungen wurden gewährt. Auszahlungsbetrag: 830,44 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1, čl. 6 ods. 1. Die Leistungen umfassen 530,44 EUR für medizinische Kosten und 300,00 EUR Einmalzahlung bei Fraktur. Selbstbeteiligung: 30,00 EUR.",
+    "words": 46,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the text states the decision, amount, and reasons, it doesn't explicitly mention the *claimed* amount, which could leave the client wondering why the payment is less than what they initially requested."
+    }
+   }
+  },
+  {
+   "id": "S42-044/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "3. 3. 2026 došlo k liečebným nákladom v Poliklinike Šarić a nákupu liekov z lekárne. Uplatnená suma činí 291,35 EUR, z čoho 241,35 EUR bolo plnené podľa čl. 4 ods. 1 VPP. Lieky z lekárne boli uznane, avšak plnenie činí 0,00 EUR, čo môže naznačovať nedostatočnú dokumentáciu alebo nezodpovedajúci typ lieku. Spoluúčasť vo výške 50,00 EUR bola splnená. Rizikové signály chýbajú, chýbajúce informácie chýbajú. Plnenie je odporúčané vo výške 241,35 EUR.",
+    "words": 71,
+    "judge": {
+     "completeness": 4,
+     "tone": 3,
+     "no_overpromise": 5,
+     "note": "The tone could be improved by using more consistently formal language and avoiding phrases like 'čo môže naznačovať,' which introduces speculation rather than a definitive explanation."
+    }
+   }
+  },
+  {
+   "id": "S42-044/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-044 Vám poisťovňa vyplatí poistné plnenie 241,35 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Poliklinika Šarić vo výške 264,14 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení.  \nLieky z lekárne vo výške 27,21 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení.  \nCelková suma uplatnená vo výške 291,35 EUR bola poisťovňou preplatená v sume 241,35 EUR.  \nSpoluúčasť vo výške 50,00 EUR je podľa poistnej zmluvy nezahrnutá do plnenia.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30",
+    "words": 119,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the text states the decision, amount, and reasons, it doesn't explicitly mention the amount the client will *receive* after the deductible/co-insurance (50 EUR), which could be confusing."
+    }
+   }
+  },
+  {
+   "id": "S42-044/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Basic. Ereignis: medizinische Behandlung am 3. 3. 2026. Entscheidung: Leistungen wurden gewährt. Auszahlungsbetrag: 241,35 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1. Die Gesamtsumme der geltend gemachten Kosten betrug 291,35 EUR, davon wurde 241,35 EUR ausgezahlt. Die Selbstbeteiligung von 50,00 EUR wurde nicht erstattet.",
+    "words": 48,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because the text doesn't explicitly state *why* the claim was covered, only *that* it was, which could leave the client wanting more detail regarding the reasoning behind the decision."
+    }
+   }
+  },
+  {
+   "id": "S42-045/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Poistná udalosť sa odohrala 27. 6. 2026 v súvislosti s liečebnými nákladmi v Poliklinike Licul a nákupom liekov z lekárne. Celková uhradená suma činila 755,88 EUR, z čoho 720,85 EUR na liečbu a 35,03 EUR na lieky. Rozhodnutie o plnení je zamietnuté, pretože náklady nepodliehajú poistnej ochrane podľa článku 3 ods. 2 VPP, ktorý vylučuje poistné pokrytie pre náklady na liečbu v nemocniciach a lekárňach, ak nie sú vykonané v rámci zdravotnej starostlivosti poskytovanej v súlade s účelom poistnej zmluvy. Rizikové signály a chýbajúce informácie nie sú zaznamenané. Poistné plnenie je odmietnuté, sum",
+    "words": 97,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the text states the decision, amount, and reasons, it could be improved by explicitly referencing the policy number or claim reference (S42-045) for clarity and traceability."
+    }
+   }
+  },
+  {
+   "id": "S42-045/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-045 poisťovňa poistné plnenie neposkytne.\n\nOdôvodnenie\nLiečebné náklady na Poliklinike Licul vo výške 720,85 EUR nie sú preplatené, pretože podľa článku 3 ods. 2 VPP sú náklady na liečbu v ambulantných zariadeniach, ktoré nie sú zmluvnými poskytovateľmi, výnimkou z poistenia.  \nLieky z lekárne vo výške 35,03 EUR nie sú preplatené, pretože podľa článku 3 ods. 2 VPP sú náklady na lieky výnimkou z poistenia, ak nie sú vydané na základe lekárskeho predpisu poskytovateľa zmluvného s poisťovňou.  \nCelková suma uplatnená vo výške 755,",
+    "words": 157,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the text states the decision, amount, and reasons, it could have explicitly mentioned the total amount claimed and the total amount being denied, rather than just reiterating the individual item denials."
+    }
+   }
+  },
+  {
+   "id": "S42-045/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Basic. Ereignis: medizinische Behandlung am 27.6.2026. Entscheidung: Keine Leistung. Grund: Nicht versichert gemäß čl. 3 ods. 2 VPP. Auszahlungsbetrag: 0,00 EUR. Maßgebliche Artikel: čl. 3 ods. 2. Gesamtaufwand: 755,88 EUR. Keine Zahlung.",
+    "words": 35,
+    "judge": {
+     "completeness": 4,
+     "tone": 3,
+     "no_overpromise": 5,
+     "note": "The tone could be improved by adding a more empathetic phrase acknowledging the client's situation, as the current summary feels purely transactional and lacks any softening language."
+    }
+   }
+  },
+  {
+   "id": "S42-046/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "19. 4. 2026 došlo k stratám osobného batožinu poistného osoby <PERSON_1> počas cesty. Poistné pokrytie sa vzťahuje na základe článku 7 ods. 1 a 7 ods. 2 VPP. Uplatnené položky: lyžiarske okuliare (119,50 EUR), kniha a čítačka (174,42 EUR), notebook (882,19 EUR), oblečenie (161,57 EUR). Poistné plnenie je odporúčané vo výške 881,07 EUR, z toho 425,58 EUR za notebook, čo zodpovedá 48 % hodnoty. Dôvod plnenia je splnenie podmienok článku 7 ods. 1 a 7 ods. 2 VPP. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Plnenie je odporúčané.",
+    "words": 91,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is lower because while the text states the decision and reasons, it doesn't explicitly mention the total amount claimed (1337.68 EUR) or the total payment amount (881.07 EUR) upfront, requiring the reader to calculate it from the itemized list."
+    }
+   }
+  },
+  {
+   "id": "S42-046/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-046 Vám poisťovňa vyplatí poistné plnenie 881,07 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLyžiarske okuliare sú preplatené vo výške 119,50 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nKniha a čítačka sú preplatené vo výške 174,42 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nNotebook je preplatený vo výške 425,58 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nOblečenie (nohavice, tričká) je preplatené vo výške 161,57 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 zákona o",
+    "words": 140,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The text is missing the total claimed amount (1337.68 EUR), which could lead to client confusion, impacting completeness."
+    }
+   }
+  },
+  {
+   "id": "S42-046/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Premium. Ereignis: Gepäckschaden am 19.4.2026. Entscheidung: Abdeckung für alle Gegenstände. Auszahlungsbetrag: 881,07 EUR. Maßgebliche Artikel der Bedingungen: čl. 7 ods. 1, čl. 7 ods. 2. Gegenstände: Lyžiarske okuliare (119,50 EUR), Kniha a čítačka (174,42 EUR), Notebook (425,58 EUR), Oblečenie (161,57 EUR). Summe der beantragten Leistung: 1 337,68 EUR. Spoluucast: 0,00 EUR.",
+    "words": 54,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is lower because while the text lists the decision and amounts, it doesn't explicitly state the *reasons* behind the partial coverage for the notebook, which is a crucial detail derived from the facts."
+    }
+   }
+  },
+  {
+   "id": "S42-047/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "14. 3. 2026 došlo k zrušeniu cesty, za ktoré bol uplatnený stornovací poplatok vo výške 691,20 EUR. Poistenie Cestovné poistenie Premium zahŕňa pokrytie stornovacích poplatkov podľa článku 9 ods. 1 a 9 ods. 2 VPP, ak je zrušenie spôsobené poistným rizikom. Uplatnená suma 691,20 EUR bola čiastočne pokrytá v sume 552,96 EUR, čo zodpovedá podmienkam poistnej zmluvy. Poistné riziko je v súlade s článkom 9 ods. 1 VPP, pretože zrušenie bola spôsobené okolnosťami, ktoré sú v zmysle poistnej zmluvy poistným rizikom. Rizikové signály a chýbajúce informácie nie sú zaznamenané. Odporúča sa plnenie vo výš",
+    "words": 96,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is slightly reduced because the text doesn't explicitly state the decision (approval/rejection) at the very beginning, requiring the reader to infer it from the subsequent explanation."
+    }
+   }
+  },
+  {
+   "id": "S42-047/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-047 Vám poisťovňa vyplatí poistné plnenie 552,96 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nStornovací poplatok vo výške 691,20 EUR je poisťovňou preplatený podľa článku 9 ods. 1 a článku 9 ods. 2 VPP. Celková suma preplatenia činí 552,96 EUR. Žiadne ďalšie položky nie sú uvedené. Spoluúčasť nie je uplatnená.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte číslo poistnej udalosti a priložte doklady, ktoré rozhodnutie môžu zmeniť.\n\nS pozdravom\nOddelenie likvidácie poistných udalostí\nVzorová poisťovňa, a. ",
+    "words": 91,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is slightly reduced because the letter doesn't explicitly state the *reason* for the partial coverage (why the full 691.20 EUR wasn't paid), only referencing the articles without further explanation."
+    }
+   }
+  },
+  {
+   "id": "S42-047/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Premium. Ereignis: Stornierung am 14. 3. 2026. Entscheidung: Leistungsfähigkeit bestätigt. Auszahlungsbetrag: 552,96 EUR. Maßgebliche Artikel der Bedingungen: čl. 9 ods. 1, čl. 9 ods. 2. Stornokosten in Höhe von 691,20 EUR wurden teilweise gedeckt.",
+    "words": 37,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The text lacks a clear explanation of *why* the claim was only partially covered, which is a crucial element for completeness and transparency."
+    }
+   }
+  },
+  {
+   "id": "S42-048/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Poistná udalosť sa odohrala 3. 8. 2026 v súvislosti s liečebnými nákladmi v Stevens International Medical Centre. Uplatnená suma činí 208,35 EUR, ktorá bola v rámci poistného plnenia potvrdená ako pokrytá podľa článku 4 ods. 1 zákona o poistení. Poistné plnenie je odporúčané vo výške 208,35 EUR. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Poistný plnenie je zároveň plnené v plnej výške, spolupráca poistného poistného poistného poistného poistného poistného poistného poistného poistného poistného poistného poistného poistného poistného poistného poistného po",
+    "words": 273,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The text repeats 'poistného' multiple times at the end, which detracts from its completeness and professionalism."
+    }
+   }
+  },
+  {
+   "id": "S42-048/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-048 Vám poisťovňa vyplatí poistné plnenie 208,35 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Stevens International Medical Centre vo výške 208,35 EUR sú preplatené podľa článku 4 ods. 1 zákona o poistení. Všetky požadované dokumenty boli doručené a nebol zistený žiadny rizikový signál. Poistná udalosť nastala 3. 8. 2026, čo spĺňa podmienky poistenia. Poistná suma bola účtovaná v plnej výške bez spoluceny.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte číslo poistnej udalosti a priložte",
+    "words": 106,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the text states the decision, amount, and reasons, it could benefit from explicitly mentioning the type of event (medical) for enhanced clarity."
+    }
+   }
+  },
+  {
+   "id": "S42-048/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Premium. Ereignis: medizinische Behandlung am 3. 8. 2026 im Stevens International Medical Centre. Entscheidung: Leistungsfähigkeit bestätigt. Auszahlungsbetrag: 208,35 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1.",
+    "words": 30,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the text states the decision, amount, and relevant clause, it lacks a clear explanation of *why* the facts support the decision, which would strengthen the justification for the claim."
+    }
+   }
+  },
+  {
+   "id": "S42-049/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Poistná udalosť sa odohrala 27. 7. 2026 pri cestovaní poistného <PERSON_1> v rámci poistného produktu Cestovné poistenie Standard. Uplatnená suma za liečebné náklady v Medizinisches Zentrum Hofmann činila 878,17 CHF. Poistná spoločnosť odmietla plnenie na základe článku 11 ods. 2 VPP, ktorý vylučuje pokrytie nákladov spôsobených alebo zhoršených užívaním alkoholu. V súvislosti s udalosťou bola identifikovaná riziková značka exclusion_alcohol. Chýbajúce informácie nie sú zaznamenané. Plnenie je odmietnuté, suma plnenia je 0,00 EUR.",
+    "words": 72,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is slightly lower because while the text states the decision, amount, and reason, it doesn't explicitly mention *why* article 11, paragraph 2 excludes coverage, leaving room for client confusion."
+    }
+   }
+  },
+  {
+   "id": "S42-049/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-049 poisťovňa poistné plnenie neposkytne.\n\nOdôvodnenie\nLiečebné náklady na účtovníctve Medizinisches Zentrum Hofmann vo výške 878,17 CHF nie sú preplatené, pretože sú výsledkom výkonu, ktorý je vylúčený z poistenia podľa článku 11 ods. 2 VPP. Poisťovňa neprepláca žiadnu sumu, pretože náklady sú vylúčené z poistenia. Výška poistného plnenia je 0,00 EUR. Poistný prípad je zameraný na vylúčené rizikové signály spojené s alkoholom.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte číslo poistnej udalosti a pril",
+    "words": 103,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is slightly reduced because while the text states the decision, amount, and reason, it could benefit from a more detailed explanation of *why* article 11, paragraph 2 constitutes an exclusion, which would enhance clarity for the client."
+    }
+   }
+  },
+  {
+   "id": "S42-049/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Standard. Ereignis: Medizinische Behandlung am 27.7.2026. Entscheidung: Nicht leistungsbedingt. Auszahlungsbetrag: 0,00 EUR. Maßgebliche Artikel der Bedingungen: čl. 11 ods. 2. Grund: Ausschluss aufgrund Alkoholkonsum (risikové signály). Gesamtkosten: 878,17 CHF. Spitalleistung nicht gedeckt.",
+    "words": 35,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is slightly reduced because while the text states the decision and amount, it could benefit from a more detailed explanation of *why* article 11, paragraph 2 applies to the specific situation, rather than just referencing it."
+    }
+   }
+  },
+  {
+   "id": "S42-051/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Poistná udalosť sa odohrala 27. 3. 2026 v súvislosti s liečebnými nákladmi na Poliambulatorio Iannelli, ktoré boli účtované vo výške 225,34 EUR. Poistné plnenie je uplatnené podľa článku 4 ods. 1 VPP, ktorý pokrýva liečebné náklady v zahraničí. Poistné plnenie je odporúčané vo výške 175,34 EUR, pričom poistný účastník uhradil 50,00 EUR. Rizikové signály nie sú identifikované. Chýbajúce informácie nie sú zaznamenané. Suma plnenia je v súlade s faktom a výškou spolucastovania.",
+    "words": 72,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the text states the decision and amount, it doesn't explicitly state *why* the claim was partially covered (e.g., limitations of the policy)."
+    }
+   }
+  },
+  {
+   "id": "S42-051/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-051 Vám poisťovňa vyplatí poistné plnenie 175,34 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Poliambulatorio Iannelli vo výške 225,34 EUR sú preplatené poisťovňou podľa článku 4 ods. 1 zákona o poisťovaní. Poisťovňa prepláca sumu 175,34 EUR, čo zodpovedá plneniu podľa ustanovení článku 4 ods. 1 VPP. Spolucastné výdavky vo výške 50,00 EUR nie sú preplatené, pretože sú podľa článku 4 ods. 1 VPP záväzné pre poisteného.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte číslo poistnej udalosti",
+    "words": 110,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The completeness score is only a 4 because while the letter states the decision, amount, and reasons, it could benefit from explicitly mentioning the total claimed amount (225.34 EUR) for greater clarity."
+    }
+   }
+  },
+  {
+   "id": "S42-051/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Basic. Ereignis: medizinische Behandlung am 27.3.2026. Entscheidung: Leistungsfähigkeit bestätigt. Auszahlungsbetrag: 175,34 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1. Die Leistung umfasst 175,34 EUR aus insgesamt 225,34 EUR aufgewendeten Kosten, wovon 50,00 EUR Selbstbeteiligung.",
+    "words": 38,
+    "judge": {
+     "completeness": 4,
+     "tone": 5,
+     "no_overpromise": 5,
+     "note": "The text could be improved by explicitly stating the reason for the partial coverage (deductible/co-insurance) rather than just stating the amounts involved, which could lead to client confusion."
+    }
+   }
+  },
+  {
+   "id": "S42-052/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "18. 1. 2026 došlo k úrazu poistného, ktorý spôsobil liečebné náklady v sume 475,62 EUR v súlade s článkom 4 ods. 1 VPP. Jednorazové plnenie za zlomeninu je uplatnené v sume 500,00 EUR podľa článku 6 ods. 1 VPP. Celkové plnenie činí 975,62 EUR, spolupráca poistného je 0,00 EUR. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Plnenie je odporúčané.",
+    "words": 62
+   }
+  },
+  {
+   "id": "S42-052/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-052 Vám poisťovňa vyplatí poistné plnenie 975,62 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Medizinisches Zentrum Bartl vo výške 475,62 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení.  \nJednorazové plnenie za zlomeninu vo výške 500,00 EUR je poisťovňou preplatené podľa článku 6 ods. 1 zákona o poistení.  \nCelkové plnenie vo výške 975,62 EUR je preplatené, pričom spolucastné výdavky činia 0,00 EUR.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte číslo poistnej udal",
+    "words": 109
+   }
+  },
+  {
+   "id": "S42-052/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Premium. Ereignis: Unfall am 18.1.2026. Entscheidung: Leistungen wurden gewährt. Auszahlungsbetrag: 975,62 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1, čl. 6 ods. 1. Leistungen: 475,62 EUR für medizinische Kosten, 500,00 EUR Einmalzahlung bei Fraktur. Keine Selbstbeteiligung.",
+    "words": 40
+   }
+  },
+  {
+   "id": "S42-053/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Poistná udalosť sa odohrala 20. 5. 2026 pri cestovaní poistného <PERSON_1> v rámci poistného produktu Cestovné poistenie Basic. Poistné riziko sa realizovalo v súvislosti s liečebnými nákladmi na účte Opčej nemocnice Vučetić, ktoré činili 3 940,61 EUR. Poistná spoločnosť uznala náklady podľa článku 4 ods. 1 a článku 4 ods. 2 VPP. Poistné plnenie je odporúčané vo výške 3 890,61 EUR súčasne s odpočtom spolucastného 50,00 EUR. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Plnenie je odporúčané.",
+    "words": 80
+   }
+  },
+  {
+   "id": "S42-053/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-053 Vám poisťovňa vyplatí poistné plnenie 3 890,61 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Opća bolnica Vučetić vo výške 3 940,61 EUR sú preplatené podľa článku 4 ods. 1 a článku 4 ods. 2 zákona o poistení, pretože sú súčasťou účelového poistenia v rámci cestovného poistenia Basic. Poisťovňa prepláca sumu 3 890,61 EUR, čo zodpovedá plneniu podľa zmluvných podmienok. Spoluúčasť vo výške 50,00 EUR je podľa zmluvy nezahrnutá do plnenia.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte č",
+    "words": 115
+   }
+  },
+  {
+   "id": "S42-053/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Basic. Ereignis: Medizinische Behandlung am 20. 5. 2026 in der Allgemeinen Klinik Vučetić. Entscheidung: Leistungsfall abgedeckt. Auszahlung: 3 890,61 EUR. Maßgebliche VPP-Artikel: čl. 4 ods. 1, čl. 4 ods. 2. Selbstbeteiligung: 50,00 EUR. Gesamtaufwand: 3 940,61 EUR.",
+    "words": 40
+   }
+  },
+  {
+   "id": "S42-055/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Poistná udalosť sa stala 15. 8. 2026 pri ceste poistného <PERSON_1>. Poistné záťaži boli nahlásené ako straty osobných vecí: topánky, mobilný telefón a cestovný kufor. Podľa článku 7 ods. 1 a 7 ods. 2 VPP sú poistné udalosti pokryté, ak sú výdavky v súlade s podmienkami poistnej zmluvy. Uplatnená suma činí 944,75 EUR, z čoho bolo plnené 552,77 EUR, včetne spolucastného 20,00 EUR. Plnenie je odporúčané. Poistné záťaži sú v súlade s poistnými podmienkami, žiadne rizikové signály ani chýbajúce informácie neboli zistené.",
+    "words": 82
+   }
+  },
+  {
+   "id": "S42-055/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-055 Vám poisťovňa vyplatí poistné plnenie 552,77 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nTopánky sú preplatené vo výške 103,31 EUR na základe článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nMobilný telefón je preplatený vo výške 300,00 EUR na základe článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nCestovný kufor je preplatený vo výške 149,46 EUR na základe článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nCelková suma preplatená poisťovňou činí 552,77 EUR, z čoho 20,00 EUR predstavuje spolucastenie poiste",
+    "words": 134
+   }
+  },
+  {
+   "id": "S42-055/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Standard. Ereignis: Gepäckschaden am 15. 8. 2026. Entscheidung: Leistungen für Topánky, Mobilný telefón und Cestovný kufor wurden bewilligt. Auszahlungsbetrag: 552,77 EUR. Maßgebliche Artikel der Bedingungen: čl. 7 ods. 1, čl. 7 ods. 2. Sparschaden: 20,00 EUR. Gesamtbeantragt: 944,75 EUR.",
+    "words": 42
+   }
+  },
+  {
+   "id": "S42-056/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "26. 4. 2026 došlo k liečebnému nákladu v Medizinisches Zentrum Gerber vo výške 976,47 CHF, ktorý je uvedený ako pokrytý podľa článku 4 ods. 1 VPP. Poistná suma v eurách je 1 038,80. V prípade sa prejavil rizikový signál „early_claim“. Chýbajúce informácie nie sú zaznamenané. Na základe uvedených dôkazov a platných ustanovení VPP je odporúčané plnenie poistnej udalosti vo výške 1 038,80 EUR.",
+    "words": 63
+   }
+  },
+  {
+   "id": "S42-056/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-056 Vám poisťovňa vyplatí poistné plnenie 1 038,80 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Medizinisches Zentrum Gerber sú preplatené podľa článku 4 ods. 1 VPP, pretože sú súčasťou pokrytých nákladov v rámci cestovného poistenia Premium. Celková suma uplatnená v čase udalosti je 976,47 CHF, čo bolo prepočítané na 1 038,80 EUR. Poisťovňa prepláca uvedenú sumu v súlade s ustanoveniami článku 4 ods. 1 VPP. Žiadne ďalšie informácie nechýbajú, hoci bola zaznamenaná výstraha o skorom nároku (early_claim).\n\nAk s",
+    "words": 121
+   }
+  },
+  {
+   "id": "S42-056/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Premium. Ereignis: medizinische Behandlung am 26. 4. 2026. Entscheidung: Leistungsfähigkeit bestätigt. Auszahlungsbetrag: 1 038,80 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1. Die Leistung beträgt 976,47 CHF, umgerechnet 1 038,80 EUR. Keine Eigenbeteiligung. Risikosignale: early_claim. Keine fehlenden Informationen.",
+    "words": 42
+   }
+  },
+  {
+   "id": "S42-057/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Na dátum 7. 4. 2026 došlo v Merino International Medical Centre k liečebným nákladom vo výške 849,93 EUR, ktoré sú podľa článku 4 ods. 1 VPP pokryté. Poistné plnenie je odporúčané vo výške 799,93 EUR súčasťou poistného plnenia, pričom poistný účastník uhradil 50,00 EUR. Rizikový signál date_inconsistency naznačuje nesúlad dátumu udalosti s časovým rámcom poistnej ochrany. Chýbajúce informácie nie sú zaznamenané. Plnenie je odporúčané s ohľadom na platné ustanovenia VPP a potvrdené liečebné účty.",
+    "words": 74
+   }
+  },
+  {
+   "id": "S42-057/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-057 Vám poisťovňa vyplatí poistné plnenie 799,93 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Merino International Medical Centre vo výške 849,93 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení. Suma plnenia činí 799,93 EUR, pričom poistný poplatok vo výške 50,00 EUR je uhradený poistným. Výška plnenia je určená podľa ustanovení článku 4 ods. 1 VPP, ktorý stanovuje podmienky pre plnenie nákladov na liečbu. Rizikový signál „date_inconsistency“ neovplyvňuje rozhodnutie o plnení, pretože nákl",
+    "words": 128
+   }
+  },
+  {
+   "id": "S42-057/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Basic. Ereignis: Medizinische Behandlung am 7. 4. 2026 im Merino International Medical Centre. Entscheidung: Leistungsfähig. Auszahlung: 799,93 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1. Sparschutz: 50,00 EUR. Gesamtaufwand: 849,93 EUR. Risikosignale: date_inconsistency. Keine fehlenden Informationen.",
+    "words": 40
+   }
+  },
+  {
+   "id": "S42-058/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Poistná udalosť sa odohrala 26. 1. 2026 pri návšteve nemocnice Landesklinikum Gindl. Uplatnená suma za liečebné náklady činí 7 247,08 EUR, z čoho je plnená suma 7 197,08 EUR, spoluúčasť 50,00 EUR. Událosť je pokrytá podľa článku 4 ods. 1 a článku 4 ods. 2 z VPP. Náklady sú v súlade s podmienkami poistného plánu, nezaznamenali sa rizikové signály ani chýbajúce informácie. Odporúčanie: plnenie vo výške 7 197,08 EUR.",
+    "words": 69
+   }
+  },
+  {
+   "id": "S42-058/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-058 Vám poisťovňa vyplatí poistné plnenie 7 197,08 EUR na účet uvedený v hlásení.\n\nOdôvodnenie\nLiečebné náklady – Landesklinikum Gindl vo výške 7 247,08 EUR sú preplatené poisťovňou na základe článku 4 ods. 1 a článku 4 ods. 2 zákona o poisťovaní osobných rizík, pretože sú súčasťou pokrytých nákladov podľa poistnej zmluvy. Poisťovňa prepláca sumu 7 197,08 EUR, čo zodpovedá plneniu podľa poistnej zmluvy. Spoluúčasť vo výške 50,00 EUR je podľa poistnej zmluvy nezahrnutá do preplatenia. Všetky požadované dokumenty boli predložené ",
+    "words": 128
+   }
+  },
+  {
+   "id": "S42-058/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Basic. Ereignis: Medizinische Behandlung am 26.1.2026 im Landesklinikum Gindl. Entscheidung: Leistungsfähig. Auszahlungsbetrag: 7 197,08 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1, čl. 4 ods. 2. Spesen: 7 247,08 EUR, Selbstbeteiligung: 50,00 EUR.",
+    "words": 37
+   }
+  },
+  {
+   "id": "S42-059/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Na dátum 3. 8. 2026 došlo k liečebnému výkonu v Stevens International Medical Centre, kde boli uplatnené náklady vo výške 208,35 EUR. Poistná udalosť bola odmietnutá na základe článku 13 ods. 4 VPP, ktorý vylučuje pokrytie nákladov za liečbu, ktorá nebola poskytnutá v súlade s dohodnutými poskytovateľmi alebo v prípade neoverených účtov. Rizikový signál „duplicate_invoice“ naznačuje možnú duplikáciu účtu, čo podkopáva dôveryhodnosť údajov. Chýbajúce informácie nie sú uvedené, avšak nedostatok overenia účtu a nesúlad s poskytovateľmi sú dostatočným dôvodom pre odmietnutie plnenia. Odporúča sa z",
+    "words": 90
+   }
+  },
+  {
+   "id": "S42-059/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-059 poisťovňa poistné plnenie neposkytne.\n\nOdôvodnenie\nLiečebné náklady – Stevens International Medical Centre vo výške 208,35 EUR nie sú preplatené, pretože podľa článku 13 ods. 4 VPP sú náklady na liečbu v zahraničí nezahrnuté do poistnej ochrany v prípade, ak sú vyplnené duplicitné faktúry. Poisťovňa prepláca sumu 0,00 EUR.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte číslo poistnej udalosti a priložte doklady, ktoré rozhodnutie môžu zmeniť.\n\nS pozdravom\nOddelenie likvidácie poistných udalostí\nVzoro",
+    "words": 90
+   }
+  },
+  {
+   "id": "S42-059/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Premium. Ereignis: medizinische Behandlung am 3. 8. 2026. Entscheidung: Nicht leistungsbedingt. Auszahlungsbetrag: 0,00 EUR. Maßgebliche Artikel der Bedingungen: čl. 13 ods. 4. Grund: Verdacht auf Doppelrechnung (duplicate_invoice). Gesamtforderung: 208,35 EUR. Spolzahlung: 0,00 EUR.",
+    "words": 36
+   }
+  },
+  {
+   "id": "S42-060/handler",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Poistná udalosť sa odohrala 27. 3. 2026 v súvislosti s liečebnými nákladmi na Poliambulatorio Iannelli vo výške 225,34 EUR. Poistné plnenie nie je poskytnuté na základe článku 13 ods. 4 VPP, ktorý vylučuje plnenie za náklady, ktoré nie sú v súlade s podmienkami poistnej zmluvy. Na základe rizikového signálu „duplicate_invoice“ je prítomný podozrenie z duplikátu faktúry, čo podkopáva dôveryhodnosť účtovnej dokumentácie. Chýbajúce informácie nie sú uvedené, avšak nedostatok dôkazov o platnosti a jedinečnosti faktúry výrazne ovplyvňuje hodnotenie. Odporúča sa zamietnutie poistného plnenia vo výšk",
+    "words": 86
+   }
+  },
+  {
+   "id": "S42-060/client_letter",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Vážená pani / Vážený pán,\n\npo posúdení Vašej poistnej udalosti S42-060 poisťovňa poistné plnenie neposkytne.\n\nOdôvodnenie\nLiečebné náklady – Poliambulatorio Iannelli vo výške 225,34 EUR nie sú preplatené, pretože podľa článku 13 ods. 4 VPP sú náklady na liečbu v súvislosti s duplikátnym účtom nezakryté. Poisťovňa neprepláca žiadnu sumu, pretože sa jedná o zistený rizikový signál duplikátu účtu.\n\nAk s rozhodnutím nesúhlasíte, môžete do 30 dní podať námietku. Uveďte číslo poistnej udalosti a priložte doklady, ktoré rozhodnutie môžu zmeniť.\n\nS pozdravom\nOddelenie likvidácie poistných udalostí\nVzo",
+    "words": 89
+   }
+  },
+  {
+   "id": "S42-060/group",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "fact_violations"
+   ],
+   "detail": {
+    "text": "Produkt: Cestovné poistenie Basic. Ereignis: medizinische Kosten am 27. 3. 2026. Entscheidung: Nicht leistbar. Auszahlungsbetrag: 0,00 EUR. Maßgebliche Artikel der Bedingungen: čl. 13 ods. 4. Grund: Verdacht auf Doppelrechnung (duplicate_invoice). Gesamterstattung: 0,00 EUR. Spoluzahlung: 0,00 EUR. Umgang mit Forderung: abgelehnt.",
+    "words": 40
+   }
+  }
+ ],
+ "meta": {
+  "created": "20261009T234914Z",
+  "git": {
+   "sha": "bab3d7e",
+   "dirty": true
+  },
+  "dataset": "d59d01befdf0",
+  "seed": 42,
+  "cassette_mode": "auto",
+  "overrides": {},
+  "options": {},
+  "prompts": {
+   "doc_type/classify": "doc_type/classify@1+1ae7e9f6",
+   "extraction/document": "extraction/document@1+e1460380",
+   "extraction/vision": "extraction/vision@1+81c8af53",
+   "summaries/group_de": "summaries/group_de@2+6e81862d",
+   "summaries/handler_sk": "summaries/handler_sk@2+f3ce3522",
+   "summaries/judge": "summaries/judge@1+a14837a6",
+   "summaries/letter_reasons_sk": "summaries/letter_reasons_sk@2+7446883f"
+  },
+  "models": [
+   "ollama:gemma3:12b",
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 156,
+  "cached_calls": 114,
+  "tokens_in": 227395,
+  "tokens_out": 64702,
+  "tokens_per_item": 5409.2,
+  "latency_p50_ms": 3765,
+  "latency_p95_ms": 10403,
+  "worker_peak_rss_mb": 959,
+  "models": [
+   "ollama:gemma3:12b",
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ]
+ },
+ "notes": [],
+ "stale": []
+}

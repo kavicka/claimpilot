@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Medizinisches Zentrum Frei vo výške 560,19 CHF nie sú preplatené, pretože sú výsledkom výkonu zdravotnej starostlivosti, ktorá je vylúčená podľa článku 11 ods. 3 VPP.  \nJednorazové plnenie za zlomeninu vo výške 0,00 EUR nie je preplatené, pretože sa jedná o náklad, ktorý nie je v rámci poistnej ochrany podľa článku 11 ods. 3 VPP.  \nCelkové uplatnené náklady vo výške 560,19 CHF a 0,00 EUR sú preplatené vo výške 0,00 EUR.  \nPoistné riziko je vylúčené v súvislosti s extrémnym športom, čo je uvedené ako rizikový signál.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 626,
+   "tokens_out": 267,
+   "latency_ms": 5044
+  },
+  "cached": false
+ }
+}

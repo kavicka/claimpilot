@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"RE-2026-17912\", \"quote\": \"Rechnung Nr. RE-2026-17912\", \"page\": 1}, \"issue_date\": {\"value\": \"27.04.2026\", \"quote\": \"Datum: 27.04.2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Medizinisches Zentrum Gerber\", \"quote\": \"Medizinisches Zentrum Gerber\", \"page\": 1}, \"provider_country\": {\"value\": \"Schweiz\", \"quote\": \"Davos, Schweiz\", \"page\": 1}, \"patient_name\": {\"value\": \"Adolf Lepšík\", \"quote\": \"Adolf Lepšík, geb. 12.03.1956\", \"page\": 1}, \"service_date\": {\"value\": \"26.04.2026\", \"quote\": \"BEHANDLUNGSDATUM 26.04.2026\", \"page\": 1}, \"currency\": {\"value\": \"Fr.\", \"quote\": \"976.47 Fr.\", \"page\": 1}, \"line_items\": [{\"description\": \"Notfallbehandlung\", \"amount\": \"294.36\", \"quote\": \"1 Notfallbehandlung 294.36\", \"page\": 1}, {\"description\": \"Computertomographie\", \"amount\": \"512.57\", \"quote\": \"2 Computertomographie 512.57\", \"page\": 1}, {\"description\": \"Laboruntersuchung\", \"amount\": \"97.74\", \"quote\": \"3 Laboruntersuchung 97.74\", \"page\": 1}, {\"description\": \"Infusionstherapie\", \"amount\": \"71.80\", \"quote\": \"4 Infusionstherapie 71.80\", \"page\": 1}], \"total\": {\"value\": \"976.47\", \"quote\": \"Gesamtbetrag 976.47 Fr.\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 500,
+   "latency_ms": 25130
+  },
+  "cached": false
+ }
+}

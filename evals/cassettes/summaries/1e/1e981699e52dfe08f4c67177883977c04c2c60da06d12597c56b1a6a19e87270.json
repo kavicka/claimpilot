@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "25. 2. 2026 došlo k zrušeniu cestovnej súťaže s následným uplatnením stornovacieho poplatku vo výške 1 689,10 EUR. Poistná udalosť je podľa článku 9 ods. 1 a článku 9 ods. 2 VPP pokrytá, pretože zrušenie bola spôsobená okolnosťami výnimkou z poistnej udalosti. Poistné plnenie je odporúčané vo výške 1 351,28 EUR, čo zodpovedá plneniu uvedenému v faktoch. Rizikové signály nie sú zaznamenané, chýbajúce informácie nie sú identifikované. Poistný plnenie je založené na platných podmienkach poistnej zmluvy a údajoch z faktov.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 553,
+   "tokens_out": 260,
+   "latency_ms": 4295
+  },
+  "cached": false
+ }
+}

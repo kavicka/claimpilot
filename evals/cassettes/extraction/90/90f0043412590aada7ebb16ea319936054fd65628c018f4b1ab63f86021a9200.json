@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Nessuna patologia pregressa rilevante. Nessuna terapia cronica.\",\n    \"value\": \"Nessuna patologia pregressa rilevante. Nessuna terapia cronica.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Infezione acuta delle vie respiratorie superiori | ICD-10 J06.9\",\n    \"value\": \"Infezione acuta delle vie respiratorie superiori\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Roma, Italia\",\n    \"value\": \"Italia\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliambulatorio Sagnelli\",\n    \"value\": \"Poliambulatorio Sagnelli\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Infezione acuta delle vie respiratorie superiori | ICD-10 J06.9\",\n    \"value\": \"J06.9\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PAZIENTE <PERSON_1> | NATO/A IL 07/01/1972\",\n    \"value\": \"07/01/1972\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Medico: <PERSON_2> Firma e timbro\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Esame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore.\",\n    \"value\": \"Esame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"DATA VISITA / RICOVERO 29/08/2026 | DIMISSIONE -\",\n    \"value\": \"29/08/2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1666,
+   "tokens_out": 736,
+   "latency_ms": 14100
+  },
+  "cached": false
+ }
+}

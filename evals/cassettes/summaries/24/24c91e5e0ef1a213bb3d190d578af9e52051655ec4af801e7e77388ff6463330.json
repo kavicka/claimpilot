@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/group_de",
+ "prompt_hash": "a157a4d1fdc75035a3a7ce98a68f15da6e3793673e2fea51d86535e1978e6bae",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Produkt: Cestovné poistenie Premium. Ereignis: Gepäckverlust am 12.4.2026. Entscheidung: Abdeckung der notwendigen Einkäufe. Auszahlungsbetrag: 42,27 EUR. Maßgebliche Artikel der Bedingungen (VPP): čl. 8 ods. 1. Die Gesamtsumme der abgedeckten Ausgaben beträgt 1 935,96 TRY (542,73 + 1 393,23 TRY), umgerechnet 42,27 EUR. Keine Beteiligung des Versicherten.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 470,
+   "tokens_out": 158,
+   "latency_ms": 3056
+  },
+  "cached": false
+ }
+}

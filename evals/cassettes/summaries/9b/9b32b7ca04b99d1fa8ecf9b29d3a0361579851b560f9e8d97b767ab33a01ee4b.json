@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "21. 4. 2026 došlo k stratám cestovného batožinu poistného. Poistený uplatnil náklady na nákup nevyhnutných vecí vo výši 1 949,24 TRY a 2 451,21 TRY, celkom 4 400,45 TRY. Rozhodnutie o plnení je kladné, suma plnenia je 96,08 EUR. Plnenie je oprávnené podľa článku 8 ods. 1 VPP, ktorý stanovuje plnenie nákladov na základné potreby v prípade straty batožiny. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Plnenie je odporúčané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 629,
+   "tokens_out": 228,
+   "latency_ms": 3981
+  },
+  "cached": false
+ }
+}

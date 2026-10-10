@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Poliambulatorio Iannelli vo výške 225,34 EUR nie sú preplatené, pretože podľa článku 13 ods. 4 VPP sú náklady na liečbu v súvislosti s duplikátnym účtom nezakryté. Poisťovňa neprepláca žiadnu sumu, pretože sa jedná o zistený rizikový signál duplikátu účtu.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 519,
+   "tokens_out": 133,
+   "latency_ms": 2445
+  },
+  "cached": false
+ }
+}

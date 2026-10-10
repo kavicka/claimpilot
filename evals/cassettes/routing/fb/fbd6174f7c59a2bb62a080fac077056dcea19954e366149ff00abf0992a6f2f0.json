@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "143058190bbdb36220345f2a12dbba1ef7427917c962e41830707fa9199b0378",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{ \"queue\": \"senior\", \"rationale\": \"The claim involves a stolen luggage item, and the client reported the theft to the police. However, the absence of any detailed documentation (such as receipts or proof of value) raises questions about the claim's completeness and the potential for an exclusion related to insufficient evidence.\" }",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 304,
+   "tokens_out": 68,
+   "latency_ms": 3313
+  },
+  "cached": false
+ }
+}

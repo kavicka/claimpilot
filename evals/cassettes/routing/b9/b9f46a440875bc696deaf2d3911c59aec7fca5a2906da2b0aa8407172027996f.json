@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "663d4d11a183819d363bf0e72f97ee2ed21e746c5c2d357984ae65ead3d71855",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{ \"queue\": \"standard\", \"rationale\": \"The claim involves a routine medical treatment for an ankle sprain with no signs of fraud or unusual circumstances. The documents are consistent and do not indicate any exclusions or red flags.\" }",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 478,
+   "tokens_out": 50,
+   "latency_ms": 9088
+  },
+  "cached": false
+ }
+}

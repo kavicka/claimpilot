@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 8. 2. 2026 došlo k liečebným nákladom vo výške 680,22 EUR v Poliambulatorio Donati, ktoré neboli pokryté podľa poistnej zmluvy. Dôvodom je výnimka uvedená v článku 11 ods. 2 VPP, ktorý vylučuje pokrytie nákladov spôsobených alebo zhoršených užívaním alkoholu, čo je potvrdené rizikovým signálom „exclusion_alcohol“. Poistný prípad neobsahuje chýbajúce informácie, ktoré by ovplyvnili rozhodnutie. Odporúča sa zamietnutie poistnej náhrady vo výške 680,22 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 546,
+   "tokens_out": 227,
+   "latency_ms": 3800
+  },
+  "cached": false
+ }
+}

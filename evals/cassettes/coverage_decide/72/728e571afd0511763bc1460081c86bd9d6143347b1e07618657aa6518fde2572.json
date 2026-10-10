@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A7.3\"], \"rationale\": \"The item (ski goggles) is listed in the property irregularity report as part of the lost luggage. According to clause A7.1, the insurer covers damage, loss, or theft of luggage during transportation. Clause A7.3 specifies that electronics (including ski goggles) are covered up to 30% of the luggage limit. There is no indication of exclusion (e.g., intentional loss, alcohol, or extreme sports) that would apply here.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 943,
+   "tokens_out": 123,
+   "latency_ms": 11189
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/group_de",
+ "prompt_hash": "a157a4d1fdc75035a3a7ce98a68f15da6e3793673e2fea51d86535e1978e6bae",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Produkt: Cestovné poistenie Standard. Ereignis: Medizinische Behandlung am 19.8.2026. Entscheidung: Leistungen wurden gewährt. Auszahlung: 184,20 EUR (einschließlich 30,00 EUR Selbstbeteiligung). Maßgebliche Artikel: čl. 4 ods. 1. Leistungen: 172,71 EUR (Poliklinika Tomičić), 11,49 EUR (Medikamente).",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 470,
+   "tokens_out": 127,
+   "latency_ms": 2420
+  },
+  "cached": false
+ }
+}

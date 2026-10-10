@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady účtované v Roberts International Medical Centre sú podľa rozhodnutia poisťovne nezahrnuté do plnenia. Podľa článku 3 ods. 3 VPP nie sú náklady na liečbu v zariadení, ktoré nie je v zozname poskytovateľov poistenia, pokryté. Preto poisťovňa prepláca sumu 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 453,
+   "tokens_out": 120,
+   "latency_ms": 2721
+  },
+  "cached": false
+ }
+}

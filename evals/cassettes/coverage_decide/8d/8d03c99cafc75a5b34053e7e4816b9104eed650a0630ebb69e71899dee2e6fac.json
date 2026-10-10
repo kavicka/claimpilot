@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for an acute condition (otitis media) that occurred during the trip. Clause A4.1 explicitly covers the costs of outpatient treatment, hospitalization, and prescribed medications resulting from an acute illness or injury during the trip. There is no indication that the condition was pre-existing, planned, or related to excluded activities (e.g., extreme sports, alcohol, war, etc.), and the product explicitly includes coverage for extreme sports, which is not relevant here.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1189,
+   "tokens_out": 121,
+   "latency_ms": 12496
+  },
+  "cached": false
+ }
+}

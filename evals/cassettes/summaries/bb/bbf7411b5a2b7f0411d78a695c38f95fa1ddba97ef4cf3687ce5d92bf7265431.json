@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Andrews International Medical Centre vo výške 252,45 EUR nie sú preplatené, pretože podľa článku 13 ods. 4 VPP sú náklady na liečbu v zahraničí nezakryté, ak sú vyplatené z iného zdroja alebo sú podobné výdavky už preplatené. V prípade sa jedná o duplikát faktúry, čo je prepočítané ako rizikový signál. Preto je rozhodnutie o nezakrytí nákladov správne a preplatenie je nulové.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 515,
+   "tokens_out": 179,
+   "latency_ms": 3118
+  },
+  "cached": false
+ }
+}

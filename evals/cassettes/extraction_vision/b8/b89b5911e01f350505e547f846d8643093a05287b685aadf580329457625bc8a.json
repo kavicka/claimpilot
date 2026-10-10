@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP59597086\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP59597086\", \"page\": 1}, \"insured_name\": {\"value\": \"Šárka Jandová\", \"quote\": \"MENO A PRIEZVISKO Šárka Jandová\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"057228/4867\", \"quote\": \"RODNÉ ČÍSLO 057228/4867\", \"page\": 1}, \"insured_address\": {\"value\": \"Neužilova 74, 963 20 Bohušovice nad Ohří\", \"quote\": \"ADRESA Neužilova 74, 963 20 Bohušovice nad Ohří\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 918 683 784\", \"quote\": \"TELEFÓN +421 918 683 784\", \"page\": 1}, \"insured_email\": {\"value\": \"sarka.jandova57@mail.example.sk\", \"quote\": \"E-MAIL sarka.jandova57@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK91 5600 7887 6213 0274 3100\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK91 5600 7887 6213 0274 3100\", \"page\": 1}, \"destination_country\": {\"value\": \"Turecko\", \"quote\": \"KRAJINA CESTY Turecko\", \"page\": 1}, \"trip_start\": {\"value\": \"7. 2. 2026\", \"quote\": \"CESTA OD 7. 2. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"17. 2. 2026\", \"quote\": \"CESTA DO 17. 2. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"12. 2. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 12. 2. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Bodrum, Turecko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Bodrum, Turecko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Batožina\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Na letisku v Bodrumi som stratil/a batožinu. Letecká spoločnosť ju nezabezpečila a na letisku som spísal/a záznam o strate.\", \"quote\": \"POPIS UDALOSTI Na letisku v Bodrumi som stratil/a batožinu. Letecká spoločnosť ju nezabezpečila a na letisku som spísal/a záznam o strate.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Kozmetika\", \"amount\": \"85,91\", \"currency\": \"EUR\", \"quote\": \"Kozmetika 85,91 EUR\", \"page\": 1}, {\"description\": \"Hodinky\", \"amount\": \"196,61\", \"currency\": \"EUR\", \"quote\": \"Hodinky 196,61 EUR\", \"page\": 1}, {\"description\": \"Fotoaparát\", \"amount\": \"832,97\", \"currency\": \"EUR\", \"quote\": \"Fotoaparát 832,97 EUR\", \"page\": 1}, {\"description\": \"Cestovný kufor\", \"amount\": \"134,96\", \"currency\": \"EUR\", \"quote\": \"Cestovný kufor 134,96 EUR\", \"page\": 1}, {\"description\": \"Kniha a čítanka\", \"amount\": \"170,07\", \"currency\": \"EUR\", \"quote\": \"Kniha a čítanka 170,07 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"8. 3. 2026\", \"quote\": \"Dátum: 8. 3. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1129,
+   "latency_ms": 40796
+  },
+  "cached": false
+ }
+}

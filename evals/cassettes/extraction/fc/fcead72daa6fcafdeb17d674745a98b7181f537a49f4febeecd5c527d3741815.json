@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Total due €\",\n    \"value\": \"€\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 8538/57428 13/05/2026 10:27\",\n    \"value\": \"13/05/2026 10:27\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"21.53\",\n      \"description\": \"Underwear\",\n      \"page\": 1,\n      \"quote\": \"Underwear\"\n    },\n    {\n      \"amount\": \"4.86\",\n      \"description\": \"Toothbrush and toothpaste\",\n      \"page\": 1,\n      \"quote\": \"Toothbrush and toothpaste\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Haynes Mini Market Rodos\",\n    \"value\": \"Haynes Mini Market\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 8538/57428 13/05/2026 10:27\",\n    \"value\": \"8538/57428\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"26.39\",\n    \"value\": \"26.39\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1226,
+   "tokens_out": 342,
+   "latency_ms": 5700
+  },
+  "cached": false
+ }
+}

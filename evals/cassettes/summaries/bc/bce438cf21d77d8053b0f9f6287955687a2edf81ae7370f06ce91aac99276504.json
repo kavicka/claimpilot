@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Horváth International Medical Centre vo výške 97 020,00 HUF sú preplatené podľa článku 4 ods. 1 zákona o poistení, pretože sú súčasťou účtovnej dokumentácie a sú v súlade s podmienkami poistenia.  \nLieky z lekárne vo výške 10 614,00 HUF nie sú preplatené, pretože v rámci poistnej zmluvy nie sú zahrnuté výdavky na lieky, ktoré nie sú vyplatené v eurách.  \nCelkové plnenie vo výške 222,49 EUR je vyplatené na základe článku 4 ods. 1 zákona o poistení.  \nSpoluúčasť vo výške 50,00 EUR je vyplatená v súlade s podmienkami poistnej zmluvy.  \nNa základe výsledku prehliadky rizikových signálov bol zaznamenaný signál „early_claim“, čo nepovoluje odchýlku od pravidiel pre plnenie.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 560,
+   "tokens_out": 326,
+   "latency_ms": 5959
+  },
+  "cached": false
+ }
+}

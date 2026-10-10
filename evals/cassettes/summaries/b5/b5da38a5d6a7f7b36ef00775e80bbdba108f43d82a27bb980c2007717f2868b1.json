@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Stevens International Medical Centre vo výške 208,35 EUR sú preplatené podľa článku 4 ods. 1 zákona o poistení. Všetky požadované dokumenty boli doručené a nebol zistený žiadny rizikový signál. Poistná udalosť nastala 3. 8. 2026, čo spĺňa podmienky poistenia. Poistná suma bola účtovaná v plnej výške bez spoluceny.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 508,
+   "tokens_out": 150,
+   "latency_ms": 3000
+  },
+  "cached": false
+ }
+}

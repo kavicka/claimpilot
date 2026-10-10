@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 29. 8. 2026 pri ceste v rámci poistného účelu. Poistným prípadom sú liečebné náklady na Poliambulatorio Sagnelli vo výške 560,96 EUR a nákup liekov z lekárne vo výške 41,70 EUR. Oba náklady boli odmietnuté na základe článku 3 ods. 2 VPP, ktorý vylučuje pokrytie nákladov na liečbu, ktorá nie je vykonaná v zmluvnom lekárskom zariadení alebo bez lekárskej predpisovej dokumentácie. Poistný prípad neobsahuje žiadne rizikové signály ani chýbajúce informácie. Všetky náklady sú výsledkom nezakrytých položiek podľa poistnej zmluvy. Odporúča sa zamietnutie plnenia vo výške 602,66 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 623,
+   "tokens_out": 294,
+   "latency_ms": 4909
+  },
+  "cached": false
+ }
+}

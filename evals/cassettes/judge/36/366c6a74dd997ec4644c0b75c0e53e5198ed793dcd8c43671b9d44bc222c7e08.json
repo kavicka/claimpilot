@@ -1,0 +1,19 @@
+{
+ "step": "judge",
+ "prompt_id": "summaries/judge",
+ "prompt_hash": "a14837a638786f48a97a5930f8a3a86558d06fc9eb071acda8f07687ed318ecb",
+ "model": "ollama:gemma3:12b",
+ "response": {
+  "text": "{\"completeness\": 4, \"tone\": 5, \"no_overpromise\": 5,\n\"note\": \"The completeness score is only a 4 because while the text states the decision, amount, and reason, it lacks a more detailed explanation of *why* the specific clause (čl. 3 ods. 3) applies to the situation, leaving room for client confusion.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "gemma3:12b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 527,
+   "tokens_out": 85,
+   "latency_ms": 9126
+  },
+  "cached": false
+ }
+}

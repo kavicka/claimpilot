@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 10. 8. 2026 došlo k liečebným nákladom v Medizinisches Zentrum Stalder vo výške 172,94 CHF, ktoré sú podľa článku 4 ods. 1 VPP pokryté. Poistná suma v eurách je 153,98, spoluúčasť v eurách činí 30,00. Poistná udalosť je v súlade s podmienkami poistného produktu Cestovné poistenie Standard. Rizikové signály nie sú zaznamenané, chýbajúce informácie nie sú identifikované. Odporúča sa plnenie vo výške 153,98 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 545,
+   "tokens_out": 212,
+   "latency_ms": 9778
+  },
+  "cached": false
+ }
+}

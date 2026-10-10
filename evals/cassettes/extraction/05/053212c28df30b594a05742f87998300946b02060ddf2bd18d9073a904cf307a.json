@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Nessuna patologia pregressa rilevante. Nessuna terapia cronica.\",\n    \"value\": \"Nessuna patologia pregressa rilevante. Nessuna terapia cronica.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"DIAGNOSI Polmonite | ICD-10 J18.9\",\n    \"value\": \"Polmonite\"\n  },\n  \"discharge_date\": {\n    \"page\": 1,\n    \"quote\": \"DATA VISITA / RICOVERO 25/07/2026 | DIMISSIONE 31/07/2026\",\n    \"value\": \"31/07/2026\"\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Rimini, Italia\",\n    \"value\": \"Italia\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Ospedale Civile Schiavone\",\n    \"value\": \"Ospedale Civile Schiavone\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"DIAGNOSI Polmonite | ICD-10 J18.9\",\n    \"value\": \"J18.9\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PAZIENTE <PERSON_1> | NATO/A IL 29/11/1968\",\n    \"value\": \"29/11/1968\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PAZIENTE <PERSON_1> | NATO/A IL 29/11/1968\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Medico: <PERSON_2> Referto medico\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Esami obiettivi: febbre, tosse con espettorato, crepitii basali bilaterali. Radiografia torace: infiltrati polmonari periferici. Esami del sangue: leucocitosi. Pneumonia confermata. Trattamento: antibiotico per via endovenosa, ossigenoterapia e terapia di supporto. Raccomandato controllo radiologico dopo 48 ore e completamento del ciclo antibiotico.\",\n    \"value\": \"Esami obiettivi: febbre, tosse con espettorato, crepitii basali bilaterali. Radiografia torace: infiltrati polmonari periferici. Esami del sangue: leucocitosi. Pneumonia confermata. Trattamento: antibiotico per via endovenosa, ossigenoterapia e terapia di supporto. Raccomandato controllo radiologico dopo 48 ore e completamento del ciclo antibiotico.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"DATA VISITA / RICOVERO 25/07/2026 | DIMISSIONE 31/07/2026\",\n    \"value\": \"25/07/2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2578,
+   "tokens_out": 798,
+   "latency_ms": 23640
+  },
+  "cached": false
+ }
+}

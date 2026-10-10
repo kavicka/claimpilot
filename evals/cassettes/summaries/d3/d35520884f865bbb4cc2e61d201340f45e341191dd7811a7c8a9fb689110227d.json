@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Stornovací poplatok vo výške 702,90 EUR je poisťovňou preplatený podľa článku 9 ods. 1 a článku 9 ods. 2 zákona o poistení, pretože spĺňa podmienky uvedené v týchto ustanoveniach. Celková suma preplatenia činí 562,32 EUR, čo je sumu uvedenú v dokumentácii ako plnenie. Žiadne ďalšie položky nie sú uvedené na základe faktov.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 518,
+   "tokens_out": 156,
+   "latency_ms": 2761
+  },
+  "cached": false
+ }
+}

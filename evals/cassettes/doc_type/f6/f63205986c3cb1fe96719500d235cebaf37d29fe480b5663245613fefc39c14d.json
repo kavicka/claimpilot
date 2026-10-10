@@ -1,0 +1,19 @@
+{
+ "step": "doc_type",
+ "prompt_id": "doc_type/classify",
+ "prompt_hash": "1ae7e9f6bb774a99696d2f049238213451f7cc1a36c3e3b1c064e6eaaa6b574f",
+ "model": "ollama:qwen3:4b-instruct",
+ "response": {
+  "text": "{ \"doc_type\": \"claim_form\" }",
+  "thinking": "The user has provided a document text, but the actual content of the document is missing. There is no text to analyze or classify. Without any specific content, it is impossible to determine which label applies to the document.\n\nSince the document is empty or incomplete, and no personal data or information is present, I cannot assign a valid label based on the content.\n\nTherefore, the most appropriate response is to indicate that no classification can be made with the given information.\n",
+  "tool_calls": [],
+  "model": "qwen3:4b-instruct",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 168,
+   "tokens_out": 109,
+   "latency_ms": 1691
+  },
+  "cached": false
+ }
+}

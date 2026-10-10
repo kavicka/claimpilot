@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A9.1\", \"A9.3\"], \"rationale\": \"The claim is for a cancellation fee due to an injury (podvrtnutie členkového kĺbu) that occurred before the trip and led to the cancellation. Clause A9.1 covers cancellation due to injury. Clause A9.3 is satisfied as the cancellation was done without unnecessary delay (within 3 working days of the injury). No general exclusions apply, and the injury is not related to extreme sports, alcohol, or intentional actions.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1318,
+   "tokens_out": 125,
+   "latency_ms": 11103
+  },
+  "cached": false
+ }
+}

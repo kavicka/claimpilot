@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Total due TRY | 1,949.24\",\n    \"value\": \"TRY\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 3434/68529 21/04/2026 17:30\",\n    \"value\": \"21/04/2026 17:30\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"631.12\",\n      \"description\": \"T-shirt\",\n      \"page\": 1,\n      \"quote\": \"T-shirt | 631.12\"\n    },\n    {\n      \"amount\": \"317.39\",\n      \"description\": \"Toothbrush and toothpaste\",\n      \"page\": 1,\n      \"quote\": \"Toothbrush and toothpaste | 317.39\"\n    },\n    {\n      \"amount\": \"320.60\",\n      \"description\": \"Deodorant\",\n      \"page\": 1,\n      \"quote\": \"Deodorant | 320.60\"\n    },\n    {\n      \"amount\": \"680.13\",\n      \"description\": \"Underwear\",\n      \"page\": 1,\n      \"quote\": \"Underwear | 680.13\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Demir Mini Market Antalya\",\n    \"value\": \"Demir Mini Market\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 3434/68529 21/04/2026 17:30\",\n    \"value\": \"3434/68529\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"1,949.24\",\n    \"value\": \"1,949.24\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1259,
+   "tokens_out": 474,
+   "latency_ms": 7706
+  },
+  "cached": false
+ }
+}

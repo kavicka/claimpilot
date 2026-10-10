@@ -1,0 +1,603 @@
+{
+ "suite": "retrieval",
+ "split": "test",
+ "metrics": {
+  "recall_at_5": {
+   "value": 0.8333333333333334,
+   "num": 20,
+   "den": 24
+  },
+  "mrr": {
+   "value": 0.7118055555555557,
+   "num": 24,
+   "den": 0
+  },
+  "recall_at_5_exclusions": {
+   "value": 0.0,
+   "num": 0,
+   "den": 1
+  }
+ },
+ "items": [
+  {
+   "id": "S42-041/I1",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A4.2",
+    "A4.1",
+    "A4.3",
+    "A5.1",
+    "A5.2"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-041/I2",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A4.1",
+    "A5.1",
+    "A5.2",
+    "A4.2",
+    "A4.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-042/I1",
+   "ok": true,
+   "expected": [
+    "A8.1"
+   ],
+   "got": [
+    "A8.1",
+    "A8.3",
+    "A8.2",
+    "A7.5",
+    "A7.1"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "delay",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-043/I1",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A4.1",
+    "A4.2",
+    "A5.2",
+    "A5.1",
+    "A4.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-043/I2",
+   "ok": true,
+   "expected": [
+    "A6.1"
+   ],
+   "got": [
+    "A6.1",
+    "A6.2",
+    "A11.4",
+    "A11.3",
+    "A3.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "accident",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-044/I1",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A5.1",
+    "A4.3",
+    "A4.1",
+    "A5.2",
+    "A4.2"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-044/I2",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A4.1",
+    "A6.1",
+    "A2.3",
+    "A5.1",
+    "A4.2"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-046/I1",
+   "ok": true,
+   "expected": [
+    "A7.1",
+    "A7.2"
+   ],
+   "got": [
+    "A7.4",
+    "A7.3",
+    "A7.1",
+    "A7.2",
+    "A7.5"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "luggage",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-046/I2",
+   "ok": true,
+   "expected": [
+    "A7.1",
+    "A7.2"
+   ],
+   "got": [
+    "A7.4",
+    "A7.1",
+    "A7.2",
+    "A7.5",
+    "A7.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "luggage",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-046/I3",
+   "ok": true,
+   "expected": [
+    "A7.1",
+    "A7.2"
+   ],
+   "got": [
+    "A7.4",
+    "A7.1",
+    "A7.2",
+    "A7.5",
+    "A7.6"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "luggage",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-046/I4",
+   "ok": true,
+   "expected": [
+    "A7.1",
+    "A7.2"
+   ],
+   "got": [
+    "A7.4",
+    "A7.1",
+    "A7.6",
+    "A8.1",
+    "A7.2"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "luggage",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-047/I1",
+   "ok": true,
+   "expected": [
+    "A9.1",
+    "A9.2"
+   ],
+   "got": [
+    "A9.1",
+    "A9.2",
+    "A9.4",
+    "A3.3",
+    "A9.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "cancellation",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-048/I1",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A4.1",
+    "A4.3",
+    "A4.2",
+    "A5.1",
+    "A5.2"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-049/I1",
+   "ok": false,
+   "expected": [
+    "A11.2"
+   ],
+   "got": [
+    "A4.1",
+    "A4.2",
+    "A5.2",
+    "A5.1",
+    "A4.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "not_covered",
+    "exclusion": "alcohol_or_drugs"
+   }
+  },
+  {
+   "id": "S42-051/I1",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A4.1",
+    "A4.2",
+    "A4.3",
+    "A5.1",
+    "A5.2"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-052/I1",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A4.1",
+    "A5.1",
+    "A4.2",
+    "A4.3",
+    "A5.2"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-052/I2",
+   "ok": true,
+   "expected": [
+    "A6.1"
+   ],
+   "got": [
+    "A6.1",
+    "A6.2",
+    "A11.2",
+    "A3.2",
+    "A3.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "accident",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-053/I1",
+   "ok": true,
+   "expected": [
+    "A4.1",
+    "A4.2"
+   ],
+   "got": [
+    "A4.2",
+    "A4.3",
+    "A4.1",
+    "A5.2",
+    "A4.4"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-055/I1",
+   "ok": false,
+   "expected": [
+    "A7.1",
+    "A7.2"
+   ],
+   "got": [
+    "A7.5",
+    "A7.4",
+    "A7.1",
+    "A7.6",
+    "A7.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "luggage",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-055/I2",
+   "ok": false,
+   "expected": [
+    "A7.1",
+    "A7.2"
+   ],
+   "got": [
+    "A7.5",
+    "A7.4",
+    "A7.6",
+    "A7.1",
+    "A7.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "luggage",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-055/I3",
+   "ok": false,
+   "expected": [
+    "A7.1",
+    "A7.2"
+   ],
+   "got": [
+    "A7.5",
+    "A7.4",
+    "A7.1",
+    "A7.6",
+    "A7.3"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "luggage",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-056/I1",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A4.1",
+    "A4.2",
+    "A5.1",
+    "A4.3",
+    "A5.2"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-057/I1",
+   "ok": true,
+   "expected": [
+    "A4.1"
+   ],
+   "got": [
+    "A4.1",
+    "A4.3",
+    "A4.2",
+    "A5.2",
+    "A5.1"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  },
+  {
+   "id": "S42-058/I1",
+   "ok": true,
+   "expected": [
+    "A4.1",
+    "A4.2"
+   ],
+   "got": [
+    "A4.3",
+    "A4.1",
+    "A4.2",
+    "A5.1",
+    "A5.2"
+   ],
+   "tags": [
+    "recall_at_5"
+   ],
+   "detail": {
+    "coverage": "medical",
+    "verdict": "covered",
+    "exclusion": null
+   }
+  }
+ ],
+ "meta": {
+  "created": "20261009T223412Z",
+  "git": {
+   "sha": "bab3d7e",
+   "dirty": true
+  },
+  "dataset": "d59d01befdf0",
+  "seed": 42,
+  "cassette_mode": "auto",
+  "overrides": {},
+  "options": {},
+  "prompts": {
+   "doc_type/classify": "doc_type/classify@1+1ae7e9f6",
+   "extraction/document": "extraction/document@1+e1460380",
+   "extraction/vision": "extraction/vision@1+81c8af53"
+  },
+  "models": [
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 72,
+  "cached_calls": 71,
+  "tokens_in": 176434,
+  "tokens_out": 51127,
+  "tokens_per_item": 9481.7,
+  "latency_p50_ms": 16373,
+  "latency_p95_ms": 16373,
+  "worker_peak_rss_mb": 1159,
+  "models": [
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ]
+ },
+ "notes": [
+  "index: 46 clauses"
+ ],
+ "stale": []
+}

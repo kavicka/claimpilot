@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 11. 1. 2026 došlo k liečebnému nákladu v Poliklinike Kašparová vo výške 19 411,00 CZK, ktorý bol uplatnený v rámci cestovného poistenia Premium. Poistná udalosť bola pripísaná k článku 4 ods. 1 VPP, čo poskytuje pokrytie za zdravotné náklady spôsobené náhodným úrazom alebo ochorením počas cesty. Suma plnenia je 792,29 EUR. Vzhľadom na rizikový signál „early_claim“ (nárok uplatnený včas, pred koncom poistnej udalosti) a chýbajúce informácie o dôkazoch o trvania liečby a účelovosti nákladov je odporúčané zamietnuť plnenie vo výške 792,29 EUR. Nedostatok dokumentácie neumožňuje overiť, či náklady sú v súlade s poistnými podmienkami a či nejde o nárok s vysokým rizikom podvodného vyplatenia.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 492,
+   "tokens_out": 341,
+   "latency_ms": 11291
+  },
+  "cached": false
+ }
+}

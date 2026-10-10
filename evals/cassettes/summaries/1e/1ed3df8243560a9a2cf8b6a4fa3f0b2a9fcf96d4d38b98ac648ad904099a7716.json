@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Dňa 21. 5. 2026 došlo k úrazu poistného, ktorý je podľa poistnej zmluvy pokrytý v rámci cestovného poistenia Standard. Liečebné náklady v sume 560,44 EUR na účte Medizinisches Zentrum Ruppert sú podľa článku 4 ods. 1 VPP pokryté, plnenie je 530,44 EUR. Jednorazové plnenie za zlomeninu v sume 300,00 EUR je podľa článku 6 ods. 1 VPP pokryté. Spolu je plnené 830,44 EUR, z toho poistný účastník uhradil 30,00 EUR. Rizikové signály nie sú zaznamenané, chýbajúce informácie nie sú identifikované. Odporúčanie: plnenie v sume 830,44 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 635,
+   "tokens_out": 267,
+   "latency_ms": 10714
+  },
+  "cached": false
+ }
+}

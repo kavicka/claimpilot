@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Poliklinika Ćurić sú preplatené vo výške 321,10 EUR podľa článku 4 ods. 1 zákona o poistení. Všetky potrebné dokumenty boli predložené a žiadne informácie nechýbajú. Poisťovňa prepláca uvedenú sumu, pretože náklady spadajú do poistnej udalosti a sú v súlade s podmienkami poistnej zmluvy. Rizikový signál „early_claim“ neovplyvňuje rozhodnutie o plnení.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 520,
+   "tokens_out": 174,
+   "latency_ms": 3035
+  },
+  "cached": false
+ }
+}

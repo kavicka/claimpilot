@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\",\n    \"value\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Akute Gastroenteritis | ICD-10 A09\",\n    \"value\": \"Akute Gastroenteritis\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Schladming, Österreich\",\n    \"value\": \"Österreich\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Medizinisches Zentrum Werner\",\n    \"value\": \"Medizinisches Zentrum Werner\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Akute Gastroenteritis | ICD-10 A09\",\n    \"value\": \"A09\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN <PERSON_1> | GEB 2Rdod ATÉ\",\n    \"value\": \"2Rdod ATÉ\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN <PERSON_1> | GEB 2Rdod ATÉ\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen.\",\n    \"value\": \"Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"UNTERSUCHUNG / AUFNAHME 17.01.2026 | ENTLASSUNG\",\n    \"value\": \"17.01.2026\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2524,
+   "tokens_out": 805,
+   "latency_ms": 14191
+  },
+  "cached": false
+ }
+}

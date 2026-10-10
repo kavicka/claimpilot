@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"agency_name\": {\n    \"page\": 1,\n    \"quote\": \"CK Slnečné pobrežie, s. r. o.\",\n    \"value\": \"CK Slnečné pobrežie, s. r. o.\"\n  },\n  \"booking_number\": {\n    \"page\": 1,\n    \"quote\": \"ČÍSLO REZERVÁCIE 2026166 | DESTINÁCIA Livigno, Taliansko\",\n    \"value\": \"2026166\"\n  },\n  \"cancellation_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum stornovania: 16. 3. 2026\",\n    \"value\": \"16. 3. 2026\"\n  },\n  \"cancellation_fee\": {\n    \"page\": 1,\n    \"quote\": \"Stornovací poplatok | 691,20\",\n    \"value\": \"691,20\"\n  },\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Položka | Suma (EUR)\",\n    \"value\": \"EUR\"\n  },\n  \"destination\": {\n    \"page\": 1,\n    \"quote\": \"ČÍSLO REZERVÁCIE 2026166 | DESTINÁCIA Livigno, Taliansko\",\n    \"value\": \"Livigno, Taliansko\"\n  },\n  \"total_price\": {\n    \"page\": 1,\n    \"quote\": \"Celková cena zájazdu | 2 304,00\",\n    \"value\": \"2 304,00\"\n  },\n  \"traveler_names\": {\n    \"page\": 1,\n    \"quote\": \"CESTUJÚCI <PERSON_1>\",\n    \"values\": [\n      \"<PERSON_1>\"\n    ]\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"ODCHOD 2. 4. 2026 | NÁVRAT 14. 4. 2026\",\n    \"value\": \"14. 4. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"ODCHOD 2. 4. 2026 | NÁVRAT 14. 4. 2026\",\n    \"value\": \"2. 4. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1344,
+   "tokens_out": 570,
+   "latency_ms": 11028
+  },
+  "cached": false
+ }
+}

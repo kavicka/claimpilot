@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Nákup nevyhnutných vecí vo výške 542,73 TRY je poisťovňou preplatený podľa článku 8 ods. 1 zákona o poistení.  \nNákup nevyhnutných vecí vo výške 1 393,23 TRY je poisťovňou preplatený podľa článku 8 ods. 1 zákona o poistení.  \nSpolu je poisťovňou preplatených 1 935,96 TRY, čo zodpovedá 42,27 EUR.  \nŽiadne ďalšie položky nie sú uvedené, preto žiadne ďalšie rozhodnutia nie sú potrebné.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 599,
+   "tokens_out": 198,
+   "latency_ms": 4008
+  },
+  "cached": false
+ }
+}

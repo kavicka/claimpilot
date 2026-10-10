@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"[X] Liecebné náklady CESTA OD 2. 3.2026 MIESTO VZNIKU UDALOSTI Špindlerüv Mlýn, Česko · Batozina Úraz [\",\n    \"values\": [\n      \"Liečebné náklady\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"25 512,00\",\n      \"currency\": \"CZK\",\n      \"description\": \"Liečebné náklady - Poliklinika Horáková\",\n      \"page\": 1,\n      \"quote\": \"Liečebné náklady - Poliklinika Horáková | 25 512,00 | CZK\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"česko\",\n    \"value\": \"česko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"9.3.2026\",\n    \"value\": \"9.3.2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Bol som v Špindlerüv Mlýn, Cesko, a skončil som s otrom mozgu. Po udalosti som sa obrátil na miestne zdravotnictvo, lde som bol podrobne prešetovaný. Diagnóza otrom mozgu bola potvrdená po vyšetrení.\",\n    \"value\": \"Bol som v Špindlerüv Mlýn, Cesko, a skončil som s otrom mozgu. Po udalosti som sa obrátil na miestne zdravotnictvo, lde som bol podrobne prešetovaný. Diagnóza otrom mozgu bola potvrdená po vyšetrení.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Špindlerüv Mlýn, Česko\",\n    \"value\": \"Špindlerüv Mlýn, Česko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 805 81 Hrčel\",\n    \"value\": \"<ADDRESS_1>, 805 81 Hrčel\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP13895645\",\n    \"value\": \"CP13895645\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 30. 3.2026\",\n    \"value\": \"30. 3.2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"14.3.2026\",\n    \"value\": \"14.3.2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"2. 3.2026\",\n    \"value\": \"2. 3.2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3585,
+   "tokens_out": 950,
+   "latency_ms": 33110
+  },
+  "cached": false
+ }
+}

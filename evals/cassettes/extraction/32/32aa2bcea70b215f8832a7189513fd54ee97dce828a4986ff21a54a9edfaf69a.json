@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"X] Liečebné náklady\",\n    \"values\": [\n      \"Liečebné náklady\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"560,96\",\n      \"currency\": \"EUR\",\n      \"description\": \"Liečebné náklady - Poliambulatorio Sagnelli\",\n      \"page\": 1,\n      \"quote\": \"Liečebné náklady - Poliambulatorio Sagnelli\"\n    },\n    {\n      \"amount\": \"41,70\",\n      \"currency\": \"EUR\",\n      \"description\": \"Lieky z lekárne\",\n      \"page\": 1,\n      \"quote\": \"Lieky z lekárne\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Taliansko\",\n    \"value\": \"Taliansko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"29. 8. 2026\",\n    \"value\": \"29. 8. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Bol som v Romách, v Taliansku, kde sa mi vyvinula akútna infekcia horných dýchacích ciest. Preto som sa obrátil na miestne zdravotnícke zariadenie na vyšetrenie a liečbu.\",\n    \"value\": \"Bol som v Romách, v Taliansku, kde sa mi vyvinula akútna infekcia horných dýchacích ciest. Preto som sa obrátil na miestne zdravotnícke zariadenie na vyšetrenie a liečbu.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Roma, Taliansko\",\n    \"value\": \"Roma, Taliansko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 828 10 Sabinov\",\n    \"value\": \"<ADDRESS_1>, 828 10 Sabinov\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP11646234\",\n    \"value\": \"CP11646234\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 5. 9. 2026\",\n    \"value\": \"5. 9. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"2. 9. 2026\",\n    \"value\": \"2. 9. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"15. 8. 2026\",\n    \"value\": \"15. 8. 2026\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3603,
+   "tokens_out": 893,
+   "latency_ms": 17434
+  },
+  "cached": false
+ }
+}

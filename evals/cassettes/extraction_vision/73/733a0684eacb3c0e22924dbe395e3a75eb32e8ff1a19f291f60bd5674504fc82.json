@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"INV-2026-41425\", \"quote\": \"Invoice No. INV-2026-41425\", \"page\": 1}, \"issue_date\": {\"value\": \"23/03/2026\", \"quote\": \"Date: 23/03/2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Akdeniz International Medical Centre\", \"quote\": \"Akdeniz International Medical Centre\", \"page\": 1}, \"provider_country\": {\"value\": \"Türkiye\", \"quote\": \"Antalya, Türkiye\", \"page\": 1}, \"patient_name\": {\"value\": \"Félix Boška\", \"quote\": \"Félix Boška, DOB 10/02/1956\", \"page\": 1}, \"service_date\": {\"value\": \"23/03/2026\", \"quote\": \"DATE OF SERVICE 23/03/2026\", \"page\": 1}, \"currency\": {\"value\": \"TRY\", \"quote\": \"39,466.78 TRY\", \"page\": 1}, \"line_items\": [{\"description\": \"Emergency room treatment\", \"amount\": \"6,613.52\", \"quote\": \"1 Emergency room treatment 6,613.52\", \"page\": 1}, {\"description\": \"CT scan\", \"amount\": \"23,385.02\", \"quote\": \"2 CT scan 23,385.02\", \"page\": 1}, {\"description\": \"Laboratory tests\", \"amount\": \"4,548.40\", \"quote\": \"3 Laboratory tests 4,548.40\", \"page\": 1}, {\"description\": \"IV infusion\", \"amount\": \"4,919.84\", \"quote\": \"4 IV infusion 4,919.84\", \"page\": 1}], \"total\": {\"value\": \"39,466.78 TRY\", \"quote\": \"Total due 39,466.78 TRY\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 492,
+   "latency_ms": 26229
+  },
+  "cached": false
+ }
+}

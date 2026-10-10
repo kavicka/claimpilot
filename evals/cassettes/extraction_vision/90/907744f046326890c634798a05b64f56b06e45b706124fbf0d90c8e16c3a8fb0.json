@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"R-2026-46309\", \"quote\": \"Račun br. R-2026-46309\", \"page\": 1}, \"issue_date\": {\"value\": \"21.08.2026\", \"quote\": \"Datum: 21.08.2026.\", \"page\": 1}, \"provider_name\": {\"value\": \"Poliklinika Tomićić\", \"quote\": \"Poliklinika Tomićić\", \"page\": 1}, \"provider_country\": {\"value\": \"Hrvatska\", \"quote\": \"Split, Hrvatska\", \"page\": 1}, \"patient_name\": {\"value\": \"Nora Tomanová\", \"quote\": \"Nora Tomanová, rođen/a 05.11.2006.\", \"page\": 1}, \"service_date\": {\"value\": \"19.08.2026\", \"quote\": \"DATUM USLUGE 19.08 2026.\", \"page\": 1}, \"currency\": {\"value\": \"EUR\", \"quote\": \"Iznos (EUR)\", \"page\": 1}, \"line_items\": [{\"description\": \"Ambulantni pregled\", \"amount\": \"59,02\", \"quote\": \"1 Ambulantni pregled 59,02\", \"page\": 1}, {\"description\": \"Infuzijska terapija\", \"amount\": \"113,69\", \"quote\": \"2 Infuzijska terapija 113,69\", \"page\": 1}], \"total\": {\"value\": \"172,71 EUR\", \"quote\": \"Ukupno za platiti 172,71 EUR\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 415,
+   "latency_ms": 20497
+  },
+  "cached": false
+ }
+}

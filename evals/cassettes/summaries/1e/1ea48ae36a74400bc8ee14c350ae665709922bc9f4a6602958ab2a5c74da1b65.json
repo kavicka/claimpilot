@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Andrews International Medical Centre vo výške 252,45 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení.  \nLieky z lekárne vo výške 40,94 EUR sú poisťovňou preplatené vo výške 10,94 EUR podľa článku 4 ods. 1 zákona o poistení.  \nSpolučasť vo výške 30,00 EUR nie je poisťovňou preplatená, pretože je uvedená ako zodpovedná strana podľa podmienok poistenia.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 542,
+   "tokens_out": 183,
+   "latency_ms": 3275
+  },
+  "cached": false
+ }
+}

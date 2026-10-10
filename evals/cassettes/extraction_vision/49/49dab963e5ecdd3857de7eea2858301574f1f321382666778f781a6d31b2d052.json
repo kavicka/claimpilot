@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"FT-2026-76631\", \"quote\": \"Fattura n. FT-2026-76631\", \"page\": 1}, \"issue_date\": {\"value\": \"31/08/2026\", \"quote\": \"Data: 31/08/2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Poliambulatorio Sagnelli\", \"quote\": \"Poliambulatorio Sagnelli\", \"page\": 1}, \"provider_country\": {\"value\": \"Italy\", \"quote\": \"Roma, Italia\", \"page\": 1}, \"patient_name\": {\"value\": \"Zdenka Hlaváčová\", \"quote\": \"Zdenka Hlaváčová, nato/a il 07/01/1972\", \"page\": 1}, \"service_date\": {\"value\": \"29/08/2026\", \"quote\": \"DATA PRESTAZIONE 29/08/2026\", \"page\": 1}, \"currency\": {\"value\": \"EUR\", \"quote\": \"560,96 EUR\", \"page\": 1}, \"line_items\": [{\"description\": \"Pronto soccorso\", \"amount\": \"309,58\", \"quote\": \"1 Pronto soccorso\", \"page\": 1}, {\"description\": \"Esami di laboratorio\", \"amount\": \"51,41\", \"quote\": \"2 Esami di laboratorio\", \"page\": 1}, {\"description\": \"Terapia infusionale\", \"amount\": \"65,88\", \"quote\": \"3 Terapia infusionale\", \"page\": 1}, {\"description\": \"Ecografia\", \"amount\": \"134,09\", \"quote\": \"4 Ecografia\", \"page\": 1}], \"total\": {\"value\": \"560,96\", \"quote\": \"Totale da pagare 560,96 EUR\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 466,
+   "latency_ms": 20638
+  },
+  "cached": false
+ }
+}

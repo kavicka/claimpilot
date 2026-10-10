@@ -1,0 +1,55 @@
+{
+ "step": "submission",
+ "prompt_id": "submission/agent",
+ "prompt_hash": "bc9f8df887fa1d06e12d28e2d3a0d5fce30d3e0875e106f0df31c9eff0a26dac",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "",
+  "thinking": null,
+  "tool_calls": [
+   {
+    "id": "call_grg5ud87",
+    "function": {
+     "index": 0,
+     "name": "submit_claim",
+     "arguments": {
+      "payload": {
+       "claim_type_code": "LUG",
+       "currency": "EUR",
+       "event_country": "GR",
+       "event_date": "2026-05-13",
+       "handler_id": "handler.eval",
+       "iban": "<IBAN_1>",
+       "insured": {
+        "birth_number": "<RC_1>",
+        "name": "<PERSON_1>"
+       },
+       "items": [
+        {
+         "claimed_eur": "26.39",
+         "clause_refs": [
+          "A8.1"
+         ],
+         "coverage_code": "DLY",
+         "decision": "PAY",
+         "payout_eur": "26.39",
+         "ref": "I1"
+        }
+       ],
+       "policy_number": "CP19673809",
+       "total_payout": "26.39"
+      }
+     }
+    }
+   }
+  ],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 799,
+   "tokens_out": 182,
+   "latency_ms": 8260
+  },
+  "cached": false
+ }
+}

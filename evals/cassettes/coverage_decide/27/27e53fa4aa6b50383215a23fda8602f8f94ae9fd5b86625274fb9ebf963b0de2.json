@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves treatment for an acute dental abscess, which is covered under A4.1 as it refers to 'primerané a nevyhnutné náklady na ambulantné ošetrenie... ak boli vynaložené v dôsledku akútneho ochorenia... počas cesty'. The evidence confirms an acute dental condition (periapical abscess) treated during the trip. No exclusions apply as there is no indication of pre-existing conditions, intentional actions, alcohol, or extreme sports.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1163,
+   "tokens_out": 142,
+   "latency_ms": 11677
+  },
+  "cached": false
+ }
+}

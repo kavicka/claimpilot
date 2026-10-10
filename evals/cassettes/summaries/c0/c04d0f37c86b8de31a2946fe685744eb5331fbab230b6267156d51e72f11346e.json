@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/group_de",
+ "prompt_hash": "a157a4d1fdc75035a3a7ce98a68f15da6e3793673e2fea51d86535e1978e6bae",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Produkt: Cestovné poistenie Basic. Ereignis: Medizinische Behandlung am 16.3.2026. Entscheidung: Leistungen für Behandlungskosten (97 020,00 HUF) und Arzneimittel (10 614,00 HUF) werden übernommen. Auszahlungsbetrag: 222,49 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1. Sparschutz: 50,00 EUR. Risikosignale: early_claim. Keine fehlenden Informationen.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 485,
+   "tokens_out": 151,
+   "latency_ms": 3075
+  },
+  "cached": false
+ }
+}

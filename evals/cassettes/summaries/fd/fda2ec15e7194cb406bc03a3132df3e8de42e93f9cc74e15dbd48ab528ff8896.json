@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 27. 7. 2026 v súvislosti s liečebnými nákladmi v Medizinisches Zentrum Rauter, uplatnená suma 916,18 EUR, z čoho plnenie 866,18 EUR a spoluúčasť 50,00 EUR. Udalosť je podľa článku 4 ods. 1 VPP pokrytá. Rizikový signál date_inconsistency naznačuje nesúlad dátumu udalosti s časovým rámcom poistnej ochrany. Chýbajúce informácie nie sú zaznamenané. Odporúčanie: plnenie vo výške 866,18 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 491,
+   "tokens_out": 205,
+   "latency_ms": 3481
+  },
+  "cached": false
+ }
+}

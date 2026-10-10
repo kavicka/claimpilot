@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The item was stolen from a parked car, which is explicitly excluded under clause A7.5. The police report confirms the theft occurred from a vehicle, and the item was left unattended, satisfying the condition of the exclusion.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1064,
+   "tokens_out": 72,
+   "latency_ms": 7483
+  },
+  "cached": false
+ }
+}

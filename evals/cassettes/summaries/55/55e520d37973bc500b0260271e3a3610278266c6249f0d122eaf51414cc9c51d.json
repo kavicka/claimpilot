@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Akdeniz International Medical Centre sú preplatené podľa článku 4 ods. 1 zákona o poistení, pretože sú súčasťou účtovnej dokumentácie a výdavky sú v súlade s podmienkami poistenia.  \nLieky z lekárne sú preplatené podľa článku 4 ods. 1 zákona o poistení, pretože sú dokázané a sú súčasťou liečebného postupu.  \nCelková suma poistenia v eurách je 851,50 €, z čoho 50,00 € tvorí spolucastníctvo poisteného.  \nRizikový signál „date_inconsistency“ neovplyvňuje rozhodnutie o plnení, pretože všetky doklady sú overené a sú v súlade s podmienkami poistenia.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 613,
+   "tokens_out": 259,
+   "latency_ms": 4899
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A7.4\"], \"rationale\": \"The claim involves the loss of luggage (specifically shoes) during transportation by the carrier, which is covered under clause A7.1. The passenger provided a Property Irregularity Report as required by clause A7.4, fulfilling the necessary documentation. There is no indication of any exclusions applying (e.g., intentional loss, alcohol, extreme sports, etc.), so the item is covered.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 932,
+   "tokens_out": 110,
+   "latency_ms": 8904
+  },
+  "cached": false
+ }
+}

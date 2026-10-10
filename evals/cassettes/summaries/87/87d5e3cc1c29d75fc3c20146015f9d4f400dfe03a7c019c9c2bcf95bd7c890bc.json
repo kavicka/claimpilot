@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Cestovné poistenie Standard nezahŕňa stornovací poplatok za zrušenie cesty, ak je dôvodom známy výnimkový prípad, čo je uvedené v článku 9 ods. 4 VPP. Dátum udalosti 11. 7. 2026 spadá do obdobia počas cesty, kedy poistná udalosť nie je pokrytá. Rizikový signál „exclusion_known_reason“ potvrdzuje, že dôvod zrušenia bol známy v čase uzavretia poistnej zmluvy. Chýbajúce informácie nie sú zaznamenané. Odporúčanie: zamietnutie plnenia vo výške 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 479,
+   "tokens_out": 207,
+   "latency_ms": 9779
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/group_de",
+ "prompt_hash": "a157a4d1fdc75035a3a7ce98a68f15da6e3793673e2fea51d86535e1978e6bae",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Produkt: Cestovné poistenie Premium. Ereignis: Stornierung am 25.12.2025. Entscheidung: Leistungsfähigkeit bestätigt. Auszahlung: 562,32 EUR. Maßgebliche VPP-Artikel: čl. 9 ods. 1, čl. 9 ods. 2. Stornogebühr in Höhe von 702,90 EUR wurde teilweise erstattet. Sparschutz: 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 391,
+   "tokens_out": 126,
+   "latency_ms": 2301
+  },
+  "cached": false
+ }
+}

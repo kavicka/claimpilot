@@ -1,0 +1,19 @@
+{
+ "step": "doc_type",
+ "prompt_id": "doc_type/classify",
+ "prompt_hash": "1ae7e9f6bb774a99696d2f049238213451f7cc1a36c3e3b1c064e6eaaa6b574f",
+ "model": "ollama:qwen3:4b-instruct",
+ "response": {
+  "text": "{ \"doc_type\": \"medical_invoice\" }",
+  "thinking": "The document provided is from \"Merino International Medical Centre\" in Barcelona, Spain. It lists medical treatments and their associated costs, including emergency room treatment, CT scan, laboratory tests, and IV infusion. The total amount due is specified as €849.93, with a note that payment is due on receipt.\n\nThis type of document is an invoice from a clinic or hospital for medical treatment, which matches the definition of a \"medical_invoice\".\n\nOther labels such as \"medical_report\" would involve a doctor's diagnosis or findings, not a financial invoice. \"Policy_certificate\" or \"claim_form\" would be related to insurance policy details or claim forms, which are not present here. \"Booking_confirmation\" or \"property_irregularity_report\" or \"police_report\" are unrelated to the content.\n\nTherefore, the correct label is \"medical_invoice\".\n",
+  "tool_calls": [],
+  "model": "qwen3:4b-instruct",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 278,
+   "tokens_out": 191,
+   "latency_ms": 2924
+  },
+  "cached": false
+ }
+}

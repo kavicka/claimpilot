@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP74672520\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP74672520\", \"page\": 1}, \"insured_name\": {\"value\": \"Jaromíra Pavková\", \"quote\": \"MENO A PRIEZVISKO Jaromíra Pavková\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"916023/1278\", \"quote\": \"RODNÉ ČÍSLO 916023/1278\", \"page\": 1}, \"insured_address\": {\"value\": \"Pasienková 73, 860 87 Hermanovce\", \"quote\": \"ADRESA Pasienková 73, 860 87 Hermanovce\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 908 159 812\", \"quote\": \"TELEFÓN +421 908 159 812\", \"page\": 1}, \"insured_email\": {\"value\": \"jaromira.pavkova94@example.com\", \"quote\": \"E-MAIL jaromira.pavkova94@example.com\", \"page\": 1}, \"iban\": {\"value\": \"SK85 3100 0000 0087 3079 4243\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK85 3100 0000 0087 3079 4243\", \"page\": 1}, \"destination_country\": {\"value\": \"Chorvátsko\", \"quote\": \"KRAJINA CESTY Chorvátsko\", \"page\": 1}, \"trip_start\": {\"value\": \"13. 5. 2026\", \"quote\": \"CESTA OD 13. 5. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"22. 5. 2026\", \"quote\": \"CESTA DO 22. 5. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"18. 5. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 18. 5. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Split, Chorvátsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Split, Chorvátsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"DRUH UDALOSTI □ Liečebné náklady □ Úraz □ Batožina □ Oneskorenie batožiny □ Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Podvrtnutie členkového kĺbu sa mi stalo počas prechádzky v Split, Chorvátsko. V tom čase som necitil žiadnu veľkú bolesť, ale neskôr sa mi začal kĺb zahrievat a zotravovalo v ňom nepohodlie. V tej chvíli som sa rozhodol, že sa vyžiadam o lekársku starostlivosť.\", \"quote\": \"POPIS UDALOSTI Podvrtnutie členkového kĺbu sa mi stalo počas prechádzky v Split, Chorvátsko. V tom čase som necitil žiadnu veľkú bolesť, ale neskôr sa mi začal kĺb zahrievat a zotravovalo v ňom nepohodlie. V tej chvíli som sa rozhodol, že sa vyžiadam o lekársku starostlivosť.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Poliklinika Čurić\", \"amount\": \"321,10\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Poliklinika Čurić 321,10 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"26. 5. 2026\", \"quote\": \"Dátum: 26. 5. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1088,
+   "latency_ms": 37109
+  },
+  "cached": false
+ }
+}

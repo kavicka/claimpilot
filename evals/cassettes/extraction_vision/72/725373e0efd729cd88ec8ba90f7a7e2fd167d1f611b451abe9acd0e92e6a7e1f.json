@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"facility_name\": {\"value\": \"Singh International Medical Centre\", \"quote\": \"Singh International Medical Centre\", \"page\": 1}, \"facility_country\": {\"value\": \"Greece\", \"quote\": \"Chania, Greece\", \"page\": 1}, \"patient_name\": {\"value\": \"Boleslav Stejskal\", \"quote\": \"Boleslav Stejskal\", \"page\": 1}, \"patient_birth_date\": {\"value\": \"11/10/1982\", \"quote\": \"DOB 11/10/1982\", \"page\": 1}, \"visit_date\": {\"value\": \"15/05/2026\", \"quote\": \"DATE OF VISIT / ADMISSION 15/05/2026\", \"page\": 1}, \"discharge_date\": {\"value\": null, \"quote\": null, \"page\": 1}, \"diagnosis\": {\"value\": \"Unstable angina\", \"quote\": \"DIAGNOSIS Unstable angina\", \"page\": 1}, \"icd10_code\": {\"value\": \"I20.0\", \"quote\": \"ICD-10 I20.0\", \"page\": 1}, \"anamnesis\": {\"value\": \"Known arterial hypertension treated since 2024; cardiology check-up two months ago for chest pain.\", \"quote\": \"Known arterial hypertension treated since 2024; cardiology check-up two months ago for chest pain.\", \"page\": 1}, \"treatment\": {\"value\": \"Examination revealed central chest pain with radiation to the left arm, occurring at rest and unrelied by nitroglycerin. Electrocardiogram showed non-specific ST-T changes. Cardiac enzymes were within normal limits. Stress echo was not performed due to patient's inability to exercise. Treatment included sublingual nitroglycerin, oral beta-blocker, and dual antiplatelet therapy. Patient was advised to present to the emergency department immediately if symptoms worsened or persisted.\", \"quote\": \"Examination revealed central chest pain with radiation to the left arm, occurring at rest and unrelied by nitroglycerin. Electrocardiogram showed non-specific ST-T changes. Cardiac enzymes were within normal limits. Stress echo was not performed due to patient's inability to exercise. Treatment included sublingual nitroglycerin, oral beta-blocker, and dual antiplatelet therapy. Patient was advised to present to the emergency department immediately if symptoms worsened or persisted.\", \"page\": 1}, \"physician_name\": {\"value\": \"Ross Sutton\", \"quote\": \"Attending physician: Ross Sutton\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2086,
+   "tokens_out": 578,
+   "latency_ms": 23459
+  },
+  "cached": false
+ }
+}

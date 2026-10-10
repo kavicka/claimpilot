@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment (ambulantné ošetrenie, medikamentöse Unterstützung) for a brain concussion (Gehirnerschütterung) that occurred during a trip. Clause A4.1 covers reasonable and necessary medical expenses for acute illness or injury during the trip. There is no indication of pre-existing conditions, intentional injury, alcohol, or extreme sports, so exclusions do not apply.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1204,
+   "tokens_out": 111,
+   "latency_ms": 12044
+  },
+  "cached": false
+ }
+}

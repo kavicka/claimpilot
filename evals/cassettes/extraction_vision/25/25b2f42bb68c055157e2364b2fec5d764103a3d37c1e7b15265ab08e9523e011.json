@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"receipt_number\": {\"value\": \"57/9291\", \"quote\": \"Broj računa 57/9291\", \"page\": 1}, \"issue_date\": {\"value\": \"27.06.2026\", \"quote\": \"27.06.2026. 19:21\", \"page\": 1}, \"pharmacy_name\": {\"value\": \"Ljekarna Meić\", \"quote\": \"Ljekarna Meić\", \"page\": 1}, \"currency\": {\"value\": \"€\", \"quote\": \"Ukupno za platiti €\", \"page\": 1}, \"line_items\": [{\"description\": \"Elastični zavoј\", \"amount\": \"8,61\", \"quote\": \"Elastični zavoј 8,61\", \"page\": 1}, {\"description\": \"Oralna rehidracijska otopina\", \"amount\": \"6,98\", \"quote\": \"Oralna rehidracijska otopina 6,98\", \"page\": 1}, {\"description\": \"Paracetamol 500 mg\", \"amount\": \"6,04\", \"quote\": \"Paracetamol 500 mg 6,04\", \"page\": 1}, {\"description\": \"Amoksicilin 1 g\", \"amount\": \"13,40\", \"quote\": \"Amoksicilin 1 g 13,40\", \"page\": 1}], \"total\": {\"value\": \"35,03\", \"quote\": \"Ukupno za platiti € 35,03\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1298,
+   "tokens_out": 385,
+   "latency_ms": 14514
+  },
+  "cached": false
+ }
+}

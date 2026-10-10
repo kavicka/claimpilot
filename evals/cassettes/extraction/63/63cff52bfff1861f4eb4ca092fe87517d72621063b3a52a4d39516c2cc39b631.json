@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\",\n    \"value\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Akute Gastroenteritis | A09\",\n    \"value\": \"Akute Gastroenteritis\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Davos, Schweiz\",\n    \"value\": \"Schweiz\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Medizinisches Zentrum Gerber\",\n    \"value\": \"Medizinisches Zentrum Gerber\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Akute Gastroenteritis | A09\",\n    \"value\": \"A09\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN <PERSON_1> | GEB. 12.03.1956\",\n    \"value\": \"12.03.1956\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN <PERSON_1> | GEB. 12.03.1956\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen.\",\n    \"value\": \"Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"UNTERSUCHUNG / AUFNAHME 26.04.2026\",\n    \"value\": \"26.04.2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2532,
+   "tokens_out": 808,
+   "latency_ms": 17710
+  },
+  "cached": false
+ }
+}

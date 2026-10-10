@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "16. 3. 2026 došlo k liečebnému výkonu v Horváth International Medical Centre s nákladmi 97 020,00 HUF, ktoré sú podľa čl. 4 ods. 1 VPP pokryté. Lieky z lekárne v sume 10 614,00 HUF sú tiež podľa čl. 4 ods. 1 VPP pokryté, avšak výplata v eurách je 0,00. Celkové uplatnené náklady sú 107 634,00 HUF, plnenie v eurách 222,49, spoluúčasť 50,00 EUR. Rizikový signál: early_claim. Chýbajúce informácie: žiadne. Odporúčanie: plnenie súčtu 222,49 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 645,
+   "tokens_out": 242,
+   "latency_ms": 4731
+  },
+  "cached": false
+ }
+}

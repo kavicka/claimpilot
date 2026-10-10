@@ -1,0 +1,464 @@
+{
+ "suite": "routing",
+ "split": "test",
+ "metrics": {
+  "accuracy": {
+   "value": 0.9,
+   "num": 18,
+   "den": 20
+  },
+  "fraud_recall": {
+   "value": 1.0,
+   "num": 5,
+   "den": 5
+  },
+  "rule_agreement": {
+   "value": 0.9,
+   "num": 18,
+   "den": 20
+  },
+  "cost": {
+   "value": 2.0,
+   "num": 2,
+   "den": 0
+  },
+  "llm_used": {
+   "value": 0.2,
+   "num": 4,
+   "den": 20
+  },
+  "fast_track_recall": {
+   "value": 1.0,
+   "num": 4,
+   "den": 4
+  }
+ },
+ "items": [
+  {
+   "id": "S42-041",
+   "ok": true,
+   "expected": "fraud_review (R2)",
+   "got": "fraud_review (R2)",
+   "tags": [
+    "accuracy",
+    "fraud_recall"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R2"
+    ],
+    "rationale": "R2: claim form says 2026-03-16, medical report 2026-03-23 (7 days)",
+    "total_eur": "901.50",
+    "archetype": "date_inconsistency"
+   }
+  },
+  {
+   "id": "S42-042",
+   "ok": true,
+   "expected": "fast_track (R8)",
+   "got": "fast_track (R8)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R8"
+    ],
+    "rationale": "R8: 26.39 EUR, every critical field grounded",
+    "total_eur": "26.39",
+    "archetype": "luggage_delay_small"
+   }
+  },
+  {
+   "id": "S42-043",
+   "ok": false,
+   "expected": "standard (R9)",
+   "got": "senior (LLM)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": true,
+    "cost": 1,
+    "hits": [
+     "LLM"
+    ],
+    "rationale": "LLM: The claim involves a fracture of the clavicle (S42.0) sustained while skiing, which may fall under an exclusion if the policy defines skiing as an extreme sport. The documents do not clarify whether the activity was covered under the policy's terms.",
+    "total_eur": "560.44",
+    "archetype": "accident_fracture"
+   }
+  },
+  {
+   "id": "S42-044",
+   "ok": true,
+   "expected": "fast_track (R8)",
+   "got": "fast_track (R8)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R8"
+    ],
+    "rationale": "R8: 291.35 EUR, every critical field grounded",
+    "total_eur": "291.35",
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-045",
+   "ok": false,
+   "expected": "standard (R9)",
+   "got": "senior (LLM)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": true,
+    "cost": 1,
+    "hits": [
+     "LLM"
+    ],
+    "rationale": "LLM: The claim involves a medical injury (ankle sprain) that occurred during a trip, but the medical report mentions an MRI confirming ligament damage without serious bone injuries. The absence of a detailed account of how the injury occurred (e.g., during a sport, accident, or other activity) may r",
+    "total_eur": "755.88",
+    "archetype": "outside_period"
+   }
+  },
+  {
+   "id": "S42-046",
+   "ok": true,
+   "expected": "standard (R9)",
+   "got": "standard (R9)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": true,
+    "cost": 0,
+    "hits": [],
+    "rationale": "LLM: The client reported losing luggage at the airport in Hévíz and noted that the airline lost the baggage, with a record made at the airport. There is no indication of fraud or unusual circumstances.",
+    "total_eur": "1337.68",
+    "archetype": "luggage_lost"
+   }
+  },
+  {
+   "id": "S42-047",
+   "ok": true,
+   "expected": "standard (R7)",
+   "got": "standard (R7)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R7"
+    ],
+    "rationale": "R7: cancellation claim",
+    "total_eur": "691.20",
+    "archetype": "cancellation"
+   }
+  },
+  {
+   "id": "S42-048",
+   "ok": true,
+   "expected": "fast_track (R8)",
+   "got": "fast_track (R8)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R8"
+    ],
+    "rationale": "R8: 208.35 EUR, every critical field grounded",
+    "total_eur": "208.35",
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-049",
+   "ok": true,
+   "expected": "senior (R6)",
+   "got": "senior (R6)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R6"
+    ],
+    "rationale": "R6: medical report mentions: alcohol",
+    "total_eur": "934.22",
+    "archetype": "alcohol"
+   }
+  },
+  {
+   "id": "S42-050",
+   "ok": true,
+   "expected": "NEEDS_INFO (R4)",
+   "got": "NEEDS_INFO (R4)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R4"
+    ],
+    "rationale": "R4: missing: medical_invoice",
+    "total_eur": "823.79",
+    "archetype": "missing_document"
+   }
+  },
+  {
+   "id": "S42-051",
+   "ok": true,
+   "expected": "fast_track (R8)",
+   "got": "fast_track (R8)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R8"
+    ],
+    "rationale": "R8: 225.34 EUR, every critical field grounded",
+    "total_eur": "225.34",
+    "archetype": "medical_small"
+   }
+  },
+  {
+   "id": "S42-052",
+   "ok": true,
+   "expected": "senior (R6)",
+   "got": "senior (R6)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R6"
+    ],
+    "rationale": "R6: medical report mentions: extreme_sport",
+    "total_eur": "475.62",
+    "archetype": "extreme_sport_premium"
+   }
+  },
+  {
+   "id": "S42-053",
+   "ok": true,
+   "expected": "senior (R5)",
+   "got": "senior (R5)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R5"
+    ],
+    "rationale": "R5: claimed 3940.61 EUR, above 3000 EUR",
+    "total_eur": "3940.61",
+    "archetype": "hospital_large"
+   }
+  },
+  {
+   "id": "S42-054",
+   "ok": true,
+   "expected": "NEEDS_INFO (R4)",
+   "got": "NEEDS_INFO (R4)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R4"
+    ],
+    "rationale": "R4: missing: medical_invoice",
+    "total_eur": "850.00",
+    "archetype": "missing_document"
+   }
+  },
+  {
+   "id": "S42-055",
+   "ok": true,
+   "expected": "standard (R9)",
+   "got": "standard (R9)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": true,
+    "cost": 0,
+    "hits": [],
+    "rationale": "LLM: The client reported a theft at the beach in Antalya and filed a police report. There is no indication of fraud or unusual circumstances in the documents provided.",
+    "total_eur": "944.75",
+    "archetype": "luggage_theft"
+   }
+  },
+  {
+   "id": "S42-056",
+   "ok": true,
+   "expected": "fraud_review (R3)",
+   "got": "fraud_review (R3)",
+   "tags": [
+    "accuracy",
+    "fraud_recall"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R3"
+    ],
+    "rationale": "R3: event 1 day(s) after the policy was concluded",
+    "total_eur": "1038.80",
+    "archetype": "early_claim"
+   }
+  },
+  {
+   "id": "S42-057",
+   "ok": true,
+   "expected": "fraud_review (R2)",
+   "got": "fraud_review (R2)",
+   "tags": [
+    "accuracy",
+    "fraud_recall"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R2"
+    ],
+    "rationale": "R2: claim form says 2026-04-03, medical report 2026-04-07 (4 days)",
+    "total_eur": "849.93",
+    "archetype": "date_inconsistency"
+   }
+  },
+  {
+   "id": "S42-058",
+   "ok": true,
+   "expected": "senior (R5)",
+   "got": "senior (R5)",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R5"
+    ],
+    "rationale": "R5: claimed 7247.08 EUR, above 3000 EUR",
+    "total_eur": "7247.08",
+    "archetype": "hospital_large"
+   }
+  },
+  {
+   "id": "S42-059",
+   "ok": true,
+   "expected": "fraud_review (R1)",
+   "got": "fraud_review (R1)",
+   "tags": [
+    "accuracy",
+    "fraud_recall"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R1",
+     "R1"
+    ],
+    "rationale": "R1: file already submitted in S42-048; R1: invoice number already claimed: INV-2026-62474 (S42-048)",
+    "total_eur": "208.35",
+    "archetype": "dup_hash"
+   }
+  },
+  {
+   "id": "S42-060",
+   "ok": true,
+   "expected": "fraud_review (R1)",
+   "got": "fraud_review (R1)",
+   "tags": [
+    "accuracy",
+    "fraud_recall"
+   ],
+   "detail": {
+    "llm_used": false,
+    "cost": 0,
+    "hits": [
+     "R1",
+     "R1"
+    ],
+    "rationale": "R1: file already submitted in S42-051; R1: invoice number already claimed: FT-2026-70176 (S42-051)",
+    "total_eur": "225.34",
+    "archetype": "dup_number"
+   }
+  }
+ ],
+ "meta": {
+  "created": "20261009T234344Z",
+  "git": {
+   "sha": "bab3d7e",
+   "dirty": true
+  },
+  "dataset": "d59d01befdf0",
+  "seed": 42,
+  "cassette_mode": "auto",
+  "overrides": {},
+  "options": {},
+  "prompts": {
+   "doc_type/classify": "doc_type/classify@1+1ae7e9f6",
+   "extraction/document": "extraction/document@1+e1460380",
+   "extraction/vision": "extraction/vision@1+81c8af53",
+   "routing/review": "routing/review@2+14305819"
+  },
+  "models": [
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:14b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 83,
+  "cached_calls": 80,
+  "tokens_in": 195687,
+  "tokens_out": 56146,
+  "tokens_per_item": 12591.6,
+  "latency_p50_ms": 6389,
+  "latency_p95_ms": 9482,
+  "worker_peak_rss_mb": 908,
+  "models": [
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:14b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ]
+ },
+ "notes": [],
+ "stale": []
+}

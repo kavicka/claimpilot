@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 27. 4. 2026 v súvislosti s liečebnými nákladmi v Marquez International Medical Centre a nákupom liekov z lekárne. Uplatnená suma činí 188,67 USD, z čoho 144,75 USD na liečbu a 43,92 USD na lieky. Rozhodnutie o plnení je kladné pre obe položky na základe článku 4 ods. 1 VPP. Plnenie celkovo činí 174,70 EUR, spolucastníctvo je 0,00 EUR. Rizikové signály nie sú zaznamenané, chýbajúce informácie nie sú identifikované. Plnenie je odporúčané v sume 174,70 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 622,
+   "tokens_out": 233,
+   "latency_ms": 10173
+  },
+  "cached": false
+ }
+}

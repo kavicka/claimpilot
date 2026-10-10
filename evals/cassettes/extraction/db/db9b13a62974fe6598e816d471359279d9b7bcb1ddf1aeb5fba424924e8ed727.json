@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"No relevant previous illnesses. No regular medication.\",\n    \"value\": \"No relevant previous illnesses. No regular medication.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Periapical dental abscess | K04.7\",\n    \"value\": \"Periapical dental abscess\"\n  },\n  \"discharge_date\": {\n    \"page\": 1,\n    \"quote\": \"03/06/2026 | DISCHARGE -\",\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Hévíz, Hungary\",\n    \"value\": \"Hungary\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Farkas International Medical Centre\",\n    \"value\": \"Farkas International Medical Centre\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Periapical dental abscess | K04.7\",\n    \"value\": \"K04.7\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1> | DOB 16/09/1959\",\n    \"value\": \"16/09/1959\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1> | DOB 16/09/1959\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Attending physician: <PERSON_2> Signature and stamp\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Examination revealed localized swelling and tenderness in the mandibular right posterior region with mobility of the affected tooth. Radiographic imaging showed a radiolucency at the apex of the tooth, confirming the periapical abscess. No systemic signs of infection were present. Incision and drainage were performed, followed by administration of antibiotics and analgesics. Patient was advised to return for root canal therapy and follow-up in one week.\",\n    \"value\": \"Examination revealed localized swelling and tenderness in the mandibular right posterior region with mobility of the affected tooth. Radiographic imaging showed a radiolucency at the apex of the tooth, confirming the periapical abscess. No systemic signs of infection were present. Incision and drainage were performed, followed by administration of antibiotics and analgesics. Patient was advised to return for root canal therapy and follow-up in one week.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"03/06/2026 | DISCHARGE -\",\n    \"value\": \"03/06/2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1336,
+   "tokens_out": 664,
+   "latency_ms": 12296
+  },
+  "cached": false
+ }
+}

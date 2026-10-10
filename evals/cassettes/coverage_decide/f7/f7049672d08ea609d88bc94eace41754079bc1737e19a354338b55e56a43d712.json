@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for pneumonia (upala pluća) that occurred after the insured person returned home from Croatia. According to clause A4.1, the insurer covers necessary and appropriate costs for outpatient care, hospitalization, and prescribed medications if incurred as a result of an acute illness or injury during the trip. The evidence indicates that the illness developed after the trip and required medical treatment, which falls under the coverage provided by this clause. No exclusions apply, as there is no indication of pre-existing conditions, alcohol, or extreme sports involvement in this case.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1283,
+   "tokens_out": 140,
+   "latency_ms": 13813
+  },
+  "cached": false
+ }
+}

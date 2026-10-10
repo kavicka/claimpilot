@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"INV-2026-83345\", \"quote\": \"Invoice No. INV-2026-83345\", \"page\": 1}, \"issue_date\": {\"value\": \"25/07/2026\", \"quote\": \"Date: 25/07/2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Sándor International Medical Centre\", \"quote\": \"Sándor International Medical Centre\", \"page\": 1}, \"provider_country\": {\"value\": \"Hungary\", \"quote\": \"Budapest, Hungary\", \"page\": 1}, \"patient_name\": {\"value\": \"Sofia Rubíková\", \"quote\": \"Sofia Rubíková, DOB 13/07/1963\", \"page\": 1}, \"service_date\": {\"value\": \"25/07/2026\", \"quote\": \"DATE OF SERVICE 25/07/2026\", \"page\": 1}, \"currency\": {\"value\": \"HUF\", \"quote\": \"409,061.00 HUF\", \"page\": 1}, \"line_items\": [{\"description\": \"Emergency room treatment\", \"amount\": \"106,298.00\", \"quote\": \"1 Emergency room treatment 106,298.00\", \"page\": 1}, {\"description\": \"CT scan\", \"amount\": \"207,422.00\", \"quote\": \"2 CT scan 207,422.00\", \"page\": 1}, {\"description\": \"Laboratory tests\", \"amount\": \"41,838.00\", \"quote\": \"3 Laboratory tests 41,838.00\", \"page\": 1}, {\"description\": \"IV infusion\", \"amount\": \"53,503.00\", \"quote\": \"4 IV infusion 53,503.00\", \"page\": 1}], \"total\": {\"value\": \"409,061.00\", \"quote\": \"Total due 409,061.00 HUF\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 510,
+   "latency_ms": 21625
+  },
+  "cached": false
+ }
+}

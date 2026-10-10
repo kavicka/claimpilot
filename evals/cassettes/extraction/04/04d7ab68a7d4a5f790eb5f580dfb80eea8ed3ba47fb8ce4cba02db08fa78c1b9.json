@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"# | Prestazione\\n1 | Pronto soccorso | Importo (EUR)\",\n    \"value\": \"EUR\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"309,58\",\n      \"description\": \"Esami di laboratorio\",\n      \"page\": 1,\n      \"quote\": \"2 | Esami di laboratorio | 309,58\"\n    },\n    {\n      \"amount\": \"51,41\",\n      \"description\": \"Terapia infusionale\",\n      \"page\": 1,\n      \"quote\": \"3 | Terapia infusionale | 51,41\"\n    },\n    {\n      \"amount\": \"65,88\",\n      \"description\": \"Ecografia\",\n      \"page\": 1,\n      \"quote\": \"4 | Ecografia | 65,88\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PAZIENTE\\n<PERSON_1>, nato/a il 07/01/1972 | DATA PRESTAZIONE 29/08/2026\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": \"Roma, Italia Roma, Italia\",\n    \"value\": \"Italia\"\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliambulatorio Sagnelli Poliambulatorio Sagnelli\",\n    \"value\": \"Poliambulatorio Sagnelli Poliambulatorio Sagnelli\"\n  },\n  \"service_date\": {\n    \"page\": 1,\n    \"quote\": \"PAZIENTE\\n<PERSON_1>, nato/a il 07/01/1972 | DATA PRESTAZIONE 29/08/2026\",\n    \"value\": \"29/08/2026\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Totale da pagare | 134,09\",\n    \"value\": \"134,09\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 4467,
+   "tokens_out": 554,
+   "latency_ms": 18553
+  },
+  "cached": false
+ }
+}

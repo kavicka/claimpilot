@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"complainant_name\": {\n    \"page\": 1,\n    \"quote\": \"COMPLAINANT <PERSON_1>, DOB 08/07/1959 | ID DOCUMENT <ID_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"incident_date\": {\n    \"page\": 1,\n    \"quote\": \"DATE OF INCIDENT 15/08/2026 | PLACE OF INCIDENT Antalya\",\n    \"value\": \"15/08/2026\"\n  },\n  \"incident_description\": {\n    \"page\": 1,\n    \"quote\": \"While the complainant was swimming in Antalya, their beach bag was stolen. The bag contained personal items, including shoes, a mobile phone, and a suitcase. The theft occurred in the vicinity of the beach where the complainant was located. No one was seen taking the items, and the complainant noticed the bag was missing upon returning from the water.\",\n    \"value\": \"While the complainant was swimming in Antalya, their beach bag was stolen. The bag contained personal items, including shoes, a mobile phone, and a suitcase. The theft occurred in the vicinity of the beach where the complainant was located. No one was seen taking the items, and the complainant noticed the bag was missing upon returning from the water.\"\n  },\n  \"incident_place\": {\n    \"page\": 1,\n    \"quote\": \"DATE OF INCIDENT 15/08/2026 | PLACE OF INCIDENT Antalya\",\n    \"value\": \"Antalya\"\n  },\n  \"police_station\": {\n    \"page\": 1,\n    \"quote\": \"Antalya Tourist Police Station Antalya Tourist Police Station\",\n    \"value\": \"Antalya Tourist Police Station Antalya Tourist Police Station\"\n  },\n  \"report_date\": {\n    \"page\": 1,\n    \"quote\": \"Case No. 2412/167/26 Date: 16/08/2026\",\n    \"value\": \"16/08/2026\"\n  },\n  \"report_number\": {\n    \"page\": 1,\n    \"quote\": \"Case No. 2412/167/26 Date: 16/08/2026\",\n    \"value\": \"2412/167/26\"\n  },\n  \"stolen_items\": [\n    {\n      \"description\": \"Shoes\",\n      \"page\": 1,\n      \"quote\": \"1 | Shoes | Value\",\n      \"value\": \"Value\"\n    },\n    {\n      \"description\": \"Mobile phone\",\n      \"page\": 1,\n      \"quote\": \"2 | Mobile phone | 103.31 EUR\",\n      \"value\": \"103.31 EUR\"\n    },\n    {\n      \"description\": \"Suitcase\",\n      \"page\": 1,\n      \"quote\": \"3 | Suitcase | 671.98 EUR\",\n      \"value\": \"671.98 EUR\"\n    }\n  ],\n  \"vehicle_plate\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1679,
+   "tokens_out": 704,
+   "latency_ms": 15783
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"INV-2026-56615\", \"quote\": \"Invoice No. INV-2026-56615\", \"page\": 1}, \"issue_date\": {\"value\": \"18/03/2026\", \"quote\": \"Date: 18/03/2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Horváth International Medical Centre\", \"quote\": \"Horváth International Medical Centre\", \"page\": 1}, \"provider_country\": {\"value\": \"Hungary\", \"quote\": \"Hévíz, Hungary\", \"page\": 1}, \"patient_name\": {\"value\": \"Bruno Veternik\", \"quote\": \"Bruno Veternik, DOB 31/03/1986\", \"page\": 1}, \"service_date\": {\"value\": \"16/03/2026\", \"quote\": \"16/03/2026\", \"page\": 1}, \"currency\": {\"value\": \"HUF\", \"quote\": \"97,020.00 HUF\", \"page\": 1}, \"line_items\": [{\"description\": \"Outpatient consultation\", \"amount\": \"62,687.00\", \"quote\": \"1 Outpatient consultation\", \"page\": 1}, {\"description\": \"IV infusion\", \"amount\": \"34,333.00\", \"quote\": \"2 IV infusion\", \"page\": 1}], \"total\": {\"value\": \"97,020.00\", \"quote\": \"97,020.00 HUF\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 384,
+   "latency_ms": 19869
+  },
+  "cached": false
+ }
+}

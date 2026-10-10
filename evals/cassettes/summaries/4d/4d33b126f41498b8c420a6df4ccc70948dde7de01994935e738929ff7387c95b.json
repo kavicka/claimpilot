@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Opća bolnica Medved sú preplatené v sume 6 483,40 EUR na základe článku 4 ods. 1 a článku 4 ods. 2 zákona o poistení osobných rizík. Všetky podmienky pre úhradu sú splnené, včetná splnenie poistnej udalosti v súlade s podmienkami poistného produktu Cestovné poistenie Premium. Poisťovňa prepláca uvedenú sumu v plnej výške. Žiadne ďalšie náklady nie sú uvedené.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 534,
+   "tokens_out": 184,
+   "latency_ms": 3202
+  },
+  "cached": false
+ }
+}

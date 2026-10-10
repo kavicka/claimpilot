@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Marquez International Medical Centre vo výške 144,75 USD nie sú preplatené, pretože údaje o udalosti sú označené ako podvodné (duplicate_invoice), čo spôsobuje výnimku podľa článku 13 ods. 4 VPP. Poisťovňa neprepláca žiadne náklady, pretože podľa článku 13 ods. 4 VPP sú náklady nezakryté v prípade zistenia podvodných znakov. Celkové plnenie vo výške 0,00 EUR je správne podľa rozhodnutia.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 464,
+   "tokens_out": 186,
+   "latency_ms": 3270
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Dochádza k poistnej udalosti typu straty batožiny v súvislosti s cestovaním 25. 7. 2026. Poistený uplatnil náklady na nákup nevyhnutných vecí vo výške 4 033,16 TRY, čo zodpovedá 88,06 EUR. Oba náklady sú podľa článku 8 ods. 1 VPP pokryté. Poistné plnenie je odporúčané vo výške 88,06 EUR. Rizikové signály nie sú identifikované. Chýbajúce informácie nie sú zaznamenané. Poistný plnenie je odporúčané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 629,
+   "tokens_out": 201,
+   "latency_ms": 3559
+  },
+  "cached": false
+ }
+}

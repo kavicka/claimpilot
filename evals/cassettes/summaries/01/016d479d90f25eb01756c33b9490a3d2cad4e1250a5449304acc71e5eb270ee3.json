@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 20. 3. 2026 v súvislosti s liečebnými nákladmi v Poliklinike Veselá vo výške 5 245,00 CZK, ktoré sú podľa článku 4 ods. 1 VPP pokryté. Dôvodom k plneniu je potvrdenie o poskytnutých službách a zodpovedajúca suma. Však existuje rizikový signál „date_inconsistency“, ktorý naznačuje nesúlad medzi dátumom udalosti a dátumom vyúčtovania alebo poskytnutia služieb. Chýbajúce informácie nie sú zaznamenané. Odporúča sa plnenie vo výške 164,08 EUR, čo zodpovedá uplatnenej sume v eurách. Suma plnenia je v súlade s faktom a výpočtom podľa kurzov.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 556,
+   "tokens_out": 274,
+   "latency_ms": 4528
+  },
+  "cached": false
+ }
+}

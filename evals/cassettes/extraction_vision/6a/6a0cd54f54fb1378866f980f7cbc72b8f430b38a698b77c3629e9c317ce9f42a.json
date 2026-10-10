@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP24972279\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP24972279\", \"page\": 1}, \"insured_name\": {\"value\": \"Gabriela Salajová\", \"quote\": \"MENO A PRIEZVISKO Gabriela Salajová\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"655817/8396\", \"quote\": \"RODNÉ ČÍSLO 655817/8396\", \"page\": 1}, \"insured_address\": {\"value\": \"Skýcovská 7, 831 49 Trenčianske Mítice\", \"quote\": \"ADRESA Skýcovská 7, 831 49 Trenčianske Mítice\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 909 198 264\", \"quote\": \"TELEFÓN +421 909 198 264\", \"page\": 1}, \"insured_email\": {\"value\": \"gabriela.salajova66@mail.example.sk\", \"quote\": \"E-MAIL gabriela.salajova66@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK65 3100 0000 0060 7596 2803\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK65 3100 0000 0060 7596 2803\", \"page\": 1}, \"destination_country\": {\"value\": \"Švajčiarsko\", \"quote\": \"KRAJINA CESTY Švajčiarsko\", \"page\": 1}, \"trip_start\": {\"value\": \"16. 7. 2026\", \"quote\": \"CESTA OD 16. 7. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"25. 7. 2026\", \"quote\": \"CESTA DO 25. 7. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"21. 7. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 21. 7. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Davos, Švajčiarsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Davos, Švajčiarsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\", \"Úraz\"], \"quote\": \"Druh udalosti Liečebné náklady Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Pri tandemovom lete na paraglíde sa mi zlomil dolný koniec vretennej kosti. Udalosť sa díala v Davos, v Švajčiarsku. Po úraze som bol hospitalizovaný a podstúpil lečbu.\", \"quote\": \"POPIS UDALOSTI Pri tandemovom lete na paraglíde sa mi zlomil dolný koniec vretennej kosti. Udalosť sa díala v Davos, v Švajčiarsku. Po úraze som bol hospitalizovaný a podstúpil lečbu.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Medizinisches Zentrum Fréi\", \"amount\": \"560,19\", \"currency\": \"CHF\", \"quote\": \"Liečebné náklady – Medizinisches Zentrum Fréi 560,19 CHF\", \"page\": 1}, {\"description\": \"Jednorazové plnenie za zlomeninu\", \"amount\": \"—\", \"currency\": \"—\", \"quote\": \"Jednorazové plnenie za zlomeninu — —\", \"page\": 1}], \"signature_date\": {\"value\": \"4. 8. 2026\", \"quote\": \"Dátum: 4. 8. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1075,
+   "latency_ms": 39872
+  },
+  "cached": false
+ }
+}

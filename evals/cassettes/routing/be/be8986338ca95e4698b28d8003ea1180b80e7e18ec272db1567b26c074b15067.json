@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "143058190bbdb36220345f2a12dbba1ef7427917c962e41830707fa9199b0378",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"queue\": \"senior\", \"rationale\": \"The claim involves a fracture of the clavicle (S42.0) sustained while skiing, which may fall under an exclusion if the policy defines skiing as an extreme sport. The documents do not clarify whether the activity was covered under the policy's terms.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 629,
+   "tokens_out": 67,
+   "latency_ms": 9482
+  },
+  "cached": false
+ }
+}

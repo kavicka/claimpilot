@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 11. 6. 2026 došlo v Opčej nemocnici Milotić k liečbe poistného udalosti, ktorá bola v rámci poistného pokrytia. Uplatnená suma činila 6 034,02 EUR, z čoho bolo plnené 5 984,02 EUR a spoluplatnosť 50,00 EUR. Poistné plnenie je odporúčané na základe článku 4 ods. 1 a článku 4 ods. 2 zákona o poistení, ktoré stanovujú pokrytie liečebných nákladov v zahraničí pri cestovnom poistení Basic. Rizikové signály nie sú identifikované. Chýbajúce informácie nie sú zaznamenané. Poistná udalosť je v súlade s podmienkami poistnej zmluvy.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 501,
+   "tokens_out": 259,
+   "latency_ms": 4266
+  },
+  "cached": false
+ }
+}

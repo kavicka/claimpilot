@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\",\n    \"value\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Pneumonie | J18.9\",\n    \"value\": \"Pneumonie\"\n  },\n  \"discharge_date\": {\n    \"page\": 1,\n    \"quote\": \"26.01.2026 | 01.02.2026\",\n    \"value\": \"01.02.2026\"\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Schladming, Österreich\",\n    \"value\": \"Österreich\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Landesklinikum Gindl\",\n    \"value\": \"Landesklinikum Gindl\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Pneumonie | J18.9\",\n    \"value\": \"J18.9\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1> | 12.12.1993\",\n    \"value\": \"12.12.1993\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN | GEB.\\n<PERSON_1> | 12.12.1993\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Bei Aufnahme wurden Atemnot, Fieber und Husten beobachtet. Die Röntgenaufnahme des Thorax zeigte ein lappengenes Lungenödem im rechten Unterlappen. Die bakterielle Keimung im Sputum ergab einen grampositiven Keim. Die Blutwerte zeigten eine leichte Leukozytose. Der Patient erhielt intravenös antibiotische Therapie sowie antipyretika und ausreichende Flüssigkeitsversorgung. Nach 5 Tagen stationärer Behandlung zeigte sich klinische Besserung, sodass der Patient entlassen werden konnte. Es wird eine ambulante Nachkontrolle und eine abschließende Röntgenuntersuchung empfohlen.\",\n    \"value\": \"Bei Aufnahme wurden Atemnot, Fieber und Husten beobachtet. Die Röntgenaufnahme des Thorax zeigte ein lappengenes Lungenödem im rechten Unterlappen. Die bakterielle Keimung im Sputum ergab einen grampositiven Keim. Die Blutwerte zeigten eine leichte Leukozytose. Der Patient erhielt intravenös antibiotische Therapie sowie antipyretika und ausreichende Flüssigkeitsversorgung. Nach 5 Tagen stationärer Behandlung zeigte sich klinische Besserung, sodass der Patient entlassen werden konnte. Es wird eine ambulante Nachkontrolle und eine abschließende Röntgenuntersuchung empfohlen.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"26.01.2026 | 01.02.2026\",\n    \"value\": \"26.01.2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2570,
+   "tokens_out": 885,
+   "latency_ms": 19130
+  },
+  "cached": false
+ }
+}

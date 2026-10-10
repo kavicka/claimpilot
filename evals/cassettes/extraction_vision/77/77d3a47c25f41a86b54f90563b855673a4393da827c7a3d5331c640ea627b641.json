@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"RE-2026-25551\", \"quote\": \"Rechnung Nr. RE-2026-25551\", \"page\": 1}, \"issue_date\": {\"value\": \"20.01.2026\", \"quote\": \"Datum: 20.01.2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Medizinisches Zentrum Bartl\", \"quote\": \"Medizinisches Zentrum Bartl\", \"page\": 1}, \"provider_country\": {\"value\": \"Österreich\", \"quote\": \"Wien, Österreich\", \"page\": 1}, \"patient_name\": {\"value\": \"Ingrida Pašeková, geb. 04.11.1981\", \"quote\": \"Ingrida Pašeková, geb. 04.11.1981\", \"page\": 1}, \"service_date\": {\"value\": \"18.01.2026\", \"quote\": \"BEHANDLUNGS DATUM 18.01.2026\", \"page\": 1}, \"currency\": {\"value\": \"€\", \"quote\": \"475,62 €\", \"page\": 1}, \"line_items\": [{\"description\": \"Notfallbehandlung\", \"amount\": \"184,08\", \"quote\": \"1 Notfallbehandlung 184,08\", \"page\": 1}, {\"description\": \"Röntgen\", \"amount\": \"70,17\", \"quote\": \"2 Röntgen 70,17\", \"page\": 1}, {\"description\": \"Gipsverband\", \"amount\": \"149,98\", \"quote\": \"3 Gipsverband 149,98\", \"page\": 1}, {\"description\": \"Physiotherapie\", \"amount\": \"71,39\", \"quote\": \"4 Physiotherapie 71,39\", \"page\": 1}], \"total\": {\"value\": \"475,62 €\", \"quote\": \"Gesamtbetrag 475,62 €\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 510,
+   "latency_ms": 22813
+  },
+  "cached": false
+ }
+}

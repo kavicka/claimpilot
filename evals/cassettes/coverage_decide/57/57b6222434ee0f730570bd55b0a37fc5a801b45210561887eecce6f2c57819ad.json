@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A8.1\"], \"rationale\": \"The claim is for essential purchases due to a delayed luggage arrival (18 hours late), which falls under the coverage for delayed luggage as defined in clause A8.1. Clause A8.3 does not apply because the delay exceeded 12 hours. Clause A8.2 is not relevant here as it refers to product-specific limits, and the claim is within the scope of coverage. Clauses A7.1 and A7.6 are not applicable as they pertain to damage or loss of luggage, not delay-related expenses.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 638,
+   "tokens_out": 133,
+   "latency_ms": 11509
+  },
+  "cached": false
+ }
+}

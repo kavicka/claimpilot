@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Poliklinika Tomičić vo výške 172,71 EUR sú preplatené podľa článku 4 ods. 1 zákona o poistení.  \nLieky z lekárne vo výške 41,49 EUR sú čiastočne preplatené vo výške 11,49 EUR podľa článku 4 ods. 1 zákona o poistení.  \nSpolu je preplatených 184,20 EUR, pričom poistný poplatok vo výške 30,00 EUR je zároveň uhradený poistným.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 597,
+   "tokens_out": 177,
+   "latency_ms": 3221
+  },
+  "cached": false
+ }
+}

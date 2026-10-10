@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"needs_review\", \"clause_ids\": [\"A7.1\", \"A7.5\"], \"rationale\": \"The item is a laptop (valuables), which may be covered under A7.1 if it was lost during transport. However, A7.5 excludes coverage for valuables and electronics left unattended in a vehicle or public place. The evidence does not clarify whether the laptop was left unattended, so it is unclear whether the exclusion applies.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 641,
+   "tokens_out": 101,
+   "latency_ms": 7409
+  },
+  "cached": false
+ }
+}

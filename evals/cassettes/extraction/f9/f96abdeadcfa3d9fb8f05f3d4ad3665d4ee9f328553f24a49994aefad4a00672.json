@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Total due EUR\",\n    \"value\": \"EUR\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 9742/59808 18/04/2026 14:40\",\n    \"value\": \"18/04/2026 14:40\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"8.90\",\n      \"description\": \"Nasal spray\",\n      \"page\": 1,\n      \"quote\": \"Nasal spray | 8.90\"\n    },\n    {\n      \"amount\": \"20.07\",\n      \"description\": \"Amoxicillin 1g\",\n      \"page\": 1,\n      \"quote\": \"Amoxicillin 1g | 20.07\"\n    },\n    {\n      \"amount\": \"11.97\",\n      \"description\": \"Elastic bandage\",\n      \"page\": 1,\n      \"quote\": \"Elastic bandage | 11.97\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Davies Pharmacy Chania\",\n    \"value\": \"Davies Pharmacy\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 9742/59808 18/04/2026 14:40\",\n    \"value\": \"9742/59808\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"40.94\",\n    \"value\": \"40.94\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1242,
+   "tokens_out": 408,
+   "latency_ms": 6605
+  },
+  "cached": false
+ }
+}

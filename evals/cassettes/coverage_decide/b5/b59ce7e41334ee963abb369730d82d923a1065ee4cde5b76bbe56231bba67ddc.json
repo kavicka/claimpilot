@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A9.1\", \"A9.3\"], \"rationale\": \"The claim is for a cancellation fee due to an acute illness (pneumonia) that occurred before the trip, as stated in the medical report. Clause A9.1 covers cancellation due to an acute illness. Clause A9.3 is satisfied because the cancellation was done without unnecessary delay, within three working days of the illness onset (assuming the cancellation date is shortly after the illness was diagnosed). There is no indication of any exclusions applying (e.g., pre-existing conditions, intentional actions, alcohol, or extreme sports), and the policy explicitly includes coverage for extreme sports, which is not relevant here.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1289,
+   "tokens_out": 153,
+   "latency_ms": 14543
+  },
+  "cached": false
+ }
+}

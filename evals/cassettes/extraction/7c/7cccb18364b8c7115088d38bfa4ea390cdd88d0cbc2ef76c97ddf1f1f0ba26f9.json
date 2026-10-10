@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"# | Usluga | 330,70\",\n    \"value\": \"€\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"85,05\",\n      \"description\": \"Hitni prijem\",\n      \"page\": 1,\n      \"quote\": \"1 | Hitni prijem | 85,05\"\n    },\n    {\n      \"amount\": \"132,99\",\n      \"description\": \"Laboratorijske pretrage\",\n      \"page\": 1,\n      \"quote\": \"2 | Laboratorijske pretrage | 132,99\"\n    },\n    {\n      \"amount\": \"172,11\",\n      \"description\": \"Infuzijska terapija\",\n      \"page\": 1,\n      \"quote\": \"3 | Infuzijska terapija | 172,11\"\n    },\n    {\n      \"amount\": \"\",\n      \"description\": \"Ultrazvuk\",\n      \"page\": 1,\n      \"quote\": \"4 | Ultrazvuk\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PACIENT <PERSON_1>, roden/a 16.02.1989. | DATUM USLUGE 27.06.2026. PRIJATÉ Iznos (€)\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"service_date\": {\n    \"page\": 1,\n    \"quote\": \"PACIENT <PERSON_1>, roden/a 16.02.1989. | DATUM USLUGE 27.06.2026. PRIJATÉ Iznos (€)\",\n    \"value\": \"27.06.2026.\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Ukupno za platiti | 720,85 €\",\n    \"value\": \"720,85\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1855,
+   "tokens_out": 583,
+   "latency_ms": 12482
+  },
+  "cached": false
+ }
+}

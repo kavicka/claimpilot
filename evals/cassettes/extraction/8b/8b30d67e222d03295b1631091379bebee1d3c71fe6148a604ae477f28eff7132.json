@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"No relevant previous illnesses. No regular medication.\",\n    \"value\": \"No relevant previous illnesses. No regular medication.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Acute gastroenteritis | ICD-10 A09\",\n    \"value\": \"Acute gastroenteritis\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Héviz, Hungary\",\n    \"value\": \"Hungary\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Horváth International Medical Centre\",\n    \"value\": \"Horváth International Medical Centre\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Acute gastroenteritis | ICD-10 A09\",\n    \"value\": \"A09\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1> | DOB 31/03/1986\",\n    \"value\": \"31/03/1986\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1> | DOB 31/03/1986\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Attending physician: <PERSON_2> Signature and stamp\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"The patient presented with acute onset of diarhea and vomiting. Examination revealed mild dehydration and tenderness in the epigastrium. Stool examination was negative for parasites and bacterial pathogens. Viral antigen testing was not performed. Treatment included oral rehydration solution, ondansetron for nausea, and symptomatic care. The patient was advised to maintain hydration and return if symptoms worsen or persist beyond 72 hours.\",\n    \"value\": \"The patient presented with acute onset of diarhea and vomiting. Examination revealed mild dehydration and tenderness in the epigastrium. Stool examination was negative for parasites and bacterial pathogens. Viral antigen testing was not performed. Treatment included oral rehydration solution, ondansetron for nausea, and symptomatic care. The patient was advised to maintain hydration and return if symptoms worsen or persist beyond 72 hours.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"16/03/2026 | DISCHARGE -\",\n    \"value\": \"16/03/2026\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2054,
+   "tokens_out": 648,
+   "latency_ms": 11022
+  },
+  "cached": false
+ }
+}

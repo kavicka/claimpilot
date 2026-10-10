@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa stala 28. 1. 2026 pri ceste poistného <PERSON_1>. Poistné záznamy uvádzajú straty: kniha a čítačka (171,31 EUR), mobilný telefón (817,49 EUR) – tieto položky nie sú poistené podľa čl. 7 ods. 5 VPP, pretože sú považované za hodnotné veci, ktoré boli nezabezpečené. Zimná bunda (129,20 EUR), oblečenie (145,74 EUR) a kozmetika (52,49 EUR) sú poistené podľa čl. 7 ods. 1 a 2 VPP, pretože sú súčasťou osobného oblečenia a osobných potrieb. Celkové plnenie činí 327,43 EUR. Rizikový signál: exclusion_unattended_valuables – významná nezabezpečenosť hodnotných vecí. Chýbajúce informácie: žiadne. Odporúčanie: plnenie 327,43 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 867,
+   "tokens_out": 318,
+   "latency_ms": 5907
+  },
+  "cached": false
+ }
+}

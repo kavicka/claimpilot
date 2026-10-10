@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves treatment for an acute dental abscess (periapical abscess) that occurred during a trip. Clause A4.1 covers 'reasonable and necessary costs for outpatient treatment, hospitalization, and medications prescribed by a doctor, if incurred as a result of an acute illness or injury during the trip.' The evidence confirms an acute dental condition requiring immediate treatment, which falls under this clause. No exclusions apply, as the condition was not pre-existing, not related to alcohol, drugs, extreme sports, or intentional actions.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1237,
+   "tokens_out": 131,
+   "latency_ms": 11110
+  },
+  "cached": false
+ }
+}

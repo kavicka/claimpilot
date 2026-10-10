@@ -1,0 +1,56 @@
+{
+ "step": "submission",
+ "prompt_id": "submission/agent",
+ "prompt_hash": "bc9f8df887fa1d06e12d28e2d3a0d5fce30d3e0875e106f0df31c9eff0a26dac",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "",
+  "thinking": null,
+  "tool_calls": [
+   {
+    "id": "call_w3fbzty0",
+    "function": {
+     "index": 0,
+     "name": "submit_claim",
+     "arguments": {
+      "payload": {
+       "claim_type_code": "MED",
+       "currency": "EUR",
+       "event_country": "IT",
+       "event_date": "2026-07-25",
+       "handler_id": "handler.eval",
+       "iban": "<IBAN_1>",
+       "insured": {
+        "birth_number": "<RC_1>",
+        "name": "<PERSON_1>"
+       },
+       "items": [
+        {
+         "claimed_eur": "6920.28",
+         "clause_refs": [
+          "A4.1",
+          "A4.2"
+         ],
+         "coverage_code": "MED",
+         "decision": "PAY",
+         "payout_eur": "6870.28",
+         "ref": "I1"
+        }
+       ],
+       "policy_number": "CP58181396",
+       "total_payout": "6870.28"
+      }
+     }
+    }
+   }
+  ],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 755,
+   "tokens_out": 192,
+   "latency_ms": 8441
+  },
+  "cached": false
+ }
+}

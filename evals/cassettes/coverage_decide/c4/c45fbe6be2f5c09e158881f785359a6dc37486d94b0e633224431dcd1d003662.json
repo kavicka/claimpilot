@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The mobile phone is considered a valuable item and electronic equipment. According to clause A7.5, the insurer does not cover theft of valuable items and electronics left unattended in a vehicle or in a publicly accessible area. The evidence indicates the bag was not delivered on arrival, but there is no indication that the bag was left unattended in a vehicle or public area. However, since the bag was lost at the airport and not stolen, the exclusion in A7.5 may not directly apply. Further clarification is needed to determine if the loss occurred due to theft or if the bag was left unattended. Therefore, the claim may need review.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 646,
+   "tokens_out": 156,
+   "latency_ms": 9964
+  },
+  "cached": false
+ }
+}

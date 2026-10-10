@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medication (nonsteroidal anti-inflammatory drugs) prescribed as part of treatment for an acute injury (ankle sprain) that occurred during travel. Clause A4.1 covers the cost of medication prescribed by a doctor for an acute illness or injury during travel. There is no indication that the injury was pre-existing, planned, or related to excluded activities (e.g., alcohol, war, terrorism, or extreme sports—clause A11.3 is not applicable here as the injury occurred during normal walking).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1134,
+   "tokens_out": 129,
+   "latency_ms": 10386
+  },
+  "cached": false
+ }
+}

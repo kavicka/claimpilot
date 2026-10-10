@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"facility_name\": {\"value\": \"Carpenter International Medical Centre\", \"quote\": \"Carpenter International Medical Centre\", \"page\": 1}, \"facility_country\": {\"value\": \"Greece\", \"quote\": \"Rodos, Greece\", \"page\": 1}, \"patient_name\": {\"value\": \"Eduard Bernolák\", \"quote\": \"Eduard Bernolák\", \"page\": 1}, \"patient_birth_date\": {\"value\": \"14/09/1972\", \"quote\": \"14/09/1972\", \"page\": 1}, \"visit_date\": {\"value\": \"17/03/2026\", \"quote\": \"17/03/2026\", \"page\": 1}, \"discharge_date\": {\"value\": null, \"quote\": null, \"page\": 1}, \"diagnosis\": {\"value\": \"Concussion\", \"quote\": \"Concussion\", \"page\": 1}, \"icd10_code\": {\"value\": \"S06.0\", \"quote\": \"S06.0\", \"page\": 1}, \"anamnesis\": {\"value\": \"No relevant previous illnesses. No regular medication.\", \"quote\": \"No relevant previous illnesses. No regular medication.\", \"page\": 1}, \"treatment\": {\"value\": \"Patient presented with headache and dizziness following minor head trauma. Neurological examination was unremarkable, with no focal deficits or abnormal reflexes. Imaging confirmed no intracranial fracture or hemorrhage. Patient was advised to rest and avoid physical and cognitive exertion for 24 to 48 hours. Symptomatic treatment with acetaminophen was initiated, and follow-up was scheduled in 48 hours.\", \"quote\": \"Patient presented with headache and dizziness following minor head trauma. Neurological examination was unremarkable, with no focal deficits or abnormal reflexes. Imaging confirmed no intracranial fracture or hemorrhage. Patient was advised to rest and avoid physical and cognitive exertion for 24 to 48 hours. Symptomatic treatment with acetaminophen was initiated, and follow-up was scheduled in 48 hours.\", \"page\": 1}, \"physician_name\": {\"value\": \"Ashleigh Freeman\", \"quote\": \"Ashleigh Freeman\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2086,
+   "tokens_out": 507,
+   "latency_ms": 24990
+  },
+  "cached": false
+ }
+}

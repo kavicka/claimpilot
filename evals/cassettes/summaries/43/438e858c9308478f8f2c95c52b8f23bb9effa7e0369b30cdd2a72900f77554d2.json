@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Medizinisches Zentrum Bartl vo výške 475,62 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení.  \nJednorazové plnenie za zlomeninu vo výške 500,00 EUR je poisťovňou preplatené podľa článku 6 ods. 1 zákona o poistení.  \nCelkové plnenie vo výške 975,62 EUR je preplatené, pričom spolucastné výdavky činia 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 606,
+   "tokens_out": 174,
+   "latency_ms": 3651
+  },
+  "cached": false
+ }
+}

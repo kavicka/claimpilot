@@ -1,0 +1,19 @@
+{
+ "step": "judge",
+ "prompt_id": "summaries/judge",
+ "prompt_hash": "a14837a638786f48a97a5930f8a3a86558d06fc9eb071acda8f07687ed318ecb",
+ "model": "ollama:gemma3:12b",
+ "response": {
+  "text": "{\n  \"completeness\": 4,\n  \"tone\": 5,\n  \"no_overpromise\": 5,\n  \"note\": \"The text lacks a clear explanation of *why* the claim was covered, only stating it was 'abgedeckt' (covered) without detailing how article 4, paragraph 1, applies to the specific medical treatment.\"\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "gemma3:12b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 527,
+   "tokens_out": 83,
+   "latency_ms": 4888
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 11. 7. 2026 došlo k zrušeniu cesty, za čo bol uplatnený stornovací poplatok vo výške 1 051,40 EUR. Poistenie Cestovné poistenie Standard nezahŕňa plnenie stornovacích poplatkov v prípade, že poistený bol informovaný o riziku zrušenia dopredu, čo je uvedené v článku 9 ods. 4 VPP. Rizikový signál „exclusion_known_reason“ potvrdzuje, že poistený mal vedomosť o možnosti zrušenia včas. Chýbajúce informácie nie sú zaznamenané. Plnenie je odmietnuté, suma 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 542,
+   "tokens_out": 213,
+   "latency_ms": 9737
+  },
+  "cached": false
+ }
+}

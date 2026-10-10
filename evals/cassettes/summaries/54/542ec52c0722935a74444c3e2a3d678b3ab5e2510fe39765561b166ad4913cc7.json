@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Nákup nevyhnutných vecí v sume 1 949,24 TRY, ktorý bol uskutočnený 21. 4. 2026, je preplatený podľa článku 8 ods. 1 zákona o poistení.  \nNákup nevyhnutných vecí v sume 2 451,21 TRY, ktorý bol uskutočnený 21. 4. 2026, je preplatený podľa článku 8 ods. 1 zákona o poistení.  \nCelkové plnenie v sume 96,08 EUR je vyplatené na základe uvedených článkov VPP.  \nŽiadne ďalšie položky nie sú v rámci poistenia pokryté.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 547,
+   "tokens_out": 216,
+   "latency_ms": 3730
+  },
+  "cached": false
+ }
+}

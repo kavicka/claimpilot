@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"· Liečebné náklady Úraz [X] Batožina L Oneskorenie batožiny · Storno cesty\",\n    \"values\": [\n      \"Úraz\",\n      \"Oneskorenie batožiny\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"119,50\",\n      \"currency\": \"EUR\",\n      \"description\": \"Kniha a čítačka\",\n      \"page\": 1,\n      \"quote\": \"Kniha a čítačka | 119,50 | EUR\"\n    },\n    {\n      \"amount\": \"174,42\",\n      \"currency\": \"EUR\",\n      \"description\": \"Notebook\",\n      \"page\": 1,\n      \"quote\": \"Notebook | 174,42 | EUR\"\n    },\n    {\n      \"amount\": \"882,19\",\n      \"currency\": \"EUR\",\n      \"description\": \"Oblečenie (nohavice, tričká)\",\n      \"page\": 1,\n      \"quote\": \"Oblečenie (nohavice, tričká) | 882,19 | EUR\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Madarsko\",\n    \"value\": \"Madarsko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"19. 4. 2026\",\n    \"value\": \"19. 4. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"záznam. Na letisku v Hévíze som stratil/a batožinu. Letecká spoločnost batožinu stratila, na letisku som spísal/a\",\n    \"value\": \"záznam. Na letisku v Hévíze som stratil/a batožinu. Letecká spoločnost batožinu stratila, na letisku som spísal/a\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Héviz, Madarsko\",\n    \"value\": \"Héviz, Madarsko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 869 61 Čaňa\",\n    \"value\": \"<ADDRESS_1>, 869 61 Čaňa\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP30182766\",\n    \"value\": \"CP30182766\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 4. 5. 2026\",\n    \"value\": \"4. 5. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"22. 4.2026\",\n    \"value\": \"22. 4.2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"13. 4. 2026\",\n    \"value\": \"13. 4. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3585,
+   "tokens_out": 965,
+   "latency_ms": 30545
+  },
+  "cached": false
+ }
+}

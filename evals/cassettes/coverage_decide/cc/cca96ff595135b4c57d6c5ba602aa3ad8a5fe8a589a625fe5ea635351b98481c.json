@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A8.1\"], \"rationale\": \"The claim involves stolen clothing (tríčka, nohavice) from a vehicle in Rimini, reported to the police. Clause A7.1 covers loss of luggage due to theft. Clause A8.1 covers necessary clothing expenses when luggage is delayed, which applies here as the luggage was stolen (effectively delayed). The police report confirms the theft, fulfilling the requirement under A7.4. The items are not excluded under A7.5 or A7.6.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 712,
+   "tokens_out": 130,
+   "latency_ms": 8111
+  },
+  "cached": false
+ }
+}

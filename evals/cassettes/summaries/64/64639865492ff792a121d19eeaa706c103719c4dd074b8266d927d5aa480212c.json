@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Topánky sú preplatené vo výške 103,31 EUR na základe článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nMobilný telefón je preplatený vo výške 300,00 EUR na základe článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nCestovný kufor je preplatený vo výške 149,46 EUR na základe článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nCelková suma preplatená poisťovňou činí 552,77 EUR, z čoho 20,00 EUR predstavuje spolucastenie poisteného.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 712,
+   "tokens_out": 234,
+   "latency_ms": 4241
+  },
+  "cached": false
+ }
+}

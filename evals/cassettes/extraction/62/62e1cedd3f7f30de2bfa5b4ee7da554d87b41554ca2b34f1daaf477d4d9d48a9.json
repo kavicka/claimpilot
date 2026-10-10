@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"complainant_name\": {\"page\": 1, \"quote\": \"<PERSON_1>, nato/a il 16/05/1980 | DOCUMENTO <ID_1> \",\"value\": \"<PERSON_1>\"},\n  \"incident_date\": {\"page\": 1, \"quote\": \"DATA DEL FATTO 28/01/2026\",\"value\": \"28/01/2026\"},\n  \"incident_description\": {\"page\": 1, \"quote\": \"L'incidente è avvenuto in una zona vicino alla spiaggia di Rimini, dove un veicolo era parcheggiato e bloccato. Gli oggetti sono stati rubati da un uomo che ha forzato la serratura del portellone posteriore. L'individuo ha poi lasciato la scena senza lasciare tracce.\",\"value\": \"L'incidente è avvenuto in una zona vicino alla spiaggia di Rimini, dove un veicolo era parcheggiato e bloccato. Gli oggetti sono stati rubati da un uomo che ha forzato la serratura del portellone posteriore. L'individuo ha poi lasciato la scena senza lasciare tracce.\"},\n  \"incident_place\": {\"page\": 1, \"quote\": \"LUOGO DEL FATTO Rimini\",\"value\": \"Rimini\"},\n  \"police_station\": {\"page\": 1, \"quote\": \"Stazione Carabinieri di Rimini\",\"value\": \"Stazione Carabinieri di Rimini\"},\n  \"report_date\": {\"page\": 1, \"quote\": \"DATA DEL FATTO 28/01/2026\",\"value\": \"28/01/2026\"},\n  \"report_number\": {\"page\": 1, \"quote\": \"Verbale di denuncia\",\"value\": null},\n  \"stolen_items\": [\n    {\n      \"description\": \"Lettore di e-book\",\n      \"page\": 1,\n      \"quote\": \"1 | Lettore di e-book | 171,31 EUR\",\n      \"value\": \"171,31 EUR\"\n    },\n    {\n      \"description\": \"Giacca invernale\",\n      \"page\": 1,\n      \"quote\": \"2 | Giacca invernale | 129,20 EUR\",\n      \"value\": \"129,20 EUR\"\n    },\n    {\n      \"description\": \"Telefono cellulare\",\n      \"page\": 1,\n      \"quote\": \"3 | Telefono cellulare | 817,49 EUR\",\n      \"value\": \"817,49 EUR\"\n    },\n    {\n      \"description\": \"Abbigliamento (pantaloni, camicie)\",\n      \"page\": 1,\n      \"quote\": \"4 | Abbigliamento (pantaloni, camicie) | 145,74 EUR\",\n      \"value\": \"145,74 EUR\"\n    },\n    {\n      \"description\": \"Articoli da toilette\",\n      \"page\": 1,\n      \"quote\": \"5 | Articoli da toilette | 52,49 EUR\",\n      \"value\": \"52,49 EUR\"\n    }\n  ],\n  \"vehicle_plate\": {\"page\": 1, \"quote\": \"TARGA <PLATE_1>\",\"value\": \"<PLATE_1>\"}\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 695,
+   "tokens_out": 767,
+   "latency_ms": 14864
+  },
+  "cached": false
+ }
+}

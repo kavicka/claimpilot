@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"X Liečebné náklady Úraz Batožina Oneskorenie batožiny\",\n    \"values\": [\n      \"Liečebné náklady\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"252,45\",\n      \"currency\": \"EUR\",\n      \"description\": \"Liečebné náklady - Andrews International Medical Centre\",\n      \"page\": 1,\n      \"quote\": \"Liečebné náklady - Andrews International Medical Centre | 252,45 | EUR\"\n    },\n    {\n      \"amount\": \"40,94\",\n      \"currency\": \"EUR\",\n      \"description\": \"Lieky z lekárne\",\n      \"page\": 1,\n      \"quote\": \"Lieky z lekárne | 40,94 | EUR\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Grécko\",\n    \"value\": \"Grécko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"18. 4. 2026\",\n    \"value\": \"18. 4. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Podvrtnutie členkového kĺbu sa mi stalo v Chanie, Grécko. Udalosť sa diala v prírodnom prostredí. Po nehode som sa okamžite obrátil na miestne zdravotnícke zariadenie.\",\n    \"value\": \"Podvrtnutie členkového kĺbu sa mi stalo v Chanie, Grécko. Udalosť sa diala v prírodnom prostredí. Po nehode som sa okamžite obrátil na miestne zdravotnícke zariadenie.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Chania, Grécko\",\n    \"value\": \"Chania, Grécko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 963 47 Jasová\",\n    \"value\": \"<ADDRESS_1>, 963 47 Jasová\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP26944487\",\n    \"value\": \"CP26944487\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 25. 4. 2026\",\n    \"value\": \"25. 4. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"20. 4. 2026\",\n    \"value\": \"20. 4. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"13. 4. 2026\",\n    \"value\": \"13. 4. 2026\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3599,
+   "tokens_out": 922,
+   "latency_ms": 17175
+  },
+  "cached": false
+ }
+}

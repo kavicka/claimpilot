@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady na Poliklinike Licul vo výške 720,85 EUR nie sú preplatené, pretože podľa článku 3 ods. 2 VPP sú náklady na liečbu v ambulantných zariadeniach, ktoré nie sú zmluvnými poskytovateľmi, výnimkou z poistenia.  \nLieky z lekárne vo výške 35,03 EUR nie sú preplatené, pretože podľa článku 3 ods. 2 VPP sú náklady na lieky výnimkou z poistenia, ak nie sú vydané na základe lekárskeho predpisu poskytovateľa zmluvného s poisťovňou.  \nCelková suma uplatnená vo výške 755,88 EUR nie je preplatená, pretože žiadna z položiek nie je podľa článku 3 ods. 2 VPP zahrnutá medzi plnené náklady.  \nPlnenie vo výške 0,00 EUR je v súlade s podmienkami poistenia a rozhodnutím poisťovne.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 593,
+   "tokens_out": 325,
+   "latency_ms": 5836
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 27. 6. 2026 v súvislosti s liečebnými nákladmi v Poliklinike Licul a nákupom liekov z lekárne. Celková uhradená suma činila 755,88 EUR, z čoho 720,85 EUR na liečbu a 35,03 EUR na lieky. Rozhodnutie o plnení je zamietnuté, pretože náklady nepodliehajú poistnej ochrane podľa článku 3 ods. 2 VPP, ktorý vylučuje poistné pokrytie pre náklady na liečbu v nemocniciach a lekárňach, ak nie sú vykonané v rámci zdravotnej starostlivosti poskytovanej v súlade s účelom poistnej zmluvy. Rizikové signály a chýbajúce informácie nie sú zaznamenané. Poistné plnenie je odmietnuté, suma plnenia je 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 621,
+   "tokens_out": 295,
+   "latency_ms": 10641
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Ospedale Civile Schiavone vo výške 6 920,28 EUR sú preplatené poisťovňou podľa článku 4 ods. 1 a článku 4 ods. 2 zákona o poisťovaní osobných rizík. Suma preplatenia činí 6 870,28 EUR, čo zodpovedá výške nákladov po odpočítaní spoluceny vo výške 50,00 EUR. Spolucena je podľa podmienok poistenia nezahrnutá do plnenia.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 483,
+   "tokens_out": 173,
+   "latency_ms": 3360
+  },
+  "cached": false
+ }
+}

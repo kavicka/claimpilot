@@ -1,0 +1,19 @@
+{
+ "step": "judge",
+ "prompt_id": "summaries/judge",
+ "prompt_hash": "a14837a638786f48a97a5930f8a3a86558d06fc9eb071acda8f07687ed318ecb",
+ "model": "ollama:gemma3:12b",
+ "response": {
+  "text": "{\n  \"completeness\": 4,\n  \"tone\": 5,\n  \"no_overpromise\": 5,\n  \"note\": \"The completeness score is slightly lower because the text doesn't explicitly state *why* the claim was covered, only that it *is* covered, lacking a brief explanation based on the referenced article.\"\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "gemma3:12b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 471,
+   "tokens_out": 78,
+   "latency_ms": 5025
+  },
+  "cached": false
+ }
+}

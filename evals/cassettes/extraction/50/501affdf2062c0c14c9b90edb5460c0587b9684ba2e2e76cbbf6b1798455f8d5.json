@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Pacient je dispenzarizovaný pre diskopatiu L4/L5 od marca 2025, opakovane liečený pre bolesti chrbta.\",\n    \"value\": \"Pacient je dispenzarizovaný pre diskopatiu L4/L5 od marca 2025, opakovane liečený pre bolesti chrbta.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Lumbálna diskopatia L4/L5 s koreňovým dráždením\",\n    \"value\": \"Lumbálna diskopatia L4/L5 s koreňovým dráždením\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Kolbasov, Slovenská republika\",\n    \"value\": \"Slovenská republika\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Ambulancia všeobecného lekára Martinecová Kolbasov, Slovenská republika\",\n    \"value\": \"Ambulancia všeobecného lekára Martinecová Kolbasov\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"MKCH-10 M51.2\",\n    \"value\": \"M51.2\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"NAR. 23. 2. 1969\",\n    \"value\": \"23. 2. 1969\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Lekár: MUDr. <PERSON_2>\",\n    \"value\": \"MUDr. <PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Pozorovanie: Pacient prezentoval bolest v spodnej časti chrbta, radikulárnu bolest po pravej strane, zhoršenú pri pohybe. Pri fyzikálnom vyšetrení bola pozorovaná znižená sily v svalu pohybovom šlape, pozitivne známky Lasegueho a Slump testu. Nepritomnost neurologických deficitov. Diagnostické vyšetrenie MRI lumbosakrálnych segmentov ukázalo degeneratívne zmeny disku L4/L5 so stlačenim žilných štruktúr. Uvedené nálezy potvrzujú diagnostiku. Zákroky: konzervatívna liečba s ciel'om zniżit zátaž na disky, účinná analgetika, fyzikálna terapia a zavedenie postihnutých svalov. Odporúča sa opakovanie vyšetrenia po 6 týždňoch a v prípade nedostatočného výsledku zvážit dalšie opcie.\",\n    \"value\": \"Pozorovanie: Pacient prezentoval bolest v spodnej časti chrbta, radikulárnu bolest po pravej strane, zhoršenú pri pohybe. Pri fyzikálnom vyšetrení bola pozorovaná znižená sily v svalu pohybovom šlape, pozitivne známky Lasegueho a Slump testu. Nepritomnost neurologických deficitov. Diagnostické vyšetrenie MRI lumbosakrálnych segmentov ukázalo degeneratívne zmeny disku L4/L5 so stlačenim žilných štruktúr. Uvedené nálezy potvrzujú diagnostiku. Zákroky: konzervatívna liečba s ciel'om zniżit zátaž na disky, účinná analgetika, fyzikálna terapia a zavedenie postihnutých svalov. Odporúča sa opakovanie vyšetrenia po 6 týždňoch a v prípade nedostatočného výsledku zvážit dalšie opcie.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"DÁTUM VYSETRENIA 11.7.2026\",\n    \"value\": \"11.7.2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3333,
+   "tokens_out": 1182,
+   "latency_ms": 30211
+  },
+  "cached": false
+ }
+}

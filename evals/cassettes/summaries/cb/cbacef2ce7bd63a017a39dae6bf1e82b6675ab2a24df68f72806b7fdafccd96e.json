@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/group_de",
+ "prompt_hash": "6e81862d38b95e09d16edb12f4ac03e4a4a16ab2a4da3ab29ac3ce23d368990d",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Produkt: Cestovné poistenie Standard. Ereignis: Gepäckverlust am 13. 5. 2026. Entscheidung: Abdeckung der entstandenen Kosten. Auszahlungsbetrag: 26,39 EUR. Maßgebliche Artikel der Bedingungen (VPP): čl. 8 ods. 1.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 433,
+   "tokens_out": 89,
+   "latency_ms": 2009
+  },
+  "cached": false
+ }
+}

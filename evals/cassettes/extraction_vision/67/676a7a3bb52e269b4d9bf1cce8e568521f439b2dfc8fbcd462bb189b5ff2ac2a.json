@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"facility_name\": {\"value\": \"Medizinisches Zentrum Werner\", \"quote\": \"Medizinisches Zentrum Werner\", \"page\": 1}, \"facility_country\": {\"value\": \"Österreich\", \"quote\": \"Schladming, Österreich\", \"page\": 1}, \"patient_name\": {\"value\": \"Zina Janečeková\", \"quote\": \"Zina Janečeková\", \"page\": 1}, \"patient_birth_date\": {\"value\": \"22.11.1963\", \"quote\": \"GEB. 22.11.1963\", \"page\": 1}, \"visit_date\": {\"value\": \"17.01.2026\", \"quote\": \"17.01.2026\", \"page\": 1}, \"discharge_date\": {\"value\": null, \"quote\": null, \"page\": 1}, \"diagnosis\": {\"value\": \"Akute Gastroenteritis\", \"quote\": \"Akute Gastroenteritis\", \"page\": 1}, \"icd10_code\": {\"value\": \"A09\", \"quote\": \"A09\", \"page\": 1}, \"anamnesis\": {\"value\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\", \"quote\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\", \"page\": 1}, \"treatment\": {\"value\": \"Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen.\", \"quote\": \"Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit und intermittierende Durchfälle. Die Laboruntersuchung des Stuhls ergab keine bakteriellen Erreger, jedoch eine leichte Entzündungsreaktion. Ein Abstrich wurde durchgeführt, der keine pathogene Flora nachwies. Der Patient erhielt eine Flüssigkeitszufuhr über den Trinkweg und Medikamente zur Linderung der Symptome. Es wird empfohlen, bei anhaltenden Beschwerden oder Verschlechterung der allgemeinen Verfassung einen Arzt aufzusuchen.\", \"page\": 1}, \"physician_name\": {\"value\": \"Philippa Steinberger\", \"quote\": \"Behandelnde/r Ärztin/Arzt: Philippa Steinberger\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2086,
+   "tokens_out": 675,
+   "latency_ms": 26188
+  },
+  "cached": false
+ }
+}

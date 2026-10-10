@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for an acute illness (acute upper respiratory tract infection) that occurred during a trip. Clause A4.1 explicitly covers 'reasonable and necessary costs for outpatient care, hospitalization, and medications prescribed by a doctor, if incurred as a result of an acute illness or injury during the trip.' The evidence confirms the acute nature of the condition and the treatment received, which aligns with the coverage provided under this clause. No exclusions apply, as the condition is not pre-existing, not related to alcohol, extreme sports, or other excluded events.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1227,
+   "tokens_out": 138,
+   "latency_ms": 13604
+  },
+  "cached": false
+ }
+}

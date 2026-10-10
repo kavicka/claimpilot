@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "18. 5. 2026 došlo k liečebnému výkonu v Poliklinike Ćurić s uplatnenou sumou 321,10 EUR, ktorá bola v rámci poistnej udalosti uznaná ako pokrytá. Dôvodom je splnenie podmienok uvedených v článku 4 ods. 1 zákona o poistení, ktorý stanovuje pokrytie liečebných nákladov v súlade s poistným plánom. V prípade sa nezachytáva žiadne závažné rizikové signály, avšak je zaznamenaný signál „early_claim“, čo môže indikovať riziko nepravdivého vyplnenia, avšak bez dôkazov o podvodnej činnosti. Chýbajúce informácie nie sú zaznamenané. Odporúča sa plnenie vo výške 321,10 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 487,
+   "tokens_out": 267,
+   "latency_ms": 4578
+  },
+  "cached": false
+ }
+}

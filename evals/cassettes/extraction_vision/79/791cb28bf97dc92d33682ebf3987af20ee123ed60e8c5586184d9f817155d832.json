@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP59251188\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP59251188\", \"page\": 1}, \"insured_name\": {\"value\": \"Dobromila Ružičková\", \"quote\": \"MENO A PRIEZVISKO Dobromila Ružičková\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"866127/8945\", \"quote\": \"RODNÉ ČÍSLO 866127/8945\", \"page\": 1}, \"insured_address\": {\"value\": \"Pajštúnska 4, 808 59 Pusté Sady\", \"quote\": \"ADRESA Pajštúnska 4, 808 59 Pusté Sady\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 937 962 132\", \"quote\": \"TELEFÓN +421 937 962 132\", \"page\": 1}, \"insured_email\": {\"value\": \"dobromila.ruzickova72@example.com\", \"quote\": \"E-MAIL dobromila.ruzickova72@example.com\", \"page\": 1}, \"iban\": {\"value\": \"SK48 6500 0000 0024 6385 4004\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK48 6500 0000 0024 6385 4004\", \"page\": 1}, \"destination_country\": {\"value\": \"Chorvátsko\", \"quote\": \"KRAJINA CESTY Chorvátsko\", \"page\": 1}, \"trip_start\": {\"value\": \"19. 7. 2026\", \"quote\": \"CESTA OD 19. 7. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"25. 7. 2026\", \"quote\": \"CESTA DO 25. 7. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"23. 7. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 23. 7. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Makarska, Chorvátsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Makarska, Chorvátsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Makarske, Chorvátsko, kde som utrpel otras mozgu. Po udalosti som sa zdržiaval v nemocnici a potreboval som lekárske vyšetrenie. Poistné zdravotné starostlivosti som si vyžiadal v súvislosti s touto udalosťou.\", \"quote\": \"POPIS UDALOSTI Bol som v Makarske, Chorvátsko, kde som utrpel otras mozgu. Po udalosti som sa zdržiaval v nemocnici a potreboval som lekárske vyšetrenie. Poistné zdravotné starostlivosti som si vyžiadal v súvislosti s touto udalosťou.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Poliklinika Ivšić\", \"amount\": \"821,10\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Poliklinika Ivšić 821,10 EUR\", \"page\": 1}, {\"description\": \"Liekky z lekárne\", \"amount\": \"28,90\", \"currency\": \"EUR\", \"quote\": \"Liekky z lekárne 28,90 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"27. 7. 2026\", \"quote\": \"Dátum: 27. 7. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1094,
+   "latency_ms": 36616
+  },
+  "cached": false
+ }
+}

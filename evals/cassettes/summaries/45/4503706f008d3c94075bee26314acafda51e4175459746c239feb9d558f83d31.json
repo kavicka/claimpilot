@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 26. 1. 2026 pri návšteve nemocnice Landesklinikum Gindl. Uplatnená suma za liečebné náklady činí 7 247,08 EUR, z čoho je plnená suma 7 197,08 EUR, spoluúčasť 50,00 EUR. Událosť je pokrytá podľa článku 4 ods. 1 a článku 4 ods. 2 z VPP. Náklady sú v súlade s podmienkami poistného plánu, nezaznamenali sa rizikové signály ani chýbajúce informácie. Odporúčanie: plnenie vo výške 7 197,08 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 562,
+   "tokens_out": 219,
+   "latency_ms": 3725
+  },
+  "cached": false
+ }
+}

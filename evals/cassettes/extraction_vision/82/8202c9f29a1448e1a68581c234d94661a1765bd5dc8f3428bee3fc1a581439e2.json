@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP93955206\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP93955206\", \"page\": 1}, \"insured_name\": {\"value\": \"Nataša Pavúková\", \"quote\": \"MENO A PRIEZVISKO Nataša Pavúková\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"886101/1049\", \"quote\": \"RODNÉ ČÍSLO 886101/1049\", \"page\": 1}, \"insured_address\": {\"value\": \"Smikova 977, 900 12 Zbudza\", \"quote\": \"ADRESA Smikova 977, 900 12 Zbudza\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 908 111 635\", \"quote\": \"TELEFÓN +421 908 111 635\", \"page\": 1}, \"insured_email\": {\"value\": \"natasa.pavukova77@posta.example.sk\", \"quote\": \"E-MAIL natasa.pavukova77@posta.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK26 0200 0000 0038 2132 1366\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK26 0200 0000 0038 2132 1366\", \"page\": 1}, \"destination_country\": {\"value\": \"Nemecko\", \"quote\": \"KRAJINA CESTY Nemecko\", \"page\": 1}, \"trip_start\": {\"value\": \"30. 5. 2026\", \"quote\": \"CESTA OD 30. 5. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"13. 6. 2026\", \"quote\": \"CESTA DO 13. 6. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"12. 6. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 12. 6. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Garmisch-Partenkirchen, Nemecko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Garmisch-Partenkirchen, Nemecko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady □ Úraz □ Batožina □ Oneskorenie batožiny □ Stormo cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Garmisch-Partenkirchen, Nemecko, a skór alebo neskór som sa zranil hlavou. Po zranení som sa cítil zle a musel som sa zdravotne vyšetriť. Diagnóza bola otok mozgu.\", \"quote\": \"POPIS UDALOSTI Bol som v Garmisch-Partenkirchen, Nemecko, a skór alebo neskór som sa zranil hlavou. Po zranení som sa cítil zle a musel som sa zdravotne vyšetriť. Diagnóza bola otok mozgu.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Medizinisches Zentrum Röhricht\", \"amount\": \"784,57\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Medizinisches Zentrum Röhricht 784,57 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"20. 6. 2026\", \"quote\": \"Dátum: 20. 6. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1002,
+   "latency_ms": 36060
+  },
+  "cached": false
+ }
+}

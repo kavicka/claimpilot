@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"FT-2026-70176\", \"quote\": \"Fattura n. FT-2026-70176\", \"page\": 1}, \"issue_date\": {\"value\": \"28/03/2026\", \"quote\": \"Data: 28/03/2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Poliambulatorio Iannelli\", \"quote\": \"Poliambulatorio Iannelli\", \"page\": 1}, \"provider_country\": {\"value\": \"Italy\", \"quote\": \"Rimini, Italia\", \"page\": 1}, \"patient_name\": {\"value\": \"Antónia Dušeková\", \"quote\": \"Antónia Dušeková, nato/a il 15/07/1957\", \"page\": 1}, \"service_date\": {\"value\": \"27/03/2026\", \"quote\": \"DATA PRESTAZIONE 27/03/2026\", \"page\": 1}, \"currency\": {\"value\": \"EUR\", \"quote\": \"225,34 EUR\", \"page\": 1}, \"line_items\": [{\"description\": \"Visita ambulatoriale\", \"amount\": \"112,62\", \"quote\": \"1 Visita ambulatoriale 112,62\", \"page\": 1}, {\"description\": \"Esami di laboratorio\", \"amount\": \"112,72\", \"quote\": \"2 Esami di laboratorio 112,72\", \"page\": 1}], \"total\": {\"value\": \"225,34\", \"quote\": \"Totale da pagare 225,34 EUR\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 411,
+   "latency_ms": 23653
+  },
+  "cached": false
+ }
+}

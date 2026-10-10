@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "19. 4. 2026 došlo k stratám osobného batožinu poistného osoby <PERSON_1> počas cesty. Poistné pokrytie sa vzťahuje na základe článku 7 ods. 1 a 7 ods. 2 VPP. Uplatnené položky: lyžiarske okuliare (119,50 EUR), kniha a čítačka (174,42 EUR), notebook (882,19 EUR), oblečenie (161,57 EUR). Poistné plnenie je odporúčané vo výške 881,07 EUR, z toho 425,58 EUR za notebook, čo zodpovedá 48 % hodnoty. Dôvod plnenia je splnenie podmienok článku 7 ods. 1 a 7 ods. 2 VPP. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Plnenie je odporúčané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 848,
+   "tokens_out": 284,
+   "latency_ms": 11023
+  },
+  "cached": false
+ }
+}

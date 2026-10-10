@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"invoice_number\": {\n    \"value\": \"INV-2026-86649\",\n    \"quote\": \"Invoice No. INV-2026-86649\",\n    \"page\": 1\n  },\n  \"issue_date\": {\n    \"value\": \"05/06/2026\",\n    \"quote\": \"Date: 05/06/2026\",\n    \"page\": 1\n  },\n  \"provider_name\": {\n    \"value\": \"Farkas International Medical Centre\",\n    \"quote\": \"Farkas International Medical Centre\",\n    \"page\": 1\n  },\n  \"provider_country\": {\n    \"value\": \"Hungary\",\n    \"quote\": \"Hévíz, Hungary\",\n    \"page\": 1\n  },\n  \"patient_name\": {\n    \"value\": \"<PERSON_1>\",\n    \"quote\": \"PATIENT <PERSON_1>, DOB 16/09/1959 | DATE OF SERVICE 03/06/2026\",\n    \"page\": 1\n  },\n  \"service_date\": {\n    \"value\": \"03/06/2026\",\n    \"quote\": \"PATIENT <PERSON_1>, DOB 16/09/1959 | DATE OF SERVICE 03/06/2026\",\n    \"page\": 1\n  },\n  \"currency\": {\n    \"value\": \"Ft\",\n    \"quote\": \"# | Description | Amount (Ft)\",\n    \"page\": 1\n  },\n  \"line_items\": [\n    {\n      \"description\": \"Dental X-ray\",\n      \"amount\": \"32,860.00\",\n      \"quote\": \"1 | Dental X-ray | 32,860.00\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Root canal treatment\",\n      \"amount\": \"74,094.00\",\n      \"quote\": \"2 | Root canal treatment | 74,094.00\",\n      \"page\": 1\n    }\n  ],\n  \"total\": {\n    \"value\": \"106,954.00\",\n    \"quote\": \"Total due | 106,954.00 Ft\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1623,
+   "tokens_out": 527,
+   "latency_ms": 30215
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Dňa 21. 7. 2026 došlo k úrazu poistného osoby <PERSON_1> počas cesty v rámci poistného účelu. Poistná udalosť sa týkala liečebných nákladov na účtovníctve Medizinisches Zentrum Frei vo výške 560,19 CHF a jednorazového plnenia za zlomeninu, ktoré neboli pokryté podľa poistnej zmluvy. Rozhodnutie o neplatení je založené na článku 11 ods. 3 VPP, ktorý vylučuje pokrytie pre úrazy spôsobené extrémnymi športmi. Rizikový signál „exclusion_extreme_sport“ potvrdzuje, že udalosť je v súlade s výnimkou. Chýbajúce informácie nie sú zaznamenané. Plnenie je odmietnuté, suma plnenia je 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 584,
+   "tokens_out": 279,
+   "latency_ms": 10622
+  },
+  "cached": false
+ }
+}

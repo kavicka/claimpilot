@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Iznos (HUR)\",\n    \"value\": \"HUR\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": \"Račun br. R-2026-46309\",\n    \"value\": \"R-2026-46309\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Datum: 21.08.2026.\",\n    \"value\": \"21.08.2026.\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"59,02\",\n      \"description\": \"Ambulantni pregled\",\n      \"page\": 1,\n      \"quote\": \"1\\nAmbulantni pregled\\n59,02\"\n    },\n    {\n      \"amount\": \"113.69\",\n      \"description\": \"Infuzijska terapija\",\n      \"page\": 1,\n      \"quote\": \"2\\nInfuzijska terapija\\n113.69\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PACIJENT\\n<PERSON_1>, roden/a 05.11.2006.\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": \"Split, Hrvatska\",\n    \"value\": \"Hrvatska\"\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliklinika Tomičié\",\n    \"value\": \"Poliklinika Tomičié\"\n  },\n  \"service_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Ukupno za platiti\\n172,71 EUR\",\n    \"value\": \"172,71\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1851,
+   "tokens_out": 468,
+   "latency_ms": 8002
+  },
+  "cached": false
+ }
+}

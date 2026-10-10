@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 7. 4. 2026 došlo v Merino International Medical Centre k liečebným nákladom vo výške 849,93 EUR, ktoré sú podľa článku 4 ods. 1 VPP pokryté. Poistné plnenie je odporúčané vo výške 799,93 EUR súčasťou poistného plnenia, pričom poistný účastník uhradil 50,00 EUR. Rizikový signál date_inconsistency naznačuje nesúlad dátumu udalosti s časovým rámcom poistnej ochrany. Chýbajúce informácie nie sú zaznamenané. Plnenie je odporúčané s ohľadom na platné ustanovenia VPP a potvrdené liečebné účty.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 547,
+   "tokens_out": 236,
+   "latency_ms": 3947
+  },
+  "cached": false
+ }
+}

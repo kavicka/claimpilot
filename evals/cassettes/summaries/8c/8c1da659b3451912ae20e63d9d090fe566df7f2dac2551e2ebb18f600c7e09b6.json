@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Dňa 25. 7. 2026 došlo k stratám cestovného batožinu poistného. Poistenec uplatnil náklady na nákup nevyhnutných vecí v sumách 2 360,08 TRY a 1 673,08 TRY, celkovo 4 033,16 TRY, čo zodpovedá 88,06 EUR. Udalosť je pokrytá podľa článku 8 ods. 1 zákona o poistení, ktorý stanovuje plnenie nákladov na základný životný minimum v prípade straty batožiny. Rizikové signály nie sú identifikované. Chýbajúce informácie nie sú zaznamenané. Odporúča sa plnenie v sume 88,06 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 566,
+   "tokens_out": 235,
+   "latency_ms": 4012
+  },
+  "cached": false
+ }
+}

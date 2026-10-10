@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"receipt_number\": {\"value\": \"3847748696\", \"quote\": \"Receipt No. 3847748696\", \"page\": 1}, \"issue_date\": {\"value\": \"16/03/2026 09:53\", \"quote\": \"16/03/2026 09:53\", \"page\": 1}, \"pharmacy_name\": {\"value\": \"Kiss Pharmacy\", \"quote\": \"Kiss Pharmacy\", \"page\": 1}, \"currency\": {\"value\": \"Ft\", \"quote\": \"Total due Ft\", \"page\": 1}, \"line_items\": [{\"description\": \"Paracetamol 500mg\", \"amount\": \"1,789.00\", \"quote\": \"Paracetamol 500mg 1,789.00\", \"page\": 1}, {\"description\": \"Elastic bandage\", \"amount\": \"3,425.00\", \"quote\": \"Elastic bandage 3,425.00\", \"page\": 1}, {\"description\": \"Amoxicillin 1g\", \"amount\": \"5,400.00\", \"quote\": \"Amoxicillin 1g 5,400.00\", \"page\": 1}], \"total\": {\"value\": \"10,614.00\", \"quote\": \"Total due Ft 10,614.00\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1298,
+   "tokens_out": 345,
+   "latency_ms": 13467
+  },
+  "cached": false
+ }
+}

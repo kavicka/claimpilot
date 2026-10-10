@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for an injury (ankle sprain) that occurred during a walk in Split, Croatia. The medical report confirms the injury was acute and required treatment, which aligns with clause A4.1, which covers necessary and appropriate medical expenses resulting from an acute illness or injury during the trip. No exclusions apply, as the injury was not pre-existing, not related to alcohol or extreme sports (clause A11.3 is not applicable here because the injury occurred during a normal activity, not an extreme sport).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1390,
+   "tokens_out": 133,
+   "latency_ms": 11774
+  },
+  "cached": false
+ }
+}

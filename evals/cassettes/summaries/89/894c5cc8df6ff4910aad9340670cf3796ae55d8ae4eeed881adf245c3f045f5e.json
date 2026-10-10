@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/group_de",
+ "prompt_hash": "6e81862d38b95e09d16edb12f4ac03e4a4a16ab2a4da3ab29ac3ce23d368990d",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Produkt: Cestovné poistenie Premium. Ereignis: Gepäckschaden am 19.4.2026. Entscheidung: Abdeckung für alle Gegenstände. Auszahlungsbetrag: 881,07 EUR. Maßgebliche Artikel der Bedingungen: čl. 7 ods. 1, čl. 7 ods. 2. Gegenstände: Lyžiarske okuliare (119,50 EUR), Kniha a čítačka (174,42 EUR), Notebook (425,58 EUR), Oblečenie (161,57 EUR). Summe der beantragten Leistung: 1 337,68 EUR. Spoluucast: 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 749,
+   "tokens_out": 190,
+   "latency_ms": 4134
+  },
+  "cached": false
+ }
+}

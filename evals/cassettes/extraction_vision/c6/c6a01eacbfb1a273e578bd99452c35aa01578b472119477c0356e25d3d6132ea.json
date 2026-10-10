@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP11646234\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP11646234\", \"page\": 1}, \"insured_name\": {\"value\": \"Zdenka Hlaváčová\", \"quote\": \"MENO A PRIEZVISKO Zdenka Hlaváčová\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"725107/7867\", \"quote\": \"RODNÉ ČÍSLO 725107/7867\", \"page\": 1}, \"insured_address\": {\"value\": \"Botanická 184, 828 10 Sabínov\", \"quote\": \"ADRESA Botanická 184, 828 10 Sabínov\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 928 179 572\", \"quote\": \"TELEFÓN +421 928 179 572\", \"page\": 1}, \"insured_email\": {\"value\": \"zdenka.hlavacova14@posta.example.sk\", \"quote\": \"E-MAIL zdenka.hlavacova14@posta.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK06 5600 6871 4675 4727 6750\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK06 5600 6871 4675 4727 6750\", \"page\": 1}, \"destination_country\": {\"value\": \"Taliansko\", \"quote\": \"KRAJINA CESTY Taliansko\", \"page\": 1}, \"trip_start\": {\"value\": \"15. 8. 2026\", \"quote\": \"CESTA OD 15. 8. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"2. 9. 2026\", \"quote\": \"CESTA DO 2. 9. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"29. 8. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 29. 8. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Roma, Taliansko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Roma, Taliansko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady □ Úraz □ Batožina □ Oneskorenie batožiny □ Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Romách, v Taliansku, kde sa mi vyvinula akútna infekcia horných dýchacích ciest. Preto som sa obrátil na miestne zdravotnícke zariadenie na vyšetrenie a liečbu.\", \"quote\": \"POPIS UDALOSTI Bol som v Romách, v Taliansku, kde sa mi vyvinula akútna infekcia horných dýchacích ciest. Preto som sa obrátil na miestne zdravotnícke zariadenie na vyšetrenie a liečbu.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Poliambulatorio Sagnelli\", \"amount\": \"560,96\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Poliambulatorio Sagnelli\", \"page\": 1}, {\"description\": \"Liekky z lékárne\", \"amount\": \"41,70\", \"currency\": \"EUR\", \"quote\": \"Liekky z lékárne\", \"page\": 1}], \"signature_date\": {\"value\": \"5. 9. 2026\", \"quote\": \"Dátum: 5. 9. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1022,
+   "latency_ms": 39585
+  },
+  "cached": false
+ }
+}

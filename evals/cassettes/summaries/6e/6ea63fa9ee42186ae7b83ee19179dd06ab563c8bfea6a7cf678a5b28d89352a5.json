@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 27. 3. 2026 v súvislosti s liečebnými nákladmi na Poliambulatorio Iannelli, ktoré boli účtované vo výške 225,34 EUR. Poistné plnenie je uplatnené podľa článku 4 ods. 1 VPP, ktorý pokrýva liečebné náklady v zahraničí. Poistné plnenie je odporúčané vo výške 175,34 EUR, pričom poistný účastník uhradil 50,00 EUR. Rizikové signály nie sú identifikované. Chýbajúce informácie nie sú zaznamenané. Suma plnenia je v súlade s faktom a výškou spolucastovania.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 542,
+   "tokens_out": 240,
+   "latency_ms": 9920
+  },
+  "cached": false
+ }
+}

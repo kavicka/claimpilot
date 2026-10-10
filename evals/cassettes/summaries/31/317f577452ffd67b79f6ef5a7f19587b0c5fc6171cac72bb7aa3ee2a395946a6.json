@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/group_de",
+ "prompt_hash": "a157a4d1fdc75035a3a7ce98a68f15da6e3793673e2fea51d86535e1978e6bae",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Produkt: Cestovné poistenie Premium. Ereignis: Medizinische Behandlung am 25.7.2026. Entscheidung: Leistungen wurden vollständig übernommen. Auszahlungsbetrag: 1 064,40 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1. Die Gesamtkosten beliefen sich auf 409 061,00 HUF (Behandlung) und 11 376,00 HUF (Medikamente), umgerechnet 1 035,60 EUR und 28,80 EUR. Keine Selbstbeteiligung.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 481,
+   "tokens_out": 165,
+   "latency_ms": 3113
+  },
+  "cached": false
+ }
+}

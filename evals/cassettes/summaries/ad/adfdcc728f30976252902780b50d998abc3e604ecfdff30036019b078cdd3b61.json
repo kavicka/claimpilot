@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 19. 8. 2026 v súvislosti s liečebnými nákladmi v Poliklinike Tomičić a nákupom liekov z lekárne. Uplatnená suma za liečbu bola 172,71 EUR, čo je pokryté podľa čl. 4 ods. 1 VPP. Lieky z lekárne boli čiastočne pokryté vo výške 11,49 EUR, pričom uplatnená suma bola 41,49 EUR. Spolu je plnenie 184,20 EUR, z čoho poistenec uhradil 30,00 EUR. Rizikové signály a chýbajúce informácie nie sú zaznamenané. Plnenie je odporúčané vo výške 184,20 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 564,
+   "tokens_out": 237,
+   "latency_ms": 4090
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP20200074\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP20200074\", \"page\": 1}, \"insured_name\": {\"value\": \"Emília Králová\", \"quote\": \"MENO A PRIEZVYSKO Emília Králová\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"926025/9690\", \"quote\": \"RODNÉ ČÍSLO 926025/9690\", \"page\": 1}, \"insured_address\": {\"value\": \"Dankovského 53, 960 91 Zlatník\", \"quote\": \"ADRESA Dankovského 53, 960 91 Zlatník\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 926 779 436\", \"quote\": \"TELEFÓN +421 926 779 436\", \"page\": 1}, \"insured_email\": {\"value\": \"emilia.kralova59@mail.example.sk\", \"quote\": \"E-MAIL emilia.kralova59@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK02 8330 0000 0096 6214 3091\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK02 8330 0000 0096 6214 3091\", \"page\": 1}, \"destination_country\": {\"value\": \"Chorvátsko\", \"quote\": \"KRAJINA CESTY Chorvátsko\", \"page\": 1}, \"trip_start\": {\"value\": \"27. 6. 2026\", \"quote\": \"CESTA OD 27. 6. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"8. 7. 2026\", \"quote\": \"CESTA DO 8. 7. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"7. 7. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 7. 7. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Split, Chorvátsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Split, Chorvátsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. Diagnozovaný som s zápalom pľúc. Som na liečbe v mieste udalosti.\", \"quote\": \"POPIS UDALOSTI Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. Diagnozovaný som s zápalom pľúc. Som na liečbe v mieste udalosti.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Opča bolnica Alkovič\", \"amount\": \"4 833,46\", \"currency\": \"EUR\", \"quote\": \"Popis Liečebné náklady – Opča bolnica Alkovič\", \"page\": 1}], \"signature_date\": {\"value\": \"13. 7. 2026\", \"quote\": \"Dátum: 13. 7. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 942,
+   "latency_ms": 33042
+  },
+  "cached": false
+ }
+}

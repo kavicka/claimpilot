@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves treatment for an acute condition (otitis media) that occurred during travel. Clause A4.1 explicitly covers the costs of outpatient treatment, including prescribed medications, for acute illnesses or injuries during travel. There is no indication that the condition was pre-existing, planned, or related to any exclusion (e.g., alcohol, extreme sports, or intentional harm). General exclusions (A11) do not apply here.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1335,
+   "tokens_out": 111,
+   "latency_ms": 10689
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"RE-2026-94244\", \"quote\": \"Rechnung Nr. RE-2026-94244\", \"page\": 1}, \"issue_date\": {\"value\": \"29.07.2026\", \"quote\": \"Datum: 29.07.2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Medizinisches Zentrum Hofmann\", \"quote\": \"Medizinisches Zentrum Hofmann\", \"page\": 1}, \"provider_country\": {\"value\": \"Schweiz\", \"quote\": \"Luzern, Schweiz\", \"page\": 1}, \"patient_name\": {\"value\": \"Karina Mariánová, geb. 08.05.1991\", \"quote\": \"Karina Mariánová, geb. 08.05.1991\", \"page\": 1}, \"service_date\": {\"value\": \"27.07.2026\", \"quote\": \"BEHANDLUNGSDATUM 27.07.2026\", \"page\": 1}, \"currency\": {\"value\": \"Fr.\", \"quote\": \"878.17 Fr.\", \"page\": 1}, \"line_items\": [{\"description\": \"Notfallbehandlung\", \"amount\": \"212.19\", \"quote\": \"1 Notfallbehandlung 212.19\", \"page\": 1}, {\"description\": \"Röntgen\", \"amount\": \"104.18\", \"quote\": \"2 Röntgen 104.18\", \"page\": 1}, {\"description\": \"Computertomographie\", \"amount\": \"561.80\", \"quote\": \"3 Computertomographie 561.80\", \"page\": 1}], \"total\": {\"value\": \"878.17\", \"quote\": \"Gesamtbetrag 878.17 Fr.\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 468,
+   "latency_ms": 28306
+  },
+  "cached": false
+ }
+}

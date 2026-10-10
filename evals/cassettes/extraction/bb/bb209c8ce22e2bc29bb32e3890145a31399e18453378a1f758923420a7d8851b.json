@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"No relevant previous illnesses. No regular medication.\",\n    \"value\": \"No relevant previous illnesses. No regular medication.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Sprain of the ankle | S93.4\",\n    \"value\": \"Sprain of the ankle\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Antalya, Türkiye\",\n    \"value\": \"Türkiye\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Akdeniz International Medical Centre\",\n    \"value\": \"Akdeniz International Medical Centre\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Sprain of the ankle | S93.4\",\n    \"value\": \"S93.4\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1> | DOB 10/02/1956\",\n    \"value\": \"10/02/1956\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1> | DOB 10/02/1956\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Attending physician: <PERSON_2> Signature and stamp\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability \",\n    \"value\": \"Physical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"23/03/2026 | DISCHARGE -\",\n    \"value\": \"23/03/2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2059,
+   "tokens_out": 585,
+   "latency_ms": 13679
+  },
+  "cached": false
+ }
+}

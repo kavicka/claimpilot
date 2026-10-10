@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"[X] Liečebné náklady\\nX Úraz\",\n    \"values\": [\n      \"Liečebné náklady\",\n      \"Úraz\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"560,44\",\n      \"currency\": \"EUR\",\n      \"description\": \"Liečebné náklady – Medizinisches Zentrum Ruppert\",\n      \"page\": 1,\n      \"quote\": \"Liečebné náklady – Medizinisches Zentrum Ruppert\\nJednorazové plnenie za zlomeninu Suma\\n560,44\\nMena\\nEUR\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Nemecko\",\n    \"value\": \"Nemecko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"21. 5. 2026\",\n    \"value\": \"21. 5. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Pri lyžovaní na zjazdovke v Münchenu som sa spadol a zlomil si klúčnu kost. Na mieste udalosti som sa snažil o sebaobrany, ale zranenie bolo velké. Som v nemocnici a čakám na dalšie vyšetrenia.\",\n    \"value\": \"Pri lyžovaní na zjazdovke v Münchenu som sa spadol a zlomil si klúčnu kost. Na mieste udalosti som sa snažil o sebaobrany, ale zranenie bolo velké. Som v nemocnici a čakám na dalšie vyšetrenia.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"München, Nemecko\",\n    \"value\": \"München, Nemecko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 915 34 Sielnica\",\n    \"value\": \"<ADDRESS_1>, 915 34 Sielnica\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP55568701\",\n    \"value\": \"CP55568701\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 30. 5. 2026\",\n    \"value\": \"30. 5. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"25. 5. 2026\",\n    \"value\": \"25. 5. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"19.5. 2026\",\n    \"value\": \"19.5. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3607,
+   "tokens_out": 910,
+   "latency_ms": 24190
+  },
+  "cached": false
+ }
+}

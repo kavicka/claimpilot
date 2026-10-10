@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A8.1\"], \"rationale\": \"The claim is for essential purchases due to a significant delay in luggage arrival (35 hours), which falls under the coverage for delayed luggage as defined in clause A8.1. The delay exceeds the 12-hour exclusion in A8.3, and there is no indication of any other exclusion applying (e.g., intentional damage, alcohol, extreme sports, etc.).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 935,
+   "tokens_out": 99,
+   "latency_ms": 10397
+  },
+  "cached": false
+ }
+}

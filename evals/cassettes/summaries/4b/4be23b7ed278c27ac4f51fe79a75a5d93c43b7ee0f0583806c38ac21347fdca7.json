@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Opća bolnica Milotić sú preplatené vo výške 5 984,02 EUR na základe článku 4 ods. 1 a článku 4 ods. 2 zákona o poistení osobných rizík. Uplatnená suma vo výške 6 034,02 EUR zodpovedá faktúre za poskytnuté zdravotné služby. Spolucastenie vo výške 50,00 EUR je podľa poistnej zmluvy nevyplácané, pretože sa jedná o základnú časť zodpovednosti poistenca.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 536,
+   "tokens_out": 187,
+   "latency_ms": 3274
+  },
+  "cached": false
+ }
+}

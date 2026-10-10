@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 20. 3. 2026 v súvislosti s liečebnými nákladmi v Poliklinike Veselá vo výške 5 245,00 CZK, čo zodpovedá 164,08 EUR. Poistný účet je v rámci poistného produktu Cestovné poistenie Basic, kde sa udalosť kvalifikuje ako medical. Podľa článku 4 ods. 1 VPP sú náklady pokryté, avšak súčasne je uvedený rizikový signál date_inconsistency, čo naznačuje nesúlad dátumu udalosti s časovým rámcom poistnej ochrany. Poistný účet je plnený v sume 164,08 EUR, pričom poistný spolucastník zaplatil 50,00 EUR. Chýbajúce informácie nie sú zaznamenané. Odporúčanie: plnenie vo výške 164,08 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 492,
+   "tokens_out": 297,
+   "latency_ms": 4825
+  },
+  "cached": false
+ }
+}

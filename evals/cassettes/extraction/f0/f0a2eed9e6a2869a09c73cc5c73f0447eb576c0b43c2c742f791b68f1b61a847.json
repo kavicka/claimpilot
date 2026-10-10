@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"airline\": {\n    \"page\": 1,\n    \"quote\": \"Tatra Wings\",\n    \"value\": \"Tatra Wings\"\n  },\n  \"arrival_time\": {\n    \"page\": 1,\n    \"quote\": \"FLIGHT / DATE TW5668 / 21 Apr 2026 | ARRIVAL (LOCAL TIME) 21APR26 2005\",\n    \"value\": \"21APR26 2005\"\n  },\n  \"bag_tag\": {\n    \"page\": 1,\n    \"quote\": \"PASSENGER NAME <PERSON_1> MR | BAG TAG TW925981\",\n    \"value\": \"TW925981\"\n  },\n  \"delivery_time\": {\n    \"page\": 1,\n    \"quote\": \"DELIVERED TO PASSENGER 23APR26 0722 | DELIVERY ADDRESS HOTEL ANTALYA\",\n    \"value\": \"23APR26 0722\"\n  },\n  \"file_reference\": {\n    \"page\": 1,\n    \"quote\": \"FILE REFERENCE AYTTW64387 | BAG STATUS DELAYED\",\n    \"value\": \"AYTTW64387\"\n  },\n  \"flight_date\": {\n    \"page\": 1,\n    \"quote\": \"FLIGHT / DATE TW5668 / 21 Apr 2026 | ARRIVAL (LOCAL TIME) 21APR26 2005\",\n    \"value\": \"21 Apr 2026\"\n  },\n  \"flight_number\": {\n    \"page\": 1,\n    \"quote\": \"FLIGHT / DATE TW5668 / 21 Apr 2026 | ARRIVAL (LOCAL TIME) 21APR26 2005\",\n    \"value\": \"TW5668\"\n  },\n  \"passenger_name\": {\n    \"page\": 1,\n    \"quote\": \"PASSENGER NAME <PERSON_1> MR | BAG TAG TW925981\",\n    \"value\": \"<PERSON_1> MR\"\n  },\n  \"remarks\": {\n    \"page\": 1,\n    \"quote\": \"Bag missing on arrival, located at transfer station and forwarded to the passenger's hotel.\",\n    \"value\": \"Bag missing on arrival, located at transfer station and forwarded to the passenger's hotel.\"\n  },\n  \"status\": {\n    \"page\": 1,\n    \"quote\": \"FILE REFERENCE AYTTW64387 | BAG STATUS DELAYED\",\n    \"value\": \"DELAYED\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2002,
+   "tokens_out": 594,
+   "latency_ms": 10161
+  },
+  "cached": false
+ }
+}

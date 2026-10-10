@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady na účtovníctve Medizinisches Zentrum Stark v sume 765,26 EUR nie sú preplatené, pretože sú v súlade s výnimkou uvedenou v článku 11 ods. 2 zákona o poistení, ktorý vylučuje pokrytie nákladov spojených s alkoholovým zneužívaním, čo je potvrdené prítomnosťou rizikového signálu „exclusion_alcohol“. Poisťovňa prepláca sumu 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 519,
+   "tokens_out": 165,
+   "latency_ms": 2899
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP48412328\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP48412328\", \"page\": 1}, \"insured_name\": {\"value\": \"Sofia Rubiková\", \"quote\": \"MENO A PRIEZVISKO Sofia Rubiková\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"635713/2947\", \"quote\": \"RODNÉ ČÍSLO 635713/2947\", \"page\": 1}, \"insured_address\": {\"value\": \"Tokajícka 8, 881 15 Jasenie\", \"quote\": \"ADRESA Tokajícka 8, 881 15 Jasenie\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 930 813 435\", \"quote\": \"TELEFÓN +421 930 813 435\", \"page\": 1}, \"insured_email\": {\"value\": \"sofia.rubikova16@mail.example.sk\", \"quote\": \"E-MAIL sofia.rubikova16@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK03 6500 0000 0053 3851 1991\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK03 6500 0000 0053 3851 1991\", \"page\": 1}, \"destination_country\": {\"value\": \"Mad'arsko\", \"quote\": \"KRAJINA CESTY Mad'arsko\", \"page\": 1}, \"trip_start\": {\"value\": \"23. 7. 2026\", \"quote\": \"CESTA OD 23. 7. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"28. 7. 2026\", \"quote\": \"CESTA DO 28. 7. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"25. 7. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 25. 7. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Budapest, Mad'arsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Budapest, Mad'arsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Budapešti, keď sa mi podvrnul členkový kĺb. Poškodenie som si vykonal pri chôdzi. Následne som sa vydal na liečbu.\", \"quote\": \"POPIS UDALOSTI Bol som v Budapešti, keď sa mi podvrnul členkový kĺb. Poškodenie som si vykonal pri chôdzi. Následne som sa vydal na liečbu.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Sándor International Medical Centre\", \"amount\": \"409 061,00\", \"currency\": \"HUF\", \"quote\": \"Liečebné náklady – Sándor International Medical Centre 409 061,00 HUF\", \"page\": 1}, {\"description\": \"Liekky z lekárne\", \"amount\": \"11 376,00\", \"currency\": \"HUF\", \"quote\": \"Liekky z lekárne 11 376,00 HUF\", \"page\": 1}], \"signature_date\": {\"value\": \"5. 8. 2026\", \"quote\": \"Dátum: 5. 8. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1013,
+   "latency_ms": 36401
+  },
+  "cached": false
+ }
+}

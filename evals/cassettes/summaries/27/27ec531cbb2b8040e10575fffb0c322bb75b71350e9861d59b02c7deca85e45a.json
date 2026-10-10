@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 20. 5. 2026 pri cestovaní poistného <PERSON_1> v rámci poistného produktu Cestovné poistenie Basic. Poistné riziko sa realizovalo v súvislosti s liečebnými nákladmi na účte Opčej nemocnice Vučetić, ktoré činili 3 940,61 EUR. Poistná spoločnosť uznala náklady podľa článku 4 ods. 1 a článku 4 ods. 2 VPP. Poistné plnenie je odporúčané vo výške 3 890,61 EUR súčasne s odpočtom spolucastného 50,00 EUR. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Plnenie je odporúčané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 565,
+   "tokens_out": 261,
+   "latency_ms": 4360
+  },
+  "cached": false
+ }
+}

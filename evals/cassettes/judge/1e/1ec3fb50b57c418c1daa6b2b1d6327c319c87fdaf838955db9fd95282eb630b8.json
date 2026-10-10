@@ -1,0 +1,19 @@
+{
+ "step": "judge",
+ "prompt_id": "summaries/judge",
+ "prompt_hash": "a14837a638786f48a97a5930f8a3a86558d06fc9eb071acda8f07687ed318ecb",
+ "model": "ollama:gemma3:12b",
+ "response": {
+  "text": "{\"completeness\": 3, \"tone\": 4, \"no_overpromise\": 5, \"note\": \"The completeness score is low because the text lacks a clear statement of *why* the claim was covered, only stating the decision and referencing conditions without explanation.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "gemma3:12b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 497,
+   "tokens_out": 59,
+   "latency_ms": 4401
+  },
+  "cached": false
+ }
+}

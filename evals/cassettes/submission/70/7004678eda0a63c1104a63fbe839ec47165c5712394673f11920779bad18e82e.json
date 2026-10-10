@@ -1,0 +1,89 @@
+{
+ "step": "submission",
+ "prompt_id": "submission/agent",
+ "prompt_hash": "bc9f8df887fa1d06e12d28e2d3a0d5fce30d3e0875e106f0df31c9eff0a26dac",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "",
+  "thinking": null,
+  "tool_calls": [
+   {
+    "id": "call_5ki2q7c3",
+    "function": {
+     "index": 0,
+     "name": "submit_claim",
+     "arguments": {
+      "payload": {
+       "claim_type_code": "LUG",
+       "currency": "EUR",
+       "event_country": "HU",
+       "event_date": "2026-04-19",
+       "handler_id": "handler.eval",
+       "iban": "<IBAN_1>",
+       "insured": {
+        "birth_number": "<RC_1>",
+        "name": "<PERSON_1>"
+       },
+       "items": [
+        {
+         "claimed_eur": "119.50",
+         "clause_refs": [
+          "A7.1",
+          "A7.2"
+         ],
+         "coverage_code": "LUG",
+         "decision": "PAY",
+         "payout_eur": "119.50",
+         "ref": "I1"
+        },
+        {
+         "claimed_eur": "174.42",
+         "clause_refs": [
+          "A7.1",
+          "A7.2"
+         ],
+         "coverage_code": "LUG",
+         "decision": "PAY",
+         "payout_eur": "174.42",
+         "ref": "I2"
+        },
+        {
+         "claimed_eur": "882.19",
+         "clause_refs": [
+          "A7.1",
+          "A7.2"
+         ],
+         "coverage_code": "LUG",
+         "decision": "PAY",
+         "payout_eur": "425.58",
+         "ref": "I3"
+        },
+        {
+         "claimed_eur": "161.57",
+         "clause_refs": [
+          "A7.1",
+          "A7.2"
+         ],
+         "coverage_code": "LUG",
+         "decision": "PAY",
+         "payout_eur": "161.57",
+         "ref": "I4"
+        }
+       ],
+       "policy_number": "CP30182766",
+       "total_payout": "881.07"
+      }
+     }
+    }
+   }
+  ],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1046,
+   "tokens_out": 386,
+   "latency_ms": 16925
+  },
+  "cached": false
+ }
+}

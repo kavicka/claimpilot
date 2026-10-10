@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Stornovací poplatok vo výške 1 689,10 EUR je poisťovňou preplatený v sume 1 351,28 EUR na základe článku 9 ods. 1 a článku 9 ods. 2 zákona o poistení cestovných plánov (VPP). Udalosť nastala dňa 25. 2. 2026, čo spĺňa podmienky poistenia. Poisťovňa prepláca uvedenú sumu v súlade s uvedenými článkami VPP. Žiadne ďalšie položky nie sú v rámci poistenia.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 471,
+   "tokens_out": 188,
+   "latency_ms": 3208
+  },
+  "cached": false
+ }
+}

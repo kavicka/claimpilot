@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP58518659\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP58518659\", \"page\": 1}, \"insured_name\": {\"value\": \"Šimon Menšík\", \"quote\": \"MENO A PRIEZVISKO Šimon Menšík\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"590708/3347\", \"quote\": \"RODNÉ ČÍSLO 590708/3347\", \"page\": 1}, \"insured_address\": {\"value\": \"Snežienková 370, 888 88 Kravany\", \"quote\": \"ADRESA Snežienková 370, 888 88 Kravany\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 918 697 130\", \"quote\": \"TELEFÓN +421 918 697 130\", \"page\": 1}, \"insured_email\": {\"value\": \"simon.mensik26@example.com\", \"quote\": \"E-MAIL simon.mensik26@example.com\", \"page\": 1}, \"iban\": {\"value\": \"SK18 7500 0000 0053 6096 3130\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK18 7500 0000 0053 6096 3130\", \"page\": 1}, \"destination_country\": {\"value\": \"Turecko\", \"quote\": \"KRAJINA CESTY Turecko\", \"page\": 1}, \"trip_start\": {\"value\": \"10. 8. 2026\", \"quote\": \"CESTA OD 10. 8. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"17. 8. 2026\", \"quote\": \"CESTA DO 17. 8. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"15. 8. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 15. 8. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Antalya, Turecko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Antalya, Turecko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Batožina\"], \"quote\": \"Druh udalosti Liečebné náklady Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Na pláži v Antalii mi ukradli veci z kufra. Krádež som nahlásil/a na mieste u polície.\", \"quote\": \"POPIS UDALOSTI Na pláži v Antalii mi ukradli veci z kufra. Krádež som nahlásil/a na mieste u polície.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Topánky\", \"amount\": \"103,31\", \"currency\": \"EUR\", \"quote\": \"Topánky 103,31 EUR\", \"page\": 1}, {\"description\": \"Mobilný telefón\", \"amount\": \"671,98\", \"currency\": \"EUR\", \"quote\": \"Mobilný telefón 671,98 EUR\", \"page\": 1}, {\"description\": \"Cestovný kufor\", \"amount\": \"169,46\", \"currency\": \"EUR\", \"quote\": \"Cestovný kufor 169,46 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"5. 9. 2026\", \"quote\": \"Dátum: 5. 9. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 991,
+   "latency_ms": 34059
+  },
+  "cached": false
+ }
+}

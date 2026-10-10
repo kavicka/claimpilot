@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\", \"A4.4\"], \"rationale\": \"The claim involves acute dental treatment (periapical abscess) that occurred during the trip, which is covered under A4.1. Additionally, A4.4 explicitly covers acute dental treatment up to the dental care sublimit. There is no indication that this was a pre-existing condition, so A5.1 does not apply.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 860,
+   "tokens_out": 98,
+   "latency_ms": 11064
+  },
+  "cached": false
+ }
+}

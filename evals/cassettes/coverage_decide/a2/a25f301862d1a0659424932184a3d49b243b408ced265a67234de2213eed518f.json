@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The item 'Kozmetika' (toiletries) falls under the category of 'valuables'. According to clause [A7.5], the insurer does not cover theft of valuables and electronics left unattended in the vehicle or in a publicly accessible area. The evidence indicates that the bag was not delivered on arrival and was left unattended at the airport, which meets the condition of the exclusion in [A7.5].\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1013,
+   "tokens_out": 115,
+   "latency_ms": 9094
+  },
+  "cached": false
+ }
+}

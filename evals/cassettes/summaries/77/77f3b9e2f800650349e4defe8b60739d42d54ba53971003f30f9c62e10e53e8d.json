@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Andrews International Medical Centre vo výške 252,45 EUR nie sú preplatené, pretože podľa článku 13 ods. 4 VPP sú náklady na liečbu v zahraničí nezahrnuté do poistnej ochrany v prípade, ak sú vyplatené z iného zdroja, čo je potvrdené signálom „duplicate_invoice“. Poisťovňa prepláca sumu 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 463,
+   "tokens_out": 137,
+   "latency_ms": 2519
+  },
+  "cached": false
+ }
+}

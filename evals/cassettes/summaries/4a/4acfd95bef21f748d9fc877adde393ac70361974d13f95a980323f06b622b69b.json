@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Nákup nevyhnutných vecí je preplatený v sume 26,39 EUR podľa článku 8 ods. 1 zákona o poistení. Poisťovňa prepláca uvedenú sumu, pretože udalosť spadá do poistnej udalosti podľa poistnej zmluvy. Všetky požadované dokumenty boli doručené a sú v poriadku. Poistné plnenie je poskytnuté v plnej výške.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 504,
+   "tokens_out": 140,
+   "latency_ms": 2815
+  },
+  "cached": false
+ }
+}

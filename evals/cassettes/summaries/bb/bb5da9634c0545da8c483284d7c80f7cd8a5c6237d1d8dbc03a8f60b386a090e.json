@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 18. 4. 2026 došlo k liečebným nákladom v Andrews International Medical Centre vo výške 252,45 EUR, ktoré sú v rámci poistnej udalosti S42-038 uplatnené. Poistné plnenie je zamietnuté na základe článku 13 ods. 4 z Všeobecných poistných podmienok, ktorý vylučuje plnenie nákladov spojených s opakovaným alebo duplikovaným účtom. Rizikový signál „duplicate_invoice“ potvrdzuje, že dokumentácia obsahuje znížený účet, čo vylučuje plnenie. Chýbajúce informácie nie sú zaznamenané. Celkové uplatnené náklady sú 252,45 EUR, plnenie je 0,00 EUR, spolupráca poistného poisteneho je 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 543,
+   "tokens_out": 273,
+   "latency_ms": 4480
+  },
+  "cached": false
+ }
+}

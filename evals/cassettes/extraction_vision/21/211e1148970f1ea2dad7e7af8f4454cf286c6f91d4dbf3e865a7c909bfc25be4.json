@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP37542226\", \"quote\": \"Číslo poistnej zmluvy CP37542226\", \"page\": 1}, \"insured_name\": {\"value\": \"Vincent Cibulka\", \"quote\": \"Meno a priezvisko Vincent Cibulka\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"560227/0256\", \"quote\": \"Rodné číslo 560227/0256\", \"page\": 1}, \"insured_address\": {\"value\": \"Gronárska 491, 945 39 Bohunice\", \"quote\": \"Adresa Gronárska 491, 945 39 Bohunice\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 907 800 266\", \"quote\": \"Telefón +421 907 800 266\", \"page\": 1}, \"insured_email\": {\"value\": \"vincent.cibulka67@posta.example.sk\", \"quote\": \"E-mail vincent.cibulka67@posta.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK22 8330 0000 0016 3810 8149\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK22 8330 0000 0016 3810 8149\", \"page\": 1}, \"destination_country\": {\"value\": \"Rakúsko\", \"quote\": \"Krajina cesty Rakúsko\", \"page\": 1}, \"trip_start\": {\"value\": \"25. 7. 2026\", \"quote\": \"CESTA OD 25. 7. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"4. 8. 2026\", \"quote\": \"CESTA DO 4. 8. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"4. 8. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 4. 8. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Wien, Rakúsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Wien, Rakúsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v W ien, kde som utrpel otras mozgu. Po udalosti som sa obrátil na miestne zdravotníctvo.\", \"quote\": \"POPIS UDALOSTI Bol som v Wien, kde som utrpel otras mozgu. Po udalosti som sa obrátil na miestne zdravotníctvo.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Medizinisches Zentrum Rauter\", \"amount\": \"916,18\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Medizinisches Zentrum Rauter 916,18 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"13. 8. 2026\", \"quote\": \"Dátum: 13. 8. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 888,
+   "latency_ms": 31967
+  },
+  "cached": false
+ }
+}

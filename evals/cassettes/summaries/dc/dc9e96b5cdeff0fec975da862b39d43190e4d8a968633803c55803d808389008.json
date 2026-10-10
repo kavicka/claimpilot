@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa stala 28. 1. 2026 pri ceste poistného <PERSON_1> v rámci poistného produktu Cestovné poistenie Premium. Poistné záznamy uvádzajú straty v hodnote 1 316,23 EUR, z čoho bolo plnených 327,43 EUR. Kniha a čítačka v hodnote 171,31 EUR, mobilný telefón v hodnote 817,49 EUR a kozmetika v hodnote 52,49 EUR sú podľa článku 7 ods. 5 VPP vylúčené z poistnej ochrany. Zimná bunda v hodnote 129,20 EUR a oblečenie (nohavice, tričká) v hodnote 145,74 EUR sú podľa článkov 7 ods. 1 a 7 ods. 2 VPP pokryté. Rizikový signál „exclusion_unattended_valuables“ naznačuje, že hodnotné veci boli nezabezpečené. Chýbajúce informácie nie sú zaznamenané. Odporúča sa plnenie vo výške 327,43 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 930,
+   "tokens_out": 337,
+   "latency_ms": 6237
+  },
+  "cached": false
+ }
+}

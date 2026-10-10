@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 12. 2. 2026 došlo k stratám osobného batožinu poistného osoby <PERSON_1> počas cestovania. Poistné pokrytie sa vzťahuje na základný poistný rámec cestovného poistenia Standard. Podľa článku 7 ods. 1 a 7 ods. 2 VPP sú základné položky, vrátane kozmetiky, hodiniek, fotoaparátu, cestovného kufra a knihy s čítačkou, poistne pokryté, pričom maximálna suma plnenia pre jednotlivé položky je stanovená v súlade s poistnými podmienkami. Plnenie sa uskutoční v sume 500,87 EUR, z čoho 20,00 EUR predstavuje spoluúčasť. Fotoaparát bol plnený v sume 103,39 EUR, čo je nižšie ako uplatnená suma 832,97 EUR, čo je v súlade s poistnými podmienkami. Kniha a čítačka boli plnené v sume 0,00 EUR, čo je v súlade s poistnými podmienkami, pretože sú vylúčené z poistného pokrytia. Rizikové signály a chýbajúce informácie nie sú zaznamenané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 869,
+   "tokens_out": 401,
+   "latency_ms": 12934
+  },
+  "cached": false
+ }
+}

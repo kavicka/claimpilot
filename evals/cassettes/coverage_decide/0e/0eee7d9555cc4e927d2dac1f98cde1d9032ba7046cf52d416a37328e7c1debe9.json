@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A11.2\"], \"rationale\": \"The claim involves an incident where the insured was under the influence of alcohol (Atemalkohol 1,4 Promille), which exceeds the 0.5 Promille threshold specified in clause A11.2. This exclusion applies directly, as the event occurred under the influence of alcohol.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1219,
+   "tokens_out": 88,
+   "latency_ms": 11274
+  },
+  "cached": false
+ }
+}

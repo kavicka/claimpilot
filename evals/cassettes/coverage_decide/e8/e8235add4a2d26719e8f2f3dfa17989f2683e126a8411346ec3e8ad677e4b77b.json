@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"needs_review\", \"clause_ids\": [\"A7.1\", \"A7.3\", \"A7.5\"], \"rationale\": \"The item is a wristwatch (valuables), and the claim is for loss of luggage at the airport. Clause A7.1 provides coverage for loss during transport, theft, or damage during travel. However, clause A7.5 excludes coverage for valuables left unattended in a vehicle or public place. The evidence does not explicitly state whether the bag was left unattended, which is a condition for the exclusion in A7.5. Additionally, clause A7.3 limits coverage for valuables like watches to 30% of the luggage limit. Since the evidence is unclear on whether the bag was left unattended, a review is needed to determine applicability of A7.5.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 978,
+   "tokens_out": 179,
+   "latency_ms": 11446
+  },
+  "cached": false
+ }
+}

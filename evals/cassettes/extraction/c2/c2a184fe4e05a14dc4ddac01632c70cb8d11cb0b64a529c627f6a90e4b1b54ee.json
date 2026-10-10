@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Totale da pagare EUR | 41,70\",\n    \"value\": \"EUR\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Scontrino Documento n. 9561/59856 29/08/2026 16:58\",\n    \"value\": \"29/08/2026\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"8,35\",\n      \"description\": \"Spray nasale\",\n      \"page\": 1,\n      \"quote\": \"Spray nasale | 8,35\"\n    },\n    {\n      \"amount\": \"9,33\",\n      \"description\": \"Ibuprofene 400 mg\",\n      \"page\": 1,\n      \"quote\": \"Ibuprofene 400 mg | 9,33\"\n    },\n    {\n      \"amount\": \"6,98\",\n      \"description\": \"Paracetamolo 500 mg\",\n      \"page\": 1,\n      \"quote\": \"Paracetamolo 500 mg | 6,98\"\n    },\n    {\n      \"amount\": \"17,04\",\n      \"description\": \"Amoxicillina 1 g\",\n      \"page\": 1,\n      \"quote\": \"Amoxicillina 1 g | 17,04\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Farmacia Grossi Roma\",\n    \"value\": \"Farmacia Grossi Roma\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Scontrino Documento n. 9561/59856 29/08/2026 16:58\",\n    \"value\": \"9561/59856\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Totale da pagare EUR | 41,70\",\n    \"value\": \"41,70\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 468,
+   "tokens_out": 496,
+   "latency_ms": 7975
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP25014631\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP25014631\", \"page\": 1}, \"insured_name\": {\"value\": \"Igor Opluštil\", \"quote\": \"MENO A PRIEZVISKO Igor Opluštil\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"720928/9648\", \"quote\": \"RODNÉ ČÍSLO 720928/9648\", \"page\": 1}, \"insured_address\": {\"value\": \"Košická 8, 815 22 Žakarovce\", \"quote\": \"ADRESA Košická 8, 815 22 Žakarovce\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 918 381 178\", \"quote\": \"TELEFÓN +421 918 381 178\", \"page\": 1}, \"insured_email\": {\"value\": \"igor.oplustil67@example.com\", \"quote\": \"E-MAIL igor.oplustil67@example.com\", \"page\": 1}, \"iban\": {\"value\": \"SK88 0200 0000 0079 6964 8149\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK88 0200 0000 0079 6964 8149\", \"page\": 1}, \"destination_country\": {\"value\": \"Česko\", \"quote\": \"KRAJINA CESTY Česko\", \"page\": 1}, \"trip_start\": {\"value\": \"5. 1. 2026\", \"quote\": \"CESTA OD 5. 1. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"19. 1. 2026\", \"quote\": \"CESTA DO 19. 1. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"11. 1. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 11. 1. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Praha, Česko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Praha, Česko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Prahe, Česko, a došlo k otasu mozgu. Po nehode som bol hospitalizovaný a prešiel niekoľkými lekárskymi vyšetreniami. V súčasnosti sa zotavujem pod dohľadom lekára.\", \"quote\": \"POPIS UDALOSTI Bol som v Prahe, Česko, a došlo k otasu mozgu. Po nehode som bol hospitalizovaný a prešiel niekoľkými lekárskymi vyšetreniami. V súčasnosti sa zotavujem pod dohľadom lekára.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Poliklinika Kašparová\", \"amount\": \"19 411,00\", \"currency\": \"CZK\", \"quote\": \"Liečebné náklady – Poliklinika Kašparová 19 411,00 CZK\", \"page\": 1}], \"signature_date\": {\"value\": \"28. 1. 2026\", \"quote\": \"Dátum: 28. 1. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 998,
+   "latency_ms": 37629
+  },
+  "cached": false
+ }
+}

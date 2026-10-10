@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Medizinisches Zentrum Stalder vo výške 172,94 CHF nie sú preplatené, pretože podľa článku 13 ods. 4 VPP sú náklady na liečbu v zahraničí preplatené len v prípade, že sú dokázané ako nevyhnutné a výsledkom nezákonného činnosti, čo je v tomto prípade vylúčené. Poisťovňa prepláca sumu 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 522,
+   "tokens_out": 152,
+   "latency_ms": 2743
+  },
+  "cached": false
+ }
+}

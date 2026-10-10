@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"receipt_number\": {\"value\": \"7807/33021\", \"quote\": \"Receipt No. 7807/33021\", \"page\": 1}, \"issue_date\": {\"value\": \"25/07/2026\", \"quote\": \"25/07/2026\", \"page\": 1}, \"pharmacy_name\": {\"value\": \"Varga Pharmacy\", \"quote\": \"Varga Pharmacy\", \"page\": 1}, \"currency\": {\"value\": \"HUF\", \"quote\": \"Total due HUF\", \"page\": 1}, \"line_items\": [{\"description\": \"Ibuprofen 400mg\", \"amount\": \"4,685.00\", \"quote\": \"Ibuprofen 400mg 4,685.00\", \"page\": 1}, {\"description\": \"Amoxicillin 1g\", \"amount\": \"4,017.00\", \"quote\": \"Amoxicillin 1g 4,017.00\", \"page\": 1}, {\"description\": \"Nasal spray\", \"amount\": \"2,674.00\", \"quote\": \"Nasal spray 2,674.00\", \"page\": 1}], \"total\": {\"value\": \"11,376.00\", \"quote\": \"Total due HUF 11,376.00\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1298,
+   "tokens_out": 335,
+   "latency_ms": 13110
+  },
+  "cached": false
+ }
+}

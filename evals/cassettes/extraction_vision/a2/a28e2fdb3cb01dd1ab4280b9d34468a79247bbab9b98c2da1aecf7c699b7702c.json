@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"report_number\": {\"value\": \"2412/167/26\", \"quote\": \"Case No. 2412/167/26\", \"page\": 1}, \"report_date\": {\"value\": \"15/08/2026\", \"quote\": \"Date: 15/08/2026\", \"page\": 1}, \"police_station\": {\"value\": \"Antalya Tourist Police Station\", \"quote\": \"Antalya Tourist Police Station\", \"page\": 1}, \"complainant_name\": {\"value\": \"Šimon Mensík\", \"quote\": \"Šimon Mensík, DOB 08/07/1959\", \"page\": 1}, \"incident_date\": {\"value\": \"15/08/2026\", \"quote\": \"DATE OF INCIDENT 15/08/2026\", \"page\": 1}, \"incident_place\": {\"value\": \"Antalya\", \"quote\": \"PLACE OF INCIDENT Antalya\", \"page\": 1}, \"vehicle_plate\": {\"value\": null, \"quote\": null, \"page\": 1}, \"incident_description\": {\"value\": \"While the complainant was swimming in Antalya, their beach bag was stolen. The bag contained personal items, including shoes, a mobile phone, and a suitcase. The theft occurred in the vicinity of the beach where the complainant was located. No one was seen taking the items, and the complainant noticed the bag was missing upon returning from the water.\", \"quote\": \"While the complainant was swimming in Antalya, their beach bag was stolen. The bag contained personal items, including shoes, a mobile phone, and a suitcase. The theft occurred in the vicinity of the beach where the complainant was located. No one was seen taking the items, and the complainant noticed the bag was missing upon returning from the water.\", \"page\": 1}, \"stolen_items\": [{\"description\": \"Shoes\", \"value\": \"103.31 EUR\", \"quote\": \"1 Shoes\", \"page\": 1}, {\"description\": \"Mobile phone\", \"value\": \"671.98 EUR\", \"quote\": \"2 Mobile phone\", \"page\": 1}, {\"description\": \"Suitcase\", \"value\": \"169.46 EUR\", \"quote\": \"3 Suitcase\", \"page\": 1}]}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2051,
+   "tokens_out": 532,
+   "latency_ms": 26258
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Nákup nevyhnutných vecí vo výške 542,73 TRY dňa 12. 4. 2026 je preplatený podľa článku 8 ods. 1 zákona o poistení.  \nNákup nevyhnutných vecí vo výške 1 393,23 TRY dňa 12. 4. 2026 je preplatený podľa článku 8 ods. 1 zákona o poistení.  \nCelkové plnenie v sume 42,27 EUR je vyplatené v súlade s podmienkami poistenia.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 545,
+   "tokens_out": 173,
+   "latency_ms": 3527
+  },
+  "cached": false
+ }
+}

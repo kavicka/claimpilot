@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Total due TL\",\n    \"value\": \"TL\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 2965/11013 23/03/2026 16:47\",\n    \"value\": \"23/03/2026 16:47\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"621.05\",\n      \"description\": \"Ibuprofen 400mg\",\n      \"page\": 1,\n      \"quote\": \"Ibuprofen 400mg | 621.05\"\n    },\n    {\n      \"amount\": \"474.95\",\n      \"description\": \"Rehydration salts\",\n      \"page\": 1,\n      \"quote\": \"Rehydration salts | 474.95\"\n    },\n    {\n      \"amount\": \"358.16\",\n      \"description\": \"Paracetamol 500mg\",\n      \"page\": 1,\n      \"quote\": \"Paracetamol 500mg | 358.16\"\n    },\n    {\n      \"amount\": \"367.77\",\n      \"description\": \"Elastic bandage\",\n      \"page\": 1,\n      \"quote\": \"Elastic bandage | 367.77\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Türk Pharmacy Antalya\",\n    \"value\": \"Türk Pharmacy\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 2965/11013 23/03/2026 16:47\",\n    \"value\": \"2965/11013\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"1,821.93\",\n    \"value\": \"1,821.93\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1269,
+   "tokens_out": 486,
+   "latency_ms": 15008
+  },
+  "cached": false
+ }
+}

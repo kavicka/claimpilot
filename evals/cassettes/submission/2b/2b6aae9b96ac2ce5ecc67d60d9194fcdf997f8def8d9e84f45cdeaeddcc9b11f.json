@@ -1,0 +1,65 @@
+{
+ "step": "submission",
+ "prompt_id": "submission/agent",
+ "prompt_hash": "bc9f8df887fa1d06e12d28e2d3a0d5fce30d3e0875e106f0df31c9eff0a26dac",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "",
+  "thinking": null,
+  "tool_calls": [
+   {
+    "id": "call_uabzc33n",
+    "function": {
+     "index": 0,
+     "name": "submit_claim",
+     "arguments": {
+      "payload": {
+       "claim_type_code": "ACC",
+       "currency": "EUR",
+       "event_country": "AT",
+       "event_date": "2026-03-20",
+       "handler_id": "handler.eval",
+       "iban": "<IBAN_1>",
+       "insured": {
+        "birth_number": "<RC_1>",
+        "name": "<PERSON_1>"
+       },
+       "items": [
+        {
+         "claimed_eur": "775.82",
+         "clause_refs": [
+          "A4.1"
+         ],
+         "coverage_code": "MED",
+         "decision": "PAY",
+         "payout_eur": "775.82",
+         "ref": "I1"
+        },
+        {
+         "claimed_eur": "0.00",
+         "clause_refs": [
+          "A6.1"
+         ],
+         "coverage_code": "ACC",
+         "decision": "PAY",
+         "payout_eur": "500.00",
+         "ref": "I2"
+        }
+       ],
+       "policy_number": "CP66267415",
+       "total_payout": "1275.82"
+      }
+     }
+    }
+   }
+  ],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 816,
+   "tokens_out": 240,
+   "latency_ms": 10667
+  },
+  "cached": false
+ }
+}

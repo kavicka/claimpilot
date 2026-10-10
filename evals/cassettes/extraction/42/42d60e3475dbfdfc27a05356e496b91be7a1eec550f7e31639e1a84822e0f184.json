@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"airline\": {\n    \"page\": 1,\n    \"quote\": \"Danubia Air\",\n    \"value\": \"Danubia Air\"\n  },\n  \"arrival_time\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"bag_tag\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"delivery_time\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"file_reference\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"flight_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"flight_number\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"passenger_name\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"remarks\": {\n    \"page\": 1,\n    \"quote\": \"This report does not constitute an admission of liability by the carrier.\",\n    \"value\": \"This report does not constitute an admission of liability by the carrier.\"\n  },\n  \"status\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1841,
+   "tokens_out": 296,
+   "latency_ms": 15866
+  },
+  "cached": false
+ }
+}

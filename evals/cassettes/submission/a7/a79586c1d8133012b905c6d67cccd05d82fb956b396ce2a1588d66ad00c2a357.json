@@ -1,0 +1,30 @@
+{
+ "step": "submission",
+ "prompt_id": "submission/agent",
+ "prompt_hash": "bc9f8df887fa1d06e12d28e2d3a0d5fce30d3e0875e106f0df31c9eff0a26dac",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "",
+  "thinking": null,
+  "tool_calls": [
+   {
+    "id": "call_67hpdy5n",
+    "function": {
+     "index": 0,
+     "name": "get_code_list",
+     "arguments": {
+      "name": "country"
+     }
+    }
+   }
+  ],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 718,
+   "tokens_out": 21,
+   "latency_ms": 2531
+  },
+  "cached": false
+ }
+}

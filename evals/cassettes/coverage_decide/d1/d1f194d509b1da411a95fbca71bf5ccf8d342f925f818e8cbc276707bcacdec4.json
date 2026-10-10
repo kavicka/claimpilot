@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for pneumonia (upala pluća) that occurred after the insured person returned home from abroad. According to clause [A4.1], the insurer covers necessary and appropriate costs for outpatient care, hospitalization, and prescribed medications if incurred as a result of an acute illness or injury during the trip. The evidence indicates that the illness developed after the trip and was treated medically, which fits the condition of an acute illness. There is no indication that the illness was pre-existing (which would trigger [A5.1]), or related to alcohol, drugs, extreme sports, or other exclusions. Clause [A11.3] does not apply because the illness is not related to extreme sports, and the policy explicitly includes extreme sports in the Premium product.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1357,
+   "tokens_out": 183,
+   "latency_ms": 13766
+  },
+  "cached": false
+ }
+}

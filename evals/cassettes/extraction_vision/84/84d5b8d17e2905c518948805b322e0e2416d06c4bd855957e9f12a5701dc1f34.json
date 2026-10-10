@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"INV-2026-73603\", \"quote\": \"Invoice No. INV-2026-73603\", \"page\": 1}, \"issue_date\": {\"value\": \"04/27/2026\", \"quote\": \"Date: 04/27/2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Marquez International Medical Centre\", \"quote\": \"Marquez International Medical Centre\", \"page\": 1}, \"provider_country\": {\"value\": \"USA\", \"quote\": \"Miami, USA\", \"page\": 1}, \"patient_name\": {\"value\": \"Vojtech Rys\", \"quote\": \"Vojtech Rys, DOB 05/14/1995\", \"page\": 1}, \"service_date\": {\"value\": \"04/27/2026\", \"quote\": \"DATE OF SERVICE 04/27/2026\", \"page\": 1}, \"currency\": {\"value\": \"USD\", \"quote\": \"144.75 USD\", \"page\": 1}, \"line_items\": [{\"description\": \"Outpatient consultation\", \"amount\": \"66.66\", \"quote\": \"1 Outpatient consultation 66.66\", \"page\": 1}, {\"description\": \"X-ray\", \"amount\": \"78.09\", \"quote\": \"2 X-ray 78.09\", \"page\": 1}], \"total\": {\"value\": \"144.75\", \"quote\": \"Total due 144.75 USD\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 375,
+   "latency_ms": 18677
+  },
+  "cached": false
+ }
+}

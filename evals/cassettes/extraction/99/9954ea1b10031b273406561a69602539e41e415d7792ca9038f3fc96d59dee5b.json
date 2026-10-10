@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"# | Prestazione | Importo (€)\",\n    \"value\": \"€\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": \"Fattura n. FT-2026-70176\",\n    \"value\": \"FT-2026-70176\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Data: 28/03/2026\",\n    \"value\": \"28/03/2026\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"112,62\",\n      \"description\": \"Visita ambulatoriale\",\n      \"page\": 1,\n      \"quote\": \"1 | Visita ambulatoriale | 112,62\"\n    },\n    {\n      \"amount\": \"112,72\",\n      \"description\": \"Esami di laboratorio\",\n      \"page\": 1,\n      \"quote\": \"2 | Esami di laboratorio | 112,72\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PAZIENTE <PERSON_1>, nato/a il 15/07/1957 | DATA PRESTAZIONE 27/03/2026\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": \"Rimini, Italia\",\n    \"value\": \"Italia\"\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliambulatorio Iannelli\",\n    \"value\": \"Poliambulatorio Iannelli\"\n  },\n  \"service_date\": {\n    \"page\": 1,\n    \"quote\": \"PAZIENTE <PERSON_1>, nato/a il 15/07/1957 | DATA PRESTAZIONE 27/03/2026\",\n    \"value\": \"27/03/2026\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Totale da pagare | 225,34 €\",\n    \"value\": \"225,34\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 4467,
+   "tokens_out": 536,
+   "latency_ms": 18303
+  },
+  "cached": false
+ }
+}

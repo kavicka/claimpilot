@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"policy_number\": {\n    \"value\": \"CP51837852\",\n    \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP51837852 | DRUH POISTENIA jednorazové\",\n    \"page\": 1\n  },\n  \"product_name\": {\n    \"value\": \"Cestovné poistenie Premium\",\n    \"quote\": \"Poistný certifikát - Cestovné poistenie Premium\",\n    \"page\": 1\n  },\n  \"policy_type\": {\n    \"value\": \"jednorazové\",\n    \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP51837852 | DRUH POISTENIA jednorazové\",\n    \"page\": 1\n  },\n  \"policy_start\": {\n    \"value\": \"23. 4. 2026\",\n    \"quote\": \"ZAČIATOK POISTENIA 23. 4. 2026 | KONIEC POISTENIA 1. 5. 2026\",\n    \"page\": 1\n  },\n  \"policy_end\": {\n    \"value\": \"1. 5. 2026\",\n    \"quote\": \"ZAČIATOK POISTENIA 23. 4. 2026 | KONIEC POISTENIA 1. 5. 2026\",\n    \"page\": 1\n  },\n  \"insured_persons\": [\n    {\n      \"name\": \"<PERSON_1>\",\n      \"birth_number\": \"<RC_1>\",\n      \"quote\": \"<PERSON_1> | <RC_1>\",\n      \"page\": 1\n    }\n  ],\n  \"premium\": {\n    \"value\": \"28,80 EUR\",\n    \"quote\": \"POISTNÉ 28,80 EUR | DÁTUM UZAVRETIA 4. 4. 2026\",\n    \"page\": 1\n  },\n  \"issue_date\": {\n    \"value\": \"4. 4. 2026\",\n    \"quote\": \"POISTNÉ 28,80 EUR | DÁTUM UZAVRETIA 4. 4. 2026\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2710,
+   "tokens_out": 536,
+   "latency_ms": 38872
+  },
+  "cached": false
+ }
+}

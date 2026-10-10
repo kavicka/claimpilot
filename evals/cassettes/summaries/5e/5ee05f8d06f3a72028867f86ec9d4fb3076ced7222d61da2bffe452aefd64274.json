@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 27. 3. 2026 v súvislosti s liečebnými nákladmi na Poliambulatorio Iannelli vo výške 225,34 EUR. Poistné plnenie nie je poskytnuté na základe článku 13 ods. 4 VPP, ktorý vylučuje plnenie za náklady, ktoré nie sú v súlade s podmienkami poistnej zmluvy. Na základe rizikového signálu „duplicate_invoice“ je prítomný podozrenie z duplikátu faktúry, čo podkopáva dôveryhodnosť účtovnej dokumentácie. Chýbajúce informácie nie sú uvedené, avšak nedostatok dôkazov o platnosti a jedinečnosti faktúry výrazne ovplyvňuje hodnotenie. Odporúča sa zamietnutie poistného plnenia vo výške 225,34 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 547,
+   "tokens_out": 286,
+   "latency_ms": 4690
+  },
+  "cached": false
+ }
+}

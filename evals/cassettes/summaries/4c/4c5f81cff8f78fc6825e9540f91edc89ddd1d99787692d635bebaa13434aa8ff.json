@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Medizinisches Zentrum Röhricht vo výške 784,57 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 VPP. Poisťovňa prepláca sumu 754,57 EUR, pričom poistný účastník uhradil 30,00 EUR. Výška preplatenia je v súlade s uvedenými údajmi a rozhodnutím o pokrytí.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 523,
+   "tokens_out": 140,
+   "latency_ms": 2535
+  },
+  "cached": false
+ }
+}

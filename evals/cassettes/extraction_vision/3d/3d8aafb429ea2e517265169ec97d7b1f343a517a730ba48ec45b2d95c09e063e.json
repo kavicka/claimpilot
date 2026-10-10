@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"RE-2026-84748\", \"quote\": \"Rechnung Nr. RE-2026-84748\", \"page\": 1}, \"issue_date\": {\"value\": \"23.07.2026\", \"quote\": \"Datum: 23.07.2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Medizinisches Zentrum Frei\", \"quote\": \"Medizinisches Zentrum Frei\", \"page\": 1}, \"provider_country\": {\"value\": \"Schweiz\", \"quote\": \"Davos, Schweiz\", \"page\": 1}, \"patient_name\": {\"value\": \"Gabriela Salajová, geb. 17.08.1965\", \"quote\": \"Gabriela Salajová, geb. 17.08.1965\", \"page\": 1}, \"service_date\": {\"value\": \"21.07.2026\", \"quote\": \"BEHANDLUNGSDATUM 21.07.2026\", \"page\": 1}, \"currency\": {\"value\": \"Fr.\", \"quote\": \"Betrags (Fr.)\", \"page\": 1}, \"line_items\": [{\"description\": \"Notfallbehandlung\", \"amount\": \"270.37\", \"quote\": \"1 Notfallbehandlung 270.37\", \"page\": 1}, {\"description\": \"Röntgen\", \"amount\": \"118.29\", \"quote\": \"2 Röntgen 118.29\", \"page\": 1}, {\"description\": \"Gipsverband\", \"amount\": \"101.60\", \"quote\": \"3 Gipsverband 101.60\", \"page\": 1}, {\"description\": \"Physiotherapie\", \"amount\": \"69.93\", \"quote\": \"4 Physiotherapie 69.93\", \"page\": 1}], \"total\": {\"value\": \"560.19 Fr.\", \"quote\": \"Gesamtbetrag 560.19 Fr.\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 512,
+   "latency_ms": 24615
+  },
+  "cached": false
+ }
+}

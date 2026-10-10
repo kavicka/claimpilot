@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves treatment for acute gastroenteritis, which is covered under clause A4.1 as it is an acute illness occurring during the trip. There is no indication of pre-existing conditions, planned treatment, or involvement of excluded factors such as alcohol, intentional actions, or extreme sports. Clause A11.3 does not apply because the policy explicitly includes extreme sports, and the illness is unrelated to such activities.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1241,
+   "tokens_out": 108,
+   "latency_ms": 12483
+  },
+  "cached": false
+ }
+}

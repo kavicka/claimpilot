@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Poliambulatorio Iannelli vo výške 225,34 EUR sú preplatené poisťovňou podľa článku 4 ods. 1 zákona o poisťovaní. Poisťovňa prepláca sumu 175,34 EUR, čo zodpovedá plneniu podľa ustanovení článku 4 ods. 1 VPP. Spolucastné výdavky vo výške 50,00 EUR nie sú preplatené, pretože sú podľa článku 4 ods. 1 VPP záväzné pre poisteného.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 514,
+   "tokens_out": 179,
+   "latency_ms": 3433
+  },
+  "cached": false
+ }
+}

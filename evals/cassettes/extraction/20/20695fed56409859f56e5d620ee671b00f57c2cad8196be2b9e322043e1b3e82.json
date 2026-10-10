@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"policy_number\": {\n    \"value\": \"CP60885459\",\n    \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP60885459 | DRUH POISTENIA celoročné\",\n    \"page\": 1\n  },\n  \"product_name\": {\n    \"value\": \"Cestovné poistenie Premium\",\n    \"quote\": \"Poistný certifikát - Cestovné poistenie Premium\",\n    \"page\": 1\n  },\n  \"policy_type\": {\n    \"value\": \"celoročné\",\n    \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP60885459 | DRUH POISTENIA celoročné\",\n    \"page\": 1\n  },\n  \"policy_start\": {\n    \"value\": \"23. 11. 2025\",\n    \"quote\": \"ZAČIATOK POISTENIA 23. 11. 2025 | KONIEC POISTENIA 22. 11. 2026\",\n    \"page\": 1\n  },\n  \"policy_end\": {\n    \"value\": \"22. 11. 2026\",\n    \"quote\": \"ZAČIATOK POISTENIA 23. 11. 2025 | KONIEC POISTENIA 22. 11. 2026\",\n    \"page\": 1\n  },\n  \"insured_persons\": [\n    {\n      \"name\": \"<PERSON_1>\",\n      \"birth_number\": \"<RC_1>\",\n      \"quote\": \"<PERSON_1> | <RC_1>\",\n      \"page\": 1\n    }\n  ],\n  \"premium\": {\n    \"value\": \"149,00 EUR\",\n    \"quote\": \"POISTNÉ 149,00 EUR | DÁTUM UZAVRETIA 18. 11. 2025\",\n    \"page\": 1\n  },\n  \"issue_date\": {\n    \"value\": \"18. 11. 2025\",\n    \"quote\": \"POISTNÉ 149,00 EUR | DÁTUM UZAVRETIA 18. 11. 2025\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2715,
+   "tokens_out": 550,
+   "latency_ms": 26989
+  },
+  "cached": false
+ }
+}

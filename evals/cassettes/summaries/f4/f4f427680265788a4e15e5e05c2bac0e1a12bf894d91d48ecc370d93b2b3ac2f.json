@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Poliklinika Veselá sú preplatené v sume 5 245,00 CZK podľa článku 4 ods. 1 zákona o poistení, pretože sú súčasťou pokrytých nákladov v rámci poistného účelu. Poisťovňa prepláca uvedenú sumu v sume 164,08 EUR, čo zodpovedá plneniu podľa poistnej zmluvy. Spoluúčasť vo výške 50,00 EUR je podľa poistnej zmluvy nevyplácaná, pretože je uvedená ako nezahrnutá v poistnom plnení. Výsledok rozhodnutia je ovplyvnený rizikovým signálom „date_inconsistency“, avšak tento neovplyvnil rozhodnutie o plnení, ktoré zostáva v platnosti.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 528,
+   "tokens_out": 259,
+   "latency_ms": 4295
+  },
+  "cached": false
+ }
+}

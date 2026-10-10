@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A7.4\"], \"rationale\": \"The claim involves the loss of luggage at an airport, and the passenger provided a Property Irregularity Report as required by clause A7.4. Clause A7.1 covers loss of luggage during transportation by the carrier, which applies here. There is no indication of exclusion under general exclusions (A11) or specific exclusions related to the item (e.g., A7.5 or A7.6).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1011,
+   "tokens_out": 116,
+   "latency_ms": 8983
+  },
+  "cached": false
+ }
+}

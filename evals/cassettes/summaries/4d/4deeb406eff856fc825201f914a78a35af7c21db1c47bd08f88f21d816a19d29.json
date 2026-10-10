@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 23. 3. 2026 v súvislosti s liečebnými nákladmi v Akdeniz International Medical Centre a nákupom liekov z lekárne. Uplatnená suma činí 41 288,71 TRY, z čoho 851,50 EUR bolo plnené. Liečebné náklady sú pokryté podľa čl. 4 ods. 1 VPP, lieky z lekárne sú tiež pokryté podľa čl. 4 ods. 1, avšak plnenie v EUR je 0,00. V prípade liekov chýba potvrdenie o výdavku v EUR, čo je v rozporu s požiadavkami na dokumentáciu. Rizikový signál date_inconsistency naznačuje nesúlad medzi dátumom udalosti a dátumom vystavenia účtov. Chýbajúce informácie nie sú uvedené. Odporúčanie: plnenie sumy 851,50 EUR, zamietnutie plnenia za lieky z lekárne kvôli nedostatku dokumentácie v EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 641,
+   "tokens_out": 323,
+   "latency_ms": 11861
+  },
+  "cached": false
+ }
+}

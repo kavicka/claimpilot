@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 18. 4. 2026 došlo k liečebnému výkonu v Andrews International Medical Centre, kde boli uplatnené náklady vo výške 252,45 EUR. Poistná udalosť bola hodnotená ako nezakrytá podľa článku 13 ods. 4 VPP, ktorý vylučuje plnenie nákladov spojených s neoprávneným alebo neovereným poskytovaním zdravotnej starostlivosti. Dôvodom k zamietnutiu je identifikácia rizikového signálu „duplicate_invoice“, čo naznačuje možnú duplikáciu účtovníka alebo neoprávnené uplatnenie. Chýbajúce informácie nie sú zaznamenané. Odporúča sa zamietnutie plnenia vo výške 252,45 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 482,
+   "tokens_out": 254,
+   "latency_ms": 4259
+  },
+  "cached": false
+ }
+}

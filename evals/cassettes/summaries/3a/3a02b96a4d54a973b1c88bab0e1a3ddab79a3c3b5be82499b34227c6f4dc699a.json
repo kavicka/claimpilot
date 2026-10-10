@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 29. 3. 2026 pri cestovaní poistného v rámci poistného produktu Cestovné poistenie Premium. Poistné zdravotné náklady na liečbu v Opčej nemocnici Medved boli vyskytnuté a sú v súlade s podmienkami poistnej zmluvy. Uplatnená suma činí 6 483,40 EUR, čo je presne suma plnenia. Udalosť je pokrytá podľa článku 4 ods. 1 a článku 4 ods. 2 zmluvy, ktoré stanovujú pokrytie liečebných nákladov v prípade nemoci alebo úrazu počas cesty. Rizikové signály nie sú identifikované. Chýbajúce informácie nie sú zaznamenané. Odporúčanie: plnenie vo výške 6 483,40 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 562,
+   "tokens_out": 275,
+   "latency_ms": 4531
+  },
+  "cached": false
+ }
+}

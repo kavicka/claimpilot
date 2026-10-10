@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\",\n    \"value\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Gehirnerschütterung\",\n    \"value\": \"Gehirnerschütterung\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Wien, Österreich\",\n    \"value\": \"Österreich\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Medizinisches Zentrum Rauter\",\n    \"value\": \"Medizinisches Zentrum Rauter\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"S06.0\",\n    \"value\": \"S06.0\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"27.02.1956\",\n    \"value\": \"27.02.1956\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergab\",\n    \"value\": \"Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergaben keine Verletzungen. Die durchgeführte Bildgebung (CT des Schädels) zeigte keine Frakturen oder intrakranielle Blutungen. Der Patient erhielt eine ambulante Nachbeobachtung sowie medikamentöse Unterstützung zur Linderung von Kopfschmerzen. Es wurde eine vorübergehende Arbeitsunfähigkeit empfohlen und eine Rückkehr zur ambulanten Nachsorge in 48 Stunden.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"UNTERSUCHUNG / AUFNAHME 27.07.2026\",\n    \"value\": \"27.07.2026\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2560,
+   "tokens_out": 690,
+   "latency_ms": 15033
+  },
+  "cached": false
+ }
+}

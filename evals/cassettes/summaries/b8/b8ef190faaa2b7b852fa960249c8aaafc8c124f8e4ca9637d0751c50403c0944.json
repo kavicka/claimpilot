@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Nákup nevyhnutných vecí v sume 2 360,08 TRY je poisťovňou preplatený podľa článku 8 ods. 1 zákona o poistení, pretože spĺňa podmienky uvedené v poistnej zmluve.  \nNákup nevyhnutných vecí v sume 1 673,08 TRY je poisťovňou preplatený podľa článku 8 ods. 1 zákona o poistení, pretože spĺňa podmienky uvedené v poistnej zmluve.  \nCelkové plnenie v sume 88,06 EUR je vyplatené na základe uvedených článkov VPP a faktických údajov.  \nŽiadne ďalšie položky nie sú v rámci poistnej zmluvy pokryté.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 547,
+   "tokens_out": 236,
+   "latency_ms": 4051
+  },
+  "cached": false
+ }
+}

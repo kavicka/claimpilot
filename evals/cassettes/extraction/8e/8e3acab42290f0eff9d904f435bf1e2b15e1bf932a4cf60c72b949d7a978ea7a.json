@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Total due HUF\",\n    \"value\": \"HUF\"\n  },\n  \"issue_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"4,685.00\",\n      \"description\": \"Ibuprofen 400mg\",\n      \"page\": 1,\n      \"quote\": \"Ibuprofen 400mg\"\n    },\n    {\n      \"amount\": \"4,017.00\",\n      \"description\": \"Amoxieillin 1g\",\n      \"page\": 1,\n      \"quote\": \"Amoxieillin 1g\"\n    },\n    {\n      \"amount\": \"2,674.00\",\n      \"description\": \"Nasal spray\",\n      \"page\": 1,\n      \"quote\": \"Nasal spray\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"receipt_number\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"11,376.00\",\n    \"value\": \"11,376.00\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1220,
+   "tokens_out": 317,
+   "latency_ms": 5171
+  },
+  "cached": false
+ }
+}

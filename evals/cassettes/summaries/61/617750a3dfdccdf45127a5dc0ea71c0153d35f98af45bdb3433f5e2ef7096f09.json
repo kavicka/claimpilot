@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 11. 6. 2026 došlo k liečebným nákladom v Opčej nemocnici Milotić vo výške 6 034,02 EUR, ktoré sú podľa článku 4 ods. 1 a článku 4 ods. 2 VPP pokryté. Poistný plnenie je odporúčané vo výške 5 984,02 EUR, čo zodpovedá uplatnenej sume mínus spoluúčasť 50,00 EUR. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Poistný plnenie je odporúčané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 564,
+   "tokens_out": 205,
+   "latency_ms": 3523
+  },
+  "cached": false
+ }
+}

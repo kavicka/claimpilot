@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment (hospitalization) for a fracture of the distal radius caused by an accident during skiing. Clause A4.1 covers medical expenses abroad resulting from an acute illness or injury during the trip. There is no indication of pre-existing conditions (A5.1), planned treatment (A5.2), intentional actions (A11.1), alcohol or drugs (A11.2), or events related to war, terrorism, or nuclear incidents (A11.4). Additionally, although the policy includes extreme sports, the exclusion in A11.3 does not apply because the policy explicitly covers extreme sports in the Premium product.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1282,
+   "tokens_out": 159,
+   "latency_ms": 12385
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 7. 7. 2026 pri cestovaní poistného <PERSON_1> v rámci poistného produktu Cestovné poistenie Premium. Poistného sa týkajú liečebné náklady na účte Opčej nemocnice Alković vo výške 4 833,46 EUR, ktoré sú podľa článku 4 ods. 1 a článku 4 ods. 2 VPP pokryté. Poistná udalosť je v súlade s podmienkami poistnej zmluvy, žiadne rizikové signály neboli zaznamenané, chýbajúce informácie nie sú. Poistné plnenie je odporúčané vo výške 4 833,46 EUR, spoluúčasť nepredpokladaná.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 500,
+   "tokens_out": 247,
+   "latency_ms": 4106
+  },
+  "cached": false
+ }
+}

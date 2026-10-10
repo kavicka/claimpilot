@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 10. 8. 2026 došlo k liečebnému výkonu v Medizinisches Zentrum Stalder, za ktorý bol uplatnený náklad vo výške 172,94 CHF. Poistná udalosť bola hodnotená ako nezakrytá podľa článku 13 ods. 4 VPP, ktorý vylučuje plnenie nákladov spojených s neoprávneným alebo nezákonným poskytovaním zdravotnej starostlivosti. Dôvodom k zamietnutiu je identifikácia rizikového signálu „duplicate_invoice“, čo naznačuje možnú duplikáciu účtovnej dokumentácie. Chýbajúce informácie nie sú zaznamenané. Odporúča sa zamietnutie plnenia vo výške 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 488,
+   "tokens_out": 250,
+   "latency_ms": 4190
+  },
+  "cached": false
+ }
+}

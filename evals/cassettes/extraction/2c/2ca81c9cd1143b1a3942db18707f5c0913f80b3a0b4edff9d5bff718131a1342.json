@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"Liečebné náklady Úraz Batožina Oneskorenie batožiny X Storno cesty\",\n    \"values\": [\n      \"Storno cesty\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"691,20\",\n      \"currency\": \"EUR\",\n      \"description\": \"Stornovací poplatok\",\n      \"page\": 1,\n      \"quote\": \"Stornovací poplatok | 691,20 | EUR\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Taliansko\",\n    \"value\": \"Taliansko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"14. 3. 2026\",\n    \"value\": \"14. 3. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Pred odchodom som sa ochorel, lekár mi cestovanie neodporučil. Cestu som stornoval v cestovnej kancelárii. Udalosť sa stala v Livigno, v Taliansku.\",\n    \"value\": \"Pred odchodom som sa ochorel, lekár mi cestovanie neodporučil. Cestu som stornoval v cestovnej kancelárii. Udalosť sa stala v Livigno, v Taliansku.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Livigno, Taliansko\",\n    \"value\": \"Livigno, Taliansko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 872 91 Blhovce\",\n    \"value\": \"<ADDRESS_1>, 872 91 Blhovce\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP40406092\",\n    \"value\": \"CP40406092\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 20. 4. 2026\",\n    \"value\": \"20. 4. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"14. 4. 2026\",\n    \"value\": \"14. 4. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"2. 4. 2026\",\n    \"value\": \"2. 4. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3566,
+   "tokens_out": 836,
+   "latency_ms": 21321
+  },
+  "cached": false
+ }
+}

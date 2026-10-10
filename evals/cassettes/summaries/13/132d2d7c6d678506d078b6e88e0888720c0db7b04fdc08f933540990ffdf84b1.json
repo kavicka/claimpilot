@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady na účtovníctve Medizinisches Zentrum Stark v sume 765,26 EUR nie sú preplatené, pretože sú v súlade s článkom 11 ods. 2 VPP výnimkou z poistnej ochrany. Poisťovňa neprepláca žiadnu sumu, celkové plnenie je 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 467,
+   "tokens_out": 112,
+   "latency_ms": 2123
+  },
+  "cached": false
+ }
+}

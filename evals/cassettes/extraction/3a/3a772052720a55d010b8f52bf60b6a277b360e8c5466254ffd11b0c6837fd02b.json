@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"policy_number\": {\n    \"value\": \"CP78064830\",\n    \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP78064830\",\n    \"page\": 1\n  },\n  \"insured_name\": {\n    \"value\": \"<PERSON_1>\",\n    \"quote\": \"MENO A PRIEZVISKO <PERSON_1>\",\n    \"page\": 1\n  },\n  \"insured_birth_number\": {\n    \"value\": \"<RC_1>\",\n    \"quote\": \"RODNÉ ČÍSLO <RC_1>\",\n    \"page\": 1\n  },\n  \"insured_address\": {\n    \"value\": \"<ADDRESS_1>, 896 74 Porúbka\",\n    \"quote\": \"ADRESA <ADDRESS_1>, 896 74 Porúbka\",\n    \"page\": 1\n  },\n  \"insured_phone\": {\n    \"value\": \"<PHONE_1>\",\n    \"quote\": \"TELEFÓN <PHONE_1>\",\n    \"page\": 1\n  },\n  \"insured_email\": {\n    \"value\": \"<EMAIL_1>\",\n    \"quote\": \"E-MAIL <EMAIL_1>\",\n    \"page\": 1\n  },\n  \"iban\": {\n    \"value\": \"<IBAN_1>\",\n    \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>\",\n    \"page\": 1\n  },\n  \"destination_country\": {\n    \"value\": \"Chorvátsko\",\n    \"quote\": \"Chorvátsko\",\n    \"page\": 1\n  },\n  \"trip_start\": {\n    \"value\": \"26. 3. 2026\",\n    \"quote\": \"CESTA OD 26. 3. 2026\",\n    \"page\": 1\n  },\n  \"trip_end\": {\n    \"value\": \"1. 4. 2026\",\n    \"quote\": \"CESTA DO 1. 4. 2026\",\n    \"page\": 1\n  },\n  \"event_date\": {\n    \"value\": \"29. 3. 2026\",\n    \"quote\": \"DÁTUM VZNIKU UDALOSTI 29. 3. 2026\",\n    \"page\": 1\n  },\n  \"event_place\": {\n    \"value\": \"Zadar, Chorvátsko\",\n    \"quote\": \"MIESTO VZNIKU UDALOSTI Zadar, Chorvátsko\",\n    \"page\": 1\n  },\n  \"claim_types\": {\n    \"values\": [\"Liečebné náklady\"],\n    \"quote\": \"X Liečebné náklady Úraz Batožina Oneskorenie batožiny\",\n    \"page\": 1\n  },\n  \"event_description\": {\n    \"value\": \"Bol som v Zadare, v Chorvátsku, a skôr, ako som sa vrátil domov, začal ma trápiť zápal pľúc. Cítim sa zle, mám horek a kašľem. V tej chvíli som si uvedomil, že by som mal ako cudzinec v zahraničí zavolať lekárovi.\",\n    \"quote\": \"POPIS UDALOSTI Bol som v Zadare, v Chorvátsku, a skôr, ako som sa vrátil domov, začal ma trápiť zápal pľúc. Cítim sa zle, mám horek a kašľem. V tej chvíli som si uvedomil, že by som mal ako cudzinec v zahraničí zavolať lekárovi.\",\n    \"page\": 1\n  },\n  \"claimed_items\": [\n    {\n      \"description\": \"Liečebné náklady - Opća bolnica Medved\",\n      \"amount\": \"6 483,40\",\n      \"currency\": \"EUR\",\n      \"quote\": \"Liečebné náklady - Opća bolnica Medved 6 483,40 EUR\",\n      \"page\": 1\n    }\n  ],\n  \"signature_date\": {\n    \"value\": \"12. 4. 2026\",\n    \"quote\": \"Dátum: 12. 4. 2026\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3606,
+   "tokens_out": 1037,
+   "latency_ms": 49727
+  },
+  "cached": false
+ }
+}

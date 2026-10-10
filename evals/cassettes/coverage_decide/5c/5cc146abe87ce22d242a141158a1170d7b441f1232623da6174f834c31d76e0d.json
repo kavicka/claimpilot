@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A7.4\"], \"rationale\": \"The claim involves the loss of luggage during travel, and the insured has provided a Property Irregularity Report as required by clause A7.4. Clause A7.1 covers loss of luggage during transportation by a carrier, which applies here. There is no indication of any exclusionary factors such as intentional loss, alcohol, extreme sports, or war/terrorism (clauses A11.1–A11.4). The items listed (camera, mobile phone, laptop, suitcase, shoes) are not excluded under A7.6, as they are not cash, payment cards, travel documents, or valuables.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 937,
+   "tokens_out": 157,
+   "latency_ms": 10762
+  },
+  "cached": false
+ }
+}

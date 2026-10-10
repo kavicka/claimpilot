@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "663d4d11a183819d363bf0e72f97ee2ed21e746c5c2d357984ae65ead3d71855",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"queue\": \"senior\", \"rationale\": \"The claim involves a stolen luggage item reported to the police, but the lack of detailed documentation (such as receipts or proof of value) may raise questions about the amount claimed.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 261,
+   "tokens_out": 49,
+   "latency_ms": 6764
+  },
+  "cached": false
+ }
+}

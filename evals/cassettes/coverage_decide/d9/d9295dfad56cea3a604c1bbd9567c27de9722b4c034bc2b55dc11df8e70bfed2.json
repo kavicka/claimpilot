@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A6.1\", \"A6.2\"], \"rationale\": \"The claim involves a fracture of the clavicle caused by an accident during a tandem paragliding flight, which is covered under the accident coverage section. The policy explicitly covers fractures confirmed by a medical report (A6.1), and the payment is a one-time lump sum regardless of the number of fractures (A6.2). The product includes extreme sports, so the exclusion in A11.3 does not apply.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1083,
+   "tokens_out": 118,
+   "latency_ms": 9764
+  },
+  "cached": false
+ }
+}

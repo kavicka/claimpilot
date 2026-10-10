@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "25. 2. 2026 došlo k zrušeniu cesty, za ktorú bol uhradený stornovací poplatok vo výške 1 689,10 EUR. Poistná udalosť je podľa článku 9 ods. 1 a článku 9 ods. 2 VPP pokrytá. Poistné plnenie je odporúčané vo výške 1 351,28 EUR, čo zodpovedá uhradenej sume podľa poistnej zmluvy. Poistný plnenie je plnené v plnej výške, spolupráca poistného poistného nebol vyžadovaná. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú zaznamenané. Poistná udalosť je v súlade s podmienkami poistnej zmluvy.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 490,
+   "tokens_out": 255,
+   "latency_ms": 4427
+  },
+  "cached": false
+ }
+}

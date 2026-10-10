@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A8.1\"], \"rationale\": \"The item 'Oblečenie (nohavice, trčká)' falls under the luggage coverage section. According to clause A7.1, the insurer covers damage to luggage caused by loss during transport. Additionally, clause A8.1 covers necessary clothing for hygiene purposes if the luggage is delayed. The evidence indicates the luggage was lost, and clothing was declared as part of the contents, which supports coverage under these clauses.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 976,
+   "tokens_out": 119,
+   "latency_ms": 9360
+  },
+  "cached": false
+ }
+}

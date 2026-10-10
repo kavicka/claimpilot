@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A5.1\", \"A5.2\"], \"rationale\": \"The claim involves a fracture of the distal radius, which was diagnosed after the insured arrived in Rimini in a state of intoxication (alcolemia 1.4 g/l). According to clause [A5.1], the insurer does not cover costs related to pre-existing health conditions or their complications. Additionally, the injury may be considered a pre-existing condition or related to intoxication, which could fall under exclusions. Clause [A5.2] also excludes coverage for planned examinations and treatments, which may apply if the injury was not accidental but related to intoxication.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 986,
+   "tokens_out": 151,
+   "latency_ms": 12812
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "submission",
+ "prompt_id": "submission/agent",
+ "prompt_hash": "bc9f8df887fa1d06e12d28e2d3a0d5fce30d3e0875e106f0df31c9eff0a26dac",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"status\": \"needs_handler\", \"core_claim_id\": null, \"fields\": [\"event_date\"]}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1221,
+   "tokens_out": 22,
+   "latency_ms": 2129
+  },
+  "cached": false
+ }
+}

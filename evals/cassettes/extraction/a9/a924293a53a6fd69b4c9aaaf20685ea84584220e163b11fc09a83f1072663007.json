@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"file_reference\": {\n    \"value\": \"AYTAY54942\",\n    \"quote\": \"FILE REFERENCE AYTAY54942 | BAG STATUS LOST\",\n    \"page\": 1\n  },\n  \"airline\": {\n    \"value\": \"Adria Sky\",\n    \"quote\": \"Adria Sky\",\n    \"page\": 1\n  },\n  \"flight_number\": {\n    \"value\": \"AY3435\",\n    \"quote\": \"FLIGHT / DATE AY3435 / 07 Feb 2026 | ARRIVAL (LOCAL TIME) 07FEB26 1620\",\n    \"page\": 1\n  },\n  \"flight_date\": {\n    \"value\": \"07 Feb 2026\",\n    \"quote\": \"FLIGHT / DATE AY3435 / 07 Feb 2026 | ARRIVAL (LOCAL TIME) 07FEB26 1620\",\n    \"page\": 1\n  },\n  \"passenger_name\": {\n    \"value\": \"<PERSON_1> MS\",\n    \"quote\": \"PASSENGER NAME <PERSON_1> MS | BAG TAG AY820892\",\n    \"page\": 1\n  },\n  \"bag_tag\": {\n    \"value\": \"AY820892\",\n    \"quote\": \"PASSENGER NAME <PERSON_1> MS | BAG TAG AY820892\",\n    \"page\": 1\n  },\n  \"status\": {\n    \"value\": \"LOST\",\n    \"quote\": \"FILE REFERENCE AYTAY54942 | BAG STATUS LOST\",\n    \"page\": 1\n  },\n  \"arrival_time\": {\n    \"value\": \"07FEB26 1620\",\n    \"quote\": \"FLIGHT / DATE AY3435 / 07 Feb 2026 | ARRIVAL (LOCAL TIME) 07FEB26 1620\",\n    \"page\": 1\n  },\n  \"delivery_time\": {\n    \"value\": \"NOT DELIVERED\",\n    \"quote\": \"DELIVERED TO PASSENGER NOT DELIVERED | DELIVERY ADDRESS HOTEL BODRUM\",\n    \"page\": 1\n  },\n  \"remarks\": {\n    \"value\": \"Bag not delivered on arrival. Contents declared by passenger: Toiletries, Wristwatch, Camera, Suitcase, E-reader.\",\n    \"quote\": \"Bag not delivered on arrival. Contents declared by passenger: Toiletries, Wristwatch, Camera, Suitcase, E-reader.\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2016,
+   "tokens_out": 601,
+   "latency_ms": 35833
+  },
+  "cached": false
+ }
+}

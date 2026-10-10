@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 25. 7. 2026 pri cestovaní poistného <PERSON_1> v rámci poistného produktu Cestovné poistenie Premium. Uplatnené náklady na liečbu v Sándor International Medical Centre vo výške 409 061,00 HUF a lieky z lekárne vo výške 11 376,00 HUF boli podľa článku 4 ods. 1 VPP pokryté. Celkové plnenie činí 1 064,40 EUR, spolupráca nie je vyžadovaná. Rizikové signály nie sú zaznamenané, chýbajúce informácie nie sú identifikované. Plnenie je odporúčané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 575,
+   "tokens_out": 221,
+   "latency_ms": 4000
+  },
+  "cached": false
+ }
+}

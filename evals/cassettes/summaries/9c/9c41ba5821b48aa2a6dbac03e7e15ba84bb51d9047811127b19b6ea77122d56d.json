@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Poliklinika Kašparová vo výške 19 411,00 CZK sú preplatené podľa článku 4 ods. 1 zákona č. 137/2023 Zb. o poistení, pretože sú súčasťou účelového poistenia v rámci cestovného poistenia Premium. Celkové plnenie vo výške 792,29 EUR je vyplatené bez spolucastníctva.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 473,
+   "tokens_out": 145,
+   "latency_ms": 3087
+  },
+  "cached": false
+ }
+}

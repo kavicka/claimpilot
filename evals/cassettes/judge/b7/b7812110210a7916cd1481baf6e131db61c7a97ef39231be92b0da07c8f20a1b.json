@@ -1,0 +1,19 @@
+{
+ "step": "judge",
+ "prompt_id": "summaries/judge",
+ "prompt_hash": "a14837a638786f48a97a5930f8a3a86558d06fc9eb071acda8f07687ed318ecb",
+ "model": "ollama:gemma3:12b",
+ "response": {
+  "text": "{\n  \"completeness\": 4,\n  \"tone\": 3,\n  \"no_overpromise\": 5,\n  \"note\": \"The tone could be improved by softening the language and offering a more empathetic explanation, as the current phrasing feels quite abrupt and impersonal, especially given the negative outcome for the claimant.\"\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "gemma3:12b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 572,
+   "tokens_out": 73,
+   "latency_ms": 8332
+  },
+  "cached": false
+ }
+}

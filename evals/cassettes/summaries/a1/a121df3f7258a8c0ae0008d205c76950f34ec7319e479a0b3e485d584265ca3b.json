@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Medizinisches Zentrum Rauter vo výške 916,18 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení. Suma plnenia činí 866,18 EUR, pričom spolucastné čiastka je 50,00 EUR. Vzhľadom na zistený rizikový signál „date_inconsistency“ bola poistná udalosť podrobená dodatočnej kontrole, avšak to neovplyvnilo rozhodnutie o platení.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 524,
+   "tokens_out": 165,
+   "latency_ms": 2908
+  },
+  "cached": false
+ }
+}

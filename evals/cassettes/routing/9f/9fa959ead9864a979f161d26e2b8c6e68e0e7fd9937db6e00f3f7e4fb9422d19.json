@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "663d4d11a183819d363bf0e72f97ee2ed21e746c5c2d357984ae65ead3d71855",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"queue\": \"senior\", \"rationale\": \"The claim involves a head injury resulting in temporary confusion and memory loss, but no neurological abnormalities were found, and imaging showed no fractures or intracranial bleeding. This raises questions about the severity and necessity of the medical treatment, which may require further judgment to determine if it falls within the policy's coverage.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 499,
+   "tokens_out": 76,
+   "latency_ms": 5200
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"No relevant previous illnesses. No regular medication.\",\n    \"value\": \"No relevant previous illnesses. No regular medication.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Otitis media | ICD-10 H66.9\",\n    \"value\": \"Otitis media\"\n  },\n  \"discharge_date\": {\n    \"page\": 1,\n    \"quote\": \"03/08/2026 | DISCHARGE\",\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Rodos, Greece\",\n    \"value\": \"Greece\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Stevens International Medical Centre\",\n    \"value\": \"Stevens International Medical Centre\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Otitis media | ICD-10 H66.9\",\n    \"value\": \"H66.9\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1> | DOB 23/06/1971\",\n    \"value\": \"23/06/1971\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1> | DOB 23/06/1971\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Attending physician: <PERSON_2> Signature and stamp\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Right ear examination revealed mild erythema and bulging of the tympanic membrane with limited mobility. No purulent discharge observed. Pure tone audiometry showed mild conductive hearing loss in the right ear. No signs of complications such as mastoid tenderness or facial nerve involvement. Treatment included a course of oral amoxicillin-clavulanate and analgesic therapy. Patient advised to return for re-evaluation in 48 hours if symptoms persist or worsen.\",\n    \"value\": \"Right ear examination revealed mild erythema and bulging of the tympanic membrane with limited mobility. No purulent discharge observed. Pure tone audiometry showed mild conductive hearing loss in the right ear. No signs of complications such as mastoid tenderness or facial nerve involvement. Treatment included a course of oral amoxicillin-clavulanate and analgesic therapy. Patient advised to return for re-evaluation in 48 hours if symptoms persist or worsen.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"03/08/2026 | DISCHARGE\",\n    \"value\": \"03/08/2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2062,
+   "tokens_out": 678,
+   "latency_ms": 14459
+  },
+  "cached": false
+ }
+}

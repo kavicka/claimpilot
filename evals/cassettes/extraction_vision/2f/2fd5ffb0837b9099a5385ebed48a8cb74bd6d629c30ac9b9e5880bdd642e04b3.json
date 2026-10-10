@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP25585427\", \"quote\": \"ČISLO POISTNEJ ZMLUVY CP25585427\", \"page\": 1}, \"insured_name\": {\"value\": \"Zina Janečeková\", \"quote\": \"MENO A PRIEZVISKO Zina Janečeková\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"636122/7741\", \"quote\": \"RODNÉ ČÍSLO 636122/7741\", \"page\": 1}, \"insured_address\": {\"value\": \"Sudová 97, 965 79 Štrkovec\", \"quote\": \"ADRESA Sudová 97, 965 79 Štrkovec\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 903 312 196\", \"quote\": \"TELEFÓN +421 903 312 196\", \"page\": 1}, \"insured_email\": {\"value\": \"zina.janecekova50@mail.example.sk\", \"quote\": \"E-MAIL zina.janecekova50@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK87 1100 7662 0542 8442 5887\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK87 1100 7662 0542 8442 5887\", \"page\": 1}, \"destination_country\": {\"value\": \"Rakúsko\", \"quote\": \"KRAJINA CESTY Rakúsko\", \"page\": 1}, \"trip_start\": {\"value\": \"16. 1. 2026\", \"quote\": \"CESTA OD 16. 1. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"21. 1. 2026\", \"quote\": \"CESTA DO 21. 1. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"17. 1. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 17. 1. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Schladming, Rakúsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Schladming, Rakúsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Schladmingu, Rakúsko, a bol som ochorený akútou gastroenteritídou. Citil som sa velmi ťažko, s výraznou bolesťou v bruši a častým príznakom nevoľnosti. Vyhľadal som lekára, ktorý mi poskytol potrebnú starostlivosť.\", \"quote\": \"POPIS UDALOSTI Bol som v Schladmingu, Rakúsko, a bol som ochorený akútou gastroenteritídou. Citil som sa velmi ťažko, s výraznou bolesťou v bruši a častým príznakom nevoľnosti. Vyhľadal som lekára, ktorý mi poskytol potrebnú starostlivosť.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Medizinisches Zentrum Werner\", \"amount\": \"1 093,83\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Medizinisches Zentrum Werner 1 093,83 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"3. 2. 2026\", \"quote\": \"Dátum: 3. 2. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1043,
+   "latency_ms": 35846
+  },
+  "cached": false
+ }
+}

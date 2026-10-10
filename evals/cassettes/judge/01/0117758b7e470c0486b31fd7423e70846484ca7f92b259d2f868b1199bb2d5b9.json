@@ -1,0 +1,19 @@
+{
+ "step": "judge",
+ "prompt_id": "summaries/judge",
+ "prompt_hash": "a14837a638786f48a97a5930f8a3a86558d06fc9eb071acda8f07687ed318ecb",
+ "model": "ollama:gemma3:12b",
+ "response": {
+  "text": "{\n  \"completeness\": 4,\n  \"tone\": 5,\n  \"no_overpromise\": 5,\n  \"note\": \"The completeness score is lower because while the text lists the decision and amounts, it doesn't explicitly state the *reasons* behind the partial coverage for the notebook, which is a crucial detail derived from the facts.\"\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "gemma3:12b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 900,
+   "tokens_out": 84,
+   "latency_ms": 5018
+  },
+  "cached": false
+ }
+}

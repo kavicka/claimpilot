@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 3. 6. 2026 došlo k zdravotnej udalosti v rámci cestovného poistenia Standard. Poistený <PERSON_1> si vydal liečebné náklady vo výške 784,57 EUR v lekárni Medizinisches Zentrum Röhricht, ktoré sú podľa článku 4 ods. 1 VPP pokryté. Odporúča sa plnenie vo výške 754,57 EUR súčasne s účasťou poisteného vo výške 30,00 EUR. Rizikový signál „date_inconsistency“ upozorňuje na nesúlad medzi dátumom udalosti a časom podania žiadosti, čo vyžaduje overenie pravosti udalosti. Chýbajúce informácie nie sú zaznamenané. Plnenie je odporúčané s ohľadom na platné ustanovenia VPP a potvrdené liečebné účty.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 490,
+   "tokens_out": 277,
+   "latency_ms": 4537
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Sullivan International Medical Centre vo výške 258,23 USD sú preplatené, pretože sú v súlade s ustanovením článku 4 ods. 1 zákona o poistení. Suma preplatenia v eurách činí 189,10 EUR. Spoluúčasť vo výške 50,00 EUR je podľa podmienok poistenia nezahrnutá v preplatení.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 457,
+   "tokens_out": 130,
+   "latency_ms": 2870
+  },
+  "cached": false
+ }
+}

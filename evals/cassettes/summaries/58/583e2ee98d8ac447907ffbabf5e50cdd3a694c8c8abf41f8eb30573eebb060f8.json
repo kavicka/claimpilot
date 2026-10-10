@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 25. 7. 2026 pri cestovaní poistného <PERSON_1> v rámci poistného produktu Cestovné poistenie Basic. Poistné zdravotné náklady na liečbu v Ospedale Civile Schiavone v sume 6 920,28 EUR boli čiastočne pokryté v sume 6 870,28 EUR súčasne s účasťou poistného vo výške 50,00 EUR. Uplatnenie nákladov je podľa článku 4 ods. 1 a článku 4 ods. 2 VPP oprávnené, pretože liečba bola poskytnutá v súlade s poistnými podmienkami a v rámci poistnej ochrany. Rizikové signály nie sú zaznamenané, chýbajúce informácie nie sú identifikované. Odporúča sa plnenie vo výške 6 870,28 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 502,
+   "tokens_out": 293,
+   "latency_ms": 11150
+  },
+  "cached": false
+ }
+}

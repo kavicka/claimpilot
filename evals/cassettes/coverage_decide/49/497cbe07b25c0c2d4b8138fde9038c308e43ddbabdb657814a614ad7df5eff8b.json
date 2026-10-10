@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A13.2\"], \"rationale\": \"The claim involves the theft of a winter coat from a parked vehicle, and a police report was filed. Clause A7.1 covers theft of luggage, and clause A13.2 confirms that a police report is required for theft claims, which was provided.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 818,
+   "tokens_out": 84,
+   "latency_ms": 6911
+  },
+  "cached": false
+ }
+}

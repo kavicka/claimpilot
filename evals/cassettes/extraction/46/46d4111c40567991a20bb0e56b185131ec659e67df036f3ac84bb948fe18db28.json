@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"· Liečebné náklady · Úraz\",\n    \"values\": [\n      \"Liečebné náklady\",\n      \"Úraz\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"702,90\",\n      \"currency\": \"EUR\",\n      \"description\": \"Stornovaci poplatok\",\n      \"page\": 1,\n      \"quote\": \"Stornovaci poplatok | 702,90 | EUR\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Turecko\",\n    \"value\": \"Turecko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"25.12.2025\",\n    \"value\": \"25.12.2025\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Batožina Pred odchodom som ochorel, lekár mi cestovanie neodporučil. V dôsledku toho som cestu stornoval v cestovnej kancelárii. udial sa podvrtnutie členkového kíbu.\",\n    \"value\": \"Batožina Pred odchodom som ochorel, lekár mi cestovanie neodporučil. V dôsledku toho som cestu stornoval v cestovnej kancelárii. udial sa podvrtnutie členkového kíbu.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Alanya, Turecko\",\n    \"value\": \"Alanya, Turecko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 828 64 Vysoká pri Morave\",\n    \"value\": \"<ADDRESS_1>, 828 64 Vysoká pri Morave\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP52213778\",\n    \"value\": \"CP52213778\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Datum: 3. 2. 2026\",\n    \"value\": \"3. 2. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"26.1.2026\",\n    \"value\": \"26.1.2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"14.1.2026\",\n    \"value\": \"14.1.2026\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3569,
+   "tokens_out": 840,
+   "latency_ms": 15736
+  },
+  "cached": false
+ }
+}

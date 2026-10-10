@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 27. 4. 2026 v súvislosti s liečebnými nákladmi na Marquez International Medical Centre vo výške 144,75 USD. Poistné plnenie nie je poskytnuté, pretože náklady nepadajú pod poistnú ochranu podľa článku 13 ods. 4 VPP, ktorý vylučuje plnenie za služby poskytované v zahraničí, ak nie sú poskytované v súlade s dohodnutými poskytovateľmi zdravotnej starostlivosti. Na účte bola zaznamenaná výška nákladov 144,75 USD, plnenie v eurách je 0,00. Rizikový signál „duplicate_invoice“ naznačuje možnú duplikáciu účtovníctva, čo zvyšuje pochybnosti o platnosti nákladov. Chýbajúce informácie nie sú zaznamenané. Plnenie odporúčané zamietnuť.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 544,
+   "tokens_out": 305,
+   "latency_ms": 4967
+  },
+  "cached": false
+ }
+}

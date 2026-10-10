@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Lyžiarske okuliare sú preplatené vo výške 119,50 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nKniha a čítačka sú preplatené vo výške 174,42 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nNotebook je preplatený vo výške 425,58 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.  \nOblečenie (nohavice, tričká) je preplatené vo výške 161,57 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 zákona o poistení.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 820,
+   "tokens_out": 248,
+   "latency_ms": 5055
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment (hospitalization and treatment for a fracture of the distal radius) resulting from an accident during a tandem paragliding flight. Clause A4.1 explicitly covers medical expenses abroad due to an acute illness or injury during the trip. There is no indication that the injury was pre-existing (A5.1), intentional (A11.1), under the influence of alcohol or drugs (A11.2), or related to war, terrorism, or nuclear events (A11.4). Although paragliding is an extreme sport, the policy does not exclude coverage for this specific incident because the exclusion in A11.3 only applies if the policy explicitly excludes extreme sports, which is not the case here.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1254,
+   "tokens_out": 178,
+   "latency_ms": 13002
+  },
+  "cached": false
+ }
+}

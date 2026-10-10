@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP43635675\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP43635675\", \"page\": 1}, \"insured_name\": {\"value\": \"Cyril Rusnak\", \"quote\": \"MENO A PRIEZVISKO Cyril Rusnak\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"620726/2600\", \"quote\": \"RODNÉ ČÍSLO 620726/2600\", \"page\": 1}, \"insured_address\": {\"value\": \"Kórejská 524, 880 98 Plavé Vozokany\", \"quote\": \"ADRESA Kórejská 524, 880 98 Plavé Vozokany\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 905 791 308\", \"quote\": \"TELEFÓN +421 905 791 308\", \"page\": 1}, \"insured_email\": {\"value\": \"cyril.rusnak5@mail.example.sk\", \"quote\": \"E-MAIL cyril.rusnak5@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK14 5600 0000 0022 6037 2406\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK14 5600 0000 0022 6037 2406\", \"page\": 1}, \"destination_country\": {\"value\": \"Španielsko\", \"quote\": \"KRAJINA CESTY Španielsko\", \"page\": 1}, \"trip_start\": {\"value\": \"3. 4. 2026\", \"quote\": \"CESTA OD 3. 4. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"16. 4. 2026\", \"quote\": \"CESTA DO 16. 4. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"3. 4. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 3. 4. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Barcelona, Španielsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Barcelona, Španielsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady □ Úraz □ Batožina □ Oneskorenie batožiny □ Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Počas cesty som sa v Barcelone podvrtil členkovému kĺbu. Už na mieste som sa obrátil na lekára, ktorý mi poskytol potrebnú pomoc. Následne som sa vyžiadal o ďalšie vyšetrenie v miestnej nemocnici.\", \"quote\": \"POPIS UDALOSTI Počas cesty som sa v Barcelone podvrtil členkovému kĺbu. Už na mieste som sa obrátil na lekára, ktorý mi poskytol potrebnú pomoc. Následne som sa vyžiadal o ďalšie vyšetrenie v miestnej nemocnici.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Merino International Medical Centre\", \"amount\": \"849,93\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Merino International Medical Centre 849,93 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"27. 4. 2026\", \"quote\": \"Dátum: 27. 4. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1014,
+   "latency_ms": 35469
+  },
+  "cached": false
+ }
+}

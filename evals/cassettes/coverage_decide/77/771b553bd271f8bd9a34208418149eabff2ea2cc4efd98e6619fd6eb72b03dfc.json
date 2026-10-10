@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves treatment for an acute injury (ankle sprain) that occurred during a trip. Clause A4.1 covers medical treatment, including outpatient care and prescribed medication, resulting from an acute illness or injury during travel. There is no indication that the injury was pre-existing (A5.1 would apply if it were), and the treatment was necessary and appropriate.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 860,
+   "tokens_out": 99,
+   "latency_ms": 10076
+  },
+  "cached": false
+ }
+}

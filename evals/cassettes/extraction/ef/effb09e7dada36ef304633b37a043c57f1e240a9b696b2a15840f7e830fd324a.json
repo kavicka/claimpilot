@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"No relevant previous illnesses. No regular medication.\",\n    \"value\": \"No relevant previous illnesses. No regular medication.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Acute upper respiratory infection\",\n    \"value\": \"Acute upper respiratory infection\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Thessaloniki, Greece\",\n    \"value\": \"Greece\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Roberts International Medical Centre\",\n    \"value\": \"Roberts International Medical Centre\"\n  },\n  \"icd10_code\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"patient_birth_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Attending physician: <PERSON_2> Signature and stamp\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Physical examination reveals mild pharyngeal erythema, clear nasal discharge, and bilateral tender anterior cervical lymphadenopathy. A complete blood count shows a mild lymphocytosis, consistent with a viral etiology. Chest Xray is unremarkable. The patient was prescribed symptomatic treatment including paracetamol for fever and throat discomfort, and nasal decongestants. The patient is advised to rest, maintain hydration, and return for follow-up if symptoms persist or worsen.\",\n    \"value\": \"Physical examination reveals mild pharyngeal erythema, clear nasal discharge, and bilateral tender anterior cervical lymphadenopathy. A complete blood count shows a mild lymphocytosis, consistent with a viral etiology. Chest Xray is unremarkable. The patient was prescribed symptomatic treatment including paracetamol for fever and throat discomfort, and nasal decongestants. The patient is advised to rest, maintain hydration, and return for follow-up if symptoms persist or worsen.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"08/07/2026\",\n    \"value\": \"08/07/2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2039,
+   "tokens_out": 590,
+   "latency_ms": 27376
+  },
+  "cached": false
+ }
+}

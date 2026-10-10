@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The item was stolen from a vehicle while unattended, which is explicitly excluded under clause A7.5. The claim meets the conditions of this exclusion.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 957,
+   "tokens_out": 57,
+   "latency_ms": 6573
+  },
+  "cached": false
+ }
+}

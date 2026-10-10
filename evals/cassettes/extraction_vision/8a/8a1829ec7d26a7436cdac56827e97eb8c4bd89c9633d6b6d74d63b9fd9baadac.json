@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP57130035\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP57130035\", \"page\": 1}, \"insured_name\": {\"value\": \"Nora Tomanová\", \"quote\": \"MENO A PRIEZVISKO Nora Tomanová\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"068105/7333\", \"quote\": \"RODNÉ ČÍSLO 068105/7333\", \"page\": 1}, \"insured_address\": {\"value\": \"U Mlýnského Rybníka 993, 982 25 Poběžovice\", \"quote\": \"ADRESA U Mlýnského Rybníka 993, 982 25 Poběžovice\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 916 611 497\", \"quote\": \"TELEFÓN +421 916 611 497\", \"page\": 1}, \"insured_email\": {\"value\": \"nora.tomanova68@posta.example.sk\", \"quote\": \"E-MAIL nora.tomanova68@posta.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK40 3100 0000 0071 6601 4333\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK40 3100 0000 0071 6601 4333\", \"page\": 1}, \"destination_country\": {\"value\": \"Chorvátsko\", \"quote\": \"KRAJINA CESTY Chorvátsko\", \"page\": 1}, \"trip_start\": {\"value\": \"14. 8. 2026\", \"quote\": \"CESTA OD 14. 8. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"20. 8. 2026\", \"quote\": \"CESTA DO 20. 8. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"19. 8. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 19. 8. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Split, Chorvátsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Split, Chorvátsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Split, Chorvátsko, kvôli zdravotnej probléme akútna infekcia horných dýchacích ciest. Prešiel som liečbou u lokálneho lekára.\", \"quote\": \"POPIS UDALOSTI Bol som v Split, Chorvátsko, kvôli zdravotnej probléme akútna infekcia horných dýchacích ciest. Prešiel som liečbou u lokálneho lekára.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Poliklinika Tomičić\", \"amount\": \"172,71\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Poliklinika Tomičić 172,71 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"24. 8. 2026\", \"quote\": \"Dátum: 24. 8. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 982,
+   "latency_ms": 34608
+  },
+  "cached": false
+ }
+}

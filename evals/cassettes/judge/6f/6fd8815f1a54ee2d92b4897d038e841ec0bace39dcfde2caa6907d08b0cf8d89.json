@@ -1,0 +1,19 @@
+{
+ "step": "judge",
+ "prompt_id": "summaries/judge",
+ "prompt_hash": "a14837a638786f48a97a5930f8a3a86558d06fc9eb071acda8f07687ed318ecb",
+ "model": "ollama:gemma3:12b",
+ "response": {
+  "text": "{\"completeness\": 5, \"tone\": 5, \"no_overpromise\": 4, \"note\": \"The text receives a '4' for no_overpromise because while generally accurate, it doesn't explicitly mention the reduction in the medical expense reimbursement (530.44 EUR vs. 560.44 EUR claimed), which could be perceived as an overpromise if the client isn't aware of the difference.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "gemma3:12b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 792,
+   "tokens_out": 97,
+   "latency_ms": 6652
+  },
+  "cached": false
+ }
+}

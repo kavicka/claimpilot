@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/group_de",
+ "prompt_hash": "a157a4d1fdc75035a3a7ce98a68f15da6e3793673e2fea51d86535e1978e6bae",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Produkt: Cestovné poistenie Standard. Ereignis: Medizinische Behandlung am 3.6.2026. Entscheidung: Leistungsfähig. Auszahlung: 754,57 EUR. Maßgebliche Artikel: čl. 4 ods. 1. Spoluversicherung: 30,00 EUR. Risikosignale: date_inconsistency. Keine fehlenden Informationen.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 396,
+   "tokens_out": 106,
+   "latency_ms": 2020
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"invoice_number\": {\n    \"value\": \"RE-2026-99548\",\n    \"quote\": \"Rechnung Nr. RE-2026-99548\",\n    \"page\": 1\n  },\n  \"issue_date\": {\n    \"value\": \"20.03.2026\",\n    \"quote\": \"Datum: 20.03.2026\",\n    \"page\": 1\n  },\n  \"provider_name\": {\n    \"value\": \"Medizinisches Zentrum Holzmann\",\n    \"quote\": \"Medizinisches Zentrum Holzmann\",\n    \"page\": 1\n  },\n  \"provider_country\": {\n    \"value\": \"Österreich\",\n    \"quote\": \"Salzburg, Österreich\",\n    \"page\": 1\n  },\n  \"patient_name\": {\n    \"value\": \"<PERSON_1>\",\n    \"quote\": \"<PERSON_1>, geb. 01.08.1969 | 20.03.2026\",\n    \"page\": 1\n  },\n  \"service_date\": {\n    \"value\": \"20.03.2026\",\n    \"quote\": \"Datum: 20.03.2026\",\n    \"page\": 1\n  },\n  \"currency\": {\n    \"value\": \"EUR\",\n    \"quote\": \"# | Leistung | Betrag (EUR)\",\n    \"page\": 1\n  },\n  \"line_items\": [\n    {\n      \"description\": \"Notfallbehandlung\",\n      \"amount\": \"207,07\",\n      \"quote\": \"1 | Notfallbehandlung | 207,07\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Röntgen\",\n      \"amount\": \"143,89\",\n      \"quote\": \"2 | Röntgen | 143,89\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Gipsverband\",\n      \"amount\": \"141,00\",\n      \"quote\": \"3 | Gipsverband | 141,00\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Physiotherapie\",\n      \"amount\": \"57,39\",\n      \"quote\": \"4 | Physiotherapie | 57,39\",\n      \"page\": 1\n    },\n    {\n      \"description\": \"Computertomographie\",\n      \"amount\": \"226,47\",\n      \"quote\": \"5 | Computertomographie | 226,47\",\n      \"page\": 1\n    }\n  ],\n  \"total\": {\n    \"value\": \"775,82\",\n    \"quote\": \"Gesamtbetrag | 775,82 EUR\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1857,
+   "tokens_out": 655,
+   "latency_ms": 37364
+  },
+  "cached": false
+ }
+}

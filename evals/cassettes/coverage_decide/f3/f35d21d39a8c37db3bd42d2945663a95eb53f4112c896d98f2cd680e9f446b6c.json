@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"needs_review\", \"clause_ids\": [\"A7.4\", \"A7.5\"], \"rationale\": \"The claim involves a lost bag containing a camera, which falls under the 'valuables' category. Clause A7.4 requires a Property Irregularity Report, which was provided. Clause A7.1 covers loss during transport, which seems applicable. However, clause A7.5 excludes coverage for valuables left unattended in public places. The evidence does not explicitly state whether the bag was left unattended, so it is unclear if this exclusion applies. Therefore, the claim needs further review to determine if the bag was left unattended.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1008,
+   "tokens_out": 141,
+   "latency_ms": 10201
+  },
+  "cached": false
+ }
+}

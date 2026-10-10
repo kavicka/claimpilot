@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/group_de",
+ "prompt_hash": "6e81862d38b95e09d16edb12f4ac03e4a4a16ab2a4da3ab29ac3ce23d368990d",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Produkt: Cestovné poistenie Premium. Ereignis: Unfall am 20. 3. 2026. Entscheidung: Leistungen wurden gewährt. Auszahlungsbetrag: 1 275,82 EUR. Maßgebliche Artikel der Bedingungen: čl. 4 ods. 1, čl. 6 ods. 1. Die Leistungen umfassen 775,82 EUR für medizinische Kosten und 500,00 EUR Einmalzahlung bei Fraktur. Keine Selbstbeteiligung.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 537,
+   "tokens_out": 141,
+   "latency_ms": 3043
+  },
+  "cached": false
+ }
+}

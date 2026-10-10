@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "663d4d11a183819d363bf0e72f97ee2ed21e746c5c2d357984ae65ead3d71855",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"queue\": \"senior\", \"rationale\": \"The claim involves an injury (sprain) that occurred after the client was advised by a doctor not to travel, which may indicate a pre-existing condition or a situation that could be excluded under the policy. The medical report does not explicitly confirm if the injury was related to the trip or if the client had prior health issues that could affect coverage.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 665,
+   "tokens_out": 83,
+   "latency_ms": 10425
+  },
+  "cached": false
+ }
+}

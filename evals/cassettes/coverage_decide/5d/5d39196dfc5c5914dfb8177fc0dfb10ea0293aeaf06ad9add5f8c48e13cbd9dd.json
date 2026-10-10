@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for an ankle sprain sustained during a walk in New York, USA. According to clause [A4.1], the insurance covers 'primerané a nevyhnutné náklady na ambulantné ošetrenie... ak boli vynaložené v dôsledku akútneho ochorenia alebo úrazu počas cesty.' The evidence confirms an acute injury (ankle sprain) occurred during the trip, and the treatment provided (ice, compression, elevation, and medication) is appropriate and necessary. No exclusions apply, as there is no indication of pre-existing conditions, alcohol, extreme sports, or intentional harm.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1224,
+   "tokens_out": 173,
+   "latency_ms": 12672
+  },
+  "cached": false
+ }
+}

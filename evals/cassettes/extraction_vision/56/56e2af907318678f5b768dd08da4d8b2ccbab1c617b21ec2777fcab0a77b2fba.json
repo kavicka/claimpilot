@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"INV-2026-23439\", \"quote\": \"Invoice No. INV-2026-23439\", \"page\": 1}, \"issue_date\": {\"value\": \"09/04/2026\", \"quote\": \"Date: 09/04/2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Merino International Medical Centre\", \"quote\": \"Merino International Medical Centre\", \"page\": 1}, \"provider_country\": {\"value\": \"Spain\", \"quote\": \"Barcelona, Spain\", \"page\": 1}, \"patient_name\": {\"value\": \"Cyril Rusnak\", \"quote\": \"Cyril Rusnak, DOB 26/07/1962\", \"page\": 1}, \"service_date\": {\"value\": \"07/04/2026\", \"quote\": \"DATE OF SERVICE 07/04/2026\", \"page\": 1}, \"currency\": {\"value\": \"€\", \"quote\": \"849.93 €\", \"page\": 1}, \"line_items\": [{\"description\": \"Emergency room treatment\", \"amount\": \"140.55\", \"quote\": \"1 Emergency room treatment 140.55\", \"page\": 1}, {\"description\": \"CT scan\", \"amount\": \"497.94\", \"quote\": \"2 CT scan 497.94\", \"page\": 1}, {\"description\": \"Laboratory tests\", \"amount\": \"99.18\", \"quote\": \"3 Laboratory tests 99.18\", \"page\": 1}, {\"description\": \"IV infusion\", \"amount\": \"112.26\", \"quote\": \"4 IV infusion 112.26\", \"page\": 1}], \"total\": {\"value\": \"849.93 €\", \"quote\": \"Total due 849.93 €\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 458,
+   "latency_ms": 23530
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 19. 8. 2026 došlo k liečebnému výkonu v Poliklinike Tomičić, za ktorý bol uplatnený náklad vo výške 172,71 EUR. Poistná udalosť bola hodnotená ako nezakrytá podľa článku 13 ods. 4 VPP, ktorý vylučuje pokrytie nákladov spojených s neoprávneným alebo nezákonným poskytovaním zdravotnej starostlivosti. Rizikový signál „duplicate_invoice“ naznačuje, že faktúra môže byť duplikátom, čo podkopáva jej platnosť. Chýbajúce informácie nie sú zaznamenané. Odporúča sa zamietnutie nároku s plnením 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 485,
+   "tokens_out": 236,
+   "latency_ms": 3994
+  },
+  "cached": false
+ }
+}

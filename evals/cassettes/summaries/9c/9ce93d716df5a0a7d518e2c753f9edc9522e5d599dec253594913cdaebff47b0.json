@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Medizinisches Zentrum Röhricht vo výške 784,57 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení, pretože sú súčasťou pokrytého rizika.  \nVýška preplatenia činí 754,57 EUR, pričom poistný poplatok výšky 30,00 EUR je zodpovedný poistného.  \nRizikový signál „date_inconsistency“ neovplyvňuje rozhodnutie o plnení, pretože sa jedná o jednotlivú položku s jasne definovaným dátumom udalosti 3. 6. 2026.  \nVšetky podmienky pre plnenie sú splnené, výška plnenia je v súlade s uvedenými údajmi.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 471,
+   "tokens_out": 253,
+   "latency_ms": 4160
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP27013243\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP27013243\", \"page\": 1}, \"insured_name\": {\"value\": \"Izabela Fabiánová\", \"quote\": \"MENO A PRIEZVISKO Izabela Fabiánová\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"776104/5710\", \"quote\": \"RODNÉ ČÍSLO 776104/5710\", \"page\": 1}, \"insured_address\": {\"value\": \"Nitrianska 3, 866 12 Dobroč\", \"quote\": \"ADRESA Nitrianska 3, 866 12 Dobroč\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 905 280 947\", \"quote\": \"TELEFÓN +421 905 280 947\", \"page\": 1}, \"insured_email\": {\"value\": \"izabela.fabianova40@mail.example.sk\", \"quote\": \"E-MAIL izabela.fabianova40@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK43 3100 0000 0025 9032 3877\", \"quote\": \"IBAN NA PLATBU POISTNÉHO PLNENIA SK43 3100 0000 0025 9032 3877\", \"page\": 1}, \"destination_country\": {\"value\": \"Chorvátsko\", \"quote\": \"KRAJINA CESTY Chorvátsko\", \"page\": 1}, \"trip_start\": {\"value\": \"4. 6. 2026\", \"quote\": \"CESTA OD 4. 6. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"14. 6. 2026\", \"quote\": \"CESTA DO 14. 6. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"11. 6. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 11. 6. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Split, Chorvátsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Split, Chorvátsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. Diagnozovaný som s zápalom plúc. Som na liečbe v mieste udalosti.\", \"quote\": \"POPIS UDALOSTI Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. Diagnozovaný som s zápalom plúc. Som na liečbe v mieste udalosti.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Opća bolnica Milotić\", \"amount\": \"6 034,02\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Opća bolnica Milotić 6 034,02 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"30. 6. 2026\", \"quote\": \"Dátum: 30. 6. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 958,
+   "latency_ms": 33578
+  },
+  "cached": false
+ }
+}

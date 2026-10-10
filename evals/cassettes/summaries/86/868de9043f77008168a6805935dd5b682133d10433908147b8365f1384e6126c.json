@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Marquez International Medical Centre vo výške 144,75 USD sú preplatené podľa článku 4 ods. 1 zákona o poistení.  \nLieky z lekárne vo výške 43,92 USD sú preplatené podľa článku 4 ods. 1 zákona o poistení.  \nSpolu je preplatených 188,67 USD, čo zodpovedá 174,70 EUR.  \nSpolucastenie nie je uplatnené, pretože nie je uvedené v zmluve.  \nVšetky náklady sú v súlade s podmienkami poistenia a sú preplatené v plnej výške.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 594,
+   "tokens_out": 204,
+   "latency_ms": 4077
+  },
+  "cached": false
+ }
+}

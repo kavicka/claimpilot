@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"file_reference\": {\"value\": \"MUCDN61116\", \"quote\": \"MUCDN61116\", \"page\": 1}, \"airline\": {\"value\": \"Danubia Air\", \"quote\": \"Danubia Air\", \"page\": 1}, \"flight_number\": {\"value\": \"DN6965\", \"quote\": \"DN6965\", \"page\": 1}, \"flight_date\": {\"value\": \"23 May 2026\", \"quote\": \"23 May 2026\", \"page\": 1}, \"passenger_name\": {\"value\": \"SENKOVA/DRAHOMIRA MS\", \"quote\": \"SENKOVA/DRAHOMIRA MS\", \"page\": 1}, \"bag_tag\": {\"value\": \"DN664365\", \"quote\": \"DN664365\", \"page\": 1}, \"status\": {\"value\": \"LOST\", \"quote\": \"LOST\", \"page\": 1}, \"arrival_time\": {\"value\": \"23MAY26 1235\", \"quote\": \"23MAY26 1235\", \"page\": 1}, \"delivery_time\": {\"value\": null, \"quote\": null, \"page\": 1}, \"remarks\": {\"value\": \"Bag not delivered on arrival. Contents declared by passenger: Camera, Mobile phone, Laptop, Suitcase, Shoes.\", \"quote\": \"Bag not delivered on arrival. Contents declared by passenger: Camera, Mobile phone, Laptop, Suitcase, Shoes.\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2062,
+   "tokens_out": 352,
+   "latency_ms": 23433
+  },
+  "cached": false
+ }
+}

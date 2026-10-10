@@ -1,0 +1,19 @@
+{
+ "step": "coverage_map",
+ "prompt_id": "coverage/map",
+ "prompt_hash": "3adfababe8c7d962b2d1125a0e768e6b3904a0b59c20309894d9f79b3650f169",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"items\": [{\"ref\": \"I1\", \"coverage\": \"delay\", \"category\": \"dental\"}]}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 464,
+   "tokens_out": 28,
+   "latency_ms": 4844
+  },
+  "cached": false
+ }
+}

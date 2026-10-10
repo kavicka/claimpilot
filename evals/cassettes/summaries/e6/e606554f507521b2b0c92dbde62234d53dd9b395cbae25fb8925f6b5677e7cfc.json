@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady na účtovníctve Medizinisches Zentrum Hofmann vo výške 878,17 CHF nie sú preplatené, pretože sú výsledkom výkonu, ktorý je vylúčený z poistenia podľa článku 11 ods. 2 VPP. Poisťovňa neprepláca žiadnu sumu, pretože náklady sú vylúčené z poistenia. Výška poistného plnenia je 0,00 EUR. Poistný prípad je zameraný na vylúčené rizikové signály spojené s alkoholom.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 522,
+   "tokens_out": 186,
+   "latency_ms": 3565
+  },
+  "cached": false
+ }
+}

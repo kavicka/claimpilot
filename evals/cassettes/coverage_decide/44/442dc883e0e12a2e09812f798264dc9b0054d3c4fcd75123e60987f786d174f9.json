@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A5.1\"], \"rationale\": \"The claim involves treatment for unstable angina, which is a pre-existing condition (arterial hypertension treated since 2024 and prior cardiology check-up for chest pain). Clause A5.1 explicitly excludes coverage for costs related to the treatment of a pre-existing health condition or its complications. The evidence indicates that the condition was not acute or related to an injury during the trip, but rather a continuation of a pre-existing condition.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 865,
+   "tokens_out": 114,
+   "latency_ms": 10337
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa stala 25. 5. 2026 pri ceste poistného <PERSON_1> v rámci poistného produktu Cestovné poistenie Basic. Poistné záťaži sa týkajú poškodenia alebo straty osobného majetku, konkrétne fotoaparát, mobilný telefón, notebook, cestovný kufor a topánky. Podľa článku 7 ods. 1 a 7 ods. 2 VPP sú všetky položky pokryté. Poistné plnenie je v súčte 332,34 EUR, z toho 150,00 EUR za fotoaparát, 150,00 EUR za cestovný kufor a 32,34 EUR za topánky. Mobilný telefón a notebook sú pokryté, avšak plnenie je 0,00 EUR. Výška plnenia je podľa poistnej zmluvy obmedzená na 150,00 EUR za jednu položku, čo je v súlade s článkom 7 ods. 2. Rizikové signály a chýbajúce informácie nie sú zaznamenané. Plnenie je odporúčané v sume 332,34 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 928,
+   "tokens_out": 358,
+   "latency_ms": 6552
+  },
+  "cached": false
+ }
+}

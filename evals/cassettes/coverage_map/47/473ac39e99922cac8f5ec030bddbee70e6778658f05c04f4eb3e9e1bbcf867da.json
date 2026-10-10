@@ -1,0 +1,19 @@
+{
+ "step": "coverage_map",
+ "prompt_id": "coverage/map",
+ "prompt_hash": "f754dcf4d8a0fe96675b190293615e94a34b29a70d00844a27e99fbfe64f6f30",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"items\": [{\"ref\": \"I1\", \"coverage\": \"medical\", \"category\": \"treatment\"}]}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 220,
+   "tokens_out": 26,
+   "latency_ms": 3343
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Bez významných předchozích onemocnění. Trvalou medikaci neužívá.\",\n    \"value\": \"Bez významných předchozích onemocnění. Trvalou medikaci neužívá.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Akutní gastroenteritida | MKN-10 A09\",\n    \"value\": \"Akutní gastroenteritida\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Špindlerův Mlýn, Česká republika\",\n    \"value\": \"Česká republika\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliklinika Veselá\",\n    \"value\": \"Poliklinika Veselá\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Akutní gastroenteritida | MKN-10 A09\",\n    \"value\": \"A09\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PACIENT <PERSON_1> | NAR. 3. 4.\",\n    \"value\": \"3. 4.\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PACIENT <PERSON_1> | NAR. 3. 4.\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Lékař: <PERSON_2>\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Při vyšetření byla potvrzena akutní gastroenteritida, přítomna byla bolest břicha, zvracení a průjem. Výsledky laboratorních testů ukázaly lehkou leukocytózi a zvýšené hodnoty CRP. Pacientovi byla doporučena hydratace, základní diéta a příjem léků proti průjmu. Byl doporučen odpočinek a sledování stavu. V případě horšení se má pacient obrátit na lékaře.\",\n    \"value\": \"Při vyšetření byla potvrzena akutní gastroenteritida, přítomna byla bolest břicha, zvracení a průjem. Výsledky laboratorních testů ukázaly lehkou leukocytózi a zvýšené hodnoty CRP. Pacientovi byla doporučena hydratace, základní diéta a příjem léků proti průjmu. Byl doporučen odpočinek a sledování stavu. V případě horšení se má pacient obrátit na lékaře.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"20. 3. 2026 | 1980\",\n    \"value\": \"20. 3. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1871,
+   "tokens_out": 831,
+   "latency_ms": 22527
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "step": "submission",
+ "prompt_id": "submission/agent",
+ "prompt_hash": "bc9f8df887fa1d06e12d28e2d3a0d5fce30d3e0875e106f0df31c9eff0a26dac",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "",
+  "thinking": null,
+  "tool_calls": [
+   {
+    "id": "call_s5hla5cq",
+    "function": {
+     "index": 0,
+     "name": "submit_claim",
+     "arguments": {
+      "payload": {
+       "claim_type_code": "LUG",
+       "currency": "EUR",
+       "event_country": "TR",
+       "event_date": "2026-02-12",
+       "handler_id": "handler.eval",
+       "iban": "<IBAN_1>",
+       "insured": {
+        "birth_number": "<RC_1>",
+        "name": "<PERSON_1>"
+       },
+       "items": [
+        {
+         "claimed_eur": "85.91",
+         "clause_refs": [
+          "A7.1",
+          "A7.2"
+         ],
+         "coverage_code": "LUG",
+         "decision": "PAY",
+         "payout_eur": "85.91",
+         "ref": "I1"
+        },
+        {
+         "claimed_eur": "196.61",
+         "clause_refs": [
+          "A7.1",
+          "A7.2"
+         ],
+         "coverage_code": "LUG",
+         "decision": "PAY",
+         "payout_eur": "196.61",
+         "ref": "I2"
+        },
+        {
+         "claimed_eur": "832.97",
+         "clause_refs": [
+          "A7.1",
+          "A7.2"
+         ],
+         "coverage_code": "LUG",
+         "decision": "PAY",
+         "payout_eur": "103.39",
+         "ref": "I3"
+        },
+        {
+         "claimed_eur": "134.96",
+         "clause_refs": [
+          "A7.1",
+          "A7.2"
+         ],
+         "coverage_code": "LUG",
+         "decision": "PAY",
+         "payout_eur": "114.96",
+         "ref": "I4"
+        },
+        {
+         "claimed_eur": "170.07",
+         "clause_refs": [
+          "A7.1",
+          "A7.2"
+         ],
+         "coverage_code": "LUG",
+         "decision": "DECLINE",
+         "payout_eur": "0.00",
+         "ref": "I5"
+        }
+       ],
+       "policy_number": "CP59597086",
+       "total_payout": "500.87"
+      }
+     }
+    }
+   }
+  ],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1046,
+   "tokens_out": 448,
+   "latency_ms": 19377
+  },
+  "cached": false
+ }
+}

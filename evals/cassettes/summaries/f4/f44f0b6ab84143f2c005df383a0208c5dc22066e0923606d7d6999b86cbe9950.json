@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Opća bolnica Vučetić vo výške 3 940,61 EUR sú preplatené podľa článku 4 ods. 1 a článku 4 ods. 2 zákona o poistení, pretože sú súčasťou účelového poistenia v rámci cestovného poistenia Basic. Poisťovňa prepláca sumu 3 890,61 EUR, čo zodpovedá plneniu podľa zmluvných podmienok. Spoluúčasť vo výške 50,00 EUR je podľa zmluvy nezahrnutá do plnenia.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 537,
+   "tokens_out": 191,
+   "latency_ms": 3296
+  },
+  "cached": false
+ }
+}

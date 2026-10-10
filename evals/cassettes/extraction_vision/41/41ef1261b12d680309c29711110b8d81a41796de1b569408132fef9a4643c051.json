@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP30182766\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP30182766\", \"page\": 1}, \"insured_name\": {\"value\": \"Alexander Beňuš\", \"quote\": \"MENO A PRIEZVISKO Alexander Beňuš\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"600311/0113\", \"quote\": \"RODNÉ ČÍSLO 600311/0113\", \"page\": 1}, \"insured_address\": {\"value\": \"Záhumenná 9, 869 61 Čaňa\", \"quote\": \"ADRESA Záhumenná 9, 869 61 Čaňa\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 907 111 439\", \"quote\": \"TELEFÓN +421 907 111 439\", \"page\": 1}, \"insured_email\": {\"value\": \"alexander.benus25@example.com\", \"quote\": \"E-MAIL alexander.benus25@example.com\", \"page\": 1}, \"iban\": {\"value\": \"SK74 8330 0000 0035 0512 6062\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK74 8330 0000 0035 0512 6062\", \"page\": 1}, \"destination_country\": {\"value\": \"Maďarsko\", \"quote\": \"KRAJINA CESTY Maďarsko\", \"page\": 1}, \"trip_start\": {\"value\": \"13. 4. 2026\", \"quote\": \"CESTA OD 13. 4. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"22. 4. 2026\", \"quote\": \"CESTA DO 22. 4. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"19. 4. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 19. 4. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Hévíz, Maďarsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Hévíz, Maďarsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Batožina\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Na letisku v Hévíze som stratil/a batožinu. Letecká spoločnosť batožinu stratila, na letisku som spísal/a záznam.\", \"quote\": \"POPIS UDALOSTI Na letisku v Hévíze som stratil/a batožinu. Letecká spoločnosť batožinu stratila, na letisku som spísal/a záznam.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Lyžiarske okuliare\", \"amount\": \"119,50\", \"currency\": \"EUR\", \"quote\": \"Lyžiarske okuliare 119,50 EUR\", \"page\": 1}, {\"description\": \"Kniha a čítáčka\", \"amount\": \"174,42\", \"currency\": \"EUR\", \"quote\": \"Kniha a čítáčka 174,42 EUR\", \"page\": 1}, {\"description\": \"Notebook\", \"amount\": \"882,19\", \"currency\": \"EUR\", \"quote\": \"Notebook 882,19 EUR\", \"page\": 1}, {\"description\": \"Oblečenie (nohavice, trčká)\", \"amount\": \"161,57\", \"currency\": \"EUR\", \"quote\": \"Oblečenie (nohavice, trčká) 161,57 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"4. 5. 2026\", \"quote\": \"Dátum: 4. 5. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1088,
+   "latency_ms": 37512
+  },
+  "cached": false
+ }
+}

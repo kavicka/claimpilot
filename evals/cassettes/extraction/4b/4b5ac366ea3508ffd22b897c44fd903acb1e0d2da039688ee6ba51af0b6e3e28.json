@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"policy_number\": {\n    \"value\": \"CP57130035\",\n    \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP57130035 | DRUH POISTENIA jednorazové\",\n    \"page\": 1\n  },\n  \"product_name\": {\n    \"value\": \"Cestovné poistenie Standard\",\n    \"quote\": \"Poistný certifikát - Cestovné poistenie Standard\",\n    \"page\": 1\n  },\n  \"policy_type\": {\n    \"value\": \"jednorazové\",\n    \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP57130035 | DRUH POISTENIA jednorazové\",\n    \"page\": 1\n  },\n  \"policy_start\": {\n    \"value\": \"14. 8. 2026\",\n    \"quote\": \"ZAČIATOK POISTENIA 14. 8. 2026 | KONIEC POISTENIA 20. 8. 2026\",\n    \"page\": 1\n  },\n  \"policy_end\": {\n    \"value\": \"20. 8. 2026\",\n    \"quote\": \"ZAČIATOK POISTENIA 14. 8. 2026 | KONIEC POISTENIA 20. 8. 2026\",\n    \"page\": 1\n  },\n  \"insured_persons\": [\n    {\n      \"name\": \"<PERSON_1>\",\n      \"birth_number\": \"<RC_1>\",\n      \"quote\": \"<PERSON_1> | <RC_1>\",\n      \"page\": 1\n    }\n  ],\n  \"premium\": {\n    \"value\": \"13,30 EUR\",\n    \"quote\": \"POISTNÉ 13,30 EUR | DÁTUM UZAVRETIA 21. 7. 2026\",\n    \"page\": 1\n  },\n  \"issue_date\": {\n    \"value\": \"21. 7. 2026\",\n    \"quote\": \"POISTNÉ 13,30 EUR | DÁTUM UZAVRETIA 21. 7. 2026\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2715,
+   "tokens_out": 542,
+   "latency_ms": 26393
+  },
+  "cached": false
+ }
+}

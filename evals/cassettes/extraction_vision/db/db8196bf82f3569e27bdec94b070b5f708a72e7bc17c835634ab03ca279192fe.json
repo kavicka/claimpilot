@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"receipt_number\": {\"value\": \"2438/99381\", \"quote\": \"Broj računa 2438/99381\", \"page\": 1}, \"issue_date\": {\"value\": \"23.07.2026. 14:42\", \"quote\": \"23.07.2026. 14:42\", \"page\": 1}, \"pharmacy_name\": {\"value\": \"Ljekarna Maloča\", \"quote\": \"Ljekarna Maloča\", \"page\": 1}, \"currency\": {\"value\": \"EUR\", \"quote\": \"Ukupno za platiti EUR\", \"page\": 1}, \"line_items\": [{\"description\": \"Sprej za nos\", \"amount\": \"5,81\", \"quote\": \"Sprej za nos 5,81\", \"page\": 1}, {\"description\": \"Elastični zavoј\", \"amount\": \"6,52\", \"quote\": \"Elastični zavoј 6,52\", \"page\": 1}, {\"description\": \"Paracetamol 500 mg\", \"amount\": \"4,86\", \"quote\": \"Paracetamol 500 mg 4,86\", \"page\": 1}, {\"description\": \"Ibuprofen 400 mg\", \"amount\": \"11,71\", \"quote\": \"Ibuprofen 400 mg 11,71\", \"page\": 1}], \"total\": {\"value\": \"28,90\", \"quote\": \"Ukupno za platiti EUR 28,90\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1298,
+   "tokens_out": 390,
+   "latency_ms": 17226
+  },
+  "cached": false
+ }
+}

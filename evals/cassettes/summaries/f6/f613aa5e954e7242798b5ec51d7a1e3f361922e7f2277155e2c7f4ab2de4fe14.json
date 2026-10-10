@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Merino International Medical Centre vo výške 849,93 EUR sú poisťovňou preplatené podľa článku 4 ods. 1 zákona o poistení. Suma plnenia činí 799,93 EUR, pričom poistný poplatok vo výške 50,00 EUR je uhradený poistným. Výška plnenia je určená podľa ustanovení článku 4 ods. 1 VPP, ktorý stanovuje podmienky pre plnenie nákladov na liečbu. Rizikový signál „date_inconsistency“ neovplyvňuje rozhodnutie o plnení, pretože náklady sú podľa článku 4 ods. 1 VPP pokryté.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 519,
+   "tokens_out": 226,
+   "latency_ms": 3806
+  },
+  "cached": false
+ }
+}

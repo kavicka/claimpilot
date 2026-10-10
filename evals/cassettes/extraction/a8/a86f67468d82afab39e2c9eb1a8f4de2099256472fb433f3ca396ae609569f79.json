@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"policy_number\": {\n    \"value\": \"CP58181396\",\n    \"quote\": \"CP58181396\",\n    \"page\": 1\n  },\n  \"insured_name\": {\n    \"value\": \"<PERSON_1>\",\n    \"quote\": \"<PERSON_1>\",\n    \"page\": 1\n  },\n  \"insured_birth_number\": {\n    \"value\": \"<RC_1>\",\n    \"quote\": \"<RC_1>\",\n    \"page\": 1\n  },\n  \"insured_address\": {\n    \"value\": \"<ADDRESS_1>, 918 48 Virt\",\n    \"quote\": \"<ADDRESS_1>, 918 48 Virt\",\n    \"page\": 1\n  },\n  \"insured_phone\": {\n    \"value\": \"<PHONE_1>\",\n    \"quote\": \"<PHONE_1>\",\n    \"page\": 1\n  },\n  \"insured_email\": {\n    \"value\": \"<EMAIL_1>\",\n    \"quote\": \"<EMAIL_1>\",\n    \"page\": 1\n  },\n  \"iban\": {\n    \"value\": \"<IBAN_1>\",\n    \"quote\": \"<IBAN_1>\",\n    \"page\": 1\n  },\n  \"destination_country\": {\n    \"value\": \"Taliansko\",\n    \"quote\": \"Taliansko\",\n    \"page\": 1\n  },\n  \"trip_start\": {\n    \"value\": \"19. 7. 2026\",\n    \"quote\": \"19. 7. 2026\",\n    \"page\": 1\n  },\n  \"trip_end\": {\n    \"value\": \"29. 7. 2026\",\n    \"quote\": \"29. 7. 2026\",\n    \"page\": 1\n  },\n  \"event_date\": {\n    \"value\": \"25. 7. 2026\",\n    \"quote\": \"25. 7. 2026\",\n    \"page\": 1\n  },\n  \"event_place\": {\n    \"value\": \"Rimini, Taliansko\",\n    \"quote\": \"Rimini, Taliansko\",\n    \"page\": 1\n  },\n  \"claim_types\": {\n    \"values\": [\"Liečebné náklady\"],\n    \"quote\": \"X Liečebné náklady Úraz Batožina Oneskorenie batožiny\",\n    \"page\": 1\n  },\n  \"event_description\": {\n    \"value\": \"Bol som v Rimini, Taliansko, kde sa mi vyvinul zápal pľúc. Počas pobytu som zažil ťažké dýchanie a vysokú teplotu. Som na liečbe u lokálneho lekára.\",\n    \"quote\": \"Bol som v Rimini, Taliansko, kde sa mi vyvinul zápal pľúc. Počas pobytu som zažil ťažké dýchanie a vysokú teplotu. Som na liečbe u lokálneho lekára.\",\n    \"page\": 1\n  },\n  \"claimed_items\": [\n    {\n      \"description\": \"Liečebné náklady - Ospedale Civile Schiavone\",\n      \"amount\": \"6 920,28\",\n      \"currency\": \"EUR\",\n      \"quote\": \"Liečebné náklady - Ospedale Civile Schiavone\",\n      \"page\": 1\n    }\n  ],\n  \"signature_date\": {\n    \"value\": \"17. 8. 2026\",\n    \"quote\": \"Dátum: 17. 8. 2026\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3595,
+   "tokens_out": 860,
+   "latency_ms": 63436
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The item was stolen from a vehicle that was parked and locked, which falls under the exclusion in clause A7.5. The claim form and police report confirm that the theft occurred from a vehicle, and the item was left unattended in a vehicle, which is explicitly excluded under this clause.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 958,
+   "tokens_out": 85,
+   "latency_ms": 9866
+  },
+  "cached": false
+ }
+}

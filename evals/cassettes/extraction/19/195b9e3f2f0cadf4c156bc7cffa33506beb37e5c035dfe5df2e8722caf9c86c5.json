@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Bez významných předchozích onemocnění. Trvalou medikaci neužívá.\",\n    \"value\": \"Bez významných předchozích onemocnění. Trvalou medikaci neužívá.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Otřes mozku | S06.0\",\n    \"value\": \"Otřes mozku\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Praha, Česká republika\",\n    \"value\": \"Česká republika\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliklinika Kašparová\",\n    \"value\": \"Poliklinika Kašparová\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Otřes mozku | S06.0\",\n    \"value\": \"S06.0\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"28. 9. 1972\",\n    \"value\": \"28. 9. 1972\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PACIENT <PERSON_1> | NAR. 28. 9. 1972\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Lékař: <PERSON_2>\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Pacient při vyšetření prezentoval mírnou závratě, zhoršenou koncentraci a narušenou koordinaci. Neurologické vyšetření bylo v zásadě normální, žádné známky focálního poruchy. Výsledky neuroobrazového vyšetření nepotvrdily zlomeniny ani jiné strukturální změny. Pacient byl hospitalizován na dohled a doporučeno bylo odpočívat a omezit fyzickou i mentální zátěž. Doporučeno je sledovat stav pacienta a opakovat vyšetření po 24 hodinách.\",\n    \"value\": \"Pacient při vyšetření prezentoval mírnou závratě, zhoršenou koncentraci a narušenou koordinaci. Neurologické vyšetření bylo v zásadě normální, žádné známky focálního poruchy. Výsledky neuroobrazového vyšetření nepotvrdily zlomeniny ani jiné strukturální změny. Pacient byl hospitalizován na dohled a doporučeno bylo odpočívat a omezit fyzickou i mentální zátěž. Doporučeno je sledovat stav pacienta a opakovat vyšetření po 24 hodinách.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"11. 1. 2026 | PROPUŠTĚNÍ -\",\n    \"value\": \"11. 1. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1839,
+   "tokens_out": 893,
+   "latency_ms": 17166
+  },
+  "cached": false
+ }
+}

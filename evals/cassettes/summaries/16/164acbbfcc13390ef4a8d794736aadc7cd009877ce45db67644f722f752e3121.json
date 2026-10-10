@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Kniha a čítačka sú v súlade s článkom 7 ods. 5 VPP nezahrnuté do poistenia, preto poisťovňa prepláca 0,00 EUR.  \nZimná bunda je podľa článku 7 ods. 1 a 7 ods. 2 VPP poistená, poisťovňa prepláca 129,20 EUR.  \nMobilný telefón je v súlade s článkom 7 ods. 5 VPP nezahrnutý do poistenia, preto poisťovňa prepláca 0,00 EUR.  \nOblečenie (nohavice, tričká) je podľa článku 7 ods. 1 a 7 ods. 2 VPP poistené, poisťovňa prepláca 145,74 EUR.  \nKozmetika je podľa článku 7 ods. 1 a 7 ods. 2 VPP poistená, poisťovňa prepláca 52,49 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 848,
+   "tokens_out": 283,
+   "latency_ms": 5441
+  },
+  "cached": false
+ }
+}

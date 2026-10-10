@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The item (e-reader) falls under the category of 'cenné veci a elektronika' (valuable items and electronics). According to clause A7.5, the insurer does not cover theft of valuable items and electronics left unattended in the vehicle or in a publicly accessible area. The evidence indicates that the bag was not delivered on arrival and was lost, but there is no indication that the e-reader was left unattended in a vehicle or public area. However, since the bag was lost and not delivered by the carrier, and the e-reader was inside the bag, it is reasonable to infer that the e-reader was not under the passenger's direct supervision at the time of loss. This aligns with the condition in A7.5 that excludes coverage for items left unattended in a publicly accessible area.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1015,
+   "tokens_out": 193,
+   "latency_ms": 12436
+  },
+  "cached": false
+ }
+}

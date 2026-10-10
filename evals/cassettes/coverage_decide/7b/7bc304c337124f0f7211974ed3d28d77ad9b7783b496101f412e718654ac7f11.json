@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The item 'E-reader' falls under the category of 'electronics' mentioned in clause A7.5, which explicitly excludes coverage for theft of valuable items and electronics left unattended in a vehicle or public area. The evidence indicates the bag was not delivered on arrival, but there is no indication that the bag was under the passenger's supervision at the time of loss, which is a requirement for coverage under A7.1.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 941,
+   "tokens_out": 112,
+   "latency_ms": 8866
+  },
+  "cached": false
+ }
+}

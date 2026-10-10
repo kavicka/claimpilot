@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"facility_name\": {\"value\": \"Opća bolnica Vučetić\", \"quote\": \"Opća bolnica Vučetić\", \"page\": 1}, \"facility_country\": {\"value\": \"Hrvatska\", \"quote\": \"Split, Hrvatska\", \"page\": 1}, \"patient_name\": {\"value\": \"Juliana Harváneková\", \"quote\": \"Juliana Harváneková\", \"page\": 1}, \"patient_birth_date\": {\"value\": \"25.11.1986.\", \"quote\": \"RODEN/A 25.11.1986.\", \"page\": 1}, \"visit_date\": {\"value\": \"20.05.2026.\", \"quote\": \"DATUM PREGLEDA / PRIJEMA 20.05.2026.\", \"page\": 1}, \"discharge_date\": {\"value\": \"23.05.2026.\", \"quote\": \"OTPUST 23.05.2026.\", \"page\": 1}, \"diagnosis\": {\"value\": \"Upala pluća\", \"quote\": \"DIJAGNOZA Upala pluća\", \"page\": 1}, \"icd10_code\": {\"value\": \"J18.9\", \"quote\": \"MKB-10 J18.9\", \"page\": 1}, \"anamnesis\": {\"value\": \"Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\", \"quote\": \"Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\", \"page\": 1}, \"treatment\": {\"value\": \"Fizički pregled pokazao je povišenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Liječenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davana uputnica za nadzor u ambulantnoj klinici.\", \"quote\": \"Fizički pregled pokazao je povišenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Liječenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davana uputnica za nadzor u ambulantnoj klinici.\", \"page\": 1}, \"physician_name\": {\"value\": \"Slavica Ivšić\", \"quote\": \"Liječnik: Slavica Ivšić\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2086,
+   "tokens_out": 787,
+   "latency_ms": 32129
+  },
+  "cached": false
+ }
+}

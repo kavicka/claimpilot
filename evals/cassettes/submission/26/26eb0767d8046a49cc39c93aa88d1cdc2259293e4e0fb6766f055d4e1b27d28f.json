@@ -1,0 +1,56 @@
+{
+ "step": "submission",
+ "prompt_id": "submission/agent",
+ "prompt_hash": "bc9f8df887fa1d06e12d28e2d3a0d5fce30d3e0875e106f0df31c9eff0a26dac",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "",
+  "thinking": null,
+  "tool_calls": [
+   {
+    "id": "call_k0fxuezm",
+    "function": {
+     "index": 0,
+     "name": "submit_claim",
+     "arguments": {
+      "payload": {
+       "claim_type_code": "CXL",
+       "currency": "EUR",
+       "event_country": "IT",
+       "event_date": "2026-04-10",
+       "handler_id": "handler.eval",
+       "iban": "<IBAN_1>",
+       "insured": {
+        "birth_number": "<RC_1>",
+        "name": "<PERSON_1>"
+       },
+       "items": [
+        {
+         "claimed_eur": "691.20",
+         "clause_refs": [
+          "A9.1",
+          "A9.2"
+         ],
+         "coverage_code": "CXL",
+         "decision": "PAY",
+         "payout_eur": "552.96",
+         "ref": "I1"
+        }
+       ],
+       "policy_number": "CP40406092",
+       "total_payout": "552.96"
+      }
+     }
+    }
+   }
+  ],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 781,
+   "tokens_out": 191,
+   "latency_ms": 8393
+  },
+  "cached": false
+ }
+}

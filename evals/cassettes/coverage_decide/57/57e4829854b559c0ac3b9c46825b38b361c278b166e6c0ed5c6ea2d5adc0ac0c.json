@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A2.3\", \"A4.1\"], \"rationale\": \"The claim involves acute gastroenteritis, which is defined as an acute illness in clause A2.3. Clause A4.1 covers the costs of prescribed medication as part of treatment for an acute illness during travel. There is no indication of pre-existing conditions, intentional actions, alcohol, or extreme sports, so exclusions do not apply.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1153,
+   "tokens_out": 99,
+   "latency_ms": 9388
+  },
+  "cached": false
+ }
+}

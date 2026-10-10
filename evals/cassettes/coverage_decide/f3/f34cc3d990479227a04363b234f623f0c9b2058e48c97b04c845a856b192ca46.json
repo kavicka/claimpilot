@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A7.4\"], \"rationale\": \"The item 'Topánky' (shoes) falls under the luggage coverage section. The evidence indicates that the luggage was lost at the airport in Hamburg, and the passenger provided a Property Irregularity Report, which is required by clause A7.4. Clause A7.1 confirms that the insurance covers loss of luggage during transportation by the carrier. There is no indication that the shoes are excluded under any other clause, and they are not categorized as cash, documents, or valuables under clause A7.6.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 642,
+   "tokens_out": 136,
+   "latency_ms": 8957
+  },
+  "cached": false
+ }
+}

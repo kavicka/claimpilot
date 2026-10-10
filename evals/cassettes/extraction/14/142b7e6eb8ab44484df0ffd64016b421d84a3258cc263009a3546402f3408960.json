@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Total due Ft\",\n    \"value\": \"Ft\"\n  },\n  \"issue_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"1,789.00\",\n      \"description\": \"Paracetamol 500mg\",\n      \"page\": 1,\n      \"quote\": \"Paracetamol 500mg | 1,789.00\"\n    },\n    {\n      \"amount\": \"3,425.00\",\n      \"description\": \"Elastic bandage\",\n      \"page\": 1,\n      \"quote\": \"Elastic bandage | 3,425.00\"\n    },\n    {\n      \"amount\": \"5,400.00\",\n      \"description\": \"Amoxicillin 1g\",\n      \"page\": 1,\n      \"quote\": \"Amoxicillin 1g | 5,400.00\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Kiss Pharmacy\",\n    \"value\": \"Kiss Pharmacy\"\n  },\n  \"receipt_number\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"10,614.00\",\n    \"value\": \"10,614.00\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1231,
+   "tokens_out": 351,
+   "latency_ms": 5651
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment (fracture of the distal radius) resulting from an accident (paragliding tandem flight) during a trip. Clause A4.1 explicitly covers medical expenses, including hospitalization and treatment, resulting from an acute illness or injury during the trip. There is no indication that the injury was pre-existing (which would trigger A5.1) or that the treatment was planned or cosmetic (which would trigger A5.2).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 890,
+   "tokens_out": 118,
+   "latency_ms": 10725
+  },
+  "cached": false
+ }
+}

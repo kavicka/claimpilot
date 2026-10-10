@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"X Liečebné náklady Úraz Batožina Oneskorenie batožiny\",\n    \"values\": [\n      \"Liečebné náklady\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"878,17\",\n      \"currency\": \"CHF\",\n      \"description\": \"Liečebné náklady – Medizinisches Zentrum Hofmann\",\n      \"page\": 1,\n      \"quote\": \"Liečebné náklady – Medizinisches Zentrum Hofmann | 878,17 | CHF\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Švajčiarsko\",\n    \"value\": \"Švajčiarsko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"27. 7. 2026\",\n    \"value\": \"27. 7. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Bol som v Luzern, Švajčiarsko, kde som sa zrazil a utrpel otras mozgu. Po nehode som sa vyžiadal o lekárske pomocné opatrenia.\",\n    \"value\": \"Bol som v Luzern, Švajčiarsko, kde som sa zrazil a utrpel otras mozgu. Po nehode som sa vyžiadal o lekárske pomocné opatrenia.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Luzern, Švajčiarsko\",\n    \"value\": \"Luzern, Švajčiarsko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 934 88 Valkovce\",\n    \"value\": \"<ADDRESS_1>, 934 88 Valkovce\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP80794454\",\n    \"value\": \"CP80794454\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 8. 8. 2026\",\n    \"value\": \"8. 8. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"29. 7. 2026\",\n    \"value\": \"29. 7. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"20. 7. 2026\",\n    \"value\": \"20. 7. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3576,
+   "tokens_out": 854,
+   "latency_ms": 16100
+  },
+  "cached": false
+ }
+}

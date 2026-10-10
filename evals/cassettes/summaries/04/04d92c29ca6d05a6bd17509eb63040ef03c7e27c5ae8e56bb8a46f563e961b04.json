@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "7446883fb4b2b0d4134713ee4e40d947f51d17deb7518edbbe65069932fa50f5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Poliklinika Kašparová sú preplatené vo výške 19 411,00 CZK, čo zodpovedá 792,29 EUR, podľa článku 4 ods. 1 zákona o poistení osobných rizík. Výška plnenia je určená na základe platných kurzov a výpočtových pravidiel poisťovne. Všetky potrebné dokumenty boli predložené a žiadne informácie nechýbajú. Rizikový signál „early_claim“ neovplyvnil rozhodnutie o plnení.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 529,
+   "tokens_out": 184,
+   "latency_ms": 3602
+  },
+  "cached": false
+ }
+}

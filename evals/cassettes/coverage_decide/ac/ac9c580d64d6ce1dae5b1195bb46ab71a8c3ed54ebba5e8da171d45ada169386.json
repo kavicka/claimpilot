@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A5.1\"], \"rationale\": \"The medical report indicates that the patient was intoxicated (Atemalkohol 1,4 Promille) at the time of the injury. This suggests that the injury may be related to a pre-existing condition or its complications, which is excluded under clause A5.1.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 927,
+   "tokens_out": 82,
+   "latency_ms": 9363
+  },
+  "cached": false
+ }
+}

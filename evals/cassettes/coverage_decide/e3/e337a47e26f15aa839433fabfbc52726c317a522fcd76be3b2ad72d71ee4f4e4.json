@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment (pneumonia) received abroad during a trip due to an acute illness. Clause A4.1 explicitly covers necessary and reasonable costs for inpatient care, outpatient treatment, and prescribed medications resulting from an acute illness or injury during travel. There is no indication that the illness was pre-existing, intentional, or related to alcohol, drugs, extreme sports, war, or terrorism, which would trigger exclusions under other clauses.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1259,
+   "tokens_out": 115,
+   "latency_ms": 13860
+  },
+  "cached": false
+ }
+}

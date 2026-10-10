@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Dňa 21. 4. 2026 došlo k stratám cestovného batožinu poistného. Poistený uplatnil náklady na nákup nevyhnutných vecí vo výške 1 949,24 TRY a 2 451,21 TRY, celkovo 4 400,45 TRY. Podľa článku 8 ods. 1 VPP sú náklady na nákup nevyhnutných vecí poistného pokryté, ak sú primerané a dokázané. Sumy boli prepočítané na EUR súčasne výškou 42,56 EUR a 53,52 EUR, celkovo 96,08 EUR. Rizikové signály nie sú zaznamenané. Chýbajúce informácie nie sú identifikované. Odporúčanie: plnenie poistného plnenia vo výške 96,08 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 566,
+   "tokens_out": 266,
+   "latency_ms": 4470
+  },
+  "cached": false
+ }
+}

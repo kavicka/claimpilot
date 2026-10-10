@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A2.3\", \"A4.1\"], \"rationale\": \"The claim involves acute gastroenteritis, which is defined as an acute illness in clause A2.3. Clause A4.1 covers the costs of medication prescribed by a doctor as part of treatment for an acute illness during the trip. The evidence shows that the patient was treated with ondansetron and oral rehydration solution, which were prescribed by a doctor as part of the treatment for acute gastroenteritis.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 863,
+   "tokens_out": 115,
+   "latency_ms": 8356
+  },
+  "cached": false
+ }
+}

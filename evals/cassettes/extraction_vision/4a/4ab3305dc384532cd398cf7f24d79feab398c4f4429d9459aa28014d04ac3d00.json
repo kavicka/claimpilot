@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP55568701\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP55568701\", \"page\": 1}, \"insured_name\": {\"value\": \"Uršula Harvanová\", \"quote\": \"MENO A PRIEZVISKO Uršula Harvanová\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"836009/9704\", \"quote\": \"RODNÉ ČÍSLO 836009/9704\", \"page\": 1}, \"insured_address\": {\"value\": \"Podunajská 791, 915 34 Sielnica\", \"quote\": \"ADRESA Podunajská 791, 915 34 Sielnica\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 927 220 761\", \"quote\": \"TELEFÓN +421 927 220 761\", \"page\": 1}, \"insured_email\": {\"value\": \"ursula.harvanova78@posta.example.sk\", \"quote\": \"E-MAIL ursula.harvanova78@posta.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK84 6500 0000 0045 4989 7138\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK84 6500 0000 0045 4989 7138\", \"page\": 1}, \"destination_country\": {\"value\": \"Nemecko\", \"quote\": \"KRAJINA CESTY Nemecko\", \"page\": 1}, \"trip_start\": {\"value\": \"19. 5. 2026\", \"quote\": \"CESTA OD 19. 5. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"25. 5. 2026\", \"quote\": \"CESTA DO 25. 5. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"21. 5. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 21. 5. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"München, Nemecko\", \"quote\": \"MIESTO VZNIKU UDALOSTI München, Nemecko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\", \"Úraz\"], \"quote\": \"Druh udalosti Liečebné náklady  Úraz Batožina Oneskorenie batožiny Stormo cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Pri lyžovaní na zjazdovke v Münchenu som sa spadol a zlomil si klúčnu kost. Na mieste udalosti som sa snažil o sebaobranu, ale zranenie bolo veľké. Som v nemocnici a čakám na ďalšie vyšetrenia.\", \"quote\": \"POPIS UDALOSTI Pri lyžovaní na zjazdovke v Münchenu som sa spadol a zlomil si klúčnu kost. Na mieste udalosti som sa snažil o sebaobranu, ale zranenie bolo veľké. Som v nemocnici a čakám na ďalšie vyšetrenia.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Medizinisches Zentrum Ruppert\", \"amount\": \"560,44\", \"currency\": \"EUR\", \"quote\": \"Liečebné náklady – Medizinisches Zentrum Ruppert 560,44 EUR\", \"page\": 1}, {\"description\": \"Jednorazové plnenie za zlomeninu\", \"amount\": \"–\", \"currency\": \"\", \"quote\": \"Jednorazové plnenie za zlomeninu –\", \"page\": 1}], \"signature_date\": {\"value\": \"30. 5. 2026\", \"quote\": \"Dátum: 30. 5. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 1074,
+   "latency_ms": 40624
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Poistná udalosť sa odohrala 3. 6. 2026 v súvislosti s liečebnými nákladmi v Farkas International Medical Centre. Uplatnená suma činí 106 954,00 HUF, ktorá bola v rámci poistného plnenia potvrdená ako pokrytá podľa článku 4 ods. 1 a článku 4 ods. 4 Zákona o poistení. Plnenie je odporúčané vo výške 100,00 EUR, čo zodpovedá plneniu spolu v EUR. Poistný účastník je povinný zaplatiť 50,00 EUR spoluúčasti. Rizikové signály nie sú identifikované. Chýbajúce informácie nie sú zaznamenané. Poistné plnenie je odporúčané k vybaveniu.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 562,
+   "tokens_out": 252,
+   "latency_ms": 9876
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP15917225\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP15917225\", \"page\": 1}, \"insured_name\": {\"value\": \"Metod Jakubčík\", \"quote\": \"MENO A PRIEZVISKO Metod Jakubčík\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"691027/6208\", \"quote\": \"RODNÉ ČÍSLO 691027/6208\", \"page\": 1}, \"insured_address\": {\"value\": \"Bojničká 74, 990 04 Makovce\", \"quote\": \"ADRESA Bojničká 74, 990 04 Makovce\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 941 210 918\", \"quote\": \"TELEFÓN +421 941 210 918\", \"page\": 1}, \"insured_email\": {\"value\": \"metod.jakubcik82@example.com\", \"quote\": \"E-MAIL metod.jakubcik82@example.com\", \"page\": 1}, \"iban\": {\"value\": \"SK30 1111 6403 5655 5400 2894\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK30 1111 6403 5655 5400 2894\", \"page\": 1}, \"destination_country\": {\"value\": \"Švajčiarsko\", \"quote\": \"KRAJINA CESTY Švajčiarsko\", \"page\": 1}, \"trip_start\": {\"value\": \"9. 8. 2026\", \"quote\": \"CESTA OD 9. 8. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"14. 8. 2026\", \"quote\": \"CESTA DO 14. 8. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"10. 8. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 10. 8. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Luzern, Švajčiarsko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Luzern, Švajčiarsko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Liečebné náklady\"], \"quote\": \"D RUH UDALOSTI □ Liečebné náklady □ Úraz □ Batožina □ Oneskorenie batožiny □ Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Bol som v Luzern, Švajčiarsko, kde som sa zranil na uchu. Diagnozované mi bol zápal stredného ucha. Som v súčasnosti na liečbe u lekára.\", \"quote\": \"POPIS UDALOSTI Bol som v Luzern, Švajčiarsko, kde som sa zranil na uchu. Diagnozované mi bol zápal stredného ucha. Som v súčasnosti na liečbe u lekára.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Liečebné náklady – Medizinisches Zentrum Stalder\", \"amount\": \"172,94\", \"currency\": \"CHF\", \"quote\": \"Liečebné náklady – Medizinisches Zentrum Stalder\", \"page\": 1}], \"signature_date\": {\"value\": \"20. 8. 2026\", \"quote\": \"Dátum: 20. 8. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 985,
+   "latency_ms": 35068
+  },
+  "cached": false
+ }
+}

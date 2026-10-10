@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"invoice_number\": {\"value\": \"FV-2026-87900\", \"quote\": \"Faktura č. FV-2026-87900\", \"page\": 1}, \"issue_date\": {\"value\": \"9. 3. 2026\", \"quote\": \"Datum vystavení: 9. 3. 2026\", \"page\": 1}, \"provider_name\": {\"value\": \"Poliklinika Horáková\", \"quote\": \"Poliklinika Horáková\", \"page\": 1}, \"provider_country\": {\"value\": \"Česká republika\", \"quote\": \"Špindlerův Mlýn, Česká republika\", \"page\": 1}, \"patient_name\": {\"value\": \"Zoltán Pavlíček\", \"quote\": \"Zoltán Pavlíček, nar. 2. 11. 1984\", \"page\": 1}, \"service_date\": {\"value\": \"9. 3. 2026\", \"quote\": \"DATUM OŠETŘENÍ 9. 3. 2026\", \"page\": 1}, \"currency\": {\"value\": \"CZK\", \"quote\": \"25 512,00 CZK\", \"page\": 1}, \"line_items\": [{\"description\": \"Ošetření na pohotovosti\", \"amount\": \"8 226,00\", \"quote\": \"1 Ošetření na pohotovosti 8 226,00\", \"page\": 1}, {\"description\": \"CT vyšetření\", \"amount\": \"11 309,00\", \"quote\": \"2 CT vyšetření 11 309,00\", \"page\": 1}, {\"description\": \"Laboratorní vyšetření\", \"amount\": \"3 202,00\", \"quote\": \"3 Laboratorní vyšetření 3 202,00\", \"page\": 1}, {\"description\": \"Infuzní terapie\", \"amount\": \"2 775,00\", \"quote\": \"4 Infuzní terapie 2 775,00\", \"page\": 1}], \"total\": {\"value\": \"25 512,00 CZK\", \"quote\": \"Celkem k úhradě 25 512,00 CZK\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2048,
+   "tokens_out": 586,
+   "latency_ms": 24627
+  },
+  "cached": false
+ }
+}

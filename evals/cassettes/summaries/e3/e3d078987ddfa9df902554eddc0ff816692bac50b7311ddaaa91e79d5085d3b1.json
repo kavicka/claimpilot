@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Liečebné náklady – Medizinisches Zentrum Rauter vo výške 916,18 EUR sú preplatené, pretože sú v súlade s ustanovením článku 4 ods. 1 zákona o poistení osobných rizík. Poisťovňa prepláca čiastku vo výške 866,18 EUR, čo zodpovedá sume po odpočítaní spoluceny vo výške 50,00 EUR. Rizikový signál „date_inconsistency“ neovplyvňuje rozhodnutie o platení, pretože sa jedná o fakt, ktorý nie je v rozpore s podmienkami poistenia.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 472,
+   "tokens_out": 198,
+   "latency_ms": 3397
+  },
+  "cached": false
+ }
+}

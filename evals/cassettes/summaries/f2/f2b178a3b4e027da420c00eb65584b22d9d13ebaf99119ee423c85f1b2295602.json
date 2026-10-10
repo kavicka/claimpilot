@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 21. 7. 2026 došlo k úrazu poistného osoby <PERSON_1> počas cestovného poistenia Standard. Uplatnené náklady na liečbu v Medizinisches Zentrum Frei vo výške 560,19 CHF boli zamietnuté na základe článku 11 ods. 3 VPP, ktorý vylučuje pokrytie nákladov spojených s úrazy spôsobenými extrémnymi športmi. Druhá položka, jednorazové plnenie za zlomeninu, bola uplatnená vo výške 0,00 EUR a tiež zamietnutá s rovnakým odôvodnením. Celkové plnenie činí 0,00 EUR. Rizikový signál „exclusion_extreme_sport“ potvrdzuje vylúčenie z pokrytia. Chýbajúce informácie nie sú zaznamenané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 654,
+   "tokens_out": 269,
+   "latency_ms": 10468
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/letter_reasons_sk",
+ "prompt_hash": "e0b91b658021d829955e7d7d28368fb32b87eedf92dd92681ab2970a36fc8838",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Kozmetika v sume 85,91 EUR je poisťovňou preplatená podľa článku 7 ods. 1 a článku 7 ods. 2 VPP.  \nHodinky v sume 196,61 EUR sú poisťovňou preplatené podľa článku 7 ods. 1 a článku 7 ods. 2 VPP.  \nFotoaparát v sume 832,97 EUR je poisťovňou preplatený v sume 103,39 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 VPP.  \nCestovný kufor v sume 134,96 EUR je poisťovňou preplatený v sume 114,96 EUR podľa článku 7 ods. 1 a článku 7 ods. 2 VPP.  \nKniha a čítačka v sume 170,07 EUR nie sú poisťovňou preplatené, pretože rozhodnutie je „covered“ a plnenie je 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 850,
+   "tokens_out": 303,
+   "latency_ms": 6029
+  },
+  "cached": false
+ }
+}

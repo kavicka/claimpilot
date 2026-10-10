@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "f3ce3522ac50de6acc8747ff826485abffbfeaed8da87b1409fc496c1c5c417e",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Cestovné poistenie Premium pokrylo stornovací poplatok vo výške 702,90 EUR dňa 25. 12. 2025, kedy došlo k zrušeniu cesty. Poistné plnenie je uplatnené v sume 562,32 EUR na základe článku 9 ods. 1 a článku 9 ods. 2 VPP. Poistený neprispel k poistnej udalosti, spoluúčasť je 0,00 EUR. Rizikové signály nie sú zaznamenané, chýbajúce informácie nie sú identifikované. Plnenie je odporúčané.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 546,
+   "tokens_out": 191,
+   "latency_ms": 3294
+  },
+  "cached": false
+ }
+}

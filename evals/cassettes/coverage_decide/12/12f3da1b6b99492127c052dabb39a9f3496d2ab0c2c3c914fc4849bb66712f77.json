@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A8.1\"], \"rationale\": \"The claim is for the purchase of essential hygiene items and clothing due to a significant delay in luggage arrival (approximately 16 hours). Clause A8.1 explicitly covers such expenses when the luggage is delayed by the carrier. Clause A8.3 does not apply because the delay exceeded 12 hours. Other clauses are not relevant to this claim.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 935,
+   "tokens_out": 95,
+   "latency_ms": 10475
+  },
+  "cached": false
+ }
+}

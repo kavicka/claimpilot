@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"facility_name\": {\"value\": \"Medizinisches Zentrum Rauter\", \"quote\": \"Medizinisches Zentrum Rauter\", \"page\": 1}, \"facility_country\": {\"value\": \"Österreich\", \"quote\": \"Wien, Österreich\", \"page\": 1}, \"patient_name\": {\"value\": \"Vincent Cibulka\", \"quote\": \"Vincent Cibulka\", \"page\": 1}, \"patient_birth_date\": {\"value\": \"27.02.1956\", \"quote\": \"GEB. 27.02.1956\", \"page\": 1}, \"visit_date\": {\"value\": \"27.07.2026\", \"quote\": \"UNTERSUCHUNG / AUFNAHME 27.07.2026\", \"page\": 1}, \"discharge_date\": {\"value\": null, \"quote\": null, \"page\": 1}, \"diagnosis\": {\"value\": \"Gehirnerschütterung\", \"quote\": \"DIAGNOSE Gehirnerschütterung\", \"page\": 1}, \"icd10_code\": {\"value\": \"S06.0\", \"quote\": \"ICD-10 S06.0\", \"page\": 1}, \"anamnesis\": {\"value\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\", \"quote\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\", \"page\": 1}, \"treatment\": {\"value\": \"Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergaben keine Verletzungen. Die durchgeführte Bildgebung (CT des Schädels) zeigte keine Frakturen oder intrakranielle Blutungen. Der Patient erhielt eine ambulante Nachbeobachtung sowie medikamentöse Unterstützung zur Linderung von Kopfschmerzen. Es wurde eine vorübergehende Arbeitsunfähigkeit empfohlen und eine Rückkehr zur ambulanten Nachsorge in 48 Stunden.\", \"quote\": \"Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeiten, jedoch eine vorübergehende Verwirrtheit und ein kurzer Gedächtnisverlust. Die Kopf- und Halsuntersuchung ergaben keine Verletzungen. Die durchgeführte Bildgebung (CT des Schädels) zeigte keine Frakturen oder intrakranielle Blutungen. Der Patient erhielt eine ambulante Nachbeobachtung sowie medikamentöse Unterstützung zur Linderung von Kopfschmerzen. Es wurde eine vorübergehende Arbeitsunfähigkeit empfohlen und eine Rückkehr zur ambulanten Nachsorge in 48 Stunden.\", \"page\": 1}, \"physician_name\": {\"value\": \"Linnea Staudinger\", \"quote\": \"Behandelnde/r Ärztin/Arzt: Linnea Staudinger\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2086,
+   "tokens_out": 724,
+   "latency_ms": 27350
+  },
+  "cached": false
+ }
+}

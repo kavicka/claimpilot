@@ -1,0 +1,18 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"insured_persons\": [\n    {\n      \"birth_number\": \"<RC_1>\",\n      \"name\": \"<PERSON_1>\",\n      \"page\": 1,\n      \"quote\": \"<PERSON_1> | <RC_1>\"\n    }\n  ],\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"POISTNÉ 41,60 EUR | DÁTUM UZAVRETIA 30. 3. 2026\",\n    \"value\": \"30. 3. 2026\"\n  },\n  \"policy_end\": {\n    \"page\": 1,\n    \"quote\": \"ZAČIATOK POISTENIA 21. 4. 2026 | KONIEC POISTENIA 3. 5. 2026\",\n    \"value\": \"3. 5. 2026\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP71308842 | DRUH POISTENIA jednorazové\",\n    \"value\": \"CP71308842\"\n  },\n  \"policy_start\": {\n    \"page\": 1,\n    \"quote\": \"ZAČIATOK POISTENIA 21. 4. 2026 | KONIEC POISTENIA 3. 5. 2026\",\n    \"value\": \"21. 4. 2026\"\n  },\n  \"policy_type\": {\n    \"page\": 1,\n    \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP71308842 | DRUH POISTENIA jednorazové\",\n    \"value\": \"jednorazové\"\n  },\n  \"premium\": {\n    \"page\": 1,\n    \"quote\": \"POISTNÉ 41,60 EUR | DÁTUM UZAVRETIA 30. 3. 2026\",\n    \"value\": \"41,60 EUR\"\n  },\n  \"product_name\": {\n    \"page\": 1,\n    \"quote\": \"Poistný certifikát - Cestovné poistenie Premium\",\n    \"value\": \"Cestovné poistenie Premium\"\n  }\n}",
+  "thinking": null,
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2703,
+   "tokens_out": 539,
+   "latency_ms": 9940
+  },
+  "cached": false
+ }
+}

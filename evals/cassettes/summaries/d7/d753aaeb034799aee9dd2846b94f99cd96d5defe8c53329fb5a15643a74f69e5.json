@@ -1,0 +1,19 @@
+{
+ "step": "summaries",
+ "prompt_id": "summaries/handler_sk",
+ "prompt_hash": "05247d5088819d0577f8ee92b59a56f86be2a6ee2d7a55f11bda6d614cc835ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "Na dátum 16. 7. 2026 došlo v rámci cestovného poistenia Basic k nákladom na liečbu v Medizinisches Zentrum Stark vo výške 765,26 EUR. Poistná udalosť nie je podľa článku 11 ods. 2 VPP pokrytá, pretože sa jedná o náklady spojené s alkoholovou závislosťou, čo je výsledkom rizikového signálu exclusion_alcohol. Poistné plnenie nie je možné, pretože poistná udalosť spadá do výnimky uvedenej v článku 11 ods. 2 VPP. Chýbajúce informácie nie sú zaznamenané. Celkové plnenie je 0,00 EUR.",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 486,
+   "tokens_out": 228,
+   "latency_ms": 3830
+  },
+  "cached": false
+ }
+}

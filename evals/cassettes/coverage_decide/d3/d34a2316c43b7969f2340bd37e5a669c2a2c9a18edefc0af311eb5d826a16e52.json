@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "da2d967fc0c75d56c0f9e7e70249a151a9df413be6b9ef38284653804d74d867",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A8.1\"], \"rationale\": \"The item (clothing) was stolen from a parked car, which is covered under A7.1 as it refers to theft. Additionally, A8.1 covers the cost of necessary clothing when luggage is delayed, which applies here as the theft resulted in loss of luggage. Clause A7.5 does not apply because the theft occurred in a vehicle, but the item is clothing, not valuables or electronics. General exclusions (A11) do not apply as there is no indication of intentional actions, alcohol, extreme sports (covered under Premium), or war/terrorism.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1076,
+   "tokens_out": 148,
+   "latency_ms": 10613
+  },
+  "cached": false
+ }
+}

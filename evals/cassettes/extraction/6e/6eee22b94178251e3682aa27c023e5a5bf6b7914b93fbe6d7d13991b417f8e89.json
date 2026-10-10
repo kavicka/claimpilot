@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Ukupno za platiti EUR\",\n    \"value\": \"EUR\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Broj računa 2438/99381 23.07.2026. 14:42\",\n    \"value\": \"23.07.2026. 14:42\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"5,81\",\n      \"description\": \"Sprej za nos\",\n      \"page\": 1,\n      \"quote\": \"Sprej za nos | 5,81\"\n    },\n    {\n      \"amount\": \"6,52\",\n      \"description\": \"Elastični zavoj\",\n      \"page\": 1,\n      \"quote\": \"Elastični zavoj | 6,52\"\n    },\n    {\n      \"amount\": \"4,86\",\n      \"description\": \"Paracetanol 500 mg\",\n      \"page\": 1,\n      \"quote\": \"Paracetanol 500 mg | 4,86\"\n    },\n    {\n      \"amount\": \"11,71\",\n      \"description\": \"Ibuprofen 400 mg\",\n      \"page\": 1,\n      \"quote\": \"Ibuprofen 400 mg | 11,71\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Evala na kupnji\",\n    \"value\": \"Evala\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Broj računa 2438/99381 23.07.2026. 14:42\",\n    \"value\": \"2438/99381\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"28,90\",\n    \"value\": \"28,90\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1047,
+   "tokens_out": 483,
+   "latency_ms": 10093
+  },
+  "cached": false
+ }
+}

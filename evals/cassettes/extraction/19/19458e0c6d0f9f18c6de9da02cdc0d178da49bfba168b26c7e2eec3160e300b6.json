@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\n  \"policy_number\": {\n    \"value\": \"CP58024342\",\n    \"quote\": \"CP58024342\",\n    \"page\": 1\n  },\n  \"insured_name\": {\n    \"value\": \"<PERSON_1>\",\n    \"quote\": \"<PERSON_1>\",\n    \"page\": 1\n  },\n  \"insured_birth_number\": {\n    \"value\": \"<RC_1>\",\n    \"quote\": \"<RC_1>\",\n    \"page\": 1\n  },\n  \"insured_address\": {\n    \"value\": \"<ADDRESS_1>, 816 44 Babinec\",\n    \"quote\": \"<ADDRESS_1>, 816 44 Babinec\",\n    \"page\": 1\n  },\n  \"insured_phone\": {\n    \"value\": \"<PHONE_1>\",\n    \"quote\": \"<PHONE_1>\",\n    \"page\": 1\n  },\n  \"insured_email\": {\n    \"value\": \"<EMAIL_1>\",\n    \"quote\": \"<EMAIL_1>\",\n    \"page\": 1\n  },\n  \"iban\": {\n    \"value\": \"<IBAN_1>\",\n    \"quote\": \"<IBAN_1>\",\n    \"page\": 1\n  },\n  \"destination_country\": {\n    \"value\": \"Taliansko\",\n    \"quote\": \"Taliansko\",\n    \"page\": 1\n  },\n  \"trip_start\": {\n    \"value\": \"6. 2. 2026\",\n    \"quote\": \"6. 2. 2026\",\n    \"page\": 1\n  },\n  \"trip_end\": {\n    \"value\": \"11. 2. 2026\",\n    \"quote\": \"11. 2. 2026\",\n    \"page\": 1\n  },\n  \"event_date\": {\n    \"value\": \"8. 2. 2026\",\n    \"quote\": \"8. 2. 2026\",\n    \"page\": 1\n  },\n  \"event_place\": {\n    \"value\": \"Rimini, Taliansko\",\n    \"quote\": \"Rimini, Taliansko\",\n    \"page\": 1\n  },\n  \"claim_types\": {\n    \"values\": [\"Liečebné náklady\"],\n    \"quote\": \"X Liečebné náklady Úraz Batožina Oneskorenie batožiny\",\n    \"page\": 1\n  },\n  \"event_description\": {\n    \"value\": \"Bol som v Rimini, Taliansko, kde sa mi zlomila dolná časť vretennej kosti. Po zranení som bol hospitalizovaný a podstrel som ležiacu liečbu. Poistná udalosť sa týka zdravotného problému spôsobeného touto zlomeninou.\",\n    \"quote\": \"Bol som v Rimini, Taliansko, kde sa mi zlomila dolná časť vretennej kosti. Po zranení som bol hospitalizovaný a podstrel som ležiacu liečbu. Poistná udalosť sa týka zdravotného problému spôsobeného touto zlomeninou.\",\n    \"page\": 1\n  },\n  \"claimed_items\": [\n    {\n      \"description\": \"Liečebné náklady - Poliambulatorio Donati\",\n      \"amount\": \"680,22\",\n      \"currency\": \"EUR\",\n      \"quote\": \"Liečebné náklady - Poliambulatorio Donati\",\n      \"page\": 1\n    }\n  ],\n  \"signature_date\": {\n    \"value\": \"2. 3. 2026\",\n    \"quote\": \"Dátum: 2. 3. 2026\",\n    \"page\": 1\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3610,
+   "tokens_out": 892,
+   "latency_ms": 43215
+  },
+  "cached": false
+ }
+}

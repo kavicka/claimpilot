@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"# | Položka | Cástka (CZK)\",\n    \"value\": \"CZK\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"8 226,00\",\n      \"description\": \"Ošetření na pohotovosti\",\n      \"page\": 1,\n      \"quote\": \"1 | Ošetření na pohotovosti | 8 226,00\"\n    },\n    {\n      \"amount\": \"11 309,00\",\n      \"description\": \"CT vyšetření\",\n      \"page\": 1,\n      \"quote\": \"2 | CT vyšetření | 11 309,00\"\n    },\n    {\n      \"amount\": \"3 202,00\",\n      \"description\": \"Laboratorní vyšetřeni\",\n      \"page\": 1,\n      \"quote\": \"3 | Laboratorní vyšetřeni | 3 202,00\"\n    },\n    {\n      \"amount\": \"2 775,00\",\n      \"description\": \"Infuzní terapie\",\n      \"page\": 1,\n      \"quote\": \"4 | Infuzní terapie | 2 775,00\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>, nar. 2. 11. 1984\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": \"Spindlerův Mlýn, Česká republika\",\n    \"value\": \"Česká republika\"\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliklinika Horáková Poliklinika Horáková\",\n    \"value\": \"Poliklinika Horáková\"\n  },\n  \"service_date\": {\n    \"page\": 1,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Celkem k úhradě | 25 512,00 CZK\",\n    \"value\": \"25 512,00\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2155,
+   "tokens_out": 600,
+   "latency_ms": 27928
+  },
+  "cached": false
+ }
+}
