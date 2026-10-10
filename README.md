@@ -123,6 +123,16 @@ faster, so it extracts and writes the letters. Thinking mode stays off: on a 14B
 - **Calibration.** Expected calibration error is 0.09: values the vision model reads correctly but
   OCR text cannot confirm get lower confidence than they deserve.
 
+## Testing
+
+684 unit and database tests, 10 Playwright tests of the review UI, and ten eval suites replayed
+in CI. The edge cases have their own list in [docs/testing.md](docs/testing.md): hostile uploads,
+two handlers on one claim, a worker killed mid-step, Redis and the model server going down,
+tampered sessions, password guessing, names in declined forms, and six prompt-injection attacks
+(none helped a claim; one was noticed and escalated). Hardening them found and fixed 13 problems,
+among them claim references that repeated after an erasure, a login form that could put the
+password in the URL, and a worker that exited for good when Redis restarted.
+
 ## Review UI
 
 `make ui` serves it on :4410. Log in as `handler.demo` or `senior.demo` with the password from
@@ -174,10 +184,12 @@ What I would ask claims handlers in week one, and the hypotheses the build rests
 cp .env.example .env   # then set CLAIMPILOT_PII_VAULT_KEY (make vault-key) and the secrets
 make up                # Postgres, Redis, api, core_mock, mcp_server + migrations
 make models            # pull the local models
-make worker            # native worker
+make worker            # native worker, restarted when Redis goes away
 make seed N=5          # upload five dev claims through the api
 make ui                # review UI on :4410
 make test              # unit tests
+make test-db           # tests against the compose Postgres
+make e2e               # Playwright tests of the review UI (no models)
 make eval-fast         # gated eval suites on the dev split against the baselines
 ```
 

@@ -17,4 +17,7 @@ The system prepares; a person decides.
 - Every action and every field correction lands in the audit log with the user.
 - A correction made after the assessment blocks approval until the handler reassesses: routing,
   payout and letters are computed again from the corrected fields.
+- A handler approves what they saw: every action carries the claim version their page showed, and
+  the api refuses it (409) if the claim changed since, for example after another handler's
+  escalation or correction.
 - Corrections feed the golden dataset, so the next eval run measures what handlers had to fix.

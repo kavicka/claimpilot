@@ -36,7 +36,9 @@ export function LoginForm() {
   return (
     <div className="w-full max-w-[360px] animate-rise">
       <Brand className="mb-6 justify-center" />
+      {/* POST, so a submit before the page has loaded its script never puts the password in the URL */}
       <form
+        method="post"
         onSubmit={submit}
         className="rounded-2xl border border-line bg-sheet p-6 shadow-[0_1px_2px_rgb(0_0_0/0.04),0_12px_32px_rgb(0_0_0/0.06)]"
       >

@@ -64,6 +64,8 @@ export function ClaimView({ id }: { id: string }) {
   function onFieldSaved(result: FieldPatchResult) {
     mutate((c) => ({
       ...c,
+      version: result.claim_version,
+      needs_reassessment: true, // routing, payout and letters were computed from the old value
       documents: c.documents.map((d) => ({
         ...d,
         fields: d.fields.map((f) =>
@@ -73,7 +75,7 @@ export function ClaimView({ id }: { id: string }) {
         ),
       })),
     }));
-    notify("success", "Field corrected", "The new value is saved and logged in the audit trail.");
+    notify("success", "Field corrected", "Saved and logged. Reassess before approving.");
   }
 
   if (loading) {
@@ -153,6 +155,7 @@ export function ClaimView({ id }: { id: string }) {
                 selectedFieldId={selection?.fieldId ?? null}
                 editable={claim.status === "IN_REVIEW"}
                 status={claim.status}
+                claimVersion={claim.version}
                 onSelect={select}
                 onShowDocument={setActiveDoc}
                 onSaved={onFieldSaved}

@@ -119,9 +119,16 @@ def _variants(entity: str, value: str) -> set[str]:
         titles = {"mr", "ms", "mrs", "mudr.", "ing.", "mgr.", "dr."}
         parts = [p for p in parts if p not in titles]
         if len(parts) >= 2:
+            first, last = " ".join(parts[:-1]), parts[-1]
             out.add(" ".join(parts))
-            out.add(f"{parts[-1]}/{' '.join(parts[:-1])}")  # PIR: SURNAME/FIRST
-            out.add(f"{parts[-1]} {' '.join(parts[:-1])}")
+            out.add(f"{last}/{first}")  # PIR: SURNAME/FIRST
+            out.add(f"{last} {first}")
+            out.add(f"{last}, {first}")
+            out.add(f"{first[0]}. {last}")
+            if len(parts) == 2:  # Slovak and Czech decline names: "Jany Kováčovej"
+                for fi in declined(first):
+                    for la in declined(last):
+                        out |= {f"{fi} {la}", f"{la} {fi}", f"{la}, {fi}"}
     if entity == "IBAN":
         from claimpilot_core.pii.recognizers import IbanRecognizerSk
 
@@ -135,6 +142,33 @@ def _variants(entity: str, value: str) -> set[str]:
         if entity == "BIRTH_NUMBER" and len(compact) >= 9:
             out.add(f"{compact[:6]}/{compact[6:]}")
     return {v for v in out if len(v) >= 4}
+
+
+def declined(word: str) -> set[str]:
+    """Slovak and Czech case forms of a folded name, by its ending. Heuristic and generous: a form
+    is only ever matched as part of a full name, or after a form of address (see HONORIFIC)."""
+    forms = {word}
+    if len(word) < 3 or not word.isalpha():
+        return forms
+    if word.endswith("ova"):  # Kováčová -> Kováčovej, Kováčovú, Kováčovou
+        forms |= {word[:-1] + e for e in ("ej", "u", "ou")}
+    elif word.endswith("a"):  # Jana -> Jany, Jane, Janu, Janou; Sýkora -> Sýkoru, Sýkorovi
+        forms |= {word[:-1] + e for e in ("y", "e", "u", "ou", "i", "ovi", "om")}
+    elif word.endswith(("y", "i")):  # Hrubý -> Hrubého, Hrubému, Hrubým
+        forms |= {word[:-1] + e for e in ("eho", "emu", "ym", "im")}
+    elif word[-1] not in "aeiou":  # Novák -> Nováka, Novákovi, Novákom; Peter -> Petra
+        stems = {word}
+        if word[-2:] in ("er", "ek", "ec", "el") and len(word) > 4:
+            stems.add(word[:-2] + word[-1])  # fleeting e
+        forms |= {st + e for st in stems for e in ("a", "ovi", "om", "em", "e", "u")}
+    return forms
+
+
+# A surname on its own is matched only after a form of address ("pani Kováčová", "Frau Weber").
+HONORIFIC = (
+    r"(?:pani|panej|panu|pan|pana|panom|pane|frau|herr|herrn|mr|mrs|ms|"
+    r"sig\.ra|sig\.|signora|signor|gospoda|gospodin|gospodo|g\.|p\.)"
+)
 
 
 def _person_key(value: str) -> frozenset[str]:
@@ -204,8 +238,18 @@ class ClaimRedactor:
         hits: list[tuple[int, int, Entity]] = []
         for e in self.entities:
             for v in sorted(e.variants, key=len, reverse=True):
-                for m in re.finditer(rf"(?<![\w]){re.escape(v)}(?![\w])", folded):
+                # A name may be broken across lines or spaced oddly by OCR.
+                pattern = re.escape(v).replace(r"\ ", r"\s+")
+                for m in re.finditer(rf"(?<![\w]){pattern}(?![\w])", folded):
                     hits.append((m.start(), m.end(), e))
+            if e.entity == "PERSON":
+                parts = [p for p in re.split(r"[\s/]+", fold(e.value)) if p]
+                if len(parts) >= 2 and len(parts[-1]) >= 4:
+                    forms = "|".join(
+                        re.escape(f) for f in sorted(declined(parts[-1]), key=len, reverse=True)
+                    )
+                    for m in re.finditer(rf"(?<![\w]){HONORIFIC}\s+({forms})(?![\w])", folded):
+                        hits.append((m.start(1), m.end(1), e))
         hits.sort(key=lambda h: (h[0], -(h[1] - h[0])))
         merged: list[tuple[int, int, Entity]] = []
         for h in hits:

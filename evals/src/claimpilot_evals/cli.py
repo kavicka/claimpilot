@@ -68,6 +68,9 @@ def main() -> None:
         "--fast", action="store_true", help="replay where recorded, call the model otherwise"
     )
     sub.add_parser("fewshot", help="rebuild extraction few-shot examples from dev")
+    sub.add_parser(
+        "adversarial-build", help="rebuild the prompt-injection cases in data/adversarial"
+    )
     sub.add_parser("export-corrections", help="write handler corrections as a dataset (JSONL)")
     sd = sub.add_parser("seed", help="upload synthetic claims through the api")
     sd.add_argument("--split", default="dev")
@@ -90,6 +93,12 @@ def main() -> None:
         from claimpilot_evals.corrections import export
 
         print(asyncio.run(export()))
+        return
+
+    if args.cmd == "adversarial-build":
+        from claimpilot_evals.adversarial import build as build_adversarial
+
+        print(build_adversarial())
         return
 
     if args.cmd == "fewshot":

@@ -128,5 +128,45 @@ async def _fail(
         error=detail,
     )
     if tries < MAX_TRIES:
-        raise Retry(defer=tries * 5) from None  # no cause: arq would log its message
+        # A model server or database that is down needs minutes, not seconds, to come back.
+        raise Retry(defer=tries * (60 if transient(exc) else 5)) from None  # no cause: arq logs it
     return S.FAILED.value
+
+
+def transient(exc: BaseException) -> bool:
+    """Errors of the infrastructure rather than of the claim: connection and timeout errors."""
+    import httpx
+    from sqlalchemy.exc import OperationalError
+
+    from claimpilot_core.llm.ollama import OllamaError
+
+    if isinstance(exc, OllamaError):
+        return str(exc).startswith("ollama 5")  # the server failed, not the request
+    return isinstance(exc, httpx.TransportError | OperationalError | ConnectionError | TimeoutError)
+
+
+ACTIVE = [S.RECEIVED, S.PARSED, S.REDACTED, S.EXTRACTED, S.ROUTED, S.ASSESSED, S.APPROVED]
+
+
+async def sweep(ctx: dict[str, Any], *, older_than_minutes: int = 20) -> int:
+    """Re-enqueue claims that stopped moving: a job lost when Redis restarted, or an enqueue that
+    failed after the api had committed. The threshold is above the job timeout (15 min), so a
+    step that is still running is not picked up; the job id makes one sweep per claim version."""
+    from datetime import timedelta
+
+    from sqlalchemy import select
+
+    cutoff = datetime.now(UTC) - timedelta(minutes=older_than_minutes)
+    async with session_scope() as session:
+        rows = (
+            await session.execute(
+                select(Claim.id, Claim.version).where(
+                    Claim.status.in_([s.value for s in ACTIVE]), Claim.updated_at < cutoff
+                )
+            )
+        ).all()
+    for cid, version in rows:
+        await ctx["redis"].enqueue_job("advance", str(cid), _job_id=f"sweep:{cid}:{version}")
+    if rows:
+        log.info("sweep.enqueued", claims=len(rows))
+    return len(rows)

@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-claimpilot-worker = "claimpilot_worker.cli:main"
+claimpilot-worker = "claimpilot_worker.supervise:main"
 
 [tool.uv.sources]
 claimpilot-core = { workspace = true }

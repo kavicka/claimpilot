@@ -4,7 +4,7 @@ import uuid
 
 import pytest
 from arq import Retry
-from sqlalchemy import select
+from sqlalchemy import func, select, text
 
 from claimpilot_core.db import session as db_session
 from claimpilot_core.db.models import Claim, PipelineStepRun
@@ -127,3 +127,96 @@ async def test_a_failed_commit_is_recorded_without_the_statement():
     assert claim.status == "RECEIVED"
     assert [r.status for r in runs] == ["error"]
     assert "Kováčová" not in (runs[0].error or "")
+
+
+async def test_unreadable_files_go_back_to_the_client(monkeypatch, tmp_path):
+    import pymupdf
+
+    from claimpilot_core.db.models import Document, Summary
+    from claimpilot_worker.steps.ingest import ingest
+
+    monkeypatch.setenv("CLAIMPILOT_STORAGE_DIR", str(tmp_path))
+    get_settings.cache_clear()
+    pipeline.STEPS[S.RECEIVED] = (PipelineStep.INGEST, ingest)
+    cid = await new_claim()
+    locked = pymupdf.open()
+    locked.new_page().insert_text((72, 72), "Faktúra")
+    files = {
+        "faktura.pdf": locked.tobytes(encryption=pymupdf.PDF_ENCRYPT_AES_256, user_pw="1234"),
+        "foto.jpg": b"\xff\xd8\xff" + b"cut off",
+    }
+    async with db_session.session_scope() as s:
+        for name, data in files.items():
+            rel = f"claims/{cid}/{name}"
+            (tmp_path / rel).parent.mkdir(parents=True, exist_ok=True)
+            (tmp_path / rel).write_bytes(data)
+            s.add(
+                Document(
+                    claim_id=cid, filename=name, mime_type="x", sha256="0" * 64, storage_path=rel
+                )
+            )
+    assert await pipeline.advance({"job_try": 1}, str(cid)) == "NEEDS_INFO"
+    async with db_session.session_scope() as s:
+        docs = {
+            d.filename: d.problem
+            for d in await s.scalars(select(Document).where(Document.claim_id == cid))
+        }
+        request = (await s.scalars(select(Summary).where(Summary.claim_id == cid))).one()
+    assert docs == {"faktura.pdf": "protected by a password", "foto.jpg": "damaged or not an image"}
+    assert "„faktura.pdf“ je chránený heslom" in request.text
+    # Run it again (a retry, or a new upload): still exactly one request to the client.
+    async with db_session.session_scope() as s:
+        (await s.get(Claim, cid)).status = "RECEIVED"
+    await pipeline.advance({"job_try": 1}, str(cid))
+    async with db_session.session_scope() as s:
+        assert len((await s.scalars(select(Summary).where(Summary.claim_id == cid))).all()) == 1
+
+
+async def test_infrastructure_errors_wait_longer_before_a_retry():
+    import httpx
+
+    @pipeline.register(S.RECEIVED, PipelineStep.INGEST)
+    async def ollama_down(session, claim, ctx):
+        raise httpx.ConnectError("connection refused")
+
+    cid = await new_claim()
+    with pytest.raises(Retry) as info:
+        await pipeline.advance({"job_try": 2}, str(cid))
+    assert info.value.defer_score == 120_000  # 2nd try: 2 x 60 s
+
+    @pipeline.register(S.RECEIVED, PipelineStep.INGEST)
+    async def bad_data(session, claim, ctx):
+        raise ValueError("unexpected field")
+
+    with pytest.raises(Retry) as info:
+        await pipeline.advance({"job_try": 2}, str(cid))
+    assert info.value.defer_score == 10_000
+
+
+class FakeRedis:
+    def __init__(self):
+        self.jobs = []
+
+    async def enqueue_job(self, name, *args, _job_id=None):
+        self.jobs.append((name, args, _job_id))
+
+
+async def test_sweep_resumes_claims_that_stopped_moving():
+    from sqlalchemy import update
+
+    stuck = await new_claim(S.EXTRACTED)  # its job was lost when Redis restarted
+    fresh = await new_claim(S.EXTRACTED)  # a step is still running on it
+    waiting = await new_claim(S.IN_REVIEW)  # waits for a person: not the sweep's business
+    async with db_session.session_scope() as s:
+        await s.execute(
+            update(Claim)
+            .where(Claim.id.in_([stuck, waiting]))
+            .values(updated_at=func.now() - text("interval '2 hours'"))
+        )
+    redis = FakeRedis()
+    await pipeline.sweep({"redis": redis})
+    swept = [args[0] for _, args, _ in redis.jobs]
+    assert str(stuck) in swept
+    assert str(fresh) not in swept and str(waiting) not in swept
+    job_id = next(j for _, args, j in redis.jobs if args[0] == str(stuck))
+    assert job_id == f"sweep:{stuck}:1"  # one sweep per claim version, however often it runs

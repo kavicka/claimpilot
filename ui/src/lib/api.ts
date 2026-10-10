@@ -85,13 +85,14 @@ export const api = {
   claim: (id: string) => request<ClaimDetail>("GET", `/api/review/claims/${encodeURIComponent(id)}`),
   clause: (clauseId: string) =>
     request<Clause>("GET", `/api/review/clauses/${encodeURIComponent(clauseId)}`),
-  patchField: (fieldId: number, value: string) =>
-    request<FieldPatchResult>("PATCH", `/api/review/fields/${fieldId}`, { value }),
-  act: (claimId: string, action: ClaimAction, note?: string) =>
+  // `version` is the claim version the page showed; the api refuses with 409 if it changed since.
+  patchField: (fieldId: number, value: string, version: number) =>
+    request<FieldPatchResult>("PATCH", `/api/review/fields/${fieldId}`, { value, version }),
+  act: (claimId: string, action: ClaimAction, version: number, note?: string) =>
     request<ActionResult>(
       "POST",
       `/api/review/claims/${encodeURIComponent(claimId)}/actions/${action}`,
-      { note: note?.trim() ? note.trim() : null },
+      { note: note?.trim() ? note.trim() : null, version },
     ),
 
   ops: () => request<Ops>("GET", "/api/review/ops"),

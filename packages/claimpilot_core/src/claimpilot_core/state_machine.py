@@ -26,8 +26,12 @@ _PIPELINE = [S.RECEIVED, S.PARSED, S.REDACTED, S.EXTRACTED, S.ROUTED, S.ASSESSED
 
 ALLOWED: frozenset[tuple[S, S, Actor]] = frozenset(
     {(a, b, Actor.SYSTEM) for a, b in pairwise(_PIPELINE)}
-    # Missing documents are detected after extraction or during routing.
-    | {(S.EXTRACTED, S.NEEDS_INFO, Actor.SYSTEM), (S.ROUTED, S.NEEDS_INFO, Actor.SYSTEM)}
+    # Unreadable files are found at ingest, missing documents after extraction or in routing.
+    | {
+        (S.RECEIVED, S.NEEDS_INFO, Actor.SYSTEM),
+        (S.EXTRACTED, S.NEEDS_INFO, Actor.SYSTEM),
+        (S.ROUTED, S.NEEDS_INFO, Actor.SYSTEM),
+    }
     # Handler decisions.
     | {
         (S.IN_REVIEW, S.APPROVED, Actor.HANDLER),

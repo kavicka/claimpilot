@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, ArrowUpRight, Ban, Check, CircleAlert, CircleHelp, LoaderCircle, Lock, RefreshCw } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Ban, Check, CircleAlert, CircleHelp, LoaderCircle, Lock, RefreshCw, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -95,6 +95,15 @@ export function ClaimHeader({
             <p className="tnum text-xs text-ink-2">{claimed !== null ? `Claimed ${eur(claimed)}` : "Not assessed yet"}</p>
           </div>
           <div className="flex items-center gap-2">
+            {claim.status === "FAILED" ? (
+              <ActionButton
+                label="Retry"
+                icon={RotateCcw}
+                hint="Run the pipeline again from the start."
+                disabledReason={null}
+                onClick={() => setAction("retry")}
+              />
+            ) : null}
             {stale ? (
               <ActionButton
                 label="Reassess"

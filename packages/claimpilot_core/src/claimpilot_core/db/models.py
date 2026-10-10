@@ -82,8 +82,14 @@ class Claim(TimestampMixin, Base):
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
     )
+    # Optimistic lock: every UPDATE checks and bumps it, so two writers (two handlers, or a
+    # handler and the worker) cannot both win; the loser gets StaleDataError. The UI sends the
+    # version it showed, so nobody approves a payout they have not seen.
+    version: Mapped[int] = mapped_column(Integer, nullable=False, server_default="1")
 
     documents: Mapped[list["Document"]] = relationship(back_populates="claim")
+
+    __mapper_args__ = {"version_id_col": version}  # noqa: RUF012
 
 
 class Document(TimestampMixin, Base):
@@ -95,6 +101,7 @@ class Document(TimestampMixin, Base):
     mime_type: Mapped[str] = mapped_column(String(64))
     sha256: Mapped[str] = mapped_column(String(64), index=True)
     storage_path: Mapped[str] = mapped_column(String(512))
+    problem: Mapped[str | None] = mapped_column(String(200))  # set when it cannot be read
     page_count: Mapped[int | None] = mapped_column(Integer)
     doc_type: Mapped[str | None] = mapped_column(String(32))
     doc_type_confidence: Mapped[float | None] = mapped_column(Float)

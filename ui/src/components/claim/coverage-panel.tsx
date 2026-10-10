@@ -76,7 +76,9 @@ export function CoveragePanel({
                     </div>
                     <div className="shrink-0 text-right">
                       <p className="tnum text-[13px] font-semibold">{eur(it.payout_eur)}</p>
-                      <p className="tnum text-[11.5px] text-ink-3">of {money(it.claimed, it.currency)}</p>
+                      <p className="tnum text-[11.5px] text-ink-3">
+                        {it.claimed !== null && it.currency ? `of ${money(it.claimed, it.currency)}` : "amount unreadable"}
+                      </p>
                     </div>
                   </div>
                   {it.rationale ? (

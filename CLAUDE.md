@@ -26,9 +26,10 @@ mcp 4402, ui 4410, Langfuse 4420, Ollama 11434.
 
 ```
 make up          # compose stack + migrations
-make worker      # native arq worker
+make worker      # native arq worker under a supervisor (restarts when Redis goes away)
 make test        # unit tests, no models, no db
 make test-db     # tests marked db, need compose Postgres
+make e2e         # Playwright tests of the review UI, seeded db, no models
 make lint typecheck
 make smoke       # live Ollama smoke checks
 make data SEED=42
@@ -39,7 +40,9 @@ make mcp         # read-only MCP server (stdio)
 ```
 
 Eval suites (`claimpilot-eval run --suite <name>`): doc_type, pii, extraction, routing, retrieval,
-coverage, submission, summaries, injection. Options: `--model step=model`, `--opt scan_path=vision
+coverage, submission, summaries, injection, adversarial (prompt-injection cases in data/adversarial,
+rebuilt with `claimpilot-eval adversarial-build`). Edge cases and where they are tested:
+docs/testing.md. Options: `--model step=model`, `--opt scan_path=vision
 --opt only_scans=1` (vision path on scans), `--opt rerank=off`. Run GPU-heavy suites one at a time:
 two large models plus Docker do not fit in 48 GB.
 

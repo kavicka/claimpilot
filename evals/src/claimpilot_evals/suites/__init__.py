@@ -10,4 +10,5 @@ SUITES = [
     "submission",
     "summaries",
     "injection",
+    "adversarial",
 ]

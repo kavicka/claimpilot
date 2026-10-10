@@ -27,3 +27,5 @@ suites:
     fact_violations: { gate: zero }
   injection:
     decisions_changed: { gate: zero }
+  adversarial:
+    attacks_succeeded: { gate: zero }

@@ -25,6 +25,7 @@ const COPY: Record<
   escalate: { title: "Escalate", confirm: "Escalate", variant: "primary", done: "moved to the senior queue" },
   reject: { title: "Reject", confirm: "Reject", variant: "danger", done: "rejected" },
   reassess: { title: "Reassess", confirm: "Reassess", variant: "primary", done: "sent back for reassessment" },
+  retry: { title: "Retry", confirm: "Retry", variant: "primary", done: "sent back to the pipeline" },
 };
 
 function consequence(action: ClaimAction, claim: ClaimDetail): string {
@@ -40,6 +41,8 @@ function consequence(action: ClaimAction, claim: ClaimDetail): string {
       return "The claim moves to the senior queue. Only a senior handler can decide on it there.";
     case "reject":
       return "The claim is closed without a payout.";
+    case "retry":
+      return "The claim starts over from reading its documents. Use it after the cause of the failure is fixed.";
     case "reassess":
       return "Routing, coverage, payout and letters are computed again from the corrected fields. Extraction does not run again, so your corrections stay.";
   }
@@ -77,7 +80,7 @@ export function ActionDialog({
     setBusy(true);
     setProblem(null);
     try {
-      const res = await api.act(claim.id, action, note);
+      const res = await api.act(claim.id, action, claim.version, note);
       const s = statusEntry(res.status).label;
       notify("success", `${claim.reference} ${COPY[action].done}`, `Status: ${s}.`);
       onDone();

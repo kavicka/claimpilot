@@ -33,10 +33,12 @@ export function FieldPanel({
   selectedFieldId,
   editable,
   status,
+  claimVersion,
   onSelect,
   onShowDocument,
   onSaved,
 }: {
+  claimVersion: number;
   documents: ClaimDocument[];
   activeDocId: string | null;
   selectedFieldId: number | null;
@@ -123,6 +125,7 @@ export function FieldPanel({
                       indent={g.title !== null}
                       selected={field.id === selectedFieldId}
                       editable={editable}
+                      claimVersion={claimVersion}
                       onSelect={() => onSelect(field, doc.id)}
                       onSaved={onSaved}
                     />
@@ -152,6 +155,7 @@ function FieldRow({
   indent,
   selected,
   editable,
+  claimVersion,
   onSelect,
   onSaved,
 }: {
@@ -160,6 +164,7 @@ function FieldRow({
   indent: boolean;
   selected: boolean;
   editable: boolean;
+  claimVersion: number;
   onSelect: () => void;
   onSaved: (result: FieldPatchResult) => void;
 }) {
@@ -191,7 +196,7 @@ function FieldRow({
     setSaving(true);
     setProblem(null);
     try {
-      const res = await api.patchField(field.id, draft);
+      const res = await api.patchField(field.id, draft, claimVersion);
       onSaved(res);
       setEditing(false);
     } catch (err) {
@@ -203,30 +208,33 @@ function FieldRow({
   }
 
   return (
+    // The whole row is a click target for the mouse; keyboard and screen readers use the label
+    // button, so no interactive element sits inside another.
     <div
       id={`field-${field.id}`}
-      role="button"
-      tabIndex={0}
-      aria-pressed={selected}
       onClick={() => !editing && onSelect()}
-      onKeyDown={(e) => {
-        if (!editing && (e.key === "Enter" || e.key === " ")) {
-          e.preventDefault();
-          onSelect();
-        }
-      }}
       className={cn(
-        "group relative grid cursor-pointer grid-cols-[10px_minmax(110px,0.75fr)_minmax(0,1.5fr)_28px] items-start gap-x-3 border-l-[3px] py-2 pr-3 transition-colors focus-visible:outline-none",
+        "group relative grid cursor-pointer grid-cols-[10px_minmax(110px,0.75fr)_minmax(0,1.5fr)_28px] items-start gap-x-3 border-l-[3px] py-2 pr-3 transition-colors",
         indent ? "pl-7" : "pl-[17px]",
-        selected ? "border-marker-edge bg-marker-soft" : "border-transparent hover:bg-stone-50 focus-visible:bg-stone-50",
+        selected ? "border-marker-edge bg-marker-soft" : "border-transparent hover:bg-stone-50 focus-within:bg-stone-50",
       )}
     >
       <Tooltip content={dotTip(field, level)} side="right" className="pt-[5px]">
-        <span className={cn("block size-2.5 rounded-full", DOT[level])} aria-label={dotTip(field, level)} />
+        <span role="img" className={cn("block size-2.5 rounded-full", DOT[level])} aria-label={dotTip(field, level)} />
       </Tooltip>
 
       <Tooltip content={field.field} className="min-w-0">
-        <span className="block truncate pt-px text-[13px] text-ink-2">{label}</span>
+        <button
+          type="button"
+          aria-pressed={selected}
+          onClick={(e) => {
+            e.stopPropagation();
+            if (!editing) onSelect();
+          }}
+          className="block w-full truncate pt-px text-left text-[13px] text-ink-2 focus-visible:underline focus-visible:outline-none"
+        >
+          {label}
+        </button>
       </Tooltip>
 
       <div className="min-w-0">

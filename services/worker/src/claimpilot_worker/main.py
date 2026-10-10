@@ -12,7 +12,7 @@ import claimpilot_worker.steps  # noqa: F401 - registers the pipeline steps
 from claimpilot_core.llm.gateway import LLMGateway
 from claimpilot_core.logging import configure_logging
 from claimpilot_core.settings import get_settings
-from claimpilot_worker.pipeline import MAX_TRIES, advance
+from claimpilot_worker.pipeline import MAX_TRIES, advance, sweep
 
 
 async def startup(ctx: dict[str, Any]) -> None:
@@ -20,6 +20,7 @@ async def startup(ctx: dict[str, Any]) -> None:
     ctx["settings"] = get_settings()
     ctx["gateway"] = LLMGateway(ctx["settings"])
     await ensure_index(ctx["gateway"])
+    await sweep(ctx)  # resume claims whose jobs were lost while the worker was down
 
 
 async def ensure_index(gateway: LLMGateway) -> None:
@@ -60,11 +61,16 @@ async def purge(ctx: dict[str, Any]) -> int:
 
 
 class WorkerSettings:
-    functions: ClassVar[list[Any]] = [ping, advance, purge]
-    cron_jobs: ClassVar[list[Any]] = [cron(purge, hour={3}, minute={15})]
+    functions: ClassVar[list[Any]] = [ping, advance, purge, sweep]
+    cron_jobs: ClassVar[list[Any]] = [
+        cron(purge, hour={3}, minute={15}),
+        cron(sweep, minute={0, 10, 20, 30, 40, 50}),
+    ]
     on_startup = startup
     on_shutdown = shutdown
     redis_settings = RedisSettings.from_dsn(get_settings().redis_url)
     max_jobs = 1  # one claim step at a time: the models share one GPU
     max_tries = MAX_TRIES
-    job_timeout = 1800
+    # The longest step (extraction of a five-document claim with scans) takes about 5 minutes. A
+    # job lost with a crashed worker is retried once this has passed, or found by the sweep.
+    job_timeout = 900

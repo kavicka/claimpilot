@@ -2,6 +2,8 @@
 
 from typing import Any
 
+from sqlalchemy import delete
+
 from claimpilot_core.db.models import Claim, RoutingDecision, Summary
 from claimpilot_core.domain import ClaimStatus as S
 from claimpilot_core.domain import DocType, PipelineStep
@@ -78,6 +80,9 @@ async def route_claim(session, claim: Claim, ctx: dict[str, Any]) -> S:
     )
     if r.status is S.NEEDS_INFO:
         missing = next(h.detail for h in r.hits if h.rule == "R4").removeprefix("missing: ")
+        await session.execute(  # a reassessment must not leave two requests to the client
+            delete(Summary).where(Summary.claim_id == claim.id, Summary.kind == "info_request")
+        )
         session.add(
             Summary(
                 claim_id=claim.id, kind="info_request", language="sk", text=info_request(missing)

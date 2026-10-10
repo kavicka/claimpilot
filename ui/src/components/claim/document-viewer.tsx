@@ -171,7 +171,13 @@ export function DocumentViewer({
         <div className="border-b border-amber-200 bg-amber-50 px-4 py-1.5 text-xs text-amber-900">{notice}</div>
       ) : null}
 
-      <div ref={scroller} className="viewer-bg pane-scroll relative min-h-0 flex-1 overflow-auto">
+      <div
+        ref={scroller}
+        tabIndex={0} // keyboard users scroll the pages with the arrow keys
+        role="region"
+        aria-label="Document pages"
+        className="viewer-bg pane-scroll relative min-h-0 flex-1 overflow-auto focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ink"
+      >
         {doc.pages.length === 0 ? (
           <EmptyState icon={ImageOff} title="No page images for this document." compact />
         ) : (

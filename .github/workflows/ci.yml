@@ -65,3 +65,49 @@ jobs:
           docker run --rm -v "$PWD/tests:/app/tests:ro" -v "$PWD/pyproject.toml:/app/pyproject.toml:ro" \
             claimpilot-worker:ci sh -c "uv pip install --python /app/.venv/bin/python pytest pytest-asyncio respx hypothesis && \
             /app/.venv/bin/python -m pytest tests/core tests/worker -m 'not smoke and not live and not db' -q"
+
+  e2e:
+    # The review UI against the real api and a seeded database; no models run.
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_USER: claimpilot
+          POSTGRES_PASSWORD: claimpilot
+          POSTGRES_DB: claimpilot
+        ports: ["5438:5432"]
+        options: >-
+          --health-cmd "pg_isready -U claimpilot" --health-interval 5s --health-retries 20
+      redis:
+        image: redis:7.4
+        ports: ["6389:6379"]
+    env:
+      # A throwaway key for the seeded test vault; it protects nothing.
+      CLAIMPILOT_PII_VAULT_KEY: 2ip5tbrSDe9R1RPhk80c84uRJ2nNDpTOAZH48YUGUTk=
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.12.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: ui/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+        working-directory: ui
+      - run: pnpm exec playwright install --with-deps chromium
+        working-directory: ui
+      - name: End-to-end tests
+        run: pnpm e2e
+        working-directory: ui
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: ui/playwright-report

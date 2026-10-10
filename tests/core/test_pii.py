@@ -117,3 +117,40 @@ def test_doctor_name_after_a_label_is_redacted_without_the_signature_words():
     text = "Behandelnde/r Ärztin/Arzt: Rouven Vollbrecht Unterschrift, Stempel"
     found = [text[r.start : r.end] for r in LabeledNameRecognizer().analyze(text, ["PERSON"])]
     assert found == ["Rouven Vollbrecht"]
+
+
+@pytest.mark.parametrize(
+    ("text", "expected"),
+    [
+        ("Kováčová, Jana", "<PERSON_1>"),  # surname first, with a comma
+        ("J. Kováčová", "<PERSON_1>"),  # initial
+        ("Jana\nKováčová", "<PERSON_1>"),  # broken across lines by OCR
+        ("JANA KOVÁČOVÁ", "<PERSON_1>"),
+        ("Kovacova Jana", "<PERSON_1>"),  # no diacritics, reversed
+        ("Ošetrenie pacientky Jany Kováčovej", "Ošetrenie pacientky <PERSON_1>"),  # genitive
+        ("pre Janu Kováčovú", "pre <PERSON_1>"),  # accusative
+        ("Vážená pani Kováčová,", "Vážená pani <PERSON_1>,"),  # surname after a form of address
+        ("s pánom Petrom Novákom", "s pánom <PERSON_2>"),  # instrumental, male
+        ("Petra Nováka", "<PERSON_2>"),  # fleeting e: Peter -> Petra
+        ("Herr Novák", "Herr <PERSON_2>"),
+    ],
+)
+def test_a_known_name_is_found_in_other_forms(text, expected):
+    r = ClaimRedactor(ner=fake_ner(["Jana Kováčová", "Peter Novák"]))
+    r.observe(["Poistená Jana Kováčová, lekár Peter Novák"])
+    assert r.redact(text) == expected
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "nová liečba",  # an ordinary word that shares a stem with a name
+        "Kováčovská ulica",
+        "Peter",  # a first name alone is not enough
+        "Novákovci",
+    ],
+)
+def test_name_forms_do_not_swallow_ordinary_words(text):
+    r = ClaimRedactor(ner=fake_ner(["Jana Kováčová", "Peter Novák"]))
+    r.observe(["Poistená Jana Kováčová, lekár Peter Novák"])
+    assert r.redact(text) == text

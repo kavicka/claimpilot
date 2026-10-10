@@ -5,7 +5,7 @@ SPLIT ?= dev
 MODELS := qwen3:14b qwen3-vl:8b bge-m3 qwen3:4b-instruct qwen3:30b-a3b-instruct-2507-q4_K_M gemma3:12b
 
 .PHONY: help up up-obs down logs ps migrate worker api test test-db lint fmt typecheck check \
-        smoke data eval-fast eval compare vault-key models ui seed mcp fewshot corrections
+        smoke data eval-fast eval compare vault-key models ui seed mcp fewshot corrections e2e
 
 help:  ## List targets
 	@grep -E '^[a-z-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-12s %s\n", $$1, $$2}'
@@ -30,14 +30,17 @@ migrate:  ## Apply migrations to the dev and test databases
 	uv run alembic upgrade head
 	ALEMBIC_DATABASE_URL=postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot_test uv run alembic upgrade head
 
-worker:  ## Run the arq worker natively (MPS)
-	uv run arq claimpilot_worker.main.WorkerSettings
+worker:  ## Run the arq worker natively (MPS), restarted when Redis goes away
+	uv run claimpilot-worker
 
 api:  ## Run the api natively with reload (instead of the container)
 	uv run uvicorn claimpilot_api.main:app --port 4400 --reload
 
 test:  ## Unit tests (no live models, no database)
 	uv run pytest
+
+e2e:  ## Playwright tests of the review UI against the api and a seeded database (no models)
+	cd ui && pnpm e2e
 
 test-db:  ## Tests that need the compose Postgres
 	uv run pytest -m db

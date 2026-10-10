@@ -6,20 +6,24 @@ Values are re-hydrated from the vault here, for the person looking at the claim,
 
 import json
 import re
+import time
 import uuid
 from datetime import UTC, datetime
 from pathlib import Path
 from statistics import median
 from typing import Annotated, Any
 
+import structlog
 from arq.connections import ArqRedis
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
+from redis.exceptions import RedisError
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm.attributes import flag_modified
 
-from claimpilot_api.auth import COOKIE, TTL_SECONDS, User_, sign, verify_password
+from claimpilot_api.auth import COOKIE, TTL_SECONDS, User_, hash_password, sign, verify_password
 from claimpilot_core.db.models import (
     AuditLog,
     Claim,
@@ -41,6 +45,8 @@ from claimpilot_core.pii.vault import Vault
 from claimpilot_core.policy import load_terms
 from claimpilot_core.settings import get_settings, repo_root
 from claimpilot_core.state_machine import Actor, InvalidTransitionError, transition
+
+log = structlog.get_logger(__name__)
 
 router = APIRouter(prefix="/api")
 
@@ -65,11 +71,25 @@ class Login(BaseModel):
     password: str
 
 
+# Failed logins per username in the last window; one api process, so memory is enough here.
+FAILED_LOGINS: dict[str, list[float]] = {}
+MAX_FAILED, WINDOW_S = 5, 15 * 60
+DUMMY_HASH = hash_password("timing-equalizer")
+
+
 @router.post("/auth/login")
 async def login(body: Login, response: Response, session: Session) -> dict[str, str]:
+    now = time.monotonic()
+    recent = [t for t in FAILED_LOGINS.get(body.username, []) if now - t < WINDOW_S]
+    if len(recent) >= MAX_FAILED:
+        raise HTTPException(429, "too many failed logins; try again in 15 minutes")
     user = await session.scalar(select(User).where(User.username == body.username))
-    if user is None or not verify_password(body.password, user.password_hash):
+    # An unknown user costs the same scrypt as a wrong password, so timing does not tell them apart.
+    valid = verify_password(body.password, user.password_hash if user else DUMMY_HASH)
+    if user is None or not valid:
+        FAILED_LOGINS[body.username] = [*recent, now]
         raise HTTPException(401, "wrong username or password")
+    FAILED_LOGINS.pop(body.username, None)
     response.set_cookie(
         COOKIE, sign(user.id, user.role), max_age=TTL_SECONDS, httponly=True, samesite="lax"
     )
@@ -203,6 +223,7 @@ async def claim_detail(claim_id: uuid.UUID, user: User_, session: Session) -> di
         "facts": claim.facts,
         "assessment": claim.assessment,
         "needs_reassessment": await needs_reassessment(session, claim.id),
+        "version": claim.version,
         "insured": mapping.get("<PERSON_1>"),
         "documents": [
             {
@@ -249,7 +270,7 @@ async def claim_detail(claim_id: uuid.UUID, user: User_, session: Session) -> di
                 "coverage": i.coverage,
                 "verdict": i.verdict,
                 "clauses": i.clause_ids,
-                "claimed": str(i.claimed_amount),
+                "claimed": str(i.claimed_amount) if i.claimed_amount is not None else None,
                 "currency": i.claimed_currency,
                 "payout_eur": str(i.payout_eur),
                 "rationale": show(i.rationale),
@@ -317,6 +338,25 @@ async def clause(clause_id: str, user: User_) -> dict[str, str]:
 
 class FieldEdit(BaseModel):
     value: str
+    version: int | None = None  # the claim version the handler saw
+
+
+def check_version(claim: Claim, seen: int | None) -> None:
+    if seen is not None and seen != claim.version:
+        raise HTTPException(
+            409, "the claim changed since you opened it; reload to see the current version"
+        )
+
+
+async def enqueue(request: Request, claim_id: uuid.UUID) -> None:
+    """The change is committed already; if Redis is down, the worker's sweep picks it up."""
+    try:
+        arq: ArqRedis = request.app.state.arq
+        await arq.enqueue_job("advance", str(claim_id))
+    except (OSError, RedisError) as exc:
+        log.warning(
+            "enqueue failed, left to the sweep", claim_id=str(claim_id), error=type(exc).__name__
+        )
 
 
 PII_FIELD = re.compile(r"name|holder|iban|birth|phone|email|address|passport|plate")
@@ -352,6 +392,7 @@ async def correct_field(
     claim = await session.get(Claim, row.claim_id)
     if claim is None or claim.status != S.IN_REVIEW.value:
         raise HTTPException(409, "fields can be corrected only while the claim is in review")
+    check_version(claim, body.version)
     mapping = await vault().load(session, row.claim_id)
     reverse = {v: k for k, v in mapping.items()}
     stored = reverse.get(body.value)  # keep tokens for values the vault already holds
@@ -375,12 +416,19 @@ async def correct_field(
     )
     row.value_raw, row.value_norm = stored, normalize_field(row.field, stored)
     row.corrected, row.grounded, row.confidence, row.method = True, True, 1.0, "handler"
+    flag_modified(claim, "status")  # a correction is a change of the claim: bump its version
     await session.commit()
-    return {"id": row.id, "value": rehydrate(stored, mapping), "value_norm": row.value_norm}
+    return {
+        "id": row.id,
+        "value": rehydrate(stored, mapping),
+        "value_norm": row.value_norm,
+        "claim_version": claim.version,
+    }
 
 
 class ActionBody(BaseModel):
     note: str | None = None
+    version: int | None = None  # the claim version the handler saw
 
 
 ACTIONS = {
@@ -388,7 +436,9 @@ ACTIONS = {
     "reject": S.REJECTED,
     "request-info": S.NEEDS_INFO,
     "reassess": S.EXTRACTED,
+    "retry": S.RECEIVED,  # a failed claim starts over from ingest
 }
+NOT_DECISIONS = {"reassess", "retry"}
 
 
 async def needs_reassessment(session: AsyncSession, claim_id: uuid.UUID) -> bool:
@@ -421,12 +471,13 @@ async def act(
     claim = await session.get(Claim, claim_id)
     if claim is None:
         raise HTTPException(404, "no such claim")
+    check_version(claim, body.version)
     if action == "escalate":
         if claim.status != S.IN_REVIEW.value:
             raise HTTPException(409, "only claims in review can be escalated")
         claim.queue = Queue.SENIOR.value
     elif action in ACTIONS:
-        if claim.queue in SENIOR_QUEUES and user.role != "senior" and action != "reassess":
+        if claim.queue in SENIOR_QUEUES and user.role != "senior" and action not in NOT_DECISIONS:
             raise HTTPException(403, "claims in this queue need a senior handler")
         if action == "approve" and await needs_reassessment(session, claim.id):
             raise HTTPException(409, "fields were corrected after the assessment; reassess first")
@@ -443,14 +494,15 @@ async def act(
             claim.straight_through = not corrected
     else:
         raise HTTPException(404, f"unknown action {action}")
+    if action == "retry":
+        claim.error = None
     session.add(
         AuditLog(claim_id=claim.id, user_id=user.id, action=action, details={"note": body.note})
     )
     await session.commit()
-    if action in ("approve", "reassess"):
-        arq: ArqRedis = request.app.state.arq
-        await arq.enqueue_job("advance", str(claim.id))
-    return {"status": claim.status, "queue": claim.queue}
+    if action in ("approve", "reassess", "retry"):
+        await enqueue(request, claim.id)
+    return {"status": claim.status, "queue": claim.queue, "version": claim.version}
 
 
 class Erasure(BaseModel):

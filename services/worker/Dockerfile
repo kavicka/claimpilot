@@ -24,7 +24,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 ENV PATH="/app/.venv/bin:$PATH"
 
-CMD ["arq", "claimpilot_worker.main.WorkerSettings"]
+CMD ["claimpilot-worker"]
 
 # In Phase 1 this image only runs in CI (unit tests inside the image) so the native worker cannot
 # drift from it. In Phase 2 it becomes the ECS task, where Docling and the reranker run on CPU.

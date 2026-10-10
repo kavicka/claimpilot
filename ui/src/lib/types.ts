@@ -90,8 +90,8 @@ export interface CoverageItem {
   coverage: string;
   verdict: Verdict;
   clauses: string[];
-  claimed: string;
-  currency: string;
+  claimed: string | null; // null: the amount or its currency could not be read
+  currency: string | null;
   payout_eur: string;
   rationale: string | null;
 }
@@ -157,6 +157,7 @@ export interface ClaimDetail {
   facts: ClaimFacts | null;
   assessment: Assessment | null;
   needs_reassessment: boolean;
+  version: number;
   documents: ClaimDocument[];
   routing: Routing | null;
   coverage: CoverageItem[];
@@ -177,13 +178,15 @@ export interface FieldPatchResult {
   id: number;
   value: string | null;
   value_norm: string | null;
+  claim_version: number;
 }
 
-export type ClaimAction = "approve" | "reject" | "request-info" | "escalate" | "reassess";
+export type ClaimAction = "approve" | "reject" | "request-info" | "escalate" | "reassess" | "retry";
 
 export interface ActionResult {
   status: ClaimStatus;
   queue: QueueName | null;
+  version: number;
 }
 
 export interface Ops {

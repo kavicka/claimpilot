@@ -10,7 +10,7 @@
   --color-sheet: #ffffff;
   --color-ink: #17181c;
   --color-ink-2: #55575e;
-  --color-ink-3: #8a8b90;
+  --color-ink-3: #64656b; /* at least 4.5:1 on the sheet and on the desk (WCAG AA) */
   --color-line: #e4e2dc;
   --color-line-2: #d3d0c8;
   --color-marker: #ffd23f;
@@ -104,4 +104,16 @@
   background-color: #e6e4de;
   background-image: radial-gradient(rgb(23 24 28 / 0.07) 1px, transparent 1px);
   background-size: 14px 14px;
+}
+
+/* People who ask their system for less motion get none (WCAG 2.3.3). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
