@@ -172,15 +172,17 @@ def validate(sub: ClaimSubmission) -> list[dict]:
                 "not_insured_on_policy",
             )
         )
-    if (
-        not date.fromisoformat(policy["start"])
-        <= sub.event_date
-        <= date.fromisoformat(policy["end"])
+    # A declined claim is registered too, whatever its date. Cancellation cover starts when the
+    # policy is issued, because the reason to cancel arises before the trip.
+    starts = policy["issue_date"] if sub.claim_type_code == "CXL" else policy["start"]
+    paying = any(i.payout_eur > 0 for i in sub.items)
+    if paying and not (
+        date.fromisoformat(starts) <= sub.event_date <= date.fromisoformat(policy["end"])
     ):
         errors.append(
             _err(
                 ["event_date"],
-                f"policy runs {policy['start']} to {policy['end']}",
+                f"cover runs {starts} to {policy['end']}",
                 "outside_policy_period",
             )
         )

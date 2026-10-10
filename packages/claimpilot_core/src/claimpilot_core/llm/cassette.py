@@ -42,14 +42,14 @@ def image_digest(image: str) -> str:
     return hashlib.sha256(image.encode()).hexdigest()
 
 
-def _message(m: Any, legacy: bool = False) -> dict[str, Any]:
+def _message(m: Any) -> dict[str, Any]:
     out = {k: v for k, v in m.model_dump().items() if k not in ("tool_calls", "tool_name") or v}
-    if out.get("images") and not legacy:
+    if out.get("images"):
         out["images"] = [image_digest(i) for i in out["images"]]
     return out
 
 
-def cassette_key(req: LLMRequest, tools: list[dict] | None = None, *, legacy: bool = False) -> str:
+def cassette_key(req: LLMRequest, tools: list[dict] | None = None) -> str:
     tools_key = [t.get("function", {}).get("name") for t in tools] if tools else None
     material = {
         "provider": req.spec.provider,
@@ -57,7 +57,7 @@ def cassette_key(req: LLMRequest, tools: list[dict] | None = None, *, legacy: bo
         "think": req.spec.think,
         "prompt_hash": req.prompt_hash,
         # Tool fields only when used, so keys of plain requests did not change when they were added.
-        "messages": [_message(m, legacy) for m in req.messages],
+        "messages": [_message(m) for m in req.messages],
         "schema": req.json_schema,
     }
     if tools_key:  # only tool-calling requests carry it, so other keys stay stable
@@ -79,10 +79,6 @@ class CassetteStore:
             return None
         key = cassette_key(req, tools)
         path = self._path(req, key)
-        legacy = self._path(req, cassette_key(req, tools, legacy=True))
-        if not path.exists() and legacy.exists():  # MIGRATION: full-image keys -> image hashes
-            path.parent.mkdir(parents=True, exist_ok=True)
-            legacy.rename(path)
         if not path.exists():
             if any(i.startswith(IMAGE_REF) for m in req.messages for i in m.images):
                 raise CassetteMissingError(key, req)  # no page files here, nothing to send

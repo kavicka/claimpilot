@@ -22,6 +22,9 @@ class ModelSpec(BaseModel):
     temperature: float = 0.0
     num_ctx: int = 16384
     seed: int = 7
+    # Cap on generated tokens, so a model caught in a repetition loop ends instead of running into
+    # the client timeout. Not part of the cassette key.
+    num_predict: int | None = None
 
     @property
     def key(self) -> str:

@@ -38,6 +38,21 @@ CATEGORIES = Literal[
     "liability",
 ]
 Retriever = Callable[[str], Awaitable[list[Hit]]]
+# Each category belongs to exactly one coverage section, so code derives the section; the model's
+# own section is used only for a category this table does not know.
+SECTION_OF = {
+    "treatment": Coverage.MEDICAL,
+    "hospital": Coverage.MEDICAL,
+    "medication": Coverage.MEDICAL,
+    "dental": Coverage.MEDICAL,
+    "transport": Coverage.MEDICAL,
+    "fracture": Coverage.ACCIDENT,
+    "luggage": Coverage.LUGGAGE,
+    "valuables": Coverage.LUGGAGE,
+    "essentials": Coverage.DELAY,
+    "cancellation_fee": Coverage.CANCELLATION,
+    "liability": Coverage.LIABILITY,
+}
 
 
 @dataclass
@@ -244,8 +259,10 @@ async def decide_coverage(
     by_ref = {m.ref: m for m in mapping.value.items}
     for it in items:
         m = by_ref.get(it.ref)
-        it.coverage = Coverage(m.coverage) if m else Coverage.MEDICAL
         it.category = m.category if m else "treatment"
+        it.coverage = SECTION_OF.get(it.category) or (
+            Coverage(m.coverage) if m else Coverage.MEDICAL
+        )
     terms = catalog.product(product) if product else None
     for it in items:
         if precheck(

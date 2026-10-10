@@ -112,6 +112,19 @@ def test_event_outside_policy_period(client):
     assert errors(r) == {"event_date": "outside_policy_period"}
 
 
+def test_a_declined_claim_outside_the_period_is_registered(client):
+    body = submission(event_date="2020-01-01", total_payout="0.00")
+    body["items"][0].update(payout_eur="0.00", decision="DECLINE")
+    assert post(client, body).status_code == 201
+
+
+def test_cancellation_cover_starts_at_issue(client):
+    p = policy()
+    body = submission(p, claim_type_code="CXL", event_date=p["issue_date"])
+    body["items"][0]["coverage_code"] = "CXL"
+    assert post(client, body).status_code == 201
+
+
 def test_total_must_equal_item_payouts(client):
     r = post(client, submission(total_payout="300.00"))
     assert errors(r) == {"total_payout": "does_not_match_items"}

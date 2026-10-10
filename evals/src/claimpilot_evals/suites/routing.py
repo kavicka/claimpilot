@@ -1,18 +1,16 @@
 """Routing: queue accuracy, fraud recall and a cost-weighted score, claim by claim.
 
 Claims run in manifest order so the duplicate check sees earlier submissions, as in production.
-Extraction replays from cassettes (run the extraction suite first, or use --fast).
+Extraction runs as in the pipeline (claimctx) and replays from cassettes where recorded.
 """
-
-from decimal import Decimal
 
 from claimpilot_core.domain import DocType
 from claimpilot_core.fx import FxSnapshot
 from claimpilot_core.settings import get_settings
 from claimpilot_evals.report import ItemResult, Report
-from claimpilot_evals.suites.common import RunContext, redact_claim
-from claimpilot_worker.extraction.extract import extract_document
-from claimpilot_worker.routing.facts import DocInput, History, build_facts, remember
+from claimpilot_evals.suites.claimctx import load_claim
+from claimpilot_evals.suites.common import RunContext
+from claimpilot_worker.routing.facts import History, build_facts, remember
 from claimpilot_worker.routing.route import route
 
 # Cost of sending a claim of the expected queue (row) to the predicted queue (column).
@@ -47,21 +45,8 @@ async def run(ctx: RunContext) -> Report:
     register = _policy_issue_dates()
     total_cost = 0
     for claim in ctx.claims():
-        rc = redact_claim(claim)
-        mapping = {t: v for t, (_, v) in rc.redactor.mapping().items()}
-        docs = []
-        for doc in rc.docs:
-            doc_type = DocType(doc.gt.doc_type)
-            ex = await extract_document(
-                doc_type,
-                doc.parsed,
-                doc.redacted,
-                ctx.gateway,
-                language=doc.gt.data["language"],
-                mapping=mapping,
-                exclude_example=doc.gt.item_id,
-            )
-            docs.append(DocInput(doc_type, ex, doc.gt.data["sha256"], doc.text(redacted=True)))
+        # As in the pipeline: classified document types, scans through the vision model.
+        docs = (await load_claim(claim, ctx)).docs
         policy_number = next(
             (
                 d.extraction.value("policy_number")
@@ -119,5 +104,4 @@ async def run(ctx: RunContext) -> Report:
     report.ratio(
         "fast_track_recall", sum(i.got.startswith("fast_track") for i in exp_fast), len(exp_fast)
     )
-    _ = Decimal
     return report

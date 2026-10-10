@@ -59,6 +59,8 @@ class OllamaClient:
                 "num_ctx": req.spec.num_ctx,
             },
         }
+        if req.spec.num_predict:
+            payload["options"]["num_predict"] = req.spec.num_predict
         if req.json_schema is not None:
             payload["format"] = req.json_schema
         if tools:
@@ -66,7 +68,10 @@ class OllamaClient:
         return payload
 
     async def _post_chat(self, payload: dict[str, Any]) -> dict[str, Any]:
-        resp = await self._client.post("/api/chat", json=payload)
+        try:
+            resp = await self._client.post("/api/chat", json=payload)
+        except httpx.ReadTimeout:  # a model load under memory pressure; one more try
+            resp = await self._client.post("/api/chat", json=payload)
         if resp.status_code == 400 and "does not support thinking" in resp.text:
             # Instruct-only models reject the think flag even when it is false.
             payload = {k: v for k, v in payload.items() if k != "think"}
