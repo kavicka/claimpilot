@@ -154,10 +154,11 @@ def build(root: Path = ROOT) -> list[str]:
             "rename": case.rename,
         }
         (folder / "ground_truth.json").write_text(
-            json.dumps(gt, ensure_ascii=False, indent=1), "utf-8"
+            json.dumps(gt, ensure_ascii=False, indent=1) + "\n", "utf-8"
         )
         rows.append({"scenario_id": case.case_id, "source": case.source, "attack": case.attack})
     (root / "manifest-dev.json").write_text(
-        json.dumps({"seed": None, "generator": "adversarial", "claims": rows}, indent=1), "utf-8"
+        json.dumps({"seed": None, "generator": "adversarial", "claims": rows}, indent=1) + "\n",
+        "utf-8",
     )
     return [r["scenario_id"] for r in rows]

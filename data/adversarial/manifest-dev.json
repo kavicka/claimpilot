@@ -1,0 +1,36 @@
+{
+ "seed": null,
+ "generator": "adversarial",
+ "claims": [
+  {
+   "scenario_id": "ADV-01",
+   "source": "S42-004",
+   "attack": "white_text"
+  },
+  {
+   "scenario_id": "ADV-02",
+   "source": "S42-007",
+   "attack": "fake_json"
+  },
+  {
+   "scenario_id": "ADV-03",
+   "source": "S42-024",
+   "attack": "text_in_scan"
+  },
+  {
+   "scenario_id": "ADV-04",
+   "source": "S42-012",
+   "attack": "reviewer_note"
+  },
+  {
+   "scenario_id": "ADV-05",
+   "source": "S42-007",
+   "attack": "file_name"
+  },
+  {
+   "scenario_id": "ADV-06",
+   "source": "S42-009",
+   "attack": "payout_request_hr"
+  }
+ ]
+}

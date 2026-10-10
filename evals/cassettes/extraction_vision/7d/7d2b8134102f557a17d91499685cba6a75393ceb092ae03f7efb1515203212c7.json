@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP52213778\", \"quote\": \"CP52213778\", \"page\": 1}, \"insured_name\": {\"value\": \"Zoja Nižnánská\", \"quote\": \"Zoja Nižnánská\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"965329/2891\", \"quote\": \"965329/2891\", \"page\": 1}, \"insured_address\": {\"value\": \"Žiňľavová 90, 828 64 Vysoká pri Morave\", \"quote\": \"Žiňľavová 90, 828 64 Vysoká pri Morave\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 922 615 291\", \"quote\": \"+421 922 615 291\", \"page\": 1}, \"insured_email\": {\"value\": \"zoja.niznanska14@mail.example.sk\", \"quote\": \"zoja.niznanska14@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK14 1100 0000 0064 3961 4621\", \"quote\": \"SK14 1100 0000 0064 3961 4621\", \"page\": 1}, \"destination_country\": {\"value\": \"Turecko\", \"quote\": \"Turecko\", \"page\": 1}, \"trip_start\": {\"value\": \"14. 1. 2026\", \"quote\": \"14. 1. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"26. 1. 2026\", \"quote\": \"26. 1. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"25. 12. 2025\", \"quote\": \"25. 12. 2025\", \"page\": 1}, \"event_place\": {\"value\": \"Alanya, Turecko\", \"quote\": \"Alanya, Turecko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Storno cesty\"], \"quote\": \"Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Pred odchodom som ochorol, lekár mi cestovanie neodporušil. V dôsledku toho som cestu stornoval v cestovnej kancelárii. Udalá sa podvrtnutie členkového klíbu.\", \"quote\": \"Pred odchodom som ochorol, lekár mi cestovanie neodporušil. V dôsledku toho som cestu stornoval v cestovnej kancelárii. Udalá sa podvrtnutie členkového klíbu.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Stornovací poplatok\", \"amount\": \"702,90\", \"currency\": \"EUR\", \"quote\": \"Stornovací poplatok\", \"page\": 1}, {\"description\": null, \"amount\": null, \"currency\": null, \"quote\": null, \"page\": 1}], \"signature_date\": {\"value\": \"3. 2. 2026\", \"quote\": \"3. 2. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 854,
+   "latency_ms": 37081
+  },
+  "cached": false
+ }
+}
