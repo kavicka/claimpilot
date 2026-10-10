@@ -19,7 +19,6 @@ jobs:
           --health-cmd "pg_isready -U claimpilot" --health-interval 5s --health-retries 20
     env:
       CLAIMPILOT_DATABASE_URL: postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot_test
-      CLAIMPILOT_LLM_CASSETTE_MODE: replay
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6

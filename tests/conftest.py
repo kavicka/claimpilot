@@ -26,11 +26,12 @@ def tmp_settings(tmp_path: Path) -> Settings:
 
 @pytest.fixture(autouse=True)
 def _no_tracing(monkeypatch):
-    """Unit tests never export traces, whatever .env says."""
+    """Unit tests never export traces and never use cassettes, whatever .env or CI says."""
     from claimpilot_core.observability import get_tracer
     from claimpilot_core.settings import get_settings
 
     monkeypatch.setenv("CLAIMPILOT_LANGFUSE_HOST", "")
+    monkeypatch.setenv("CLAIMPILOT_LLM_CASSETTE_MODE", "off")
     get_settings.cache_clear()
     get_tracer.cache_clear()
     yield
