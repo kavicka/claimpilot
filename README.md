@@ -21,9 +21,9 @@ the arithmetic, shows its sources, and leaves the decision to the handler.
 flowchart LR
     UI[Review UI<br/>Next.js] --> API[api<br/>FastAPI]
     API -->|enqueue| Q[(Redis)]
-    Q --> W[worker, native macOS<br/>ingest · PII guard · extraction<br/>routing · coverage · summaries]
-    W -->|every model call| GW[LLM gateway] --> OL[Ollama<br/>qwen3 14B / 30B, qwen3-vl, bge-m3]
-    W --> DB[(Postgres + pgvector<br/>claims, fields, VPP index)]
+    Q --> W[worker, native macOS<br/>ingest · PII guard · extraction<br/>routing · coverage · letters]
+    W -->|every model call| GW[LLM gateway] --> OL[Ollama<br/>qwen3 30B-A3B · qwen3 14B<br/>qwen3-vl 8B · bge-m3]
+    W --> DB[(Postgres + pgvector<br/>claims, fields, VPP index, vault)]
     API --> DB
     W -->|after approval| CORE[core_mock<br/>core claims system]
     MCP[mcp_server<br/>read-only] --> API
@@ -34,6 +34,112 @@ flowchart LR
 - Models read and classify; Python computes money, limits, deductibles and FX ([ADR-002](docs/adr/002-llm-extracts-code-decides.md)).
 - Names, birth numbers, IBANs and addresses are replaced by tokens before any model sees the text
   ([ADR-003](docs/adr/003-pii-never-reaches-a-model.md)).
+- Rules run before models in document typing and routing ([ADR-005](docs/adr/005-rules-before-llm.md)).
+
+## The pipeline
+
+| Step | What happens | Model |
+| --- | --- | --- |
+| Ingest | Docling with Apple Vision OCR; page renders; document type by keyword rules, a small model only on ties | qwen3:4b-instruct for 6 % of documents |
+| Redact | Pattern recognizers and multilingual NER; one token per person or number across the whole claim; originals in an encrypted vault | wikineural NER (in process) |
+| Extract | Fields as printed, with the quote, page and box they came from; code normalizes and checks checksums, line-item sums and date order | qwen3:30b-a3b on text, qwen3-vl:8b on scans |
+| Route | Rules R1 to R8 (duplicates, date gaps, early claims, missing documents, thresholds, exclusion signals, cancellations); a model looks only at claims no rule decided | qwen3:14b for 15 % of claims |
+| Assess | Items mapped to coverage sections; five clauses per item from hybrid search and a reranker; covered, not covered or needs review with cited clauses; payout in code | qwen3:14b, bge-m3, bge-reranker-v2-m3 |
+| Letters | Slovak summary for the handler, letter reasons for the client, German summary for the group; a fact checker rejects any number, date or clause not in the facts | qwen3:30b-a3b |
+| Review | The handler checks fields against the page, corrects them, and approves, rejects, asks for documents or escalates | none |
+| Submit | Payload mapped in code, real values put back only here; on a 422 an agent may fix code-list values and nothing else | qwen3:14b |
+
+## Results
+
+Dev has 40 claims and was used for building; test has 20 claims and was scored once, after the
+build. Reports with every item are in [evals/reports](evals/reports); baselines in
+[evals/baselines](evals/baselines).
+
+| Step | Metric | Dev (40) | Test (20) |
+| --- | --- | --- | --- |
+| Document type | accuracy | 147/148 (99.3 %) | 75/76 (98.7 %) |
+| PII guard | identifiers redacted (birth numbers, IBANs, phones, e-mails, IDs) | 190/190 | 99/99 |
+| PII guard | names redacted | 162/162 | 88/89 |
+| PII guard | ground-truth PII in any model payload | 0 | 1 |
+| Extraction | critical fields correct (amounts, dates, policy number, IBAN, diagnosis) | 450/454 (99.1 %) | 295/297 (99.3 %) |
+| Extraction | all fields, F1 | 96.4 % | 94.9 % |
+| Extraction | claims where every critical field is confident (≥ 0.9), and all of them correct | 28/40, 28 correct | 14/20, 14 correct |
+| Routing | right queue | 38/40 (95.0 %) | 18/20 (90.0 %) |
+| Routing | fraud cases caught | 10/10 | 5/5 |
+| Retrieval | deciding clause in the top 5 | 45/53 (84.9 %) | 20/24 (83.3 %) |
+| Coverage | item verdicts right | 48/60 (80.0 %) | 26/28 (92.9 %) |
+| Coverage | payout to the cent | 31/37 (83.8 %) | 16/18 (88.9 %) |
+| Submission | registered on the first try | 36/37 | 18/18 |
+| Submission | values the agent invented | 0 | 0 |
+| Letters | numbers, dates or clauses not in the facts | 0 of 111 texts | 0 of 54 texts |
+| Letters | judge score (gemma3:12b, 1 to 5) | 4.52 | 4.56 |
+| Prompt injection | decisions changed by instructions planted in a document | 0 | 0 |
+
+The test name that leaked was a German doctor's name on a signature line ("Behandelnde/r
+Ärztin/Arzt: …"); the NER model missed it. A label-based recognizer now catches it; the test
+number above is from before that fix. After the test run the coverage section is derived from the
+item's category in code (the model had paired "dental" with the delay section once); the test
+coverage numbers are from before that change.
+
+### Scans: OCR text or the vision model
+
+A quarter of the documents are scans or phone photos. On the 41 dev scans:
+
+| Path | Critical fields | All fields, F1 | Time per document (p50) |
+| --- | --- | --- | --- |
+| Apple Vision OCR text, then qwen3:30b-a3b | 133/164 (81.1 %) | 88.6 % | 16 s |
+| qwen3-vl:8b on the page image | 160/164 (97.6 %) | 92.1 % | 33 s |
+
+OCR loses text under stamps and shifts table rows; the vision model reads the page as a person
+would. The pipeline sends scans to the vision model (`scan_path=vision`). Page images contain
+personal data, so this path refuses any provider other than a local one, and every value it reads
+goes through PII detection before anything else sees it.
+
+### Extraction model
+
+On 20 dev claims (scans through the vision model in both rows):
+
+| Model | Critical fields | All fields, F1 | Time per document (p50) |
+| --- | --- | --- | --- |
+| qwen3:14b | 204/207 (98.6 %) | 97.1 % | 39 s |
+| qwen3:30b-a3b-instruct-2507 (Q4) | 204/207 (98.6 %) | 97.1 % | 16 s |
+
+Same accuracy; the mixture-of-experts model activates 3B parameters per token and is 2.4 times
+faster, so it extracts and writes the letters. Thinking mode stays off: on a 14B smoke test it took
+22 s instead of 8 s and returned the same values.
+
+### What still fails
+
+- **Exclusions the model over-applies.** On luggage claims qwen3:14b cited the "valuables left
+  unattended" exclusion for bags the airline lost (8 of the 12 wrong verdicts on dev). A prompt
+  that asked it to check every condition of an exclusion changed nothing on dev, so it was
+  reverted. It also misses an extreme sport (tandem paragliding) the policy does not name, and two
+  illnesses that existed before the trip or the policy. These
+  go out as "not covered" or "needs review", and the handler sees the cited clause.
+- **Retrieval of exclusions.** 5 of 8 deciding exclusions were in the top 5 on dev. The general
+  exclusions (article 11) are now given to the model for every item regardless of rank.
+- **Checkbox reading on one digital form.** "Úraz X Batožina" was read as Úraz; the mark belongs
+  to the label after it.
+- **Calibration.** Expected calibration error is 0.09: values the vision model reads correctly but
+  OCR text cannot confirm get lower confidence than they deserve.
+
+## Review UI
+
+`make ui` serves it on :4410. Log in as `handler.demo` or `senior.demo` with the password from
+`CLAIMPILOT_DEMO_PASSWORD`. The queue has tabs per queue with counts; a claim shows its pages with
+a box over every extracted value, the rule hits, each item with its clauses and the payout
+breakdown, the letters, and the pipeline timeline with latency and tokens per step. Claims in the
+senior and fraud-review queues need a senior handler. A correction made after the assessment
+blocks approval until the handler sends the claim back through routing and assessment. The demo
+script is in [docs/demo.md](docs/demo.md).
+
+## MCP server
+
+A read-only MCP server exposes the claims to Claude Code or Claude Desktop: `list_claims`,
+`get_claim`, `extract_documents`, `check_coverage`, `explain_routing` and `draft_client_letter`.
+It authenticates with a service token, sees tokens such as `<PERSON_1>` instead of personal data,
+gets no page images, and has no tool that approves, rejects or submits. The project's
+[.mcp.json](.mcp.json) registers it; `make mcp` runs it on stdio.
 
 ## Data
 
@@ -49,18 +155,12 @@ and the payout. The policy terms (VPP) of the fictional insurer are written for 
 make data SEED=42     # regenerates the same files byte for byte
 ```
 
-## Numbers so far (dev split, 2026-10-09)
+## Governance
 
-| Step | Metric | Result |
-| --- | --- | --- |
-| PII guard | identifiers redacted (birth numbers, IBANs, phones, e-mails) | 190/190 |
-| PII guard | names redacted | 162/162 |
-| PII guard | ground-truth PII in any model payload | 0 |
-| Document type | accuracy | 147/148 (99.3 %), 94 % decided by rules |
-| Smoke | qwen3:14b JSON extraction, thinking off vs on | 8 s vs 22 s, same values |
-
-The held-out test split is scored once per checkpoint, not while tuning. Reports with every failure
-are in [evals/reports](evals/reports).
+[docs/governance](docs/governance) answers what a regulated insurer asks before a pilot: the data
+flow and where personal data is redacted, a DPIA-lite (health data is a special category under
+GDPR Article 9), model cards, provider terms, retention and erasure of one claim end to end, and
+what the system may and may not decide.
 
 ## Discovery
 
@@ -71,19 +171,25 @@ What I would ask claims handlers in week one, and the hypotheses the build rests
 ## Run it
 
 ```
-make up        # Postgres, Redis, api, core_mock, mcp_server + migrations
-make models    # pull the local models
-make worker    # native worker
-make smoke     # check the models
-make test      # unit tests
-make eval-fast # gated eval suites on the dev split
+cp .env.example .env   # then set CLAIMPILOT_PII_VAULT_KEY (make vault-key) and the secrets
+make up                # Postgres, Redis, api, core_mock, mcp_server + migrations
+make models            # pull the local models
+make worker            # native worker
+make seed N=5          # upload five dev claims through the api
+make ui                # review UI on :4410
+make test              # unit tests
+make eval-fast         # gated eval suites on the dev split against the baselines
 ```
 
-Requirements: macOS on Apple silicon with 48 GB memory, Docker, Ollama, uv, Homebrew pango (for
-WeasyPrint).
+Requirements: macOS on Apple silicon with 48 GB memory, Docker, Ollama, uv, pnpm, Homebrew pango
+(for WeasyPrint). Run the GPU-heavy eval suites one at a time: two large models plus Docker do not
+fit in 48 GB.
+
+CI lints, type-checks, runs unit and database tests, and replays every eval suite on dev from the
+recorded responses; a prompt change without a new recording fails as stale.
 
 ## Status
 
-Phase 1 (local) in progress: foundations, synthetic data, ingest, PII guard and the eval harness are
-done. Next: extraction with grounding, routing, coverage with retrieval, submission, the review UI.
-Decisions are recorded in [docs/adr](docs/adr).
+Phase 1 (local) is done: stages 1.1 to 1.10 of the build plan. Phase 2 moves the text models to
+Amazon Bedrock behind the same gateway; the vision path stays local. Decisions are recorded in
+[docs/adr](docs/adr).

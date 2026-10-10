@@ -26,11 +26,11 @@ jobs:
         with:
           enable-cache: true
       - run: uv sync --frozen
-      - name: Cache the NER model for the PII guard
+      - name: Cache the NER and reranker models
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
-          key: hf-wikineural-multilingual-ner
+          key: hf-ner-reranker-v1
       - name: Lint
         run: |
           uv run ruff check .
@@ -39,8 +39,10 @@ jobs:
         run: uv run pyright
       - name: Migrations
         run: uv run alembic upgrade head
-      - name: Unit and database tests
-        run: uv run pytest -m "not smoke and not live"
+      - name: Unit tests
+        run: uv run pytest
+      - name: Database tests
+        run: uv run pytest -m db
       - name: Eval gate on recorded responses
         # Replays cassettes on the committed ground truth and parse cache (no PDFs, no Docling run);
         # a prompt change without a fresh recording fails here as stale.

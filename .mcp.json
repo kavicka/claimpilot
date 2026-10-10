@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "claimpilot": {
+      "command": "uv",
+      "args": ["run", "--directory", ".", "--no-sync", "claimpilot-mcp"],
+      "env": {
+        "CLAIMPILOT_API_URL": "http://127.0.0.1:4400",
+        "CLAIMPILOT_MCP_TOKEN": "${CLAIMPILOT_MCP_TOKEN}"
+      }
+    }
+  }
+}

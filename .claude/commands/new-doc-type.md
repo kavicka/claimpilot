@@ -9,6 +9,9 @@ Add the document type `$ARGUMENTS`:
    every field a string as printed plus a description, and register it in `SCHEMAS`.
 3. Add a Jinja2 template in `data/generator/src/claimpilot_datagen/templates/` and a generator piece
    that writes ground truth for every field.
-4. Add `prompts/extraction/$ARGUMENTS.md` (version 1).
+4. Add its label to `DOC_TYPE_LABELS` in `services/worker/src/claimpilot_worker/extraction/extract.py`
+   and its keywords to `KEYWORDS` in `services/worker/src/claimpilot_worker/ingest/doctype.py`.
+   The extraction prompt (`prompts/extraction/document.md`) is shared by all types.
 5. Write failing tests first: generator invariants, schema round-trip, ground-truth completeness.
-6. Make them pass, regenerate the dataset, run `/eval extraction`.
+6. Make them pass, regenerate the dataset (`make data`), rebuild the few-shot examples
+   (`uv run claimpilot-eval fewshot`), run `/eval extraction`.
