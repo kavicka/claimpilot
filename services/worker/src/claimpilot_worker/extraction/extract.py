@@ -132,14 +132,15 @@ def ground(
 
 
 def _squash(text: str) -> str:
-    return " ".join(fold(text).split())
+    # OCR drops or adds spaces ("21.7.2026" for "21. 7. 2026"); every other character counts.
+    return "".join(fold(text).split())
 
 
 def check_as_printed(
     fields: list["Field"], parsed: ParsedDocument, redacted: dict[int, str]
 ) -> None:
     """Values are copied as printed, so a grounded value must appear in the document's text
-    character for character (case, diacritics and spacing aside). Grounding is fuzzy and goes by
+    character for character (case, diacritics and spaces aside). Grounding is fuzzy and goes by
     the quote: it finds the right line even when the value lost a character, as when a vision
     model read "R-2026 36818" off a printed "R-2026-36818". A value that fails this check keeps
     its field out of straight-through processing."""

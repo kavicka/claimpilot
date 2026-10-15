@@ -127,11 +127,11 @@ def test_cross_document_checks():
 
 
 def test_a_value_that_lost_a_character_is_not_trusted_although_its_line_was_found():
-    doc = parsed("Račun br. R-2026-36818", "Datum: 16.06.2026.", "Pacijent: <PERSON_1>")
+    doc = parsed("Račun br. R-2026-36818", "Datum: 16.6.2026.", "Pacijent: <PERSON_1>")
     redacted = {b.seq: b.text for b in doc.blocks}
     fields = [
         Field("invoice_number", "R-2026 36818", "Račun br. R-2026-36818", 1),
-        Field("issue_date", "16.06.2026.", "Datum: 16.06.2026.", 1),
+        Field("issue_date", "16. 6. 2026.", "Datum: 16. 6. 2026.", 1),  # OCR lost the spaces
         Field("patient_name", "<PERSON_1>", "Pacijent: <PERSON_1>", 1),
     ]
     for f in fields:
