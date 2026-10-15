@@ -48,9 +48,16 @@ class Settings(BaseSettings):
 
     # Finished claims older than this are erased by the worker's daily purge job.
     retention_days: int = 3650
+    # OCR for scans and photos: "docling" (RapidOCR or Apple Vision, inside the worker) or
+    # "textract" (Amazon Textract; only with the AWS AI services opt-out policy, docs/deploy.md).
+    ocr_engine: str = "docling"
     # Scans and photos: "vision" reads page images with the local vision model (critical fields
     # 97.6 % vs 81.1 % through OCR text on the dev scans, 2026-10-09); "text" uses the OCR text.
     scan_path: str = "vision"
+
+    # OTLP/HTTP endpoint of the ADOT sidecar in AWS (http://127.0.0.1:4318); Langfuse wins when
+    # both are set. Spans carry no prompt text (claimpilot_core.otel).
+    otel_endpoint: str = ""
 
     langfuse_host: str = ""
     langfuse_public_key: str = ""

@@ -1,0 +1,41 @@
+# AWS Distro for OpenTelemetry collector, run as a sidecar next to the api and the worker
+# (infra/terraform/ecs.tf passes this file in AOT_CONFIG_CONTENT).
+#
+# The app sends spans over OTLP/HTTP to localhost:4318 (CLAIMPILOT_OTEL_ENDPOINT). Spans carry step
+# names, model ids, prompt versions, token counts and latency; never prompt or response text
+# (claimpilot_core.observability). The collector forwards them to X-Ray in the same Region,
+# through the VPC endpoint, with the claim id indexed so a handler's question "what happened to
+# CP-2026-000123" is one X-Ray filter: annotation.claimpilot_claim_id = "...".
+
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 127.0.0.1:4318
+
+processors:
+  batch:
+    timeout: 5s
+  resourcedetection:
+    detectors: [env, ecs]
+    timeout: 2s
+    override: false
+
+exporters:
+  awsxray:
+    indexed_attributes:
+      - claimpilot.claim_id
+      - claimpilot.step
+      - gen_ai.request.model
+
+extensions:
+  health_check:
+    endpoint: 127.0.0.1:13133
+
+service:
+  extensions: [health_check]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [resourcedetection, batch]
+      exporters: [awsxray]

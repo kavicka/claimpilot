@@ -58,12 +58,60 @@ jobs:
       - uses: actions/checkout@v4
       - uses: docker/setup-buildx-action@v3
       - name: Build worker image
-        run: docker build -f services/worker/Dockerfile -t claimpilot-worker:ci .
+        # PREFETCH=0: the unit tests need no model files; the deploy builds with them.
+        run: docker build --build-arg PREFETCH=0 -f services/worker/Dockerfile -t claimpilot-worker:ci .
       - name: Unit tests inside the image
         run: |
           docker run --rm -v "$PWD/tests:/app/tests:ro" -v "$PWD/pyproject.toml:/app/pyproject.toml:ro" \
             claimpilot-worker:ci sh -c "uv pip install --python /app/.venv/bin/python pytest pytest-asyncio respx hypothesis && \
             /app/.venv/bin/python -m pytest tests/core tests/worker -m 'not smoke and not live and not db' -q"
+
+  infra:
+    # Terraform for the AWS deployment, checked without an AWS account: mocked providers only.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.16.6
+          terraform_wrapper: false
+      - uses: terraform-linters/setup-tflint@v4
+        with:
+          tflint_version: v0.59.1
+      - uses: astral-sh/setup-uv@v6
+      - name: Format, validate, mocked tests
+        run: |
+          terraform -chdir=infra/terraform fmt -check -recursive
+          terraform -chdir=infra/terraform init -backend=false -input=false
+          terraform -chdir=infra/terraform validate
+          terraform -chdir=infra/terraform test
+          terraform -chdir=infra/terraform/bootstrap init -backend=false -input=false
+          terraform -chdir=infra/terraform/bootstrap validate
+      - name: tflint
+        working-directory: infra/terraform
+        run: |
+          tflint --init
+          tflint --recursive
+      - name: checkov
+        run: uvx checkov==3.3.29 -d infra/terraform --framework terraform --quiet --compact
+      - name: Deploy scripts
+        run: shellcheck scripts/deploy/*.sh
+
+  images:
+    # The deployment's images on the architecture they run on (Graviton), not pushed anywhere.
+    runs-on: ubuntu-24.04-arm
+    strategy:
+      matrix:
+        include:
+          - { name: api, dockerfile: services/api/Dockerfile, context: . }
+          - { name: core-mock, dockerfile: services/core_mock/Dockerfile, context: . }
+          - { name: mcp, dockerfile: services/mcp_server/Dockerfile, context: . }
+          - { name: ui, dockerfile: ui/Dockerfile, context: ui }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - name: Build ${{ matrix.name }}
+        run: docker build -f ${{ matrix.dockerfile }} -t claimpilot-${{ matrix.name }}:ci ${{ matrix.context }}
 
   e2e:
     # The review UI against the real api and a seeded database; no models run.

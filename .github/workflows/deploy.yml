@@ -1,0 +1,69 @@
+name: deploy
+
+# Manual only: Actions -> deploy -> Run workflow. The "production" environment should require a
+# reviewer, so a run waits for approval before it touches the account.
+#
+# Repository variables (Settings -> Secrets and variables -> Actions -> Variables):
+#   AWS_DEPLOY_ROLE_ARN  output deploy_role_arn of infra/terraform/bootstrap
+#   TF_STATE_BUCKET      output state_bucket of bootstrap
+#   TF_STATE_KMS_KEY     output state_kms_key of bootstrap
+#   ALLOWED_CIDRS        JSON list, e.g. ["203.0.113.10/32"]
+#   ALERT_EMAIL          budget alerts
+#   CERTIFICATE_ARN      optional ACM certificate for HTTPS
+# No AWS keys are stored in GitHub: the job assumes the role through OIDC.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # Graviton tasks: build the images natively on an ARM runner.
+    runs-on: ubuntu-24.04-arm
+    environment: production
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          role-session-name: claimpilot-deploy-${{ github.run_id }}
+          aws-region: eu-central-1
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.16.6
+          terraform_wrapper: false
+      - uses: astral-sh/setup-uv@v6
+      - uses: docker/setup-buildx-action@v3
+      - name: Python for the secret generator
+        run: uv sync --frozen --no-dev --package claimpilot-core
+      - name: Backend and variables
+        env:
+          BUCKET: ${{ vars.TF_STATE_BUCKET }}
+          KMS_KEY: ${{ vars.TF_STATE_KMS_KEY }}
+          ALLOWED_CIDRS: ${{ vars.ALLOWED_CIDRS }}
+          ALERT_EMAIL: ${{ vars.ALERT_EMAIL }}
+          CERTIFICATE_ARN: ${{ vars.CERTIFICATE_ARN }}
+        run: |
+          cat > infra/terraform/backend.hcl <<EOF
+          bucket       = "$BUCKET"
+          key          = "claimpilot/terraform.tfstate"
+          region       = "eu-central-1"
+          encrypt      = true
+          kms_key_id   = "$KMS_KEY"
+          use_lockfile = true
+          EOF
+          jq -n --argjson cidrs "$ALLOWED_CIDRS" --arg email "$ALERT_EMAIL" --arg cert "$CERTIFICATE_ARN" \
+            '{allowed_cidrs: $cidrs, alert_email: $email} + (if $cert == "" then {} else {certificate_arn: $cert} end)' \
+            > infra/terraform/ci.auto.tfvars.json
+          # deploy.sh looks for terraform.tfvars; the values come from the JSON file above.
+          echo '# values in ci.auto.tfvars.json' > infra/terraform/terraform.tfvars
+      - name: Deploy
+        run: scripts/deploy/deploy.sh

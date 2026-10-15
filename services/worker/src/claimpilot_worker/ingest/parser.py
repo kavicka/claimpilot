@@ -30,6 +30,7 @@ from docling_core.types.doc.items.table.table import TableItem
 from docling_core.types.doc.items.text import TextItem
 
 from claimpilot_core.schemas.parsing import Block, FracBox, PageInfo, ParsedDocument
+from claimpilot_core.settings import get_settings
 
 OCR_LANGS_MAC = ["iso:cs", "iso:de", "iso:it", "iso:en", "iso:pl", "iso:tr"]
 PAGE_NUMBER = re.compile(r"\d+\s*/\s*\d+")
@@ -133,6 +134,12 @@ def blocks_from(doc: DoclingDocument, pages: dict[int, PageInfo]) -> list[Block]
 
 
 def parse(path: Path) -> ParsedDocument:
+    settings = get_settings()
+    if settings.ocr_engine == "textract":
+        from claimpilot_worker.ingest.textract import TextractReader, is_scan
+
+        if is_scan(path):
+            return TextractReader(settings.aws_region).parse(path)
     started = time.perf_counter()
     result = converter().convert(path)
     doc = result.document

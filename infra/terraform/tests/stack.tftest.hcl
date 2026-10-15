@@ -143,10 +143,10 @@ run "only_the_worker_calls_bedrock_and_only_in_the_eu" {
 
 run "tasks_get_what_they_need_and_no_more" {
   assert {
-    condition = alltrue([
-      for k, td in aws_ecs_task_definition.service : jsondecode(td.container_definitions)[0].readonlyRootFilesystem
-    ])
-    error_message = "Every container runs with a read-only root file system."
+    condition = alltrue(flatten([
+      for k, td in aws_ecs_task_definition.service : [for c in jsondecode(td.container_definitions) : c.readonlyRootFilesystem]
+    ]))
+    error_message = "Every container, sidecars included, runs with a read-only root file system."
   }
 
   assert {
@@ -223,5 +223,59 @@ run "uploads_pass_the_waf" {
       ]) if length(r.statement[0].managed_rule_group_statement) > 0
     ])
     error_message = "The managed rule's 8 KB body limit only counts; it would block every claim upload."
+  }
+}
+
+run "traces_go_to_x_ray_through_a_sidecar_that_cannot_stop_the_app" {
+  assert {
+    condition = alltrue([
+      for k in ["api", "worker"] : (
+        [for c in jsondecode(aws_ecs_task_definition.service[k].container_definitions) : "${c.name}:${c.essential}"]
+        == ["${k}:true", "adot:false"]
+      )
+    ])
+    error_message = "api and worker carry a non-essential ADOT sidecar after the app container."
+  }
+
+  assert {
+    condition     = length(jsondecode(aws_ecs_task_definition.service["ui"].container_definitions)) == 1
+    error_message = "The ui sends no traces."
+  }
+
+  assert {
+    condition = contains(
+      [for e in jsondecode(aws_ecs_task_definition.service["worker"].container_definitions)[0].environment : "${e.name}=${e.value}"],
+      "CLAIMPILOT_OTEL_ENDPOINT=http://127.0.0.1:4318"
+    )
+    error_message = "The worker sends spans to the sidecar on localhost."
+  }
+
+  assert {
+    condition     = contains(keys(aws_vpc_endpoint.interface), "xray") && !contains(keys(aws_vpc_endpoint.interface), "textract")
+    error_message = "X-Ray has an endpoint; Textract has none unless it is the OCR engine."
+  }
+
+  assert {
+    condition     = length(aws_iam_role_policy.worker_textract) == 0
+    error_message = "No Textract permission by default."
+  }
+}
+
+run "textract_only_when_chosen" {
+  variables {
+    ocr_engine = "textract"
+  }
+
+  assert {
+    condition     = contains(keys(aws_vpc_endpoint.interface), "textract") && length(aws_iam_role_policy.worker_textract) == 1
+    error_message = "Textract gets an endpoint and a worker permission when it is the OCR engine."
+  }
+
+  assert {
+    condition = contains(
+      [for e in jsondecode(aws_ecs_task_definition.service["worker"].container_definitions)[0].environment : "${e.name}=${e.value}"],
+      "CLAIMPILOT_OCR_ENGINE=textract"
+    )
+    error_message = "The worker is told to use Textract."
   }
 }

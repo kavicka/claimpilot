@@ -31,3 +31,10 @@ resource "aws_ecr_lifecycle_policy" "app" {
     }]
   })
 }
+
+# The ADOT collector image comes from ECR Public; tasks have no internet route, so ECR fetches it
+# on the first pull and keeps a copy under ecr-public/.
+resource "aws_ecr_pull_through_cache_rule" "ecr_public" {
+  ecr_repository_prefix = "ecr-public"
+  upstream_registry_url = "public.ecr.aws"
+}

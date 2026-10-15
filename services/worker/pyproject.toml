@@ -6,6 +6,7 @@ requires-python = ">=3.12,<3.13"
 dependencies = [
     "claimpilot-core[pii]",
     "arq>=0.26",
+    "boto3>=1.35",
     "docling>=2.15",
     "ocrmac>=1.0; sys_platform == 'darwin'",
     "onnxruntime>=1.20",

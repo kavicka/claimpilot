@@ -121,3 +121,20 @@ variable "deletion_protection" {
   type        = bool
   default     = true
 }
+
+variable "ocr_engine" {
+  description = "OCR for scans: docling (inside the worker) or textract. Textract needs the AWS Organizations AI services opt-out policy first (docs/deploy.md)."
+  type        = string
+  default     = "docling"
+
+  validation {
+    condition     = contains(["docling", "textract"], var.ocr_engine)
+    error_message = "docling or textract."
+  }
+}
+
+variable "adot_image_tag" {
+  description = "AWS Distro for OpenTelemetry collector, pulled through ECR from public.ecr.aws."
+  type        = string
+  default     = "v0.50.0"
+}

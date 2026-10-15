@@ -1,0 +1,64 @@
+name: eval-live
+
+# A pull request that changes a prompt runs the text suites live against Claude on Bedrock
+# (config/providers.cloud.yaml). CI's cassette gate covers the local models; this job shows what
+# the change does to the cloud models. It reports and does not gate: there is no Bedrock
+# baseline until the first run on an account is promoted.
+#
+# Skipped unless the repository variable AWS_EVAL_ROLE_ARN is set (output eval_role_arn of
+# infra/terraform/bootstrap: Bedrock invoke only). Fork pull requests get no OIDC token and skip.
+#
+# Scans take the text path here: the vision path needs the page images, which are generated
+# locally and not committed.
+
+on:
+  pull_request:
+    paths:
+      - "prompts/**"
+      - "config/providers.cloud.yaml"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  bedrock:
+    if: vars.AWS_EVAL_ROLE_ARN != '' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      CLAIMPILOT_PROVIDERS_FILE: providers.cloud.yaml
+      CLAIMPILOT_AWS_REGION: eu-central-1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ vars.AWS_EVAL_ROLE_ARN }}
+          role-session-name: claimpilot-eval-${{ github.run_id }}
+          aws-region: eu-central-1
+      - name: Live run on Bedrock (no cassettes)
+        # The runner compares against the local-model baselines and may report gates; this job
+        # informs the review and does not block it.
+        continue-on-error: true
+        run: |
+          for suite in doc_type extraction routing; do
+            uv run claimpilot-eval run --suite "$suite" --split dev --opt scan_path=text | tee -a "$RUNNER_TEMP/metrics.txt"
+          done
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Bedrock eval (dev split, text path)"
+            echo '```'
+            grep '^{' "$RUNNER_TEMP/metrics.txt" || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bedrock-eval-reports
+          path: evals/reports/

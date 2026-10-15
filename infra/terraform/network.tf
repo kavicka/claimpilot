@@ -1,6 +1,6 @@
 # Two AZs. Public subnets hold only the load balancer. Tasks, the database, the cache and the
 # file system sit in private subnets with no route to the internet: no NAT gateway, no internet
-# egress. AWS APIs (Bedrock, ECR, Logs, Secrets Manager) are reached through VPC endpoints, so a
+# egress. AWS APIs (Bedrock, ECR, Logs, Secrets Manager, X-Ray) are reached through VPC endpoints, so a
 # claim's content can only leave the VPC towards the services this file lists.
 
 data "aws_caller_identity" "current" {}
@@ -11,13 +11,10 @@ locals {
   azs        = var.azs
   # Interface endpoints cost per AZ and hour; one AZ is enough for the demo.
   endpoint_subnets = var.ha ? aws_subnet.private[*].id : [aws_subnet.private[0].id]
-  interface_endpoints = toset([
-    "bedrock-runtime",
-    "ecr.api",
-    "ecr.dkr",
-    "logs",
-    "secretsmanager",
-  ])
+  interface_endpoints = setunion(
+    ["bedrock-runtime", "ecr.api", "ecr.dkr", "logs", "secretsmanager", "xray"],
+    var.ocr_engine == "textract" ? ["textract"] : [],
+  )
 }
 
 resource "aws_vpc" "main" {

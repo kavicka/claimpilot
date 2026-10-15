@@ -54,6 +54,12 @@ resource "aws_iam_role_policy" "execution_secrets" {
         Action   = "kms:Decrypt"
         Resource = aws_kms_key.main.arn
       },
+      {
+        Sid      = "PullThroughCacheForAdot"
+        Effect   = "Allow"
+        Action   = ["ecr:BatchImportUpstreamImage", "ecr:CreateRepository"]
+        Resource = "arn:aws:ecr:${var.region}:${local.account_id}:repository/ecr-public/*"
+      },
     ]
   })
 }
@@ -83,6 +89,36 @@ resource "aws_iam_role_policy" "worker_bedrock" {
         Resource = "arn:aws:bedrock:${var.region}::foundation-model/${var.embedding_model}"
       },
     ]
+  })
+}
+
+resource "aws_iam_role_policy" "traces" {
+  #checkov:skip=CKV_AWS_355:X-Ray's PutTraceSegments and sampling calls take no resource scope.
+  for_each = aws_iam_role.task
+  name     = "xray"
+  role     = each.value.id
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect   = "Allow"
+      Action   = ["xray:PutTraceSegments", "xray:PutTelemetryRecords", "xray:GetSamplingRules", "xray:GetSamplingTargets"]
+      Resource = "*"
+    }]
+  })
+}
+
+resource "aws_iam_role_policy" "worker_textract" {
+  #checkov:skip=CKV_AWS_355:DetectDocumentText takes no resource scope.
+  count = var.ocr_engine == "textract" ? 1 : 0
+  name  = "textract"
+  role  = aws_iam_role.task["worker"].id
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect   = "Allow"
+      Action   = "textract:DetectDocumentText"
+      Resource = "*"
+    }]
   })
 }
 

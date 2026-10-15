@@ -403,10 +403,13 @@ source = { editable = "packages/claimpilot_core" }
 dependencies = [
     { name = "alembic" },
     { name = "anthropic", extra = ["bedrock"] },
+    { name = "boto3" },
     { name = "cryptography" },
     { name = "httpx" },
     { name = "jinja2" },
     { name = "langfuse" },
+    { name = "opentelemetry-exporter-otlp-proto-http" },
+    { name = "opentelemetry-sdk" },
     { name = "pgvector" },
     { name = "psycopg", extra = ["binary"] },
     { name = "pydantic" },
@@ -428,10 +431,13 @@ pii = [
 requires-dist = [
     { name = "alembic", specifier = ">=1.14" },
     { name = "anthropic", extras = ["bedrock"], specifier = ">=1.0" },
+    { name = "boto3", specifier = ">=1.35" },
     { name = "cryptography", specifier = ">=43" },
     { name = "httpx", specifier = ">=0.27" },
     { name = "jinja2", specifier = ">=3.1" },
     { name = "langfuse", specifier = ">=3.0" },
+    { name = "opentelemetry-exporter-otlp-proto-http", specifier = ">=1.30" },
+    { name = "opentelemetry-sdk", specifier = ">=1.30" },
     { name = "pgvector", specifier = ">=0.3.6" },
     { name = "presidio-analyzer", marker = "extra == 'pii'", specifier = ">=2.2.355" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.2" },
@@ -528,6 +534,7 @@ version = "0.1.0"
 source = { editable = "services/worker" }
 dependencies = [
     { name = "arq" },
+    { name = "boto3" },
     { name = "claimpilot-core", extra = ["pii"] },
     { name = "docling" },
     { name = "ocrmac", marker = "sys_platform == 'darwin'" },
@@ -544,6 +551,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "arq", specifier = ">=0.26" },
+    { name = "boto3", specifier = ">=1.35" },
     { name = "claimpilot-core", extras = ["pii"], editable = "packages/claimpilot_core" },
     { name = "docling", specifier = ">=2.15" },
     { name = "ocrmac", marker = "sys_platform == 'darwin'", specifier = ">=1.0" },

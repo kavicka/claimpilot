@@ -28,6 +28,33 @@ resource "aws_cloudwatch_log_group" "service" {
 }
 
 locals {
+  # The api and the worker send spans to an ADOT sidecar on localhost, which forwards them to
+  # X-Ray (infra/adot/collector.yaml). The sidecar is not essential: tracing never stops a task.
+  traced = ["api", "worker"]
+  trace_env = {
+    for s in local.traced : s => {
+      CLAIMPILOT_OTEL_ENDPOINT = "http://127.0.0.1:4318"
+      OTEL_SERVICE_NAME        = "claimpilot-${s}"
+    }
+  }
+  adot_container = {
+    for s in local.traced : s => {
+      name                   = "adot"
+      image                  = "${local.account_id}.dkr.ecr.${var.region}.amazonaws.com/${aws_ecr_pull_through_cache_rule.ecr_public.ecr_repository_prefix}/aws-observability/aws-otel-collector:${var.adot_image_tag}"
+      essential              = false
+      readonlyRootFilesystem = true
+      environment            = [{ name = "AOT_CONFIG_CONTENT", value = file("${path.module}/../adot/collector.yaml") }]
+      logConfiguration = {
+        logDriver = "awslogs"
+        options = {
+          awslogs-group         = aws_cloudwatch_log_group.service[s].name
+          awslogs-region        = var.region
+          awslogs-stream-prefix = "adot"
+        }
+      }
+    }
+  }
+
   database_url = "postgresql+psycopg://claimpilot@${aws_db_instance.main.address}:5432/claimpilot?sslmode=require"
 
   common_env = {
@@ -57,6 +84,7 @@ locals {
       env = merge(local.common_env, {
         CLAIMPILOT_PROVIDERS_FILE = "providers.cloud.yaml"
         CLAIMPILOT_AWS_REGION     = var.region
+        CLAIMPILOT_OCR_ENGINE     = var.ocr_engine
         # Models are baked into the image; nothing may be fetched at run time (no internet route).
         HF_HUB_OFFLINE       = "1"
         TRANSFORMERS_OFFLINE = "1"
@@ -92,7 +120,7 @@ resource "aws_ecs_task_definition" "service" {
     cpu_architecture        = "ARM64"
   }
 
-  container_definitions = jsonencode([{
+  container_definitions = jsonencode(concat([{
     name                   = each.key
     image                  = "${aws_ecr_repository.app[each.key].repository_url}:${var.image_tag}"
     essential              = true
@@ -102,8 +130,11 @@ resource "aws_ecs_task_definition" "service" {
       containerPort = each.value.port
       protocol      = "tcp"
     }]
-    environment = [for k, v in each.value.env : { name = k, value = v }]
-    secrets     = [for s in each.value.secrets : local.secret_env[s]]
+    environment = [
+      for k, v in merge(each.value.env, contains(local.traced, each.key) ? local.trace_env[each.key] : {}) :
+      { name = k, value = v }
+    ]
+    secrets = [for s in each.value.secrets : local.secret_env[s]]
     mountPoints = concat(
       [for i, p in each.value.scratch : { sourceVolume = "scratch-${i}", containerPath = p, readOnly = false }],
       each.value.efs ? [{ sourceVolume = "documents", containerPath = "/data/storage", readOnly = false }] : [],
@@ -116,7 +147,7 @@ resource "aws_ecs_task_definition" "service" {
         awslogs-stream-prefix = each.key
       }
     }
-  }])
+  }], contains(local.traced, each.key) ? [local.adot_container[each.key]] : []))
 
   dynamic "volume" {
     for_each = { for i, p in each.value.scratch : "scratch-${i}" => p }
