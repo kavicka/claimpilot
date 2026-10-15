@@ -3,7 +3,7 @@
 from functools import lru_cache
 from pathlib import Path
 
-from pydantic import Field, SecretStr
+from pydantic import Field, SecretStr, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -21,6 +21,9 @@ class Settings(BaseSettings):
     )
 
     database_url: str = "postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot"
+    # On AWS the URL carries no password; RDS keeps it in Secrets Manager and ECS hands it over in
+    # this variable. It is put into the URL once, here.
+    database_password: SecretStr = SecretStr("")
     redis_url: str = "redis://127.0.0.1:6389/0"
     ollama_url: str = "http://127.0.0.1:11434"
     # Which model map to load from config/: providers.yaml (local Ollama) or providers.cloud.yaml
@@ -52,6 +55,16 @@ class Settings(BaseSettings):
     langfuse_host: str = ""
     langfuse_public_key: str = ""
     langfuse_secret_key: SecretStr = SecretStr("")
+
+    @model_validator(mode="after")
+    def _password_into_url(self) -> "Settings":
+        password = self.database_password.get_secret_value()
+        if password:
+            from sqlalchemy.engine import make_url
+
+            url = make_url(self.database_url).set(password=password)
+            self.database_url = url.render_as_string(hide_password=False)
+        return self
 
 
 @lru_cache

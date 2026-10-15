@@ -40,6 +40,9 @@ explicit = true
 [tool.uv.sources]
 # Linux (CI and the Phase 2 image) gets CPU-only torch; macOS keeps the default MPS build.
 torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+# torchvision (pulled in by Docling) must come from the same index, or its C ops do not load
+# against the CPU torch ("operator torchvision::nms does not exist").
+torchvision = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
 claimpilot-core = { workspace = true }
 claimpilot-api = { workspace = true }
 claimpilot-worker = { workspace = true }

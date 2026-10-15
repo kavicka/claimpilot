@@ -18,3 +18,11 @@ data/storage/
 *.log
 data/cache/renders/
 data/corrections/
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+infra/terraform/backend.hcl
+infra/terraform/terraform.tfvars
+infra/terraform/.tflint.d/
+infra/terraform/*.auto.tfvars.json

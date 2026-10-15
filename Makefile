@@ -5,7 +5,8 @@ SPLIT ?= dev
 MODELS := qwen3:14b qwen3-vl:8b bge-m3 qwen3:4b-instruct qwen3:30b-a3b-instruct-2507-q4_K_M gemma3:12b
 
 .PHONY: help up up-obs down logs ps migrate worker api test test-db lint fmt typecheck check \
-        smoke data eval-fast eval compare vault-key models ui seed mcp fewshot corrections e2e
+        smoke data eval-fast eval compare vault-key models ui seed mcp fewshot corrections e2e \
+        infra-check deploy destroy
 
 help:  ## List targets
 	@grep -E '^[a-z-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-12s %s\n", $$1, $$2}'
@@ -92,3 +93,22 @@ fewshot:  ## Rebuild extraction few-shot examples from dev
 
 corrections:  ## Export handler corrections as a dataset
 	uv run claimpilot-eval export-corrections
+
+TFLINT := docker run --rm -e TFLINT_PLUGIN_DIR=/data/.tflint.d -v $(CURDIR)/infra/terraform:/data -w /data \
+	--entrypoint sh ghcr.io/terraform-linters/tflint:v0.59.1 -c
+
+infra-check:  ## Terraform fmt, validate, mocked tests, tflint, checkov (no AWS account needed)
+	terraform -chdir=infra/terraform fmt -check -recursive
+	terraform -chdir=infra/terraform init -backend=false -input=false >/dev/null
+	terraform -chdir=infra/terraform validate
+	terraform -chdir=infra/terraform test
+	terraform -chdir=infra/terraform/bootstrap init -backend=false -input=false >/dev/null
+	terraform -chdir=infra/terraform/bootstrap validate
+	$(TFLINT) "tflint --init >/dev/null && tflint --recursive"
+	checkov -d infra/terraform --framework terraform --quiet --compact
+
+deploy:  ## Deploy to AWS (docs/deploy.md); needs AWS credentials and terraform.tfvars
+	scripts/deploy/deploy.sh
+
+destroy:  ## Remove the AWS stack; keeps the state bucket and a final DB snapshot
+	scripts/deploy/destroy.sh

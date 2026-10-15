@@ -19,10 +19,18 @@ COPY packages packages
 COPY services/worker services/worker
 COPY config config
 COPY prompts prompts
+# Policy terms: the worker builds the coverage index from them on first start (ADR-008)
+COPY data/policies data/policies
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev --package claimpilot-worker
 
-ENV PATH="/app/.venv/bin:$PATH"
+ENV PATH="/app/.venv/bin:$PATH" HF_HOME=/app/.cache/huggingface
+
+# Every model goes into the image: the ECS task has no internet route and runs with
+# HF_HUB_OFFLINE=1. The second run proves the loads work offline. CI's image test skips it
+# (PREFETCH=0); the deploy builds with it.
+ARG PREFETCH=1
+RUN if [ "$PREFETCH" = "1" ]; then claimpilot-prefetch && claimpilot-prefetch --check; fi
 
 CMD ["claimpilot-worker"]
 

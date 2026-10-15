@@ -15,6 +15,7 @@ COPY evals/pyproject.toml evals/
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev --no-install-workspace --package claimpilot-api
 
+COPY alembic.ini ./
 COPY packages packages
 COPY services/api services/api
 COPY config config

@@ -13,10 +13,12 @@ dependencies = [
     "rapidfuzz>=3.10",
     "sentence-transformers>=3.3",
     "torch>=2.5",
+    "torchvision>=0.20",
 ]
 
 [project.scripts]
 claimpilot-worker = "claimpilot_worker.supervise:main"
+claimpilot-prefetch = "claimpilot_worker.prefetch:main"
 
 [tool.uv.sources]
 claimpilot-core = { workspace = true }

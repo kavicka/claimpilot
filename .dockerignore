@@ -9,6 +9,8 @@ ui/node_modules
 ui/.next
 data/storage
 data/synthetic
+# core_mock's image carries the synthetic policies (no PDFs)
+!data/synthetic/policies.json
 evals/cassettes
 evals/reports
 evals/cache

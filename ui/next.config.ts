@@ -10,6 +10,8 @@ const config: NextConfig = {
   poweredByHeader: false,
   agentRules: false,
   devIndicators: false,
+  // The container image (ui/Dockerfile) runs the standalone server; local dev and e2e do not.
+  output: process.env.NEXT_OUTPUT === "standalone" ? "standalone" : undefined,
   // ui/ is a standalone app; stop Turbopack from picking up lockfiles further up the tree.
   turbopack: { root: path.dirname(fileURLToPath(import.meta.url)) },
   // The browser only ever talks to this origin; the session cookie stays same-origin.
