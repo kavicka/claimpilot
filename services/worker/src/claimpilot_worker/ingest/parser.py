@@ -2,9 +2,16 @@
 
 Runs in the native worker with the MPS accelerator. OCR uses Apple Vision (ocrmac) on macOS and
 RapidOCR elsewhere. Pages with a text layer keep it; image regions and scanned pages are OCR'd.
+
+Docling's layout model sometimes files a letterhead, a form or a stamp as a picture and keeps the
+OCR text as the picture's children; running page headers and footers sit in the furniture layer.
+Both are read here: they hold patient names, visit dates, diagnoses and file references. Bare
+page numbers ("1 / 2") are dropped.
+After a change here, rebuild the eval parse cache (`claimpilot-eval reparse`).
 """
 
 import hashlib
+import re
 import sys
 import time
 from collections import defaultdict
@@ -17,12 +24,16 @@ from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import OcrMacOptions, PdfPipelineOptions, RapidOcrOptions
 from docling.document_converter import DocumentConverter, ImageFormatOption, PdfFormatOption
 from docling_core.types.doc.base import BoundingBox
+from docling_core.types.doc.common.content_layer import ContentLayer
+from docling_core.types.doc.document import DoclingDocument
 from docling_core.types.doc.items.table.table import TableItem
 from docling_core.types.doc.items.text import TextItem
 
 from claimpilot_core.schemas.parsing import Block, FracBox, PageInfo, ParsedDocument
 
 OCR_LANGS_MAC = ["iso:cs", "iso:de", "iso:it", "iso:en", "iso:pl", "iso:tr"]
+PAGE_NUMBER = re.compile(r"\d+\s*/\s*\d+")
+FURNITURE = {"page_header", "page_footer"}
 MIME_BY_SUFFIX = {
     ".pdf": "application/pdf",
     ".jpg": "image/jpeg",
@@ -75,19 +86,15 @@ def _text_layer_chars(path: Path) -> dict[int, int]:
         return {(p.number or 0) + 1: len(str(p.get_text()).strip()) for p in doc}
 
 
-def parse(path: Path) -> ParsedDocument:
-    started = time.perf_counter()
-    result = converter().convert(path)
-    doc = result.document
-    chars = _text_layer_chars(path)
-    pages = {
-        no: PageInfo(page=no, width=p.size.width, height=p.size.height, text_chars=chars.get(no, 0))
-        for no, p in doc.pages.items()
-    }
+def blocks_from(doc: DoclingDocument, pages: dict[int, PageInfo]) -> list[Block]:
+    """Text blocks in reading order: body text, text inside pictures, running headers and footers,
+    and one block per table row."""
     blocks: list[Block] = []
 
     def add(page: int, kind: str, text: str, box: FracBox) -> None:
         text = " ".join(text.split())
+        if kind in FURNITURE and PAGE_NUMBER.fullmatch(text):
+            return
         if text:
             blocks.append(
                 Block(
@@ -100,7 +107,10 @@ def parse(path: Path) -> ParsedDocument:
                 )
             )
 
-    for item, _level in doc.iterate_items():
+    for item, _level in doc.iterate_items(
+        included_content_layers={ContentLayer.BODY, ContentLayer.FURNITURE},
+        traverse_pictures=True,
+    ):
         provs = getattr(item, "prov", None)
         if not provs:
             continue
@@ -119,10 +129,22 @@ def parse(path: Path) -> ParsedDocument:
                 add(page.page, "table_row", " | ".join(c.text.strip() for c in cells), box)
         elif isinstance(item, TextItem):
             add(page.page, str(item.label), item.text, _frac(prov.bbox, page.width, page.height))
+    return blocks
+
+
+def parse(path: Path) -> ParsedDocument:
+    started = time.perf_counter()
+    result = converter().convert(path)
+    doc = result.document
+    chars = _text_layer_chars(path)
+    pages = {
+        no: PageInfo(page=no, width=p.size.width, height=p.size.height, text_chars=chars.get(no, 0))
+        for no, p in doc.pages.items()
+    }
     return ParsedDocument(
         sha256=sha256_file(path),
         mime_type=MIME_BY_SUFFIX.get(path.suffix.lower(), "application/octet-stream"),
         pages=sorted(pages.values(), key=lambda p: p.page),
-        blocks=blocks,
+        blocks=blocks_from(doc, pages),
         seconds=round(time.perf_counter() - started, 2),
     )

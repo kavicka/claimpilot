@@ -44,3 +44,22 @@ def page_image(path: Path, page: int, sha: str) -> str:
         index[key] = image_digest(image)
         PAGE_INDEX.write_text(json.dumps(index, indent=0, sort_keys=True), "utf-8")
     return image
+
+
+def reparse() -> int:
+    """Parse every document of the synthetic and adversarial datasets again and overwrite its
+    cache entry. Run after a parser change; needs the generated PDFs."""
+    from claimpilot_evals.dataset import Dataset
+
+    done: set[str] = set()
+    for root in (repo_root() / "data" / "synthetic", repo_root() / "data" / "adversarial"):
+        for manifest in sorted(root.glob("manifest-*.json")):
+            split = manifest.stem.removeprefix("manifest-")
+            for claim in Dataset(root).claims(split):
+                for d in claim.docs:
+                    sha = d.data["sha256"]
+                    if sha not in done:
+                        (CACHE_DIR / f"{sha}.json").unlink(missing_ok=True)
+                        parsed(d.path, sha)
+                        done.add(sha)
+    return len(done)

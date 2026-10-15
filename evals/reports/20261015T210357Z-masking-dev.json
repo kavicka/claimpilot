@@ -1,0 +1,724 @@
+{
+ "suite": "masking",
+ "split": "dev",
+ "metrics": {
+  "documents_without_visible_personal_data": {
+   "value": 1.0,
+   "num": 39,
+   "den": 39
+  },
+  "personal_values_visible": {
+   "value": 0.0,
+   "num": 0,
+   "den": 0
+  },
+  "documents_refused": {
+   "value": 0.0,
+   "num": 0,
+   "den": 0
+  },
+  "critical_values_readable_masked": {
+   "value": 0.9862068965517241,
+   "num": 143,
+   "den": 145
+  },
+  "critical_values_readable_unmasked": {
+   "value": 0.9862068965517241,
+   "num": 143,
+   "den": 145
+  }
+ },
+ "items": [
+  {
+   "id": "S42-001/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 2,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "medical_report",
+    "personal_values": 2
+   }
+  },
+  {
+   "id": "S42-002/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 4,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-002/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 1,
+    "unread_lines": 1,
+    "pages": 1,
+    "doc_type": "medical_invoice",
+    "personal_values": 1
+   }
+  },
+  {
+   "id": "S42-003/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 3,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-006/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 2,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "medical_report",
+    "personal_values": 2
+   }
+  },
+  {
+   "id": "S42-008/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 2,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "medical_report",
+    "personal_values": 2
+   }
+  },
+  {
+   "id": "S42-010/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-015/D4",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 1,
+    "unread_lines": 3,
+    "pages": 2,
+    "doc_type": "medical_invoice",
+    "personal_values": 1
+   }
+  },
+  {
+   "id": "S42-016/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 3,
+    "unread_lines": 1,
+    "pages": 1,
+    "doc_type": "property_irregularity_report",
+    "personal_values": 3
+   }
+  },
+  {
+   "id": "S42-017/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 3,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-017/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 1,
+    "unread_lines": 1,
+    "pages": 1,
+    "doc_type": "medical_invoice",
+    "personal_values": 1
+   }
+  },
+  {
+   "id": "S42-019/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 1,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-020/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 5,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-020/D4",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 1,
+    "unread_lines": 1,
+    "pages": 1,
+    "doc_type": "medical_invoice",
+    "personal_values": 1
+   }
+  },
+  {
+   "id": "S42-021/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 3,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-021/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 2,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "medical_report",
+    "personal_values": 2
+   }
+  },
+  {
+   "id": "S42-023/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 2,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "medical_report",
+    "personal_values": 2
+   }
+  },
+  {
+   "id": "S42-024/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-028/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-029/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 2,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "medical_report",
+    "personal_values": 2
+   }
+  },
+  {
+   "id": "S42-029/D4",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 1,
+    "unread_lines": 1,
+    "pages": 1,
+    "doc_type": "medical_invoice",
+    "personal_values": 1
+   }
+  },
+  {
+   "id": "S42-029/D5",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 0,
+    "unread_lines": 0,
+    "pages": 1,
+    "doc_type": "pharmacy_receipt",
+    "personal_values": 0
+   }
+  },
+  {
+   "id": "S42-030/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-030/D4",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 1,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "medical_invoice",
+    "personal_values": 1
+   }
+  },
+  {
+   "id": "S42-030/D5",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 0,
+    "unread_lines": 1,
+    "pages": 1,
+    "doc_type": "pharmacy_receipt",
+    "personal_values": 0
+   }
+  },
+  {
+   "id": "S42-031/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-032/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 3,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-033/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 4,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-033/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 2,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "medical_report",
+    "personal_values": 2
+   }
+  },
+  {
+   "id": "S42-034/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 4,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-035/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 4,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-035/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 2,
+    "unread_lines": 3,
+    "pages": 1,
+    "doc_type": "medical_report",
+    "personal_values": 2
+   }
+  },
+  {
+   "id": "S42-036/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 3,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-036/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 1,
+    "unread_lines": 5,
+    "pages": 2,
+    "doc_type": "medical_invoice",
+    "personal_values": 1
+   }
+  },
+  {
+   "id": "S42-037/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 4,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-038/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 3,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-039/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 1,
+    "unread_lines": 3,
+    "pages": 1,
+    "doc_type": "medical_invoice",
+    "personal_values": 1
+   }
+  },
+  {
+   "id": "S42-040/D1",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 6,
+    "unread_lines": 2,
+    "pages": 1,
+    "doc_type": "claim_form",
+    "personal_values": 6
+   }
+  },
+  {
+   "id": "S42-040/D3",
+   "ok": true,
+   "expected": "no personal value readable",
+   "got": "none readable",
+   "tags": [
+    "documents"
+   ],
+   "detail": {
+    "visible": [],
+    "masked_blocks": 1,
+    "unread_lines": 1,
+    "pages": 1,
+    "doc_type": "medical_invoice",
+    "personal_values": 1
+   }
+  }
+ ],
+ "meta": {
+  "created": "20261015T210357Z",
+  "git": {
+   "sha": "0815bb9",
+   "dirty": true
+  },
+  "dataset": "4aee4de982d2",
+  "seed": 42,
+  "cassette_mode": "off",
+  "overrides": {},
+  "options": {},
+  "prompts": {},
+  "models": [],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 0,
+  "cached_calls": 0,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "tokens_per_item": 0.0,
+  "latency_p50_ms": 0,
+  "latency_p95_ms": 0,
+  "worker_peak_rss_mb": 1826,
+  "models": []
+ },
+ "notes": [],
+ "stale": []
+}

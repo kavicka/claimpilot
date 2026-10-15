@@ -5,6 +5,7 @@ from claimpilot_worker.extraction.crossdoc import cross_document_checks
 from claimpilot_worker.extraction.extract import (
     Extraction,
     Field,
+    check_as_printed,
     flatten,
     ground,
     run_checks,
@@ -123,3 +124,21 @@ def test_cross_document_checks():
     assert results["same_person"] is False
     assert invoice.get("patient_name").checks["same_person"] is False
     assert results["dates_consistent"] is False  # five days apart
+
+
+def test_a_value_that_lost_a_character_is_not_trusted_although_its_line_was_found():
+    doc = parsed("Račun br. R-2026-36818", "Datum: 16.06.2026.", "Pacijent: <PERSON_1>")
+    redacted = {b.seq: b.text for b in doc.blocks}
+    fields = [
+        Field("invoice_number", "R-2026 36818", "Račun br. R-2026-36818", 1),
+        Field("issue_date", "16.06.2026.", "Datum: 16.06.2026.", 1),
+        Field("patient_name", "<PERSON_1>", "Pacijent: <PERSON_1>", 1),
+    ]
+    for f in fields:
+        f.grounded, f.bbox = ground(f.quote, f.value_raw, f.page, doc, redacted)
+        f.value_norm = normalize(f.name, f.value_raw)
+    assert all(f.grounded for f in fields)  # the fuzzy match finds every line
+    check_as_printed(fields, doc, redacted)
+    assert [f.checks["as_printed"] for f in fields] == [False, True, True]
+    run_checks(DocType.MEDICAL_INVOICE, fields, {})
+    assert score_confidence(fields[0]) < 0.9 <= score_confidence(fields[1])

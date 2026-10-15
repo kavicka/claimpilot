@@ -6,11 +6,11 @@ block positions, not word positions, and a box cut to a guessed word position co
 name readable. The model reads the rest of the page from the image and the personal values from
 the redacted text, where they are tokens.
 
-Blocks only cover what the parser read. Docling sometimes files a form, a letterhead or a stamp as a
-picture and returns no text for it; the redactor never saw that text, so a name in it would stay
-readable (the masking eval caught this on a baggage report and two medical reports). A second,
-independent text detector (RapidOCR, detection only, no recognition) finds every line of text on
-the page, and any line that no parsed block covers is blacked out too.
+Blocks only cover what the parser read. Text the parser missed never reached the redactor, so a
+name in it would stay readable: the masking eval caught this on a baggage report and two medical
+reports, where the parser skipped text Docling had filed under a picture (fixed in the parser
+since). A second, independent text detector (RapidOCR, detection only, no recognition) finds every
+line of text on the page, and any line that no parsed block covers is blacked out too.
 
 `mask_pages` refuses (returns None) when masking cannot be trusted:
 - a page has almost no OCR text, so nothing on it could have been found (a photo OCR could not

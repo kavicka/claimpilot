@@ -72,6 +72,7 @@ def main() -> None:
         "adversarial-build", help="rebuild the prompt-injection cases in data/adversarial"
     )
     sub.add_parser("export-corrections", help="write handler corrections as a dataset (JSONL)")
+    sub.add_parser("reparse", help="rebuild the parse cache after a parser change (needs PDFs)")
     sd = sub.add_parser("seed", help="upload synthetic claims through the api")
     sd.add_argument("--split", default="dev")
     sd.add_argument("--n", type=int, default=5)
@@ -93,6 +94,12 @@ def main() -> None:
         from claimpilot_evals.corrections import export
 
         print(asyncio.run(export()))
+        return
+
+    if args.cmd == "reparse":
+        from claimpilot_evals.cache import reparse
+
+        print(f"parsed {reparse()} documents")
         return
 
     if args.cmd == "adversarial-build":

@@ -131,6 +131,24 @@ def ground(
     return best >= GROUNDING_MIN, best_box if best >= GROUNDING_MIN else None
 
 
+def _squash(text: str) -> str:
+    return " ".join(fold(text).split())
+
+
+def check_as_printed(
+    fields: list["Field"], parsed: ParsedDocument, redacted: dict[int, str]
+) -> None:
+    """Values are copied as printed, so a grounded value must appear in the document's text
+    character for character (case, diacritics and spacing aside). Grounding is fuzzy and goes by
+    the quote: it finds the right line even when the value lost a character, as when a vision
+    model read "R-2026 36818" off a printed "R-2026-36818". A value that fails this check keeps
+    its field out of straight-through processing."""
+    text = _squash(" ".join(redacted.get(b.seq, b.text) for b in parsed.blocks))
+    for f in fields:
+        if f.grounded and f.value_raw and not f.value_raw.startswith("["):
+            f.checks["as_printed"] = _squash(f.value_raw) in text
+
+
 # --- flatten ------------------------------------------------------------------------------
 
 
@@ -255,6 +273,7 @@ async def extract_document(
     for f in fields:
         f.grounded, f.bbox = ground(f.quote, f.value_raw, f.page, parsed, redacted)
         f.value_norm = normalize(f.name, f.value_raw, country=country)
+    check_as_printed(fields, parsed, redacted)
     run_checks(doc_type, fields, mapping or {})
     for f in fields:
         f.confidence = score_confidence(f)
@@ -312,6 +331,7 @@ async def extract_document_vision(
     for f in fields:
         f.grounded, f.bbox = ground(f.quote, f.value_raw, f.page, parsed, redacted)
         f.value_norm = normalize(f.name, f.value_raw, country=country)
+    check_as_printed(fields, parsed, redacted)
     run_checks(doc_type, fields, mapping or {})
     for f in fields:
         f.confidence = score_confidence(f)
