@@ -37,12 +37,16 @@ make eval-fast   # gated suites on dev, compare with baselines
 make eval        # live run that records cassettes
 make seed N=5    # upload synthetic claims through the api
 make mcp         # read-only MCP server (stdio)
+make infra-check # Terraform fmt/validate/mocked test, tflint, checkov (no AWS account)
+make deploy      # AWS deployment (docs/deploy.md); make destroy removes it
 ```
 
 Eval suites (`claimpilot-eval run --suite <name>`): doc_type, pii, extraction, routing, retrieval,
 coverage, submission, summaries, injection, adversarial (prompt-injection cases in data/adversarial,
-rebuilt with `claimpilot-eval adversarial-build`). Edge cases and where they are tested:
-docs/testing.md. Options: `--model step=model`, `--opt scan_path=vision
+rebuilt with `claimpilot-eval adversarial-build`). `masking` (personal data readable on masked
+scans) runs locally only and is not part of `all`. After a parser change run
+`claimpilot-eval reparse` to rebuild the committed parse cache, then re-record. Edge cases and
+where they are tested: docs/testing.md. Options: `--model step=model`, `--opt scan_path=vision
 --opt only_scans=1` (vision path on scans), `--opt rerank=off`. Run GPU-heavy suites one at a time:
 two large models plus Docker do not fit in 48 GB.
 
@@ -63,6 +67,17 @@ two large models plus Docker do not fit in 48 GB.
 - **Synthetic data only.** No real customer data, no real insurer names or branding.
 - Code, docs and README in English. Client-facing outputs in Slovak (formal, vykanie) and German.
 - UI copy and docs follow the `no-ai-slop` skill: plain, specific, no filler.
+
+## Phase 2 (AWS, prepared, not deployed)
+
+- `config/providers.cloud.yaml` (selected with `CLAIMPILOT_PROVIDERS_FILE`): Claude 5.5 on Bedrock
+  through the `eu.` inference profiles. Claude takes no temperature or seed; JSON comes from
+  structured outputs.
+- Scans reach a cloud model only as masked images (`ingest/mask.py`); unmasked images stay local.
+- `infra/terraform`: no internet route from private subnets, so every model the worker needs must
+  be in its image (`claimpilot-prefetch`). New AWS calls need a VPC endpoint and a task-role
+  permission, and `make infra-check` must stay at 0 failed checks.
+- Traces in AWS go through `claimpilot_core.otel` to X-Ray and carry no message text.
 
 ## Layout conventions
 

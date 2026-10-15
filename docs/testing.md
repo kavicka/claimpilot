@@ -1,14 +1,15 @@
 # Testing
 
-Four layers, from cheapest to most expensive. Everything except the live eval runs in CI on every
-push, with no model and no generated PDFs.
+Five layers, from cheapest to most expensive. Everything except the live eval and the local-only
+`masking` suite runs in CI on every push, with no model, no generated PDFs and no AWS account.
 
 | Layer | What it checks | Count | Command |
 | --- | --- | --- | --- |
-| Unit | Deterministic code: state machine, identifiers, PII guard, payout engine, routing rules, prechecks, fact checker, gateway, submission agent with a scripted model, document checks | 618 | `make test` |
+| Unit | Deterministic code: state machine, identifiers, PII guard, payout engine, routing rules, prechecks, fact checker, gateway, Bedrock adapter (real SDK, mocked HTTP), masking, parser, Textract adapter, traces, submission agent with a scripted model, document checks | 649 | `make test` |
 | Database | The api and the pipeline against Postgres: roles, corrections, erasure, uploads, concurrent writes, Redis outages, step failures, the sweep | 66 | `make test-db` |
 | End to end | The review UI in Chromium against the real api and a seeded database: login, queues, field boxes, corrections, senior rules, version conflicts, approve, retry, accessibility (axe) | 10 | `make e2e` |
-| Evals | Model behaviour on synthetic claims with ground truth: ten suites, replayed from recorded responses in CI and gated against baselines | 10 suites | `make eval-fast` |
+| Evals | Model behaviour on synthetic claims with ground truth: ten suites, replayed from recorded responses in CI and gated against baselines; an eleventh, `masking`, runs locally only (macOS OCR, generated PDFs) | 10 + 1 suites | `make eval-fast` |
+| Infrastructure | The AWS Terraform with mocked providers: no route out of private subnets, encryption, Bedrock only from the worker and only in EU Regions, read-only containers, secrets per task, tracing sidecar, Textract only when chosen; tflint; checkov | 9 test runs | `make infra-check` |
 
 ## Edge cases and where they are tested
 
@@ -32,6 +33,11 @@ push, with no model and no generated PDFs.
 | A known name in another form: "Kováčová, Jana", "J. Kováčová", broken across lines, declined ("Jany Kováčovej", "s pánom Petrom Novákom"), surname after "pani" or "Herr" | Replaced by the same token; ordinary words sharing a stem are left alone | `tests/core/test_pii.py` |
 | Prompt injection: white text, a fake JSON answer, an instruction burnt into a scan, a note to the routing reviewer, an instruction in a file name, a request in Croatian to double the payout | No attack helps the claim: same or stricter queue, no higher payout, no planted amount, file names never reach a model | `adversarial` eval suite (6 of 6 resisted, 1 flagged and escalated) |
 | Accessibility on login, queue and claim pages | No serious or critical axe findings | `ui/e2e/review.spec.ts` |
+| A letterhead, form or stamp that Docling files as a picture; running headers and footers | Its text becomes blocks like any other, so the redactor and the text path see it; bare page numbers are dropped | `tests/worker/test_parser.py` |
+| A scan sent to a cloud model: a name in a block, an IBAN no document mentioned before, text the parser never read, a page OCR could not read, a personal value without a position, a detector failure | Blacked out, or the images are not sent and the text path reads the document | `tests/worker/test_mask.py`; `masking` eval: 0 values readable on 39 dev scans |
+| A model value that lost one character ("R-2026 36818" for "R-2026-36818") on a line grounding found | The value does not match the page as printed, so its confidence stays below straight-through | `tests/worker/test_extraction_logic.py` |
+| Claude declines a request (`stop_reason: refusal`) | Retried once on the fallback model; a second refusal sends the claim to a handler | `tests/core/test_bedrock.py` |
+| The Bedrock request as the Anthropic SDK sends it | Signed for eu-central-1, `bedrock-runtime` URL with the EU profile, structured output, image blocks first, no temperature or seed | `tests/core/test_bedrock.py` (real SDK, mocked HTTP) |
 
 ## Live runs (2026-10-10)
 

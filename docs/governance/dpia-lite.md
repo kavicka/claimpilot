@@ -12,7 +12,7 @@ terms, calculate the payout, draft letters. The decision stays with a claims han
 | --- | --- | --- |
 | Identification | Name, birth number (rodné číslo), ID card number, address, phone, e-mail | Redacted before model calls |
 | Financial | IBAN, amounts, invoices | IBAN redacted; amounts are needed for the decision |
-| Health (GDPR Art. 9) | Diagnoses, medical reports, treatment, alcohol findings | Special category. Needed to assess medical cover; diagnosis text is not redacted because coverage depends on it. Processed only by local models in Phase 1 |
+| Health (GDPR Art. 9) | Diagnoses, medical reports, treatment, alcohol findings | Special category. Needed to assess medical cover; diagnosis text is not redacted because coverage depends on it. Processed only by local models in Phase 1; in Phase 2 it reaches Claude on Bedrock, pseudonymized (no names or identifiers) |
 | Travel | Destinations, dates, flights, bookings | Needed for the policy period and trip checks |
 | Third parties | Physicians, police officers | Names redacted like the insured's |
 
@@ -30,3 +30,14 @@ or explicit consent in the claim form, as the insurer's existing claims process 
 | Data kept too long | Retention job erases finished claims after the retention period; erasure on request | retention-erasure.md |
 | Logs or traces holding PII | Vault values scrubbed from logs; database errors cut to their first line; traces hold tokens | Unit tests for both |
 | Access by unauthorised staff | Login with roles; every action in the audit log | api tests |
+
+## Phase 2 additions (AWS)
+
+| Risk | Mitigation | Evidence |
+| --- | --- | --- |
+| Health data processed outside the insurer's systems | Text keeps diagnoses but no names or identifiers (pseudonymized); Bedrock with the `eu.` profiles keeps processing in EU Regions; AWS as processor under the AWS DPA; Bedrock does not train on it | provider-terms.md; ADR-010 |
+| A name left readable on a page image | Masking from the parser's blocks and an independent text detector; pages OCR could not read are not sent | `masking` eval: 0 personal values readable on 39 dev scans; gate at 0 |
+| Handwriting the detector misses | Known gap: no handwritten samples in the synthetic set | ADR-010; needs real samples before production |
+| Data reaching the internet from the tasks | No route out of the private subnets; only VPC endpoints | `terraform test`: nothing private has a way out |
+| Vault key exposure | Generated outside Terraform, held in Secrets Manager with a customer-managed KMS key, given only to the api and the worker | secrets.tf; `terraform test`: least secrets per task |
+| Provider keeps prompts | Bedrock data retention mode set to `none` before go-live; invocation logging stays off; Textract only with the AI opt-out policy | provider-terms.md, deploy.md |

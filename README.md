@@ -52,21 +52,23 @@ flowchart LR
 ## Results
 
 Dev has 40 claims and was used for building; test has 20 claims and was scored once, after the
-build. Reports with every item are in [evals/reports](evals/reports); baselines in
+build. The dev column is from 2026-10-15, after the parser started reading text that Docling
+files under pictures (letterheads, forms, stamps) and running headers; the test column is from
+2026-10-10, before that change. Reports with every item are in [evals/reports](evals/reports); baselines in
 [evals/baselines](evals/baselines).
 
 | Step | Metric | Dev (40) | Test (20) |
 | --- | --- | --- | --- |
-| Document type | accuracy | 147/148 (99.3 %) | 75/76 (98.7 %) |
-| PII guard | identifiers redacted (birth numbers, IBANs, phones, e-mails, IDs) | 190/190 | 99/99 |
-| PII guard | names redacted | 162/162 | 88/89 |
+| Document type | accuracy | 148/148 (100 %) | 75/76 (98.7 %) |
+| PII guard | identifiers redacted (birth numbers, IBANs, phones, e-mails, IDs) | 191/191 | 99/99 |
+| PII guard | names redacted | 166/166 | 88/89 |
 | PII guard | ground-truth PII in any model payload | 0 | 1 |
 | Extraction | critical fields correct (amounts, dates, policy number, IBAN, diagnosis) | 450/454 (99.1 %) | 295/297 (99.3 %) |
 | Extraction | all fields, F1 | 96.4 % | 94.9 % |
-| Extraction | claims where every critical field is confident (≥ 0.9), and all of them correct | 28/40, 28 correct | 14/20, 14 correct |
-| Routing | right queue | 38/40 (95.0 %) | 18/20 (90.0 %) |
+| Extraction | claims where every critical field is confident (≥ 0.9), and all of them correct | 34/40, 34 correct | 14/20, 14 correct |
+| Routing | right queue | 37/40 (92.5 %) | 18/20 (90.0 %) |
 | Routing | fraud cases caught | 10/10 | 5/5 |
-| Retrieval | deciding clause in the top 5 | 45/53 (84.9 %) | 20/24 (83.3 %) |
+| Retrieval | deciding clause in the top 5 | 44/53 (83.0 %) | 20/24 (83.3 %) |
 | Coverage | item verdicts right | 48/60 (80.0 %) | 26/28 (92.9 %) |
 | Coverage | payout to the cent | 31/37 (83.8 %) | 16/18 (88.9 %) |
 | Submission | registered on the first try | 36/37 | 18/18 |
@@ -75,7 +77,11 @@ build. Reports with every item are in [evals/reports](evals/reports); baselines 
 | Letters | judge score (gemma3:12b, 1 to 5) | 4.52 | 4.56 |
 | Prompt injection | decisions changed by instructions planted in a document | 0 | 0 |
 
-The test name that leaked was a German doctor's name on a signature line ("Behandelnde/r
+The parser change raised document typing and confident straight-through claims, and the
+extraction step now also requires a value to match the page as printed (calibration error 0.090
+to 0.070). Two dev items got worse: one routing review escalated a skiing fracture as a possible
+extreme sport, and one deciding clause fell from rank 4 to 6, both because the model input
+changed. The test name that leaked was a German doctor's name on a signature line ("Behandelnde/r
 Ärztin/Arzt: …"); the NER model missed it. A label-based recognizer now catches it; the test
 number above is from before that fix. After the test run the coverage section is derived from the
 item's category in code (the model had paired "dental" with the delay section once); the test
@@ -191,6 +197,7 @@ make test              # unit tests
 make test-db           # tests against the compose Postgres
 make e2e               # Playwright tests of the review UI (no models)
 make eval-fast         # gated eval suites on the dev split against the baselines
+make infra-check       # Terraform checks for the AWS deployment, no account needed
 ```
 
 Requirements: macOS on Apple silicon with 48 GB memory, Docker, Ollama, uv, pnpm, Homebrew pango
@@ -200,8 +207,30 @@ fit in 48 GB.
 CI lints, type-checks, runs unit and database tests, and replays every eval suite on dev from the
 recorded responses; a prompt change without a new recording fails as stale.
 
+## AWS deployment (Phase 2)
+
+Prepared, not deployed: no AWS account has been used. The same pipeline runs on ECS Fargate in
+eu-central-1 with Claude on Amazon Bedrock; [docs/deploy.md](docs/deploy.md) is the runbook.
+
+- **Models:** Claude Haiku, Sonnet and Opus 5.5 through the EU inference profiles, which keep
+  processing in EU Regions ([ADR-010](docs/adr/010-claude-on-bedrock-masked-vision.md)); Cohere
+  embeddings in-Region ([ADR-011](docs/adr/011-cloud-embeddings.md)). One config file switches the
+  gateway: `CLAIMPILOT_PROVIDERS_FILE=providers.cloud.yaml`.
+- **Scans** go to Claude as page images with personal data blacked out, next to the redacted OCR
+  text. The `masking` eval reads the masked dev scans again with Apple Vision: 0 personal values
+  readable on 39 documents, and 143/145 critical values still readable (the same as unmasked).
+- **Infrastructure** is Terraform ([ADR-009](docs/adr/009-aws-deployment-terraform.md)): private
+  subnets without a route to the internet, VPC endpoints, KMS everywhere, secrets outside Terraform
+  state, WAF, a budget alert. `make infra-check` validates it without an account (mocked
+  `terraform test`, tflint, checkov with 0 failed checks); `make deploy` is the one command for a
+  real account.
+- **Cost:** about 330 USD a month for the idle demo stack and 0.07 to 0.09 USD of Bedrock per claim
+  ([estimate](docs/governance/cost.md)).
+- **Not measured yet:** extraction and coverage quality on Claude. The live eval workflow runs on
+  pull requests once an account is connected.
+
 ## Status
 
-Phase 1 (local) is done: stages 1.1 to 1.10 of the build plan. Phase 2 moves the text models to
-Amazon Bedrock behind the same gateway; the vision path stays local. Decisions are recorded in
+Phase 1 (local) is done: stages 1.1 to 1.11. Phase 2 code, infrastructure and documents are done
+(stages 2.1 to 2.4); the deploy itself waits for an AWS account. Decisions are recorded in
 [docs/adr](docs/adr).

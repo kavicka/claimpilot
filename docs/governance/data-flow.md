@@ -40,5 +40,20 @@ flowchart LR
 | Core-system errors | 422 details for the submission agent | Echoed input removed and vault values turned back into tokens before the agent sees them |
 | Core system | Approved claim | Yes, re-hydrated at the moment of submission |
 
-Phase 2 (Bedrock) changes one hop: text model calls leave the machine. They carry tokens only, and the
-vision path stays local or sends images with PII regions masked from the OCR boxes.
+## Phase 2: AWS
+
+The same pipeline runs in ECS tasks (ADR-009). What changes is where the hops go:
+
+| Hop | Phase 2 | Personal data |
+| --- | --- | --- |
+| Storage | EFS in a private subnet, KMS-encrypted, mounted over TLS by the api and the worker only | Yes, unchanged files |
+| Model calls (text) | Claude on Bedrock through a VPC endpoint, EU inference profile | No: tokens only, as before |
+| Model calls (scans) | Claude on Bedrock with masked page images and the redacted OCR text | No: every block with a known value or a pattern match, and every line of text the parser did not read, is blacked out. A page OCR could not read is not sent (ADR-010) |
+| Embeddings | Cohere on Bedrock, in-Region | No: policy terms and redacted queries |
+| Traces | X-Ray through the ADOT sidecar | No: step names, model ids, token counts, latency; no prompt or response text |
+| Logs | CloudWatch Logs, KMS-encrypted, 30 days | No, as before |
+| Database, queue | RDS and Valkey in private subnets, TLS enforced, KMS-encrypted | Tokens; values only in `pii.vault`, encrypted with the vault key from Secrets Manager |
+
+The private subnets have no route to the internet, so the only ways out are the VPC endpoints
+listed in `infra/terraform/network.tf`. Masking was measured on the dev scans: Apple Vision OCR reads
+no personal value on any of the 39 masked documents (`masking` eval).

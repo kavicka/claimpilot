@@ -1,6 +1,6 @@
 # Governance
 
-Six short documents that answer what a regulated insurer asks before a pilot.
+Seven short documents that answer what a regulated insurer asks before a pilot.
 
 | Document | Answers |
 | --- | --- |
@@ -10,3 +10,4 @@ Six short documents that answer what a regulated insurer asks before a pilot.
 | [provider-terms.md](provider-terms.md) | Training on inputs, retention and region per model provider |
 | [retention-erasure.md](retention-erasure.md) | How long data stays and how one claim is erased |
 | [human-oversight.md](human-oversight.md) | What the system may and may not decide |
+| [cost.md](cost.md) | What the AWS deployment costs idle and per claim |

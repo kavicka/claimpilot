@@ -140,6 +140,31 @@ Prices are in USD and exclude tax.
 | Action | `aws-actions/configure-aws-credentials` with `role-to-assume`, `aws-region` and optional `role-session-name` | S43 |
 | Current major version | **UNCONFIRMED** from an official AWS page. The newest AWS page found (ECS blog, published 2026-03-10) uses `@v5` [S43]; the CloudWatch docs page uses `@v4` [S44]. The authoritative source is the action's GitHub releases, which is not on the allowed domain list. | S43, S44 |
 
+## 8. More infrastructure prices (Frankfurt)
+
+Region = Europe (Frankfurt), on-demand. Rows that come from a page without a Region selector say so.
+
+| Service | Price | Src |
+|---|---|---|
+| Application Load Balancer | **$0.027 per ALB-hour** + **$0.008 per LCU-hour**. A partial hour bills as a full hour. You pay on the highest of four LCU dimensions: 25 new connections/s, 3,000 active connections/min, 1 GB/h processed (EC2, container or IP targets), or rule evaluations (the first 10 rules are free). | S45 |
+| ALB public IPv4 addresses | **Charged.** "You will incur standard public IPv4 address charges for all the addresses you consume with load balancers." The rate is $0.005 per address per hour, in-use or idle. The VPC page shows this rate without a Region selector. | S45, S37 |
+| AWS WAF | **$5.00 per web ACL per month**, **$1.00 per rule per month** (both prorated hourly), **$0.60 per 1M requests**. Each rule group or managed rule group added to a web ACL costs $1.00/month as one rule. | S46 |
+| WAF `AWSManagedRulesCommonRuleSet` and `AWSManagedRulesKnownBadInputsRuleSet` | **No extra fee** beyond the $1.00/month rule charge each. Only the Bot Control, Fraud Control ATP and Fraud Control ACFP rule groups cost extra; "All other AWS Managed Rules rule groups are available to AWS WAF customers at no additional cost." Their capacity is 700 + 200 = 900 WCU. That is under the 1,500 WCU default, so the $0.20 per 1M requests per extra 500 WCU does not apply. | S46, S47, S48 |
+| WAF logs | Each 1M WAF requests includes 500 MB of CloudWatch Logs and vended-log ingestion. Above that, CloudWatch vended-log rates apply. | S46 |
+| Amazon EFS, Regional, Elastic Throughput | Standard storage **$0.36 per GB-month**. Infrequent Access storage **$0.02 per GB-month**. Archive storage $0.01 per GB-month. Elastic Throughput reads **$0.04 per GB**, writes **$0.07 per GB**. IA reads add $0.012/GB, and tiering to or from IA costs $0.012/GB. IA and Archive bill files under 128 KiB as 128 KiB. | S49 |
+| EFS IA with legacy throughput modes | $0.0266 per GB-month (the Elastic Throughput tab shows $0.02). | S49 |
+| RDS PostgreSQL gp3 storage, Single-AZ | **$0.137 per GB-month**. The baseline of 3,000 IOPS and 125 MB/s is included. Above the baseline: $0.024 per IOPS-month and $0.095 per MB/s-month. gp2 costs the same $0.137. | S34 |
+| RDS backup storage | Free up to 100% of the total provisioned database storage in the Region. Beyond that, **$0.103 per GiB-month**, which is also the rate after the instance is deleted. Single-AZ and Multi-AZ count the same. The page fills this rate in from the selected Region. | S34 |
+| RDS Performance Insights, 7-day retention | **Free.** Performance Insights is now part of CloudWatch Database Insights. Standard mode includes "up to 7 days of detailed database and per-query metrics retention" at no additional cost. Longer retention (1–24 months) is billed per vCPU-hour. The old Performance Insights pricing URL now opens the CloudWatch pricing page. | S50, S52 |
+| RDS Enhanced Monitoring | No separate fee. RDS writes the metrics to CloudWatch Logs. You pay CloudWatch Logs ingestion and storage rates once the Logs free tier is used up. The cost rises with a shorter interval, more instances and more OS process activity. Default retention is 30 days. | S51 |
+| CloudWatch Logs, Standard class | Ingestion **$0.63 per GB**. Storage **$0.0324 per GB compressed**; the page assumes a 0.15 compression ratio. Logs Insights: $0.0063 per GB scanned. Infrequent Access class: $0.315/GB ingestion, $0.01944/GB stored. Free tier: 5 GB of data (ingestion, storage and Logs Insights scans). | S52 |
+| Container Insights with enhanced observability for ECS | **$0.07 per metric per month**, prorated hourly. This one rate covers metric storage and the log ingestion that carries the metrics. Log storage is billed separately, and container logs are billed at normal Logs rates. Metric counts are fixed: 29 per cluster, 31 per service (RunningTaskCount is free since 2026-10-01), and 26 each per task definition, task and container. | S52 |
+| Amazon ECR | Standard storage **$0.10 per GB-month**. Data transfer in is free. Transfer between ECR and EC2, Lambda, App Runner or Fargate in the same Region is **free** ($0.00/GB). Pulls that go through a NAT gateway still pay NAT data processing ($0.052/GB, section 6), which applies "regardless of the traffic's source or destination". | S53, S37 |
+| VPC Flow Logs to CloudWatch Logs | Billed as vended logs. To Logs Standard: **$0.63 per GB** for the first 10 TB/month, $0.315 for the next 20 TB, $0.126 for the next 20 TB, $0.063 over 50 TB. Storage is $0.0324 per GB compressed. To Logs IA or S3: $0.285 per GB for the first 10 TB. | S52, S54 |
+| AWS X-Ray traces | **$5.00 per 1M traces recorded**, **$0.50 per 1M traces retrieved**, **$0.50 per 1M traces scanned**. Free each month: the first 100,000 traces recorded and the first 1,000,000 retrieved or scanned. X-Ray Insights: $1.00 per 1M traces recorded. These prices are now on the CloudWatch pricing page (Application Observability tab); `aws.amazon.com/xray/pricing/` opens a product page with no prices. | S52 |
+| CloudWatch transaction search (span-based pricing) | $0.35 per GB of spans ingested (first 10 TB/month) + $0.75 per 1M spans indexed as X-Ray trace summaries. The first 1% of spans indexed is free. | S52 |
+| AWS Budgets | Cost budgets with email alerts are **free**: "You can monitor and receive notifications on your budgets free of charge." The number of free budgets is **UNCONFIRMED**: the page gives no limit. Action-enabled budgets: the first two are free per month, then $0.10 per day each. Budgets Reports: $0.01 per report delivered. The page shows one price with no Region selector. | S55 |
+
 ## What I could not confirm
 
 1. **Data residency on mantle in eu-central-1.** Whether the `bedrock-mantle` endpoint in eu-central-1 serves Claude Sonnet/Haiku/Opus 5.5 at all, and if so whether it stays in-Region. The AWS availability tables say no in-Region mantle support there, and mantle has no `eu.` profile.
@@ -148,6 +173,7 @@ Prices are in USD and exclude tax.
 4. **The current major version of `aws-actions/configure-aws-credentials`.** AWS pages show v4 and v5; GitHub was out of scope.
 5. **Titan V2 at $0.20/1M in Frankfurt.** This is the value the pricing page displays. I did not cross-check it against another official source.
 6. **Cohere Embed v4 language coverage.** It is not stated on the AWS model card.
+7. **How many AWS Budgets are free.** The Budgets pricing page says monitoring and notifications are free and gives no count. It states a limit only for action-enabled budgets (two free per month).
 
 ## Sources
 
@@ -199,3 +225,14 @@ All read 2026-10-15.
 | S42 | https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc_secure-by-default.html |
 | S43 | https://aws.amazon.com/blogs/containers/automated-deployments-with-github-actions-for-amazon-ecs-express-mode/ |
 | S44 | https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Service-Application-Observability-for-AWS-GitHub-Action.html |
+| S45 | https://aws.amazon.com/elasticloadbalancing/pricing/ |
+| S46 | https://aws.amazon.com/waf/pricing/ |
+| S47 | https://docs.aws.amazon.com/waf/latest/developerguide/waf-managed-rule-groups.html |
+| S48 | https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-baseline.html |
+| S49 | https://aws.amazon.com/efs/pricing/ |
+| S50 | https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.Overview.cost.html |
+| S51 | https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html |
+| S52 | https://aws.amazon.com/cloudwatch/pricing/ |
+| S53 | https://aws.amazon.com/ecr/pricing/ |
+| S54 | https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-cwl.html |
+| S55 | https://aws.amazon.com/aws-cost-management/aws-budgets/pricing/ |
