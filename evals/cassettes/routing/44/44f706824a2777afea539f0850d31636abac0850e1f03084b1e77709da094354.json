@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "143058190bbdb36220345f2a12dbba1ef7427917c962e41830707fa9199b0378",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{ \"queue\": \"standard\", \"rationale\": \"The claim involves a sprained ankle treated at a medical center in Budapest, with no signs of pre-existing conditions, fraud, or unusual circumstances. The documents are consistent and provide a clear account of the injury and treatment.\" }",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 524,
+   "tokens_out": 58,
+   "latency_ms": 21442
+  },
+  "cached": false
+ }
+}

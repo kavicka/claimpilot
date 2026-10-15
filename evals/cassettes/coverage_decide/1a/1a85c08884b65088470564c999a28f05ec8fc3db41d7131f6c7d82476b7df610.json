@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "bb9451c397391348b088e90d0093976f3440dd7f8fe0db52754411ddb98c8ede",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A6.1\", \"A6.2\"], \"rationale\": \"The claim involves a fracture of the distal radius confirmed by a medical report, which falls under the coverage for injury-related fractures as stated in clause A6.1. Clause A6.2 further clarifies that a single payment is made per incident, regardless of the number of fractures, and does not include treatment costs. There is no evidence indicating any of the exclusions apply (e.g., intentional injury, alcohol, pre-existing event, extreme sports exclusion does not apply here as the product is 'Standard' and not 'Premium').\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1001,
+   "tokens_out": 138,
+   "latency_ms": 13636
+  },
+  "cached": false
+ }
+}

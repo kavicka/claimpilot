@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"airline\": {\n    \"page\": 1,\n    \"quote\": \"Adria Sky\",\n    \"value\": \"Adria Sky\"\n  },\n  \"arrival_time\": {\n    \"page\": 1,\n    \"quote\": \"FLIGHT / DATE AY3435 / 07 Feb 2026 | ARRIVAL (LOCAL TIME) 07FEB26 1620\",\n    \"value\": \"07FEB26 1620\"\n  },\n  \"bag_tag\": {\n    \"page\": 1,\n    \"quote\": \"PASSENGER NAME <PERSON_1> MS | BAG TAG AY820892\",\n    \"value\": \"AY820892\"\n  },\n  \"delivery_time\": {\n    \"page\": 1,\n    \"quote\": \"DELIVERED TO PASSENGER NOT DELIVERED | DELIVERY ADDRESS HOTEL BODRUM\",\n    \"value\": \"NOT DELIVERED\"\n  },\n  \"file_reference\": {\n    \"page\": 1,\n    \"quote\": \"FILE REFERENCE AYTAY54942 | BAG STATUS LOST\",\n    \"value\": \"AYTAY54942\"\n  },\n  \"flight_date\": {\n    \"page\": 1,\n    \"quote\": \"FLIGHT / DATE AY3435 / 07 Feb 2026 | ARRIVAL (LOCAL TIME) 07FEB26 1620\",\n    \"value\": \"07 Feb 2026\"\n  },\n  \"flight_number\": {\n    \"page\": 1,\n    \"quote\": \"FLIGHT / DATE AY3435 / 07 Feb 2026 | ARRIVAL (LOCAL TIME) 07FEB26 1620\",\n    \"value\": \"AY3435\"\n  },\n  \"passenger_name\": {\n    \"page\": 1,\n    \"quote\": \"PASSENGER NAME <PERSON_1> MS | BAG TAG AY820892\",\n    \"value\": \"<PERSON_1> MS\"\n  },\n  \"remarks\": {\n    \"page\": 1,\n    \"quote\": \"Bag not delivered on arrival. Contents declared by passenger: Toiletries, Wristwatch, Camera, Suitcase, E-reader.\",\n    \"value\": \"Bag not delivered on arrival. Contents declared by passenger: Toiletries, Wristwatch, Camera, Suitcase, E-reader.\"\n  },\n  \"status\": {\n    \"page\": 1,\n    \"quote\": \"FILE REFERENCE AYTAY54942 | BAG STATUS LOST\",\n    \"value\": \"LOST\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2014,
+   "tokens_out": 601,
+   "latency_ms": 16274
+  },
+  "cached": false
+ }
+}

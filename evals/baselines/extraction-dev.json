@@ -23,8 +23,8 @@
    "den": 1832
   },
   "grounded_share": {
-   "value": 0.9238356164383562,
-   "num": 1686,
+   "value": 0.947945205479452,
+   "num": 1730,
    "den": 1825
   },
   "leaked_values_in_payloads": {
@@ -33,19 +33,19 @@
    "den": 0
   },
   "calibration_error": {
-   "value": 0.0901,
+   "value": 0.0695,
    "num": 1824,
    "den": 0
   },
   "straight_through_rate": {
-   "value": 0.7,
-   "num": 28,
+   "value": 0.85,
+   "num": 34,
    "den": 40
   },
   "straight_through_correct": {
    "value": 1.0,
-   "num": 28,
-   "den": 28
+   "num": 34,
+   "den": 34
   }
  },
  "items": [
@@ -116,7 +116,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Ospedale Civile Schiavone | 6 920,28 | EUR",
     "kind": "pair"
    }
@@ -171,7 +171,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Rimini, Taliansko, kde sa mi vyvinul zápal pľúc. Počas pobytu som zaži",
     "kind": "pair"
    }
@@ -189,7 +189,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Rimini, Taliansko",
     "kind": "pair"
    }
@@ -226,7 +226,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 918 48 Virt",
     "kind": "pair"
    }
@@ -262,7 +262,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -280,7 +280,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -298,7 +298,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -317,7 +317,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP58181396",
     "kind": "pair"
    }
@@ -391,7 +391,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Nessuna patologia pregressa rilevante. Nessuna terapia cronica.",
     "kind": "pair"
    }
@@ -410,7 +410,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Polmonite",
     "kind": "pair"
    }
@@ -464,7 +464,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Ospedale Civile Schiavone",
     "kind": "pair"
    }
@@ -483,7 +483,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "J18.9",
     "kind": "pair"
    }
@@ -519,7 +519,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -537,7 +537,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Medico: <PERSON_3>",
     "kind": "pair"
    }
@@ -555,7 +555,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Esami obiettivi: febbre, tosse con espettorato, crepitii basali bilaterali. Radi",
     "kind": "pair"
    }
@@ -646,7 +646,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Medizinisches Zentrum Fréi 560,19 CHF",
     "kind": "pair"
    }
@@ -700,7 +700,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Jednorazové plnenie za zlomeninu — —",
     "kind": "pair"
    }
@@ -755,7 +755,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Pri tandemovom lete na paraglíde sa mi zlomil dolný koniec vreten",
     "kind": "pair"
    }
@@ -773,7 +773,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Davos, Švajčiarsko",
     "kind": "pair"
    }
@@ -810,7 +810,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 831 49 Trenčianske Mítice",
     "kind": "pair"
    }
@@ -846,7 +846,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -864,7 +864,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -882,7 +882,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -901,7 +901,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP24972279",
     "kind": "pair"
    }
@@ -994,8 +994,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "de",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Rechnung Nr. RE-2026-84748",
     "kind": "pair"
    }
@@ -1176,7 +1176,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, geb. 17.08.1965",
     "kind": "pair"
    }
@@ -1212,7 +1212,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Frei",
     "kind": "pair"
    }
@@ -1321,7 +1321,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Poliklinika Kašparová 19 411,00 CZK",
     "kind": "pair"
    }
@@ -1376,7 +1376,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Bol som v Prahe, Česko, a došlo k otasu mozgu. Po nehode som bol ",
     "kind": "pair"
    }
@@ -1394,7 +1394,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Praha, Česko",
     "kind": "pair"
    }
@@ -1431,7 +1431,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 815 22 Žakarovce",
     "kind": "pair"
    }
@@ -1467,7 +1467,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -1485,7 +1485,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -1503,7 +1503,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -1522,7 +1522,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP25014631",
     "kind": "pair"
    }
@@ -1596,7 +1596,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -1614,7 +1614,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -1670,7 +1670,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP51837852 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -1707,7 +1707,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP51837852 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -1744,7 +1744,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -1818,7 +1818,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Rehydration salts | 12.25",
     "kind": "pair"
    }
@@ -1854,7 +1854,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Ibuprofen 400mg | 13.91",
     "kind": "pair"
    }
@@ -1890,7 +1890,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Paracetamol 500mg | 4.70",
     "kind": "pair"
    }
@@ -1926,7 +1926,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Amoxicillin 1g | 13.06",
     "kind": "pair"
    }
@@ -1944,7 +1944,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Meyer Pharmacy Miami",
     "kind": "pair"
    }
@@ -1962,7 +1962,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Receipt Receipt No. 8953/38080 04/27/2026 05:08 PM",
     "kind": "pair"
    }
@@ -2053,7 +2053,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Liečebné náklady - Farkas International Medical Centre 106 954,00 HUF",
     "kind": "pair"
    }
@@ -2108,7 +2108,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som na dovolenke v Hévíze, keď sa u mňa vyvinul periapikálny absces zuba. Pr",
     "kind": "pair"
    }
@@ -2126,7 +2126,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Hévíz, Maďarsko",
     "kind": "pair"
    }
@@ -2163,7 +2163,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 906 78 Ovčie",
     "kind": "pair"
    }
@@ -2199,7 +2199,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -2217,7 +2217,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -2235,7 +2235,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -2254,7 +2254,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP35556386",
     "kind": "pair"
    }
@@ -2328,7 +2328,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -2346,7 +2346,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -2402,7 +2402,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP35556386 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -2439,7 +2439,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP35556386 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -2476,7 +2476,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Basic",
     "kind": "pair"
    }
@@ -2514,7 +2514,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Invoice No. INV-2026-86649",
     "kind": "pair"
    }
@@ -2569,7 +2569,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Dental X-ray | 32,860.00",
     "kind": "pair"
    }
@@ -2605,7 +2605,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | Root canal treatment | 74,094.00",
     "kind": "pair"
    }
@@ -2623,7 +2623,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT <PERSON_1>, DOB 16/09/1959 | DATE OF SERVICE 03/06/2026",
     "kind": "pair"
    }
@@ -2659,7 +2659,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Farkas International Medical Centre",
     "kind": "pair"
    }
@@ -2768,7 +2768,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Stornovací poplatok | 1 051,40 | EUR",
     "kind": "pair"
    }
@@ -2823,7 +2823,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Počas prípravy na cestu som sa ochorel/a na lumbálnu diskopatia L4/L5 s koreňový",
     "kind": "pair"
    }
@@ -2841,7 +2841,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Chania, Grécko",
     "kind": "pair"
    }
@@ -2878,7 +2878,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 827 16 Kolbasov",
     "kind": "pair"
    }
@@ -2914,7 +2914,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -2932,7 +2932,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -2950,7 +2950,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -2969,7 +2969,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP35714784",
     "kind": "pair"
    }
@@ -3043,7 +3043,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Pacient je dispenzarizovaný pre diskopatiu L4/L5 od marca 2025, opakovane liečen",
     "kind": "pair"
    }
@@ -3062,7 +3062,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Lumbálna diskopatia L4/L5 s koreňovým dráždením",
     "kind": "pair"
    }
@@ -3098,7 +3098,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Ambulancia všeobecného lekára Martinecová",
     "kind": "pair"
    }
@@ -3117,7 +3117,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MKCH-10 M51.2",
     "kind": "pair"
    }
@@ -3153,7 +3153,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -3171,7 +3171,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MUDr. <PERSON_2>",
     "kind": "pair"
    }
@@ -3189,7 +3189,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Pozorovanie: Pacient prezentoval bolesť v spodnej časti chrbta, radikulárnu bole",
     "kind": "pair"
    }
@@ -3280,7 +3280,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Sullivan International Medical Centre",
     "kind": "pair"
    }
@@ -3335,7 +3335,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Podvrtnutie členkového kĺbu som utrpel v New Yorku, USA. Udalosť sa stala pri ch",
     "kind": "pair"
    }
@@ -3353,7 +3353,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "New York, USA",
     "kind": "pair"
    }
@@ -3390,7 +3390,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 815 13 Ihráč",
     "kind": "pair"
    }
@@ -3426,7 +3426,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -3444,7 +3444,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -3462,7 +3462,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -3481,7 +3481,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP38688676",
     "kind": "pair"
    }
@@ -3555,7 +3555,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "No relevant previous illnesses. No regular medication.",
     "kind": "pair"
    }
@@ -3574,7 +3574,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -3610,7 +3610,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sullivan International Medical Centre",
     "kind": "pair"
    }
@@ -3629,7 +3629,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -3665,7 +3665,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT <PERSON_1> | DOB 02/12/1997",
     "kind": "pair"
    }
@@ -3683,7 +3683,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Attending physician: <PERSON_2> Signature and stamp",
     "kind": "pair"
    }
@@ -3701,7 +3701,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Physical examination revealed tenderness over the lateral aspect of the right an",
     "kind": "pair"
    }
@@ -3792,7 +3792,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Roberts International Medical Centre | 616,36 | EUR",
     "kind": "pair"
    }
@@ -3847,7 +3847,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Thessaloniki, Grécko, kde som sa nedávno nedokázal cítiť dobre. Zdravo",
     "kind": "pair"
    }
@@ -3865,7 +3865,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Thessaloniki, Grécko",
     "kind": "pair"
    }
@@ -3902,7 +3902,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 979 29 Nižná Hutka",
     "kind": "pair"
    }
@@ -3938,7 +3938,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -3956,7 +3956,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -3974,7 +3974,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -3993,7 +3993,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP49823450",
     "kind": "pair"
    }
@@ -4067,7 +4067,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -4085,7 +4085,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -4141,7 +4141,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP49823450 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -4178,7 +4178,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP49823450 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -4215,7 +4215,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -4233,7 +4233,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "No relevant previous illnesses. No regular medication.",
     "kind": "pair"
    }
@@ -4252,7 +4252,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Acute upper respiratory infection",
     "kind": "pair"
    }
@@ -4288,7 +4288,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Roberts International Medical Centre",
     "kind": "pair"
    }
@@ -4306,8 +4306,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "J06.9",
     "kind": "pair"
    }
@@ -4324,8 +4324,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "19/07/1956",
     "kind": "pair"
    }
@@ -4343,7 +4343,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -4361,7 +4361,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_2>",
     "kind": "pair"
    }
@@ -4379,7 +4379,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Physical examination reveals mild pharyngeal erythema, clear nasal discharge, an",
     "kind": "pair"
    }
@@ -4436,7 +4436,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Invoice No. INV-2026-25356",
     "kind": "pair"
    }
@@ -4491,7 +4491,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Emergency room treatment | 322.27",
     "kind": "pair"
    }
@@ -4527,7 +4527,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | Laboratory tests | 93.11",
     "kind": "pair"
    }
@@ -4563,7 +4563,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "3 | IV infusion | 65.12",
     "kind": "pair"
    }
@@ -4599,7 +4599,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "4 | Ultrasound | 135.86",
     "kind": "pair"
    }
@@ -4617,7 +4617,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT <PERSON_1>, DOB 19/07/1956 | DATE OF SERVICE 08/07/2026",
     "kind": "pair"
    }
@@ -4653,7 +4653,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Roberts International Medical Centre",
     "kind": "pair"
    }
@@ -4762,7 +4762,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady - Medizinisches Zentrum Holzmann | 775,82 | EUR",
     "kind": "pair"
    }
@@ -4816,7 +4816,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Jednorazové plnenie za zlomeninu | -",
     "kind": "pair"
    }
@@ -4871,7 +4871,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Pri lyžovaní na zjazdovke som sa spadol a utrpel zlomeninu dolného konca vretenn",
     "kind": "pair"
    }
@@ -4889,7 +4889,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Salzburg, Rakúsko",
     "kind": "pair"
    }
@@ -4926,7 +4926,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 862 26 Rudinka",
     "kind": "pair"
    }
@@ -4962,7 +4962,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -4980,7 +4980,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -4998,7 +4998,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -5017,7 +5017,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP66267415",
     "kind": "pair"
    }
@@ -5091,7 +5091,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -5109,7 +5109,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -5165,7 +5165,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP66267415 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -5202,7 +5202,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP66267415 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -5239,7 +5239,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -5257,7 +5257,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
     "kind": "pair"
    }
@@ -5276,7 +5276,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Fraktur des distalen Radius | S52.5",
     "kind": "pair"
    }
@@ -5312,7 +5312,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Holzmann",
     "kind": "pair"
    }
@@ -5331,7 +5331,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Fraktur des distalen Radius | S52.5",
     "kind": "pair"
    }
@@ -5350,7 +5350,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1> | 01.08.1969",
+    "quote": "PATIENT/IN | GEB. <PERSON_1> | 01.08.1969",
     "kind": "pair"
    }
   },
@@ -5367,7 +5367,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT/IN | GEB. <PERSON_1> | 01.08.1969",
     "kind": "pair"
    }
@@ -5385,7 +5385,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
     "kind": "pair"
    }
@@ -5403,7 +5403,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verl",
     "kind": "pair"
    }
@@ -5460,7 +5460,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Rechnung Nr. RE-2026-99548",
     "kind": "pair"
    }
@@ -5515,7 +5515,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Notfallbehandlung | 207,07",
     "kind": "pair"
    }
@@ -5551,7 +5551,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | Röntgen | 143,89",
     "kind": "pair"
    }
@@ -5587,7 +5587,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "3 | Gipsverband | 141,00",
     "kind": "pair"
    }
@@ -5623,7 +5623,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "4 | Physiotherapie | 57,39",
     "kind": "pair"
    }
@@ -5659,7 +5659,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "5 | Computertomographie | 226,47",
     "kind": "pair"
    }
@@ -5677,7 +5677,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, geb. 01.08.1969 | 20.03.2026",
     "kind": "pair"
    }
@@ -5713,7 +5713,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Holzmann",
     "kind": "pair"
    }
@@ -6093,7 +6093,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Na letisku v Bodrumi som stratil/a batožinu. Letecká spoločnosť j",
     "kind": "pair"
    }
@@ -6111,7 +6111,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Bodrum, Turecko",
     "kind": "pair"
    }
@@ -6148,7 +6148,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 963 20 Bohušovice nad Ohří",
     "kind": "pair"
    }
@@ -6184,7 +6184,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -6202,7 +6202,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -6220,7 +6220,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -6239,7 +6239,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP59597086",
     "kind": "pair"
    }
@@ -6313,7 +6313,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -6331,7 +6331,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -6348,9 +6348,9 @@
     "doc_type": "policy_certificate",
     "scan": false,
     "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "POISTNÉ | DÁTUM UZAVRETIA\n89,00 EUR | 15. 9. 2025",
+    "grounded": false,
+    "confidence": 0.45,
+    "quote": "POISTNÉ 89,00 EUR | DÁTUM UZAVRETIA 15. 9. 2025",
     "kind": "pair"
    }
   },
@@ -6387,7 +6387,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP59597086 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -6424,7 +6424,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP59597086 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -6441,9 +6441,9 @@
     "doc_type": "policy_certificate",
     "scan": false,
     "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "POISTNÉ | DÁTUM UZAVRETIA\n89,00 EUR | 15. 9. 2025",
+    "grounded": false,
+    "confidence": 0.45,
+    "quote": "POISTNÉ 89,00 EUR | DÁTUM UZAVRETIA 15. 9. 2025",
     "kind": "pair"
    }
   },
@@ -6461,7 +6461,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Standard",
     "kind": "pair"
    }
@@ -6479,7 +6479,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Adria Sky",
     "kind": "pair"
    }
@@ -6516,7 +6516,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PASSENGER NAME <PERSON_1> MS | BAG TAG AY820892",
     "kind": "pair"
    }
@@ -6553,7 +6553,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "FILE REFERENCE AYTAY54942 | BAG STATUS LOST",
     "kind": "pair"
    }
@@ -6589,7 +6589,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "FLIGHT / DATE AY3435 / 07 Feb 2026 | ARRIVAL (LOCAL TIME) 07FEB26 1620",
     "kind": "pair"
    }
@@ -6607,7 +6607,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PASSENGER NAME <PERSON_1> MS | BAG TAG AY820892",
     "kind": "pair"
    }
@@ -6625,7 +6625,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bag not delivered on arrival. Contents declared by passenger: Toiletries, Wristw",
     "kind": "pair"
    }
@@ -6644,7 +6644,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "FILE REFERENCE AYTAY54942 | BAG STATUS LOST",
     "kind": "pair"
    }
@@ -6716,7 +6716,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Medizinisches Zentrum Stalder | 172,94 | CHF",
     "kind": "pair"
    }
@@ -6771,7 +6771,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Luzern, Švajčiarsko, kde som sa zranil na uchu. Diagnozované mi bol zá",
     "kind": "pair"
    }
@@ -6789,7 +6789,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Luzern, Švajčiarsko",
     "kind": "pair"
    }
@@ -6826,7 +6826,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 990 04 Makovce",
     "kind": "pair"
    }
@@ -6862,7 +6862,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -6880,7 +6880,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -6898,7 +6898,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -6917,7 +6917,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP15917225",
     "kind": "pair"
    }
@@ -6991,7 +6991,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -7009,7 +7009,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -7065,7 +7065,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP15917225 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -7102,7 +7102,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP15917225 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -7139,7 +7139,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Standard",
     "kind": "pair"
    }
@@ -7157,7 +7157,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
     "kind": "pair"
    }
@@ -7176,7 +7176,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Mittelohrentzündung",
     "kind": "pair"
    }
@@ -7212,7 +7212,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Stalder",
     "kind": "pair"
    }
@@ -7231,7 +7231,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Mittelohrentzündung",
     "kind": "pair"
    }
@@ -7267,7 +7267,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT/IN <PERSON_1> | GEB. 27.10.1969",
     "kind": "pair"
    }
@@ -7285,7 +7285,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
     "kind": "pair"
    }
@@ -7303,7 +7303,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bei der Untersuchung wurden rechtsseitig begrenzte Schmerzen beim Drücken am äuß",
     "kind": "pair"
    }
@@ -7394,7 +7394,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Poliambulatorio Donati | 680,22 | EUR",
     "kind": "pair"
    }
@@ -7449,7 +7449,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Rimini, Taliansko, kde sa mi zlomila dolná časť vretennej kosti. Po zr",
     "kind": "pair"
    }
@@ -7467,7 +7467,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Rimini, Taliansko",
     "kind": "pair"
    }
@@ -7504,7 +7504,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 816 44 Babinec",
     "kind": "pair"
    }
@@ -7540,7 +7540,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -7558,7 +7558,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -7576,7 +7576,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -7595,7 +7595,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP58024342",
     "kind": "pair"
    }
@@ -7688,7 +7688,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Medizinisches Zentrum Stark | 765,26 | EUR",
+    "quote": "Liečebné náklady – Medizinisches Zentrum Stark",
     "kind": "pair"
    }
   },
@@ -7706,7 +7706,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Medizinisches Zentrum Stark | 765,26 | EUR",
+    "quote": "Liečebné náklady – Medizinisches Zentrum Stark",
     "kind": "pair"
    }
   },
@@ -7723,8 +7723,8 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
-    "quote": "Liečebné náklady – Medizinisches Zentrum Stark | 765,26 | EUR",
+    "confidence": 0.55,
+    "quote": "Liečebné náklady – Medizinisches Zentrum Stark",
     "kind": "pair"
    }
   },
@@ -7778,7 +7778,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som na dovolenke v Kitzbühel, kde som sa zranil pri športovaní. Zranenie sa ",
     "kind": "pair"
    }
@@ -7796,7 +7796,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Kitzbühel, Rakúsko",
     "kind": "pair"
    }
@@ -7833,7 +7833,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 918 24 Šiatorská Bukovinka",
     "kind": "pair"
    }
@@ -7869,7 +7869,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -7887,7 +7887,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -7905,7 +7905,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -7924,7 +7924,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP99913412",
     "kind": "pair"
    }
@@ -7998,7 +7998,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Patient bei Aufnahme alkoholisiert, Atemalkohol 1,4 Promille.",
     "kind": "pair"
    }
@@ -8017,7 +8017,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Fraktur des distalen Radius | S52.5",
     "kind": "pair"
    }
@@ -8053,7 +8053,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Stark",
     "kind": "pair"
    }
@@ -8072,7 +8072,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Fraktur des distalen Radius | S52.5",
     "kind": "pair"
    }
@@ -8108,7 +8108,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT/IN <PERSON_1> | GEB. 27.11.1974",
     "kind": "pair"
    }
@@ -8126,7 +8126,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
     "kind": "pair"
    }
@@ -8144,7 +8144,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verl",
     "kind": "pair"
    }
@@ -8235,7 +8235,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Liečebné náklady - Poliklinika Tomičić | 172,71 | EUR",
     "kind": "pair"
    }
@@ -8289,7 +8289,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Lieky z lekárne | 41,49 | EUR",
     "kind": "pair"
    }
@@ -8344,7 +8344,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Split, Chorvátsko, kvôli zdravotnej probléme akútna infekcia horných d",
     "kind": "pair"
    }
@@ -8362,7 +8362,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Split, Chorvátsko",
     "kind": "pair"
    }
@@ -8399,7 +8399,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 982 25 Poběžovice",
     "kind": "pair"
    }
@@ -8435,7 +8435,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -8453,7 +8453,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -8471,7 +8471,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -8490,7 +8490,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP57130035",
     "kind": "pair"
    }
@@ -8564,7 +8564,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -8582,7 +8582,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -8638,7 +8638,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP57130035 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -8675,7 +8675,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP57130035 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -8712,7 +8712,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Standard",
     "kind": "pair"
    }
@@ -8784,7 +8784,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Opća bolnica Medved | 6 483,40 | EUR",
     "kind": "pair"
    }
@@ -8839,7 +8839,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Zadare, v Chorvátsku, a skôr, ako som sa vrátil domov, začal ma trápiť",
     "kind": "pair"
    }
@@ -8857,7 +8857,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Zadar, Chorvátsko",
     "kind": "pair"
    }
@@ -8894,7 +8894,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 896 74 Porúbka",
     "kind": "pair"
    }
@@ -8930,7 +8930,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -8948,7 +8948,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -8966,7 +8966,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -8985,7 +8985,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP78064830",
     "kind": "pair"
    }
@@ -9059,7 +9059,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -9077,7 +9077,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -9133,7 +9133,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP78064830 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -9170,7 +9170,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP78064830 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -9207,7 +9207,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -9225,7 +9225,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
     "kind": "pair"
    }
@@ -9244,7 +9244,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Upala pluća",
     "kind": "pair"
    }
@@ -9298,7 +9298,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Opća bolnica Medved",
     "kind": "pair"
    }
@@ -9317,7 +9317,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "J18.9",
     "kind": "pair"
    }
@@ -9353,7 +9353,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -9371,7 +9371,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Liječnik: <PERSON_2> Potpis i pečat",
     "kind": "pair"
    }
@@ -9389,7 +9389,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promj",
     "kind": "pair"
    }
@@ -9446,7 +9446,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Račun br. R-2020-1155",
     "kind": "pair"
    }
@@ -9501,7 +9501,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "34 Bolnički dan 1",
     "kind": "pair"
    }
@@ -9537,7 +9537,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "50 Lijekovi",
     "kind": "pair"
    }
@@ -9573,7 +9573,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "52 Ultrazvuk",
     "kind": "pair"
    }
@@ -9609,7 +9609,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "53 Infuzijska terapija",
     "kind": "pair"
    }
@@ -9681,7 +9681,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "55 Ultrazvuk",
     "kind": "pair"
    }
@@ -9717,7 +9717,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "56 Lijekovi",
     "kind": "pair"
    }
@@ -9753,7 +9753,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "57 Infuzijska terapija",
     "kind": "pair"
    }
@@ -9789,7 +9789,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "58 Ultrazvuk",
     "kind": "pair"
    }
@@ -9825,7 +9825,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "59 Lijekovi",
     "kind": "pair"
    }
@@ -9861,7 +9861,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "60 Lijekovi",
     "kind": "pair"
    }
@@ -9897,7 +9897,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "35 Bolnički dan 2",
     "kind": "pair"
    }
@@ -9933,7 +9933,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "61 Lijekovi",
     "kind": "pair"
    }
@@ -9969,7 +9969,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "62 Lijekovi",
     "kind": "pair"
    }
@@ -10005,7 +10005,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "63 Ultrazvuk",
     "kind": "pair"
    }
@@ -10041,7 +10041,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "64 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -10077,7 +10077,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "65 Ultrazvuk",
     "kind": "pair"
    }
@@ -10149,7 +10149,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "67 Lijekovi",
     "kind": "pair"
    }
@@ -10185,7 +10185,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "68 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -10221,7 +10221,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "29 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -10257,7 +10257,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "30 Lijekovi",
     "kind": "pair"
    }
@@ -10293,7 +10293,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "36 Bolnički dan 3",
     "kind": "pair"
    }
@@ -10329,7 +10329,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "31 Ultrazvuk",
     "kind": "pair"
    }
@@ -10365,7 +10365,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "32 Ultrazvuk",
     "kind": "pair"
    }
@@ -10401,7 +10401,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "33 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -10473,7 +10473,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "35 Ultrazvuk",
     "kind": "pair"
    }
@@ -10545,7 +10545,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "37 Ultrazvuk",
     "kind": "pair"
    }
@@ -10581,7 +10581,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "51 Ultrazvuk",
     "kind": "pair"
    }
@@ -10617,7 +10617,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "39 Lijekovi",
     "kind": "pair"
    }
@@ -10689,7 +10689,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "37 Bolnički dan 4",
     "kind": "pair"
    }
@@ -10725,7 +10725,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "43 Lijekovi",
     "kind": "pair"
    }
@@ -10761,7 +10761,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "45 Infuzijska terapija",
     "kind": "pair"
    }
@@ -10797,7 +10797,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "47 Ultrazvuk",
     "kind": "pair"
    }
@@ -10833,7 +10833,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "49 Lijekovi",
     "kind": "pair"
    }
@@ -10869,7 +10869,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "33 Laboratorijske pretrage",
     "kind": "fp"
    }
@@ -10905,7 +10905,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "38 Hitni prijem",
     "kind": "pair"
    }
@@ -10941,7 +10941,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "40 CT snimanje",
     "kind": "pair"
    }
@@ -10977,7 +10977,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "42 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -11013,7 +11013,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "44 Prijevoz vozilom hitne pomoći",
     "kind": "pair"
    }
@@ -11085,7 +11085,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "48 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -11103,7 +11103,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, rođen/a 09.04.1991.",
     "kind": "pair"
    }
@@ -11139,7 +11139,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Opća bolnica Medved",
     "kind": "pair"
    }
@@ -11156,8 +11156,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "hr",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.55,
     "quote": "DATUM I SLUŽBENI 25.03.2026",
     "kind": "pair"
    }
@@ -11248,7 +11248,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Fotoaparát | 808,09 | EUR",
     "kind": "pair"
    }
@@ -11302,7 +11302,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Mobilný telefón | 553,16 | EUR",
     "kind": "pair"
    }
@@ -11356,7 +11356,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Notebook | 1 227,35 | EUR",
     "kind": "pair"
    }
@@ -11410,7 +11410,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Cestovný kufor | 250,83 | EUR",
     "kind": "pair"
    }
@@ -11464,7 +11464,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Topánky | 62,34 | EUR",
     "kind": "pair"
    }
@@ -11519,7 +11519,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Na letisku v Hamburgu som stratil/a batožinu. Letecká spoločnosť ju nezabezpečil",
     "kind": "pair"
    }
@@ -11537,7 +11537,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Hamburg, Nemecko",
     "kind": "pair"
    }
@@ -11574,7 +11574,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 978 12 Nechválova Polianka",
     "kind": "pair"
    }
@@ -11610,7 +11610,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -11628,7 +11628,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -11646,7 +11646,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -11665,7 +11665,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP30509175",
     "kind": "pair"
    }
@@ -11739,7 +11739,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -11757,7 +11757,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -11813,7 +11813,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP30509175 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -11850,7 +11850,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP30509175 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -11887,7 +11887,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Basic",
     "kind": "pair"
    }
@@ -11905,7 +11905,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Danubia Air",
     "kind": "pair"
    }
@@ -11923,8 +11923,8 @@
     "doc_type": "property_irregularity_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "23MAY26 1235",
     "kind": "pair"
    }
@@ -11941,8 +11941,8 @@
     "doc_type": "property_irregularity_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "DN664365",
     "kind": "pair"
    }
@@ -11960,8 +11960,8 @@
     "doc_type": "property_irregularity_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "MUCDN61116",
     "kind": "pair"
    }
@@ -11978,8 +11978,8 @@
     "doc_type": "property_irregularity_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "23 May 2026",
     "kind": "pair"
    }
@@ -11996,8 +11996,8 @@
     "doc_type": "property_irregularity_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "DN6965",
     "kind": "pair"
    }
@@ -12014,8 +12014,8 @@
     "doc_type": "property_irregularity_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "<PERSON_1> MS",
     "kind": "pair"
    }
@@ -12032,8 +12032,8 @@
     "doc_type": "property_irregularity_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Bag not delivered on arrival. Contents declared by passenger: Camera, Mobile pho",
     "kind": "pair"
    }
@@ -12051,8 +12051,8 @@
     "doc_type": "property_irregularity_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "LOST",
     "kind": "pair"
    }
@@ -12124,7 +12124,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Liečebné náklady - Poliklinika Horáková 25 512,00 CZK",
     "kind": "pair"
    }
@@ -12179,7 +12179,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Bol som v Špindlerův Mlýn, Česko, a skončil som s otrum mozgu. Po",
     "kind": "pair"
    }
@@ -12197,7 +12197,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Špindlerův Mlýn, Česko",
     "kind": "pair"
    }
@@ -12234,7 +12234,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 805 81 Hrčel",
     "kind": "pair"
    }
@@ -12270,7 +12270,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -12288,7 +12288,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -12306,7 +12306,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -12325,7 +12325,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP13895645",
     "kind": "pair"
    }
@@ -12418,8 +12418,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "cs",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Faktura č. FV-2026-87900",
     "kind": "pair"
    }
@@ -12437,8 +12437,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "cs",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Datum vystavení: 9. 3. 2026",
     "kind": "pair"
    }
@@ -12474,7 +12474,7 @@
     "scan": true,
     "language": "cs",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 Ošetření na pohotovosti 8 226,00",
     "kind": "pair"
    }
@@ -12510,7 +12510,7 @@
     "scan": true,
     "language": "cs",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 CT vyšetření 11 309,00",
     "kind": "pair"
    }
@@ -12546,7 +12546,7 @@
     "scan": true,
     "language": "cs",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "3 Laboratorní vyšetření 3 202,00",
     "kind": "pair"
    }
@@ -12582,7 +12582,7 @@
     "scan": true,
     "language": "cs",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "4 Infuzní terapie 2 775,00",
     "kind": "pair"
    }
@@ -12600,7 +12600,7 @@
     "scan": true,
     "language": "cs",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, nar. 2. 11. 1984",
     "kind": "pair"
    }
@@ -12636,7 +12636,7 @@
     "scan": true,
     "language": "cs",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poliklinika Horáková",
     "kind": "pair"
    }
@@ -12653,8 +12653,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "cs",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "DATUM OŠETŘENÍ 9. 3. 2026",
     "kind": "pair"
    }
@@ -12745,7 +12745,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Nákup nevyhnutných vecí | 542,73 | TRY",
     "kind": "pair"
    }
@@ -12799,7 +12799,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Nákup nevyhnutných vecí | 1 393,23 | TRY",
     "kind": "pair"
    }
@@ -12854,7 +12854,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Batožina prišla s veľkým oneskorením, asi 18 hodín po prílete. Musel som si kúpi",
     "kind": "pair"
    }
@@ -12872,7 +12872,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Alanya, Turecko",
     "kind": "pair"
    }
@@ -12909,7 +12909,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 877 04 Bašovce",
     "kind": "pair"
    }
@@ -12945,7 +12945,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -12963,7 +12963,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -12981,7 +12981,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -13000,7 +13000,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP60885459",
     "kind": "pair"
    }
@@ -13074,7 +13074,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -13092,7 +13092,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -13148,7 +13148,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP60885459 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -13185,7 +13185,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP60885459 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -13222,7 +13222,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -13294,7 +13294,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Popis Liečebné náklady – Opča bolnica Alkovič",
     "kind": "pair"
    }
@@ -13349,7 +13349,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "POPIS UDALOSTI Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. ",
     "kind": "pair"
    }
@@ -13367,7 +13367,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Split, Chorvátsko",
     "kind": "pair"
    }
@@ -13404,7 +13404,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 960 91 Zlatník",
     "kind": "pair"
    }
@@ -13440,7 +13440,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -13458,7 +13458,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVYSKO <PERSON_1>",
     "kind": "pair"
    }
@@ -13476,7 +13476,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -13495,7 +13495,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP20200074",
     "kind": "pair"
    }
@@ -13569,7 +13569,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
     "kind": "pair"
    }
@@ -13588,7 +13588,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Upala pluća | J18.9",
     "kind": "pair"
    }
@@ -13642,7 +13642,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Opća bolnica Alković",
     "kind": "pair"
    }
@@ -13661,7 +13661,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Upala pluća | J18.9",
     "kind": "pair"
    }
@@ -13697,7 +13697,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PACIJENT <PERSON_1> | ROĐEN/A 25.10.1992.",
     "kind": "pair"
    }
@@ -13715,7 +13715,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Liječnik: <PERSON_2> Potpis i pečat",
     "kind": "pair"
    }
@@ -13733,7 +13733,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promj",
     "kind": "pair"
    }
@@ -13790,7 +13790,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Račun br. R-2026-06965",
     "kind": "pair"
    }
@@ -13845,7 +13845,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Bolnički dan 1 | 769,10",
     "kind": "pair"
    }
@@ -13881,7 +13881,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "11 | EKG | 30,33",
     "kind": "pair"
    }
@@ -13917,7 +13917,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "12 | EKG | 18,82",
     "kind": "pair"
    }
@@ -13953,7 +13953,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "13 | Ultrazvuk | 62,07",
     "kind": "pair"
    }
@@ -13989,7 +13989,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "14 | Infuzijska terapija | 38,48",
     "kind": "pair"
    }
@@ -14025,7 +14025,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "15 | Ultrazvuk | 55,07",
     "kind": "pair"
    }
@@ -14061,7 +14061,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "16 | EKG | 24,44",
     "kind": "pair"
    }
@@ -14097,7 +14097,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "17 | Ultrazvuk | 36,51",
     "kind": "pair"
    }
@@ -14133,7 +14133,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "18 | Lijekovi | 20,23",
     "kind": "pair"
    }
@@ -14169,7 +14169,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "19 | Laboratorijske pretrage | 22,63",
     "kind": "pair"
    }
@@ -14205,7 +14205,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "20 | EKG | 20,28",
     "kind": "pair"
    }
@@ -14241,7 +14241,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | Bolnički dan 2 | 769,10",
     "kind": "pair"
    }
@@ -14277,7 +14277,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "21 | EKG | 27,35",
     "kind": "pair"
    }
@@ -14313,7 +14313,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "22 | EKG | 22,29",
     "kind": "pair"
    }
@@ -14349,7 +14349,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "23 | EKG | 33,44",
     "kind": "pair"
    }
@@ -14385,7 +14385,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "24 | Lijekovi | 13,94",
     "kind": "pair"
    }
@@ -14421,7 +14421,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "25 | Infuzijska terapija | 43,93",
     "kind": "pair"
    }
@@ -14457,7 +14457,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "26 | Infuzijska terapija | 28,39",
     "kind": "pair"
    }
@@ -14493,7 +14493,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "27 | Ultrazvuk | 52,38",
     "kind": "pair"
    }
@@ -14529,7 +14529,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "28 | Infuzijska terapija | 36,67",
     "kind": "pair"
    }
@@ -14565,7 +14565,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "29 | Ultrazvuk | 61,43",
     "kind": "pair"
    }
@@ -14601,7 +14601,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "30 | Laboratorijske pretrage | 21,38",
     "kind": "pair"
    }
@@ -14637,7 +14637,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "3 | Bolnički dan 3 | 769,10",
     "kind": "pair"
    }
@@ -14673,7 +14673,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "31 | EKG | 25,59",
     "kind": "pair"
    }
@@ -14709,7 +14709,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "32 | Lijekovi | 17,66",
     "kind": "pair"
    }
@@ -14745,7 +14745,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "33 | EKG | 24,71",
     "kind": "pair"
    }
@@ -14781,7 +14781,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "34 | Laboratorijske pretrage | 16,44",
     "kind": "pair"
    }
@@ -14817,7 +14817,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "35 | Lijekovi | 12,41",
     "kind": "pair"
    }
@@ -14853,7 +14853,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "36 | Lijekovi | 10,61",
     "kind": "pair"
    }
@@ -14889,7 +14889,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "37 | Ultrazvuk | 40,20",
     "kind": "pair"
    }
@@ -14925,7 +14925,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "38 | Ultrazvuk | 46,13",
     "kind": "pair"
    }
@@ -14961,7 +14961,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "39 | EKG | 36,59",
     "kind": "pair"
    }
@@ -14997,7 +14997,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "40 | Ultrazvuk | 38,80",
     "kind": "pair"
    }
@@ -15033,7 +15033,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "4 | Hitni prijem | 196,38",
     "kind": "pair"
    }
@@ -15069,7 +15069,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "41 | EKG | 20,87",
     "kind": "pair"
    }
@@ -15105,7 +15105,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "42 | Infuzijska terapija | 26,92",
     "kind": "pair"
    }
@@ -15141,7 +15141,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "43 | Lijekovi | 10,79",
     "kind": "pair"
    }
@@ -15177,7 +15177,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "44 | Ultrazvuk | 61,53",
     "kind": "pair"
    }
@@ -15213,7 +15213,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "45 | Lijekovi | 8,51",
     "kind": "pair"
    }
@@ -15249,7 +15249,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "46 | EKG | 20,99",
     "kind": "pair"
    }
@@ -15285,7 +15285,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "47 | Ultrazvuk | 62,48",
     "kind": "pair"
    }
@@ -15321,7 +15321,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "48 | Ultrazvuk | 48,55",
     "kind": "pair"
    }
@@ -15357,7 +15357,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "49 | Laboratorijske pretrage | 41,09",
     "kind": "pair"
    }
@@ -15393,7 +15393,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "50 | Infuzijska terapija | 26,82",
     "kind": "pair"
    }
@@ -15429,7 +15429,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "5 | CT snimanje | 425,65",
     "kind": "pair"
    }
@@ -15465,7 +15465,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "51 | Lijekovi | 10,54",
     "kind": "pair"
    }
@@ -15501,7 +15501,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "52 | Ultrazvuk | 31,31",
     "kind": "pair"
    }
@@ -15537,7 +15537,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "6 | Laboratorijske pretrage | 77,06",
     "kind": "pair"
    }
@@ -15573,7 +15573,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "7 | Prijevoz vozilom hitne pomoći | 417,80",
     "kind": "pair"
    }
@@ -15609,7 +15609,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "8 | EKG | 32,82",
     "kind": "pair"
    }
@@ -15645,7 +15645,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "9 | Laboratorijske pretrage | 27,78",
     "kind": "pair"
    }
@@ -15681,7 +15681,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "10 | Infuzijska terapija | 39,07",
     "kind": "pair"
    }
@@ -15699,7 +15699,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PACIJENT <PERSON_1>, rođen/a 25.10.1992. | DATUM USLUGE 07.07.2026.",
     "kind": "pair"
    }
@@ -15735,7 +15735,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Opća bolnica Alković",
     "kind": "pair"
    }
@@ -15844,7 +15844,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Poliambulatorio Sagnelli",
     "kind": "pair"
    }
@@ -15898,7 +15898,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liekky z lékárne",
     "kind": "pair"
    }
@@ -15953,7 +15953,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "POPIS UDALOSTI Bol som v Romách, v Taliansku, kde sa mi vyvinula akútna infekcia",
     "kind": "pair"
    }
@@ -15971,7 +15971,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Roma, Taliansko",
     "kind": "pair"
    }
@@ -16008,7 +16008,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 828 10 Sabínov",
     "kind": "pair"
    }
@@ -16044,7 +16044,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -16062,7 +16062,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -16080,7 +16080,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -16099,7 +16099,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP11646234",
     "kind": "pair"
    }
@@ -16173,7 +16173,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -16191,7 +16191,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -16247,7 +16247,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP11646234 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -16284,7 +16284,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP11646234 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -16321,7 +16321,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -16358,8 +16358,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "it",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Fattura n. FT-2026-76631",
     "kind": "pair"
    }
@@ -16377,8 +16377,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "it",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Data: 31/08/2026",
     "kind": "pair"
    }
@@ -16414,7 +16414,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 Pronto soccorso",
     "kind": "pair"
    }
@@ -16450,7 +16450,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 Esami di laboratorio",
     "kind": "pair"
    }
@@ -16486,7 +16486,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "3 Terapia infusionale",
     "kind": "pair"
    }
@@ -16522,7 +16522,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "4 Ecografia",
     "kind": "pair"
    }
@@ -16540,7 +16540,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, nato/a il 07/01/1972",
     "kind": "pair"
    }
@@ -16558,7 +16558,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.95,
+    "confidence": 0.55,
     "quote": "Roma, Italia",
     "kind": "pair"
    }
@@ -16576,7 +16576,7 @@
     "scan": true,
     "language": "it",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poliambulatorio Sagnelli",
     "kind": "pair"
    }
@@ -16685,7 +16685,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Medizinisches Zentrum Röhricht 784,57 EUR",
     "kind": "pair"
    }
@@ -16740,7 +16740,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "POPIS UDALOSTI Bol som v Garmisch-Partenkirchen, Nemecko, a skór alebo neskór so",
     "kind": "pair"
    }
@@ -16758,7 +16758,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Garmisch-Partenkirchen, Nemecko",
     "kind": "pair"
    }
@@ -16795,7 +16795,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 900 12 Zbudza",
     "kind": "pair"
    }
@@ -16831,7 +16831,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -16849,7 +16849,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -16867,7 +16867,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -16886,7 +16886,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP93955206",
     "kind": "pair"
    }
@@ -16960,7 +16960,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -16978,7 +16978,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -17034,7 +17034,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP93955206 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -17071,7 +17071,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP93955206 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -17108,7 +17108,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Standard",
     "kind": "pair"
    }
@@ -17126,7 +17126,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
     "kind": "pair"
    }
@@ -17144,8 +17144,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "de",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "DIAGNOSE Gehirnerschütterung",
     "kind": "pair"
    }
@@ -17162,8 +17162,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "de",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Garmisch-Partenkirchen, Deutschland",
     "kind": "pair"
    }
@@ -17180,8 +17180,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "de",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Röhricht",
     "kind": "pair"
    }
@@ -17199,8 +17199,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "de",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "ICD-10 S06.0",
     "kind": "pair"
    }
@@ -17217,8 +17217,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "de",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "GEB. 01.11.1988",
     "kind": "pair"
    }
@@ -17236,7 +17236,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -17254,7 +17254,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Behandelnde/r Ärztin/Arzt: <PERSON_2>",
     "kind": "pair"
    }
@@ -17272,7 +17272,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeite",
     "kind": "pair"
    }
@@ -17290,8 +17290,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "de",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "UNTERSUCHUNG / AUFNAHME 03.06.2026",
     "kind": "pair"
    }
@@ -17329,7 +17329,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Rechnung Nr. RE-2026-05278",
     "kind": "pair"
    }
@@ -17384,7 +17384,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Notfallbehandlung | 154,44",
     "kind": "pair"
    }
@@ -17420,7 +17420,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | Computertomographie | 418,90",
     "kind": "pair"
    }
@@ -17456,7 +17456,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "3 | Laboruntersuchung | 108,94",
     "kind": "pair"
    }
@@ -17492,7 +17492,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "4 | Infusionstherapie | 102,29",
     "kind": "pair"
    }
@@ -17510,7 +17510,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, geb. 01.11.1988 | BEHANDLUNGSDATUM 03.06.2026",
     "kind": "pair"
    }
@@ -17546,7 +17546,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Röhricht",
     "kind": "pair"
    }
@@ -17655,7 +17655,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Nákup nevyhnutných vecí | 2 360,08 | TRY",
     "kind": "pair"
    }
@@ -17709,7 +17709,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Nákup nevyhnutných vecí | 1 673,08 | TRY",
     "kind": "pair"
    }
@@ -17764,7 +17764,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Batožina prišla s veľkým oneskorením, asi 20 hodín. Musel som si kúpiť hygienu a",
     "kind": "pair"
    }
@@ -17782,7 +17782,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bodrum, Turecko",
     "kind": "pair"
    }
@@ -17819,7 +17819,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 872 86 Moravany",
     "kind": "pair"
    }
@@ -17855,7 +17855,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -17873,7 +17873,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -17891,7 +17891,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -17910,7 +17910,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP67061186",
     "kind": "pair"
    }
@@ -18040,7 +18040,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "T-shirt | 916.92",
     "kind": "pair"
    }
@@ -18076,7 +18076,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Underwear | 815.24",
     "kind": "pair"
    }
@@ -18112,7 +18112,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Toothbrush and toothpaste | 398.92",
     "kind": "pair"
    }
@@ -18148,7 +18148,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Shower gel | 229.00",
     "kind": "pair"
    }
@@ -18166,7 +18166,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Karadeniz Mini Market Bodrum",
     "kind": "pair"
    }
@@ -18184,7 +18184,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Receipt Receipt No. 9090/67377 25/07/2026 10:38",
     "kind": "pair"
    }
@@ -18277,7 +18277,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Deodorant | 141.98",
     "kind": "pair"
    }
@@ -18313,7 +18313,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "T-shirt | 579.83",
     "kind": "pair"
    }
@@ -18349,7 +18349,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Charging cable | 951.27",
     "kind": "pair"
    }
@@ -18367,7 +18367,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Öcalan Mini Market Bodrum",
     "kind": "pair"
    }
@@ -18385,7 +18385,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Receipt Receipt No. 1339/98117 26/07/2026 13:36",
     "kind": "pair"
    }
@@ -18476,7 +18476,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Singh International Medical Centre",
     "kind": "pair"
    }
@@ -18531,7 +18531,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Chanie, Grécko, kvôli zdravotnej probléme - nestabilnej angíne pektori",
     "kind": "pair"
    }
@@ -18549,7 +18549,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Chania, Grécko",
     "kind": "pair"
    }
@@ -18586,7 +18586,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 891 58 Smiřice",
     "kind": "pair"
    }
@@ -18622,7 +18622,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -18640,7 +18640,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -18658,7 +18658,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -18677,7 +18677,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP34359060",
     "kind": "pair"
    }
@@ -18751,7 +18751,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -18769,7 +18769,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -18825,7 +18825,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP34359060 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -18862,7 +18862,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP34359060 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -18899,7 +18899,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Basic",
     "kind": "pair"
    }
@@ -18917,7 +18917,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Known arterial hypertension treated since 2024; cardiology check-up two months a",
     "kind": "pair"
    }
@@ -18935,8 +18935,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "DIAGNOSIS Unstable angina",
     "kind": "pair"
    }
@@ -18972,7 +18972,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Singh International Medical Centre",
     "kind": "pair"
    }
@@ -18990,8 +18990,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.55,
     "quote": "ICD-10 I20.0",
     "kind": "pair"
    }
@@ -19008,8 +19008,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.55,
     "quote": "DOB 11/10/1982",
     "kind": "pair"
    }
@@ -19027,7 +19027,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -19045,7 +19045,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Attending physician: <PERSON_2>",
     "kind": "pair"
    }
@@ -19063,7 +19063,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Examination revealed central chest pain with radiation to the left arm, occurrin",
     "kind": "pair"
    }
@@ -19081,8 +19081,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "DATE OF VISIT / ADMISSION 15/05/2026",
     "kind": "pair"
    }
@@ -19120,7 +19120,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Invoice No. INV-2026-91921",
     "kind": "pair"
    }
@@ -19175,7 +19175,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Emergency room treatment | 193.33",
     "kind": "pair"
    }
@@ -19211,7 +19211,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | ECG | 88.56",
     "kind": "pair"
    }
@@ -19247,7 +19247,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "3 | Laboratory tests | 125.77",
     "kind": "pair"
    }
@@ -19283,7 +19283,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "4 | Ultrasound | 116.28",
     "kind": "pair"
    }
@@ -19301,7 +19301,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, DOB 11/10/1982 | 15/05/2026",
     "kind": "pair"
    }
@@ -19337,7 +19337,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Singh International Medical Centre",
     "kind": "pair"
    }
@@ -19446,7 +19446,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Popis Stornovací poplatok Suma 702,90 Mena EUR",
     "kind": "pair"
    }
@@ -19501,7 +19501,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Pred odchodom som ochozol, lekár mi cestovanie neodporušil. V dôs",
     "kind": "pair"
    }
@@ -19519,7 +19519,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Alanya, Turecko",
     "kind": "pair"
    }
@@ -19556,7 +19556,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "ADRESA <ADDRESS_2>, 828 64 Vysoká pri Morave",
     "kind": "pair"
    }
@@ -19592,7 +19592,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -19610,7 +19610,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -19628,7 +19628,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -19647,7 +19647,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP52213778",
     "kind": "pair"
    }
@@ -19721,7 +19721,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -19739,7 +19739,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -19795,7 +19795,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP52213778 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -19832,7 +19832,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP52213778 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -19869,7 +19869,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -19941,7 +19941,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Poliklinika Veselá | 5 245,00 | CZK",
     "kind": "pair"
    }
@@ -19996,7 +19996,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Špindlerův Mlýn, Česko, kde sa mi vyvinula akútna gastroenteritída. Cí",
     "kind": "pair"
    }
@@ -20014,7 +20014,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Špindlerův Mlýn, Česko",
     "kind": "pair"
    }
@@ -20051,7 +20051,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 962 32 Hozelec",
     "kind": "pair"
    }
@@ -20087,7 +20087,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -20105,7 +20105,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -20123,7 +20123,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -20142,7 +20142,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP26297533",
     "kind": "pair"
    }
@@ -20216,7 +20216,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -20234,7 +20234,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -20290,7 +20290,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP26297533 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -20327,7 +20327,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP26297533 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -20364,7 +20364,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Basic",
     "kind": "pair"
    }
@@ -20382,7 +20382,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -20400,7 +20400,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -20456,7 +20456,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP71308842 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -20493,7 +20493,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP71308842 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -20530,7 +20530,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -20548,7 +20548,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Tatra Wings",
     "kind": "pair"
    }
@@ -20585,7 +20585,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PASSENGER NAME <PERSON_1> MR | BAG TAG TW925981",
     "kind": "pair"
    }
@@ -20622,7 +20622,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "FILE REFERENCE AYTTW64387 | BAG STATUS DELAYED",
     "kind": "pair"
    }
@@ -20658,7 +20658,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "FLIGHT / DATE TW5668 / 21 Apr 2026 | ARRIVAL (LOCAL TIME) 21APR26 2005",
     "kind": "pair"
    }
@@ -20676,7 +20676,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PASSENGER NAME <PERSON_1> MR | BAG TAG TW925981",
     "kind": "pair"
    }
@@ -20694,7 +20694,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bag missing on arrival, located at transfer station and forwarded to the passeng",
     "kind": "pair"
    }
@@ -20713,7 +20713,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "FILE REFERENCE AYTTW64387 | BAG STATUS DELAYED",
     "kind": "pair"
    }
@@ -20787,7 +20787,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "T-shirt | 631.12",
     "kind": "pair"
    }
@@ -20823,7 +20823,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Toothbrush and toothpaste | 317.39",
     "kind": "pair"
    }
@@ -20859,7 +20859,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Deodorant | 320.60",
     "kind": "pair"
    }
@@ -20895,7 +20895,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Underwear | 680.13",
     "kind": "pair"
    }
@@ -20913,7 +20913,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Demir Mini Market Antalya",
     "kind": "pair"
    }
@@ -20931,7 +20931,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Receipt Receipt No. 3434/68529 21/04/2026 17:30",
     "kind": "pair"
    }
@@ -21024,7 +21024,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Charging cable | 1,067.14",
     "kind": "pair"
    }
@@ -21060,7 +21060,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Underwear | 995.23",
     "kind": "pair"
    }
@@ -21096,7 +21096,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Deodorant | 181.37",
     "kind": "pair"
    }
@@ -21132,7 +21132,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Shower gel | 207.47",
     "kind": "pair"
    }
@@ -21150,7 +21150,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Şama Mini Market Antalya",
     "kind": "pair"
    }
@@ -21168,7 +21168,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Receipt Receipt No. 7730/15720 22/04/2026 14:47",
     "kind": "pair"
    }
@@ -21259,7 +21259,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Liečebné náklady - Andrews International Medical Centre | 252,45 | EUR",
     "kind": "pair"
    }
@@ -21313,7 +21313,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Lieky z lekárne | 40,94 | EUR",
     "kind": "pair"
    }
@@ -21368,7 +21368,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Podvrtnutie členkového kĺbu sa mi stalo v Chanie, Grécko. Udalosť sa diala v prí",
     "kind": "pair"
    }
@@ -21386,7 +21386,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Chania, Grécko",
     "kind": "pair"
    }
@@ -21423,7 +21423,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 963 47 Jasová",
     "kind": "pair"
    }
@@ -21459,7 +21459,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -21477,7 +21477,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -21495,7 +21495,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -21514,7 +21514,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP26944487",
     "kind": "pair"
    }
@@ -21588,7 +21588,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -21606,7 +21606,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -21662,7 +21662,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP26944487 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -21699,7 +21699,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP26944487 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -21736,7 +21736,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Standard",
     "kind": "pair"
    }
@@ -21754,7 +21754,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "No relevant previous illnesses. No regular medication.",
     "kind": "pair"
    }
@@ -21773,7 +21773,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -21809,7 +21809,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Andrews International Medical Centre",
     "kind": "pair"
    }
@@ -21828,7 +21828,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -21864,7 +21864,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT <PERSON_1> | DOB 22/02/1968",
     "kind": "pair"
    }
@@ -21882,7 +21882,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Attending physician: <PERSON_2> Signature and stamp",
     "kind": "pair"
    }
@@ -21900,7 +21900,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Physical examination revealed tenderness over the lateral aspect of the right an",
     "kind": "pair"
    }
@@ -21957,7 +21957,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Invoice No. INV-2026-54736",
     "kind": "pair"
    }
@@ -22012,7 +22012,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Outpatient consultation | 102.98",
     "kind": "pair"
    }
@@ -22048,7 +22048,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | X-ray | 149.47",
     "kind": "pair"
    }
@@ -22066,7 +22066,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT <PERSON_1>, DOB 22/02/1968 | DATE OF SERVICE 18/04/2026",
     "kind": "pair"
    }
@@ -22102,7 +22102,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Andrews International Medical Centre",
     "kind": "pair"
    }
@@ -22213,7 +22213,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Nasal spray | 8.90",
     "kind": "pair"
    }
@@ -22249,7 +22249,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Amoxicillin 1g | 20.07",
     "kind": "pair"
    }
@@ -22285,7 +22285,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Elastic bandage | 11.97",
     "kind": "pair"
    }
@@ -22303,7 +22303,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Davies Pharmacy Chania",
     "kind": "pair"
    }
@@ -22321,7 +22321,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Receipt Receipt No. 9742/59808 18/04/2026 14:40",
     "kind": "pair"
    }
@@ -22412,7 +22412,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Knih a čitačka 171,31 EUR",
     "kind": "pair"
    }
@@ -22466,7 +22466,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Zimná bunda 129,20 EUR",
     "kind": "pair"
    }
@@ -22520,7 +22520,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Mobilný telefón 817,49 EUR",
     "kind": "pair"
    }
@@ -22574,7 +22574,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Oblečenie (nohavice, tríčka) 145,74 EUR",
     "kind": "pair"
    }
@@ -22628,7 +22628,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Kozmetika 52,49 EUR",
     "kind": "pair"
    }
@@ -22683,7 +22683,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "POPIS UDALOSTI Bol mi ukradnutý záväzok z zaparkovaného auta v Rimini, Taliansko",
     "kind": "pair"
    }
@@ -22701,7 +22701,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Rimini, Taliansko",
     "kind": "pair"
    }
@@ -22738,7 +22738,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 838 81 Podrečany",
     "kind": "pair"
    }
@@ -22774,7 +22774,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -22792,7 +22792,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -22810,7 +22810,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -22829,7 +22829,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP40532691",
     "kind": "pair"
    }
@@ -22903,7 +22903,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -22921,7 +22921,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -22977,7 +22977,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP40532691 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -23014,7 +23014,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP40532691 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -23051,7 +23051,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -23123,7 +23123,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Horváth International Medical Centre | 97 020,00 | HUF",
     "kind": "pair"
    }
@@ -23177,7 +23177,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Lieky z lekárne | 10 614,00 | HUF",
     "kind": "pair"
    }
@@ -23232,7 +23232,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Hévíze, Maďarsko, kde sa u mňa vyvinula akútna gastroenteritída. Cítil",
     "kind": "pair"
    }
@@ -23250,7 +23250,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Hévíz, Maďarsko",
     "kind": "pair"
    }
@@ -23287,7 +23287,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 985 70 Nižný Lánec",
     "kind": "pair"
    }
@@ -23323,7 +23323,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -23341,7 +23341,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -23359,7 +23359,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -23378,7 +23378,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP44269370",
     "kind": "pair"
    }
@@ -23452,7 +23452,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -23470,7 +23470,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -23526,7 +23526,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP44269370 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -23563,7 +23563,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP44269370 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -23600,7 +23600,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Basic",
     "kind": "pair"
    }
@@ -23618,7 +23618,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "No relevant previous illnesses. No regular medication.",
     "kind": "pair"
    }
@@ -23637,7 +23637,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Acute gastroenteritis",
     "kind": "pair"
    }
@@ -23673,7 +23673,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Horváth International Medical Centre",
     "kind": "pair"
    }
@@ -23692,7 +23692,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "A09",
     "kind": "pair"
    }
@@ -23728,7 +23728,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -23746,7 +23746,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Attending physician: <PERSON_2>",
     "kind": "pair"
    }
@@ -23764,7 +23764,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "The patient presented with acute onset of diarrhea and vomiting. Examination rev",
     "kind": "pair"
    }
@@ -23801,8 +23801,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "97,020.00 HUF",
     "kind": "pair"
    }
@@ -23820,8 +23820,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Invoice No. INV-2026-56615",
     "kind": "pair"
    }
@@ -23839,8 +23839,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Date: 18/03/2026",
     "kind": "pair"
    }
@@ -23857,8 +23857,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "1 Outpatient consultation",
     "kind": "pair"
    }
@@ -23875,8 +23875,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "1 Outpatient consultation",
     "kind": "pair"
    }
@@ -23893,8 +23893,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.55,
     "quote": "2 IV infusion",
     "kind": "pair"
    }
@@ -23911,8 +23911,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "2 IV infusion",
     "kind": "pair"
    }
@@ -23929,8 +23929,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, DOB 31/03/1986",
     "kind": "pair"
    }
@@ -23947,8 +23947,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Hévíz, Hungary",
     "kind": "pair"
    }
@@ -23965,8 +23965,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Horváth International Medical Centre",
     "kind": "pair"
    }
@@ -23983,8 +23983,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "16/03/2026",
     "kind": "pair"
    }
@@ -24002,8 +24002,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "97,020.00 HUF",
     "kind": "pair"
    }
@@ -24040,8 +24040,8 @@
     "doc_type": "pharmacy_receipt",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "16/03/2026 09:53",
     "kind": "pair"
    }
@@ -24077,7 +24077,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Paracetamol 500mg 1,789.00",
     "kind": "pair"
    }
@@ -24113,7 +24113,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Elastic bandage 3,425.00",
     "kind": "pair"
    }
@@ -24149,7 +24149,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Amoxicillin 1g 5,400.00",
     "kind": "pair"
    }
@@ -24167,7 +24167,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Kiss Pharmacy",
     "kind": "pair"
    }
@@ -24276,7 +24276,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Sándor International Medical Centre 409 061,00 HUF",
     "kind": "pair"
    }
@@ -24330,7 +24330,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liekky z lekárne 11 376,00 HUF",
     "kind": "pair"
    }
@@ -24385,7 +24385,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Bol som v Budapešti, keď sa mi podvrnul členkový kĺb. Poškodenie ",
     "kind": "pair"
    }
@@ -24403,7 +24403,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Budapest, Mad'arsko",
     "kind": "pair"
    }
@@ -24440,7 +24440,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 881 15 Jasenie",
     "kind": "pair"
    }
@@ -24476,7 +24476,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -24494,7 +24494,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -24512,7 +24512,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -24531,7 +24531,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP48412328",
     "kind": "pair"
    }
@@ -24605,7 +24605,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -24623,7 +24623,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -24679,7 +24679,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP48412328 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -24716,7 +24716,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP48412328 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -24753,7 +24753,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -24771,7 +24771,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "No relevant previous illnesses. No regular medication.",
     "kind": "pair"
    }
@@ -24790,7 +24790,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -24826,7 +24826,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sándor International Medical Centre",
     "kind": "pair"
    }
@@ -24845,7 +24845,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -24881,7 +24881,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT <PERSON_1> | DOB 13/07/1963",
     "kind": "pair"
    }
@@ -24899,7 +24899,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Attending physician: <PERSON_2> Signature and stamp",
     "kind": "pair"
    }
@@ -24917,7 +24917,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Physical examination revealed tenderness over the lateral aspect of the right an",
     "kind": "pair"
    }
@@ -24973,8 +24973,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Invoice No. INV-2026-83345",
     "kind": "pair"
    }
@@ -25029,7 +25029,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 Emergency room treatment 106,298.00",
     "kind": "pair"
    }
@@ -25065,7 +25065,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 CT scan 207,422.00",
     "kind": "pair"
    }
@@ -25101,7 +25101,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "3 Laboratory tests 41,838.00",
     "kind": "pair"
    }
@@ -25137,7 +25137,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "4 IV infusion 53,503.00",
     "kind": "pair"
    }
@@ -25155,7 +25155,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, DOB 13/07/1963",
     "kind": "pair"
    }
@@ -25191,7 +25191,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sándor International Medical Centre",
     "kind": "pair"
    }
@@ -25265,8 +25265,8 @@
     "doc_type": "pharmacy_receipt",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "25/07/2026",
     "kind": "pair"
    }
@@ -25302,7 +25302,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Ibuprofen 400mg 4,685.00",
     "kind": "pair"
    }
@@ -25338,7 +25338,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Amoxicillin 1g 4,017.00",
     "kind": "pair"
    }
@@ -25374,7 +25374,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Nasal spray 2,674.00",
     "kind": "pair"
    }
@@ -25391,8 +25391,8 @@
     "doc_type": "pharmacy_receipt",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Varga Pharmacy",
     "kind": "pair"
    }
@@ -25409,8 +25409,8 @@
     "doc_type": "pharmacy_receipt",
     "scan": true,
     "language": "en",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.55,
     "quote": "Receipt No. 7807/33021",
     "kind": "pair"
    }
@@ -25501,7 +25501,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Poliklinika Čurić 321,10 EUR",
     "kind": "pair"
    }
@@ -25556,7 +25556,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Podvrtnutie členkového kĺbu sa mi stalo počas prechádzky v Split,",
     "kind": "pair"
    }
@@ -25574,7 +25574,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Split, Chorvátsko",
     "kind": "pair"
    }
@@ -25611,7 +25611,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 860 87 Hermanovce",
     "kind": "pair"
    }
@@ -25647,7 +25647,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -25665,7 +25665,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -25683,7 +25683,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -25702,7 +25702,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP74672520",
     "kind": "pair"
    }
@@ -25776,7 +25776,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -25794,7 +25794,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -25850,7 +25850,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP74672520 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -25887,7 +25887,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP74672520 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -25924,7 +25924,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Premium",
     "kind": "pair"
    }
@@ -25996,7 +25996,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Medizinisches Zentrum Krebs 1 044,69 EUR",
     "kind": "pair"
    }
@@ -26051,7 +26051,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Bol som v Münch, kde sa mi podvrnul členkový klíb. Zdravotný prob",
     "kind": "pair"
    }
@@ -26069,7 +26069,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI München, Nemecko",
     "kind": "pair"
    }
@@ -26106,7 +26106,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 983 96 Libušín",
     "kind": "pair"
    }
@@ -26142,7 +26142,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -26160,7 +26160,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -26178,7 +26178,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -26197,7 +26197,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP45186708",
     "kind": "pair"
    }
@@ -26271,7 +26271,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -26289,7 +26289,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -26345,7 +26345,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP45186708 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -26382,7 +26382,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP45186708 | DRUH POISTENIA celoročné",
     "kind": "pair"
    }
@@ -26419,7 +26419,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Basic",
     "kind": "pair"
    }
@@ -26491,7 +26491,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Medizinisches Zentrum Werner 1 093,83 EUR",
     "kind": "pair"
    }
@@ -26546,7 +26546,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Bol som v Schladmingu, Rakúsko, a bol som ochorený akútou gastroe",
     "kind": "pair"
    }
@@ -26564,7 +26564,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Schladming, Rakúsko",
     "kind": "pair"
    }
@@ -26601,7 +26601,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 965 79 Štrkovec",
     "kind": "pair"
    }
@@ -26637,7 +26637,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -26655,7 +26655,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -26673,7 +26673,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -26692,7 +26692,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČISLO POISTNEJ ZMLUVY CP25585427",
     "kind": "pair"
    }
@@ -26766,7 +26766,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -26784,7 +26784,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1> | <RC_1>",
     "kind": "pair"
    }
@@ -26840,7 +26840,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP25585427 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -26877,7 +26877,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP25585427 | DRUH POISTENIA jednorazové",
     "kind": "pair"
    }
@@ -26914,7 +26914,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Basic",
     "kind": "pair"
    }
@@ -26932,7 +26932,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
     "kind": "pair"
    }
@@ -26951,7 +26951,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Akute Gastroenteritis",
     "kind": "pair"
    }
@@ -26987,7 +26987,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Werner",
     "kind": "pair"
    }
@@ -27006,7 +27006,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "A09",
     "kind": "pair"
    }
@@ -27042,7 +27042,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -27060,7 +27060,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Behandelnde/r Ärztin/Arzt: <PERSON_2>",
     "kind": "pair"
    }
@@ -27078,7 +27078,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bei der klinischen Untersuchung zeigten sich leichte Bauchschmerzen, Übelkeit un",
     "kind": "pair"
    }
@@ -27169,7 +27169,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Stornovací poplatok 1 689,10 EUR",
     "kind": "pair"
    }
@@ -27224,7 +27224,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Pred odchodom som sa ochorel, lekár mi cestovanie neodporučil. Ce",
     "kind": "pair"
    }
@@ -27242,7 +27242,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Thessaloniki, Grécko",
     "kind": "pair"
    }
@@ -27279,7 +27279,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 804 71 Rajhrad",
     "kind": "pair"
    }
@@ -27315,7 +27315,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -27333,7 +27333,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -27351,7 +27351,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -27370,7 +27370,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP41690501",
     "kind": "pair"
    }
@@ -27498,7 +27498,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Medizinisches Zentrum Rauter 916,18 EUR",
     "kind": "pair"
    }
@@ -27553,7 +27553,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Bol som v Wien, kde som utrpel otras mozgu. Po udalosti som sa ob",
     "kind": "pair"
    }
@@ -27571,7 +27571,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Wien, Rakúsko",
     "kind": "pair"
    }
@@ -27608,7 +27608,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Adresa <ADDRESS_1>, 945 39 Bohunice",
     "kind": "pair"
    }
@@ -27644,7 +27644,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-mail <EMAIL_1>",
     "kind": "pair"
    }
@@ -27662,7 +27662,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Meno a priezvisko <PERSON_1>",
     "kind": "pair"
    }
@@ -27680,7 +27680,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Telefón <PHONE_1>",
     "kind": "pair"
    }
@@ -27699,7 +27699,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Číslo poistnej zmluvy CP37542226",
     "kind": "pair"
    }
@@ -27773,7 +27773,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
     "kind": "pair"
    }
@@ -27792,7 +27792,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "DIAGNOSE Gehirnerschütterung",
     "kind": "pair"
    }
@@ -27828,7 +27828,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Rauter",
     "kind": "pair"
    }
@@ -27847,7 +27847,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ICD-10 S06.0",
     "kind": "pair"
    }
@@ -27883,7 +27883,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -27901,7 +27901,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Behandelnde/r Ärztin/Arzt: <PERSON_2>",
     "kind": "pair"
    }
@@ -27919,7 +27919,7 @@
     "scan": true,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bei der klinischen Untersuchung zeigten sich keine neurologischen Auffälligkeite",
     "kind": "pair"
    }
@@ -27976,7 +27976,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Rechnung Nr. RE-2026-19964",
     "kind": "pair"
    }
@@ -28031,7 +28031,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Notfallbehandlung | 152,46",
     "kind": "pair"
    }
@@ -28067,7 +28067,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | Computertomographie | 586,18",
     "kind": "pair"
    }
@@ -28103,7 +28103,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "3 | Laboruntersuchung | 40,28",
     "kind": "pair"
    }
@@ -28139,7 +28139,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "4 | Infusionstherapie | 137,26",
     "kind": "pair"
    }
@@ -28157,7 +28157,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, geb. 27.02.1956 | BEHANDLUNGSDATUM 27.07.2026",
     "kind": "pair"
    }
@@ -28193,7 +28193,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Rauter",
     "kind": "pair"
    }
@@ -28302,7 +28302,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Opća bolnica Milotić 6 034,02 EUR",
     "kind": "pair"
    }
@@ -28357,7 +28357,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Bol som v Split, Chorvátsko, kvôli zdravotnej závažnej udalosti. ",
     "kind": "pair"
    }
@@ -28375,7 +28375,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Split, Chorvátsko",
     "kind": "pair"
    }
@@ -28412,7 +28412,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 866 12 Dobroč",
     "kind": "pair"
    }
@@ -28448,7 +28448,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -28466,7 +28466,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -28484,7 +28484,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -28503,7 +28503,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP27013243",
     "kind": "pair"
    }
@@ -28577,7 +28577,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
     "kind": "pair"
    }
@@ -28596,7 +28596,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Upala pluća | J18.9",
     "kind": "pair"
    }
@@ -28650,7 +28650,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Opća bolnica Milotić",
     "kind": "pair"
    }
@@ -28669,7 +28669,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Upala pluća | J18.9",
     "kind": "pair"
    }
@@ -28705,7 +28705,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PACIJENT <PERSON_1> | ROĐEN/A 04.11.1977.",
     "kind": "pair"
    }
@@ -28723,7 +28723,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Liječnik: <PERSON_2> Potpis i pečat",
     "kind": "pair"
    }
@@ -28741,7 +28741,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promj",
     "kind": "pair"
    }
@@ -28797,8 +28797,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "hr",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.55,
     "quote": "Račun br. R-2026 36818",
     "kind": "pair"
    }
@@ -28816,8 +28816,8 @@
     "doc_type": "medical_invoice",
     "scan": true,
     "language": "hr",
-    "grounded": false,
-    "confidence": 0.45,
+    "grounded": true,
+    "confidence": 0.95,
     "quote": "Datum: 16.06.2026.",
     "kind": "pair"
    }
@@ -28853,7 +28853,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "34 Bolnički dan 1",
     "kind": "pair"
    }
@@ -29141,7 +29141,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "18 Infuzijska terapija Plaćanje u roku od 8 dana.",
     "kind": "pair"
    }
@@ -29321,7 +29321,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "22 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -29483,7 +29483,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.95,
+    "confidence": 0.55,
     "quote": "27 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -29501,7 +29501,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "27 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -29537,7 +29537,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "28 Infuzijska terapija",
     "kind": "pair"
    }
@@ -29573,7 +29573,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "29 Infuzijska terapija",
     "kind": "pair"
    }
@@ -29645,7 +29645,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "36 Bolnički dan 3",
     "kind": "pair"
    }
@@ -29735,7 +29735,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.95,
+    "confidence": 0.55,
     "quote": "32 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -29753,7 +29753,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "32 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -29861,7 +29861,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "35 Bolnički dan 2",
     "kind": "pair"
    }
@@ -29915,7 +29915,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.95,
+    "confidence": 0.55,
     "quote": "38 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -29933,7 +29933,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "38 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -30005,7 +30005,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "40 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -30149,7 +30149,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "43 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -30203,7 +30203,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.95,
+    "confidence": 0.55,
     "quote": "45 Infuzijska terapija",
     "kind": "pair"
    }
@@ -30221,7 +30221,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "45 Infuzijska terapija",
     "kind": "pair"
    }
@@ -30293,7 +30293,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "47 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -30365,7 +30365,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "49 Infuzijska terapija",
     "kind": "pair"
    }
@@ -30437,7 +30437,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "38 CT snimanje",
     "kind": "pair"
    }
@@ -30509,7 +30509,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "40 Prijevoz vozilom hitne pomoći",
     "kind": "pair"
    }
@@ -30581,7 +30581,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "36 Laboratorijske pretrage",
     "kind": "pair"
    }
@@ -30635,7 +30635,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "<PERSON_1>, rođen/a 04.11.1977.",
     "kind": "pair"
    }
@@ -30671,7 +30671,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Opća bolnica Milotić",
     "kind": "pair"
    }
@@ -30780,7 +30780,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Medizinisches Zentrum Stalder",
     "kind": "pair"
    }
@@ -30835,7 +30835,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "POPIS UDALOSTI Bol som v Luzern, Švajčiarsko, kde som sa zranil na uchu. Diagnoz",
     "kind": "pair"
    }
@@ -30853,7 +30853,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Luzern, Švajčiarsko",
     "kind": "pair"
    }
@@ -30890,7 +30890,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 990 04 Makovce",
     "kind": "pair"
    }
@@ -30926,7 +30926,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -30944,7 +30944,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -30962,7 +30962,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -30981,7 +30981,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP15917225",
     "kind": "pair"
    }
@@ -31055,7 +31055,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Keine relevanten Vorerkrankungen. Keine Dauermedikation.",
     "kind": "pair"
    }
@@ -31074,7 +31074,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Mittelohrentzündung",
     "kind": "pair"
    }
@@ -31110,7 +31110,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Stalder",
     "kind": "pair"
    }
@@ -31129,7 +31129,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Mittelohrentzündung",
     "kind": "pair"
    }
@@ -31165,7 +31165,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT/IN <PERSON_1> | GEB. 27.10.1969",
     "kind": "pair"
    }
@@ -31183,7 +31183,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
     "kind": "pair"
    }
@@ -31201,7 +31201,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bei der Untersuchung wurden rechtsseitig begrenzte Schmerzen beim Drücken am äuß",
     "kind": "pair"
    }
@@ -31258,7 +31258,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Rechnung Nr. RE-2026-91573",
     "kind": "pair"
    }
@@ -31313,7 +31313,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Ambulante Untersuchung | 107.07",
     "kind": "pair"
    }
@@ -31349,7 +31349,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | Infusionstherapie | 65.87",
     "kind": "pair"
    }
@@ -31367,7 +31367,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, geb. 27.10.1969 | 10.08.2026",
     "kind": "pair"
    }
@@ -31403,7 +31403,7 @@
     "scan": false,
     "language": "de",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Medizinisches Zentrum Stalder",
     "kind": "pair"
    }
@@ -31512,7 +31512,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Andrews International Medical Centre 252,45 EUR",
     "kind": "pair"
    }
@@ -31567,7 +31567,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "POPIS UDALOSTI Podvrtnutie členkového kĺbu sa mi stalo v Chanie, Grécko. Udalosť",
     "kind": "pair"
    }
@@ -31585,7 +31585,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Chania, Grécko",
     "kind": "pair"
    }
@@ -31622,7 +31622,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 963 47 Jasová",
     "kind": "pair"
    }
@@ -31658,7 +31658,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -31676,7 +31676,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -31694,7 +31694,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -31713,7 +31713,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP26944487",
     "kind": "pair"
    }
@@ -31787,7 +31787,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "No relevant previous illnesses. No regular medication.",
     "kind": "pair"
    }
@@ -31806,7 +31806,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -31842,7 +31842,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Andrews International Medical Centre",
     "kind": "pair"
    }
@@ -31861,7 +31861,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -31897,7 +31897,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT <PERSON_1> | DOB 22/02/1968",
     "kind": "pair"
    }
@@ -31915,7 +31915,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Attending physician: <PERSON_2> Signature and stamp",
     "kind": "pair"
    }
@@ -31933,7 +31933,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Physical examination revealed tenderness over the lateral aspect of the right an",
     "kind": "pair"
    }
@@ -31990,7 +31990,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Invoice No. INV-2026-54736",
     "kind": "pair"
    }
@@ -32045,7 +32045,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 | Outpatient consultation | 102.98",
     "kind": "pair"
    }
@@ -32081,7 +32081,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 | X-ray | 149.47",
     "kind": "pair"
    }
@@ -32099,7 +32099,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT <PERSON_1>, DOB 22/02/1968 | DATE OF SERVICE 18/04/2026",
     "kind": "pair"
    }
@@ -32135,7 +32135,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Andrews International Medical Centre",
     "kind": "pair"
    }
@@ -32244,7 +32244,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Liečebné náklady - Marquez International Medical Centre",
     "kind": "pair"
    }
@@ -32299,7 +32299,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bol som v Miami, USA, kde sa mi podvrhlo členkové kĺbo. Zdravotný problém som si",
     "kind": "pair"
    }
@@ -32317,7 +32317,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Miami, USA",
     "kind": "pair"
    }
@@ -32354,7 +32354,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<ADDRESS_1>, 832 11 Láb",
     "kind": "pair"
    }
@@ -32390,7 +32390,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<EMAIL_1>",
     "kind": "pair"
    }
@@ -32408,7 +32408,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>",
     "kind": "pair"
    }
@@ -32426,7 +32426,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PHONE_1>",
     "kind": "pair"
    }
@@ -32445,7 +32445,7 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "CP51837852",
     "kind": "pair"
    }
@@ -32519,7 +32519,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "No relevant previous illnesses. No regular medication.",
     "kind": "pair"
    }
@@ -32538,7 +32538,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -32574,7 +32574,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Marquez International Medical Centre",
     "kind": "pair"
    }
@@ -32593,7 +32593,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Sprain of the ankle | S93.4",
     "kind": "pair"
    }
@@ -32629,7 +32629,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "PATIENT <PERSON_1> | DOB 05/14/1995",
     "kind": "pair"
    }
@@ -32647,7 +32647,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Attending physician: <PERSON_2> Signature and stamp",
     "kind": "pair"
    }
@@ -32665,7 +32665,7 @@
     "scan": false,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Physical examination revealed tenderness over the lateral aspect of the right an",
     "kind": "pair"
    }
@@ -32722,7 +32722,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Invoice No. INV-2026-73603",
     "kind": "pair"
    }
@@ -32777,7 +32777,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 Outpatient consultation 66.66",
     "kind": "pair"
    }
@@ -32831,7 +32831,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, DOB 05/14/1995",
     "kind": "pair"
    }
@@ -32867,7 +32867,7 @@
     "scan": true,
     "language": "en",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Marquez International Medical Centre",
     "kind": "pair"
    }
@@ -32976,7 +32976,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Liečebné náklady – Poliklinika Tomičić 172,71 EUR",
     "kind": "pair"
    }
@@ -33031,7 +33031,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "POPIS UDALOSTI Bol som v Split, Chorvátsko, kvôli zdravotnej probléme akútna inf",
     "kind": "pair"
    }
@@ -33049,7 +33049,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MIESTO VZNIKU UDALOSTI Split, Chorvátsko",
     "kind": "pair"
    }
@@ -33086,7 +33086,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ADRESA <ADDRESS_1>, 982 25 Poběžovice",
     "kind": "pair"
    }
@@ -33122,7 +33122,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "E-MAIL <EMAIL_1>",
     "kind": "pair"
    }
@@ -33140,7 +33140,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "MENO A PRIEZVISKO <PERSON_1>",
     "kind": "pair"
    }
@@ -33158,7 +33158,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "TELEFÓN <PHONE_1>",
     "kind": "pair"
    }
@@ -33177,7 +33177,7 @@
     "scan": true,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "ČÍSLO POISTNEJ ZMLUVY CP57130035",
     "kind": "pair"
    }
@@ -33251,7 +33251,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.",
     "kind": "pair"
    }
@@ -33270,7 +33270,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Akutna infekcija gornjih dišnih puteva | J06.9",
     "kind": "pair"
    }
@@ -33306,7 +33306,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Poliklinika Tomičić",
     "kind": "pair"
    }
@@ -33325,7 +33325,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Akutna infekcija gornjih dišnih puteva | J06.9",
     "kind": "pair"
    }
@@ -33361,8 +33361,8 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
-    "quote": "<PERSON_1>",
+    "confidence": 0.55,
+    "quote": "PACIJENT Nora | ROĐEN/A 05.11.2006.",
     "kind": "pair"
    }
   },
@@ -33379,7 +33379,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Liječnik: <PERSON_2> Potpis i pečat",
     "kind": "pair"
    }
@@ -33397,7 +33397,7 @@
     "scan": false,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Pregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. P",
     "kind": "pair"
    }
@@ -33454,7 +33454,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "Račun br. R-2026-46309",
     "kind": "pair"
    }
@@ -33509,7 +33509,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "1 Ambulantni pregled 59,02",
     "kind": "pair"
    }
@@ -33527,7 +33527,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.95,
+    "confidence": 0.55,
     "quote": "2 Infuzijska terapija 113,69",
     "kind": "pair"
    }
@@ -33545,7 +33545,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "2 Infuzijska terapija 113,69",
     "kind": "pair"
    }
@@ -33563,7 +33563,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.95,
     "quote": "<PERSON_1>, rođen/a 05.11.2006.",
     "kind": "pair"
    }
@@ -33599,7 +33599,7 @@
     "scan": true,
     "language": "hr",
     "grounded": true,
-    "confidence": 0.9,
+    "confidence": 0.55,
     "quote": "Poliklinika Tomićić",
     "kind": "pair"
    }
@@ -33648,35 +33648,35 @@
    {
     "lo": 0.3,
     "hi": 0.5,
-    "n": 138,
-    "accuracy": 0.848,
-    "mean_conf": 0.436
+    "n": 94,
+    "accuracy": 0.809,
+    "mean_conf": 0.429
    },
    {
     "lo": 0.5,
     "hi": 0.7,
-    "n": 50,
-    "accuracy": 0.6,
+    "n": 118,
+    "accuracy": 0.737,
     "mean_conf": 0.55
    },
    {
     "lo": 0.85,
     "hi": 0.95,
-    "n": 872,
-    "accuracy": 0.981,
+    "n": 38,
+    "accuracy": 0.974,
     "mean_conf": 0.9
    },
    {
     "lo": 0.95,
     "hi": 1.01,
-    "n": 764,
-    "accuracy": 0.995,
+    "n": 1574,
+    "accuracy": 0.992,
     "mean_conf": 0.95
    }
   ],
-  "created": "20261009T230525Z",
+  "created": "20261015T215131Z",
   "git": {
-   "sha": "bab3d7e",
+   "sha": "bd6a8ac",
    "dirty": true
   },
   "dataset": "4aee4de982d2",
@@ -33697,12 +33697,12 @@
  "ops": {
   "llm_calls": 112,
   "cached_calls": 112,
-  "tokens_in": 272856,
-  "tokens_out": 84314,
-  "tokens_per_item": 194.0,
+  "tokens_in": 273508,
+  "tokens_out": 84334,
+  "tokens_per_item": 194.4,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 1245,
+  "worker_peak_rss_mb": 1071,
   "models": [
    "ollama:qwen3-vl:8b",
    "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M"

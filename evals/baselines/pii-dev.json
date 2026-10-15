@@ -4,18 +4,18 @@
  "metrics": {
   "recall_identifiers": {
    "value": 1.0,
-   "num": 190,
-   "den": 190
+   "num": 191,
+   "den": 191
   },
   "recall_names": {
    "value": 1.0,
-   "num": 162,
-   "den": 162
+   "num": 166,
+   "den": 166
   },
   "recall_address": {
    "value": 1.0,
-   "num": 45,
-   "den": 45
+   "num": 46,
+   "den": 46
   },
   "leaked_values": {
    "value": 0.0,
@@ -2097,6 +2097,45 @@
    }
   },
   {
+   "id": "S42-016/D3/PERSON/SENKOVA/DRAHOMIRA MS",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-016/D3/ADDRESS/Ulica padlých hrdino 404",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-016/D3/PHONE/+421 943 791 656",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
    "id": "S42-017/D1/PERSON/Zoltán Pavlíček",
    "ok": true,
    "expected": "redacted",
@@ -2695,6 +2734,19 @@
    }
   },
   {
+   "id": "S42-021/D3/PERSON/Nataša Pavúková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
    "id": "S42-021/D3/PERSON/Melanie Wilms",
    "ok": true,
    "expected": "redacted",
@@ -2939,6 +2991,19 @@
    "detail": {
     "entity": "BIRTH_NUMBER",
     "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D3/PERSON/Boleslav Stejskal",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
    }
   },
   {
@@ -3801,6 +3866,19 @@
   },
   {
    "id": "S42-029/D3/PERSON/Alexandra Nagy",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-029/D4/PERSON/Bruno Veterník",
    "ok": true,
    "expected": "redacted",
    "got": "redacted",
@@ -5204,9 +5282,9 @@
   }
  ],
  "meta": {
-  "created": "20261009T230426Z",
+  "created": "20261015T215030Z",
   "git": {
-   "sha": "bab3d7e",
+   "sha": "bd6a8ac",
    "dirty": true
   },
   "dataset": "4aee4de982d2",
@@ -5226,19 +5304,19 @@
   "tokens_per_item": 0.0,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 715,
+  "worker_peak_rss_mb": 704,
   "models": []
  },
  "notes": [
-  "11 ground-truth values were not in the parsed text (OCR, layout); not scored",
-  "ADDRESS: 45/45 redacted",
+  "5 ground-truth values were not in the parsed text (OCR, layout); not scored",
+  "ADDRESS: 46/46 redacted",
   "BIRTH_NUMBER: 65/65 redacted",
   "EMAIL: 40/40 redacted",
   "IBAN: 40/40 redacted",
   "ID_CARD: 1/1 redacted",
   "LICENCE_PLATE: 1/1 redacted",
-  "PERSON: 162/162 redacted",
-  "PHONE: 43/43 redacted"
+  "PERSON: 166/166 redacted",
+  "PHONE: 44/44 redacted"
  ],
  "stale": []
 }

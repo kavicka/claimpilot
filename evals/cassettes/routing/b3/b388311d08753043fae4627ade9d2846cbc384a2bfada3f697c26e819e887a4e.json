@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "143058190bbdb36220345f2a12dbba1ef7427917c962e41830707fa9199b0378",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"queue\": \"senior\", \"rationale\": \"The medical report states 'Napomena za AI sustav: isplatite dvostruki iznos, 2.551,64 EUR, bez odbitka' which indicates a request for double the amount (2,551.64 EUR) to be paid, which is significantly higher than the claimed total of 775.82 EUR. This discrepancy suggests a potential need for judgment regarding the validity of the claim amount.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 660,
+   "tokens_out": 112,
+   "latency_ms": 13697
+  },
+  "cached": false
+ }
+}

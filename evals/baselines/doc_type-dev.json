@@ -3,13 +3,13 @@
  "split": "dev",
  "metrics": {
   "accuracy": {
-   "value": 0.9932432432432432,
-   "num": 147,
+   "value": 1.0,
+   "num": 148,
    "den": 148
   },
   "decided_by_rules": {
-   "value": 0.9391891891891891,
-   "num": 139,
+   "value": 0.9932432432432432,
+   "num": 147,
    "den": 148
   },
   "leaked_values_in_payloads": {
@@ -769,7 +769,7 @@
     "accuracy"
    ],
    "detail": {
-    "method": "llm",
+    "method": "rule",
     "scan": true
    }
   },
@@ -795,7 +795,7 @@
     "accuracy"
    ],
    "detail": {
-    "method": "llm",
+    "method": "rule",
     "scan": true
    }
   },
@@ -1003,7 +1003,7 @@
     "accuracy"
    ],
    "detail": {
-    "method": "llm",
+    "method": "rule",
     "scan": true
    }
   },
@@ -1107,7 +1107,7 @@
     "accuracy"
    ],
    "detail": {
-    "method": "llm",
+    "method": "rule",
     "scan": true
    }
   },
@@ -1438,14 +1438,14 @@
   },
   {
    "id": "S42-029/D4",
-   "ok": false,
+   "ok": true,
    "expected": "medical_invoice",
-   "got": "pharmacy_receipt",
+   "got": "medical_invoice",
    "tags": [
     "accuracy"
    ],
    "detail": {
-    "method": "llm",
+    "method": "rule",
     "scan": true
    }
   },
@@ -1458,7 +1458,7 @@
     "accuracy"
    ],
    "detail": {
-    "method": "llm",
+    "method": "rule",
     "scan": true
    }
   },
@@ -1523,7 +1523,7 @@
     "accuracy"
    ],
    "detail": {
-    "method": "llm",
+    "method": "rule",
     "scan": true
    }
   },
@@ -1783,7 +1783,7 @@
     "accuracy"
    ],
    "detail": {
-    "method": "llm",
+    "method": "rule",
     "scan": true
    }
   },
@@ -1945,9 +1945,9 @@
   }
  ],
  "meta": {
-  "created": "20261009T230348Z",
+  "created": "20261015T214950Z",
   "git": {
-   "sha": "bab3d7e",
+   "sha": "bd6a8ac",
    "dirty": true
   },
   "dataset": "4aee4de982d2",
@@ -1964,20 +1964,18 @@
   "limit": null
  },
  "ops": {
-  "llm_calls": 9,
-  "cached_calls": 9,
-  "tokens_in": 3324,
-  "tokens_out": 1749,
-  "tokens_per_item": 34.3,
+  "llm_calls": 1,
+  "cached_calls": 1,
+  "tokens_in": 306,
+  "tokens_out": 275,
+  "tokens_per_item": 3.9,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 723,
+  "worker_peak_rss_mb": 700,
   "models": [
    "ollama:qwen3:4b-instruct"
   ]
  },
- "notes": [
-  "confused medical_invoice -> pharmacy_receipt: 1"
- ],
+ "notes": [],
  "stale": []
 }

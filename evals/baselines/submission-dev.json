@@ -1706,9 +1706,9 @@
   }
  ],
  "meta": {
-  "created": "20261009T233043Z",
+  "created": "20261015T215709Z",
   "git": {
-   "sha": "bab3d7e",
+   "sha": "bd6a8ac",
    "dirty": true
   },
   "dataset": "4aee4de982d2",
@@ -1731,14 +1731,14 @@
   "limit": null
  },
  "ops": {
-  "llm_calls": 218,
-  "cached_calls": 158,
-  "tokens_in": 363399,
-  "tokens_out": 113831,
-  "tokens_per_item": 6449.1,
-  "latency_p50_ms": 7967,
-  "latency_p95_ms": 18572,
-  "worker_peak_rss_mb": 1240,
+  "llm_calls": 211,
+  "cached_calls": 211,
+  "tokens_in": 361570,
+  "tokens_out": 112653,
+  "tokens_per_item": 6408.4,
+  "latency_p50_ms": 0,
+  "latency_p95_ms": 0,
+  "worker_peak_rss_mb": 1600,
   "models": [
    "ollama:qwen3-vl:8b",
    "ollama:qwen3:14b",

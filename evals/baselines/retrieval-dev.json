@@ -3,18 +3,18 @@
  "split": "dev",
  "metrics": {
   "recall_at_5": {
-   "value": 0.8490566037735849,
-   "num": 45,
+   "value": 0.8301886792452831,
+   "num": 44,
    "den": 53
   },
   "mrr": {
-   "value": 0.699685534591195,
+   "value": 0.6949685534591196,
    "num": 53,
    "den": 0
   },
   "recall_at_5_exclusions": {
-   "value": 0.625,
-   "num": 5,
+   "value": 0.5,
+   "num": 4,
    "den": 8
   }
  },
@@ -52,8 +52,8 @@
     "A4.1",
     "A4.2",
     "A5.1",
-    "A5.2",
-    "A4.3"
+    "A4.3",
+    "A5.2"
    ],
    "tags": [
     "recall_at_5"
@@ -66,15 +66,15 @@
   },
   {
    "id": "S42-002/I2",
-   "ok": true,
+   "ok": false,
    "expected": [
     "A11.3"
    ],
    "got": [
     "A6.1",
     "A6.2",
+    "A11.1",
     "A11.2",
-    "A11.3",
     "A3.2"
    ],
    "tags": [
@@ -1207,9 +1207,9 @@
   }
  ],
  "meta": {
-  "created": "20261009T230834Z",
+  "created": "20261015T215428Z",
   "git": {
-   "sha": "bab3d7e",
+   "sha": "bd6a8ac",
    "dirty": true
   },
   "dataset": "4aee4de982d2",
@@ -1230,14 +1230,14 @@
   "limit": null
  },
  "ops": {
-  "llm_calls": 148,
-  "cached_calls": 148,
-  "tokens_in": 310744,
-  "tokens_out": 105141,
-  "tokens_per_item": 7846.9,
+  "llm_calls": 141,
+  "cached_calls": 141,
+  "tokens_in": 308915,
+  "tokens_out": 103963,
+  "tokens_per_item": 7790.2,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 1706,
+  "worker_peak_rss_mb": 1579,
   "models": [
    "ollama:qwen3-vl:8b",
    "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",

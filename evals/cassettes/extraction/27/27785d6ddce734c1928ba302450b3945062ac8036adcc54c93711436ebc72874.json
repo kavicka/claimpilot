@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\",\n    \"value\": \"Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Akutna infekcija gornjih dišnih puteva | J06.9\",\n    \"value\": \"Akutna infekcija gornjih dišnih puteva\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Split, Hrvatska\",\n    \"value\": \"Hrvatska\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliklinika Tomičić\",\n    \"value\": \"Poliklinika Tomičić\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Akutna infekcija gornjih dišnih puteva | J06.9\",\n    \"value\": \"J06.9\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PACIJENT Nora | ROĐEN/A 05.11.2006.\",\n    \"value\": \"05.11.2006.\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PACIJENT Nora | ROĐEN/A 05.11.2006.\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Liječnik: <PERSON_2> Potpis i pečat\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Pregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. Povraćajni sindrom i suženje bronha. Uzorci izdaha pokazali su prisutnost leukoci\",\n    \"value\": \"Pregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. Povraćajni sindrom i suženje bronha. Uzorci izdaha pokazali su prisutnost leukocita i eozinocita. Uzeta su zračenja i analize krvi. Poboljšanje uočeno je nakon terapije s antiinflamatorima i bronhodilatatorima. Preporučeno je nadaljevodno praćenje i izbjegavanje agresivnih faktora okoliša.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"19.08.2026. | -\",\n    \"value\": \"19.08.2026.\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2774,
+   "tokens_out": 752,
+   "latency_ms": 27448
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\",\n    \"value\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Fraktur des distalen Radius | S52.5\",\n    \"value\": \"Fraktur des distalen Radius\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Salzburg, Österreich\",\n    \"value\": \"Österreich\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Medizinisches Zentrum Holzmann\",\n    \"value\": \"Medizinisches Zentrum Holzmann\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Fraktur des distalen Radius | S52.5\",\n    \"value\": \"S52.5\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN | GEB. <PERSON_1> | 01.08.1969\",\n    \"value\": \"01.08.1969\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN | GEB. <PERSON_1> | 01.08.1969\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Bei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verletzung im Bereich des distalen Radius mit eingeschränkter Beweglichkeit. Die Röntgenaufnahmen bestätigten eine Fraktur des distalen Radius. Es wurden keine Komplikationen wie Nerven- oder Gefäßschäden festgestellt. Die Patientin erhielt eine konservative Behandlung mit Gipsfixation im neutralen Verband. Eine nachfolgende Kontrolle nach vier Wochen ist empfohlen.\",\n    \"value\": \"Bei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verletzung im Bereich des distalen Radius mit eingeschränkter Beweglichkeit. Die Röntgenaufnahmen bestätigten eine Fraktur des distalen Radius. Es wurden keine Komplikationen wie Nerven- oder Gefäßschäden festgestellt. Die Patientin erhielt eine konservative Behandlung mit Gipsfixation im neutralen Verband. Eine nachfolgende Kontrolle nach vier Wochen ist empfohlen.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"20.03.2026 | -\",\n    \"value\": \"20.03.2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2523,
+   "tokens_out": 761,
+   "latency_ms": 22218
+  },
+  "cached": false
+ }
+}

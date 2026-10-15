@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "143058190bbdb36220345f2a12dbba1ef7427917c962e41830707fa9199b0378",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{ \"queue\": \"standard\", \"rationale\": \"The claim involves a routine medical treatment for an acute upper respiratory infection, with no signs of fraud or unusual circumstances. The medical report is consistent with the claim description and provides sufficient detail for standard processing.\" }",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 565,
+   "tokens_out": 54,
+   "latency_ms": 13512
+  },
+  "cached": false
+ }
+}

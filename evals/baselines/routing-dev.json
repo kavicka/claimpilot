@@ -3,8 +3,8 @@
  "split": "dev",
  "metrics": {
   "accuracy": {
-   "value": 0.95,
-   "num": 38,
+   "value": 0.925,
+   "num": 37,
    "den": 40
   },
   "fraud_recall": {
@@ -13,13 +13,13 @@
    "den": 10
   },
   "rule_agreement": {
-   "value": 0.95,
-   "num": 38,
+   "value": 0.925,
+   "num": 37,
    "den": 40
   },
   "cost": {
-   "value": 2.0,
-   "num": 2,
+   "value": 3.0,
+   "num": 3,
    "den": 0
   },
   "llm_used": {
@@ -180,24 +180,26 @@
     "llm_used": true,
     "cost": 0,
     "hits": [],
-    "rationale": "LLM: The claim involves a routine medical treatment for an acute upper respiratory infection, with no signs of pre-existing conditions, exclusions, or unusual circumstances. The medical report is consistent with the claim description.",
+    "rationale": "LLM: The claim involves a routine medical treatment for an acute upper respiratory infection, with no signs of fraud or unusual circumstances. The medical report is consistent with the claim description and provides sufficient detail for standard processing.",
     "total_eur": "616.36",
     "archetype": "outside_trip"
    }
   },
   {
    "id": "S42-009",
-   "ok": true,
+   "ok": false,
    "expected": "standard (R9)",
-   "got": "standard (R9)",
+   "got": "senior (LLM)",
    "tags": [
     "accuracy"
    ],
    "detail": {
     "llm_used": true,
-    "cost": 0,
-    "hits": [],
-    "rationale": "LLM: The claim describes a fracture of the distal radius sustained while skiing, with supporting medical documentation confirming the injury and treatment. There are no signs of fraud, exclusions, or unusual circumstances that would warrant escalation.",
+    "cost": 1,
+    "hits": [
+     "LLM"
+    ],
+    "rationale": "LLM: The claim involves a fracture of the distal radius (S52.5) sustained while skiing, which may fall under the category of an extreme sport. The policy may have specific exclusions related to activities like skiing, requiring further judgment.",
     "total_eur": "775.82",
     "archetype": "accident_fracture"
    }
@@ -402,7 +404,7 @@
     "llm_used": true,
     "cost": 0,
     "hits": [],
-    "rationale": "LLM: The medical report confirms an acute upper respiratory infection with no pre-existing conditions, and the treatment is standard and appropriate for the diagnosis. There are no signs of fraud or unusual circumstances.",
+    "rationale": "LLM: The medical report confirms an acute upper respiratory infection with no pre-existing conditions, and the treatment provided is standard for the diagnosed condition. There are no signs of fraud or unusual circumstances.",
     "total_eur": "602.66",
     "archetype": "outside_period"
    }
@@ -574,10 +576,9 @@
     "llm_used": false,
     "cost": 0,
     "hits": [
-     "R3",
-     "R4"
+     "R3"
     ],
-    "rationale": "R3: event 2 day(s) after the policy was concluded; R4: missing: medical_invoice",
+    "rationale": "R3: event 2 day(s) after the policy was concluded",
     "total_eur": "272.49",
     "archetype": "early_claim"
    }
@@ -594,7 +595,7 @@
     "llm_used": true,
     "cost": 0,
     "hits": [],
-    "rationale": "LLM: The claim involves a sprain of the ankle (S93.4) treated with standard care (ice, compression, elevation, and medication). There is no indication of pre-existing conditions, exclusions, or unusual circumstances that would warrant escalation.",
+    "rationale": "LLM: The claim involves a sprained ankle treated at a medical center in Budapest, with no signs of pre-existing conditions, fraud, or unusual circumstances. The documents are consistent and provide a clear account of the injury and treatment.",
     "total_eur": "1064.40",
     "archetype": "medical_standard"
    }
@@ -801,9 +802,9 @@
   }
  ],
  "meta": {
-  "created": "20261009T230647Z",
+  "created": "20261015T215231Z",
   "git": {
-   "sha": "bab3d7e",
+   "sha": "bd6a8ac",
    "dirty": true
   },
   "dataset": "4aee4de982d2",
@@ -826,14 +827,14 @@
   "limit": null
  },
  "ops": {
-  "llm_calls": 163,
-  "cached_calls": 157,
-  "tokens_in": 331653,
-  "tokens_out": 111836,
-  "tokens_per_item": 11087.2,
-  "latency_p50_ms": 3937,
-  "latency_p95_ms": 4422,
-  "worker_peak_rss_mb": 1240,
+  "llm_calls": 155,
+  "cached_calls": 155,
+  "tokens_in": 329550,
+  "tokens_out": 110420,
+  "tokens_per_item": 10999.2,
+  "latency_p50_ms": 0,
+  "latency_p95_ms": 0,
+  "worker_peak_rss_mb": 1113,
   "models": [
    "ollama:qwen3-vl:8b",
    "ollama:qwen3:14b",

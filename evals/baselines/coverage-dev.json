@@ -76,13 +76,13 @@
     "mapped": "medical/hospital",
     "expected_map": "medical/treatment",
     "retrieved": [
-     "A4.1",
      "A4.2",
-     "A5.1",
+     "A4.1",
      "A4.3",
+     "A5.1",
      "A5.2"
     ],
-    "rationale": "The claim involves medical treatment (hospitalization and treatment for a fracture of the distal radius) resulting from an accident during a tandem paragliding flight. Clause A4.1 explicitly covers me",
+    "rationale": "The claim involves medical treatment (hospitalization and treatment for a fracture of the distal radius) resulting from an accident during a tandem paragliding flight. Clause A4.1 explicitly covers ne",
     "archetype": "extreme_sport"
    }
   },
@@ -103,11 +103,11 @@
     "retrieved": [
      "A6.1",
      "A6.2",
+     "A11.1",
      "A11.2",
-     "A11.3",
      "A3.2"
     ],
-    "rationale": "The claim involves a fracture of the distal radius confirmed by a medical report, which falls under the coverage for bone fractures under the accident section. There is no evidence indicating that the",
+    "rationale": "The claim involves a fracture of the distal radius confirmed by a medical report, which falls under the coverage for injury-related fractures as stated in clause A6.1. Clause A6.2 further clarifies th",
     "archetype": "extreme_sport"
    }
   },
@@ -1928,9 +1928,9 @@
   }
  ],
  "meta": {
-  "created": "20261010T000241Z",
+  "created": "20261015T215615Z",
   "git": {
-   "sha": "bab3d7e",
+   "sha": "bd6a8ac",
    "dirty": true
   },
   "dataset": "4aee4de982d2",
@@ -1954,14 +1954,14 @@
   "limit": null
  },
  "ops": {
-  "llm_calls": 247,
-  "cached_calls": 246,
-  "tokens_in": 406189,
-  "tokens_out": 119182,
-  "tokens_per_item": 5416.2,
-  "latency_p50_ms": 11677,
-  "latency_p95_ms": 11677,
-  "worker_peak_rss_mb": 1302,
+  "llm_calls": 239,
+  "cached_calls": 239,
+  "tokens_in": 404099,
+  "tokens_out": 117771,
+  "tokens_per_item": 5380.1,
+  "latency_p50_ms": 0,
+  "latency_p95_ms": 0,
+  "worker_peak_rss_mb": 1588,
   "models": [
    "ollama:qwen3-vl:8b",
    "ollama:qwen3:14b",

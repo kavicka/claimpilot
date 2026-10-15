@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Paziente in stato di ebbrezza all'arrivo, alcolemia 1,4 g/l.\",\n    \"value\": \"Paziente in stato di ebbrezza all'arrivo, alcolemia 1,4 g/l.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Frattura dell'estremità distale del radio | S52.5\",\n    \"value\": \"Frattura dell'estremità distale del radio\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Rimini, Italia\",\n    \"value\": \"Italia\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliambulatorio Donati\",\n    \"value\": \"Poliambulatorio Donati\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Frattura dell'estremità distale del radio | S52.5\",\n    \"value\": \"S52.5\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PAZIENTE Maroš | NATO/A IL 08/08/1993\",\n    \"value\": \"08/08/1993\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Medico: <PERSON_2> Firma e timbro\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"All'escursione, si riscontrava dolore, gonfiore e limitata mobilità alla regione distale del radio. L'esame radiografico confermava la presenza di una frattura del radio distale, senza coinvolgimento delle articolazioni. Sono state eseguite radiografie in due proiezioni, che hanno evidenziato una frattura non displasica, con buona allineamento. È stato prescritto un gesso a gomito flesso e si è consigliato il riposo completo per le prime tre settimane. Si raccomanda il controllo radiologico dopo due settimane e la visita di follow-up per valutare la guarigione e la rimozione del gesso.\",\n    \"value\": \"All'escursione, si riscontrava dolore, gonfiore e limitata mobilità alla regione distale del radio. L'esame radiografico confermava la presenza di una frattura del radio distale, senza coinvolgimento delle articolazioni. Sono state eseguite radiografie in due proiezioni, che hanno evidenziato una frattura non displasica, con buona allineamento. È stato prescritto un gesso a gomito flesso e si è consigliato il riposo completo per le prime tre settimane. Si raccomanda il controllo radiologico dopo due settimane e la visita di follow-up per valutare la guarigione e la rimozione del gesso.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"DATA VISITA / RICOVERO 08/02/2026 | DIMISSIONE -\",\n    \"value\": \"08/02/2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2668,
+   "tokens_out": 857,
+   "latency_ms": 26709
+  },
+  "cached": false
+ }
+}

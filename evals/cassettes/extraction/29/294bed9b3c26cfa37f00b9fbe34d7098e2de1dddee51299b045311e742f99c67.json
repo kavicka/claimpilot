@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"agency_name\": {\"page\": 1, \"quote\": \"Cestovná kancelária Horizont Tour, s. r. o.\",\"value\": \"Cestovná kancelária Horizont Tour, s. r. o.\"},\n  \"booking_number\": {\"page\": 1, \"quote\": \"ČÍSLO REZERVÁCIE 2026051\",\"value\": \"2026051\"},\n  \"cancellation_date\": {\"page\": 1, \"quote\": \"Dátum stornovania: 11. 7. 2026\",\"value\": \"11. 7. 2026\"},\n  \"cancellation_fee\": {\"page\": 1, \"quote\": \"Stornovací poplatok | 1 051,40\",\"value\": \"1 051,40\"},\n  \"currency\": {\"page\": 1, \"quote\": \"Suma (EUR)\",\"value\": \"EUR\"},\n  \"destination\": {\"page\": 1, \"quote\": \"DESTINÁCIA Chania, Grécko\",\"value\": \"Chania, Grécko\"},\n  \"total_price\": {\"page\": 1, \"quote\": \"Celková cena zájazdu | 1 502,00\",\"value\": \"1 502,00\"},\n  \"traveler_names\": {\"page\": 1, \"quote\": \"CESTUJÚCI <PERSON_1>\",\"values\": [\"<PERSON_1>\"]},\n  \"trip_end\": {\"page\": 1, \"quote\": \"NÁVRAT 3. 8. 2026\",\"value\": \"3. 8. 2026\"},\n  \"trip_start\": {\"page\": 1, \"quote\": \"ODCHOD 28. 7. 2026\",\"value\": \"28. 7. 2026\"}\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 612,
+   "tokens_out": 440,
+   "latency_ms": 11163
+  },
+  "cached": false
+ }
+}
