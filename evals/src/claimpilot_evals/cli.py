@@ -20,7 +20,7 @@ from claimpilot_core.llm.prompts import load_prompt
 from claimpilot_core.logging import configure_logging
 from claimpilot_evals.compare import BASELINES, compare_suite
 from claimpilot_evals.report import Report, git_meta, latest, ops_from_calls, write
-from claimpilot_evals.suites import SUITES
+from claimpilot_evals.suites import LOCAL_SUITES, SUITES
 from claimpilot_evals.suites.common import RunContext
 
 
@@ -54,7 +54,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(prog="claimpilot-eval")
     sub = parser.add_subparsers(dest="cmd", required=True)
     r = sub.add_parser("run")
-    r.add_argument("--suite", required=True, help=f"one of {SUITES} or 'all'")
+    r.add_argument("--suite", required=True, help=f"one of {SUITES + LOCAL_SUITES} or 'all'")
     r.add_argument("--split", default="dev", choices=["dev", "test"])
     r.add_argument("--limit", type=int)
     r.add_argument("--model", action="append", default=[], help="step=model, or *=model")

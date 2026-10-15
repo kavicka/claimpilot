@@ -203,3 +203,38 @@ def test_an_image_and_its_hash_reference_share_a_cassette_key():
     image = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk"
     assert cassette_key(req(image)) == cassette_key(req(IMAGE_REF + image_digest(image)))
     assert cassette_key(req(image)) != cassette_key(req(image + "AA"))
+
+
+async def test_cloud_steps_go_to_bedrock_and_keep_their_own_cassettes(tmp_settings):
+    """With the cloud model map the gateway sends Claude steps to the Bedrock client, records
+    them under the bedrock key, and replays them without a call."""
+    from types import SimpleNamespace
+
+    from claimpilot_core.llm.bedrock import BedrockClaudeClient
+
+    class Messages:
+        calls = 0
+
+        async def create(self, **params):
+            Messages.calls += 1
+            return SimpleNamespace(
+                content=[SimpleNamespace(type="text", text='{"answer": "yes"}')],
+                stop_reason="end_turn",
+                model=params["model"],
+                usage=SimpleNamespace(input_tokens=10, output_tokens=3),
+            )
+
+    class Out(BaseModel):
+        answer: str
+
+    settings = tmp_settings.model_copy(update={"providers_file": "providers.cloud.yaml"})
+    for mode in (CassetteMode.RECORD, CassetteMode.REPLAY):
+        gw = LLMGateway(settings, cassette_mode=mode)
+        gw._bedrock = BedrockClaudeClient(
+            "eu-central-1", client=SimpleNamespace(messages=Messages())
+        )
+        gen = await gw.generate_json("smoke", "smoke/invoice_json", Out, {"text": "Is it?"})
+        assert gen.value.answer == "yes"
+        assert gen.spec.key == "bedrock:eu.anthropic.claude-haiku-5-5"
+    assert Messages.calls == 1  # the second run replayed
+    assert list((settings.cassettes_dir / "smoke").rglob("*.json"))

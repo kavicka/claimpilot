@@ -274,21 +274,25 @@ async def extract_document_vision(
     *,
     tokenize,
     mapping: dict[str, str] | None = None,
+    masked: bool = False,
 ) -> Extraction:
-    """Scans and photos read by the local vision model. The images hold unredacted personal data,
-    so this path is allowed only for local providers (ADR-003); returned values are tokenized with
-    the claim's redactor before anything else sees them."""
+    """Scans and photos read by a vision model. Unmasked images hold personal data, so they go to
+    local models only (ADR-003). A cloud model gets masked images (ingest/mask.py) together with
+    the redacted OCR text, where personal values are tokens (ADR-010). Returned values are
+    tokenized with the claim's redactor before anything else sees them."""
     spec = gateway.spec_for("extraction_vision")
-    if spec.provider != "ollama":
+    if spec.provider != "ollama" and not masked:
         raise PermissionError("page images with personal data may only go to a local model")
-    variables = {
+    variables: dict[str, Any] = {
         "doc_type": DOC_TYPE_LABELS[doc_type],
         "fields": field_guide(doc_type),
         "pages": len(images_b64),
     }
+    if masked:
+        variables["text"] = page_marked_text(parsed, redacted)
     gen = await gateway.generate_json(
         "extraction_vision",
-        "extraction/vision",
+        "extraction/vision_masked" if masked else "extraction/vision",
         grounded_model(doc_type),
         variables,
         images=images_b64,

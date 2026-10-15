@@ -17,6 +17,7 @@ import structlog
 import yaml
 from pydantic import BaseModel, ValidationError
 
+from claimpilot_core.llm.bedrock import BedrockClaudeClient, BedrockEmbedder
 from claimpilot_core.llm.cassette import CassetteMode, CassetteStore
 from claimpilot_core.llm.ollama import EventHook, OllamaClient
 from claimpilot_core.llm.prompts import Prompt, load_prompt
@@ -70,8 +71,8 @@ class OutputValidationError(ValueError):
     pass
 
 
-def load_providers(config_dir: Path) -> dict[str, Any]:
-    return yaml.safe_load((config_dir / "providers.yaml").read_text(encoding="utf-8"))
+def load_providers(config_dir: Path, name: str = "providers.yaml") -> dict[str, Any]:
+    return yaml.safe_load((config_dir / name).read_text(encoding="utf-8"))
 
 
 class LLMGateway:
@@ -84,14 +85,26 @@ class LLMGateway:
         cassette_mode: CassetteMode | None = None,
     ) -> None:
         self.settings = settings or get_settings()
-        self.providers = load_providers(self.settings.config_dir)
+        self.providers = load_providers(self.settings.config_dir, self.settings.providers_file)
         self.overrides = overrides or {}
         self.client = OllamaClient(self.settings.ollama_url, event_hooks=event_hooks)
+        self._bedrock: BedrockClaudeClient | None = None
+        self._embedder: BedrockEmbedder | None = None
         mode = cassette_mode or CassetteMode(self.settings.llm_cassette_mode)
         self.cassettes = CassetteStore(self.settings.cassettes_dir, mode)
 
     async def aclose(self) -> None:
         await self.client.aclose()
+        if self._bedrock is not None:
+            await self._bedrock.aclose()
+
+    def _client_for(self, spec: ModelSpec) -> OllamaClient | BedrockClaudeClient:
+        if spec.provider == "bedrock":
+            if self._bedrock is None:
+                region = self.providers.get("bedrock", {}).get("region", self.settings.aws_region)
+                self._bedrock = BedrockClaudeClient(region)
+            return self._bedrock
+        return self.client
 
     def spec_for(self, step: str) -> ModelSpec:
         defaults = self.providers.get("defaults", {})
@@ -120,7 +133,7 @@ class LLMGateway:
             if cached is not None:
                 response = cached
             else:
-                response, _ = await self.client.chat(req, tools=tools)
+                response, _ = await self._client_for(req.spec).chat(req, tools=tools)
                 self.cassettes.save(req, response, tools)
             gen.update(
                 output=response.text or response.tool_calls,
@@ -230,8 +243,20 @@ class LLMGateway:
         response = await self.complete(req)
         return Generation(response.text.strip(), response, prompt, req.spec)
 
-    async def embed(self, texts: list[str], *, batch: int = 32) -> list[list[float]]:
-        """Embeddings, cached per text like cassettes so retrieval evals replay without a model."""
+    async def _embed_batch(self, texts: list[str], kind: str) -> list[list[float]]:
+        cfg = self.providers["embeddings"]
+        if cfg.get("provider", "ollama") == "bedrock":
+            if self._embedder is None:
+                region = self.providers.get("bedrock", {}).get("region", self.settings.aws_region)
+                self._embedder = BedrockEmbedder(cfg["model"], region)
+            return await self._embedder.embed(texts, kind=kind)
+        return await self.client.embed(cfg["model"], texts)
+
+    async def embed(
+        self, texts: list[str], *, batch: int = 32, kind: str = "document"
+    ) -> list[list[float]]:
+        """Embeddings, cached per text like cassettes so retrieval evals replay without a model.
+        `kind` is "document" or "query" (Cohere embeds them differently; Ollama ignores it)."""
         import hashlib
 
         model = self.embedding_model
@@ -249,7 +274,7 @@ class LLMGateway:
                 todo.append(i)
         for start in range(0, len(todo), batch):
             idx = todo[start : start + batch]
-            vectors = await self.client.embed(model, [texts[i] for i in idx])
+            vectors = await self._embed_batch([texts[i] for i in idx], kind)
             for i, vec in zip(idx, vectors, strict=True):
                 out[i] = vec
                 if mode in (CassetteMode.RECORD, CassetteMode.AUTO):

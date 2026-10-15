@@ -23,6 +23,10 @@ class Settings(BaseSettings):
     database_url: str = "postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot"
     redis_url: str = "redis://127.0.0.1:6389/0"
     ollama_url: str = "http://127.0.0.1:11434"
+    # Which model map to load from config/: providers.yaml (local Ollama) or providers.cloud.yaml
+    # (Claude on Bedrock). The cloud deployment sets CLAIMPILOT_PROVIDERS_FILE.
+    providers_file: str = "providers.yaml"
+    aws_region: str = "eu-central-1"
     api_url: str = "http://127.0.0.1:4400"
     intake_token: str = ""
     core_mock_url: str = "http://127.0.0.1:4401"

@@ -8,6 +8,7 @@ dependencies = [
     "arq>=0.26",
     "docling>=2.15",
     "ocrmac>=1.0; sys_platform == 'darwin'",
+    "onnxruntime>=1.20",
     "pymupdf>=1.25",
     "rapidfuzz>=3.10",
     "sentence-transformers>=3.3",

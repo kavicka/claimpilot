@@ -1,0 +1,35 @@
+# Model per step for the AWS deployment (Phase 2): Claude on Amazon Bedrock in eu-central-1.
+# Selected with CLAIMPILOT_PROVIDERS_FILE=providers.cloud.yaml; providers.yaml stays the local map.
+# Not run yet: no eval numbers exist for this map until it is pointed at a Bedrock account
+# (docs/deploy.md). Model IDs are the EU inference profiles: from eu-central-1 they route only to
+# EU Regions, and the 5.5 models have no in-Region option in Frankfurt
+# (docs/research/aws-bedrock-facts.md). Confirm model access on the account before the first run.
+bedrock:
+  region: eu-central-1
+
+defaults:
+  provider: bedrock
+  think: false # maps to effort "low" on Claude
+
+steps:
+  # Short, rule-backed decisions: the cheapest model.
+  doc_type:          { model: "eu.anthropic.claude-haiku-5-5", num_predict: 512 }
+  coverage_map:      { model: "eu.anthropic.claude-haiku-5-5", num_predict: 1024 }
+  submission:        { model: "eu.anthropic.claude-haiku-5-5", num_predict: 2048 }
+  smoke:             { model: "eu.anthropic.claude-haiku-5-5", num_predict: 512 }
+  # Reading documents and judging cover: Sonnet, with Opus answering when Sonnet declines.
+  extraction:        { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 6144, fallback_model: "eu.anthropic.claude-opus-5-5" }
+  extraction_vision: { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 6144, fallback_model: "eu.anthropic.claude-opus-5-5" }
+  routing:           { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 512, fallback_model: "eu.anthropic.claude-opus-5-5" }
+  coverage_decide:   { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 768, fallback_model: "eu.anthropic.claude-opus-5-5" }
+  summaries:         { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 1024, fallback_model: "eu.anthropic.claude-opus-5-5" }
+  # Evals and the data generator run where Ollama runs, never in the deployment: the judge stays a
+  # different model family from the writer.
+  judge:             { provider: ollama, model: "gemma3:12b", num_predict: 512 }
+  narrative:         { provider: ollama, model: "qwen3:14b", temperature: 0.7, num_ctx: 4096 }
+
+embeddings:
+  provider: bedrock
+  # 1024 dimensions, like bge-m3, so the pgvector column and index stay as they are. A switch of
+  # embedding model needs the policy index rebuilt (build_index), not a migration.
+  model: "cohere.embed-multilingual-v3"

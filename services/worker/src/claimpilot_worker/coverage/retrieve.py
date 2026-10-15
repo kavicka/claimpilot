@@ -58,7 +58,7 @@ def rrf(lists: dict[str, Sequence[Sequence[str]]]) -> list[Hit]:
 async def hybrid(
     session: AsyncSession, gateway: LLMGateway, query: str, *, k: int = 5, rerank: bool = True
 ) -> list[Hit]:
-    (vec,) = await gateway.embed([query])
+    (vec,) = await gateway.embed([query], kind="query")
     vector_rows = (
         await session.execute(
             text(

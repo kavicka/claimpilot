@@ -2,6 +2,7 @@
 
 from typing import Any
 
+import structlog
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -18,8 +19,11 @@ from claimpilot_worker.extraction.extract import (
     extract_document,
     extract_document_vision,
 )
+from claimpilot_worker.ingest.mask import has_personal_data, mask_pages
 from claimpilot_worker.ingest.renders import page_png_b64
 from claimpilot_worker.pipeline import register
+
+log = structlog.get_logger(__name__)
 
 
 def _parsed(doc: Document, rows: list[DocBlock]) -> tuple[ParsedDocument, dict[int, str]]:
@@ -42,11 +46,10 @@ async def extract(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S
     vault = Vault(settings.pii_vault_key.get_secret_value())
     entries = await vault.load_entries(session, claim.id)
     mapping = {t: v for t, (_, v) in entries.items()}
-    # Page images hold personal data: the vision path is for local models only (ADR-003).
-    vision = (
-        settings.scan_path == "vision"
-        and gateway.spec_for("extraction_vision").provider == "ollama"
-    )
+    vision = settings.scan_path == "vision"
+    # Page images hold personal data: unmasked they go to local models only (ADR-003); a cloud
+    # model gets them masked, or not at all (ADR-010).
+    local_vision = gateway.spec_for("extraction_vision").provider == "ollama"
     redactor: ClaimRedactor | None = None
 
     def tokenize(value: str) -> str:
@@ -64,17 +67,26 @@ async def extract(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S
             )
         ).all()
         parsed, redacted = _parsed(doc, list(rows))
+        images: list[str] | None = None
         if vision and any(r.ocr for r in rows):
             redactor = redactor or ClaimRedactor.from_mapping(entries)
             path = settings.storage_dir / doc.storage_path
+            images = [page_png_b64(path, p.page) for p in parsed.pages]
+            if not local_vision:
+                images, report = mask_pages(images, parsed, has_personal_data(redactor))
+                if images is None:
+                    log.info("vision.masking_refused", document=str(doc.id), reason=report.refused)
+        if images is not None:
+            assert redactor is not None
             ex = await extract_document_vision(
                 DocType(doc.doc_type),
-                [page_png_b64(path, p.page) for p in parsed.pages],
+                images,
                 parsed,
                 redacted,
                 gateway,
                 tokenize=tokenize,
                 mapping=mapping,
+                masked=not local_vision,
             )
         else:
             ex = await extract_document(

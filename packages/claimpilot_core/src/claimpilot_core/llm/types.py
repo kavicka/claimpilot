@@ -6,7 +6,8 @@ from pydantic import BaseModel, Field
 class ChatMessage(BaseModel):
     role: Literal["system", "user", "assistant", "tool"]
     content: str
-    images: list[str] = Field(default_factory=list)  # base64 PNG/JPEG, local models only
+    # base64 PNG/JPEG: unmasked only to local models; masked (personal data blacked out) to a cloud
+    images: list[str] = Field(default_factory=list)
     tool_calls: list[dict[str, Any]] = Field(
         default_factory=list
     )  # assistant turns that call tools
@@ -16,7 +17,7 @@ class ChatMessage(BaseModel):
 class ModelSpec(BaseModel):
     """Which model runs a pipeline step, set per step in config/providers.yaml."""
 
-    provider: Literal["ollama"] = "ollama"
+    provider: Literal["ollama", "bedrock"] = "ollama"
     model: str
     think: bool = False
     temperature: float = 0.0
@@ -25,6 +26,10 @@ class ModelSpec(BaseModel):
     # Cap on generated tokens, so a model caught in a repetition loop ends instead of running into
     # the client timeout. Not part of the cassette key.
     num_predict: int | None = None
+    # Claude only: reasoning effort (low / medium / high); thinking off maps to "low".
+    effort: str | None = None
+    # Claude only: the model that answers when this one declines (stop_reason "refusal").
+    fallback_model: str | None = None
 
     @property
     def key(self) -> str:
