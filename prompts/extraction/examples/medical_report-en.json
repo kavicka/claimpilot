@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-005/D3",
-  "text": "=== Page 1 ===\nFarkas International Medical Centre\nHévíz, Hungary\nMedical Report\nPATIENT <PERSON_1> | DOB 16/09/1959\nDATE OF VISIT / ADMISSION\n03/06/2026 | DISCHARGE -\nDIAGNOSIS\nICD-10\nPeriapical dental abscess | K04.7\nHistory\nNo relevant previous illnesses. No regular medication.\nFindings and treatment\nExamination revealed localized swelling and tenderness in the mandibular right posterior region with mobility of the affected tooth. Radiographic imaging showed a radiolucency at the apex of the tooth, confirming the periapical abscess. No systemic signs of infection were present. Incision and drainage were performed, followed by administration of antibiotics and analgesics. Patient was advised to return for root canal therapy and follow-up in one week.\nAttending physician: <PERSON_2>\nSignature and stamp",
+  "text": "=== Page 1 ===\nMedical Report\nFarkas International Medical Centre\nHévíz, Hungary\nMedical Report\nPATIENT <PERSON_1> | DOB <DOB_1>\nDATE OF VISIT / ADMISSION\n03/06/2026 | DISCHARGE -\nDIAGNOSIS\nICD-10\nPeriapical dental abscess | K04.7\nHistory\nNo relevant previous illnesses. No regular medication.\nFindings and treatment\nExamination revealed localized swelling and tenderness in the mandibular right posterior region with mobility of the affected tooth. Radiographic imaging showed a radiolucency at the apex of the tooth, confirming the periapical abscess. No systemic signs of infection were present. Incision and drainage were performed, followed by administration of antibiotics and analgesics. Patient was advised to return for root canal therapy and follow-up in one week.\nAttending physician: <PERSON_2>\nSignature and stamp",
   "output": {
    "facility_name": {
     "value": "Farkas International Medical Centre",
@@ -15,12 +15,12 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PATIENT <PERSON_1> | DOB 16/09/1959",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "page": 1
    },
    "patient_birth_date": {
-    "value": "16/09/1959",
-    "quote": "PATIENT <PERSON_1> | DOB 16/09/1959",
+    "value": "<DOB_1>",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "page": 1
    },
    "visit_date": {
@@ -62,7 +62,7 @@
  },
  {
   "source": "S42-004/D3",
-  "text": "=== Page 1 ===\nMarquez International Medical Centre\nMiami, USA\nMedical Report\nPATIENT <PERSON_1> | DOB 05/14/1995\nDATE OF VISIT / ADMISSION\nDISCHARGE\n04/27/2026 | -\nDIAGNOSIS | ICD-10\nSprain of the ankle | S93.4\nHistory\nNo relevant previous illnesses. No regular medication.\nFindings and treatment\nPhysical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment.\nAttending physician: <PERSON_2> Signature and stamp",
+  "text": "=== Page 1 ===\nMedical Report\nMarquez International Medical Centre\nMiami, USA\nMedical Report\nPATIENT <PERSON_1> | DOB <DOB_1>\nDATE OF VISIT / ADMISSION\nDISCHARGE\n04/27/2026 | -\nDIAGNOSIS | ICD-10\nSprain of the ankle | S93.4\nHistory\nNo relevant previous illnesses. No regular medication.\nFindings and treatment\nPhysical examination revealed tenderness over the lateral aspect of the right ankle with mild swelling and limited range of motion. No deformity or instability was noted. X-ray of the ankle was performed and showed no evidence of fracture or dislocation. The patient was treated with ice, compression, and elevation, along with prescription of nonsteroidal anti-inflammatory medication. The patient was advised to avoid weight-bearing activities and to follow up in one week for reassessment.\nAttending physician: <PERSON_2> Signature and stamp",
   "output": {
    "facility_name": {
     "value": "Marquez International Medical Centre",
@@ -76,12 +76,12 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PATIENT <PERSON_1> | DOB 05/14/1995",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "page": 1
    },
    "patient_birth_date": {
-    "value": "05/14/1995",
-    "quote": "PATIENT <PERSON_1> | DOB 05/14/1995",
+    "value": "<DOB_1>",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "page": 1
    },
    "visit_date": {

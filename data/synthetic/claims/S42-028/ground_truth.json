@@ -623,6 +623,22 @@
      ]
     },
     {
+     "type": "BIRTH_DATE",
+     "value": "16/05/1980",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        170.5,
+        142.7,
+        221.6,
+        154.4
+       ]
+      }
+     ]
+    },
+    {
      "type": "LICENCE_PLATE",
      "value": "NR679FF",
      "found": true,

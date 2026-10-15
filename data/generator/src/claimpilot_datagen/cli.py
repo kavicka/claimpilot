@@ -30,7 +30,7 @@ from claimpilot_datagen.reference import apply_reference_payout
 from claimpilot_datagen.render import render
 from claimpilot_datagen.scenarios import Sampler
 
-GENERATOR_VERSION = "1.0"
+GENERATOR_VERSION = "1.1"  # 1.1: dates of birth are PII in the ground truth
 
 
 def _json_default(value: Any) -> Any:

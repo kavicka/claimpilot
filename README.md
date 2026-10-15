@@ -62,6 +62,7 @@ files under pictures (letterheads, forms, stamps) and running headers; the test 
 | Document type | accuracy | 148/148 (100 %) | 75/76 (98.7 %) |
 | PII guard | identifiers redacted (birth numbers, IBANs, phones, e-mails, IDs) | 191/191 | 99/99 |
 | PII guard | names redacted | 166/166 | 88/89 |
+| PII guard | dates of birth redacted (added 2026-10-16) | 60/60 | not scored |
 | PII guard | ground-truth PII in any model payload | 0 | 1 |
 | Extraction | critical fields correct (amounts, dates, policy number, IBAN, diagnosis) | 450/454 (99.1 %) | 295/297 (99.3 %) |
 | Extraction | all fields, F1 | 96.4 % | 94.9 % |
@@ -219,6 +220,8 @@ eu-central-1 with Claude on Amazon Bedrock; [docs/deploy.md](docs/deploy.md) is 
 - **Scans** go to Claude as page images with personal data blacked out, next to the redacted OCR
   text. The `masking` eval reads the masked dev scans again with Apple Vision: 0 personal values
   readable on 39 documents, and 143/145 critical values still readable (the same as unmasked).
+  Dates of birth count as personal values since 2026-10-16; before that, the guard and the eval
+  both missed them ([before and after](docs/demo/masking.png)).
 - **Infrastructure** is Terraform ([ADR-009](docs/adr/009-aws-deployment-terraform.md)): private
   subnets without a route to the internet, VPC endpoints, KMS everywhere, secrets outside Terraform
   state, WAF, a budget alert. `make infra-check` validates it without an account (mocked

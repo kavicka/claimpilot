@@ -29,7 +29,7 @@ flowchart LR
 | --- | --- | --- |
 | Upload to storage | Original files | Yes, unchanged |
 | Parse and OCR (worker, local) | Text blocks with positions | Yes, inside the worker |
-| Model calls (text) | Redacted page text, field list, examples | No: tokens such as `<PERSON_1>` |
+| Model calls (text) | Redacted page text, field list, examples | No: tokens such as `<PERSON_1>` or `<DOB_1>` (dates of birth); other dates stay, since the decision needs them |
 | Model calls (vision, scans only) | Page images | Yes: allowed only for local models; the vision step refuses any other provider. Values it reads are tokenized at once, with fresh detection, because OCR may have missed a name the image shows; new values go to the vault |
 | Checksum checks (worker, in memory) | IBAN and birth number digits | Yes, re-hydrated from the vault for the check; only the boolean result is kept |
 | Database | Extracted values, decisions, letters | Tokens; values only in `pii.vault`, encrypted |

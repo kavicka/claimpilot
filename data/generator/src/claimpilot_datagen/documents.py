@@ -267,6 +267,7 @@ class DocumentBuilder:
         pii = [
             ("PERSON", s.person.full_name),
             ("PERSON", d.data["physician"].removeprefix("MUDr. ")),
+            ("BIRTH_DATE", fields["patient_birth_date"]["printed"]),
         ]
         return Built("medical_report.html.j2", ctx, fields, pii)
 
@@ -304,7 +305,8 @@ class DocumentBuilder:
             style=d.data.get("style", "a"),
             patient_born=fmt_date(s.person.birth_date, loc),
         )
-        return Built("medical_invoice.html.j2", ctx, fields, [("PERSON", s.person.full_name)])
+        pii = [("PERSON", s.person.full_name), ("BIRTH_DATE", ctx["patient_born"])]
+        return Built("medical_invoice.html.j2", ctx, fields, pii)
 
     def pharmacy_receipt(self, s: Scenario, d: DocSpec) -> Built:
         rng = self._rng(s, d)
@@ -396,6 +398,7 @@ class DocumentBuilder:
             ("PERSON", d.data["officer"]),
             ("ID_CARD", s.person.id_card),
             ("ADDRESS", s.person.street),
+            ("BIRTH_DATE", ctx["birth"]),
         ]
         if d.data["vehicle_plate"]:
             pii.append(("LICENCE_PLATE", d.data["vehicle_plate"]))

@@ -32,8 +32,12 @@ async def run(ctx: RunContext) -> Report:
             return fold(v).replace(" ", "")
 
         gt_values = {key(v) for _, v in claim.pii_values()}
+        redacted_all = "\n".join(d.text(redacted=True) for d in rc.docs)
         for e in rc.redactor.entities:
-            if not any(key(e.value) in g or g in key(e.value) for g in gt_values):
+            if e.token not in redacted_all:
+                continue  # registered (e.g. a birth date from a birth number) but replaced nothing
+            forms = {key(v) for v in e.variants} | {key(e.value)}
+            if not any(f in g or g in f for f in forms for g in gt_values):
                 over_redactions += 1
                 report.items.append(
                     ItemResult(
@@ -57,6 +61,8 @@ async def run(ctx: RunContext) -> Report:
                 tag = (
                     "recall_names"
                     if entity == "PERSON"
+                    else "recall_birth_dates"
+                    if entity == "BIRTH_DATE"
                     else ("recall_identifiers" if entity in IDENTIFIERS else "recall_address")
                 )
                 report.items.append(
@@ -69,7 +75,7 @@ async def run(ctx: RunContext) -> Report:
                         {"entity": entity, "scan": doc.gt.data["scan"]},
                     )
                 )
-    for tag in ("recall_identifiers", "recall_names", "recall_address"):
+    for tag in ("recall_identifiers", "recall_names", "recall_address", "recall_birth_dates"):
         rows = [i for i in report.items if tag in i.tags]
         report.ratio(tag, sum(i.ok for i in rows), len(rows))
     leaked = [i for i in report.items if not i.ok and "over_redaction" not in i.tags]

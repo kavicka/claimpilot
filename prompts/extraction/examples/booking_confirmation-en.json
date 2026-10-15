@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-024/D3",
-  "text": "=== Page 1 ===\nCK Modrá vlna, s. r. o.\nCancellation confirmation\nBOOKING NUMBER 2026640 | DESTINATION Alanya, Turecko\nDEPARTURE 14. 1. 2026 | RETURN 26. 1. 2026\nTRAVELLERS <PERSON_1>\nPrice and cancellation\nItem | Amount (EUR)\nTotal trip price | 2 343,00\nCancelled on: 26. 12. 2025\nCancellation fee charged | 702,90\nThe cancellation fee follows the agency terms valid on the booking date.",
+  "text": "=== Page 1 ===\nBooking and cancellation confirmation\nCK Modrá vlna, s. r. o.\nCancellation confirmation\nBOOKING NUMBER 2026640 | DESTINATION Alanya, Turecko\nDEPARTURE 14. 1. 2026 | RETURN 26. 1. 2026\nTRAVELLERS <PERSON_1>\nPrice and cancellation\nItem | Amount (EUR)\nTotal trip price | 2 343,00\nCancelled on: 26. 12. 2025\nCancellation fee charged | 702,90\nThe cancellation fee follows the agency terms valid on the booking date.",
   "output": {
    "booking_number": {
     "value": "2026640",
@@ -59,7 +59,7 @@
  },
  {
   "source": "S42-034/D2",
-  "text": "=== Page 1 ===\nCestovná kancelária Horizont Tour, s. r. o.\nCancellation confirmation\nBOOKING NUMBER 2026093 | DESTINATION Thessaloniki, Grécko\nDEPARTURE 1. 3. 2026 | RETURN 13. 3.\nTRAVELLERS <PERSON_1> | 2026\nPrice and cancellation\nItem | Amount (EUR)\nTotal trip price | 2 413,00\nCancelled on: 26. 2. 2026\nCancellation fee charged | 1 689,10\nThe cancellation fee follows the agency terms valid on the booking date.",
+  "text": "=== Page 1 ===\nBooking and cancellation confirmation\nCestovná kancelária Horizont Tour, s. r. o.\nCancellation confirmation\nBOOKING NUMBER 2026093 | DESTINATION Thessaloniki, Grécko\nDEPARTURE 1. 3. 2026 | RETURN 13. 3.\nTRAVELLERS <PERSON_1> | 2026\nPrice and cancellation\nItem | Amount (EUR)\nTotal trip price | 2 413,00\nCancelled on: 26. 2. 2026\nCancellation fee charged | 1 689,10\nThe cancellation fee follows the agency terms valid on the booking date.",
   "output": {
    "booking_number": {
     "value": "2026093",

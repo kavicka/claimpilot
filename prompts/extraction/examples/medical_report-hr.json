@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-014/D3",
-  "text": "=== Page 1 ===\nPoliklinika Tomičić\nSplit, Hrvatska\nMedicinsko izvješće\nPACIJENT Nora | ROĐEN/A 05.11.2006.\nTomanová\nDATUM PREGLEDA / PRIJEMA | OTPUST\n19.08.2026. | -\nDIJAGNOZA | MKB-10\nAkutna infekcija gornjih dišnih puteva | J06.9\nAnamneza\nBez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\nStatus i terapija\nPregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. Povraćajni sindrom i suženje bronha. Uzorci izdaha pokazali su prisutnost leukocita i eozinocita. Uzeta su zračenja i analize krvi. Poboljšanje uočeno je nakon terapije s antiinflamatorima i bronhodilatatorima. Preporučeno je nadaljevodno praćenje i izbjegavanje agresivnih faktora okoliša.\nLiječnik: <PERSON_2> Potpis i pečat",
+  "text": "=== Page 1 ===\nMedicinsko izvješće\nPoliklinika Tomičić\nSplit, Hrvatska\nMedicinsko izvješće\nPACIJENT Nora | ROĐEN/A <DOB_1>\nTomanová\nDATUM PREGLEDA / PRIJEMA | OTPUST\n19.08.2026. | -\nDIJAGNOZA | MKB-10\nAkutna infekcija gornjih dišnih puteva | J06.9\nAnamneza\nBez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\nStatus i terapija\nPregledom uočena je hronična bolest disajnih putova s naglaskom na bronhitisu. Povraćajni sindrom i suženje bronha. Uzorci izdaha pokazali su prisutnost leukocita i eozinocita. Uzeta su zračenja i analize krvi. Poboljšanje uočeno je nakon terapije s antiinflamatorima i bronhodilatatorima. Preporučeno je nadaljevodno praćenje i izbjegavanje agresivnih faktora okoliša.\nLiječnik: <PERSON_2> Potpis i pečat",
   "output": {
    "facility_name": {
     "value": "Poliklinika Tomičić",
@@ -19,8 +19,8 @@
     "page": 1
    },
    "patient_birth_date": {
-    "value": "05.11.2006.",
-    "quote": "PACIJENT Nora | ROĐEN/A 05.11.2006.",
+    "value": "<DOB_1>",
+    "quote": "PACIJENT Nora | ROĐEN/A <DOB_1>",
     "page": 1
    },
    "visit_date": {
@@ -62,7 +62,7 @@
  },
  {
   "source": "S42-031/D3",
-  "text": "=== Page 1 ===\nPoliklinika Ćurić\nSplit, Hrvatska\nMedicinsko izvješće\nPACIJENT <PERSON_1> | ROĐEN/A 23.10.1991.\nDATUM PREGLEDA / PRIJEMA | OTPUST\n18.05.2026. | -\nDIJAGNOZA | MKB-10\nUganuće gležnja | S93.4\nAnamneza\nBez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\nStatus i terapija\nPregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak.\nLiječnik: <PERSON_2> Potpis i pečat",
+  "text": "=== Page 1 ===\nMedicinsko izvješće\nPoliklinika Ćurić\nSplit, Hrvatska\nMedicinsko izvješće\nPACIJENT <PERSON_1> | ROĐEN/A <DOB_1>\nDATUM PREGLEDA / PRIJEMA | OTPUST\n18.05.2026. | -\nDIJAGNOZA | MKB-10\nUganuće gležnja | S93.4\nAnamneza\nBez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\nStatus i terapija\nPregled pokazao je oštećenje mišićno-koštanog sustava na desnom zglobu stopala s očiglednom oštećenost preponice. Nema znakova lomova, a rentgenski pregled nije pokazao lom. Izvršen je MRI, koji je potvrdio povredu ligamenta bez ozbiljnijih oštećenja kosti. Pacijentu je primijenjena terapija uključujući lekovite kompresije, lečenje hidroterapijom i preporuka za fizičku terapiju. Preporučeno je ograničavanje opterećenja zgloba i nadalje se pratiti oporavak.\nLiječnik: <PERSON_2> Potpis i pečat",
   "output": {
    "facility_name": {
     "value": "Poliklinika Ćurić",
@@ -76,12 +76,12 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PACIJENT <PERSON_1> | ROĐEN/A 23.10.1991.",
+    "quote": "PACIJENT <PERSON_1> | ROĐEN/A <DOB_1>",
     "page": 1
    },
    "patient_birth_date": {
-    "value": "23.10.1991.",
-    "quote": "PACIJENT <PERSON_1> | ROĐEN/A 23.10.1991.",
+    "value": "<DOB_1>",
+    "quote": "PACIJENT <PERSON_1> | ROĐEN/A <DOB_1>",
     "page": 1
    },
    "visit_date": {

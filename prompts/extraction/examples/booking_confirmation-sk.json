@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-006/D2",
-  "text": "=== Page 1 ===\nCestovná kancelária Horizont Tour, s. r. o.\nPotvrdenie o stornovaní zájazdu\nČÍSLO REZERVÁCIE 2026051 | DESTINÁCIA Chania, Grécko\nODCHOD 28. 7. 2026 | NÁVRAT 3. 8. 2026\nCESTUJÚCI <PERSON_1>\nCena a storno\nPoložka | Suma (EUR)\nCelková cena zájazdu | 1 502,00\nDátum stornovania: 11. 7. 2026\nStornovací poplatok | 1 051,40\nVýška stornovacieho poplatku je určená podľa všeobecných podmienok cestovnej kancelárie platných v deň rezervácie.",
+  "text": "=== Page 1 ===\nPotvrdenie rezervácie a storna\nCestovná kancelária Horizont Tour, s. r. o.\nPotvrdenie o stornovaní zájazdu\nČÍSLO REZERVÁCIE 2026051 | DESTINÁCIA Chania, Grécko\nODCHOD 28. 7. 2026 | NÁVRAT 3. 8. 2026\nCESTUJÚCI <PERSON_1>\nCena a storno\nPoložka | Suma (EUR)\nCelková cena zájazdu | 1 502,00\nDátum stornovania: 11. 7. 2026\nStornovací poplatok | 1 051,40\nVýška stornovacieho poplatku je určená podľa všeobecných podmienok cestovnej kancelárie platných v deň rezervácie.",
   "output": {
    "booking_number": {
     "value": "2026051",

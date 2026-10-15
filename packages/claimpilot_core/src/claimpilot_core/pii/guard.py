@@ -13,8 +13,9 @@ from collections.abc import Callable, Iterable
 from dataclasses import dataclass, field
 from functools import lru_cache
 
+from claimpilot_core.identifiers import parse_rodne_cislo
 from claimpilot_core.logging import register_secret
-from claimpilot_core.pii.recognizers import pattern_recognizers
+from claimpilot_core.pii.recognizers import BirthDateRecognizer, pattern_recognizers
 from claimpilot_core.pii.tokens import TOKEN_PREFIX, TOKEN_RE, rehydrate
 
 __all__ = ["TOKEN_RE", "ClaimRedactor", "Span", "fold", "rehydrate"]
@@ -134,6 +135,8 @@ def _variants(entity: str, value: str) -> set[str]:
 
         repaired = fold(IbanRecognizerSk.repair_ocr(value.upper()))
         out |= {repaired, " ".join(repaired[i : i + 4] for i in range(0, len(repaired), 4))}
+    if entity == "BIRTH_DATE":
+        out |= _date_forms(value)
     if entity in ("IBAN", "PHONE", "BIRTH_NUMBER"):
         compact = re.sub(r"[\s/]", "", f)
         out.add(compact)
@@ -142,6 +145,34 @@ def _variants(entity: str, value: str) -> set[str]:
         if entity == "BIRTH_NUMBER" and len(compact) >= 9:
             out.add(f"{compact[:6]}/{compact[6:]}")
     return {v for v in out if len(v) >= 4}
+
+
+MONTHS = ("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec")
+
+
+def _date_forms(value: str) -> set[str]:
+    """The printed forms one date of birth takes across the claim's documents and languages, so a
+    birth date found after its label on one page is also replaced where it stands alone."""
+    v = fold(value).strip().rstrip(".")
+    if m := re.fullmatch(r"(\d{1,2})[./]\s?(\d{1,2})[./]\s?(\d{4})", v):
+        d, mo, y = int(m[1]), int(m[2]), int(m[3])
+    elif m := re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", v):
+        y, mo, d = int(m[1]), int(m[2]), int(m[3])
+    elif (m := re.fullmatch(r"(\d{1,2})\s([a-z]{3})[a-z]*\.?\s(\d{4})", v)) and m[2] in MONTHS:
+        d, mo, y = int(m[1]), MONTHS.index(m[2]) + 1, int(m[3])
+    else:
+        return set()
+    if not (1 <= d <= 31 and 1 <= mo <= 12):
+        return set()
+    return {
+        f"{d}. {mo}. {y}",
+        f"{d}.{mo}.{y}",
+        f"{d:02d}.{mo:02d}.{y}",
+        f"{d:02d}/{mo:02d}/{y}",
+        f"{mo:02d}/{d:02d}/{y}",
+        f"{y}-{mo:02d}-{d:02d}",
+        f"{d:02d} {MONTHS[mo - 1]} {y}",
+    }
 
 
 def declined(word: str) -> set[str]:
@@ -216,6 +247,11 @@ class ClaimRedactor:
                 if e.entity == entity and e.variants & folded:
                     e.variants |= folded
                     return
+        if entity == "BIRTH_NUMBER" and (rc := parse_rodne_cislo(value)):
+            # A birth number holds the date of birth; whatever document prints that date, in
+            # whatever form, gets the same token.
+            b = rc.birth_date
+            self._register("BIRTH_DATE", f"{b.day}. {b.month}. {b.year}")
         prefix = TOKEN_PREFIX[entity]
         self._counters[prefix] = self._counters.get(prefix, 0) + 1
         token = f"<{prefix}_{self._counters[prefix]}>"
@@ -229,9 +265,15 @@ class ClaimRedactor:
         return spans
 
     def observe(self, texts: Iterable[str]) -> None:
+        label_before = False
         for text in texts:
             for span in self.detect(text):
                 self._register(span.entity, span.text)
+            # OCR often splits a form cell into a label block ("GEB.") and a value block, or glues
+            # the label to the end of the block before ("Podpis, pečiatka NAR.").
+            if label_before and (m := BirthDateRecognizer.DATE_ANYWHERE.search(text)):
+                self._register("BIRTH_DATE", m[1])
+            label_before = bool(BirthDateRecognizer.LABEL_AT_END.search(text))
 
     def find(self, text: str) -> list[tuple[int, int, Entity]]:
         folded = fold(text)

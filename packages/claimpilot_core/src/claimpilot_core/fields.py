@@ -11,6 +11,7 @@ from claimpilot_core.normalize import (
     parse_date,
     parse_datetime,
 )
+from claimpilot_core.pii.tokens import TOKEN_RE
 
 Kind = Literal["date", "datetime", "amount", "currency", "country", "iban", "text"]
 
@@ -43,9 +44,12 @@ def kind_of(field: str) -> Kind:
 
 
 def normalize(field: str, raw: str | None, *, country: str | None = None) -> str | None:
-    """Canonical string for storage and scoring; None when the value is absent or unparseable."""
+    """Canonical string for storage and scoring; None when the value is absent or unparseable.
+    A token (<DOB_1>, <IBAN_1>) stays a token: its value lives in the vault, not in the database."""
     if raw is None:
         return None
+    if TOKEN_RE.fullmatch(raw.strip()):
+        return raw.strip()
     match kind_of(field):
         case "date":
             d = parse_date(raw, country=country)

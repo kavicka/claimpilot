@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-020/D3",
-  "text": "=== Page 1 ===\nPoliambulatorio Sagnelli\nRoma, Italia\nReferto medico\nPAZIENTE <PERSON_1> | NATO/A IL 07/01/1972\nDATA VISITA / RICOVERO 29/08/2026 | DIMISSIONE -\nDIAGNOSI Infezione acuta delle vie respiratorie superiori | ICD-10 J06.9\nAnamnesi\nNessuna patologia pregressa rilevante. Nessuna terapia cronica.\nEsame obiettivo e terapia\nEsame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore.\nMedico: <PERSON_2> Firma e timbro",
+  "text": "=== Page 1 ===\nReferto medico\nPoliambulatorio Sagnelli\nRoma, Italia\nReferto medico\nPAZIENTE <PERSON_1> | NATO/A IL <DOB_1>\nDATA VISITA / RICOVERO 29/08/2026 | DIMISSIONE -\nDIAGNOSI Infezione acuta delle vie respiratorie superiori | ICD-10 J06.9\nAnamnesi\nNessuna patologia pregressa rilevante. Nessuna terapia cronica.\nEsame obiettivo e terapia\nEsame obiettivo: febbre bassa, iperemia delle tonsille, secrezioni mucose nasali. Esami del sangue: leucocitosi lieve. Radiografia del torace: normali. Diagnosi confermata da sintomi e segni clinici. Trattamento: antipiretico, decongestionante nasale, rimedio sintomatico. Consigliato riposo, idratazione e controllo in 48 ore.\nMedico: <PERSON_2> Firma e timbro",
   "output": {
    "facility_name": {
     "value": "Poliambulatorio Sagnelli",
@@ -15,12 +15,12 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PAZIENTE <PERSON_1> | NATO/A IL 07/01/1972",
+    "quote": "PAZIENTE <PERSON_1> | NATO/A IL <DOB_1>",
     "page": 1
    },
    "patient_birth_date": {
-    "value": "07/01/1972",
-    "quote": "PAZIENTE <PERSON_1> | NATO/A IL 07/01/1972",
+    "value": "<DOB_1>",
+    "quote": "PAZIENTE <PERSON_1> | NATO/A IL <DOB_1>",
     "page": 1
    },
    "visit_date": {
@@ -62,7 +62,7 @@
  },
  {
   "source": "S42-012/D2",
-  "text": "=== Page 1 ===\nPoliambulatorio Donati\nRimini, Italia\nReferto medico\nPAZIENTE Maroš | NATO/A IL 08/08/1993\nŠimek\nDATA VISITA / RICOVERO 08/02/2026 | DIMISSIONE -\nDIAGNOSI | ICD-10\nFrattura dell'estremità distale del radio | S52.5\nAnamnesi\nPaziente in stato di ebbrezza all'arrivo, alcolemia 1,4 g/l.\nEsame obiettivo e terapia\nAll'escursione, si riscontrava dolore, gonfiore e limitata mobilità alla regione distale del radio. L'esame radiografico confermava la presenza di una frattura del radio distale, senza coinvolgimento delle articolazioni. Sono state eseguite radiografie in due proiezioni, che hanno evidenziato una frattura non displasica, con buona allineamento. È stato prescritto un gesso a gomito flesso e si è consigliato il riposo completo per le prime tre settimane. Si raccomanda il controllo radiologico dopo due settimane e la visita di follow-up per valutare la guarigione e la rimozione del gesso.\nMedico: <PERSON_2> Firma e timbro",
+  "text": "=== Page 1 ===\nReferto medico\nPoliambulatorio Donati\nRimini, Italia\nReferto medico\nPAZIENTE Maroš | NATO/A IL <DOB_1>\nŠimek\nDATA VISITA / RICOVERO 08/02/2026 | DIMISSIONE -\nDIAGNOSI | ICD-10\nFrattura dell'estremità distale del radio | S52.5\nAnamnesi\nPaziente in stato di ebbrezza all'arrivo, alcolemia 1,4 g/l.\nEsame obiettivo e terapia\nAll'escursione, si riscontrava dolore, gonfiore e limitata mobilità alla regione distale del radio. L'esame radiografico confermava la presenza di una frattura del radio distale, senza coinvolgimento delle articolazioni. Sono state eseguite radiografie in due proiezioni, che hanno evidenziato una frattura non displasica, con buona allineamento. È stato prescritto un gesso a gomito flesso e si è consigliato il riposo completo per le prime tre settimane. Si raccomanda il controllo radiologico dopo due settimane e la visita di follow-up per valutare la guarigione e la rimozione del gesso.\nMedico: <PERSON_2> Firma e timbro",
   "output": {
    "facility_name": {
     "value": "Poliambulatorio Donati",
@@ -80,8 +80,8 @@
     "page": 1
    },
    "patient_birth_date": {
-    "value": "08/08/1993",
-    "quote": "PAZIENTE Maroš | NATO/A IL 08/08/1993",
+    "value": "<DOB_1>",
+    "quote": "PAZIENTE Maroš | NATO/A IL <DOB_1>",
     "page": 1
    },
    "visit_date": {

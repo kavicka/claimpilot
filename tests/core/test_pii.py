@@ -154,3 +154,69 @@ def test_name_forms_do_not_swallow_ordinary_words(text):
     r = ClaimRedactor(ner=fake_ner(["Jana Kováčová", "Peter Novák"]))
     r.observe(["Poistená Jana Kováčová, lekár Peter Novák"])
     assert r.redact(text) == text
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "Patient/in Jana Kováčová, geb. 01.11.1988",
+        "Fridrich Kubička, nar. 1. 11. 1988",
+        "Date of birth: 01/11/1988",
+        "DOB 01 Nov 1988",
+        "Mario Rossi, nato/a il 01/11/1988",
+        "Datum rođenja: 01.11.1988.",
+        "GEB. | 01.11.1988",
+    ],
+)
+def test_a_date_of_birth_after_its_label_is_personal_data(text):
+    r = ClaimRedactor(ner=None)
+    r.observe([text])
+    assert "<DOB_1>" in r.redact(text)
+    assert "1988" not in r.redact(text)
+
+
+def test_a_birth_date_in_its_own_block_after_the_label_block_is_found():
+    """Docling reads a form cell as two blocks: 'GEB.' and then '01.11.1988'."""
+    r = ClaimRedactor(ner=None)
+    r.observe(["PATIENT/IN", "<PERSON_1>", "UNTERSUCHUNG", "03.06.2026", "GEB.", "01.11.1988"])
+    assert r.redact("01.11.1988") == "<DOB_1>"
+    assert r.redact("03.06.2026") == "03.06.2026"  # the visit date is not personal
+
+
+def test_the_same_birth_date_is_one_token_in_every_printed_form():
+    r = ClaimRedactor(ner=None)
+    r.observe(["Ärztlicher Befundbericht, geb. 01.11.1988"])
+    assert r.redact("Pacijent Jana, rođena 1. 11. 1988") == "Pacijent Jana, rođena <DOB_1>"
+    assert r.redact("born on 1988-11-01") == "born on <DOB_1>"
+    assert r.redact("DOB 01 NOV 1988") == "DOB <DOB_1>"
+
+
+def test_dates_without_a_birth_label_stay():
+    r = ClaimRedactor(ner=None)
+    text = "Datum: 16.06.2026, Untersuchung 03.06.2026, Rechnung vom 1. 7. 2026"
+    r.observe([text])
+    assert r.redact(text) == text
+
+
+def test_a_tokenized_date_is_stored_as_the_token():
+    from claimpilot_core.fields import normalize
+
+    assert normalize("patient_birth_date", "<DOB_1>") == "<DOB_1>"
+    assert normalize("visit_date", "03.06.2026") == "2026-06-03"
+
+
+def test_a_label_glued_to_the_block_before_still_marks_the_date():
+    r = ClaimRedactor(ner=None)
+    r.observe(
+        ["Podpis, pečiatka NAR.", "23. 2. 1969", "PACIENT Zoja | NAR.", "Nižnánská | 29. 3. 1996"]
+    )
+    assert r.redact("23. 2. 1969") == "<DOB_1>"
+    assert r.redact("Nižnánská | 29. 3. 1996") == "Nižnánská | <DOB_2>"
+
+
+def test_the_birth_number_gives_the_date_of_birth_wherever_it_is_printed():
+    """905605/0003: a woman born 5 June 1990 (month + 50)."""
+    r = ClaimRedactor(ner=None)
+    r.observe(["Rodné číslo 905605/0003", "Ospedale Civile: 05/06/1990"])
+    assert r.redact("Ospedale Civile: 05/06/1990") == "Ospedale Civile: <DOB_1>"
+    assert r.redact("rođena 5. 6. 1990.") == "rođena <DOB_1>."

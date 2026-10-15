@@ -10,7 +10,7 @@ terms, calculate the payout, draft letters. The decision stays with a claims han
 ## Data categories
 | Category | Examples | Notes |
 | --- | --- | --- |
-| Identification | Name, birth number (rodné číslo), ID card number, address, phone, e-mail | Redacted before model calls |
+| Identification | Name, birth number (rodné číslo), date of birth, ID card number, address, phone, e-mail | Redacted before model calls |
 | Financial | IBAN, amounts, invoices | IBAN redacted; amounts are needed for the decision |
 | Health (GDPR Art. 9) | Diagnoses, medical reports, treatment, alcohol findings | Special category. Needed to assess medical cover; diagnosis text is not redacted because coverage depends on it. Processed only by local models in Phase 1; in Phase 2 it reaches Claude on Bedrock, pseudonymized (no names or identifiers) |
 | Travel | Destinations, dates, flights, bookings | Needed for the policy period and trip checks |

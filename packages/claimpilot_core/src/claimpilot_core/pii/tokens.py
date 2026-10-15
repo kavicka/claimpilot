@@ -11,9 +11,10 @@ TOKEN_PREFIX = {
     "ADDRESS": "ADDRESS",
     "ID_CARD": "ID",
     "LICENCE_PLATE": "PLATE",
+    "BIRTH_DATE": "DOB",
 }
 ENTITY_FOR_PREFIX = {v: k for k, v in TOKEN_PREFIX.items()}
-TOKEN_RE = re.compile(r"<(PERSON|RC|IBAN|PHONE|EMAIL|ADDRESS|ID|PLATE)_\d+>")
+TOKEN_RE = re.compile(r"<(PERSON|RC|IBAN|PHONE|EMAIL|ADDRESS|ID|PLATE|DOB)_\d+>")
 
 
 def rehydrate(text: str, mapping: dict[str, str]) -> str:

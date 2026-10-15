@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-018/D3",
-  "text": "=== Page 1 ===\nDanubia Air\nPROPERTY IRREGULARITY REPORT\nFILE REFERENCE AYTDN18993 | BAG STATUS DELAYED\nPASSENGER NAME <PERSON_1> MS | BAG TAG DN890870\nFLIGHT / DATE DN759 / 12 Apr 2026 | ARRIVAL (LOCAL TIME) 12APR26 1220\nDELIVERED TO PASSENGER 13APR26 0701 | DELIVERY ADDRESS HOTEL ALANYA\nPERMANENT ADDRESS <ADDRESS_1>, Bašovce | PHONE <PHONE_1>\nREMARKS\nBag missing on arrival, located at transfer station and forwarded to the passenger's hotel.\nThis report does not constitute an admission of liability by the carrier.",
+  "text": "=== Page 1 ===\nDanubia Air\nPROPERTY IRREGULARITY REPORT\nFILE REFERENCE AYTDN18993 | BAG STATUS DELAYED\nPASSENGER NAME <PERSON_1> MS | BAG TAG DN890870\nFLIGHT / DATE DN759 / 12 Apr 2026 | ARRIVAL (LOCAL TIME) 12APR26 1220\nDELIVERED TO PASSENGER 13APR26 0701 | DELIVERY ADDRESS HOTEL ALANYA\nPERMANENT ADDRESS <ADDRESS_1>, Bašovce | PHONE <PHONE_1>\nREMARKS\nBag missing on arrival, located at transfer station and forwarded to the passenger's hotel.\nThis report does not constitute an admission of liability by the carrier.\nBaggage Services AYT",
   "output": {
    "file_reference": {
     "value": "AYTDN18993",
@@ -57,7 +57,7 @@
  },
  {
   "source": "S42-022/D2",
-  "text": "=== Page 1 ===\nDanubia Air\nPROPERTY IRREGULARITY REPORT\nFILE REFERENCE AYTDN50319 | BAG STATUS DELAYED\nPASSENGER NAME <PERSON_1> MS | BAG TAG DN885339\nFLIGHT / DATE DN9849 / 25 Jul 2026 | ARRIVAL (LOCAL TIME) 25JUL26 0720\nDELIVERED TO PASSENGER 26JUL26 0410 | DELIVERY ADDRESS HOTEL BODRUM\nPERMANENT ADDRESS <ADDRESS_1>, Moravany | PHONE <PHONE_1>\nREMARKS\nBag missing on arrival, located at transfer station and forwarded to the passenger's hotel.\nThis report does not constitute an admission of liability by the carrier.",
+  "text": "=== Page 1 ===\nDanubia Air\nPROPERTY IRREGULARITY REPORT\nFILE REFERENCE AYTDN50319 | BAG STATUS DELAYED\nPASSENGER NAME <PERSON_1> MS | BAG TAG DN885339\nFLIGHT / DATE DN9849 / 25 Jul 2026 | ARRIVAL (LOCAL TIME) 25JUL26 0720\nDELIVERED TO PASSENGER 26JUL26 0410 | DELIVERY ADDRESS HOTEL BODRUM\nPERMANENT ADDRESS <ADDRESS_1>, Moravany | PHONE <PHONE_1>\nREMARKS\nBag missing on arrival, located at transfer station and forwarded to the passenger's hotel.\nThis report does not constitute an admission of liability by the carrier.\nBaggage Services AYT",
   "output": {
    "file_reference": {
     "value": "AYTDN50319",

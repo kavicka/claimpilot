@@ -33,8 +33,13 @@ Status: accepted, 2026-10-15
 
 ## Consequences
 - `masking` eval (local only, macOS): Apple Vision OCR reads the masked dev scans again. Result
-  on 2026-10-15: 0 personal values readable on 39 documents, 0 refused, critical values readable
+  on 2026-10-16: 0 personal values readable on 39 documents, 0 refused, critical values readable
   on 143/145 masked against 143/145 unmasked. Gate: `personal_values_visible` must be 0.
+- The first version left dates of birth readable ("geb. 01.11.1988" on a medical report): the
+  ground truth did not list them as personal data, so neither the guard nor the eval looked for
+  them. A demo screenshot showed it. Dates of birth are now an entity of their own (`<DOB_1>`),
+  found after their label in the claim languages, paired across OCR blocks, and derived from the
+  birth number on the claim form; the ground truth lists 95 of them.
 - Handwriting that the detector misses would stay visible. The synthetic scans have none, so the
   eval cannot measure this gap; it needs real samples before production.
 - Cloud extraction quality is unmeasured until a Bedrock account runs the evals

@@ -187,6 +187,40 @@ class LabeledNameRecognizer(PatternRecognizer):
         return out
 
 
+class BirthDateRecognizer(PatternRecognizer):
+    """A date of birth after its label in the claim languages ("geb. 01.11.1988", "nar. 1. 11. 1988",
+    "DOB: 01 Nov 1988", "nato/a il 01/11/1988"). Other dates (visits, invoices, the event) are
+    needed for the decision and stay. When OCR puts the label and the date in separate blocks,
+    ClaimRedactor.observe pairs them (LABEL_AT_END, DATE_ANYWHERE)."""
+
+    LABEL = (
+        r"(?:geb\.|geboren(?:\s+am)?|geburtsdatum|nar\.|narodená|narodený|narozen[aá]?"
+        r"|dátum\s+narodenia|datum\s+narození|date\s+of\s+birth|d\.o\.b\.|dob|born(?:\s+on)?"
+        r"|nato/a\s+il|nat[oa]\s+il|data\s+di\s+nascita|rođen/a|rođen[a]?|datum\s+rođenja"
+        r"|data\s+urodzenia|ur\.|doğum\s+tarihi)"
+    )
+    DATE = (
+        r"(?:\d{1,2}\.\s?\d{1,2}\.\s?\d{4}\.?|\d{1,2}/\d{1,2}/\d{4}|\d{4}-\d{2}-\d{2}"
+        r"|\d{1,2}\s[A-Za-z]{3,9}\.?\s\d{4})"
+    )
+    PATTERN = re.compile(rf"(?<![\w]){LABEL}\s*[:|,]?\s*({DATE})", re.IGNORECASE)
+    LABEL_AT_END = re.compile(rf"(?<![\w]){LABEL}\s*:?\s*$", re.IGNORECASE)
+    DATE_ANYWHERE = re.compile(rf"(?<![\w])({DATE})(?![\w])")
+
+    def __init__(self) -> None:
+        super().__init__(
+            supported_entity="BIRTH_DATE",
+            patterns=[Pattern("birth_date", r"(?!x)x", 0.0)],  # matching happens in analyze
+            supported_language="any",
+        )
+
+    def analyze(self, text, entities, nlp_artifacts=None, regex_flags=None):
+        return [
+            RecognizerResult("BIRTH_DATE", m.start(1), m.end(1), 0.85)
+            for m in self.PATTERN.finditer(text)
+        ]
+
+
 def pattern_recognizers() -> list[PatternRecognizer]:
     email = EmailRecognizer(supported_language="any")
     return [
@@ -197,6 +231,7 @@ def pattern_recognizers() -> list[PatternRecognizer]:
         LicencePlateRecognizer(),
         AddressRecognizer(),
         LabeledNameRecognizer(),
+        BirthDateRecognizer(),
         email,
     ]
 

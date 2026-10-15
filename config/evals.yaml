@@ -8,6 +8,7 @@ suites:
   pii:
     recall_identifiers: { gate: item_level, max_drop_pp: 1.0, target: 0.99 }
     recall_names: { gate: item_level, max_drop_pp: 1.0, target: 0.95 }
+    recall_birth_dates: { gate: item_level, max_drop_pp: 1.0, target: 0.99 }
     leaked_values: { gate: zero }
   extraction:
     critical_field_accuracy: { gate: item_level, max_drop_pp: 1.0, target: 0.95 }

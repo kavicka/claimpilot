@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-032/D3",
-  "text": "=== Page 1 ===\nMedizinisches Zentrum Krebs\nMünchen, Deutschland\nÄrztlicher Befundbericht\nPATIENT/IN <PERSON_1> | GEB. 26.05.1976\nUNTERSUCHUNG /\nAUFNAHME 23.03.2026 | ENTLASSUNG -\nDIAGNOSE | ICD-10\nDistorsion des oberen Sprunggelenks | S93.4\nAnamnese\nKeine relevanten Vorerkrankungen. Keine Dauermedikation.\nBefund und Therapie\nBei der klinischen Untersuchung zeigten sich Schwellung, Druckschmerz und begrenzte Beweglichkeit im linken Sprunggelenk. Die MRT bestätigte eine Verletzung der lateralen Bandapparate ohne Fraktur. Der Patient erhielt eine Gipsfixation und eine Schiene zur Schonung. Physiotherapie wurde verordnet, um die Funktion des Gelenks zu erhalten. Nach 6 Wochen erfolgt eine Kontrolle zur Beurteilung der Genesung.\nBehandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
+  "text": "=== Page 1 ===\nÄrztlicher Befundbericht\nMedizinisches Zentrum Krebs\nMünchen, Deutschland\nÄrztlicher Befundbericht\nPATIENT/IN <PERSON_1> | GEB. <DOB_1>\nUNTERSUCHUNG /\nAUFNAHME 23.03.2026 | ENTLASSUNG -\nDIAGNOSE | ICD-10\nDistorsion des oberen Sprunggelenks | S93.4\nAnamnese\nKeine relevanten Vorerkrankungen. Keine Dauermedikation.\nBefund und Therapie\nBei der klinischen Untersuchung zeigten sich Schwellung, Druckschmerz und begrenzte Beweglichkeit im linken Sprunggelenk. Die MRT bestätigte eine Verletzung der lateralen Bandapparate ohne Fraktur. Der Patient erhielt eine Gipsfixation und eine Schiene zur Schonung. Physiotherapie wurde verordnet, um die Funktion des Gelenks zu erhalten. Nach 6 Wochen erfolgt eine Kontrolle zur Beurteilung der Genesung.\nBehandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
   "output": {
    "facility_name": {
     "value": "Medizinisches Zentrum Krebs",
@@ -15,12 +15,12 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 26.05.1976",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "page": 1
    },
    "patient_birth_date": {
-    "value": "26.05.1976",
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 26.05.1976",
+    "value": "<DOB_1>",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "page": 1
    },
    "visit_date": {
@@ -62,7 +62,7 @@
  },
  {
   "source": "S42-002/D2",
-  "text": "=== Page 1 ===\nMedizinisches Zentrum Frei\nDavos, Schweiz\nÄrztlicher Befundbericht\nPATIENT/IN <PERSON_1> | GEB. 17.08.1965\nUNTERSUCHUNG / AUFNAHME | ENTLASSUNG\n21.07.2026 | -\nDIAGNOSE | ICD-10\nFraktur des distalen Radius | S52.5\nAnamnese\nUnfall beim Paragleiten (Tandemflug), Landung im Gelände.\nBefund und Therapie\nBei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verletzung im Bereich des distalen Radius mit eingeschränkter Beweglichkeit. Die Röntgenaufnahmen bestätigten eine Fraktur des distalen Radius. Es wurden keine Komplikationen wie Nerven- oder Gefäßschäden festgestellt. Die Patientin erhielt eine konservative Behandlung mit Gipsfixation im neutralen Verband. Eine nachfolgende Kontrolle nach vier Wochen ist empfohlen.\nBehandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
+  "text": "=== Page 1 ===\nÄrztlicher Befundbericht\nMedizinisches Zentrum Frei\nDavos, Schweiz\nÄrztlicher Befundbericht\nPATIENT/IN <PERSON_1> | GEB. <DOB_1>\nUNTERSUCHUNG / AUFNAHME | ENTLASSUNG\n21.07.2026 | -\nDIAGNOSE | ICD-10\nFraktur des distalen Radius | S52.5\nAnamnese\nUnfall beim Paragleiten (Tandemflug), Landung im Gelände.\nBefund und Therapie\nBei der klinischen Untersuchung zeigte sich eine schmerzhafte, geschwollene Verletzung im Bereich des distalen Radius mit eingeschränkter Beweglichkeit. Die Röntgenaufnahmen bestätigten eine Fraktur des distalen Radius. Es wurden keine Komplikationen wie Nerven- oder Gefäßschäden festgestellt. Die Patientin erhielt eine konservative Behandlung mit Gipsfixation im neutralen Verband. Eine nachfolgende Kontrolle nach vier Wochen ist empfohlen.\nBehandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel",
   "output": {
    "facility_name": {
     "value": "Medizinisches Zentrum Frei",
@@ -76,12 +76,12 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 17.08.1965",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "page": 1
    },
    "patient_birth_date": {
-    "value": "17.08.1965",
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 17.08.1965",
+    "value": "<DOB_1>",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "page": 1
    },
    "visit_date": {

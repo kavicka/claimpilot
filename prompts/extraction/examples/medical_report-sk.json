@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-024/D4",
-  "text": "=== Page 1 ===\nAmbulancia všeobecného lekára Vašeková\nVysoká pri Morave, Slovenská republika\nLekárska správa\nLekárska správa\nPACIENT Zoja | NAR.\nNižnánská | 29. 3. 1996\nDÁTUM VYŠETRENIA | PREPUSTENIE\n25. 12. 2025 | -\nDIAGNÓZA | MKCH-10\nPodvrtnutie členkového kĺbu | S93.4\nAnamnéza\nBez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\nNález a liečba\nPohyb byl obmedzený, s výraznou bolestí pri tlake a otokom. Výsledky RTG nepotvrďujú zlomeninu, rentgenový obraz ukazuje zvýšenú jazvu a mierny opuch. Pacient bol podrobený ultrazvuku, ktorý potvrdil zranenie väzov. Látal bol zafixovaný elastickej bandáži a pacient bol predpisovaný analgetiká a protizápalové lieky. Odporúčame odpočinok, chladenie a opakované vyšetrenie po 10 dňoch.\nLekár: MUDr. <PERSON_2>\nPodpis, pečiatka",
+  "text": "=== Page 1 ===\nAmbulancia všeobecného lekára Vašeková\nVysoká pri Morave, Slovenská republika\nLekárska správa\nLekárska správa\nPACIENT Zoja | NAR.\nNižnánská | <DOB_1>\nDÁTUM VYŠETRENIA | PREPUSTENIE\n25. 12. 2025 | -\nDIAGNÓZA | MKCH-10\nPodvrtnutie členkového kĺbu | S93.4\nAnamnéza\nBez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\nNález a liečba\nPohyb byl obmedzený, s výraznou bolestí pri tlake a otokom. Výsledky RTG nepotvrďujú zlomeninu, rentgenový obraz ukazuje zvýšenú jazvu a mierny opuch. Pacient bol podrobený ultrazvuku, ktorý potvrdil zranenie väzov. Látal bol zafixovaný elastickej bandáži a pacient bol predpisovaný analgetiká a protizápalové lieky. Odporúčame odpočinok, chladenie a opakované vyšetrenie po 10 dňoch.\nLekár: MUDr. <PERSON_2>\nPodpis, pečiatka",
   "output": {
    "facility_name": {
     "value": "Ambulancia všeobecného lekára Vašeková",
@@ -19,8 +19,8 @@
     "page": 1
    },
    "patient_birth_date": {
-    "value": "29. 3. 1996",
-    "quote": "Nižnánská | 29. 3. 1996",
+    "value": "<DOB_1>",
+    "quote": "Nižnánská | <DOB_1>",
     "page": 1
    },
    "visit_date": {
@@ -62,7 +62,7 @@
  },
  {
   "source": "S42-034/D3",
-  "text": "=== Page 1 ===\nAmbulancia všeobecného lekára Melicherčíková\nRajhrad, Slovenská republika\nLekárska správa\nLekárska správa\nPACIENT <PERSON_1> | NAR. 1. 9. 1977\nDÁTUM VYŠETRENIA 25. 2. 2026 | PREPUSTENIE -\nDIAGNÓZA Zápal pľúc | MKCH-10 J18.9\nAnamnéza\nBez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\nNález a liečba\nPacient prezentoval horúčku, kašľavosť a dyspnoéiu. Priebežný lekársky vyšetrenie ukázalo zvýšené dýchanie, šmúrovanie a zvýšenú rezistenciu pri dýchaní. Radiologické vyšetrenie potvrdilo prítomnosť infiltrátov v dolných častiach obidvoch pľúc. Vykonané laboratórne testy ukázali zvýšenú hromadnosť leukocytov a zvýšenú rýchlosť sedimentácie erytrocytov. Pacientovi bol predpísaný antibiotikum z triedy makrolidov, antipyretikum a liečba kašľavosti. Odporúča sa liečba doma so súčasným sledovaním stavu a opakovaným vyšetrením po 48 hodinách.\nLekár: MUDr. <PERSON_2>\nPodpis, pečiatka",
+  "text": "=== Page 1 ===\nAmbulancia všeobecného lekára Melicherčíková\nRajhrad, Slovenská republika\nLekárska správa\nLekárska správa\nPACIENT <PERSON_1> | NAR. <DOB_1>\nDÁTUM VYŠETRENIA 25. 2. 2026 | PREPUSTENIE -\nDIAGNÓZA Zápal pľúc | MKCH-10 J18.9\nAnamnéza\nBez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\nNález a liečba\nPacient prezentoval horúčku, kašľavosť a dyspnoéiu. Priebežný lekársky vyšetrenie ukázalo zvýšené dýchanie, šmúrovanie a zvýšenú rezistenciu pri dýchaní. Radiologické vyšetrenie potvrdilo prítomnosť infiltrátov v dolných častiach obidvoch pľúc. Vykonané laboratórne testy ukázali zvýšenú hromadnosť leukocytov a zvýšenú rýchlosť sedimentácie erytrocytov. Pacientovi bol predpísaný antibiotikum z triedy makrolidov, antipyretikum a liečba kašľavosti. Odporúča sa liečba doma so súčasným sledovaním stavu a opakovaným vyšetrením po 48 hodinách.\nLekár: MUDr. <PERSON_2>\nPodpis, pečiatka",
   "output": {
    "facility_name": {
     "value": "Ambulancia všeobecného lekára Melicherčíková",
@@ -76,12 +76,12 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PACIENT <PERSON_1> | NAR. 1. 9. 1977",
+    "quote": "PACIENT <PERSON_1> | NAR. <DOB_1>",
     "page": 1
    },
    "patient_birth_date": {
-    "value": "1. 9. 1977",
-    "quote": "PACIENT <PERSON_1> | NAR. 1. 9. 1977",
+    "value": "<DOB_1>",
+    "quote": "PACIENT <PERSON_1> | NAR. <DOB_1>",
     "page": 1
    },
    "visit_date": {

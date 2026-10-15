@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-011/D4",
-  "text": "=== Page 1 ===\nMedizinisches Zentrum Stalder\nLuzern, Schweiz\nRECHNUNG\nRechnung Nr. RE-2026-91573\nDatum: 10.08.2026\nPATIENT/IN | BEHANDLUNGSDATUM\n<PERSON_1>, geb. 27.10.1969 | 10.08.2026\n# | Leistung | Betrag (Fr.)\n1 | Ambulante Untersuchung | 107.07\n2 | Infusionstherapie | 65.87\nGesamtbetrag | 172.94 Fr.\nZahlbar innerhalb von 14 Tagen ohne Abzug.",
+  "text": "=== Page 1 ===\nMedizinisches Zentrum Stalder\nLuzern, Schweiz\nRECHNUNG\nRechnung Nr. RE-2026-91573\nDatum: 10.08.2026\nPATIENT/IN | BEHANDLUNGSDATUM\n<PERSON_1>, geb. <DOB_1> | 10.08.2026\n# | Leistung | Betrag (Fr.)\n1 | Ambulante Untersuchung | 107.07\n2 | Infusionstherapie | 65.87\nGesamtbetrag | 172.94 Fr.\nZahlbar innerhalb von 14 Tagen ohne Abzug.",
   "output": {
    "invoice_number": {
     "value": "RE-2026-91573",
@@ -25,7 +25,7 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "<PERSON_1>, geb. 27.10.1969 | 10.08.2026",
+    "quote": "<PERSON_1>, geb. <DOB_1> | 10.08.2026",
     "page": 1
    },
    "service_date": {
@@ -61,7 +61,7 @@
  },
  {
   "source": "S42-013/D3",
-  "text": "=== Page 1 ===\nMedizinisches Zentrum Stark\nKitzbühel, Österreich\nRECHNUNG\nRechnung Nr. RE-2026-41001\nDatum: 16.07.2026\nPATIENT/IN\n<PERSON_1>, geb. 27.11.1974\nBEHANDLUNGSDATUM\n16.07.2026\n# | Leistung | Betrag (€)\n1 | Notfallbehandlung | 168,94\n2 | Röntgen | 159,82\n3 | Computertomographie | 436,50\nGesamtbetrag | 765,26 €\nZahlbar innerhalb von 14 Tagen ohne Abzug.",
+  "text": "=== Page 1 ===\nMedizinisches Zentrum Stark\nKitzbühel, Österreich\nRECHNUNG\nRechnung Nr. RE-2026-41001\nDatum: 16.07.2026\nPATIENT/IN\n<PERSON_1>, geb. <DOB_1>\nBEHANDLUNGSDATUM\n16.07.2026\n# | Leistung | Betrag (€)\n1 | Notfallbehandlung | 168,94\n2 | Röntgen | 159,82\n3 | Computertomographie | 436,50\nGesamtbetrag | 765,26 €\nZahlbar innerhalb von 14 Tagen ohne Abzug.",
   "output": {
    "invoice_number": {
     "value": "RE-2026-41001",
@@ -85,7 +85,7 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "<PERSON_1>, geb. 27.11.1974",
+    "quote": "<PERSON_1>, geb. <DOB_1>",
     "page": 1
    },
    "service_date": {

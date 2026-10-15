@@ -1,16 +1,16 @@
 [
  {
   "source": "S42-028/D3",
-  "text": "=== Page 1 ===\nStazione Carabinieri di Rimini\nVerbale di denuncia\nDENUNCIANTE <PERSON_1>, nato/a il 16/05/1980 | DOCUMENTO <ID_1>\nRESIDENZA <ADDRESS_1>, 838 81 Podrečany\nDATA DEL FATTO 28/01/2026 | LUOGO DEL FATTO Rimini\nTARGA <PLATE_1>\nDescrizione dei fatti\nL'incidente è avvenuto in una zona vicino alla spiaggia di Rimini, dove un veicolo era parcheggiato e bloccato. Gli oggetti sono stati rubati da un uomo che ha forzato la serratura del portellone posteriore. L'individuo ha poi lasciato la scena senza lasciare tracce.\nOggetti sottratti\n# | Prestazione | Valore\n1 | Lettore di e-book | 171,31 EUR\n2 | Giacca invernale | 129,20 EUR\n3 | Telefono cellulare | 817,49 EUR\n4 | Abbigliamento (pantaloni, camicie) | 145,74 EUR\n5 | Articoli da toilette | 52,49 EUR\nIl verbalizzante: <PERSON_2> Denunciante",
+  "text": "=== Page 1 ===\nStazione Carabinieri di Rimini\nVerbale di denuncia\nDENUNCIANTE <PERSON_1>, nato/a il <DOB_1> | DOCUMENTO <ID_1>\nRESIDENZA <ADDRESS_1>, 838 81 Podrečany\nDATA DEL FATTO 28/01/2026 | LUOGO DEL FATTO Rimini\nTARGA <PLATE_1>\nDescrizione dei fatti\nL'incidente è avvenuto in una zona vicino alla spiaggia di Rimini, dove un veicolo era parcheggiato e bloccato. Gli oggetti sono stati rubati da un uomo che ha forzato la serratura del portellone posteriore. L'individuo ha poi lasciato la scena senza lasciare tracce.\nOggetti sottratti\n# | Prestazione | Valore\n1 | Lettore di e-book | 171,31 EUR\n2 | Giacca invernale | 129,20 EUR\n3 | Telefono cellulare | 817,49 EUR\n4 | Abbigliamento (pantaloni, camicie) | 145,74 EUR\n5 | Articoli da toilette | 52,49 EUR\nIl verbalizzante: <PERSON_2> Denunciante\nProtocollo n. 3868/180/26\nData: 29/01/2026",
   "output": {
    "report_number": {
     "value": "3868/180/26",
-    "quote": "3868/180/26",
+    "quote": "Protocollo n. 3868/180/26",
     "page": 1
    },
    "report_date": {
     "value": "29/01/2026",
-    "quote": "29/01/2026",
+    "quote": "Data: 29/01/2026",
     "page": 1
    },
    "police_station": {
@@ -20,7 +20,7 @@
    },
    "complainant_name": {
     "value": "<PERSON_1>",
-    "quote": "DENUNCIANTE <PERSON_1>, nato/a il 16/05/1980 | DOCUMENTO <ID_1>",
+    "quote": "DENUNCIANTE <PERSON_1>, nato/a il <DOB_1> | DOCUMENTO <ID_1>",
     "page": 1
    },
    "incident_date": {

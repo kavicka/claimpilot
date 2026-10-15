@@ -19,8 +19,8 @@
     "page": 1
    },
    "patient_birth_date": {
-    "value": "3. 4. 1980",
-    "quote": "3. 4. 1980",
+    "value": "<DOB_1>",
+    "quote": "<DOB_1>",
     "page": 1
    },
    "visit_date": {
@@ -62,7 +62,7 @@
  },
  {
   "source": "S42-003/D2",
-  "text": "=== Page 1 ===\nPoliklinika Kašparová\nPraha, Česká republika Lékařská zpráva\nLékařská zpráva\nPACIENT <PERSON_1> | NAR. 28. 9. 1972\nDATUM VYŠETŘENÍ / PŘIJETÍ\n11. 1. 2026 | PROPUŠTĚNÍ -\nDIAGNÓZA\nMKN-10\nOtřes mozku | S06.0\nAnamnéza\nBez významných předchozích onemocnění. Trvalou medikaci neužívá.\nNález a léčba\nPacient při vyšetření prezentoval mírnou závratě, zhoršenou koncentraci a narušenou koordinaci. Neurologické vyšetření bylo v zásadě normální, žádné známky focálního poruchy. Výsledky neuroobrazového vyšetření nepotvrdily zlomeniny ani jiné strukturální změny. Pacient byl hospitalizován na dohled a doporučeno bylo odpočívat a omezit fyzickou i mentální zátěž. Doporučeno je sledovat stav pacienta a opakovat vyšetření po 24 hodinách.\nLékař: <PERSON_2>\nPodpis, razítko",
+  "text": "=== Page 1 ===\nPoliklinika Kašparová\nPraha, Česká republika Lékařská zpráva\nLékařská zpráva\nPACIENT <PERSON_1> | NAR. <DOB_1>\nDATUM VYŠETŘENÍ / PŘIJETÍ\n11. 1. 2026 | PROPUŠTĚNÍ -\nDIAGNÓZA\nMKN-10\nOtřes mozku | S06.0\nAnamnéza\nBez významných předchozích onemocnění. Trvalou medikaci neužívá.\nNález a léčba\nPacient při vyšetření prezentoval mírnou závratě, zhoršenou koncentraci a narušenou koordinaci. Neurologické vyšetření bylo v zásadě normální, žádné známky focálního poruchy. Výsledky neuroobrazového vyšetření nepotvrdily zlomeniny ani jiné strukturální změny. Pacient byl hospitalizován na dohled a doporučeno bylo odpočívat a omezit fyzickou i mentální zátěž. Doporučeno je sledovat stav pacienta a opakovat vyšetření po 24 hodinách.\nLékař: <PERSON_2>\nPodpis, razítko",
   "output": {
    "facility_name": {
     "value": "Poliklinika Kašparová",
@@ -76,12 +76,12 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PACIENT <PERSON_1> | NAR. 28. 9. 1972",
+    "quote": "PACIENT <PERSON_1> | NAR. <DOB_1>",
     "page": 1
    },
    "patient_birth_date": {
-    "value": "28. 9. 1972",
-    "quote": "PACIENT <PERSON_1> | NAR. 28. 9. 1972",
+    "value": "<DOB_1>",
+    "quote": "PACIENT <PERSON_1> | NAR. <DOB_1>",
     "page": 1
    },
    "visit_date": {

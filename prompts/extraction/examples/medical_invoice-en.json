@@ -1,7 +1,7 @@
 [
  {
   "source": "S42-004/D4",
-  "text": "=== Page 1 ===\nMarquez International Medical Centre\nMiami, USA\nINVOICE\nInvoice No. INV-2026-73603\nDate: 04/27/2026\nPATIENT <PERSON_1>, DOB 05/14/1995 | DATE OF SERVICE 04/27/2026\n# | Description Amount (USD)\n1 | Outpatient consultation 66.66\n2 | X-ray 78.09\nTotal due 144.75 USD\nPayment due on receipt.",
+  "text": "=== Page 1 ===\nMarquez International Medical Centre\nMiami, USA\nINVOICE\nInvoice No. INV-2026-73603\nDate: 04/27/2026\nPATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 04/27/2026\n# | Description Amount (USD)\n1 | Outpatient consultation 66.66\n2 | X-ray 78.09\nTotal due 144.75 USD\nPayment due on receipt.",
   "output": {
    "invoice_number": {
     "value": "INV-2026-73603",
@@ -25,7 +25,7 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PATIENT <PERSON_1>, DOB 05/14/1995 | DATE OF SERVICE 04/27/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 04/27/2026",
     "page": 1
    },
    "service_date": {
@@ -61,7 +61,7 @@
  },
  {
   "source": "S42-007/D3",
-  "text": "=== Page 1 ===\nSullivan International Medical Centre\nNew York, USA\nINVOICE\nInvoice No. INV-2026-60638\nDate: 02/05/2026\nPATIENT <PERSON_1>, DOB 02/12/1997 | DATE OF SERVICE 02/04/2026\n# | Description | Amount (USD)\n1 | Outpatient consultation | 89.48\n2 | X-ray | 168.75\nTotal due | 258.23 USD\nPayment due on receipt.",
+  "text": "=== Page 1 ===\nSullivan International Medical Centre\nNew York, USA\nINVOICE\nInvoice No. INV-2026-60638\nDate: 02/05/2026\nPATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 02/04/2026\n# | Description | Amount (USD)\n1 | Outpatient consultation | 89.48\n2 | X-ray | 168.75\nTotal due | 258.23 USD\nPayment due on receipt.",
   "output": {
    "invoice_number": {
     "value": "INV-2026-60638",
@@ -85,12 +85,12 @@
    },
    "patient_name": {
     "value": "<PERSON_1>",
-    "quote": "PATIENT <PERSON_1>, DOB 02/12/1997 | DATE OF SERVICE 02/04/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 02/04/2026",
     "page": 1
    },
    "service_date": {
     "value": "02/04/2026",
-    "quote": "PATIENT <PERSON_1>, DOB 02/12/1997 | DATE OF SERVICE 02/04/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 02/04/2026",
     "page": 1
    },
    "currency": {
