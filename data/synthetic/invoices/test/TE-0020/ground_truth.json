@@ -1,0 +1,264 @@
+{
+ "invoice_id": "TE-0020",
+ "split": "test",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "5a15a1d4dbf80c1a8fddc81bf55e67ff2436676b22f1f8d2c38db9cb5f037a06",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 150,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "novamed",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "256630",
+   "value": "256630",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "21.06.2025",
+   "value": "2025-06-21",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Novamed Pharma CZ s.r.o.",
+   "value": "Novamed Pharma CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "90907841",
+   "value": "90907841",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ90907841",
+   "value": "CZ90907841",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ57 5500 0000 0018 6736 2483",
+   "value": "CZ5755000000001867362483",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "24 578,88",
+   "value": "24578.88",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "24 578,88",
+   "value": "24578.88",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25842930",
+   "value": "OB25842930",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana vitamín C 500 mg 60 tbl",
+     "value": "Herbana vitamín C 500 mg 60 tbl"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "1 635,36",
+     "value": "1635.36"
+    },
+    "ean": {
+     "printed": "8585578342513",
+     "value": "8585578342513"
+    },
+    "unit_price": {
+     "printed": "68,14",
+     "value": "68.14"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "1A29127",
+      "value": "1A29127"
+     },
+     "expiry": {
+      "printed": "05/29",
+      "value": "05/29"
+     },
+     "quantity": {
+      "printed": "24",
+      "value": "24"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit - čaj na pokojný spánok 20x2g",
+     "value": "Sanovit - čaj na pokojný spánok 20x2g"
+    },
+    "quantity": {
+     "printed": "48",
+     "value": "48"
+    },
+    "line_net": {
+     "printed": "3 591,36",
+     "value": "3591.36"
+    },
+    "ean": {
+     "printed": "8592380349913",
+     "value": "8592380349913"
+    },
+    "unit_price": {
+     "printed": "74,82",
+     "value": "74.82"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "1K79390",
+      "value": "1K79390"
+     },
+     "expiry": {
+      "printed": "03/26",
+      "value": "03/26"
+     },
+     "quantity": {
+      "printed": "48",
+      "value": "48"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek masť na hojenie rán 30 g",
+     "value": "Nutrilek masť na hojenie rán 30 g"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "19 352,16",
+     "value": "19352.16"
+    },
+    "ean": {
+     "printed": "8581976832045",
+     "value": "8581976832045"
+    },
+    "unit_price": {
+     "printed": "134,39",
+     "value": "134.39"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "3K14511",
+      "value": "3K14511"
+     },
+     "expiry": {
+      "printed": "11/27",
+      "value": "11/27"
+     },
+     "quantity": {
+      "printed": "144",
+      "value": "144"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "24 578,88",
+    "value": "24578.88"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

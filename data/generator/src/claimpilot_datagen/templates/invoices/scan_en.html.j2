@@ -1,0 +1,50 @@
+{% extends "invoices/_base.html.j2" %}
+{% set h = header %}{% set s = inv.supplier %}{% set b = inv.buyer %}
+{% block pagecounter %}"Page: " counter(page) "/" counter(pages){% endblock %}
+{% block footnote %}Contact person: {{ s.contact }}, tel. / fax: {{ s.phone }}{% endblock %}
+{% block style %}
+body { font-size: 9pt; }
+h1 { text-align: center; font-size: 16pt; margin: 0 0 4mm; }
+.lines th { border-bottom: 1pt solid #000; font-size: 8pt; }
+.lines td { font-size: 9pt; }
+.lot td { font-size: 8pt; padding-top: 0; }
+.totals td { font-size: 11pt; font-weight: 700; }
+{% endblock %}
+{% block body %}
+<h1>{{ title }} No. {{ h.invoice_number.printed }}</h1>
+<div class="two">
+ <div><div class="muted">Seller:</div><div class="b">{{ s.name }}</div><div>{{ s.street }}<br>{{ s.zip }} {{ s.city }}<br>Czech Republic</div>
+  <div>ID : {{ h.supplier_ico.printed }}<br>VAT ID : {{ h.supplier_vat_id.printed }}</div>
+  <div class="small">Tel.: {{ s.phone }} &nbsp; E-mail: {{ s.email }}</div>
+  <div style="margin-top:2mm">Bank account:<br>SWIFT: {{ s.swift }}<br>IBAN: {{ h.supplier_iban.printed }}<br>{{ s.bank }}</div></div>
+ <div><div class="muted">Buyer:</div><div class="b">{{ b.name }}</div><div>{{ b.street }}<br>{{ b.zip }} {{ b.city }}<br>Slovakia</div>
+  <div class="b">VAT Reg.No. : {{ h.buyer_vat_id.printed }}</div>
+  <div class="muted" style="margin-top:2mm">Consignee:</div><div>{{ b.name }}<br>{{ inv.delivery_point }}</div></div>
+</div>
+<table style="width:auto;margin-top:3mm">
+ <tr><td>Date of issue:</td><td>{{ h.issue_date.printed }}</td></tr>
+ {% if h.order_number %}<tr><td>Order No.:</td><td>{{ h.order_number.printed }}</td></tr>{% endif %}
+ {% if h.original_invoice_number %}<tr><td>Corrects invoice No.:</td><td>{{ h.original_invoice_number.printed }}</td></tr>{% endif %}
+</table>
+<table class="lines" style="margin-top:4mm">
+ <thead><tr><th style="width:34%">Description</th><th>Expiration<br>date</th><th>Customs tariff</th><th class="num">Quantity<br>(packages)</th><th class="num">Unit price<br>(EUR)</th><th class="num">Total price<br>(EUR)</th></tr></thead>
+ {% for ln in lines %}{% set c = ln.cells %}
+ <tbody class="nobreak">
+ <tr><td class="b">{{ c.name.printed }}</td><td></td><td>{{ c.customs_code.printed if c.customs_code else "" }}</td><td class="num">{{ c.quantity.printed }}</td><td class="num">{{ c.unit_price.printed }}</td><td class="num">{{ c.line_net.printed }}</td></tr>
+ <tr class="lot"><td colspan="6">Country of origin: {{ c.origin.printed }} &nbsp; EAN {{ c.ean.printed }}</td></tr>
+ {% for bt in ln.batches %}<tr class="lot"><td>{{ bt.batch.printed }}</td><td>{{ bt.expiry.printed }}</td><td></td><td class="num">{{ bt.quantity.printed }}</td><td></td><td></td></tr>{% endfor %}
+ </tbody>
+ {% endfor %}
+</table>
+<table class="totals" style="width:55%;margin-left:45%;margin-top:4mm">
+ <tr><td>Total (EUR):</td><td class="num">{{ h.total.printed }}</td></tr>
+ <tr><td>Total Due (EUR):</td><td class="num">{{ h.amount_due.printed }}</td></tr>
+</table>
+<table class="small" style="width:auto;margin-top:4mm">
+ <tr><td>Delivery terms:</td><td>CIP {{ b.city }}</td></tr>
+ <tr><td>Payment:</td><td>within 30 days from the invoice date</td></tr>
+</table>
+<p class="small">{{ h.reverse_charge.printed }}</p>
+<svg width="150" height="50" style="margin-left:60%"><path d="M5 35 C 25 5, 35 45, 55 20 S 85 40, 100 15 S 130 35, 145 22" stroke="#1c2f8c" stroke-width="2" fill="none"/></svg>
+<div style="margin-left:60%" class="small">........................................</div>
+{% endblock %}

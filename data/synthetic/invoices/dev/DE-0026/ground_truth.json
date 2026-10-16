@@ -1,0 +1,869 @@
+{
+ "invoice_id": "DE-0026",
+ "split": "dev",
+ "layout": "wholesale",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "df80ce33f675dce33ae9e7da34d2d532a8cefaa289cd5ba1b1a4f81696c1fa46",
+ "pages_total": 2,
+ "pages_present": 2,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [],
+ "vat_method": "per_rate",
+ "supplier_key": "zdravex",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "FAKTÚRA",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "258793443",
+   "value": "258793443",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "15.01.2025",
+   "value": "2025-01-15",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Zdravex Pharma s.r.o.",
+   "value": "Zdravex Pharma s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "91065828",
+   "value": "91065828",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2992441276",
+   "value": "SK2992441276",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK60 7500 0000 0037 9721 6741",
+   "value": "SK6075000000003797216741",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 2
+  },
+  "total": {
+   "printed": "4.131,9400",
+   "value": "4131.94",
+   "page": 2
+  },
+  "tax_point_date": {
+   "printed": "15.01.2025",
+   "value": "2025-01-15",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "16.03.2025",
+   "value": "2025-03-16",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2992441276",
+   "value": "2992441276",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "258793443",
+   "value": "258793443",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "4.131,94",
+   "value": "4131.94",
+   "page": 2
+  },
+  "order_number": {
+   "printed": "OB25438686",
+   "value": "OB25438686",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "T 25786938",
+   "value": "T 25786938",
+   "page": 2
+  },
+  "customer_number": {
+   "printed": "66944",
+   "value": "66944",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit teplomer digitálny",
+     "value": "Sanovit teplomer digitálny"
+    },
+    "quantity": {
+     "printed": "6,00",
+     "value": "6"
+    },
+    "line_net": {
+     "printed": "37,74",
+     "value": "37.74"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4005645943626",
+     "value": "4005645943626"
+    },
+    "unit_price": {
+     "printed": "6,29",
+     "value": "6.29"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea dávkovač liekov týždenný",
+     "value": "Florea dávkovač liekov týždenný"
+    },
+    "quantity": {
+     "printed": "5,00",
+     "value": "5"
+    },
+    "line_net": {
+     "printed": "163,40",
+     "value": "163.40"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4004051602486",
+     "value": "4004051602486"
+    },
+    "unit_price": {
+     "printed": "32,68",
+     "value": "32.68"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan opaľovací krém SPF 50+ 50 ml",
+     "value": "Medisan opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "2,00",
+     "value": "2"
+    },
+    "line_net": {
+     "printed": "8,18",
+     "value": "8.18"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4002575379631",
+     "value": "4002575379631"
+    },
+    "unit_price": {
+     "printed": "4,09",
+     "value": "4.09"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera sirup na kašeľ 100 ml",
+     "value": "Vivera sirup na kašeľ 100 ml"
+    },
+    "quantity": {
+     "printed": "40,00",
+     "value": "40"
+    },
+    "line_net": {
+     "printed": "487,20",
+     "value": "487.20"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8581071197896",
+     "value": "8581071197896"
+    },
+    "unit_price": {
+     "printed": "12,18",
+     "value": "12.18"
+    },
+    "sukl_code": {
+     "printed": "S58036",
+     "value": "S58036"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "3C71316",
+      "value": "3C71316"
+     },
+     "expiry": {
+      "printed": "04/26",
+      "value": "04/26"
+     },
+     "quantity": {
+      "printed": "40,00",
+      "value": "40"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea bandáž členku veľkosť M",
+     "value": "Florea bandáž členku veľkosť M"
+    },
+    "quantity": {
+     "printed": "12,00",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "254,76",
+     "value": "254.76"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8584256222512",
+     "value": "8584256222512"
+    },
+    "unit_price": {
+     "printed": "21,23",
+     "value": "21.23"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan krém na ruky s panthenolom 100 ml",
+     "value": "Medisan krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "30,00",
+     "value": "30"
+    },
+    "line_net": {
+     "printed": "501,90",
+     "value": "501.90"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3002640982811",
+     "value": "3002640982811"
+    },
+    "unit_price": {
+     "printed": "16,73",
+     "value": "16.73"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea tablety proti bolesti 500 mg 20 tbl",
+     "value": "Florea tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "1,00",
+     "value": "1"
+    },
+    "line_net": {
+     "printed": "12,74",
+     "value": "12.74"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8595528613402",
+     "value": "8595528613402"
+    },
+    "unit_price": {
+     "printed": "12,74",
+     "value": "12.74"
+    },
+    "sukl_code": {
+     "printed": "S71718",
+     "value": "S71718"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "7E51219",
+      "value": "7E51219"
+     },
+     "expiry": {
+      "printed": "05/26",
+      "value": "05/26"
+     },
+     "quantity": {
+      "printed": "1,00",
+      "value": "1"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan tablety proti bolesti 500 mg 20 tbl",
+     "value": "Medisan tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "90,00",
+     "value": "90"
+    },
+    "line_net": {
+     "printed": "1.172,70",
+     "value": "1172.70"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8584874268060",
+     "value": "8584874268060"
+    },
+    "unit_price": {
+     "printed": "13,03",
+     "value": "13.03"
+    },
+    "sukl_code": {
+     "printed": "S76378",
+     "value": "S76378"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "7N88024",
+      "value": "7N88024"
+     },
+     "expiry": {
+      "printed": "03/26",
+      "value": "03/26"
+     },
+     "quantity": {
+      "printed": "90,00",
+      "value": "90"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek - čaj na pokojný spánok 20x2g",
+     "value": "Nutrilek - čaj na pokojný spánok 20x2g"
+    },
+    "quantity": {
+     "printed": "40,00",
+     "value": "40"
+    },
+    "line_net": {
+     "printed": "55,60",
+     "value": "55.60"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8599085545930",
+     "value": "8599085545930"
+    },
+    "unit_price": {
+     "printed": "1,39",
+     "value": "1.39"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "4A47833",
+      "value": "4A47833"
+     },
+     "expiry": {
+      "printed": "03/27",
+      "value": "03/27"
+     },
+     "quantity": {
+      "printed": "40,00",
+      "value": "40"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek opaľovací krém SPF 50+ 50 ml",
+     "value": "Nutrilek opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "40,00",
+     "value": "40"
+    },
+    "line_net": {
+     "printed": "759,60",
+     "value": "759.60"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3002857113206",
+     "value": "3002857113206"
+    },
+    "unit_price": {
+     "printed": "18,99",
+     "value": "18.99"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea dávkovač liekov týždenný",
+     "value": "Florea dávkovač liekov týždenný"
+    },
+    "quantity": {
+     "printed": "1,00",
+     "value": "1"
+    },
+    "line_net": {
+     "printed": "6,88",
+     "value": "6.88"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4009851333653",
+     "value": "4009851333653"
+    },
+    "unit_price": {
+     "printed": "6,88",
+     "value": "6.88"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita - bylinný čaj na trávenie 20x1,5g",
+     "value": "DermaVita - bylinný čaj na trávenie 20x1,5g"
+    },
+    "quantity": {
+     "printed": "5,00",
+     "value": "5"
+    },
+    "line_net": {
+     "printed": "10,55",
+     "value": "10.55"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8591686179286",
+     "value": "8591686179286"
+    },
+    "unit_price": {
+     "printed": "2,11",
+     "value": "2.11"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5B22403",
+      "value": "5B22403"
+     },
+     "expiry": {
+      "printed": "07/27",
+      "value": "07/27"
+     },
+     "quantity": {
+      "printed": "5,00",
+      "value": "5"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit detská výživa ovsená kaša 225 g",
+     "value": "Sanovit detská výživa ovsená kaša 225 g"
+    },
+    "quantity": {
+     "printed": "20,00",
+     "value": "20"
+    },
+    "line_net": {
+     "printed": "68,20",
+     "value": "68.20"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8581245392140",
+     "value": "8581245392140"
+    },
+    "unit_price": {
+     "printed": "3,41",
+     "value": "3.41"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6N39108",
+      "value": "6N39108"
+     },
+     "expiry": {
+      "printed": "03/29",
+      "value": "03/29"
+     },
+     "quantity": {
+      "printed": "20,00",
+      "value": "20"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera detská výživa ovsená kaša 225 g",
+     "value": "Vivera detská výživa ovsená kaša 225 g"
+    },
+    "quantity": {
+     "printed": "6,00",
+     "value": "6"
+    },
+    "line_net": {
+     "printed": "12,96",
+     "value": "12.96"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8587767062196",
+     "value": "8587767062196"
+    },
+    "unit_price": {
+     "printed": "2,16",
+     "value": "2.16"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "2A82294",
+      "value": "2A82294"
+     },
+     "expiry": {
+      "printed": "09/26",
+      "value": "09/26"
+     },
+     "quantity": {
+      "printed": "6,00",
+      "value": "6"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea - bylinný čaj na trávenie 20x1,5g",
+     "value": "Florea - bylinný čaj na trávenie 20x1,5g"
+    },
+    "quantity": {
+     "printed": "40,00",
+     "value": "40"
+    },
+    "line_net": {
+     "printed": "52,80",
+     "value": "52.80"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8594672978658",
+     "value": "8594672978658"
+    },
+    "unit_price": {
+     "printed": "1,32",
+     "value": "1.32"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6A37038",
+      "value": "6A37038"
+     },
+     "expiry": {
+      "printed": "05/27",
+      "value": "05/27"
+     },
+     "quantity": {
+      "printed": "40,00",
+      "value": "40"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit - kláštorný čaj na priedušky 20x2g",
+     "value": "Sanovit - kláštorný čaj na priedušky 20x2g"
+    },
+    "quantity": {
+     "printed": "3,00",
+     "value": "3"
+    },
+    "line_net": {
+     "printed": "5,55",
+     "value": "5.55"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8589712305624",
+     "value": "8589712305624"
+    },
+    "unit_price": {
+     "printed": "1,85",
+     "value": "1.85"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "7B67097",
+      "value": "7B67097"
+     },
+     "expiry": {
+      "printed": "09/29",
+      "value": "09/29"
+     },
+     "quantity": {
+      "printed": "3,00",
+      "value": "3"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "5%",
+    "value": "5"
+   },
+   "base": {
+    "printed": "1.672,6400",
+    "value": "1672.64"
+   },
+   "vat": {
+    "printed": "83,6300",
+    "value": "83.63"
+   },
+   "page": 2
+  },
+  {
+   "rate": {
+    "printed": "19%",
+    "value": "19"
+   },
+   "base": {
+    "printed": "205,6600",
+    "value": "205.66"
+   },
+   "vat": {
+    "printed": "39,0800",
+    "value": "39.08"
+   },
+   "page": 2
+  },
+  {
+   "rate": {
+    "printed": "23%",
+    "value": "23"
+   },
+   "base": {
+    "printed": "1.732,4600",
+    "value": "1732.46"
+   },
+   "vat": {
+    "printed": "398,4700",
+    "value": "398.47"
+   },
+   "page": 2
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

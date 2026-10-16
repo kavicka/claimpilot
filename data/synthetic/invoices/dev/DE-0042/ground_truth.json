@@ -1,0 +1,293 @@
+{
+ "invoice_id": "DE-0042",
+ "split": "dev",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "461bd2aa65ea32fa48dd2ec2ae9c8a90cf86c9989a803cf9a3e3edf7acd107e0",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 200,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "batch_split",
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "novamed",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "255546",
+   "value": "255546",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "25.01.2025",
+   "value": "2025-01-25",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Novamed Pharma CZ s.r.o.",
+   "value": "Novamed Pharma CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "90907841",
+   "value": "90907841",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ90907841",
+   "value": "CZ90907841",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ57 5500 0000 0018 6736 2483",
+   "value": "CZ5755000000001867362483",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "10 773,20",
+   "value": "10773.20",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "10 773,20",
+   "value": "10773.20",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25641191",
+   "value": "OB25641191",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina kapsuly na trávenie 30 cps",
+     "value": "Kalmina kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "2 918,00",
+     "value": "2918.00"
+    },
+    "ean": {
+     "printed": "8591434665122",
+     "value": "8591434665122"
+    },
+    "unit_price": {
+     "printed": "14,59",
+     "value": "14.59"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "3E72934",
+      "value": "3E72934"
+     },
+     "expiry": {
+      "printed": "12/29",
+      "value": "12/29"
+     },
+     "quantity": {
+      "printed": "200",
+      "value": "200"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek - čaj na pokojný spánok 20x2g",
+     "value": "Nutrilek - čaj na pokojný spánok 20x2g"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "4 537,44",
+     "value": "4537.44"
+    },
+    "ean": {
+     "printed": "8584515204310",
+     "value": "8584515204310"
+    },
+    "unit_price": {
+     "printed": "31,51",
+     "value": "31.51"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "4E24639",
+      "value": "4E24639"
+     },
+     "expiry": {
+      "printed": "02/27",
+      "value": "02/27"
+     },
+     "quantity": {
+      "printed": "137",
+      "value": "137"
+     }
+    },
+    {
+     "batch": {
+      "printed": "4E24833",
+      "value": "4E24833"
+     },
+     "expiry": {
+      "printed": "02/27",
+      "value": "02/27"
+     },
+     "quantity": {
+      "printed": "7",
+      "value": "7"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea - cukríky s medom a šalviou 40g",
+     "value": "Florea - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "96",
+     "value": "96"
+    },
+    "line_net": {
+     "printed": "3 317,76",
+     "value": "3317.76"
+    },
+    "ean": {
+     "printed": "8595246841569",
+     "value": "8595246841569"
+    },
+    "unit_price": {
+     "printed": "34,56",
+     "value": "34.56"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5L63585",
+      "value": "5L63585"
+     },
+     "expiry": {
+      "printed": "12/29",
+      "value": "12/29"
+     },
+     "quantity": {
+      "printed": "93",
+      "value": "93"
+     }
+    },
+    {
+     "batch": {
+      "printed": "5L63168",
+      "value": "5L63168"
+     },
+     "expiry": {
+      "printed": "12/29",
+      "value": "12/29"
+     },
+     "quantity": {
+      "printed": "3",
+      "value": "3"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "10 773,20",
+    "value": "10773.20"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

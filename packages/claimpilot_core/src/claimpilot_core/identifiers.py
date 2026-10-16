@@ -115,13 +115,16 @@ def is_valid_iban(value: str) -> bool:
     return _iban_number(iban) % 97 == 1
 
 
+def iban_from_bban(country: str, bban: str) -> str:
+    check = 98 - _iban_number(f"{country}00{bban}") % 97
+    return f"{country}{check:02d}{bban}"
+
+
 def generate_sk_iban(rng: random.Random) -> str:
     bank = rng.choice(SK_BANK_CODES)
     prefix = "000000" if rng.random() < 0.7 else f"{rng.randrange(1, 999999):06d}"
     account = f"{rng.randrange(10**9, 10**10):010d}"
-    bban = f"{bank}{prefix}{account}"
-    check = 98 - _iban_number(f"SK00{bban}") % 97
-    return f"SK{check:02d}{bban}"
+    return iban_from_bban("SK", f"{bank}{prefix}{account}")
 
 
 def format_iban(iban: str) -> str:

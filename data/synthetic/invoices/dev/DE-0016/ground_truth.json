@@ -1,0 +1,206 @@
+{
+ "invoice_id": "DE-0016",
+ "split": "dev",
+ "layout": "pohoda",
+ "kind": "credit_note",
+ "file": "credit_note.pdf",
+ "sha256": "ba09173edfa6f5a9136b7edfce7d011511384d63165a8b2681c2e5aa68cc4f52",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "credit_note",
+  "multiline_names"
+ ],
+ "vat_method": "per_line",
+ "supplier_key": "bioflora",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "OPRAVNÁ FAKTÚRA - DOBROPIS",
+   "value": "credit_note",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "257878740",
+   "value": "257878740",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "20.01.2025",
+   "value": "2025-01-20",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "BioFlora s.r.o.",
+   "value": "BioFlora s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "96285575",
+   "value": "96285575",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2990936465",
+   "value": "SK2990936465",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK42 7500 0000 0064 5899 9885",
+   "value": "SK4275000000006458999885",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "-25,81",
+   "value": "-25.81",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "18.01.2025",
+   "value": "2025-01-18",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "21.03.2025",
+   "value": "2025-03-21",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2990936465",
+   "value": "2990936465",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "257878740",
+   "value": "257878740",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "-25,81",
+   "value": "-25.81",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "-20,98",
+   "value": "-20.98",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "-4,83",
+   "value": "-4.83",
+   "page": 1
+  },
+  "original_invoice_number": {
+   "printed": "259703886",
+   "value": "259703886",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit krém na ruky s panthenolom 100 ml",
+     "value": "Sanovit krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "-1",
+     "value": "-1"
+    },
+    "line_net": {
+     "printed": "-20,98",
+     "value": "-20.98"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3803511258574",
+     "value": "3803511258574"
+    },
+    "supplier_code": {
+     "printed": "0023",
+     "value": "0023"
+    },
+    "unit_price": {
+     "printed": "20,98",
+     "value": "20.98"
+    },
+    "discount_pct": {
+     "printed": "0,00%",
+     "value": "0"
+    },
+    "vat_amount": {
+     "printed": "-4,83",
+     "value": "-4.83"
+    },
+    "line_gross": {
+     "printed": "-25,81",
+     "value": "-25.81"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "23%",
+    "value": "23"
+   },
+   "base": {
+    "printed": "-20,98",
+    "value": "-20.98"
+   },
+   "vat": {
+    "printed": "-4,83",
+    "value": "-4.83"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

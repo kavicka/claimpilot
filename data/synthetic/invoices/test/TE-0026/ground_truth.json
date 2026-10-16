@@ -1,0 +1,385 @@
+{
+ "invoice_id": "TE-0026",
+ "split": "test",
+ "layout": "sap",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "01f1d1beb09fa3db34079a98bce094ead4bedf4ba7b812ed8f249cbe6da9943d",
+ "pages_total": 2,
+ "pages_present": 2,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "dual_currency",
+  "reverse_charge",
+  "terms_page"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "lumina",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "Faktúra",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "299286117",
+   "value": "299286117",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "21.05.2025",
+   "value": "2025-05-21",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Lumina Cosmetics CZ s.r.o.",
+   "value": "Lumina Cosmetics CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "95474463",
+   "value": "95474463",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ95474463",
+   "value": "CZ95474463",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ62 0100 0000 0058 2742 5761",
+   "value": "CZ6201000000005827425761",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "4.650,84",
+   "value": "4650.84",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "19.05.2025",
+   "value": "2025-05-19",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "20.06.2025",
+   "value": "2025-06-20",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "CZ95474463",
+   "value": "CZ95474463",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "299286117",
+   "value": "299286117",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "specific_symbol": {
+   "printed": "770168",
+   "value": "770168",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "4.650,84",
+   "value": "4650.84",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "4.650,84",
+   "value": "4650.84",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "0,00",
+   "value": "0.00",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25371473",
+   "value": "OB25371473",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "29656166",
+   "value": "29656166",
+   "page": 1
+  },
+  "customer_number": {
+   "printed": "54297",
+   "value": "54297",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.",
+   "value": true,
+   "page": 1
+  },
+  "second_currency_total": {
+   "printed": "115.898,93",
+   "value": "115898.93",
+   "page": 1
+  },
+  "fx_rate": {
+   "printed": "24,92",
+   "value": "24.92",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita teplomer digitálny",
+     "value": "DermaVita teplomer digitálny"
+    },
+    "quantity": {
+     "printed": "48",
+     "value": "48"
+    },
+    "line_net": {
+     "printed": "1.800,00",
+     "value": "1800.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4007987853601",
+     "value": "4007987853601"
+    },
+    "supplier_code": {
+     "printed": "AU994702",
+     "value": "AU994702"
+    },
+    "unit_price": {
+     "printed": "37,50",
+     "value": "37.50"
+    },
+    "net_unit_price": {
+     "printed": "37,50",
+     "value": "37.50"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita opaľovací krém SPF 50+ 50 ml",
+     "value": "DermaVita opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "2.445,12",
+     "value": "2445.12"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "3002091896484",
+     "value": "3002091896484"
+    },
+    "supplier_code": {
+     "printed": "AU271656",
+     "value": "AU271656"
+    },
+    "unit_price": {
+     "printed": "18,87",
+     "value": "18.87"
+    },
+    "promo_discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "net_unit_price": {
+     "printed": "16,98",
+     "value": "16.98"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita bandáž členku veľkosť M",
+     "value": "DermaVita bandáž členku veľkosť M"
+    },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "65,64",
+     "value": "65.64"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8583251645746",
+     "value": "8583251645746"
+    },
+    "supplier_code": {
+     "printed": "AU144240",
+     "value": "AU144240"
+    },
+    "unit_price": {
+     "printed": "5,95",
+     "value": "5.95"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "5,47",
+     "value": "5.47"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan krém na ruky s panthenolom 100 ml",
+     "value": "Medisan krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "54,24",
+     "value": "54.24"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4005181322534",
+     "value": "4005181322534"
+    },
+    "supplier_code": {
+     "printed": "AU650811",
+     "value": "AU650811"
+    },
+    "unit_price": {
+     "printed": "4,52",
+     "value": "4.52"
+    },
+    "net_unit_price": {
+     "printed": "4,52",
+     "value": "4.52"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea opaľovací krém SPF 50+ 50 ml",
+     "value": "Florea opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "36",
+     "value": "36"
+    },
+    "line_net": {
+     "printed": "285,84",
+     "value": "285.84"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "3005754397274",
+     "value": "3005754397274"
+    },
+    "supplier_code": {
+     "printed": "LC410850",
+     "value": "LC410850"
+    },
+    "unit_price": {
+     "printed": "7,94",
+     "value": "7.94"
+    },
+    "net_unit_price": {
+     "printed": "7,94",
+     "value": "7.94"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "4.650,84",
+    "value": "4650.84"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

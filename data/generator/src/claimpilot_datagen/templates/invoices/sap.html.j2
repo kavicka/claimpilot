@@ -1,0 +1,62 @@
+{% extends "invoices/_base.html.j2" %}
+{% set h = header %}{% set s = inv.supplier %}{% set b = inv.buyer %}
+{% block pagecounter %}""{% endblock %}
+{% block footnote %}Form ZINV_SK_02 · {{ s.register }}{% endblock %}
+{% block style %}
+.kv td { padding: .2mm 1.2mm; }
+.lines th { border-bottom: .8pt solid #000; font-size: 6.8pt; }
+.lines td { font-size: 8pt; }
+.terms { columns: 3; column-gap: 5mm; font-size: 6.4pt; line-height: 1.25; text-align: justify; }
+.terms h4 { font-size: 6.8pt; margin: 1.5mm 0 .5mm; }
+{% endblock %}
+{% block body %}
+<div style="text-align:right" class="b">{{ title }} č. {{ h.invoice_number.printed }}</div>
+<div class="b" style="font-size:11pt;margin-top:3mm">{{ s.name }}</div>
+<div>{{ s.street }}, {{ s.zip }} {{ s.city }}</div>
+<table class="kv" style="width:auto"><tr><td>IČ</td><td>: {{ h.supplier_ico.printed }}</td></tr><tr><td>DIČ</td><td>: {{ h.supplier_vat_id.printed }}</td></tr></table>
+
+<div class="two" style="margin-top:3mm">
+ <div><span class="muted">Adresa dodania:</span><br>{{ inv.delivery_point }}</div>
+ <div><span class="muted">Adresa fakturácie:</span><br><span class="b">{{ b.name }}</span><br>{{ b.street }}<br>SK-{{ b.zip }} {{ b.city }}</div>
+</div>
+
+<table class="kv" style="margin-top:3mm">
+ <tr><td>Bankové spojenie</td><td>: {{ s.bank }}</td><td>Variabilný symbol: {{ h.variable_symbol.printed }}</td><td>Dátum vystavenia : {{ h.issue_date.printed }}</td></tr>
+ <tr><td>Číslo účtu</td><td>: IBAN {{ h.supplier_iban.printed }}</td><td>Konštantný symbol: {{ h.constant_symbol.printed }}</td><td>Daňová povinnosť : {{ h.tax_point_date.printed }}</td></tr>
+ <tr><td></td><td></td><td>Špecifický symbol: {{ h.specific_symbol.printed }}</td><td>Dátum splatnosti : {{ h.due_date.printed }}</td></tr>
+ <tr><td>Číslo dodacieho listu</td><td>: {{ h.delivery_note_numbers.printed if h.delivery_note_numbers else "" }}</td><td>Číslo zákazníka : {{ h.customer_number.printed }}</td><td></td></tr>
+ <tr><td>Vaša objednávka</td><td>: {{ h.order_number.printed if h.order_number else "" }}</td><td colspan="2">IČO : {{ h.buyer_ico.printed }} DIČ : {{ h.buyer_dic.printed }} IČ DPH : {{ h.buyer_vat_id.printed }}</td></tr>
+ {% if h.original_invoice_number %}<tr><td>Opravovaná faktúra</td><td>: {{ h.original_invoice_number.printed }}</td><td></td><td></td></tr>{% endif %}
+</table>
+<div class="small">Vybavuje: {{ s.contact }} &nbsp; E-mail: {{ s.email }} &nbsp; Tel.: {{ s.phone }}</div>
+
+<table class="lines" style="margin-top:3mm">
+ <thead><tr><th>Kód</th><th class="num">Kusy</th><th style="width:34%">EAN / Názov tovaru</th><th class="num">Tarifná<br>cena</th><th class="num">Štruktur.<br>Zľava</th><th class="num">Promo<br>Zľava</th><th class="num">Cena / ks<br>bez DPH</th><th class="num">Total</th><th class="num">Sadzba<br>dane %</th></tr></thead>
+ {% for ln in lines %}{% set c = ln.cells %}
+ <tbody class="nobreak">
+ <tr><td>{{ c.supplier_code.printed }}</td><td class="num">{{ c.quantity.printed }}</td><td>{{ c.ean.printed }}</td><td class="num">{{ c.unit_price.printed }}</td><td class="num">{{ c.struct_discount_pct.printed if c.struct_discount_pct else "" }}</td><td class="num">{{ c.promo_discount_pct.printed if c.promo_discount_pct else "" }}</td><td class="num">{{ c.net_unit_price.printed }}</td><td class="num">{{ c.line_net.printed }}</td><td class="num">{{ c.vat_rate.printed }}</td></tr>
+ <tr><td></td><td></td><td colspan="7">{{ c.name.printed }}</td></tr>
+ </tbody>
+ {% endfor %}
+</table>
+
+{% if h.reverse_charge %}<p class="small">{{ h.reverse_charge.printed }}</p>{% endif %}
+<table class="kv nobreak" style="width:80%;margin-left:20%;margin-top:3mm">
+ <tr><td>Kurz</td><td class="num">{{ h.fx_rate.printed }} CZK/EUR</td><td></td><td></td></tr>
+ {% for r in recap %}
+ <tr><td>Sadzba dane</td><td class="num">{{ r.rate.printed }} %</td><td>Sadzba dane</td><td class="num">{{ r.rate.printed }} %</td></tr>
+ <tr><td>Základ dane</td><td class="num">{{ recap2[loop.index0].base }} CZK</td><td>Základ dane</td><td class="num">{{ r.base.printed }} EUR</td></tr>
+ <tr><td>Daň</td><td class="num">{{ recap2[loop.index0].vat }} CZK</td><td>Daň</td><td class="num">{{ r.vat.printed }} EUR</td></tr>
+ {% endfor %}
+ <tr class="b"><td>Spolu základ / daň</td><td></td><td></td><td class="num">{{ h.total_net.printed }} / {{ h.total_vat.printed }} EUR</td></tr>
+ <tr class="b"><td>Celkom k platbe s DPH</td><td class="num">{{ h.second_currency_total.printed }} CZK</td><td>Celkom k platbe s DPH</td><td class="num">{{ h.total.printed }} EUR</td></tr>
+ {% if h.amount_due.value != h.total.value %}<tr class="b"><td></td><td></td><td>K úhrade</td><td class="num">{{ h.amount_due.printed }} EUR</td></tr>{% endif %}
+</table>
+<p class="small">Kupujúci, ktorý je v omeškaní, je povinný zaplatiť úrok z omeškania vo výške 0,05 % z dlžnej čiastky za každý začatý deň omeškania.</p>
+
+<div class="pb"></div>
+<div class="b" style="text-align:center;margin-bottom:2mm">VŠEOBECNÉ OBCHODNÉ PODMIENKY SPOLOČNOSTI {{ s.name|upper }}</div>
+<div class="terms">
+{% for title, text in terms %}<h4>{{ loop.index }}. {{ title }}</h4><p>{{ text }}</p>{% endfor %}
+</div>
+{% endblock %}

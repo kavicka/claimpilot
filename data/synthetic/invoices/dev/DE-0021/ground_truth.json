@@ -1,0 +1,230 @@
+{
+ "invoice_id": "DE-0021",
+ "split": "dev",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "a7b7d923526525c4961fdf8e211398087e9b6b0804e576f0f4bb3d37b12ab112",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 170,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "batch_split",
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "novamed",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "256293",
+   "value": "256293",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "03.05.2025",
+   "value": "2025-05-03",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Novamed Pharma CZ s.r.o.",
+   "value": "Novamed Pharma CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "90907841",
+   "value": "90907841",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ90907841",
+   "value": "CZ90907841",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ57 5500 0000 0018 6736 2483",
+   "value": "CZ5755000000001867362483",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "15 134,40",
+   "value": "15134.40",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "15 134,40",
+   "value": "15134.40",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25056943",
+   "value": "OB25056943",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea - cukríky s medom a šalviou 40g",
+     "value": "Florea - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "6 912,00",
+     "value": "6912.00"
+    },
+    "ean": {
+     "printed": "8595246841569",
+     "value": "8595246841569"
+    },
+    "unit_price": {
+     "printed": "34,56",
+     "value": "34.56"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5N22184",
+      "value": "5N22184"
+     },
+     "expiry": {
+      "printed": "06/28",
+      "value": "06/28"
+     },
+     "quantity": {
+      "printed": "190",
+      "value": "190"
+     }
+    },
+    {
+     "batch": {
+      "printed": "5N22804",
+      "value": "5N22804"
+     },
+     "expiry": {
+      "printed": "06/28",
+      "value": "06/28"
+     },
+     "quantity": {
+      "printed": "10",
+      "value": "10"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita tablety proti bolesti 500 mg 20 tbl",
+     "value": "DermaVita tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "8 222,40",
+     "value": "8222.40"
+    },
+    "ean": {
+     "printed": "8597856203416",
+     "value": "8597856203416"
+    },
+    "unit_price": {
+     "printed": "57,10",
+     "value": "57.10"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5K22490",
+      "value": "5K22490"
+     },
+     "expiry": {
+      "printed": "09/29",
+      "value": "09/29"
+     },
+     "quantity": {
+      "printed": "144",
+      "value": "144"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "15 134,40",
+    "value": "15134.40"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

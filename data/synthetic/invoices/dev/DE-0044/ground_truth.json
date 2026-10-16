@@ -1,0 +1,545 @@
+{
+ "invoice_id": "DE-0044",
+ "split": "dev",
+ "layout": "wholesale",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "0642e6ef6c8e1fdbb63c18973a39cdb49ef814a0996a8dba39941c3b43fe166a",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [],
+ "vat_method": "per_rate",
+ "supplier_key": "farmont",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "FAKTÚRA",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "256474703",
+   "value": "256474703",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "15.09.2025",
+   "value": "2025-09-15",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Farmont Slovakia a.s.",
+   "value": "Farmont Slovakia a.s.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "97644447",
+   "value": "97644447",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2994827044",
+   "value": "SK2994827044",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK62 6500 1146 3585 5000 4447",
+   "value": "SK6265001146358550004447",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "1.809,7800",
+   "value": "1809.78",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "15.09.2025",
+   "value": "2025-09-15",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "29.09.2025",
+   "value": "2025-09-29",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2994827044",
+   "value": "2994827044",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "256474703",
+   "value": "256474703",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "1.809,78",
+   "value": "1809.78",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25131643",
+   "value": "OB25131643",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "T 25489591",
+   "value": "T 25489591",
+   "page": 1
+  },
+  "customer_number": {
+   "printed": "5900",
+   "value": "5900",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina opaľovací krém SPF 50+ 50 ml",
+     "value": "Kalmina opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "6,00",
+     "value": "6"
+    },
+    "line_net": {
+     "printed": "80,10",
+     "value": "80.10"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3800427928362",
+     "value": "3800427928362"
+    },
+    "unit_price": {
+     "printed": "13,35",
+     "value": "13.35"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek kvapky do nosa 10 ml",
+     "value": "Nutrilek kvapky do nosa 10 ml"
+    },
+    "quantity": {
+     "printed": "10,00",
+     "value": "10"
+    },
+    "line_net": {
+     "printed": "26,60",
+     "value": "26.60"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8589618816644",
+     "value": "8589618816644"
+    },
+    "unit_price": {
+     "printed": "2,66",
+     "value": "2.66"
+    },
+    "sukl_code": {
+     "printed": "S13748",
+     "value": "S13748"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "7L28357",
+      "value": "7L28357"
+     },
+     "expiry": {
+      "printed": "03/29",
+      "value": "03/29"
+     },
+     "quantity": {
+      "printed": "10,00",
+      "value": "10"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana kvapky do nosa 10 ml",
+     "value": "Herbana kvapky do nosa 10 ml"
+    },
+    "quantity": {
+     "printed": "30,00",
+     "value": "30"
+    },
+    "line_net": {
+     "printed": "192,30",
+     "value": "192.30"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8586041447940",
+     "value": "8586041447940"
+    },
+    "unit_price": {
+     "printed": "6,41",
+     "value": "6.41"
+    },
+    "sukl_code": {
+     "printed": "S49252",
+     "value": "S49252"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "7E83800",
+      "value": "7E83800"
+     },
+     "expiry": {
+      "printed": "01/26",
+      "value": "01/26"
+     },
+     "quantity": {
+      "printed": "30,00",
+      "value": "30"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek sprchový gél s levanduľou 400 ml",
+     "value": "Nutrilek sprchový gél s levanduľou 400 ml"
+    },
+    "quantity": {
+     "printed": "12,00",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "133,92",
+     "value": "133.92"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3009045862441",
+     "value": "3009045862441"
+    },
+    "unit_price": {
+     "printed": "11,16",
+     "value": "11.16"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea liekovka 300 ml s uzáverom",
+     "value": "Florea liekovka 300 ml s uzáverom"
+    },
+    "quantity": {
+     "printed": "2,00",
+     "value": "2"
+    },
+    "line_net": {
+     "printed": "75,68",
+     "value": "75.68"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8582201955614",
+     "value": "8582201955614"
+    },
+    "unit_price": {
+     "printed": "37,84",
+     "value": "37.84"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan kapsuly na trávenie 30 cps",
+     "value": "Medisan kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "20,00",
+     "value": "20"
+    },
+    "line_net": {
+     "printed": "142,00",
+     "value": "142.00"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8596646354833",
+     "value": "8596646354833"
+    },
+    "unit_price": {
+     "printed": "7,10",
+     "value": "7.10"
+    },
+    "sukl_code": {
+     "printed": "S17214",
+     "value": "S17214"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "2E64398",
+      "value": "2E64398"
+     },
+     "expiry": {
+      "printed": "03/26",
+      "value": "03/26"
+     },
+     "quantity": {
+      "printed": "20,00",
+      "value": "20"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea opaľovací krém SPF 50+ 50 ml",
+     "value": "Florea opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "6,00",
+     "value": "6"
+    },
+    "line_net": {
+     "printed": "125,10",
+     "value": "125.10"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8592146963094",
+     "value": "8592146963094"
+    },
+    "unit_price": {
+     "printed": "20,85",
+     "value": "20.85"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek tablety proti bolesti 500 mg 20 tbl",
+     "value": "Nutrilek tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "6,00",
+     "value": "6"
+    },
+    "line_net": {
+     "printed": "13,68",
+     "value": "13.68"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8588576333996",
+     "value": "8588576333996"
+    },
+    "unit_price": {
+     "printed": "2,28",
+     "value": "2.28"
+    },
+    "sukl_code": {
+     "printed": "S86882",
+     "value": "S86882"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6N90250",
+      "value": "6N90250"
+     },
+     "expiry": {
+      "printed": "10/27",
+      "value": "10/27"
+     },
+     "quantity": {
+      "printed": "6,00",
+      "value": "6"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek manžeta k tlakomeru 22-42 cm",
+     "value": "Nutrilek manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "60,00",
+     "value": "60"
+    },
+    "line_net": {
+     "printed": "736,80",
+     "value": "736.80"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4717775703437",
+     "value": "4717775703437"
+    },
+    "unit_price": {
+     "printed": "12,28",
+     "value": "12.28"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "5%",
+    "value": "5"
+   },
+   "base": {
+    "printed": "374,5800",
+    "value": "374.58"
+   },
+   "vat": {
+    "printed": "18,7300",
+    "value": "18.73"
+   },
+   "page": 1
+  },
+  {
+   "rate": {
+    "printed": "23%",
+    "value": "23"
+   },
+   "base": {
+    "printed": "1.151,6000",
+    "value": "1151.60"
+   },
+   "vat": {
+    "printed": "264,8700",
+    "value": "264.87"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

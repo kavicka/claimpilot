@@ -1,0 +1,64 @@
+{% extends "invoices/_base.html.j2" %}
+{% set h = header %}{% set s = inv.supplier %}{% set b = inv.buyer %}
+{% block pagecounter %}"Strana " counter(page) " dokladu {{ h.invoice_number.printed }}"{% endblock %}
+{% block footnote %}Ekonomický systém ÚČTO Plus{% endblock %}
+{% block style %}
+.lines th { border-bottom: .8pt solid #000; font-size: 7.2pt; }
+.lines td.name { width: 30%; }
+.ean td { padding-top: 0; color: #333; font-size: 7.4pt; }
+.recap th, .recap td { padding: .3mm 1.5mm; }
+{% endblock %}
+{% block body %}
+<div class="two">
+ <div>
+  <div class="b" style="font-size:11pt">{{ s.name }}</div>
+  <div class="muted">Dodávateľ:</div>
+  <div>{{ s.name }}<br>{{ s.street }}<br>{{ s.zip }} {{ s.city }}</div>
+  <div>IČO: {{ h.supplier_ico.printed }}<br>DIČ: {{ h.supplier_dic.printed }}<br>IČ DPH: {{ h.supplier_vat_id.printed }}</div>
+  <div>Telefón: {{ s.phone }}<br>E-mail: {{ s.email }}</div>
+  <div style="margin-top:2mm">Banka: {{ s.bank }}<br>SWIFT: {{ s.swift }}<br>IBAN: {{ h.supplier_iban.printed }}</div>
+ </div>
+ <div>
+  <div class="b" style="font-size:12pt;text-align:right">{{ title }} č.{{ h.invoice_number.printed }}</div>
+  <table class="small" style="width:auto">
+   <tr><td>Variabilný symbol:</td><td>{{ h.variable_symbol.printed }}</td></tr>
+   <tr><td>Konštantný symbol:</td><td>{{ h.constant_symbol.printed }}</td></tr>
+   {% if h.order_number %}<tr><td>Objednávka č.:</td><td>{{ h.order_number.printed }}</td></tr>{% endif %}
+   {% if h.original_invoice_number %}<tr><td>Opravuje faktúru č.:</td><td>{{ h.original_invoice_number.printed }}</td></tr>{% endif %}
+  </table>
+  <div class="box" style="margin-top:2mm"><span class="muted">Odberateľ:</span> IČO: {{ h.buyer_ico.printed }} &nbsp; DIČ: {{ h.buyer_dic.printed }} &nbsp; IČ DPH: {{ h.buyer_vat_id.printed }}<br>
+   <span class="b">{{ b.name }}</span><br>{{ b.street }}<br>{{ b.zip }} {{ b.city }}</div>
+  <table class="small" style="width:auto;margin-top:2mm">
+   <tr><td>Dátum vyhotovenia:</td><td>{{ h.issue_date.printed }}</td></tr>
+   <tr><td>Dátum splatnosti:</td><td class="b">{{ h.due_date.printed }}</td></tr>
+   <tr><td>Dátum dodania tovaru/služby:</td><td>{{ h.tax_point_date.printed }}</td></tr>
+   <tr><td>Forma úhrady:</td><td>Príkazom</td></tr>
+   <tr><td>Konečný príjemca:</td><td>{{ inv.delivery_point }}</td></tr>
+  </table>
+ </div>
+</div>
+
+<table class="lines" style="margin-top:4mm">
+ <thead><tr><th>Označenie dodávky</th><th class="num">Množstvo</th><th class="num">J.cena</th><th class="num">Zľava</th><th class="num">Cena</th><th class="num">%DPH</th><th class="num">DPH</th><th class="num">EUR Celkom</th></tr></thead>
+ {% if h.order_number %}<tr><td colspan="8">Fakturujeme Vám tovar podľa Vašej objednávky: {{ h.order_number.printed }}.</td></tr>{% endif %}
+ {% for ln in lines %}{% set c = ln.cells %}
+ <tbody class="nobreak">
+ <tr><td class="name">{{ c.supplier_code.printed }}:{{ c.name.printed }}</td><td class="num">{{ c.quantity.printed }} {{ c.unit.printed }}</td><td class="num">{{ c.unit_price.printed }}</td><td class="num">{{ c.discount_pct.printed }}</td><td class="num">{{ c.line_net.printed }}</td><td class="num">{{ c.vat_rate.printed }}</td><td class="num">{{ c.vat_amount.printed }}</td><td class="num">{{ c.line_gross.printed }}</td></tr>
+ <tr class="ean"><td colspan="8">EAN {{ c.ean.printed }}</td></tr>
+ </tbody>
+ {% endfor %}
+ {% for fee in fees if not fee.included %}
+ <tr><td class="name">{{ fee.label.printed }}</td><td class="num">1 ks</td><td class="num">{{ fee.net.printed }}</td><td class="num">0,00%</td><td class="num">{{ fee.net.printed }}</td><td class="num">23%</td><td></td><td></td></tr>
+ {% endfor %}
+ {% if h.proforma_number %}<tr><td class="name">Odpočet zálohy {{ h.proforma_number.printed }}</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="num">{{ h.proforma_settled.printed }}</td></tr>{% endif %}
+ <tr class="b"><td>Súčet položiek</td><td></td><td></td><td></td><td class="num">{{ h.total_net.printed }}</td><td></td><td class="num">{{ h.total_vat.printed }}</td><td class="num">{{ h.total.printed }}</td></tr>
+ <tr class="b"><td>SPOLU NA ÚHRADU</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="num">{{ h.amount_due.printed }}</td></tr>
+</table>
+<div class="small">Vystavil: {{ s.contact }}</div>
+<p class="small">Dovoľujeme si Vás upozorniť, že v prípade nedodržania termínu splatnosti uvedeného na faktúre Vám môžeme účtovať úrok z omeškania v zákonnej výške.</p>
+<table class="recap nobreak" style="width:75%;margin-left:25%">
+ <tr><th>Rekapitulácia v EUR:</th><th class="num">Základ v EUR</th><th class="num">Sadzba</th><th class="num">DPH v EUR</th><th class="num">Spolu s DPH v EUR</th></tr>
+ {% for r in recap %}<tr><td></td><td class="num">{{ r.base.printed }}</td><td class="num">{{ r.rate.printed }}</td><td class="num">{{ r.vat.printed }}</td><td class="num">{{ st.amount(inv.recap[loop.index0].base + inv.recap[loop.index0].vat) }}</td></tr>{% endfor %}
+</table>
+<div style="margin-top:6mm">Prevzal: ______________ &nbsp; &nbsp; Pečiatka:</div>
+{% endblock %}

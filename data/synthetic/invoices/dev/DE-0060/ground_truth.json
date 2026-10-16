@@ -1,0 +1,279 @@
+{
+ "invoice_id": "DE-0060",
+ "split": "dev",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "18cc0895a9b2d028f40b3593e5c5a050102c8aaec296e57ff79656532c7ce6ab",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 150,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "batch_split",
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "novamed",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "253501",
+   "value": "253501",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "02.04.2025",
+   "value": "2025-04-02",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Novamed Pharma CZ s.r.o.",
+   "value": "Novamed Pharma CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "90907841",
+   "value": "90907841",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ90907841",
+   "value": "CZ90907841",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ57 5500 0000 0018 6736 2483",
+   "value": "CZ5755000000001867362483",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "11 863,44",
+   "value": "11863.44",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "11 863,44",
+   "value": "11863.44",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25076006",
+   "value": "OB25076006",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita tablety proti bolesti 500 mg 20 tbl",
+     "value": "DermaVita tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "8 222,40",
+     "value": "8222.40"
+    },
+    "ean": {
+     "printed": "8597856203416",
+     "value": "8597856203416"
+    },
+    "unit_price": {
+     "printed": "57,10",
+     "value": "57.10"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "4N81607",
+      "value": "4N81607"
+     },
+     "expiry": {
+      "printed": "03/28",
+      "value": "03/28"
+     },
+     "quantity": {
+      "printed": "137",
+      "value": "137"
+     }
+    },
+    {
+     "batch": {
+      "printed": "4N81259",
+      "value": "4N81259"
+     },
+     "expiry": {
+      "printed": "03/28",
+      "value": "03/28"
+     },
+     "quantity": {
+      "printed": "7",
+      "value": "7"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina - bylinný čaj na trávenie 20x1,5g",
+     "value": "Kalmina - bylinný čaj na trávenie 20x1,5g"
+    },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "846,72",
+     "value": "846.72"
+    },
+    "ean": {
+     "printed": "8587777100451",
+     "value": "8587777100451"
+    },
+    "unit_price": {
+     "printed": "70,56",
+     "value": "70.56"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6K37714",
+      "value": "6K37714"
+     },
+     "expiry": {
+      "printed": "08/28",
+      "value": "08/28"
+     },
+     "quantity": {
+      "printed": "12",
+      "value": "12"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita - kláštorný čaj na priedušky 20x2g",
+     "value": "DermaVita - kláštorný čaj na priedušky 20x2g"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "2 794,32",
+     "value": "2794.32"
+    },
+    "ean": {
+     "printed": "8580238490900",
+     "value": "8580238490900"
+    },
+    "unit_price": {
+     "printed": "116,43",
+     "value": "116.43"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5A61997",
+      "value": "5A61997"
+     },
+     "expiry": {
+      "printed": "01/29",
+      "value": "01/29"
+     },
+     "quantity": {
+      "printed": "24",
+      "value": "24"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "11 863,44",
+    "value": "11863.44"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

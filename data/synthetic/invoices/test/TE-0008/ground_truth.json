@@ -1,0 +1,305 @@
+{
+ "invoice_id": "TE-0008",
+ "split": "test",
+ "layout": "sap",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "b55282ea6b0d84a005acdbde6cb5d506cdabdbf3f7288673f43305acf87ca108",
+ "pages_total": 2,
+ "pages_present": 2,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "dual_currency",
+  "reverse_charge",
+  "terms_page"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "lumina",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "Faktúra",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "290955409",
+   "value": "290955409",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "06.06.2025",
+   "value": "2025-06-06",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Lumina Cosmetics CZ s.r.o.",
+   "value": "Lumina Cosmetics CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "95474463",
+   "value": "95474463",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ95474463",
+   "value": "CZ95474463",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ62 0100 0000 0058 2742 5761",
+   "value": "CZ6201000000005827425761",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "3.141,60",
+   "value": "3141.60",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "06.06.2025",
+   "value": "2025-06-06",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "20.06.2025",
+   "value": "2025-06-20",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "CZ95474463",
+   "value": "CZ95474463",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "93533446",
+   "value": "93533446",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2992944152",
+   "value": "2992944152",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "290955409",
+   "value": "290955409",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "specific_symbol": {
+   "printed": "113129",
+   "value": "113129",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "3.141,60",
+   "value": "3141.60",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "3.141,60",
+   "value": "3141.60",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "0,00",
+   "value": "0.00",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25815454",
+   "value": "OB25815454",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "29463435",
+   "value": "29463435",
+   "page": 1
+  },
+  "customer_number": {
+   "printed": "15616",
+   "value": "15616",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.",
+   "value": true,
+   "page": 1
+  },
+  "second_currency_total": {
+   "printed": "78.697,08",
+   "value": "78697.08",
+   "page": 1
+  },
+  "fx_rate": {
+   "printed": "25,05",
+   "value": "25.05",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera sprchový gél s levanduľou 400 ml",
+     "value": "Vivera sprchový gél s levanduľou 400 ml"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "2.214,00",
+     "value": "2214.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8590688535977",
+     "value": "8590688535977"
+    },
+    "supplier_code": {
+     "printed": "AU816459",
+     "value": "AU816459"
+    },
+    "unit_price": {
+     "printed": "11,07",
+     "value": "11.07"
+    },
+    "net_unit_price": {
+     "printed": "11,07",
+     "value": "11.07"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina bandáž členku veľkosť M",
+     "value": "Kalmina bandáž členku veľkosť M"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "597,60",
+     "value": "597.60"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4008222698025",
+     "value": "4008222698025"
+    },
+    "supplier_code": {
+     "printed": "LC184045",
+     "value": "LC184045"
+    },
+    "unit_price": {
+     "printed": "27,07",
+     "value": "27.07"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "24,90",
+     "value": "24.90"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina krém na ruky s panthenolom 100 ml",
+     "value": "Kalmina krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "60",
+     "value": "60"
+    },
+    "line_net": {
+     "printed": "330,00",
+     "value": "330.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4003675427314",
+     "value": "4003675427314"
+    },
+    "supplier_code": {
+     "printed": "MB264204",
+     "value": "MB264204"
+    },
+    "unit_price": {
+     "printed": "5,50",
+     "value": "5.50"
+    },
+    "net_unit_price": {
+     "printed": "5,50",
+     "value": "5.50"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "3.141,60",
+    "value": "3141.60"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

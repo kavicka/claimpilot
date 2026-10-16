@@ -1,0 +1,256 @@
+{
+ "invoice_id": "DE-0031",
+ "split": "dev",
+ "layout": "pohoda",
+ "kind": "credit_note",
+ "file": "credit_note.pdf",
+ "sha256": "78c91d09360ca4cf035ba4f9f2c4bdc201d6bd5d41e92d49de8d3635918f5a23",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "credit_note",
+  "multiline_names"
+ ],
+ "vat_method": "per_line",
+ "supplier_key": "herbana",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "OPRAVNÁ FAKTÚRA - DOBROPIS",
+   "value": "credit_note",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "253251722",
+   "value": "253251722",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "02.07.2025",
+   "value": "2025-07-02",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Herbana Natur s.r.o.",
+   "value": "Herbana Natur s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "92414478",
+   "value": "92414478",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2993547293",
+   "value": "SK2993547293",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK79 7500 0000 0099 5777 8549",
+   "value": "SK7975000000009957778549",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "-50,86",
+   "value": "-50.86",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "30.06.2025",
+   "value": "2025-06-30",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "01.08.2025",
+   "value": "2025-08-01",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2993547293",
+   "value": "2993547293",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "253251722",
+   "value": "253251722",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "-50,86",
+   "value": "-50.86",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "-41,35",
+   "value": "-41.35",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "-9,51",
+   "value": "-9.51",
+   "page": 1
+  },
+  "original_invoice_number": {
+   "printed": "254507976",
+   "value": "254507976",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera pleťový krém na citlivú pleť 50 ml",
+     "value": "Vivera pleťový krém na citlivú pleť 50 ml"
+    },
+    "quantity": {
+     "printed": "-3",
+     "value": "-3"
+    },
+    "line_net": {
+     "printed": "-23,92",
+     "value": "-23.92"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3808804392010",
+     "value": "3808804392010"
+    },
+    "supplier_code": {
+     "printed": "0029",
+     "value": "0029"
+    },
+    "unit_price": {
+     "printed": "9,38",
+     "value": "9.38"
+    },
+    "discount_pct": {
+     "printed": "15,00%",
+     "value": "15"
+    },
+    "vat_amount": {
+     "printed": "-5,50",
+     "value": "-5.50"
+    },
+    "line_gross": {
+     "printed": "-29,42",
+     "value": "-29.42"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea manžeta k tlakomeru 22-42 cm",
+     "value": "Florea manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "-1",
+     "value": "-1"
+    },
+    "line_net": {
+     "printed": "-17,43",
+     "value": "-17.43"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4006342454682",
+     "value": "4006342454682"
+    },
+    "supplier_code": {
+     "printed": "0031",
+     "value": "0031"
+    },
+    "unit_price": {
+     "printed": "19,37",
+     "value": "19.37"
+    },
+    "discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "vat_amount": {
+     "printed": "-4,01",
+     "value": "-4.01"
+    },
+    "line_gross": {
+     "printed": "-21,44",
+     "value": "-21.44"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "23%",
+    "value": "23"
+   },
+   "base": {
+    "printed": "-41,35",
+    "value": "-41.35"
+   },
+   "vat": {
+    "printed": "-9,51",
+    "value": "-9.51"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

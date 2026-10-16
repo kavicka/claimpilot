@@ -1,0 +1,271 @@
+{
+ "invoice_id": "DE-0018",
+ "split": "dev",
+ "layout": "sap",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "a7056191b60d553b80292670dca81a4ec2e8f4f6b1d4daaf81e4dcdcc4e419f6",
+ "pages_total": 2,
+ "pages_present": 2,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "dual_currency",
+  "reverse_charge",
+  "terms_page"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "aurelle",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Faktúra",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "298816753",
+   "value": "298816753",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "22.01.2025",
+   "value": "2025-01-22",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Aurelle Beauty CZ s.r.o.",
+   "value": "Aurelle Beauty CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "94236011",
+   "value": "94236011",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ94236011",
+   "value": "CZ94236011",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ89 2700 0000 0015 5974 2964",
+   "value": "CZ8927000000001559742964",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "4.268,00",
+   "value": "4268.00",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "21.01.2025",
+   "value": "2025-01-21",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "05.02.2025",
+   "value": "2025-02-05",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "CZ94236011",
+   "value": "CZ94236011",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "93533446",
+   "value": "93533446",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2992944152",
+   "value": "2992944152",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "298816753",
+   "value": "298816753",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "specific_symbol": {
+   "printed": "704837",
+   "value": "704837",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "4.268,00",
+   "value": "4268.00",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "4.268,00",
+   "value": "4268.00",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "0,00",
+   "value": "0.00",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25456404",
+   "value": "OB25456404",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "29809597",
+   "value": "29809597",
+   "page": 1
+  },
+  "customer_number": {
+   "printed": "41667",
+   "value": "41667",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.",
+   "value": true,
+   "page": 1
+  },
+  "second_currency_total": {
+   "printed": "106.913,40",
+   "value": "106913.40",
+   "page": 1
+  },
+  "fx_rate": {
+   "printed": "25,05",
+   "value": "25.05",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita šampón proti lupinám 250 ml",
+     "value": "DermaVita šampón proti lupinám 250 ml"
+    },
+    "quantity": {
+     "printed": "100",
+     "value": "100"
+    },
+    "line_net": {
+     "printed": "551,00",
+     "value": "551.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "3006786769381",
+     "value": "3006786769381"
+    },
+    "supplier_code": {
+     "printed": "LC277515",
+     "value": "LC277515"
+    },
+    "unit_price": {
+     "printed": "5,80",
+     "value": "5.80"
+    },
+    "struct_discount_pct": {
+     "printed": "5,00%",
+     "value": "5"
+    },
+    "net_unit_price": {
+     "printed": "5,51",
+     "value": "5.51"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit manžeta k tlakomeru 22-42 cm",
+     "value": "Sanovit manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "100",
+     "value": "100"
+    },
+    "line_net": {
+     "printed": "3.717,00",
+     "value": "3717.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4710340078817",
+     "value": "4710340078817"
+    },
+    "supplier_code": {
+     "printed": "AU756002",
+     "value": "AU756002"
+    },
+    "unit_price": {
+     "printed": "39,13",
+     "value": "39.13"
+    },
+    "struct_discount_pct": {
+     "printed": "5,00%",
+     "value": "5"
+    },
+    "net_unit_price": {
+     "printed": "37,17",
+     "value": "37.17"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "4.268,00",
+    "value": "4268.00"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

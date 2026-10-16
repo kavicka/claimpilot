@@ -1,0 +1,347 @@
+{
+ "invoice_id": "DE-0013",
+ "split": "dev",
+ "layout": "sap",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "f54606f488ade89308fd40c39fb4dc16e3e29e68e8e6fd3fd6965999a025d3ad",
+ "pages_total": 2,
+ "pages_present": 2,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "dual_currency",
+  "reverse_charge",
+  "terms_page"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "aurelle",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "Faktúra",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "290275231",
+   "value": "290275231",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "03.05.2025",
+   "value": "2025-05-03",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Aurelle Beauty CZ s.r.o.",
+   "value": "Aurelle Beauty CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "94236011",
+   "value": "94236011",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ94236011",
+   "value": "CZ94236011",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ89 2700 0000 0015 5974 2964",
+   "value": "CZ8927000000001559742964",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "1.441,80",
+   "value": "1441.80",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "03.05.2025",
+   "value": "2025-05-03",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "17.05.2025",
+   "value": "2025-05-17",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "CZ94236011",
+   "value": "CZ94236011",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "290275231",
+   "value": "290275231",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "specific_symbol": {
+   "printed": "971083",
+   "value": "971083",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "1.441,80",
+   "value": "1441.80",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "1.441,80",
+   "value": "1441.80",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "0,00",
+   "value": "0.00",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25721397",
+   "value": "OB25721397",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "29626237",
+   "value": "29626237",
+   "page": 1
+  },
+  "customer_number": {
+   "printed": "80562",
+   "value": "80562",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.",
+   "value": true,
+   "page": 1
+  },
+  "second_currency_total": {
+   "printed": "36.117,09",
+   "value": "36117.09",
+   "page": 1
+  },
+  "fx_rate": {
+   "printed": "25,05",
+   "value": "25.05",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek manžeta k tlakomeru 22-42 cm",
+     "value": "Nutrilek manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "140,64",
+     "value": "140.64"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8587480109994",
+     "value": "8587480109994"
+    },
+    "supplier_code": {
+     "printed": "MB748628",
+     "value": "MB748628"
+    },
+    "unit_price": {
+     "printed": "6,37",
+     "value": "6.37"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "5,86",
+     "value": "5.86"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita šampón proti lupinám 250 ml",
+     "value": "DermaVita šampón proti lupinám 250 ml"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "835,20",
+     "value": "835.20"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "3006786769381",
+     "value": "3006786769381"
+    },
+    "supplier_code": {
+     "printed": "LC277515",
+     "value": "LC277515"
+    },
+    "unit_price": {
+     "printed": "5,80",
+     "value": "5.80"
+    },
+    "net_unit_price": {
+     "printed": "5,80",
+     "value": "5.80"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea teplomer digitálny",
+     "value": "Florea teplomer digitálny"
+    },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "413,88",
+     "value": "413.88"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4710325847193",
+     "value": "4710325847193"
+    },
+    "supplier_code": {
+     "printed": "LC362754",
+     "value": "LC362754"
+    },
+    "unit_price": {
+     "printed": "38,32",
+     "value": "38.32"
+    },
+    "promo_discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "net_unit_price": {
+     "printed": "34,49",
+     "value": "34.49"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina šampón proti lupinám 250 ml",
+     "value": "Kalmina šampón proti lupinám 250 ml"
+    },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "52,08",
+     "value": "52.08"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4007076223865",
+     "value": "4007076223865"
+    },
+    "supplier_code": {
+     "printed": "MB810925",
+     "value": "MB810925"
+    },
+    "unit_price": {
+     "printed": "4,34",
+     "value": "4.34"
+    },
+    "net_unit_price": {
+     "printed": "4,34",
+     "value": "4.34"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "1.441,80",
+    "value": "1441.80"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

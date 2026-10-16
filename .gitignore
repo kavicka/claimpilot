@@ -14,6 +14,10 @@ ui/out/
 data/synthetic/claims/**/*.pdf
 data/synthetic/claims/**/*.jpg
 data/synthetic/claims/**/*.png
+# Synthetic invoices: PDFs are rebuilt by `make data-invoices`; the train split is not committed.
+data/synthetic/invoices/**/*.pdf
+data/synthetic/invoices/train/
+data/synthetic/invoices/erp-train.json
 data/storage/
 *.log
 data/cache/renders/

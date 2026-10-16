@@ -1,0 +1,1282 @@
+{
+ "invoice_id": "TE-0048",
+ "split": "test",
+ "layout": "wholesale",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "502f5e7aa1ddb408789e7fe0e8ba8a93ea30055c86e29a664eff8b5bd1f34469",
+ "pages_total": 2,
+ "pages_present": 2,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "fee_included"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "medika",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "FAKTÚRA",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "250148989",
+   "value": "250148989",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "05.05.2025",
+   "value": "2025-05-05",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Medika Distribúcia a.s.",
+   "value": "Medika Distribúcia a.s.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "98618881",
+   "value": "98618881",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2918078559",
+   "value": "SK2918078559",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK44 5200 0000 0074 5333 0369",
+   "value": "SK8431000000001872531869",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 2
+  },
+  "total": {
+   "printed": "9.886,5300",
+   "value": "9886.53",
+   "page": 2
+  },
+  "tax_point_date": {
+   "printed": "04.05.2025",
+   "value": "2025-05-04",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "04.06.2025",
+   "value": "2025-06-04",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2918078559",
+   "value": "2918078559",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "93533446",
+   "value": "93533446",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2992944152",
+   "value": "2992944152",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "250148989",
+   "value": "250148989",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "9.886,53",
+   "value": "9886.53",
+   "page": 2
+  },
+  "order_number": {
+   "printed": "OB25727700",
+   "value": "OB25727700",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "T 25309384",
+   "value": "T 25309384",
+   "page": 2
+  },
+  "customer_number": {
+   "printed": "53421",
+   "value": "53421",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan masť na hojenie rán 30 g",
+     "value": "Medisan masť na hojenie rán 30 g"
+    },
+    "quantity": {
+     "printed": "12,00",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "93,48",
+     "value": "93.48"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8583073043973",
+     "value": "8583073043973"
+    },
+    "unit_price": {
+     "printed": "7,79",
+     "value": "7.79"
+    },
+    "sukl_code": {
+     "printed": "S96953",
+     "value": "S96953"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "7C41021",
+      "value": "7C41021"
+     },
+     "expiry": {
+      "printed": "04/29",
+      "value": "04/29"
+     },
+     "quantity": {
+      "printed": "12,00",
+      "value": "12"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek vitamín C 500 mg 60 tbl",
+     "value": "Nutrilek vitamín C 500 mg 60 tbl"
+    },
+    "quantity": {
+     "printed": "6,00",
+     "value": "6"
+    },
+    "line_net": {
+     "printed": "11,88",
+     "value": "11.88"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8596094982015",
+     "value": "8596094982015"
+    },
+    "unit_price": {
+     "printed": "1,98",
+     "value": "1.98"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "8K16144",
+      "value": "8K16144"
+     },
+     "expiry": {
+      "printed": "11/27",
+      "value": "11/27"
+     },
+     "quantity": {
+      "printed": "6,00",
+      "value": "6"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina sprchový gél s levanduľou 400 ml",
+     "value": "Kalmina sprchový gél s levanduľou 400 ml"
+    },
+    "quantity": {
+     "printed": "90,00",
+     "value": "90"
+    },
+    "line_net": {
+     "printed": "507,60",
+     "value": "507.60"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3006132318768",
+     "value": "3006132318768"
+    },
+    "unit_price": {
+     "printed": "5,64",
+     "value": "5.64"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita sprchový gél s levanduľou 400 ml",
+     "value": "DermaVita sprchový gél s levanduľou 400 ml"
+    },
+    "quantity": {
+     "printed": "12,00",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "126,72",
+     "value": "126.72"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3009456749331",
+     "value": "3009456749331"
+    },
+    "unit_price": {
+     "printed": "10,56",
+     "value": "10.56"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan kapsuly na trávenie 30 cps",
+     "value": "Medisan kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "5,00",
+     "value": "5"
+    },
+    "line_net": {
+     "printed": "20,20",
+     "value": "20.20"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8594194962005",
+     "value": "8594194962005"
+    },
+    "unit_price": {
+     "printed": "4,04",
+     "value": "4.04"
+    },
+    "sukl_code": {
+     "printed": "S29465",
+     "value": "S29465"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6N37390",
+      "value": "6N37390"
+     },
+     "expiry": {
+      "printed": "12/29",
+      "value": "12/29"
+     },
+     "quantity": {
+      "printed": "5,00",
+      "value": "5"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek teplomer digitálny",
+     "value": "Nutrilek teplomer digitálny"
+    },
+    "quantity": {
+     "printed": "12,00",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "234,12",
+     "value": "234.12"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4002461171547",
+     "value": "4002461171547"
+    },
+    "unit_price": {
+     "printed": "19,51",
+     "value": "19.51"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera sirup na kašeľ 100 ml",
+     "value": "Vivera sirup na kašeľ 100 ml"
+    },
+    "quantity": {
+     "printed": "30,00",
+     "value": "30"
+    },
+    "line_net": {
+     "printed": "373,20",
+     "value": "373.20"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8584698167303",
+     "value": "8584698167303"
+    },
+    "unit_price": {
+     "printed": "12,44",
+     "value": "12.44"
+    },
+    "sukl_code": {
+     "printed": "S72518",
+     "value": "S72518"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "1N52470",
+      "value": "1N52470"
+     },
+     "expiry": {
+      "printed": "11/28",
+      "value": "11/28"
+     },
+     "quantity": {
+      "printed": "30,00",
+      "value": "30"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea vitamín C 500 mg 60 tbl",
+     "value": "Florea vitamín C 500 mg 60 tbl"
+    },
+    "quantity": {
+     "printed": "24,00",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "96,96",
+     "value": "96.96"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8589407989467",
+     "value": "8589407989467"
+    },
+    "unit_price": {
+     "printed": "4,04",
+     "value": "4.04"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "2A91374",
+      "value": "2A91374"
+     },
+     "expiry": {
+      "printed": "05/27",
+      "value": "05/27"
+     },
+     "quantity": {
+      "printed": "24,00",
+      "value": "24"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera opaľovací krém SPF 50+ 50 ml",
+     "value": "Vivera opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "36,00",
+     "value": "36"
+    },
+    "line_net": {
+     "printed": "357,12",
+     "value": "357.12"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8594331551949",
+     "value": "8594331551949"
+    },
+    "unit_price": {
+     "printed": "9,92",
+     "value": "9.92"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina sirup na kašeľ 100 ml",
+     "value": "Kalmina sirup na kašeľ 100 ml"
+    },
+    "quantity": {
+     "printed": "90,00",
+     "value": "90"
+    },
+    "line_net": {
+     "printed": "1.610,10",
+     "value": "1610.10"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8581673021131",
+     "value": "8581673021131"
+    },
+    "unit_price": {
+     "printed": "17,89",
+     "value": "17.89"
+    },
+    "sukl_code": {
+     "printed": "S86056",
+     "value": "S86056"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "2C43399",
+      "value": "2C43399"
+     },
+     "expiry": {
+      "printed": "07/28",
+      "value": "07/28"
+     },
+     "quantity": {
+      "printed": "90,00",
+      "value": "90"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita manžeta k tlakomeru 22-42 cm",
+     "value": "DermaVita manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "3,00",
+     "value": "3"
+    },
+    "line_net": {
+     "printed": "26,88",
+     "value": "26.88"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8581725271873",
+     "value": "8581725271873"
+    },
+    "unit_price": {
+     "printed": "8,96",
+     "value": "8.96"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea šampón proti lupinám 250 ml",
+     "value": "Florea šampón proti lupinám 250 ml"
+    },
+    "quantity": {
+     "printed": "1,00",
+     "value": "1"
+    },
+    "line_net": {
+     "printed": "17,66",
+     "value": "17.66"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4008067428047",
+     "value": "4008067428047"
+    },
+    "unit_price": {
+     "printed": "17,66",
+     "value": "17.66"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina vitamín C 500 mg 60 tbl",
+     "value": "Kalmina vitamín C 500 mg 60 tbl"
+    },
+    "quantity": {
+     "printed": "24,00",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "134,16",
+     "value": "134.16"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8580549991158",
+     "value": "8580549991158"
+    },
+    "unit_price": {
+     "printed": "5,59",
+     "value": "5.59"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "7B66772",
+      "value": "7B66772"
+     },
+     "expiry": {
+      "printed": "10/29",
+      "value": "10/29"
+     },
+     "quantity": {
+      "printed": "24,00",
+      "value": "24"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita - cukríky s medom a šalviou 40g",
+     "value": "DermaVita - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "60,00",
+     "value": "60"
+    },
+    "line_net": {
+     "printed": "95,40",
+     "value": "95.40"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8582873608054",
+     "value": "8582873608054"
+    },
+    "unit_price": {
+     "printed": "1,59",
+     "value": "1.59"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5B15765",
+      "value": "5B15765"
+     },
+     "expiry": {
+      "printed": "02/29",
+      "value": "02/29"
+     },
+     "quantity": {
+      "printed": "60,00",
+      "value": "60"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana opaľovací krém SPF 50+ 50 ml",
+     "value": "Herbana opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "30,00",
+     "value": "30"
+    },
+    "line_net": {
+     "printed": "350,10",
+     "value": "350.10"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8598989330406",
+     "value": "8598989330406"
+    },
+    "unit_price": {
+     "printed": "11,67",
+     "value": "11.67"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek náplasť elastická 10 ks",
+     "value": "Nutrilek náplasť elastická 10 ks"
+    },
+    "quantity": {
+     "printed": "2,00",
+     "value": "2"
+    },
+    "line_net": {
+     "printed": "72,88",
+     "value": "72.88"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4002337581760",
+     "value": "4002337581760"
+    },
+    "unit_price": {
+     "printed": "36,44",
+     "value": "36.44"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea šampón proti lupinám 250 ml",
+     "value": "Florea šampón proti lupinám 250 ml"
+    },
+    "quantity": {
+     "printed": "1,00",
+     "value": "1"
+    },
+    "line_net": {
+     "printed": "18,21",
+     "value": "18.21"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3008286850040",
+     "value": "3008286850040"
+    },
+    "unit_price": {
+     "printed": "18,21",
+     "value": "18.21"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina - cukríky s medom a šalviou 40g",
+     "value": "Kalmina - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "10,00",
+     "value": "10"
+    },
+    "line_net": {
+     "printed": "18,50",
+     "value": "18.50"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8598088942159",
+     "value": "8598088942159"
+    },
+    "unit_price": {
+     "printed": "1,85",
+     "value": "1.85"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "1K41871",
+      "value": "1K41871"
+     },
+     "expiry": {
+      "printed": "08/26",
+      "value": "08/26"
+     },
+     "quantity": {
+      "printed": "10,00",
+      "value": "10"
+     }
+    }
+   ],
+   "page": 2
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan manžeta k tlakomeru 22-42 cm",
+     "value": "Medisan manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "12,00",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "526,56",
+     "value": "526.56"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4007701278109",
+     "value": "4007701278109"
+    },
+    "unit_price": {
+     "printed": "43,88",
+     "value": "43.88"
+    }
+   },
+   "batches": [],
+   "page": 2
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina masť na hojenie rán 30 g",
+     "value": "Kalmina masť na hojenie rán 30 g"
+    },
+    "quantity": {
+     "printed": "90,00",
+     "value": "90"
+    },
+    "line_net": {
+     "printed": "1.069,20",
+     "value": "1069.20"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8589438035607",
+     "value": "8589438035607"
+    },
+    "unit_price": {
+     "printed": "11,88",
+     "value": "11.88"
+    },
+    "sukl_code": {
+     "printed": "S94849",
+     "value": "S94849"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6B61438",
+      "value": "6B61438"
+     },
+     "expiry": {
+      "printed": "01/29",
+      "value": "01/29"
+     },
+     "quantity": {
+      "printed": "90,00",
+      "value": "90"
+     }
+    }
+   ],
+   "page": 2
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek masť na hojenie rán 30 g",
+     "value": "Nutrilek masť na hojenie rán 30 g"
+    },
+    "quantity": {
+     "printed": "36,00",
+     "value": "36"
+    },
+    "line_net": {
+     "printed": "568,08",
+     "value": "568.08"
+    },
+    "vat_rate": {
+     "printed": "5",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8599229350789",
+     "value": "8599229350789"
+    },
+    "unit_price": {
+     "printed": "15,78",
+     "value": "15.78"
+    },
+    "sukl_code": {
+     "printed": "S54958",
+     "value": "S54958"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "8B27806",
+      "value": "8B27806"
+     },
+     "expiry": {
+      "printed": "07/26",
+      "value": "07/26"
+     },
+     "quantity": {
+      "printed": "36,00",
+      "value": "36"
+     }
+    }
+   ],
+   "page": 2
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera - čaj na pokojný spánok 20x2g",
+     "value": "Vivera - čaj na pokojný spánok 20x2g"
+    },
+    "quantity": {
+     "printed": "12,00",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "44,88",
+     "value": "44.88"
+    },
+    "vat_rate": {
+     "printed": "19",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8581228318334",
+     "value": "8581228318334"
+    },
+    "unit_price": {
+     "printed": "3,74",
+     "value": "3.74"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "7C44279",
+      "value": "7C44279"
+     },
+     "expiry": {
+      "printed": "03/29",
+      "value": "03/29"
+     },
+     "quantity": {
+      "printed": "12,00",
+      "value": "12"
+     }
+    }
+   ],
+   "page": 2
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina telové mlieko s ružovým olejom 330 ml",
+     "value": "Kalmina telové mlieko s ružovým olejom 330 ml"
+    },
+    "quantity": {
+     "printed": "2,00",
+     "value": "2"
+    },
+    "line_net": {
+     "printed": "5,28",
+     "value": "5.28"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4009819361957",
+     "value": "4009819361957"
+    },
+    "unit_price": {
+     "printed": "2,64",
+     "value": "2.64"
+    }
+   },
+   "batches": [],
+   "page": 2
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit náplasť elastická 10 ks",
+     "value": "Sanovit náplasť elastická 10 ks"
+    },
+    "quantity": {
+     "printed": "60,00",
+     "value": "60"
+    },
+    "line_net": {
+     "printed": "1.555,80",
+     "value": "1555.80"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8584080676918",
+     "value": "8584080676918"
+    },
+    "unit_price": {
+     "printed": "25,93",
+     "value": "25.93"
+    }
+   },
+   "batches": [],
+   "page": 2
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea manžeta k tlakomeru 22-42 cm",
+     "value": "Florea manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "24,00",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "356,40",
+     "value": "356.40"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4007050655477",
+     "value": "4007050655477"
+    },
+    "unit_price": {
+     "printed": "14,85",
+     "value": "14.85"
+    }
+   },
+   "batches": [],
+   "page": 2
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan pleťový krém na citlivú pleť 50 ml",
+     "value": "Medisan pleťový krém na citlivú pleť 50 ml"
+    },
+    "quantity": {
+     "printed": "36,00",
+     "value": "36"
+    },
+    "line_net": {
+     "printed": "306,00",
+     "value": "306.00"
+    },
+    "vat_rate": {
+     "printed": "23",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "KS",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3007470221352",
+     "value": "3007470221352"
+    },
+    "unit_price": {
+     "printed": "8,50",
+     "value": "8.50"
+    }
+   },
+   "batches": [],
+   "page": 2
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "5%",
+    "value": "5"
+   },
+   "base": {
+    "printed": "3.734,2600",
+    "value": "3734.26"
+   },
+   "vat": {
+    "printed": "186,7100",
+    "value": "186.71"
+   },
+   "page": 2
+  },
+  {
+   "rate": {
+    "printed": "19%",
+    "value": "19"
+   },
+   "base": {
+    "printed": "401,7800",
+    "value": "401.78"
+   },
+   "vat": {
+    "printed": "76,3400",
+    "value": "76.34"
+   },
+   "page": 2
+  },
+  {
+   "rate": {
+    "printed": "23%",
+    "value": "23"
+   },
+   "base": {
+    "printed": "4.461,3300",
+    "value": "4461.33"
+   },
+   "vat": {
+    "printed": "1.026,1100",
+    "value": "1026.11"
+   },
+   "page": 2
+  }
+ ],
+ "fees": [
+  {
+   "kind": "recycling",
+   "label": {
+    "printed": "Recyklačný poplatok",
+    "value": "Recyklačný poplatok"
+   },
+   "net": {
+    "printed": "2,00",
+    "value": "2.00"
+   },
+   "included": true,
+   "page": 2
+  }
+ ],
+ "findings": []
+}

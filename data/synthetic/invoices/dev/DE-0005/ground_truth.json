@@ -1,0 +1,570 @@
+{
+ "invoice_id": "DE-0005",
+ "split": "dev",
+ "layout": "tangram",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "a2a08b9eef28e926a6b3b109014caac22993d3843fbe9c76e385a2b8e0ad92d7",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "missing_ean"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "vitalis",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Daňový doklad - FAKTÚRA (FV)",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "202571653",
+   "value": "202571653",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "13.01.2025",
+   "value": "2025-01-13",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Vitalis Trade s.r.o.",
+   "value": "Vitalis Trade s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "92633501",
+   "value": "92633501",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2995935921",
+   "value": "SK2995935921",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK16 7500 0000 0020 5907 5697",
+   "value": "SK1675000000002059075697",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "2 674,19",
+   "value": "2674.19",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "13.01.2025",
+   "value": "2025-01-13",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "12.02.2025",
+   "value": "2025-02-12",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2995935921",
+   "value": "2995935921",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "202571653",
+   "value": "202571653",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "2 674,19",
+   "value": "2674.19",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "2 272,72",
+   "value": "2272.72",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "401,47",
+   "value": "401.47",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25316811",
+   "value": "OB25316811",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "DL/823839",
+   "value": "DL/823839",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "SANOVIT KRÉM NA RUKY S PANTHENOLOM 100 ML",
+     "value": "Sanovit krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "30,000",
+     "value": "30"
+    },
+    "line_net": {
+     "printed": "624,93",
+     "value": "624.93"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9985495",
+     "value": "9985495"
+    },
+    "unit_price": {
+     "printed": "20,831",
+     "value": "20.831"
+    },
+    "gross_unit_price": {
+     "printed": "25,6221",
+     "value": "25.6221"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "VIVERA KAPSULY NA TRÁVENIE 30 CPS",
+     "value": "Vivera kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "10,000",
+     "value": "10"
+    },
+    "line_net": {
+     "printed": "143,30",
+     "value": "143.30"
+    },
+    "vat_rate": {
+     "printed": "5%",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9952814",
+     "value": "9952814"
+    },
+    "unit_price": {
+     "printed": "14,330",
+     "value": "14.330"
+    },
+    "gross_unit_price": {
+     "printed": "15,0465",
+     "value": "15.0465"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "HERBANA KRÉM NA RUKY S PANTHENOLOM 100 ML",
+     "value": "Herbana krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "16,000",
+     "value": "16"
+    },
+    "line_net": {
+     "printed": "217,18",
+     "value": "217.18"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9996839",
+     "value": "9996839"
+    },
+    "unit_price": {
+     "printed": "13,574",
+     "value": "13.574"
+    },
+    "gross_unit_price": {
+     "printed": "16,6960",
+     "value": "16.6960"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "HERBANA TABLETY PROTI BOLESTI 500 MG 20 TBL",
+     "value": "Herbana tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "16,000",
+     "value": "16"
+    },
+    "line_net": {
+     "printed": "222,22",
+     "value": "222.22"
+    },
+    "vat_rate": {
+     "printed": "5%",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9986741",
+     "value": "9986741"
+    },
+    "unit_price": {
+     "printed": "13,889",
+     "value": "13.889"
+    },
+    "gross_unit_price": {
+     "printed": "14,5835",
+     "value": "14.5835"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DERMAVITA SIRUP NA KAŠEĽ 100 ML",
+     "value": "DermaVita sirup na kašeľ 100 ml"
+    },
+    "quantity": {
+     "printed": "10,000",
+     "value": "10"
+    },
+    "line_net": {
+     "printed": "172,64",
+     "value": "172.64"
+    },
+    "vat_rate": {
+     "printed": "5%",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9932501",
+     "value": "9932501"
+    },
+    "unit_price": {
+     "printed": "17,264",
+     "value": "17.264"
+    },
+    "gross_unit_price": {
+     "printed": "18,1272",
+     "value": "18.1272"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "VIVERA - BYLINNÝ ČAJ NA TRÁVENIE 20X1,5G",
+     "value": "Vivera - bylinný čaj na trávenie 20x1,5g"
+    },
+    "quantity": {
+     "printed": "12,000",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "36,64",
+     "value": "36.64"
+    },
+    "vat_rate": {
+     "printed": "19%",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9943727",
+     "value": "9943727"
+    },
+    "unit_price": {
+     "printed": "3,053",
+     "value": "3.053"
+    },
+    "gross_unit_price": {
+     "printed": "3,6331",
+     "value": "3.6331"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "MEDISAN SIRUP NA KAŠEĽ 100 ML",
+     "value": "Medisan sirup na kašeľ 100 ml"
+    },
+    "quantity": {
+     "printed": "8,000",
+     "value": "8"
+    },
+    "line_net": {
+     "printed": "99,01",
+     "value": "99.01"
+    },
+    "vat_rate": {
+     "printed": "5%",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9928925",
+     "value": "9928925"
+    },
+    "unit_price": {
+     "printed": "12,376",
+     "value": "12.376"
+    },
+    "gross_unit_price": {
+     "printed": "12,9948",
+     "value": "12.9948"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "SANOVIT KAPSULY NA TRÁVENIE 30 CPS",
+     "value": "Sanovit kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "5,000",
+     "value": "5"
+    },
+    "line_net": {
+     "printed": "28,29",
+     "value": "28.29"
+    },
+    "vat_rate": {
+     "printed": "5%",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9916474",
+     "value": "9916474"
+    },
+    "unit_price": {
+     "printed": "5,657",
+     "value": "5.657"
+    },
+    "gross_unit_price": {
+     "printed": "5,9399",
+     "value": "5.9399"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "NUTRILEK KRÉM NA RUKY S PANTHENOLOM 100 ML",
+     "value": "Nutrilek krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "10,000",
+     "value": "10"
+    },
+    "line_net": {
+     "printed": "173,15",
+     "value": "173.15"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9977330",
+     "value": "9977330"
+    },
+    "unit_price": {
+     "printed": "17,315",
+     "value": "17.315"
+    },
+    "gross_unit_price": {
+     "printed": "21,2975",
+     "value": "21.2975"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "KALMINA TELOVÉ MLIEKO S RUŽOVÝM OLEJOM 330 ML",
+     "value": "Kalmina telové mlieko s ružovým olejom 330 ml"
+    },
+    "quantity": {
+     "printed": "30,000",
+     "value": "30"
+    },
+    "line_net": {
+     "printed": "555,36",
+     "value": "555.36"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9978262",
+     "value": "9978262"
+    },
+    "unit_price": {
+     "printed": "18,512",
+     "value": "18.512"
+    },
+    "gross_unit_price": {
+     "printed": "22,7698",
+     "value": "22.7698"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "5,00%",
+    "value": "5"
+   },
+   "base": {
+    "printed": "665,46",
+    "value": "665.46"
+   },
+   "vat": {
+    "printed": "33,27",
+    "value": "33.27"
+   },
+   "page": 1
+  },
+  {
+   "rate": {
+    "printed": "19,00%",
+    "value": "19"
+   },
+   "base": {
+    "printed": "36,64",
+    "value": "36.64"
+   },
+   "vat": {
+    "printed": "6,96",
+    "value": "6.96"
+   },
+   "page": 1
+  },
+  {
+   "rate": {
+    "printed": "23,00%",
+    "value": "23"
+   },
+   "base": {
+    "printed": "1 570,62",
+    "value": "1570.62"
+   },
+   "vat": {
+    "printed": "361,24",
+    "value": "361.24"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

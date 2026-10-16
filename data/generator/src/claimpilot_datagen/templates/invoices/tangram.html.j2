@@ -1,0 +1,65 @@
+{% extends "invoices/_base.html.j2" %}
+{% set h = header %}{% set s = inv.supplier %}{% set b = inv.buyer %}
+{% block pagecounter %}"Strana " counter(page) "/" counter(pages){% endblock %}
+{% block footnote %}Spracované v systéme FakturaPro{% endblock %}
+{% block style %}
+.lines th { border-top: .6pt solid #000; border-bottom: .6pt solid #000; font-size: 7pt; }
+.recap td { padding: .2mm 1.2mm; }
+.grid td { border: .4pt solid #777; }
+{% endblock %}
+{% block body %}
+<div class="two"><div class="b" style="font-size:11pt">{{ title }}</div><div class="b" style="text-align:right;font-size:11pt">{{ h.invoice_number.printed }}</div></div>
+<table class="grid" style="margin-top:2mm">
+ <tr>
+  <td style="width:50%"><span class="muted">DODÁVATEĽ:</span> &nbsp; IČO: {{ h.supplier_ico.printed }}<br>DIČ: {{ h.supplier_dic.printed }} &nbsp; IČDPH: {{ h.supplier_vat_id.printed }}<br>
+   <span class="b">{{ s.name }}</span><br>{{ s.street }}<br>{{ s.zip }} {{ s.city }}<br>Slovenská republika<br>
+   Telefón {{ s.phone }}<br>Mail {{ s.email }}<br>Banka {{ s.bank }}<br>BIC {{ s.swift }}<br>I-Ban {{ h.supplier_iban.printed }}</td>
+  <td><span class="muted">ODBERATEĽ:</span> &nbsp; IČO: {{ h.buyer_ico.printed }}<br>DIČ: {{ h.buyer_dic.printed }} &nbsp; IČDPH: {{ h.buyer_vat_id.printed }}<br>
+   <span class="b">{{ b.name }}</span><br>{{ b.street }}<br>{{ b.zip }} {{ b.city }}<br>Slovenská republika<br><br>
+   <span class="muted">Miesto dodania:</span><br>{{ inv.delivery_point }}</td>
+ </tr>
+</table>
+<table style="width:auto;margin-top:2mm">
+ <tr><td>Variabilný symbol</td><td>{{ h.variable_symbol.printed }}</td><td>Splatnosť</td><td class="b">{{ h.due_date.printed }}</td></tr>
+ <tr><td>Konštantný symbol</td><td>{{ h.constant_symbol.printed }}</td><td>Dátum vyhotovenia</td><td>{{ h.issue_date.printed }}</td></tr>
+ <tr><td>Špecifický symbol</td><td></td><td>Dátum dodania</td><td>{{ h.tax_point_date.printed }}</td></tr>
+ <tr><td>Spôsob úhrady:</td><td>Prevodný príkaz</td><td>Objednávka</td><td>{{ h.order_number.printed if h.order_number else "" }}</td></tr>
+ {% if h.original_invoice_number %}<tr><td>K faktúre č.</td><td>{{ h.original_invoice_number.printed }}</td><td></td><td></td></tr>{% endif %}
+</table>
+{% if h.delivery_note_numbers %}<div style="margin-top:2mm">Dodacie listy &nbsp; {{ h.delivery_note_numbers.printed }}</div>{% endif %}
+
+<table style="margin-top:2mm"><tr>
+<td style="width:50%">
+<table class="recap" style="width:auto"><tr><th>DPH</th><th class="num">Základ (EUR)</th><th class="num">Daň (EUR)</th></tr>
+ {% for r in recap %}<tr><td>{{ r.rate.printed }}</td><td class="num">{{ r.base.printed }}</td><td class="num">{{ r.vat.printed }}</td></tr>{% endfor %}
+</table></td>
+<td>
+<table class="recap" style="width:auto"><tr><th colspan="2">Rekapitulácia EUR</th></tr>
+ <tr><td>Základ</td><td class="num">{{ h.total_net.printed }}</td></tr>
+ <tr><td>Daň</td><td class="num">{{ h.total_vat.printed }}</td></tr>
+ <tr><td>Vyúčt. zálohy</td><td class="num">{{ h.proforma_settled.printed if h.proforma_settled else "" }}</td></tr>
+ <tr><td>Zaokrúhlenie</td><td class="num">0,00</td></tr>
+ <tr class="b"><td>K ÚHRADE</td><td class="num">{{ h.amount_due.printed }} EUR</td></tr>
+</table></td></tr></table>
+{% if h.proforma_number %}<div class="small">Zúčtovaná záloha: {{ h.proforma_number.printed }}</div>{% endif %}
+<div class="muted">Režim DPH: A=Tuzemsko, B=Prenos daňovej povinnosti v tuzemsku, C=Prenos daňovej povinnosti v EÚ, D=Vývoz do tretích krajín</div>
+
+<table class="lines" style="margin-top:3mm">
+ <thead><tr><th style="width:42%">Kód a názov tovaru</th><th class="num">Množstvo</th><th class="num">Zľava</th><th class="num">Jednotková<br>cena bez DPH</th><th class="num">Jednotková<br>cena s DPH</th><th class="num">DPH</th><th class="num">Spolu<br>bez DPH</th></tr></thead>
+ {% for ln in lines %}{% set c = ln.cells %}
+ <tr class="nobreak"><td>{{ c.supplier_code.printed }} - {{ c.name.printed }}</td><td class="num">{{ c.quantity.printed }} {{ c.unit.printed }}</td><td></td><td class="num">{{ c.unit_price.printed }}</td><td class="num">{{ c.gross_unit_price.printed }}</td><td class="num">A {{ c.vat_rate.printed }}</td><td class="num">{{ c.line_net.printed }}</td></tr>
+ {% endfor %}
+ <tr class="b"><td>Spolu</td><td></td><td></td><td></td><td></td><td></td><td class="num">{{ h.total_net.printed }}</td></tr>
+</table>
+<div class="two" style="margin-top:8mm"><div>Za odberateľa (pečiatka, podpis):</div><div>Faktúru vyhotovil: {{ s.contact }}<br><span class="muted">{{ s.register }}</span></div></div>
+
+{% if "duplicated_page" in inv.edge_cases %}
+<div class="pb"></div>
+<div class="b">{{ h.invoice_number.printed }}</div>
+<table class="lines"><thead><tr><th style="width:42%">Kód a názov tovaru</th><th class="num">Množstvo</th><th class="num">Zľava</th><th class="num">Jednotková cena bez DPH</th><th class="num">Jednotková cena s DPH</th><th class="num">DPH</th><th class="num">Spolu bez DPH</th></tr></thead></table>
+<table style="width:auto;margin-top:4mm"><tr><td>BIC</td><td>{{ s.swift }}</td><td>I-Ban</td><td>{{ h.supplier_iban.printed }}</td></tr>
+<tr><td>Variabilný symbol</td><td>{{ h.variable_symbol.printed }}</td><td>Splatnosť</td><td>{{ h.due_date.printed }}</td></tr>
+<tr><td>Konštantný symbol</td><td>{{ h.constant_symbol.printed }}</td><td class="b">SUMA K ÚHRADE</td><td class="b">{{ h.amount_due.printed }} EUR</td></tr></table>
+<div class="muted" style="margin-top:4mm">Spracované v systéme FakturaPro &nbsp; Strana null/1</div>
+{% endif %}
+{% endblock %}

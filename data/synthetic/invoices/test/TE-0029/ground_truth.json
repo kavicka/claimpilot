@@ -1,0 +1,431 @@
+{
+ "invoice_id": "TE-0029",
+ "split": "test",
+ "layout": "sap",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "dd205fe230491fe0d7f0d4ecbe53ffc3b5f010ba963d792f10d86f482cdf529a",
+ "pages_total": 2,
+ "pages_present": 2,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "dual_currency",
+  "reverse_charge",
+  "terms_page"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "aurelle",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Faktúra",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "295680307",
+   "value": "295680307",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "13.06.2025",
+   "value": "2025-06-13",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Aurelle Beauty CZ s.r.o.",
+   "value": "Aurelle Beauty CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "94236011",
+   "value": "94236011",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ94236011",
+   "value": "CZ94236011",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ89 2700 0000 0015 5974 2964",
+   "value": "CZ8927000000001559742964",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "5.299,92",
+   "value": "5299.92",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "13.06.2025",
+   "value": "2025-06-13",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "12.08.2025",
+   "value": "2025-08-12",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "CZ94236011",
+   "value": "CZ94236011",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "93533446",
+   "value": "93533446",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2992944152",
+   "value": "2992944152",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "295680307",
+   "value": "295680307",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "specific_symbol": {
+   "printed": "796594",
+   "value": "796594",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "5.299,92",
+   "value": "5299.92",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "5.299,92",
+   "value": "5299.92",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "0,00",
+   "value": "0.00",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25111179",
+   "value": "OB25111179",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "29344525",
+   "value": "29344525",
+   "page": 1
+  },
+  "customer_number": {
+   "printed": "38038",
+   "value": "38038",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.",
+   "value": true,
+   "page": 1
+  },
+  "second_currency_total": {
+   "printed": "130.961,02",
+   "value": "130961.02",
+   "page": 1
+  },
+  "fx_rate": {
+   "printed": "24,71",
+   "value": "24.71",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina manžeta k tlakomeru 22-42 cm",
+     "value": "Kalmina manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "1.697,76",
+     "value": "1697.76"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4000031802341",
+     "value": "4000031802341"
+    },
+    "supplier_code": {
+     "printed": "LC267558",
+     "value": "LC267558"
+    },
+    "unit_price": {
+     "printed": "12,81",
+     "value": "12.81"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "11,79",
+     "value": "11.79"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek sprchový gél s levanduľou 400 ml",
+     "value": "Nutrilek sprchový gél s levanduľou 400 ml"
+    },
+    "quantity": {
+     "printed": "48",
+     "value": "48"
+    },
+    "line_net": {
+     "printed": "883,20",
+     "value": "883.20"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8599555261926",
+     "value": "8599555261926"
+    },
+    "supplier_code": {
+     "printed": "LC765213",
+     "value": "LC765213"
+    },
+    "unit_price": {
+     "printed": "18,40",
+     "value": "18.40"
+    },
+    "net_unit_price": {
+     "printed": "18,40",
+     "value": "18.40"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita - čaj na pokojný spánok 20x2g",
+     "value": "DermaVita - čaj na pokojný spánok 20x2g"
+    },
+    "quantity": {
+     "printed": "36",
+     "value": "36"
+    },
+    "line_net": {
+     "printed": "83,52",
+     "value": "83.52"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8587883729614",
+     "value": "8587883729614"
+    },
+    "supplier_code": {
+     "printed": "LC807166",
+     "value": "LC807166"
+    },
+    "unit_price": {
+     "printed": "2,44",
+     "value": "2.44"
+    },
+    "struct_discount_pct": {
+     "printed": "5,00%",
+     "value": "5"
+    },
+    "net_unit_price": {
+     "printed": "2,32",
+     "value": "2.32"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita manžeta k tlakomeru 22-42 cm",
+     "value": "DermaVita manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "36",
+     "value": "36"
+    },
+    "line_net": {
+     "printed": "51,12",
+     "value": "51.12"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8584265457776",
+     "value": "8584265457776"
+    },
+    "supplier_code": {
+     "printed": "AU710358",
+     "value": "AU710358"
+    },
+    "unit_price": {
+     "printed": "1,58",
+     "value": "1.58"
+    },
+    "promo_discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "net_unit_price": {
+     "printed": "1,42",
+     "value": "1.42"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek liekovka 300 ml s uzáverom",
+     "value": "Nutrilek liekovka 300 ml s uzáverom"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "627,36",
+     "value": "627.36"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4711620032345",
+     "value": "4711620032345"
+    },
+    "supplier_code": {
+     "printed": "AU576617",
+     "value": "AU576617"
+    },
+    "unit_price": {
+     "printed": "26,14",
+     "value": "26.14"
+    },
+    "net_unit_price": {
+     "printed": "26,14",
+     "value": "26.14"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek opaľovací krém SPF 50+ 50 ml",
+     "value": "Nutrilek opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "1.956,96",
+     "value": "1956.96"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "3007989083090",
+     "value": "3007989083090"
+    },
+    "supplier_code": {
+     "printed": "LC868046",
+     "value": "LC868046"
+    },
+    "unit_price": {
+     "printed": "14,77",
+     "value": "14.77"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "13,59",
+     "value": "13.59"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "5.299,92",
+    "value": "5299.92"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

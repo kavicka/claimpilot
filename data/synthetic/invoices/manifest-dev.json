@@ -1,0 +1,519 @@
+{
+ "seed": 42,
+ "generator": "invoices-1",
+ "invoices": [
+  {
+   "invoice_id": "DE-0001",
+   "layout": "sap",
+   "kind": "invoice",
+   "file": "DE-0001/invoice.pdf",
+   "sha256": "cdfb359915aa647f9498f6ed40c937d4dfb2668cb938d947a2457f841e658b3a",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0002",
+   "layout": "sap",
+   "kind": "invoice",
+   "file": "DE-0002/invoice.pdf",
+   "sha256": "14904b04135251a5402676000821dff71ceb0a52d71b6175371f531141b0c210",
+   "findings": [
+    "short_delivery"
+   ]
+  },
+  {
+   "invoice_id": "DE-0003",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-0003/invoice.pdf",
+   "sha256": "7c8d4377ca4ab065894e563e65992e87a4cd7a5c92f990481f8a511cc8951341",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0004",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0004/invoice.pdf",
+   "sha256": "f4d1881b5cc90b7128283594b67075c59cd277cc63bf192941913d0d2a8ac70c",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0005",
+   "layout": "tangram",
+   "kind": "invoice",
+   "file": "DE-0005/invoice.pdf",
+   "sha256": "a2a08b9eef28e926a6b3b109014caac22993d3843fbe9c76e385a2b8e0ad92d7",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0006",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0006/invoice.pdf",
+   "sha256": "5db3dd8ebf1ca19cbbae0c350462069a83f9666ae403ccc2bcab2b2c260994ab",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0007",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0007/invoice.pdf",
+   "sha256": "a142e268b476da96761206ac9751f1ae649c9c01a5719d1dbb0f56cd1dba0cd1",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0008",
+   "layout": "tangram",
+   "kind": "invoice",
+   "file": "DE-0008/invoice.pdf",
+   "sha256": "290841690f42e121b3986a2b7734abfce0b56e0124d99d7ec3199f41a1ceb598",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0009",
+   "layout": "sap",
+   "kind": "invoice",
+   "file": "DE-0009/invoice.pdf",
+   "sha256": "4c361e37b6040ff2077d88225d8383d2469d53c7da72885afef5363f55a3f0c3",
+   "findings": [
+    "iban_changed"
+   ]
+  },
+  {
+   "invoice_id": "DE-0010",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0010/invoice.pdf",
+   "sha256": "e20dc3dbc7c932bff508c0240be891a8012f525623094d7ab09a5725f364f11b",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0011",
+   "layout": "tangram",
+   "kind": "proforma",
+   "file": "DE-0011/proforma.pdf",
+   "sha256": "ec1872224b6ad0d8fdc29e372383e80f15799ef5a8145f5a0bf8bbc511216186",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0012",
+   "layout": "tangram",
+   "kind": "invoice",
+   "file": "DE-0012/invoice.pdf",
+   "sha256": "92f4cbed0e56c838947b68e01a74336254ab6d9e5b19aef74014e5ad6e26d41a",
+   "findings": [
+    "price_diff"
+   ]
+  },
+  {
+   "invoice_id": "DE-0013",
+   "layout": "sap",
+   "kind": "invoice",
+   "file": "DE-0013/invoice.pdf",
+   "sha256": "f54606f488ade89308fd40c39fb4dc16e3e29e68e8e6fd3fd6965999a025d3ad",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0014",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-0014/invoice.pdf",
+   "sha256": "fb2ed2dbecbe48f8d9755b73c08901b88cf1d2ab3f5b452929f84dbe5d32dc28",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0015",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0015/invoice.pdf",
+   "sha256": "c698280344768dcbff8c2476ac3c93e1042952461823956a14566aafd9133c9f",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0016",
+   "layout": "pohoda",
+   "kind": "credit_note",
+   "file": "DE-0016/credit_note.pdf",
+   "sha256": "ba09173edfa6f5a9136b7edfce7d011511384d63165a8b2681c2e5aa68cc4f52",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0017",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-0017/invoice.pdf",
+   "sha256": "7c5b530de2f8f8aa117b8757b6c3262cefa595c11e7cb93dca76ef26e53a41c6",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0018",
+   "layout": "sap",
+   "kind": "invoice",
+   "file": "DE-0018/invoice.pdf",
+   "sha256": "a7056191b60d553b80292670dca81a4ec2e8f4f6b1d4daaf81e4dcdcc4e419f6",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0019",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0019/invoice.pdf",
+   "sha256": "d35e769ced78e94e091141392604301770b6af1284652940139d0a18acea22b8",
+   "findings": [
+    "iban_changed",
+    "unknown_supplier"
+   ]
+  },
+  {
+   "invoice_id": "DE-0020",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0020/invoice.pdf",
+   "sha256": "7df55bbf7deb6f0beecd6e41f8eb5c1754cc0d17630c7eb7c4aa1b86d737c60b",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0021",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0021/invoice.pdf",
+   "sha256": "a7b7d923526525c4961fdf8e211398087e9b6b0804e576f0f4bb3d37b12ab112",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0022",
+   "layout": "tangram",
+   "kind": "invoice",
+   "file": "DE-0022/invoice.pdf",
+   "sha256": "0cf94ce110b78043db4c4feebd4d52a69748a06b4582013c0d312e8518999fb1",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0023",
+   "layout": "pohoda",
+   "kind": "credit_note",
+   "file": "DE-0023/credit_note.pdf",
+   "sha256": "a64f4049ce399c1c38583d26a74e85981aaf53d138b5b3818639d49b43e6dfe7",
+   "findings": [
+    "unknown_original"
+   ]
+  },
+  {
+   "invoice_id": "DE-0024",
+   "layout": "sap",
+   "kind": "invoice",
+   "file": "DE-0024/invoice.pdf",
+   "sha256": "9e594f5ae2a8f80d478836d9eee314e87395da26957abb4b515176d521442a81",
+   "findings": [
+    "short_delivery"
+   ]
+  },
+  {
+   "invoice_id": "DE-0025",
+   "layout": "tangram",
+   "kind": "proforma",
+   "file": "DE-0025/proforma.pdf",
+   "sha256": "0fb5b18192a2d584b52033daa8bfd6e21fd089c8c596d7167eba62234b899517",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0026",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0026/invoice.pdf",
+   "sha256": "df80ce33f675dce33ae9e7da34d2d532a8cefaa289cd5ba1b1a4f81696c1fa46",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0027",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-0027/invoice.pdf",
+   "sha256": "906d0cc1ac26133c79e3f9c6b108f2f1c4f48c71eea528c7e7d6e47b359b5ecf",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0028",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-0028/invoice.pdf",
+   "sha256": "2846f671902d8cc247bca9345e5c87abfa88725f88dadd1429b7671cf136e268",
+   "findings": [
+    "short_delivery"
+   ]
+  },
+  {
+   "invoice_id": "DE-0029",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-0029/invoice.pdf",
+   "sha256": "53dc96ca1ddef461d5b6aa28d1c5b53473d65d011bb0daae18b9bc3624c3d30f",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0030",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0030/invoice.pdf",
+   "sha256": "f550c78d88a1050c0876296c68587f4eb8bd8db90ae322a66e6dc84416b791dc",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0031",
+   "layout": "pohoda",
+   "kind": "credit_note",
+   "file": "DE-0031/credit_note.pdf",
+   "sha256": "78c91d09360ca4cf035ba4f9f2c4bdc201d6bd5d41e92d49de8d3635918f5a23",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0032",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-0032/invoice.pdf",
+   "sha256": "caf9135f8cfa2bc3827e8d1e5834d0ee291aa4a0f6bbf1f7b87fd95aa34b890c",
+   "findings": [
+    "unknown_supplier"
+   ]
+  },
+  {
+   "invoice_id": "DE-0033",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-0033/invoice.pdf",
+   "sha256": "472571944f6ae617e77748a13650d07ee28d86f12ee99d5c365012eba17a44c4",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0034",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0034/invoice.pdf",
+   "sha256": "80791717d80f7267070b868bff5598a7612714f3ee4e131fdaa5a6f8d1eb3a23",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0035",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0035/invoice.pdf",
+   "sha256": "621de542d89017accaf22b76d66130f74e05e185220e1d3c2a70a2830205b865",
+   "findings": [
+    "price_diff"
+   ]
+  },
+  {
+   "invoice_id": "DE-0036",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0036/invoice.pdf",
+   "sha256": "d9bfeba260afed037c679bc6ba8b53fad449935a57c08caa8bd2befcaed21511",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0038",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0038/invoice.pdf",
+   "sha256": "4939a84c2086a3de9073f22c20c3d079fadd2425a9cc8b1c747cfdabfd7929d1",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0039",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0039/invoice.pdf",
+   "sha256": "e84c79bee056cb9eee86fe3c2147fc16e2f406d5fe9388a57b60917e2f1924cc",
+   "findings": [
+    "pages_missing"
+   ]
+  },
+  {
+   "invoice_id": "DE-0040",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0040/invoice.pdf",
+   "sha256": "ea42672dd2261b3e5d503b7df1fd3924e0c45bffab5c0d6a31ed57872ae3ab37",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0042",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0042/invoice.pdf",
+   "sha256": "461bd2aa65ea32fa48dd2ec2ae9c8a90cf86c9989a803cf9a3e3edf7acd107e0",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0043",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0043/invoice.pdf",
+   "sha256": "0f94044a88a82e2da7d89a4edbaf1c676b73bef836b50c23ffe7cad0df9166cd",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0044",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0044/invoice.pdf",
+   "sha256": "0642e6ef6c8e1fdbb63c18973a39cdb49ef814a0996a8dba39941c3b43fe166a",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0045",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0045/invoice.pdf",
+   "sha256": "3d2317a427fc26207b0fc83fbfe5501741bfc8ddafc9a001bccec631c27abfb8",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0046",
+   "layout": "tangram",
+   "kind": "invoice",
+   "file": "DE-0046/invoice.pdf",
+   "sha256": "f8494e9d71c2d94842a42df7ce7e1cf045736cb0a9678b0f3fb6ef7cd46451e7",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0047",
+   "layout": "pohoda",
+   "kind": "proforma",
+   "file": "DE-0047/proforma.pdf",
+   "sha256": "38b0aa81be962e37f2d94308c8a0cee2c597104aadbbcd9ca06d06219fa8a6c4",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0048",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-0048/invoice.pdf",
+   "sha256": "a223fd67727f182c2b778c42d7d33f0b8b14424b76a7152abc9e51dbbf2c06e8",
+   "findings": [
+    "iban_changed"
+   ]
+  },
+  {
+   "invoice_id": "DE-0049",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0049/invoice.pdf",
+   "sha256": "0e5bb6ecc4688344ccbd16b8b38f999d7590bb933015e04ba4f5ecf97fc11e04",
+   "findings": [
+    "pages_missing"
+   ]
+  },
+  {
+   "invoice_id": "DE-0050",
+   "layout": "sap",
+   "kind": "invoice",
+   "file": "DE-0050/invoice.pdf",
+   "sha256": "1fd48a987bdd41cbaa097de0d73c50db1cce087c0c4b26848a7e175c0812c233",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0051",
+   "layout": "tangram",
+   "kind": "invoice",
+   "file": "DE-0051/invoice.pdf",
+   "sha256": "f93247779650418e373e01d0622f364396b890e982d8f8493cdc83aaea574904",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0052",
+   "layout": "tangram",
+   "kind": "invoice",
+   "file": "DE-0052/invoice.pdf",
+   "sha256": "ab1fe3c453cb2fb109109f961e1d1fbe5bef7a3f90b865f046148a0c4decbb0c",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0053",
+   "layout": "pohoda",
+   "kind": "credit_note",
+   "file": "DE-0053/credit_note.pdf",
+   "sha256": "be5da7079223750180290a16e92d95864cedf176c438d998b9717e97ff3a75a1",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0054",
+   "layout": "sap",
+   "kind": "invoice",
+   "file": "DE-0054/invoice.pdf",
+   "sha256": "557fc6b43d50da07749dedcab593831d6bcb6a9f144efbbd294c92c82efc914c",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0055",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0055/invoice.pdf",
+   "sha256": "28d7ed6f187b8459698ce6ec0e4d2388c8fc7d208de936b89c9fccb5813d9cef",
+   "findings": [
+    "short_delivery"
+   ]
+  },
+  {
+   "invoice_id": "DE-0056",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0056/invoice.pdf",
+   "sha256": "02f746561242f6eead1ad3c7162e6be96abeee5a4295ad9043185184a6102a55",
+   "findings": [
+    "price_diff"
+   ]
+  },
+  {
+   "invoice_id": "DE-0057",
+   "layout": "wholesale",
+   "kind": "invoice",
+   "file": "DE-0057/invoice.pdf",
+   "sha256": "9818ea1d7ea4e3323d2972f98ed960fd583a93680fd61748a1c7abc4657623a9",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0058",
+   "layout": "tangram",
+   "kind": "invoice",
+   "file": "DE-0058/invoice.pdf",
+   "sha256": "30e9015f061f20a6f2139bc5fc153ce8a0232c34eb88b95ef19ae62b1d81686a",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0059",
+   "layout": "sap",
+   "kind": "credit_note",
+   "file": "DE-0059/credit_note.pdf",
+   "sha256": "ef6aa6fc5a68651038062ae745ec32848f65a26b5d2997660c91fe2760578c84",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-0060",
+   "layout": "scan_en",
+   "kind": "invoice",
+   "file": "DE-0060/invoice.pdf",
+   "sha256": "18cc0895a9b2d028f40b3593e5c5a050102c8aaec296e57ff79656532c7ce6ab",
+   "findings": []
+  },
+  {
+   "invoice_id": "DE-D001",
+   "layout": "sap",
+   "kind": "invoice",
+   "file": "DE-D001/invoice.pdf",
+   "sha256": "557fc6b43d50da07749dedcab593831d6bcb6a9f144efbbd294c92c82efc914c",
+   "findings": [
+    "duplicate"
+   ]
+  },
+  {
+   "invoice_id": "DE-D002",
+   "layout": "pohoda",
+   "kind": "invoice",
+   "file": "DE-D002/invoice.pdf",
+   "sha256": "7c5b530de2f8f8aa117b8757b6c3262cefa595c11e7cb93dca76ef26e53a41c6",
+   "findings": [
+    "duplicate"
+   ]
+  }
+ ]
+}

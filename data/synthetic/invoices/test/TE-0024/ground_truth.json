@@ -1,0 +1,362 @@
+{
+ "invoice_id": "TE-0024",
+ "split": "test",
+ "layout": "sap",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "8cc3377e93be5557d2d3209729c90c57396e187c59df8a594d9572bf043c8845",
+ "pages_total": 2,
+ "pages_present": 2,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "dual_currency",
+  "reverse_charge",
+  "short_delivery",
+  "terms_page"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "aurelle",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "Faktúra",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "294529988",
+   "value": "294529988",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "18.02.2025",
+   "value": "2025-02-18",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Aurelle Beauty CZ s.r.o.",
+   "value": "Aurelle Beauty CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "94236011",
+   "value": "94236011",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ94236011",
+   "value": "CZ94236011",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ89 2700 0000 0015 5974 2964",
+   "value": "CZ8927000000001559742964",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "7.815,32",
+   "value": "7815.32",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "18.02.2025",
+   "value": "2025-02-18",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "20.03.2025",
+   "value": "2025-03-20",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "CZ94236011",
+   "value": "CZ94236011",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "294529988",
+   "value": "294529988",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "specific_symbol": {
+   "printed": "192780",
+   "value": "192780",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "7.815,32",
+   "value": "7815.32",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "7.815,32",
+   "value": "7815.32",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "0,00",
+   "value": "0.00",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25851299",
+   "value": "OB25851299",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "29689268",
+   "value": "29689268",
+   "page": 1
+  },
+  "customer_number": {
+   "printed": "48702",
+   "value": "48702",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.",
+   "value": true,
+   "page": 1
+  },
+  "second_currency_total": {
+   "printed": "193.116,56",
+   "value": "193116.56",
+   "page": 1
+  },
+  "fx_rate": {
+   "printed": "24,71",
+   "value": "24.71",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana detská výživa ovsená kaša 225 g",
+     "value": "Herbana detská výživa ovsená kaša 225 g"
+    },
+    "quantity": {
+     "printed": "60",
+     "value": "60"
+    },
+    "line_net": {
+     "printed": "219,00",
+     "value": "219.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8593774907344",
+     "value": "8593774907344"
+    },
+    "supplier_code": {
+     "printed": "MB400226",
+     "value": "MB400226"
+    },
+    "unit_price": {
+     "printed": "3,65",
+     "value": "3.65"
+    },
+    "net_unit_price": {
+     "printed": "3,65",
+     "value": "3.65"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana opaľovací krém SPF 50+ 50 ml",
+     "value": "Herbana opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "299,52",
+     "value": "299.52"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "3006195692607",
+     "value": "3006195692607"
+    },
+    "supplier_code": {
+     "printed": "AU302486",
+     "value": "AU302486"
+    },
+    "unit_price": {
+     "printed": "13,14",
+     "value": "13.14"
+    },
+    "struct_discount_pct": {
+     "printed": "5,00%",
+     "value": "5"
+    },
+    "net_unit_price": {
+     "printed": "12,48",
+     "value": "12.48"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek - kláštorný čaj na priedušky 20x2g",
+     "value": "Nutrilek - kláštorný čaj na priedušky 20x2g"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "112,80",
+     "value": "112.80"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8587030270235",
+     "value": "8587030270235"
+    },
+    "supplier_code": {
+     "printed": "MB470561",
+     "value": "MB470561"
+    },
+    "unit_price": {
+     "printed": "5,11",
+     "value": "5.11"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "4,70",
+     "value": "4.70"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina bandáž členku veľkosť M",
+     "value": "Kalmina bandáž členku veľkosť M"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "7.184,00",
+     "value": "7184.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8581693735018",
+     "value": "8581693735018"
+    },
+    "supplier_code": {
+     "printed": "LC125311",
+     "value": "LC125311"
+    },
+    "unit_price": {
+     "printed": "42,01",
+     "value": "42.01"
+    },
+    "struct_discount_pct": {
+     "printed": "5,00%",
+     "value": "5"
+    },
+    "promo_discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "net_unit_price": {
+     "printed": "35,92",
+     "value": "35.92"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "7.815,32",
+    "value": "7815.32"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": [
+  {
+   "kind": "short_delivery",
+   "line": 3,
+   "detail": "150 received"
+  }
+ ]
+}

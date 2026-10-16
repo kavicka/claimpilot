@@ -1,0 +1,351 @@
+{
+ "invoice_id": "TE-0043",
+ "split": "test",
+ "layout": "tangram",
+ "kind": "proforma",
+ "file": "proforma.pdf",
+ "sha256": "b68dd3e077c56c31a4a81f6c81efea1bba0ca64fac411d0b5359ff2d49eccdb5",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "missing_ean",
+  "proforma"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "vitalis",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Zálohová faktúra (ZF) - nie je daňový doklad",
+   "value": "proforma",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "ZF202592459",
+   "value": "ZF202592459",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "30.09.2025",
+   "value": "2025-09-30",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Vitalis Trade s.r.o.",
+   "value": "Vitalis Trade s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "92633501",
+   "value": "92633501",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2995935921",
+   "value": "SK2995935921",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK16 7500 0000 0020 5907 5697",
+   "value": "SK1675000000002059075697",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "1 209,79",
+   "value": "1209.79",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "30.09.2025",
+   "value": "2025-09-30",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "30.10.2025",
+   "value": "2025-10-30",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2995935921",
+   "value": "2995935921",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "202592459",
+   "value": "202592459",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "1 209,79",
+   "value": "1209.79",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "983,57",
+   "value": "983.57",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "226,22",
+   "value": "226.22",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25369880",
+   "value": "OB25369880",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "DL/398578",
+   "value": "DL/398578",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "SANOVIT OPAĽOVACÍ KRÉM SPF 50+ 50 ML",
+     "value": "Sanovit opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "5,000",
+     "value": "5"
+    },
+    "line_net": {
+     "printed": "53,02",
+     "value": "53.02"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9973687",
+     "value": "9973687"
+    },
+    "unit_price": {
+     "printed": "10,604",
+     "value": "10.604"
+    },
+    "gross_unit_price": {
+     "printed": "13,0429",
+     "value": "13.0429"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "KALMINA LIEKOVKA 300 ML S UZÁVEROM",
+     "value": "Kalmina liekovka 300 ml s uzáverom"
+    },
+    "quantity": {
+     "printed": "15,000",
+     "value": "15"
+    },
+    "line_net": {
+     "printed": "424,74",
+     "value": "424.74"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9972717",
+     "value": "9972717"
+    },
+    "unit_price": {
+     "printed": "28,316",
+     "value": "28.316"
+    },
+    "gross_unit_price": {
+     "printed": "34,8287",
+     "value": "34.8287"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "NUTRILEK KRÉM NA RUKY S PANTHENOLOM 100 ML",
+     "value": "Nutrilek krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "12,000",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "207,78",
+     "value": "207.78"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9977330",
+     "value": "9977330"
+    },
+    "unit_price": {
+     "printed": "17,315",
+     "value": "17.315"
+    },
+    "gross_unit_price": {
+     "printed": "21,2975",
+     "value": "21.2975"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "KALMINA OPAĽOVACÍ KRÉM SPF 50+ 50 ML",
+     "value": "Kalmina opaľovací krém SPF 50+ 50 ml"
+    },
+    "quantity": {
+     "printed": "30,000",
+     "value": "30"
+    },
+    "line_net": {
+     "printed": "267,66",
+     "value": "267.66"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9994975",
+     "value": "9994975"
+    },
+    "unit_price": {
+     "printed": "8,922",
+     "value": "8.922"
+    },
+    "gross_unit_price": {
+     "printed": "10,9741",
+     "value": "10.9741"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "FLOREA BANDÁŽ ČLENKU VEĽKOSŤ M",
+     "value": "Florea bandáž členku veľkosť M"
+    },
+    "quantity": {
+     "printed": "5,000",
+     "value": "5"
+    },
+    "line_net": {
+     "printed": "30,37",
+     "value": "30.37"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9929004",
+     "value": "9929004"
+    },
+    "unit_price": {
+     "printed": "6,073",
+     "value": "6.073"
+    },
+    "gross_unit_price": {
+     "printed": "7,4698",
+     "value": "7.4698"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "23,00%",
+    "value": "23"
+   },
+   "base": {
+    "printed": "983,57",
+    "value": "983.57"
+   },
+   "vat": {
+    "printed": "226,22",
+    "value": "226.22"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

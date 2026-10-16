@@ -1,0 +1,69 @@
+{% extends "invoices/_base.html.j2" %}
+{% set h = header %}{% set s = inv.supplier %}{% set b = inv.buyer %}
+{% block footnote %}Fakturačný systém EVIA (c) 2003-2025 · {{ st.date(inv.issue_date) }}{% endblock %}
+{% block style %}
+.lines th { border-top: .8pt solid #000; border-bottom: .8pt solid #000; }
+.lines td { padding-top: .3mm; padding-bottom: .3mm; }
+.item td { padding-top: 1.2mm; }
+.sub td { color: #222; font-size: 7.6pt; }
+.recap td { padding: .3mm 1.2mm; }
+{% endblock %}
+{% block body %}
+<div class="two">
+ <div>
+  <div class="b" style="font-size:11pt">{{ s.name }}</div>
+  <div>{{ s.street }} &nbsp; {{ s.zip }} {{ s.city }}</div>
+  <div>IČO: {{ h.supplier_ico.printed }}</div>
+  <div>IČ DPH: {{ h.supplier_vat_id.printed }} &nbsp; DIČ: {{ h.supplier_dic.printed }}</div>
+  <div class="muted">{{ s.register }}</div>
+  <div>Banka: {{ s.bank }} &nbsp; swift: {{ s.swift }}</div>
+  <div>IBAN: {{ h.supplier_iban.printed }}</div>
+  <div>forma úhrady: Prevodom</div>
+  <table style="width:auto;margin-top:2mm">
+   <tr><td>dátum splatnosti:</td><td class="b">{{ h.due_date.printed }}</td><td>variab. sym.:</td><td>{{ h.variable_symbol.printed }}</td></tr>
+   <tr><td>dátum dodania:</td><td>{{ h.tax_point_date.printed }}</td><td></td><td></td></tr>
+   <tr><td>dátum vystavenia:</td><td>{{ h.issue_date.printed }}</td><td></td><td></td></tr>
+  </table>
+ </div>
+ <div>
+  <div class="b" style="font-size:12pt">{{ title }} č. {{ h.invoice_number.printed }}</div>
+  {% if h.order_number %}<div>objednávka: {{ h.order_number.printed }}</div>{% endif %}
+  {% if h.original_invoice_number %}<div>k faktúre č.: {{ h.original_invoice_number.printed }}</div>{% endif %}
+  <div>zákaznícke číslo: {{ h.customer_number.printed }}</div>
+  <div style="margin-top:2mm" class="muted">Fakturačná adresa:</div>
+  <div class="b">{{ b.name }}</div>
+  <div>{{ b.street }}, {{ b.zip }} {{ b.city }}</div>
+  <div>IČO: {{ h.buyer_ico.printed }} &nbsp; IČ DPH: {{ h.buyer_vat_id.printed }} &nbsp; DIČ: {{ h.buyer_dic.printed }}</div>
+  <div style="margin-top:2mm" class="muted">Dodacia adresa:</div>
+  <div>{{ inv.delivery_point }}</div>
+ </div>
+</div>
+
+<table class="lines" style="margin-top:4mm">
+ <thead>
+  <tr><th style="width:44%">popis</th><th class="num">množstvo</th><th>MJ</th><th class="num">Cena/MJ<br>bez DPH</th><th class="num">DPH<br>%</th><th class="num">Spolu<br>bez DPH</th></tr>
+  <tr><th>ŠUKL kód &nbsp; Šarža &nbsp; Expirácia</th><th></th><th></th><th></th><th></th><th></th></tr>
+ </thead>
+ {% for ln in lines %}{% set c = ln.cells %}
+ <tbody class="nobreak">
+ <tr class="item"><td>{{ c.name.printed }}</td><td class="num">{{ c.quantity.printed }}</td><td>{{ c.unit.printed }}</td><td class="num">{{ c.unit_price.printed }}</td><td class="num">{{ c.vat_rate.printed }}</td><td class="num">{{ c.line_net.printed }}</td></tr>
+ {% if c.sukl_code or ln.batches %}<tr class="sub"><td>{% if c.sukl_code %}{{ c.sukl_code.printed }} &nbsp; {% endif %}{% for bt in ln.batches %}{{ bt.batch.printed }} &nbsp; {{ bt.expiry.printed }}{% endfor %}</td><td></td><td></td><td></td><td></td><td></td></tr>{% endif %}
+ <tr class="sub"><td>EAN: {{ c.ean.printed }}</td><td></td><td></td><td></td><td></td><td></td></tr>
+ </tbody>
+ {% endfor %}
+</table>
+
+<div class="nobreak" style="margin-top:3mm">
+{% for fee in fees if fee.included %}<div>* Na faktúre sa nachádza tovar podliehajúci recyklačným poplatkom. {{ fee.label.printed }} zahrnutý v cene: &nbsp; {{ fee.net.printed }}</div>{% endfor %}
+{% if h.delivery_note_numbers %}<div>Dodacie listy: {{ h.delivery_note_numbers.printed }}</div>{% endif %}
+<table class="recap" style="width:60%;margin-left:40%;margin-top:2mm">
+ {% for r in recap %}
+ <tr><td>DPH</td><td>{{ r.rate.printed }}</td><td class="num">{{ r.vat.printed }} EUR</td></tr>
+ <tr><td>Základ pre DPH</td><td>{{ r.rate.printed }}</td><td class="num">{{ r.base.printed }} EUR</td></tr>
+ {% endfor %}
+ <tr class="b"><td>Spolu</td><td></td><td class="num">{{ h.total.printed }} EUR</td></tr>
+ <tr class="b"><td>K úhrade</td><td></td><td class="num">{{ h.amount_due.printed }} EUR</td></tr>
+</table>
+<div class="two" style="margin-top:6mm"><div>Prevzal: ____________</div><div>Vystavil: {{ s.contact }}<br>{{ s.email }}</div></div>
+</div>
+{% endblock %}

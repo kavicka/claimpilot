@@ -1,0 +1,262 @@
+{
+ "invoice_id": "DE-0023",
+ "split": "dev",
+ "layout": "pohoda",
+ "kind": "credit_note",
+ "file": "credit_note.pdf",
+ "sha256": "a64f4049ce399c1c38583d26a74e85981aaf53d138b5b3818639d49b43e6dfe7",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "credit_note_unknown_original",
+  "multiline_names"
+ ],
+ "vat_method": "per_line",
+ "supplier_key": "bioflora",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "OPRAVNÁ FAKTÚRA - DOBROPIS",
+   "value": "credit_note",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "252995793",
+   "value": "252995793",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "12.09.2025",
+   "value": "2025-09-12",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "BioFlora s.r.o.",
+   "value": "BioFlora s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "96285575",
+   "value": "96285575",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2990936465",
+   "value": "SK2990936465",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK42 7500 0000 0064 5899 9885",
+   "value": "SK4275000000006458999885",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "-76,71",
+   "value": "-76.71",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "11.09.2025",
+   "value": "2025-09-11",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "12.10.2025",
+   "value": "2025-10-12",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2990936465",
+   "value": "2990936465",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "93533446",
+   "value": "93533446",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2992944152",
+   "value": "2992944152",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "252995793",
+   "value": "252995793",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "-76,71",
+   "value": "-76.71",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "-62,37",
+   "value": "-62.37",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "-14,34",
+   "value": "-14.34",
+   "page": 1
+  },
+  "original_invoice_number": {
+   "printed": "252805364",
+   "value": "252805364",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera teplomer digitálny",
+     "value": "Vivera teplomer digitálny"
+    },
+    "quantity": {
+     "printed": "-1",
+     "value": "-1"
+    },
+    "line_net": {
+     "printed": "-38,70",
+     "value": "-38.70"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4004594623696",
+     "value": "4004594623696"
+    },
+    "supplier_code": {
+     "printed": "0017",
+     "value": "0017"
+    },
+    "unit_price": {
+     "printed": "43,00",
+     "value": "43.00"
+    },
+    "discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "vat_amount": {
+     "printed": "-8,90",
+     "value": "-8.90"
+    },
+    "line_gross": {
+     "printed": "-47,60",
+     "value": "-47.60"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina bandáž členku veľkosť M",
+     "value": "Kalmina bandáž členku veľkosť M"
+    },
+    "quantity": {
+     "printed": "-1",
+     "value": "-1"
+    },
+    "line_net": {
+     "printed": "-23,67",
+     "value": "-23.67"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8587039435123",
+     "value": "8587039435123"
+    },
+    "supplier_code": {
+     "printed": "0028",
+     "value": "0028"
+    },
+    "unit_price": {
+     "printed": "26,30",
+     "value": "26.30"
+    },
+    "discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "vat_amount": {
+     "printed": "-5,44",
+     "value": "-5.44"
+    },
+    "line_gross": {
+     "printed": "-29,11",
+     "value": "-29.11"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "23%",
+    "value": "23"
+   },
+   "base": {
+    "printed": "-62,37",
+    "value": "-62.37"
+   },
+   "vat": {
+    "printed": "-14,34",
+    "value": "-14.34"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": [
+  {
+   "kind": "unknown_original",
+   "line": null,
+   "detail": ""
+  }
+ ]
+}

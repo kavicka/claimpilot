@@ -215,9 +215,20 @@ def main() -> None:
     g.add_argument("--out", type=Path, default=None)
     g.add_argument("--no-llm", action="store_true")
     g.add_argument("--limit", type=int, default=None)
+    inv = sub.add_parser("invoices", help="synthetic supplier invoices and ERP records")
+    inv.add_argument("--seed", type=int, default=42)
+    inv.add_argument("--out", type=Path, default=None)
+    inv.add_argument(
+        "--limit", type=int, default=None, help="invoices per split (for a quick look)"
+    )
     args = parser.parse_args()
     configure_logging("WARNING")
     out = args.out or repo_root() / "data" / "synthetic"
+    if args.cmd == "invoices":
+        from claimpilot_datagen.invoices.render import generate_invoices
+
+        print(json.dumps(generate_invoices(args.seed, out, limit=args.limit)))
+        return
     stats = generate(args.seed, out, use_llm=not args.no_llm, limit=args.limit)
     print(json.dumps(stats))
 

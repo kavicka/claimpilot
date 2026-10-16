@@ -1,0 +1,306 @@
+{
+ "invoice_id": "TE-0044",
+ "split": "test",
+ "layout": "pohoda",
+ "kind": "credit_note",
+ "file": "credit_note.pdf",
+ "sha256": "842d450d43dcf7d96be2e9dcb2dcff9a8a71c9b915878958cad115fe7307eeb2",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "credit_note",
+  "multiline_names"
+ ],
+ "vat_method": "per_line",
+ "supplier_key": "herbana",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "OPRAVNÁ FAKTÚRA - DOBROPIS",
+   "value": "credit_note",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "255785966",
+   "value": "255785966",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "23.02.2025",
+   "value": "2025-02-23",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Herbana Natur s.r.o.",
+   "value": "Herbana Natur s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "92414478",
+   "value": "92414478",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2993547293",
+   "value": "SK2993547293",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK79 7500 0000 0099 5777 8549",
+   "value": "SK7975000000009957778549",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "-108,52",
+   "value": "-108.52",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "23.02.2025",
+   "value": "2025-02-23",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "24.04.2025",
+   "value": "2025-04-24",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2993547293",
+   "value": "2993547293",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "93533446",
+   "value": "93533446",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2992944152",
+   "value": "2992944152",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "255785966",
+   "value": "255785966",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "-108,52",
+   "value": "-108.52",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "-88,23",
+   "value": "-88.23",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "-20,29",
+   "value": "-20.29",
+   "page": 1
+  },
+  "original_invoice_number": {
+   "printed": "253793208",
+   "value": "253793208",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana pleťový krém na citlivú pleť 50 ml",
+     "value": "Herbana pleťový krém na citlivú pleť 50 ml"
+    },
+    "quantity": {
+     "printed": "-4",
+     "value": "-4"
+    },
+    "line_net": {
+     "printed": "-19,01",
+     "value": "-19.01"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8595117509963",
+     "value": "8595117509963"
+    },
+    "supplier_code": {
+     "printed": "0004",
+     "value": "0004"
+    },
+    "unit_price": {
+     "printed": "5,59",
+     "value": "5.59"
+    },
+    "discount_pct": {
+     "printed": "15,00%",
+     "value": "15"
+    },
+    "vat_amount": {
+     "printed": "-4,37",
+     "value": "-4.37"
+    },
+    "line_gross": {
+     "printed": "-23,38",
+     "value": "-23.38"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek krém na ruky s panthenolom 100 ml",
+     "value": "Nutrilek krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "-3",
+     "value": "-3"
+    },
+    "line_net": {
+     "printed": "-35,73",
+     "value": "-35.73"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3808467733427",
+     "value": "3808467733427"
+    },
+    "supplier_code": {
+     "printed": "0015",
+     "value": "0015"
+    },
+    "unit_price": {
+     "printed": "14,01",
+     "value": "14.01"
+    },
+    "discount_pct": {
+     "printed": "15,00%",
+     "value": "15"
+    },
+    "vat_amount": {
+     "printed": "-8,22",
+     "value": "-8.22"
+    },
+    "line_gross": {
+     "printed": "-43,95",
+     "value": "-43.95"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera telové mlieko s ružovým olejom 330 ml",
+     "value": "Vivera telové mlieko s ružovým olejom 330 ml"
+    },
+    "quantity": {
+     "printed": "-2",
+     "value": "-2"
+    },
+    "line_net": {
+     "printed": "-33,49",
+     "value": "-33.49"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "3004881298508",
+     "value": "3004881298508"
+    },
+    "supplier_code": {
+     "printed": "0007",
+     "value": "0007"
+    },
+    "unit_price": {
+     "printed": "19,70",
+     "value": "19.70"
+    },
+    "discount_pct": {
+     "printed": "15,00%",
+     "value": "15"
+    },
+    "vat_amount": {
+     "printed": "-7,70",
+     "value": "-7.70"
+    },
+    "line_gross": {
+     "printed": "-41,19",
+     "value": "-41.19"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "23%",
+    "value": "23"
+   },
+   "base": {
+    "printed": "-88,23",
+    "value": "-88.23"
+   },
+   "vat": {
+    "printed": "-20,29",
+    "value": "-20.29"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

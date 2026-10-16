@@ -1,0 +1,293 @@
+{
+ "invoice_id": "DE-0007",
+ "split": "dev",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "a142e268b476da96761206ac9751f1ae649c9c01a5719d1dbb0f56cd1dba0cd1",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 150,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "batch_split",
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "novamed",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "256865",
+   "value": "256865",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "08.05.2025",
+   "value": "2025-05-08",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Novamed Pharma CZ s.r.o.",
+   "value": "Novamed Pharma CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "90907841",
+   "value": "90907841",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ90907841",
+   "value": "CZ90907841",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ57 5500 0000 0018 6736 2483",
+   "value": "CZ5755000000001867362483",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "17 586,24",
+   "value": "17586.24",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "17 586,24",
+   "value": "17586.24",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25253091",
+   "value": "OB25253091",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita tablety proti bolesti 500 mg 20 tbl",
+     "value": "DermaVita tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "685,20",
+     "value": "685.20"
+    },
+    "ean": {
+     "printed": "8597856203416",
+     "value": "8597856203416"
+    },
+    "unit_price": {
+     "printed": "57,10",
+     "value": "57.10"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5L90831",
+      "value": "5L90831"
+     },
+     "expiry": {
+      "printed": "06/27",
+      "value": "06/27"
+     },
+     "quantity": {
+      "printed": "11",
+      "value": "11"
+     }
+    },
+    {
+     "batch": {
+      "printed": "5L90509",
+      "value": "5L90509"
+     },
+     "expiry": {
+      "printed": "06/27",
+      "value": "06/27"
+     },
+     "quantity": {
+      "printed": "1",
+      "value": "1"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera kvapky do nosa 10 ml",
+     "value": "Vivera kvapky do nosa 10 ml"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "3 431,28",
+     "value": "3431.28"
+    },
+    "ean": {
+     "printed": "8598491593009",
+     "value": "8598491593009"
+    },
+    "unit_price": {
+     "printed": "142,97",
+     "value": "142.97"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5L29345",
+      "value": "5L29345"
+     },
+     "expiry": {
+      "printed": "11/29",
+      "value": "11/29"
+     },
+     "quantity": {
+      "printed": "24",
+      "value": "24"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan vitamín C 500 mg 60 tbl",
+     "value": "Medisan vitamín C 500 mg 60 tbl"
+    },
+    "quantity": {
+     "printed": "96",
+     "value": "96"
+    },
+    "line_net": {
+     "printed": "13 469,76",
+     "value": "13469.76"
+    },
+    "ean": {
+     "printed": "8586091829437",
+     "value": "8586091829437"
+    },
+    "unit_price": {
+     "printed": "140,31",
+     "value": "140.31"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "2E84310",
+      "value": "2E84310"
+     },
+     "expiry": {
+      "printed": "08/27",
+      "value": "08/27"
+     },
+     "quantity": {
+      "printed": "86",
+      "value": "86"
+     }
+    },
+    {
+     "batch": {
+      "printed": "2E84555",
+      "value": "2E84555"
+     },
+     "expiry": {
+      "printed": "08/27",
+      "value": "08/27"
+     },
+     "quantity": {
+      "printed": "10",
+      "value": "10"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "17 586,24",
+    "value": "17586.24"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

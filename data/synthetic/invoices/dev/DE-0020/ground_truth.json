@@ -1,0 +1,166 @@
+{
+ "invoice_id": "DE-0020",
+ "split": "dev",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "7df55bbf7deb6f0beecd6e41f8eb5c1754cc0d17630c7eb7c4aa1b86d737c60b",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 150,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "enzymo",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "256410",
+   "value": "256410",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "01.05.2025",
+   "value": "2025-05-01",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Enzymo Health CZ s.r.o.",
+   "value": "Enzymo Health CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "94545154",
+   "value": "94545154",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ94545154",
+   "value": "CZ94545154",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ12 6100 0000 0043 8138 6643",
+   "value": "CZ1261000000004381386643",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "2 874,96",
+   "value": "2874.96",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "2 874,96",
+   "value": "2874.96",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25170765",
+   "value": "OB25170765",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera kvapky do nosa 10 ml",
+     "value": "Vivera kvapky do nosa 10 ml"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "2 874,96",
+     "value": "2874.96"
+    },
+    "ean": {
+     "printed": "8598818253104",
+     "value": "8598818253104"
+    },
+    "unit_price": {
+     "printed": "119,79",
+     "value": "119.79"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "4E88598",
+      "value": "4E88598"
+     },
+     "expiry": {
+      "printed": "01/28",
+      "value": "01/28"
+     },
+     "quantity": {
+      "printed": "24",
+      "value": "24"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "2 874,96",
+    "value": "2874.96"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

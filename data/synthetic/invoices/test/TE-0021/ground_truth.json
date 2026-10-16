@@ -1,0 +1,230 @@
+{
+ "invoice_id": "TE-0021",
+ "split": "test",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "689d3e73efa7559c288a8f32871c856f3824ed55aac6765297ebc6d1f5b2efe2",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 170,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "batch_split",
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "novamed",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "257603",
+   "value": "257603",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "19.08.2025",
+   "value": "2025-08-19",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Novamed Pharma CZ s.r.o.",
+   "value": "Novamed Pharma CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "90907841",
+   "value": "90907841",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ90907841",
+   "value": "CZ90907841",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ57 5500 0000 0018 6736 2483",
+   "value": "CZ5755000000001867362483",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "31 272,00",
+   "value": "31272.00",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "31 272,00",
+   "value": "31272.00",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25744272",
+   "value": "OB25744272",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina kapsuly na trávenie 30 cps",
+     "value": "Kalmina kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "2 918,00",
+     "value": "2918.00"
+    },
+    "ean": {
+     "printed": "8591434665122",
+     "value": "8591434665122"
+    },
+    "unit_price": {
+     "printed": "14,59",
+     "value": "14.59"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "1L49448",
+      "value": "1L49448"
+     },
+     "expiry": {
+      "printed": "05/26",
+      "value": "05/26"
+     },
+     "quantity": {
+      "printed": "200",
+      "value": "200"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera kapsuly na trávenie 30 cps",
+     "value": "Vivera kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "28 354,00",
+     "value": "28354.00"
+    },
+    "ean": {
+     "printed": "8598145042648",
+     "value": "8598145042648"
+    },
+    "unit_price": {
+     "printed": "141,77",
+     "value": "141.77"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6N43927",
+      "value": "6N43927"
+     },
+     "expiry": {
+      "printed": "06/28",
+      "value": "06/28"
+     },
+     "quantity": {
+      "printed": "180",
+      "value": "180"
+     }
+    },
+    {
+     "batch": {
+      "printed": "6N43269",
+      "value": "6N43269"
+     },
+     "expiry": {
+      "printed": "06/28",
+      "value": "06/28"
+     },
+     "quantity": {
+      "printed": "20",
+      "value": "20"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "31 272,00",
+    "value": "31272.00"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

@@ -1,0 +1,166 @@
+{
+ "invoice_id": "TE-0049",
+ "split": "test",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "9699f57c7eebd04f5e98d60ff2072ad7c163e5c479f6b3f795f248625a29ab2d",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 170,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "enzymo",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "255410",
+   "value": "255410",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "18.04.2025",
+   "value": "2025-04-18",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Enzymo Health CZ s.r.o.",
+   "value": "Enzymo Health CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "94545154",
+   "value": "94545154",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ94545154",
+   "value": "CZ94545154",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ12 6100 0000 0043 8138 6643",
+   "value": "CZ1261000000004381386643",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "1 853,40",
+   "value": "1853.40",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "1 853,40",
+   "value": "1853.40",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25961224",
+   "value": "OB25961224",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit masť na hojenie rán 30 g",
+     "value": "Sanovit masť na hojenie rán 30 g"
+    },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "1 853,40",
+     "value": "1853.40"
+    },
+    "ean": {
+     "printed": "8586069363710",
+     "value": "8586069363710"
+    },
+    "unit_price": {
+     "printed": "154,45",
+     "value": "154.45"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "7A32648",
+      "value": "7A32648"
+     },
+     "expiry": {
+      "printed": "09/27",
+      "value": "09/27"
+     },
+     "quantity": {
+      "printed": "12",
+      "value": "12"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "1 853,40",
+    "value": "1853.40"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

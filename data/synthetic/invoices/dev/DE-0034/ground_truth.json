@@ -1,0 +1,307 @@
+{
+ "invoice_id": "DE-0034",
+ "split": "dev",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "80791717d80f7267070b868bff5598a7612714f3ee4e131fdaa5a6f8d1eb3a23",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 170,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "batch_split",
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "enzymo",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "259247",
+   "value": "259247",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "08.07.2025",
+   "value": "2025-07-08",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Enzymo Health CZ s.r.o.",
+   "value": "Enzymo Health CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "94545154",
+   "value": "94545154",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ94545154",
+   "value": "CZ94545154",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ12 6100 0000 0043 8138 6643",
+   "value": "CZ1261000000004381386643",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "13 004,72",
+   "value": "13004.72",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "13 004,72",
+   "value": "13004.72",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25466657",
+   "value": "OB25466657",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea kapsuly na trávenie 30 cps",
+     "value": "Florea kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "3 404,00",
+     "value": "3404.00"
+    },
+    "ean": {
+     "printed": "8598669297180",
+     "value": "8598669297180"
+    },
+    "unit_price": {
+     "printed": "17,02",
+     "value": "17.02"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "1B50652",
+      "value": "1B50652"
+     },
+     "expiry": {
+      "printed": "08/29",
+      "value": "08/29"
+     },
+     "quantity": {
+      "printed": "180",
+      "value": "180"
+     }
+    },
+    {
+     "batch": {
+      "printed": "1B50638",
+      "value": "1B50638"
+     },
+     "expiry": {
+      "printed": "08/29",
+      "value": "08/29"
+     },
+     "quantity": {
+      "printed": "20",
+      "value": "20"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana - cukríky s medom a šalviou 40g",
+     "value": "Herbana - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "1 426,32",
+     "value": "1426.32"
+    },
+    "ean": {
+     "printed": "8590577388714",
+     "value": "8590577388714"
+    },
+    "unit_price": {
+     "printed": "118,86",
+     "value": "118.86"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6L74280",
+      "value": "6L74280"
+     },
+     "expiry": {
+      "printed": "12/26",
+      "value": "12/26"
+     },
+     "quantity": {
+      "printed": "11",
+      "value": "11"
+     }
+    },
+    {
+     "batch": {
+      "printed": "6L74619",
+      "value": "6L74619"
+     },
+     "expiry": {
+      "printed": "12/26",
+      "value": "12/26"
+     },
+     "quantity": {
+      "printed": "1",
+      "value": "1"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan tablety proti bolesti 500 mg 20 tbl",
+     "value": "Medisan tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "96",
+     "value": "96"
+    },
+    "line_net": {
+     "printed": "8 174,40",
+     "value": "8174.40"
+    },
+    "ean": {
+     "printed": "8586633879128",
+     "value": "8586633879128"
+    },
+    "unit_price": {
+     "printed": "85,15",
+     "value": "85.15"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "4L21788",
+      "value": "4L21788"
+     },
+     "expiry": {
+      "printed": "08/29",
+      "value": "08/29"
+     },
+     "quantity": {
+      "printed": "93",
+      "value": "93"
+     }
+    },
+    {
+     "batch": {
+      "printed": "4L21309",
+      "value": "4L21309"
+     },
+     "expiry": {
+      "printed": "08/29",
+      "value": "08/29"
+     },
+     "quantity": {
+      "printed": "3",
+      "value": "3"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "13 004,72",
+    "value": "13004.72"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

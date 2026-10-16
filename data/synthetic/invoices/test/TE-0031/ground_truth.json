@@ -1,0 +1,256 @@
+{
+ "invoice_id": "TE-0031",
+ "split": "test",
+ "layout": "pohoda",
+ "kind": "credit_note",
+ "file": "credit_note.pdf",
+ "sha256": "eed494ef199459bf8fcfd5e7ef0477fcbbad5dc9caf2452f1fbcc512b8282417",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "credit_note",
+  "multiline_names"
+ ],
+ "vat_method": "per_line",
+ "supplier_key": "herbana",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "OPRAVNÁ FAKTÚRA - DOBROPIS",
+   "value": "credit_note",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "251419510",
+   "value": "251419510",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "29.08.2025",
+   "value": "2025-08-29",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Herbana Natur s.r.o.",
+   "value": "Herbana Natur s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "92414478",
+   "value": "92414478",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "SK2993547293",
+   "value": "SK2993547293",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "SK79 7500 0000 0099 5777 8549",
+   "value": "SK7975000000009957778549",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "-4,72",
+   "value": "-4.72",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "27.08.2025",
+   "value": "2025-08-27",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "28.09.2025",
+   "value": "2025-09-28",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "2993547293",
+   "value": "2993547293",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "251419510",
+   "value": "251419510",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "-4,72",
+   "value": "-4.72",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "-3,97",
+   "value": "-3.97",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "-0,75",
+   "value": "-0.75",
+   "page": 1
+  },
+  "original_invoice_number": {
+   "printed": "252667428",
+   "value": "252667428",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan detská výživa ovsená kaša 225 g",
+     "value": "Medisan detská výživa ovsená kaša 225 g"
+    },
+    "quantity": {
+     "printed": "-2",
+     "value": "-2"
+    },
+    "line_net": {
+     "printed": "-2,28",
+     "value": "-2.28"
+    },
+    "vat_rate": {
+     "printed": "19%",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8581217162504",
+     "value": "8581217162504"
+    },
+    "supplier_code": {
+     "printed": "0011",
+     "value": "0011"
+    },
+    "unit_price": {
+     "printed": "1,14",
+     "value": "1.14"
+    },
+    "discount_pct": {
+     "printed": "0,00%",
+     "value": "0"
+    },
+    "vat_amount": {
+     "printed": "-0,43",
+     "value": "-0.43"
+    },
+    "line_gross": {
+     "printed": "-2,71",
+     "value": "-2.71"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan - bylinný čaj na trávenie 20x1,5g",
+     "value": "Medisan - bylinný čaj na trávenie 20x1,5g"
+    },
+    "quantity": {
+     "printed": "-1",
+     "value": "-1"
+    },
+    "line_net": {
+     "printed": "-1,69",
+     "value": "-1.69"
+    },
+    "vat_rate": {
+     "printed": "19%",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8586158851524",
+     "value": "8586158851524"
+    },
+    "supplier_code": {
+     "printed": "0014",
+     "value": "0014"
+    },
+    "unit_price": {
+     "printed": "1,69",
+     "value": "1.69"
+    },
+    "discount_pct": {
+     "printed": "0,00%",
+     "value": "0"
+    },
+    "vat_amount": {
+     "printed": "-0,32",
+     "value": "-0.32"
+    },
+    "line_gross": {
+     "printed": "-2,01",
+     "value": "-2.01"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "19%",
+    "value": "19"
+   },
+   "base": {
+    "printed": "-3,97",
+    "value": "-3.97"
+   },
+   "vat": {
+    "printed": "-0,75",
+    "value": "-0.75"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

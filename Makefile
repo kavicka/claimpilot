@@ -65,6 +65,9 @@ smoke:  ## Day 1 smoke tests against local Ollama
 data:  ## Generate the synthetic claims dataset
 	uv run claimpilot-datagen generate --seed $(SEED)
 
+data-invoices:  ## Generate the synthetic supplier invoices and their ERP records
+	uv run claimpilot-datagen invoices --seed $(or $(SEED),42)
+
 eval-fast:  ## Gated suites on the dev split, then compare against baselines
 	uv run claimpilot-eval run --suite $(SUITE) --split dev --fast
 	uv run claimpilot-eval-compare --latest

@@ -1,0 +1,244 @@
+{
+ "invoice_id": "TE-0011",
+ "split": "test",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "73d6866472d1d331331bdb46a6ddb827e38a3d86dcdda34433cc741c3f80eac9",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 150,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "batch_split",
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "novamed",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "254381",
+   "value": "254381",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "05.10.2025",
+   "value": "2025-10-05",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Novamed Pharma CZ s.r.o.",
+   "value": "Novamed Pharma CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "90907841",
+   "value": "90907841",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ90907841",
+   "value": "CZ90907841",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ57 5500 0000 0018 6736 2483",
+   "value": "CZ5755000000001867362483",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "11 984,64",
+   "value": "11984.64",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "11 984,64",
+   "value": "11984.64",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25963817",
+   "value": "OB25963817",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita tablety proti bolesti 500 mg 20 tbl",
+     "value": "DermaVita tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "1 370,40",
+     "value": "1370.40"
+    },
+    "ean": {
+     "printed": "8597856203416",
+     "value": "8597856203416"
+    },
+    "unit_price": {
+     "printed": "57,10",
+     "value": "57.10"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "2B74433",
+      "value": "2B74433"
+     },
+     "expiry": {
+      "printed": "08/27",
+      "value": "08/27"
+     },
+     "quantity": {
+      "printed": "23",
+      "value": "23"
+     }
+    },
+    {
+     "batch": {
+      "printed": "2B74724",
+      "value": "2B74724"
+     },
+     "expiry": {
+      "printed": "08/27",
+      "value": "08/27"
+     },
+     "quantity": {
+      "printed": "1",
+      "value": "1"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea - kláštorný čaj na priedušky 20x2g",
+     "value": "Florea - kláštorný čaj na priedušky 20x2g"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "10 614,24",
+     "value": "10614.24"
+    },
+    "ean": {
+     "printed": "8588720726773",
+     "value": "8588720726773"
+    },
+    "unit_price": {
+     "printed": "73,71",
+     "value": "73.71"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "4A68275",
+      "value": "4A68275"
+     },
+     "expiry": {
+      "printed": "03/27",
+      "value": "03/27"
+     },
+     "quantity": {
+      "printed": "140",
+      "value": "140"
+     }
+    },
+    {
+     "batch": {
+      "printed": "4A68715",
+      "value": "4A68715"
+     },
+     "expiry": {
+      "printed": "03/27",
+      "value": "03/27"
+     },
+     "quantity": {
+      "printed": "4",
+      "value": "4"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "11 984,64",
+    "value": "11984.64"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

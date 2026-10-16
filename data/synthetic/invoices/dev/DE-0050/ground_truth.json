@@ -1,0 +1,225 @@
+{
+ "invoice_id": "DE-0050",
+ "split": "dev",
+ "layout": "sap",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "1fd48a987bdd41cbaa097de0d73c50db1cce087c0c4b26848a7e175c0812c233",
+ "pages_total": 2,
+ "pages_present": 2,
+ "scan": false,
+ "scan_dpi": null,
+ "language": "sk",
+ "duplicate_of": null,
+ "edge_cases": [
+  "dual_currency",
+  "reverse_charge",
+  "terms_page"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "lumina",
+ "supplier_registered": true,
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Faktúra",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "292263719",
+   "value": "292263719",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "24.08.2025",
+   "value": "2025-08-24",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Lumina Cosmetics CZ s.r.o.",
+   "value": "Lumina Cosmetics CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "95474463",
+   "value": "95474463",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ95474463",
+   "value": "CZ95474463",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ62 0100 0000 0058 2742 5761",
+   "value": "CZ6201000000005827425761",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "780,00",
+   "value": "780.00",
+   "page": 1
+  },
+  "tax_point_date": {
+   "printed": "22.08.2025",
+   "value": "2025-08-22",
+   "page": 1
+  },
+  "due_date": {
+   "printed": "23.09.2025",
+   "value": "2025-09-23",
+   "page": 1
+  },
+  "supplier_dic": {
+   "printed": "CZ95474463",
+   "value": "CZ95474463",
+   "page": 1
+  },
+  "buyer_ico": {
+   "printed": "90882750",
+   "value": "90882750",
+   "page": 1
+  },
+  "buyer_dic": {
+   "printed": "2997673481",
+   "value": "2997673481",
+   "page": 1
+  },
+  "variable_symbol": {
+   "printed": "292263719",
+   "value": "292263719",
+   "page": 1
+  },
+  "constant_symbol": {
+   "printed": "0008",
+   "value": "0008",
+   "page": 1
+  },
+  "specific_symbol": {
+   "printed": "532071",
+   "value": "532071",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "780,00",
+   "value": "780.00",
+   "page": 1
+  },
+  "total_net": {
+   "printed": "780,00",
+   "value": "780.00",
+   "page": 1
+  },
+  "total_vat": {
+   "printed": "0,00",
+   "value": "0.00",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25694691",
+   "value": "OB25694691",
+   "page": 1
+  },
+  "delivery_note_numbers": {
+   "printed": "29623248",
+   "value": "29623248",
+   "page": 1
+  },
+  "customer_number": {
+   "printed": "1567",
+   "value": "1567",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.",
+   "value": true,
+   "page": 1
+  },
+  "second_currency_total": {
+   "printed": "19.273,80",
+   "value": "19273.80",
+   "page": 1
+  },
+  "fx_rate": {
+   "printed": "24,71",
+   "value": "24.71",
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit detská výživa ovsená kaša 225 g",
+     "value": "Sanovit detská výživa ovsená kaša 225 g"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "780,00",
+     "value": "780.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8597621196165",
+     "value": "8597621196165"
+    },
+    "supplier_code": {
+     "printed": "MB712569",
+     "value": "MB712569"
+    },
+    "unit_price": {
+     "printed": "3,90",
+     "value": "3.90"
+    },
+    "net_unit_price": {
+     "printed": "3,90",
+     "value": "3.90"
+    }
+   },
+   "batches": [],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "780,00",
+    "value": "780.00"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}

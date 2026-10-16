@@ -41,6 +41,7 @@ make e2e         # Playwright tests of the review UI, seeded db, no models
 make lint typecheck
 make smoke       # live Ollama smoke checks
 make data SEED=42
+make data-invoices # synthetic supplier invoices + ERP records (train/dev/test)
 make eval-fast   # gated suites on dev, compare with baselines
 make eval        # live run that records cassettes
 make seed N=5    # upload synthetic claims through the api

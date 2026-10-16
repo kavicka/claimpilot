@@ -1,0 +1,293 @@
+{
+ "invoice_id": "DE-0006",
+ "split": "dev",
+ "layout": "scan_en",
+ "kind": "invoice",
+ "file": "invoice.pdf",
+ "sha256": "5db3dd8ebf1ca19cbbae0c350462069a83f9666ae403ccc2bcab2b2c260994ab",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 170,
+ "language": "en",
+ "duplicate_of": null,
+ "edge_cases": [
+  "batch_split",
+  "reverse_charge",
+  "scan",
+  "stamp"
+ ],
+ "vat_method": "per_rate",
+ "supplier_key": "enzymo",
+ "supplier_registered": true,
+ "buyer_key": "retail",
+ "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "header": {
+  "document_kind": {
+   "printed": "Invoice",
+   "value": "invoice",
+   "page": 1
+  },
+  "invoice_number": {
+   "printed": "256555",
+   "value": "256555",
+   "page": 1
+  },
+  "issue_date": {
+   "printed": "05.09.2025",
+   "value": "2025-09-05",
+   "page": 1
+  },
+  "supplier_name": {
+   "printed": "Enzymo Health CZ s.r.o.",
+   "value": "Enzymo Health CZ s.r.o.",
+   "page": 1
+  },
+  "supplier_ico": {
+   "printed": "94545154",
+   "value": "94545154",
+   "page": 1
+  },
+  "supplier_vat_id": {
+   "printed": "CZ94545154",
+   "value": "CZ94545154",
+   "page": 1
+  },
+  "supplier_iban": {
+   "printed": "CZ12 6100 0000 0043 8138 6643",
+   "value": "CZ1261000000004381386643",
+   "page": 1
+  },
+  "buyer_name": {
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
+   "page": 1
+  },
+  "buyer_vat_id": {
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
+   "page": 1
+  },
+  "currency": {
+   "printed": "EUR",
+   "value": "EUR",
+   "page": 1
+  },
+  "total": {
+   "printed": "45 142,88",
+   "value": "45142.88",
+   "page": 1
+  },
+  "amount_due": {
+   "printed": "45 142,88",
+   "value": "45142.88",
+   "page": 1
+  },
+  "order_number": {
+   "printed": "OB25852466",
+   "value": "OB25852466",
+   "page": 1
+  },
+  "reverse_charge": {
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
+   "value": true,
+   "page": 1
+  }
+ },
+ "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita - cukríky s medom a šalviou 40g",
+     "value": "DermaVita - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "17 412,00",
+     "value": "17412.00"
+    },
+    "ean": {
+     "printed": "8589718954109",
+     "value": "8589718954109"
+    },
+    "unit_price": {
+     "printed": "87,06",
+     "value": "87.06"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "8L37321",
+      "value": "8L37321"
+     },
+     "expiry": {
+      "printed": "06/29",
+      "value": "06/29"
+     },
+     "quantity": {
+      "printed": "200",
+      "value": "200"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek masť na hojenie rán 30 g",
+     "value": "Nutrilek masť na hojenie rán 30 g"
+    },
+    "quantity": {
+     "printed": "48",
+     "value": "48"
+    },
+    "line_net": {
+     "printed": "6 326,88",
+     "value": "6326.88"
+    },
+    "ean": {
+     "printed": "8598054595754",
+     "value": "8598054595754"
+    },
+    "unit_price": {
+     "printed": "131,81",
+     "value": "131.81"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "8L71003",
+      "value": "8L71003"
+     },
+     "expiry": {
+      "printed": "01/29",
+      "value": "01/29"
+     },
+     "quantity": {
+      "printed": "46",
+      "value": "46"
+     }
+    },
+    {
+     "batch": {
+      "printed": "8L71525",
+      "value": "8L71525"
+     },
+     "expiry": {
+      "printed": "01/29",
+      "value": "01/29"
+     },
+     "quantity": {
+      "printed": "2",
+      "value": "2"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana kvapky do nosa 10 ml",
+     "value": "Herbana kvapky do nosa 10 ml"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "21 404,00",
+     "value": "21404.00"
+    },
+    "ean": {
+     "printed": "8582826557026",
+     "value": "8582826557026"
+    },
+    "unit_price": {
+     "printed": "107,02",
+     "value": "107.02"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "4K57185",
+      "value": "4K57185"
+     },
+     "expiry": {
+      "printed": "03/28",
+      "value": "03/28"
+     },
+     "quantity": {
+      "printed": "194",
+      "value": "194"
+     }
+    },
+    {
+     "batch": {
+      "printed": "4K57523",
+      "value": "4K57523"
+     },
+     "expiry": {
+      "printed": "03/28",
+      "value": "03/28"
+     },
+     "quantity": {
+      "printed": "6",
+      "value": "6"
+     }
+    }
+   ],
+   "page": 1
+  }
+ ],
+ "recap": [
+  {
+   "rate": {
+    "printed": "0",
+    "value": "0"
+   },
+   "base": {
+    "printed": "45 142,88",
+    "value": "45142.88"
+   },
+   "vat": {
+    "printed": "0,00",
+    "value": "0.00"
+   },
+   "page": 1
+  }
+ ],
+ "fees": [],
+ "findings": []
+}
