@@ -10,10 +10,16 @@ from collections import Counter
 from decimal import Decimal, InvalidOperation
 from typing import Any
 
+from claimpilot_core.llm.gateway import OutputValidationError
 from claimpilot_evals.invoice_data import invoices, parsed_invoice
 from claimpilot_evals.report import ItemResult, Report
 from claimpilot_evals.suites.common import RunContext
-from claimpilot_worker.extraction.invoice import extract_invoice, redact_invoice
+from claimpilot_worker.extraction.invoice import (
+    InvoiceExtraction,
+    extract_invoice,
+    invoice_kind,
+    redact_invoice,
+)
 
 SKIP_HEADER = {"document_kind"}
 TEXT_FIELDS = {
@@ -58,14 +64,22 @@ async def run(ctx: RunContext) -> Report:
     pii: list[str] = []
     kinds = Counter[tuple[str, str]]()
     lines_expected = lines_found = 0
-    false_values = grounded = predicted = 0
+    false_values = grounded = predicted = invalid_json = 0
     by_column: dict[str, list[bool]] = {}
     for gt_inv in invoices(ctx.split, ctx.limit):
         gt = gt_inv.data
         pii += gt.get("pii", [])
         parsed = parsed_invoice(gt_inv.path, gt["sha256"])
         red = redact_invoice(parsed)
-        ex = await extract_invoice(parsed, red.blocks, ctx.gateway, redacted_cells=red.cells)
+        try:
+            ex = await extract_invoice(parsed, red.blocks, ctx.gateway, redacted_cells=red.cells)
+        except OutputValidationError as exc:
+            # One unusable answer fails this invoice's values, not the whole run (a model without
+            # schema-constrained decoding, e.g. an MLX adapter, can write invalid JSON).
+            invalid_json += 1
+            report.notes.append(f"{gt_inv.id}: {exc}")
+            first = " ".join(red.blocks.get(b.seq, b.text) for b in parsed.blocks if b.page == 1)
+            ex = InvoiceExtraction(invoice_kind(first), [], [], 0, [], [])
         kinds[(gt["kind"], ex.kind.value)] += 1
         report.items.append(
             ItemResult(
@@ -158,6 +172,8 @@ async def run(ctx: RunContext) -> Report:
     report.ratio("grounded_share", grounded, predicted)
     leaks = ctx.recorder.leaks(pii)
     report.count("leaked_values_in_payloads", len(leaks))
+    if invalid_json:
+        report.count("invalid_json", invalid_json)
     if leaks:
         report.notes.append(f"leaked: {leaks[:5]}")
     for col, oks in sorted(by_column.items()):
