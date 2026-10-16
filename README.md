@@ -141,7 +141,7 @@ faster, so it extracts and writes the letters. Thinking mode stays off: on a 14B
 
 ## Testing
 
-827 unit and database tests, 11 Playwright tests of the review UI, and ten eval suites replayed
+827 unit and database tests, 12 Playwright tests of the review UI, and ten eval suites replayed
 in CI. The edge cases have their own list in [docs/testing.md](docs/testing.md): hostile uploads,
 two handlers on one claim, a worker killed mid-step, Redis and the model server going down,
 tampered sessions, password guessing, names in declined forms, and 34 prompt-injection attacks in

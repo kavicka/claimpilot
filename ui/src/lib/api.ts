@@ -9,6 +9,7 @@ import type {
   EvalReport,
   FieldPatchResult,
   Ops,
+  UploadedClaim,
   User,
 } from "./types";
 
@@ -41,12 +42,14 @@ export function loginPath(): string {
 }
 
 async function request<T>(method: string, path: string, body?: unknown): Promise<T> {
+  // FormData sets its own multipart content type with the boundary.
+  const form = body instanceof FormData;
   const res = await fetch(path, {
     method,
     credentials: "same-origin",
     cache: "no-store",
-    headers: body === undefined ? undefined : { "content-type": "application/json" },
-    body: body === undefined ? undefined : JSON.stringify(body),
+    headers: body === undefined || form ? undefined : { "content-type": "application/json" },
+    body: body === undefined ? undefined : form ? body : JSON.stringify(body),
   });
   if (res.status === 401 && !path.startsWith("/api/auth/login")) {
     if (typeof window !== "undefined" && window.location.pathname !== "/login") {
@@ -80,6 +83,12 @@ export const api = {
   logout: () => request<{ ok: boolean }>("POST", "/api/auth/logout"),
   me: () => request<User>("GET", "/api/auth/me"),
 
+  // One claim from all the files; the api stores them and enqueues the pipeline.
+  upload: (files: File[]) => {
+    const form = new FormData();
+    for (const file of files) form.append("files", file, file.name);
+    return request<UploadedClaim>("POST", "/api/claims", form);
+  },
   claims: (params: { queue?: string; status?: string } = {}) =>
     request<ClaimRow[]>("GET", `/api/review/claims${query(params)}`),
   claim: (id: string) => request<ClaimDetail>("GET", `/api/review/claims/${encodeURIComponent(id)}`),

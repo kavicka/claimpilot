@@ -7,7 +7,7 @@ Five layers, from cheapest to most expensive. Everything except the live eval an
 | --- | --- | --- | --- |
 | Unit | Deterministic code: state machine, identifiers, PII guard, payout engine, routing rules, prechecks, fact checker, gateway, Bedrock adapter (real SDK, mocked HTTP), masking, parser, Textract adapter, traces, submission agent with a scripted model, document checks, hidden-text and injection detectors, coverage guard | 760 | `make test` |
 | Database | The api and the pipeline against Postgres: roles, corrections, erasure, uploads, concurrent writes, Redis outages, step failures, the sweep, hidden text in the review api | 67 | `make test-db` |
-| End to end | The review UI in Chromium against the real api and a seeded database: login, queues, field boxes, corrections, senior rules, version conflicts, approve, retry, the prompt-injection warning, accessibility (axe) | 11 | `make e2e` |
+| End to end | The review UI in Chromium against the real api and a seeded database: login, queues, field boxes, corrections, senior rules, version conflicts, approve, retry, the prompt-injection warning, manual upload, accessibility (axe) | 12 | `make e2e` |
 | Evals | Model behaviour on synthetic claims with ground truth: ten suites, replayed from recorded responses in CI and gated against baselines; an eleventh, `masking`, runs locally only (macOS OCR, generated PDFs) | 10 + 1 suites | `make eval-fast` |
 | Infrastructure | The AWS Terraform with mocked providers: no route out of private subnets, encryption, Bedrock only from the worker and only in EU Regions, read-only containers, secrets per task, tracing sidecar, Textract only when chosen; tflint; checkov | 9 test runs | `make infra-check` |
 

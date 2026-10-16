@@ -40,6 +40,17 @@ export interface ClaimRow {
   error: string | null;
 }
 
+/** What POST /api/claims answers (services/api/src/claimpilot_api/main.py, ClaimOut). */
+export interface UploadedClaim {
+  id: string;
+  reference: string;
+  status: ClaimStatus;
+  queue: QueueName | null;
+  claim_type: string | null;
+  scenario_id: string | null;
+  documents: number;
+}
+
 export interface BBox {
   x0: number;
   y0: number;

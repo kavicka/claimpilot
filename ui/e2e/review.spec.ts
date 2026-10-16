@@ -148,6 +148,31 @@ test("login, queue and claim pages have no serious accessibility violations", as
   expect(await seriousViolations(page)).toEqual([]);
 });
 
+test("a handler uploads documents as one claim and sees it enter the pipeline", async ({ page }) => {
+  await login(page);
+  await page.getByRole("link", { name: "Upload" }).click();
+  await expect(page.getByRole("heading", { name: "Upload", exact: true })).toBeVisible();
+  await page.locator('input[type="file"]').setInputFiles([
+    { name: "invoice.pdf", mimeType: "application/pdf", buffer: Buffer.from("%PDF-1.4\n%%EOF\n") },
+    { name: "receipt.png", mimeType: "image/png", buffer: Buffer.from("\x89PNG\r\n\x1a\n0000", "binary") },
+    { name: "letter.docx", mimeType: "application/octet-stream", buffer: Buffer.from("PK") },
+  ]);
+  await expect(page.getByText(/letter\.docx: Word files are not accepted/)).toBeVisible();
+  const selected = page.getByRole("region", { name: "Selected files" });
+  await expect(selected.getByRole("listitem")).toHaveCount(2);
+  await page.getByRole("button", { name: "Upload 2 files" }).click();
+  const row = page.getByRole("row", { name: /CP-2026-\d{6}/ });
+  await expect(row).toContainText("Received");
+  await expect(row).toContainText("2");
+  await expect(selected).toHaveCount(0);
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  expect(await seriousViolations(page)).toEqual([]);
+  // The list belongs to the browser tab, so it is still there after a trip to the queue.
+  await page.getByRole("link", { name: "Queue" }).click();
+  await page.getByRole("link", { name: "Upload" }).click();
+  await expect(page.getByRole("row", { name: /CP-2026-\d{6}/ })).toBeVisible();
+});
+
 test("a claim whose document talks to the AI shows the planted text and needs a senior", async ({ page }) => {
   await login(page);
   await openClaim(page, "CP-2026-900002");
