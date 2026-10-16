@@ -125,6 +125,11 @@
    "printed": "4133",
    "value": "4133",
    "page": 1
+  },
+  "page_note": {
+   "printed": "strana 1 z 3",
+   "value": "strana 1 z 3",
+   "page": 1
   }
  },
  "lines": [
@@ -1645,5 +1650,9 @@
    "line": null,
    "detail": ""
   }
+ ],
+ "pii": [
+  "Etela Kolárová",
+  "+421 996 466 383"
  ]
 }

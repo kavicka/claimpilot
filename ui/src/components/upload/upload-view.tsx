@@ -41,7 +41,7 @@ function suffixOf(name: string): string {
   return dot < 0 ? "" : name.slice(dot).toLowerCase();
 }
 
-function problemOf(file: File): string | null {
+export function problemOf(file: File): string | null {
   const suffix = suffixOf(file.name);
   if (!ALLOWED.includes(suffix)) return `${file.name}: ${HINTS[suffix] ?? "only PDF, JPG and PNG are accepted"}`;
   if (file.size > MAX_BYTES) return `${file.name}: larger than 20 MB`;

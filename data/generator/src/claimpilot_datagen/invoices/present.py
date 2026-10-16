@@ -197,6 +197,9 @@ def header_view(inv: Invoice) -> dict[str, Any]:
 
 
 def recap_view(inv: Invoice) -> list[dict[str, Any]]:
+    """The VAT recap rows the layout prints; the English scan layout prints none."""
+    if inv.layout is Layout.SCAN_EN:
+        return []
     st = STYLES[inv.layout]
     return [
         {

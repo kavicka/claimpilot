@@ -11,6 +11,7 @@ import { useUser } from "./auth";
 
 const NAV: { label: string; href: string; icon: IconName; match: (p: string) => boolean }[] = [
   { label: "Queue", href: "/", icon: "inbox", match: (p) => p === "/" || p.startsWith("/claims") },
+  { label: "Invoices", href: "/invoices", icon: "invoice-01", match: (p) => p.startsWith("/invoices") },
   { label: "Upload", href: "/upload", icon: "file-text", match: (p) => p.startsWith("/upload") },
   { label: "Ops", href: "/ops", icon: "activity", match: (p) => p.startsWith("/ops") },
   { label: "Evals", href: "/evals", icon: "flask", match: (p) => p.startsWith("/evals") },

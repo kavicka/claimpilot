@@ -13,11 +13,13 @@ import json
 import shutil
 import sys
 from datetime import UTC, datetime
+from pathlib import Path
 
 from claimpilot_core.llm.cassette import CassetteMissingError, CassetteMode
 from claimpilot_core.llm.gateway import collect_calls
 from claimpilot_core.llm.prompts import load_prompt
 from claimpilot_core.logging import configure_logging
+from claimpilot_core.settings import repo_root
 from claimpilot_evals.compare import BASELINES, compare_suite
 from claimpilot_evals.report import Report, git_meta, latest, ops_from_calls, write
 from claimpilot_evals.suites import LOCAL_SUITES, SUITES
@@ -73,6 +75,9 @@ def main() -> None:
     )
     sub.add_parser("export-corrections", help="write handler corrections as a dataset (JSONL)")
     sub.add_parser("reparse", help="rebuild the parse cache after a parser change (needs PDFs)")
+    ft = sub.add_parser("finetune-data", help="invoice extraction training data (train split)")
+    ft.add_argument("--out", type=Path, default=None)
+    ft.add_argument("--limit", type=int, default=None)
     sd = sub.add_parser("seed", help="upload synthetic claims through the api")
     sd.add_argument("--split", default="dev")
     sd.add_argument("--n", type=int, default=5)
@@ -96,6 +101,12 @@ def main() -> None:
         print(asyncio.run(export()))
         return
 
+    if args.cmd == "finetune-data":
+        from claimpilot_evals.finetune import build_dataset
+
+        out = args.out or repo_root() / "data" / "finetune" / "invoices"
+        print(json.dumps(build_dataset(out, limit=args.limit)))
+        return
     if args.cmd == "reparse":
         from claimpilot_evals.cache import reparse
 

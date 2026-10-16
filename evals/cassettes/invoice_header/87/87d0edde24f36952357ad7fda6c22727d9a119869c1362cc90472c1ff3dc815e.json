@@ -1,0 +1,19 @@
+{
+ "step": "invoice_header",
+ "prompt_id": "invoice_extraction/header",
+ "prompt_hash": "34072faf8eb9389218161b627f8c6bd1a8d3b7fc353c4a29dc2d602308ee85dc",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"amount_due\": {\"page\": 1, \"quote\": \"2874,96\", \"value\": \"2874,96\"},\n  \"buyer_dic\": {\"page\": 1, \"quote\": \"2994827044\", \"value\": \"2994827044\"},\n  \"buyer_ico\": {\"page\": 1, \"quote\": \"97145289\", \"value\": \"97145289\"},\n  \"buyer_name\": {\"page\": 1, \"quote\": \"Lekárne Sever s.r.o.\", \"value\": \"Lekárne Sever s.r.o.\"},\n  \"buyer_vat_id\": {\"page\": 1, \"quote\": \"SK2994827044\", \"value\": \"SK2994827044\"},\n  \"constant_symbol\": {\"page\": 1, \"quote\": \"000000\", \"value\": \"000000\"},\n  \"currency\": {\"page\": 1, \"quote\": \"EUR\", \"value\": \"EUR\"},\n  \"customer_number\": {\"page\": 1, \"quote\": \"123456\", \"value\": \"123456\"},\n  \"delivery_note_numbers\": {\"page\": 1, \"quote\": \"DL123456, DL789012\", \"value\": \"DL123456, DL789012\"},\n  \"due_date\": {\"page\": 1, \"quote\": \"01.06.2025\", \"value\": \"01.06.2025\"},\n  \"fees\": [],\n  \"fx_rate\": {\"page\": 1, \"quote\": \"25,50\", \"value\": \"25,50\"},\n  \"invoice_number\": {\"page\": 1, \"quote\": \"256410\", \"value\": \"256410\"},\n  \"issue_date\": {\"page\": 1, \"quote\": \"01.05.2025\", \"value\": \"01.05.2025\"},\n  \"order_number\": {\"page\": 1, \"quote\": \"OB25170765\", \"value\": \"OB25170765\"},\n  \"original_invoice_number\": {\"page\": 1, \"quote\": \"INV20241234\", \"value\": \"INV20241234\"},\n  \"proforma_number\": {\"page\": 1, \"quote\": \"ZAL2025001\", \"value\": \"ZAL2025001\"},\n  \"proforma_settled\": {\"page\": 1, \"quote\": \"500,00\", \"value\": \"500,00\"},\n  \"recap\": [],\n  \"reverse_charge\": {\"page\": 1, \"quote\": \"Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).\", \"value\": \"Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).\"},\n  \"second_currency_total\": {\"page\": 1, \"quote\": \"73 311,48\", \"value\": \"73 311,48\"},\n  \"specific_symbol\": {\"page\": 1, \"quote\": \"000000\", \"value\": \"000000\"},\n  \"supplier_dic\": {\"page\": 1, \"quote\": \"CZ94545154\", \"value\": \"CZ94545154\"},\n  \"supplier_iban\": {\"page\": 1, \"quote\": \"CZ12 6100 0000 0043 8138 6643\", \"value\": \"CZ12 6100 0000 0043 8138 6643\"},\n  \"supplier_ico\": {\"page\": 1, \"quote\": \"94545154\", \"value\": \"94545154\"},\n  \"supplier_name\": {\"page\": 1, \"quote\": \"Enzymo Health CZ s.r.o.\", \"value\": \"Enzymo Health CZ s.r.o.\"},\n  \"supplier_vat_id\": {\"page\": 1, \"quote\": \"CZ94545154\", \"value\": \"CZ94545154\"},\n  \"tax_point_date\": {\"page\": 1, \"quote\": \"15.04.2025\", \"value\": \"15.04.2025\"},\n  \"total\": {\"page\": 1, \"quote\": \"2 874,96\", \"value\": \"2 874,96\"},\n  \"total_net\": {\"page\": 1, \"quote\": \"2 399,13\", \"value\": \"2 399,13\"},\n  \"total_vat\": {\"page\": 1, \"quote\": \"475,83\", \"value\": \"475,83\"},\n  \"variable_symbol\": {\"page\": 1, \"quote\": \"000000\", \"value\": \"000000\"}\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1906,
+   "tokens_out": 1264,
+   "latency_ms": 26180
+  },
+  "cached": false
+ }
+}

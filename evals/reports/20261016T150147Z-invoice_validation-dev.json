@@ -1,0 +1,4565 @@
+{
+ "suite": "invoice_validation",
+ "split": "dev",
+ "metrics": {
+  "clean_invoices_pass": {
+   "value": 1.0,
+   "num": 60,
+   "den": 60
+  },
+  "planted_errors_caught": {
+   "value": 1.0,
+   "num": 2,
+   "den": 2
+  },
+  "injected_errors_caught": {
+   "value": 1.0,
+   "num": 313,
+   "den": 313
+  },
+  "false_alarms": {
+   "value": 0.0,
+   "num": 0,
+   "den": 0
+  }
+ },
+ "items": [
+  {
+   "id": "DE-0001/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0006/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0006/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0006/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0006/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0007/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0007/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0007/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0007/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0015/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0015/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0015/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0015/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0019/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0019/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0019/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0019/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0019/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0019/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0020/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0020/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0020/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0020/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0021/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0021/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0021/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0021/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base",
+    "recap_vat"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0034/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0034/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0034/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0034/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0038/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0038/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0038/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0038/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0039/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0039/pages_missing",
+   "ok": true,
+   "expected": true,
+   "got": true,
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0039/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0039/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours",
+    "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0039/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban",
+    "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0039/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order",
+    "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0042/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0042/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0042/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0042/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0045/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0045/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0045/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0045/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0049/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0049/pages_missing",
+   "ok": true,
+   "expected": true,
+   "got": true,
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0049/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0049/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours",
+    "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0049/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban",
+    "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0049/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order",
+    "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "recap_vat"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0060/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0060/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0060/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0060/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/clean",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "clean"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/line_net+1",
+   "ok": true,
+   "expected": "line_math",
+   "got": [
+    "line_math",
+    "line_vat",
+    "line_gross",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/total+0.10",
+   "ok": true,
+   "expected": "total",
+   "got": [
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/foreign_buyer",
+   "ok": true,
+   "expected": "buyer_is_ours",
+   "got": [
+    "buyer_is_ours"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/iban_digit",
+   "ok": true,
+   "expected": "supplier_iban",
+   "got": [
+    "supplier_iban"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/due_before_issue",
+   "ok": true,
+   "expected": "date_order",
+   "got": [
+    "date_order"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  }
+ ],
+ "meta": {
+  "created": "20261016T150147Z",
+  "git": {
+   "sha": "dfe1e61",
+   "dirty": true
+  },
+  "dataset": "6bd4025701dc",
+  "seed": 42,
+  "cassette_mode": "off",
+  "overrides": {},
+  "options": {},
+  "prompts": {},
+  "models": [],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 0,
+  "cached_calls": 0,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "tokens_per_item": 0.0,
+  "latency_p50_ms": 0,
+  "latency_p95_ms": 0,
+  "worker_peak_rss_mb": 492,
+  "models": []
+ },
+ "notes": [],
+ "stale": []
+}

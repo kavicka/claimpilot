@@ -134,6 +134,11 @@
    "printed": "DL/248575",
    "value": "DL/248575",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1/2",
+   "value": "Strana 1/2",
+   "page": 1
   }
  },
  "lines": [
@@ -832,5 +837,9 @@
   }
  ],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Emília Ďutková",
+  "+421 961 788 378"
+ ]
 }

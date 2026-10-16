@@ -136,6 +136,11 @@
    "printed": "DL/981382",
    "value": "DL/981382",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1/2",
+   "value": "Strana 1/2",
+   "page": 1
   }
  },
  "lines": [
@@ -878,5 +883,9 @@
    "line": 11,
    "detail": "13.889 ordered"
   }
+ ],
+ "pii": [
+  "Emília Ďutková",
+  "+421 961 788 378"
  ]
 }

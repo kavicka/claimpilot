@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "90b9a1e1192c319ceb94b1eb90b9f95efe2fa8e7b9954fa7d8b086e9f4b8d1ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 1,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"MB470561\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8587030270235\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Nutrilek - kláštorný čaj na priedušky 20x2g\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"-3\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"Kusy\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"5,11\"\n        },\n        {\n          \"field\": \"promo_discount_pct\",\n          \"value\": \"10,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"-13,80\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"0\"\n        }\n      ]\n    },\n    {\n      \"item\": 2,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"LC666595\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"4004875286916\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Florea náplasť elastická 10 ks\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"-3\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"Kusy\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"6,78\"\n        },\n        {\n          \"field\": \"struct_discount_pct\",\n          \"value\": \"5,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"-19,32\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"0\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1995,
+   "tokens_out": 479,
+   "latency_ms": 19827
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "90b9a1e1192c319ceb94b1eb90b9f95efe2fa8e7b9954fa7d8b086e9f4b8d1ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 18,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Kalmina masť na hojenie rán 30 g\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"60,00\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"KS\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"11,88\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"5\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"712,80\"\n        },\n        {\n          \"field\": \"sukl_code\",\n          \"value\": \"S94849\"\n        },\n        {\n          \"field\": \"batch\",\n          \"value\": \"7A97071\"\n        },\n        {\n          \"field\": \"expiry\",\n          \"value\": \"10/27\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8589438035607\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1860,
+   "tokens_out": 268,
+   "latency_ms": 5658
+  },
+  "cached": false
+ }
+}

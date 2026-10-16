@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "90b9a1e1192c319ceb94b1eb90b9f95efe2fa8e7b9954fa7d8b086e9f4b8d1ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 13,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"0002\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Kalmina náplasť elastická 10 ks\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"8\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"ks\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"15,44\"\n        },\n        {\n          \"field\": \"discount_pct\",\n          \"value\": \"10,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"111,17\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"23%\"\n        },\n        {\n          \"field\": \"vat_amount\",\n          \"value\": \"25,57\"\n        },\n        {\n          \"field\": \"line_gross\",\n          \"value\": \"136,74\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"4007889513719\"\n        }\n      ]\n    },\n    {\n      \"item\": 14,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"0024\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Florea - cukríky s medom a šalviou 40g\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"5\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"ks\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"3,13\"\n        },\n        {\n          \"field\": \"discount_pct\",\n          \"value\": \"10,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"14,09\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"19%\"\n        },\n        {\n          \"field\": \"vat_amount\",\n          \"value\": \"2,68\"\n        },\n        {\n          \"field\": \"line_gross\",\n          \"value\": \"16,77\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8592047502897\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2011,
+   "tokens_out": 562,
+   "latency_ms": 12036
+  },
+  "cached": false
+ }
+}

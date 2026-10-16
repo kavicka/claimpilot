@@ -135,6 +135,11 @@
    "printed": "DL/458535",
    "value": "DL/458535",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1/1",
+   "value": "Strana 1/1",
+   "page": 1
   }
  },
  "lines": [
@@ -681,5 +686,9 @@
   }
  ],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Laura Masaryková",
+  "+421 940 807 771"
+ ]
 }

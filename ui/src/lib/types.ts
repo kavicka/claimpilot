@@ -234,3 +234,137 @@ export interface EvalReport {
   models: string[] | null;
   notes: string[];
 }
+
+// ---- Supplier invoices (services/api/src/claimpilot_api/invoices.py) ----
+
+export type InvoiceStatus =
+  | "RECEIVED"
+  | "PARSED"
+  | "REDACTED"
+  | "EXTRACTED"
+  | "VALIDATED"
+  | "MATCHED"
+  | "ROUTED"
+  | "IN_REVIEW"
+  | "APPROVED"
+  | "EXPORTED"
+  | "REJECTED"
+  | "NEEDS_INFO"
+  | "FAILED";
+
+export type InvoiceKind = "invoice" | "credit_note" | "proforma";
+
+export interface InvoiceRow {
+  id: string;
+  reference: string;
+  status: InvoiceStatus;
+  queue: QueueName | null;
+  kind: InvoiceKind | null;
+  supplier: string | null;
+  invoice_number: string | null;
+  total: string | null;
+  currency: string | null;
+  /** Failed validation checks plus matching findings. */
+  findings: number;
+  /** The most serious routing rule that fired. */
+  rule: string | null;
+  age_hours: number;
+  error: string | null;
+}
+
+/** What POST /api/invoices answers. */
+export interface UploadedInvoice {
+  id: string;
+  reference: string;
+  status: InvoiceStatus;
+}
+
+export interface InvoiceDocument {
+  id: string;
+  filename: string;
+  pages: string[];
+  hidden_text: HiddenText[];
+}
+
+export interface InvoiceLine {
+  /** 1-based line number; validation names this line's fields lines[n].<field>. */
+  n: number;
+  /** The item row's box on the page, when the table was read from word positions. */
+  row: { page: number; bbox: BBox } | null;
+  fields: Record<string, Field>;
+}
+
+export interface ValidationCheck {
+  name: string;
+  ok: boolean;
+  fields: string[];
+  detail: string;
+}
+
+export interface MatchFinding {
+  kind: string;
+  /** 0-based index into the lines array; null for the whole invoice. */
+  line: number | null;
+  detail?: string | null;
+}
+
+export interface Matching {
+  supplier: string | null;
+  order: string | null;
+  findings: MatchFinding[];
+  lines: { line: number; order_line: number | null }[];
+}
+
+export interface InvoiceStep {
+  step: string;
+  status: string;
+  latency_ms: number | null;
+  models: string[];
+  error: string | null;
+  attempt?: number;
+  tokens?: number;
+}
+
+export interface InvoiceDetail {
+  id: string;
+  reference: string;
+  status: InvoiceStatus;
+  queue: QueueName | null;
+  kind: InvoiceKind | null;
+  invoice_number: string | null;
+  total: string | null;
+  currency: string | null;
+  error: string | null;
+  version: number;
+  needs_revalidation: boolean;
+  /** Set once the ERP accepted the exported UBL. */
+  erp_id?: string | null;
+  export?: InvoiceExport | null;
+  document: InvoiceDocument | null;
+  header: Field[];
+  lines: InvoiceLine[];
+  validation: ValidationCheck[];
+  matching: Matching | null;
+  routing: RuleHit[];
+  steps: InvoiceStep[];
+  audit: AuditEntry[];
+}
+
+export interface ExportError {
+  rule: string;
+  field?: string | null;
+  message: string;
+}
+
+/** The last Peppol UBL export to the ERP: accepted (erp_id), refused (errors) or skipped (note). */
+export interface InvoiceExport {
+  erp_id?: string | null;
+  errors?: ExportError[];
+  note?: string | null;
+}
+
+export interface InvoiceActionResult {
+  status: InvoiceStatus;
+  queue: QueueName | null;
+  version: number;
+}

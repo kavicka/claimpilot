@@ -1,0 +1,21 @@
+# Supplier invoices (Phase 3). Our own legal entities: an invoice must be addressed to one of
+# them. They are the fictional buyer group of the synthetic set (data/synthetic/invoices).
+buyers:
+  - { name: "Lekárne Sever s.r.o.", ico: "90882750", vat_id: "SK2997673481" }
+  - { name: "Lekárne Sever Retail s.r.o.", ico: "93533446", vat_id: "SK2992944152" }
+
+# Validation: how far a printed sum may sit from its parts (rounding of each part).
+validation:
+  line_tolerance: "0.01"
+  sum_tolerance: "0.01"
+
+# Matching against the ERP (stage 3.6): quantity exact, unit price within a share of the order
+# price, the invoice total within an absolute amount. A supplier can have its own values.
+matching:
+  price_tolerance_pct: "0.5"
+  total_tolerance: "0.05"
+  per_supplier: {}
+
+# Routing (stage 3.7): above this amount a senior handler decides.
+routing:
+  senior_amount: "20000.00"

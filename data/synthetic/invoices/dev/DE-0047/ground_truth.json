@@ -130,6 +130,11 @@
    "printed": "OB25110454",
    "value": "OB25110454",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1 dokladu ZF257868071",
+   "value": "Strana 1 dokladu ZF257868071",
+   "page": 1
   }
  },
  "lines": [
@@ -1167,5 +1172,9 @@
   }
  ],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Emil Pavlo",
+  "+421 917 478 120"
+ ]
 }

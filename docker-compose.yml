@@ -69,6 +69,23 @@ services:
       timeout: 3s
       retries: 10
 
+  erp_mock:
+    # The buyer group's ERP: suppliers, orders, receipts (invoice matching). Same image as
+    # core_mock, its own app and data.
+    build:
+      context: .
+      dockerfile: services/core_mock/Dockerfile
+    command: ["uvicorn", "claimpilot_core_mock.erp:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "127.0.0.1:4403:8000"
+    volumes:
+      - ./data/synthetic/invoices:/app/data/invoices:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
   core_mock:
     build:
       context: .

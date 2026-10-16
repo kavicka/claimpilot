@@ -130,6 +130,11 @@
    "printed": "OB25508340",
    "value": "OB25508340",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1 dokladu 258440769",
+   "value": "Strana 1 dokladu 258440769",
+   "page": 1
   }
  },
  "lines": [
@@ -1123,5 +1128,9 @@
    "line": null,
    "detail": ""
   }
+ ],
+ "pii": [
+  "Žigmund Maček",
+  "+421 922 173 922"
  ]
 }

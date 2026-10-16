@@ -146,6 +146,11 @@
    "printed": "-1 209,79",
    "value": "-1209.79",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1/2",
+   "value": "Strana 1/2",
+   "page": 1
   }
  },
  "lines": [
@@ -654,5 +659,9 @@
   }
  ],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Emília Ďutková",
+  "+421 961 788 378"
+ ]
 }

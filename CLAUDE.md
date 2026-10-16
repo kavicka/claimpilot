@@ -9,7 +9,9 @@ portfolio project. The plan and build steps live in the ClaimPilot Implementatio
 - `services/api` (FastAPI, Docker): stores uploads, enqueues jobs, serves the review UI. No model calls.
 - `services/worker` (arq, **native macOS**): every pipeline step and every model call. Runs natively so
   Docling, the reranker and NER get MPS. CI builds and tests its Docker image anyway.
-- `services/core_mock` (FastAPI, Docker): the target core claims system with strict validation.
+- `services/core_mock` (FastAPI, Docker): the target core claims system with strict validation;
+  the same package holds the mock ERP (`erp.py`, its own container `erp_mock`): suppliers, orders,
+  receipts, and the Peppol UBL intake with EN 16931 / Peppol rules (`ubl_rules.py`).
 - `services/mcp_server` (MCP SDK 2.x `MCPServer`, Docker): read-only tools over the api.
 - `packages/claimpilot_core`: domain enums, SQLAlchemy models, LLM gateway, PII vault, state machine.
 - `data/generator`: synthetic claims with exact ground truth. `evals/`: runner, suites, baselines, cassettes.
@@ -25,12 +27,16 @@ Phase 3 adds supplier invoices on the same core (ADR-013): the pipeline moves a 
 `claim` or `invoice` (joined-table inheritance; `update(Case)` for status columns), one state
 machine per kind, steps registered per (kind, status). Invoice states: RECEIVED → PARSED →
 REDACTED → EXTRACTED → VALIDATED → MATCHED → ROUTED → IN_REVIEW → APPROVED → EXPORTED. Real
-sample invoices in `docs/private-samples/` are gitignored and never trained on. Invoice line items are
-rebuilt from word positions (`ingest/tables.py`, `parse(path, tables=True)`) into `doc_cells`, one
-grounding target per cell; claims keep the block-only parse.
+sample invoices in `docs/private-samples/` are gitignored and never trained on. Invoices are read from their
+words, not Docling (`parse(path, tables=True)`): visual lines become blocks, line items are rebuilt
+into `doc_cells` (`ingest/tables.py`), one grounding target per cell; claims keep the Docling parse.
+Extraction: header in one call, line items per page chunk (`extraction/invoice.py`); validation,
+ERP matching, routing (rules I1-I8) and the UBL export are code (`validation/`, `matching/`,
+`routing/invoice.py`, `export/`); tolerances and our own entities in `config/invoices.yaml`. On
+invoices the PII guard keeps IBANs and addresses (company data) and tokenizes people.
 
 Ports: Postgres 5438 (a native Postgres owns 5432), Redis 6389, api 4400, core_mock 4401,
-mcp 4402, ui 4410, Langfuse 4420, Ollama 11434.
+mcp 4402, erp_mock 4403, ui 4410, Langfuse 4420, Ollama 11434.
 
 ## Commands
 
@@ -43,7 +49,7 @@ make e2e         # Playwright tests of the review UI, seeded db, no models
 make lint typecheck
 make smoke       # live Ollama smoke checks
 make data SEED=42
-make data-invoices # synthetic supplier invoices + ERP records (train/dev/test)
+make data-invoices # synthetic supplier invoices + ERP records (train/dev/test); never while an eval runs
 make eval-fast   # gated suites on dev, compare with baselines
 make eval        # live run that records cassettes
 make seed N=5    # upload synthetic claims through the api
@@ -54,7 +60,8 @@ make deploy      # AWS deployment (docs/deploy.md); make destroy removes it
 
 Eval suites (`claimpilot-eval run --suite <name>`): doc_type, pii, extraction, routing, retrieval,
 coverage, submission, summaries, injection, adversarial (prompt-injection cases in data/adversarial,
-rebuilt with `claimpilot-eval adversarial-build`). `masking` (personal data readable on masked
+rebuilt with `claimpilot-eval adversarial-build`); invoices: invoice_extraction (model), and
+invoice_validation, matching, export (code on ground truth, no model). `masking` (personal data readable on masked
 scans) runs locally only and is not part of `all`. After a parser change run
 `claimpilot-eval reparse` to rebuild the committed parse cache, then re-record. Edge cases and
 where they are tested: docs/testing.md. Options: `--model step=model`, `--opt scan_path=vision

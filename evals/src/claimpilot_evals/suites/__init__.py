@@ -11,6 +11,10 @@ SUITES = [
     "summaries",
     "injection",
     "adversarial",
+    "invoice_extraction",
+    "invoice_validation",
+    "matching",
+    "export",
 ]
 
 # Run by name only, never in `all`: they need macOS and the generated PDFs; CI cannot replay them.

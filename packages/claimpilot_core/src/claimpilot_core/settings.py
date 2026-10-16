@@ -33,6 +33,7 @@ class Settings(BaseSettings):
     api_url: str = "http://127.0.0.1:4400"
     intake_token: str = ""
     core_mock_url: str = "http://127.0.0.1:4401"
+    erp_url: str = "http://127.0.0.1:4403"
 
     storage_dir: Path = Field(default_factory=lambda: repo_root() / "data" / "storage")
     config_dir: Path = Field(default_factory=lambda: repo_root() / "config")

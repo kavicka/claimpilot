@@ -77,6 +77,14 @@ TAIL = {
     Layout.SCAN_EN: ("Total Due", {"total", "amount_due", "reverse_charge"}),
 }  # fmt: skip
 RECAP_AT_TOP = {Layout.TANGRAM}
+# The page counter of page 1, as each layout prints it (SAP prints none).
+PAGE_NOTE = {
+    Layout.WHOLESALE: "strana 1 z {n}",
+    Layout.SAP: None,
+    Layout.TANGRAM: "Strana 1/{n}",
+    Layout.POHODA: "Strana 1 dokladu {number}",
+    Layout.SCAN_EN: "Page: 1/{n}",
+}
 
 
 def _place_fields(pdf: bytes, inv: Invoice, v: dict[str, Any]) -> None:
@@ -87,6 +95,10 @@ def _place_fields(pdf: bytes, inv: Invoice, v: dict[str, Any]) -> None:
     tail = next((i + 1 for i in reversed(range(len(pages))) if marker in pages[i]), 1)
     for key, field in v["header"].items():
         field["page"] = tail if key in tail_fields else 1
+    note = PAGE_NOTE[inv.layout]
+    if note:
+        printed = note.format(n=inv.pages_total, number=inv.number)
+        v["header"]["page_note"] = {"printed": printed, "value": printed, "page": 1}
     for row in v["recap"]:
         row["page"] = 1 if inv.layout in RECAP_AT_TOP else tail
     for fee in v["fees"]:
@@ -146,6 +158,9 @@ def ground_truth(inv: Invoice, v: dict[str, Any], s: InvoiceSet, file: str, sha:
         "recap": v["recap"],
         "fees": v["fees"],
         "findings": [asdict(f) for f in s.findings.get(inv.invoice_id, [])],
+        # Personal data printed on the invoice: no model payload may carry it. The billing
+        # address fakturacia@... is the company's, not a person's.
+        "pii": [inv.supplier.contact, inv.supplier.phone],
     }
 
 

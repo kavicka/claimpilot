@@ -125,6 +125,11 @@
    "printed": "14607",
    "value": "14607",
    "page": 1
+  },
+  "page_note": {
+   "printed": "strana 1 z 3",
+   "value": "strana 1 z 3",
+   "page": 1
   }
  },
  "lines": [
@@ -1902,5 +1907,9 @@
    "line": 3,
    "detail": "20.85 ordered"
   }
+ ],
+ "pii": [
+  "Karla Podkonická",
+  "+421 914 413 729"
  ]
 }

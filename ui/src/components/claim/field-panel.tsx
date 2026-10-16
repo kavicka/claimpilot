@@ -10,7 +10,7 @@ import type { ClaimDocument, ClaimStatus, Field, FieldPatchResult } from "@/lib/
 
 import { confidenceLevel, failedChecks, groupFields, isFlagged, type Level } from "./field-utils";
 
-const DOT: Record<Level, string> = {
+export const DOT: Record<Level, string> = {
   high: "bg-status-online",
   medium: "bg-marker-comment",
   low: "bg-danger-swipe",
@@ -132,7 +132,7 @@ export function FieldPanel({
   );
 }
 
-function Legend({ className, label }: { className: string; label: string }) {
+export function Legend({ className, label }: { className: string; label: string }) {
   return (
     <span className="flex items-center gap-4">
       <span className={cn("size-8 rounded-(--radius-pill)", className)} aria-hidden />
@@ -141,7 +141,7 @@ function Legend({ className, label }: { className: string; label: string }) {
   );
 }
 
-function FieldRow({
+export function FieldRow({
   field,
   label,
   indent,

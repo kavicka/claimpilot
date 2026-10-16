@@ -4,7 +4,7 @@
  "layout": "wholesale",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "d35e769ced78e94e091141392604301770b6af1284652940139d0a18acea22b8",
+ "sha256": "48fe752b3e95216c06047bc3e9465aeea0766550b745312261c40f5bbab4c3bc",
  "pages_total": 2,
  "pages_present": 2,
  "scan": false,
@@ -12,7 +12,6 @@
  "language": "sk",
  "duplicate_of": null,
  "edge_cases": [
-  "iban_changed",
   "unknown_supplier"
  ],
  "vat_method": "per_rate",
@@ -52,8 +51,8 @@
    "page": 1
   },
   "supplier_iban": {
-   "printed": "SK39 6500 6281 3818 1510 3730",
-   "value": "SK3965006281381815103730",
+   "printed": "SK36 1100 0000 0088 2100 4771",
+   "value": "SK3611000000008821004771",
    "page": 1
   },
   "buyer_name": {
@@ -124,6 +123,11 @@
   "customer_number": {
    "printed": "61264",
    "value": "61264",
+   "page": 1
+  },
+  "page_note": {
+   "printed": "strana 1 z 2",
+   "value": "strana 1 z 2",
    "page": 1
   }
  },
@@ -761,14 +765,13 @@
  "fees": [],
  "findings": [
   {
-   "kind": "iban_changed",
-   "line": null,
-   "detail": ""
-  },
-  {
    "kind": "unknown_supplier",
    "line": null,
    "detail": ""
   }
+ ],
+ "pii": [
+  "Gizela Konopková",
+  "+421 903 328 369"
  ]
 }

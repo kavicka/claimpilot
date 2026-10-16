@@ -34,3 +34,6 @@ infra/terraform/*.auto.tfvars.json
 # Real supplier invoices from the owner: local eval only, never committed (ADR-006)
 docs/private-samples/
 data/real/
+
+# Fine-tuning data and adapters (stage 3.9): rebuilt by `make finetune`
+data/finetune/

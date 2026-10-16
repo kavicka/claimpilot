@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "90b9a1e1192c319ceb94b1eb90b9f95efe2fa8e7b9954fa7d8b086e9f4b8d1ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 13,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"0025\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Sanovit náplasť elastická 10 ks\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"10\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"ks\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"44,10\"\n        },\n        {\n          \"field\": \"discount_pct\",\n          \"value\": \"0,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"441,00\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"23%\"\n        },\n        {\n          \"field\": \"vat_amount\",\n          \"value\": \"101,43\"\n        },\n        {\n          \"field\": \"line_gross\",\n          \"value\": \"542,43\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"4712634696585\"\n        }\n      ]\n    },\n    {\n      \"item\": 14,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"0035\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Nutrilek - čaj na pokojný spánok 20x2g\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"2\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"ks\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"4,31\"\n        },\n        {\n          \"field\": \"discount_pct\",\n          \"value\": \"20,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"6,90\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"19%\"\n        },\n        {\n          \"field\": \"vat_amount\",\n          \"value\": \"1,31\"\n        },\n        {\n          \"field\": \"line_gross\",\n          \"value\": \"8,21\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8581238908495\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2013,
+   "tokens_out": 565,
+   "latency_ms": 12083
+  },
+  "cached": false
+ }
+}

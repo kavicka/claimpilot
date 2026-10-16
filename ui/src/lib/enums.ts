@@ -1,7 +1,7 @@
 import type { IconName, TagTone } from "@claimpilot/ui";
 
 import { humanize } from "./format";
-import type { ClaimStatus } from "./types";
+import type { ClaimStatus, InvoiceStatus } from "./types";
 
 export interface EnumEntry {
   label: string;
@@ -30,13 +30,16 @@ export const STATUS_ORDER: ClaimStatus[] = [
   "FAILED",
 ];
 
-export const STATUS: Record<ClaimStatus, EnumEntry> = {
+export const STATUS: Record<ClaimStatus | InvoiceStatus, EnumEntry> = {
   RECEIVED: { label: "Received", tone: "neutral", icon: "circle-dashed" },
   PARSED: { label: "Parsed", tone: "neutral", icon: "circle-dashed" },
   REDACTED: { label: "Redacted", tone: "neutral", icon: "circle-dashed" },
   EXTRACTED: { label: "Extracted", tone: "neutral", icon: "circle-dashed" },
   ROUTED: { label: "Routed", tone: "neutral", icon: "circle-dashed" },
   ASSESSED: { label: "Assessed", tone: "neutral", icon: "circle-dashed" },
+  VALIDATED: { label: "Validated", tone: "neutral", icon: "circle-dashed" },
+  MATCHED: { label: "Matched", tone: "neutral", icon: "circle-dashed" },
+  EXPORTED: { label: "Exported", tone: "success", icon: "sent-02" },
   IN_REVIEW: { label: "In review", tone: "info", icon: "eye" },
   APPROVED: { label: "Approved", tone: "success", icon: "check" },
   SUBMITTED: { label: "Submitted", tone: "success", icon: "sent-02" },
@@ -117,6 +120,28 @@ export const FAILED_CHECK: Record<string, string> = {
   iban_checksum: "IBAN checksum fails",
   birth_number_valid: "Invalid birth number",
   same_person: "Different person than on the claim form",
+  // invoices (services/worker/src/claimpilot_worker/validation/invoice.py)
+  line_math: "Quantity × price ≠ line total",
+  line_vat: "Line VAT does not match the rate",
+  line_gross: "Net + VAT ≠ gross",
+  ean: "EAN check digit fails",
+  recap_base: "VAT recap base ≠ sum of lines",
+  recap_vat: "VAT recap does not add up",
+  total_net: "Net total ≠ VAT recap",
+  total_vat: "VAT total ≠ VAT recap",
+  total: "Total ≠ net + VAT",
+  amount_due: "Amount due does not add up",
+  supplier_ico: "Supplier IČO is not valid",
+  supplier_vat_id: "Supplier VAT ID is not valid",
+  supplier_iban: "Supplier IBAN is not valid",
+  buyer_vat_id: "Buyer VAT ID is not valid",
+  buyer_is_ours: "Buyer is not our company",
+  vat_regime: "VAT regime does not fit the supplier",
+  pages_complete: "Pages missing",
+  second_currency: "Second-currency total does not match the rate",
+  credit_note_original: "Credit note without an original invoice",
+  credit_note_sign: "Credit note total is not negative",
+  duplicate: "Already received",
 };
 
 export function failedCheckLabel(name: string): string {
@@ -133,4 +158,54 @@ export const SUMMARY_KIND: Record<string, string> = {
 export const ROLE: Record<string, string> = {
   handler: "Handler",
   senior: "Senior handler",
+};
+
+// ---- Supplier invoices ----
+
+/** The worker owns the invoice in these states (APPROVED: the ERP export is running). */
+export const INVOICE_PIPELINE_STATUSES: InvoiceStatus[] = [
+  "RECEIVED",
+  "PARSED",
+  "REDACTED",
+  "EXTRACTED",
+  "VALIDATED",
+  "MATCHED",
+  "ROUTED",
+];
+
+export const INVOICE_DECIDED_STATUSES: InvoiceStatus[] = ["APPROVED", "EXPORTED", "REJECTED"];
+
+export const INVOICE_KIND: Record<string, EnumEntry> = {
+  invoice: { label: "Invoice", tone: "info" },
+  credit_note: { label: "Credit note", tone: "orange" },
+  proforma: { label: "Proforma", tone: "purple" },
+};
+
+/** ERP matching findings (services/worker/src/claimpilot_worker/matching/invoice.py). */
+export const FINDING: Record<string, string> = {
+  price_diff: "Price differs from the order",
+  short_delivery: "Less received than invoiced",
+  over_delivery: "More received than invoiced",
+  not_ordered: "Not on the order",
+  not_received: "No goods receipt",
+  unknown_order: "Order not found in the ERP",
+  unknown_supplier: "Supplier not in the ERP",
+  iban_changed: "IBAN not on the supplier's record",
+  unknown_original: "Original invoice not found",
+};
+
+export function findingLabel(kind: string): string {
+  return FINDING[kind] ?? humanize(kind);
+}
+
+/** What each invoice routing rule means (services/worker/src/claimpilot_worker/routing/invoice.py). */
+export const INVOICE_RULE: Record<string, string> = {
+  I1: "IBAN not on the supplier's record",
+  I2: "Same supplier and number arrived before",
+  I3: "Text addressed to an AI system or hidden from the reader",
+  I4: "Supplier not in the ERP",
+  I5: "Credit note",
+  I6: "Amount above the senior limit",
+  I7: "A line differs from the order or the receipt",
+  I8: "A validation check failed",
 };

@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "90b9a1e1192c319ceb94b1eb90b9f95efe2fa8e7b9954fa7d8b086e9f4b8d1ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 13,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Kalmina kapsuly na trávenie 30 cps\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"10,00\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"KS\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"15,11\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"5\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"151,10\"\n        },\n        {\n          \"field\": \"sukl_code\",\n          \"value\": \"S80604\"\n        },\n        {\n          \"field\": \"batch\",\n          \"value\": \"8N54905\"\n        },\n        {\n          \"field\": \"expiry\",\n          \"value\": \"07/26\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8582188794909\"\n        }\n      ]\n    },\n    {\n      \"item\": 14,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Vivera manžeta k tlakomeru 22-42 cm\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"5,00\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"KS\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"22,61\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"23\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"113,05\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"4712678252433\"\n        }\n      ]\n    },\n    {\n      \"item\": 15,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Kalmina opaľovací krém SPF 50+ 50 ml\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"40,00\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"KS\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"4,96\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"23\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"198,40\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"3808910606902\"\n        }\n      ]\n    },\n    {\n      \"item\": 16,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Florea kvapky do nosa 10 ml\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"90,00\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"KS\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"7,59\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"5\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"683,10\"\n        },\n        {\n          \"field\": \"sukl_code\",\n          \"value\": \"S97788\"\n        },\n        {\n          \"field\": \"batch\",\n          \"value\": \"1A60372\"\n        },\n        {\n          \"field\": \"expiry\",\n          \"value\": \"05/29\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8596918946162\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2255,
+   "tokens_out": 903,
+   "latency_ms": 21171
+  },
+  "cached": false
+ }
+}

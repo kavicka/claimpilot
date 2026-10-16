@@ -129,6 +129,11 @@
    "printed": "OB25314015",
    "value": "OB25314015",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1 dokladu 253910004",
+   "value": "Strana 1 dokladu 253910004",
+   "page": 1
   }
  },
  "lines": [
@@ -1166,5 +1171,9 @@
   }
  ],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Belo Kríž",
+  "+421 924 858 765"
+ ]
 }

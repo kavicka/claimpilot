@@ -1,29 +1,9 @@
-import { execFileSync } from "node:child_process";
-
-import AxeBuilder from "@axe-core/playwright";
 import { type Page, expect, request, test } from "@playwright/test";
 
-import { e2eEnv, repoRoot } from "../playwright.config";
-
-const API = "http://127.0.0.1:4499";
-const PASSWORD = "e2e-password";
+import { API, PASSWORD, login, seed, seriousViolations } from "./helpers";
 
 // Every test starts from the same three claims (tests/e2e/seed.py).
-test.beforeEach(() => {
-  execFileSync("uv", ["run", "--no-sync", "python", "tests/e2e/seed.py"], {
-    cwd: repoRoot,
-    env: e2eEnv as NodeJS.ProcessEnv,
-    stdio: "pipe",
-  });
-});
-
-async function login(page: Page, username = "handler.demo", password = PASSWORD) {
-  await page.goto("/login");
-  await page.waitForLoadState("networkidle"); // typing before React hydrates is lost
-  await page.getByLabel("Username").fill(username);
-  await page.getByLabel("Password").fill(password);
-  await page.getByRole("button", { name: "Log in" }).click();
-}
+test.beforeEach(() => seed());
 
 async function openClaim(page: Page, reference: string) {
   await page.getByRole("tab", { name: /Standard|Senior|Failed/ }).first().waitFor();
@@ -31,13 +11,6 @@ async function openClaim(page: Page, reference: string) {
   await page.getByRole("tab", { name: tab }).click();
   await page.getByText(reference).click();
   await expect(page.getByRole("heading", { name: reference })).toBeVisible();
-}
-
-async function seriousViolations(page: Page) {
-  const result = await new AxeBuilder({ page }).analyze();
-  return result.violations
-    .filter((v) => v.impact === "serious" || v.impact === "critical")
-    .map((v) => `${v.id}: ${v.help} → ${v.nodes.map((n) => `${n.target.join(" ")} ${n.html.slice(0, 120)} ${n.failureSummary ?? ""}`).join(" | ")}`);
 }
 
 test("a wrong password is refused and the right one opens the queue", async ({ page }) => {

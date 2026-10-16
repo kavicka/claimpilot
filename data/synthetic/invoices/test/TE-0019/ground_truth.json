@@ -124,6 +124,11 @@
    "printed": "22492",
    "value": "22492",
    "page": 1
+  },
+  "page_note": {
+   "printed": "strana 1 z 2",
+   "value": "strana 1 z 2",
+   "page": 1
   }
  },
  "lines": [
@@ -900,5 +905,9 @@
    "line": null,
    "detail": ""
   }
+ ],
+ "pii": [
+  "Ľubomír Škultéty",
+  "+421 950 279 788"
  ]
 }

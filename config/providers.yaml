@@ -11,6 +11,8 @@ steps:
   doc_type:          { model: "qwen3:4b-instruct", num_ctx: 8192 }
   extraction:        { model: "qwen3:30b-a3b-instruct-2507-q4_K_M", num_predict: 6144 }  # same accuracy as 14b, 2.4x faster (MoE, 3B active)
   extraction_vision: { model: "qwen3-vl:8b", num_predict: 6144 }
+  invoice_header:    { model: "qwen3:30b-a3b-instruct-2507-q4_K_M", num_predict: 4096 }
+  invoice_lines:     { model: "qwen3:30b-a3b-instruct-2507-q4_K_M", num_ctx: 24576, num_predict: 8192 }
   routing:           { model: "qwen3:14b", num_ctx: 8192, num_predict: 512 }
   coverage_map:      { model: "qwen3:14b", num_ctx: 8192, num_predict: 1024 }
   coverage_decide:   { model: "qwen3:14b", num_predict: 768 }

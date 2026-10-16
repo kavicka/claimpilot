@@ -18,11 +18,12 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm.exc import StaleDataError
 
 from claimpilot_api.auth import Intake, User_, ensure_demo_users
+from claimpilot_api.invoices import router as invoices_router
 from claimpilot_api.review import enqueue
 from claimpilot_api.review import router as review_router
-from claimpilot_core.db.models import Claim, Document, PipelineStepRun
+from claimpilot_core.db.models import Claim, Document, Invoice, PipelineStepRun
 from claimpilot_core.db.session import get_engine, get_sessionmaker
-from claimpilot_core.domain import ClaimStatus
+from claimpilot_core.domain import ClaimStatus, InvoiceStatus
 from claimpilot_core.settings import get_settings
 
 ALLOWED = {
@@ -46,6 +47,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
 app = FastAPI(title="ClaimPilot API", version="0.1.0", lifespan=lifespan)
 app.include_router(review_router)
+app.include_router(invoices_router)
 
 
 @app.exception_handler(StaleDataError)
@@ -168,6 +170,57 @@ async def create_claim(
         scenario_id=scenario_id,
         documents=len(accepted),
     )
+
+
+class InvoiceOut(BaseModel):
+    id: uuid.UUID
+    reference: str
+    status: str
+
+
+@app.post("/api/invoices", status_code=201)
+async def create_invoice(
+    request: Request,
+    session: Session,
+    source: Intake,
+    file: Annotated[
+        UploadFile, File(description="The invoice, credit note or proforma: PDF, JPG or PNG")
+    ],
+) -> InvoiceOut:
+    """One supplier document per case; its pages are read as one invoice."""
+    suffix = Path(file.filename or "").suffix.lower()
+    shown = safe_filename(file.filename, suffix)
+    if suffix not in ALLOWED:
+        raise HTTPException(
+            415, f"{shown}: {REJECTED_HINTS.get(suffix, 'only PDF, JPG and PNG are accepted')}"
+        )
+    data = await file.read(MAX_BYTES + 1)
+    if len(data) > MAX_BYTES:
+        raise HTTPException(413, f"{shown}: larger than 20 MB")
+    if not data or not MAGIC[suffix](data):
+        raise HTTPException(415, f"{shown}: the content is not a {suffix[1:].upper()} file")
+    number = await session.scalar(text("SELECT nextval('invoice_reference_seq')"))
+    invoice = Invoice(reference=f"FA-2026-{number:06d}", status=InvoiceStatus.RECEIVED.value)
+    session.add(invoice)
+    await session.flush()
+    doc_id = uuid.uuid4()
+    relative = f"invoices/{invoice.id}/{doc_id}{suffix}"
+    storage = get_settings().storage_dir
+    (storage / relative).parent.mkdir(parents=True, exist_ok=True)
+    (storage / relative).write_bytes(data)
+    session.add(
+        Document(
+            id=doc_id,
+            case_id=invoice.id,
+            filename=shown,
+            mime_type=ALLOWED[suffix],
+            sha256=hashlib.sha256(data).hexdigest(),
+            storage_path=relative,
+        )
+    )
+    await session.commit()
+    await enqueue(request, invoice.id)
+    return InvoiceOut(id=invoice.id, reference=invoice.reference, status=invoice.status)
 
 
 @app.get("/api/claims")

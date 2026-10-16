@@ -11,7 +11,7 @@ import type { ClaimAction, ClaimDetail } from "@/lib/types";
 import { ActionDialog } from "./action-dialog";
 
 /** Label and value in the claim summary, in the drawer's detail-card style (DF 2:548). */
-function Meta({ label, children }: { label: string; children: React.ReactNode }) {
+export function Meta({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex min-w-0 flex-col gap-4">
       <dt className="cp-text-label text-ink-subtle">{label}</dt>
@@ -143,7 +143,7 @@ export function ClaimHeader({
   );
 }
 
-function ActionButton({
+export function ActionButton({
   label,
   icon,
   variant = "secondary",

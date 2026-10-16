@@ -118,14 +118,29 @@ class Claim(Case):
 
 
 class Invoice(Case):
-    """A supplier invoice, credit note or proforma. Its own columns arrive with extraction and
-    matching (Phase 3); until then the row only gives the case its kind."""
+    """A supplier invoice, credit note or proforma."""
 
     __tablename__ = "invoices"
 
     id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("cases.id", ondelete="CASCADE"), primary_key=True
     )
+    # What validation and matching key on, copied from the extracted fields (normalized).
+    doc_kind: Mapped[str | None] = mapped_column(String(16))  # invoice | credit_note | proforma
+    invoice_number: Mapped[str | None] = mapped_column(String(40), index=True)
+    supplier_ico: Mapped[str | None] = mapped_column(String(16), index=True)
+    supplier_vat_id: Mapped[str | None] = mapped_column(String(20))
+    total: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
+    currency: Mapped[str | None] = mapped_column(String(3))
+    # Every validation check: [{name, ok, fields, detail}]
+    validation: Mapped[list[Any] | None] = mapped_column(JSONB)
+    # The ERP match: supplier, order, findings [{kind, line, detail}], line -> order line
+    matching: Mapped[dict[str, Any] | None] = mapped_column(JSONB)
+    # Routing rule hits, most serious first: [{rule, detail}]
+    routing: Mapped[list[Any] | None] = mapped_column(JSONB)
+    # The ERP's id once the UBL document was accepted; the last export attempt and its errors
+    erp_id: Mapped[str | None] = mapped_column(String(32))
+    export: Mapped[dict[str, Any] | None] = mapped_column(JSONB)
 
     __mapper_args__ = {"polymorphic_identity": CaseKind.INVOICE.value}  # noqa: RUF012
 

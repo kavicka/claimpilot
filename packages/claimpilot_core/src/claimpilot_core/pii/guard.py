@@ -102,10 +102,20 @@ def _recognizers():
     return pattern_recognizers()
 
 
+# A ten-digit tax number (Slovak DIČ, a VAT id without its prefix) can pass the rodné číslo
+# checksum; after its label it is a company's, not a person's.
+TAX_LABEL_BEFORE = re.compile(
+    r"(?:DI[ČC]|I[ČC]\s?DPH|VAT(?:\s?(?:ID|Reg\.?\s?No\.?))?|USt-?IdNr\.?|Tax\s?ID)\s*[:.]?\s*$",
+    re.IGNORECASE,
+)
+
+
 def pattern_spans(text: str) -> list[Span]:
     out = []
     for rec in _recognizers():
         for r in rec.analyze(text, rec.supported_entities, None):
+            if r.entity_type == "BIRTH_NUMBER" and TAX_LABEL_BEFORE.search(text[: r.start]):
+                continue
             out.append(
                 Span(r.start, r.end, r.entity_type, text[r.start : r.end], r.score, "pattern")
             )
@@ -210,8 +220,13 @@ def _person_key(value: str) -> frozenset[str]:
 class ClaimRedactor:
     """Holds the token registry of one claim. Call `observe` on every text first, then `redact`."""
 
-    def __init__(self, ner: NerFn | None = transformer_ner) -> None:
+    def __init__(
+        self, ner: NerFn | None = transformer_ner, *, keep: frozenset[str] = frozenset()
+    ) -> None:
+        """`keep`: entity types left readable. Invoices keep IBAN and ADDRESS: they are company
+        data that the checks need (an IBAN changed against the supplier's record)."""
         self.ner = ner
+        self.keep = keep
         self.entities: list[Entity] = []
         self._counters: dict[str, int] = {}
 
@@ -262,7 +277,7 @@ class ClaimRedactor:
         spans = pattern_spans(text)
         if self.ner is not None:
             spans += self.ner(text)
-        return spans
+        return [s for s in spans if s.entity not in self.keep] if self.keep else spans
 
     def observe(self, texts: Iterable[str]) -> None:
         label_before = False

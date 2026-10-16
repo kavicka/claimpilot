@@ -149,13 +149,18 @@ def _joins(prev: Phrase, w: Word, gap: float) -> bool:
         return True
     if prev_num and w_num:
         # "5" + "812,40" is one amount; "0,573" + "0,6819" are two prices
-        return (
+        if (
             len(prev.words) == 1
             and re.fullmatch(r"-?\d{1,3}", last) is not None
             and bool(THOUSANDS_TAIL.match(w.text))
-        )
+        ):
+            return True
+        # digit groups of a phone number, an IBAN or a postcode, a normal space apart
+        return "," not in last and "," not in w.text and gap < 0.38
     if prev.text.endswith(":") and len(prev.words) == 1:
         return True  # a label and its value: "EAN: 2904012071349"
+    if re.fullmatch(r"\+?[A-Z]{0,2}\d+", last) and w_num and "," not in w.text and gap < 0.38:
+        return True  # "+421 921", "SK62 6500": a prefix and the next digit group
     amount = AMOUNT.match(last) if prev_num else AMOUNT.match(w.text)
     return not amount and gap < 0.38
 
@@ -480,23 +485,64 @@ def _ocr_rapid(img) -> list[Word]:
     return out
 
 
-def item_table_cells(path, pages: list, hidden: list | None = None) -> list[TableCell]:
-    """Line-item cells of a document: text-layer words on pages that have them, OCR words on
-    scanned pages. Words a reader cannot see (`hidden`, from ingest/hidden_text.py) are dropped
-    first: they never reach a cell, so they never reach a model."""
+def page_words(path, pages: list) -> list[list[Word]]:
+    """Words of every page: the text layer where a page has one, OCR on scanned pages."""
     text_words = words_from_pdf(path) if str(path).lower().endswith(".pdf") else []
     scan_words: list[list[Word]] | None = None
-    per_page: list[list[Word]] = []
+    out: list[list[Word]] = []
     for info in pages:
         if info.text_chars > 20 and info.page <= len(text_words):
-            words = text_words[info.page - 1]
+            out.append(text_words[info.page - 1])
         else:
             if scan_words is None:
                 scan_words = words_from_scan(path)
-            words = scan_words[info.page - 1] if info.page <= len(scan_words) else []
-        boxes = [h.bbox for h in hidden or [] if h.page == info.page]
-        per_page.append([w for w in words if not any(_inside(w, b) for b in boxes)])
-    return table_cells(per_page)
+            out.append(scan_words[info.page - 1] if info.page <= len(scan_words) else [])
+    return out
+
+
+def item_table_cells(path, pages: list, hidden: list | None = None) -> list[TableCell]:
+    """Line-item cells of a document. Words a reader cannot see (`hidden`, from
+    ingest/hidden_text.py) are dropped first: they never reach a cell, so never a model."""
+    return table_cells(_visible(page_words(path, pages), hidden or []))
+
+
+def _visible(pages: list[list[Word]], hidden: list) -> list[list[Word]]:
+    out = []
+    for page_no, words in enumerate(pages, start=1):
+        boxes = [h.bbox for h in hidden if h.page == page_no]
+        out.append([w for w in words if not any(_inside(w, b) for b in boxes)])
+    return out
+
+
+def line_blocks(pages: list[list[Word]], hidden: list) -> list:
+    """Visual lines as blocks, phrases joined by " | " so columns stay apart ("5,00% | 665,46 |
+    33,27 | Základ | 2 272,72"). Docling reorders cells of such rows; words in their own
+    reading order do not. Hidden text becomes blocks of its own, marked with the reason, for the
+    handler and the injection signals; it never reaches a model."""
+    from claimpilot_core.schemas.parsing import Block
+
+    blocks: list[Block] = []
+    for page_no, words in enumerate(pages, start=1):
+        spans = [h for h in hidden if h.page == page_no]
+        visible = [w for w in words if not any(_inside(w, h.bbox) for h in spans)]
+        for ln in group_lines(visible, page_no):
+            box = ln.phrases[0].box
+            for ph in ln.phrases[1:]:
+                box = box.union(ph.box)
+            text = " | ".join(ph.text for ph in ln.phrases)
+            blocks.append(Block(page=page_no, seq=len(blocks), kind="line", text=text, bbox=box))
+        for h in spans:
+            blocks.append(
+                Block(
+                    page=page_no,
+                    seq=len(blocks),
+                    kind="line",
+                    text=h.text,
+                    bbox=h.bbox,
+                    hidden=h.reason,
+                )
+            )
+    return blocks
 
 
 def _inside(w: Word, box: FracBox) -> bool:

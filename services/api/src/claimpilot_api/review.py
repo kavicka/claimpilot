@@ -26,6 +26,7 @@ from sqlalchemy.orm.attributes import flag_modified
 from claimpilot_api.auth import COOKIE, TTL_SECONDS, User_, hash_password, sign, verify_password
 from claimpilot_core.db.models import (
     AuditLog,
+    Case,
     Claim,
     Correction,
     CoverageDecision,
@@ -41,6 +42,7 @@ from claimpilot_core.db.session import get_sessionmaker
 from claimpilot_core.domain import ClaimStatus as S
 from claimpilot_core.domain import Queue
 from claimpilot_core.fields import normalize as normalize_field
+from claimpilot_core.invoice_values import normalize_invoice
 from claimpilot_core.pii.tokens import ENTITY_FOR_PREFIX, TOKEN_RE, rehydrate
 from claimpilot_core.pii.vault import Vault
 from claimpilot_core.policy import load_terms
@@ -364,10 +366,11 @@ class FieldEdit(BaseModel):
     version: int | None = None  # the claim version the handler saw
 
 
-def check_version(claim: Claim, seen: int | None) -> None:
-    if seen is not None and seen != claim.version:
+def check_version(case: Case, seen: int | None) -> None:
+    if seen is not None and seen != case.version:
+        noun = "claim" if case.kind == "claim" else "invoice"
         raise HTTPException(
-            409, "the claim changed since you opened it; reload to see the current version"
+            409, f"the {noun} changed since you opened it; reload to see the current version"
         )
 
 
@@ -412,15 +415,18 @@ async def correct_field(
     row = await session.get(ExtractedField, field_id)
     if row is None:
         raise HTTPException(404, "no such field")
-    claim = await session.get(Claim, row.case_id)
-    if claim is None or claim.status != S.IN_REVIEW.value:
-        raise HTTPException(409, "fields can be corrected only while the claim is in review")
-    check_version(claim, body.version)
+    case = await session.get(Case, row.case_id)
+    if case is None or case.status != S.IN_REVIEW.value:
+        raise HTTPException(409, "fields can be corrected only while the case is in review")
+    check_version(case, body.version)
+    invoice = case.kind == "invoice"
     mapping = await vault().load(session, row.case_id)
     reverse = {v: k for k, v in mapping.items()}
     stored = reverse.get(body.value)  # keep tokens for values the vault already holds
     if stored is None:
-        entity = pii_entity(row.field, row.value_raw)
+        # On an invoice, company data (supplier name, IBAN) is not personal: only a value that
+        # was a token goes back to the vault.
+        entity = pii_entity("", row.value_raw) if invoice else pii_entity(row.field, row.value_raw)
         if entity and body.value.strip():
             stored = await vault().add(session, row.case_id, entity, body.value)
             mapping[stored] = body.value
@@ -437,15 +443,16 @@ async def correct_field(
             details={"field": row.field, "document_id": str(row.document_id)},
         )
     )
-    row.value_raw, row.value_norm = stored, normalize_field(row.field, stored)
+    norm = normalize_invoice(row.field, stored) if invoice else normalize_field(row.field, stored)
+    row.value_raw, row.value_norm = stored, norm
     row.corrected, row.grounded, row.confidence, row.method = True, True, 1.0, "handler"
-    flag_modified(claim, "status")  # a correction is a change of the claim: bump its version
+    flag_modified(case, "status")  # a correction is a change of the case: bump its version
     await session.commit()
     return {
         "id": row.id,
         "value": rehydrate(stored, mapping),
         "value_norm": row.value_norm,
-        "claim_version": claim.version,
+        "claim_version": case.version,
     }
 
 

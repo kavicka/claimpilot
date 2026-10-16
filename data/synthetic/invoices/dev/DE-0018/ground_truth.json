@@ -267,5 +267,9 @@
   }
  ],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Květa Horváthová",
+  "+420 948 195 996"
+ ]
 }

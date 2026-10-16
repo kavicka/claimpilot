@@ -17,10 +17,29 @@ export function injectionHits(claim: ClaimDetail) {
 }
 
 export function InjectionWarning({ claim }: { claim: ClaimDetail }) {
-  const hits = injectionHits(claim);
-  const hidden = claim.documents.flatMap((d) =>
-    (d.hidden_text ?? []).map((h) => ({ ...h, filename: d.filename })),
+  const hidden = claim.documents.flatMap((d) => (d.hidden_text ?? []).map((h) => ({ ...h, filename: d.filename })));
+  return (
+    <HiddenTextWarning
+      title="A document in this claim talks to the AI system or hides text from the reader"
+      body="Hidden text was kept away from the models, and the claim went to a senior handler. Check the documents yourself: extracted values and the coverage recommendation may have been steered."
+      hits={injectionHits(claim).map((h) => h.detail)}
+      hidden={hidden}
+    />
   );
+}
+
+/** Red band under the header listing rule hits and every hidden text found on the pages. */
+export function HiddenTextWarning({
+  title,
+  body,
+  hits,
+  hidden,
+}: {
+  title: string;
+  body: string;
+  hits: string[];
+  hidden: (HiddenText & { filename: string })[];
+}) {
   if (hits.length === 0 && hidden.length === 0) return null;
   return (
     <section
@@ -29,16 +48,13 @@ export function InjectionWarning({ claim }: { claim: ClaimDetail }) {
     >
       <h2 id="injection-warning-title" className="cp-text-tab flex items-center gap-8">
         <Icon name="shield-alert" size={16} />
-        A document in this claim talks to the AI system or hides text from the reader
+        {title}
       </h2>
-      <p className="cp-text-label-regular">
-        Hidden text was kept away from the models, and the claim went to a senior handler. Check the
-        documents yourself: extracted values and the coverage recommendation may have been steered.
-      </p>
+      <p className="cp-text-label-regular">{body}</p>
       <ul className="cp-text-label-regular flex flex-col gap-4">
-        {hits.map((h, i) => (
+        {hits.map((detail, i) => (
           <li key={`hit-${i}`} className="font-num">
-            {h.detail}
+            {detail}
           </li>
         ))}
         {hidden.map((h, i) => (

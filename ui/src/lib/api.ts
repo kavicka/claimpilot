@@ -8,8 +8,12 @@ import type {
   Clause,
   EvalReport,
   FieldPatchResult,
+  InvoiceActionResult,
+  InvoiceDetail,
+  InvoiceRow,
   Ops,
   UploadedClaim,
+  UploadedInvoice,
   User,
 } from "./types";
 
@@ -101,6 +105,22 @@ export const api = {
     request<ActionResult>(
       "POST",
       `/api/review/claims/${encodeURIComponent(claimId)}/actions/${action}`,
+      { note: note?.trim() ? note.trim() : null, version },
+    ),
+
+  // One supplier document per invoice.
+  uploadInvoice: (file: File) => {
+    const form = new FormData();
+    form.append("file", file, file.name);
+    return request<UploadedInvoice>("POST", "/api/invoices", form);
+  },
+  invoices: (params: { queue?: string; status?: string } = {}) =>
+    request<InvoiceRow[]>("GET", `/api/review/invoices${query(params)}`),
+  invoice: (id: string) => request<InvoiceDetail>("GET", `/api/review/invoices/${encodeURIComponent(id)}`),
+  actInvoice: (invoiceId: string, action: ClaimAction, version: number, note?: string) =>
+    request<InvoiceActionResult>(
+      "POST",
+      `/api/review/invoices/${encodeURIComponent(invoiceId)}/actions/${action}`,
       { note: note?.trim() ? note.trim() : null, version },
     ),
 

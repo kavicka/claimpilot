@@ -131,6 +131,11 @@
    "printed": "OB25113727",
    "value": "OB25113727",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1 dokladu 256204682",
+   "value": "Strana 1 dokladu 256204682",
+   "page": 1
   }
  },
  "lines": [
@@ -1138,5 +1143,9 @@
    "line": null,
    "detail": ""
   }
+ ],
+ "pii": [
+  "Simona Bánová",
+  "+421 914 839 835"
  ]
 }

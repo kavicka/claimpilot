@@ -301,5 +301,9 @@
   }
  ],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Jaroslava Novotná",
+  "+420 955 891 364"
+ ]
 }

@@ -130,6 +130,11 @@
    "printed": "259703886",
    "value": "259703886",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1 dokladu 257878740",
+   "value": "Strana 1 dokladu 257878740",
+   "page": 1
   }
  },
  "lines": [
@@ -202,5 +207,9 @@
   }
  ],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Emanuel Slovák",
+  "+421 921 935 273"
+ ]
 }

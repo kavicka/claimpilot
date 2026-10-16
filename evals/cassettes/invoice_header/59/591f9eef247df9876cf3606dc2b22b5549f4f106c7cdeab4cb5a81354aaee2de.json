@@ -1,0 +1,19 @@
+{
+ "step": "invoice_header",
+ "prompt_id": "invoice_extraction/header",
+ "prompt_hash": "34072faf8eb9389218161b627f8c6bd1a8d3b7fc353c4a29dc2d602308ee85dc",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"amount_due\": {\"page\": 1, \"quote\": \"SPOLU NA ÚHRADU | -50,86\", \"value\": \"-50,86\"},\n  \"buyer_dic\": {\"page\": 1, \"quote\": \"DIČ: 2997673481\", \"value\": \"2997673481\"},\n  \"buyer_ico\": {\"page\": 1, \"quote\": \"IČO: 90882750\", \"value\": \"90882750\"},\n  \"buyer_name\": {\"page\": 1, \"quote\": \"Lekárne Sever s.r.o.\", \"value\": \"Lekárne Sever s.r.o.\"},\n  \"buyer_vat_id\": {\"page\": 1, \"quote\": \"SK2997673481\", \"value\": \"SK2997673481\"},\n  \"constant_symbol\": {\"page\": 1, \"quote\": \"Konštantný symbol: | 0008\", \"value\": \"0008\"},\n  \"currency\": {\"page\": 1, \"quote\": \"EUR Celkom\", \"value\": \"EUR\"},\n  \"customer_number\": {\"page\": 1, \"quote\": \"zákaznícke číslo\", \"value\": null},\n  \"delivery_note_numbers\": {\"page\": 1, \"quote\": \"Označenie dodávky\", \"value\": null},\n  \"due_date\": {\"page\": 1, \"quote\": \"Dátum splatnosti: | 01.08.2025\", \"value\": \"01.08.2025\"},\n  \"fees\": [],\n  \"fx_rate\": {\"page\": 1, \"quote\": \"kurz\", \"value\": null},\n  \"invoice_number\": {\"page\": 1, \"quote\": \"č.253251722\", \"value\": \"253251722\"},\n  \"issue_date\": {\"page\": 1, \"quote\": \"Dátum vyhotovenia: | 02.07.2025\", \"value\": \"02.07.2025\"},\n  \"order_number\": {\"page\": 1, \"quote\": \"objednávka\", \"value\": null},\n  \"original_invoice_number\": {\"page\": 1, \"quote\": \"Opravuje faktúru č.: | 254507976\", \"value\": \"254507976\"},\n  \"proforma_number\": {\"page\": 1, \"quote\": \"záloha\", \"value\": null},\n  \"proforma_settled\": {\"page\": 1, \"quote\": \"záloha\", \"value\": null},\n  \"recap\": [\n    {\n      \"base\": \"-41,35\",\n      \"page\": 1,\n      \"quote\": \"-41,35 | 23% | -9,51 | -50,86\",\n      \"rate\": \"23%\",\n      \"vat\": \"-9,51\"\n    }\n  ],\n  \"reverse_charge\": {\"page\": 1, \"quote\": \"Režim DPH\", \"value\": null},\n  \"second_currency_total\": {\"page\": 1, \"quote\": \"EUR Celkom\", \"value\": null},\n  \"specific_symbol\": {\"page\": 1, \"quote\": \"Špecifický symbol\", \"value\": null},\n  \"supplier_dic\": {\"page\": 1, \"quote\": \"DIČ: 2993547293\", \"value\": \"2993547293\"},\n  \"supplier_iban\": {\"page\": 1, \"quote\": \"IBAN: SK79 7500 0000 0099 5777 8549\", \"value\": \"SK79 7500 0000 0099 5777 8549\"},\n  \"supplier_ico\": {\"page\": 1, \"quote\": \"IČO: 92414478\", \"value\": \"92414478\"},\n  \"supplier_name\": {\"page\": 1, \"quote\": \"Herbana Natur s.r.o.\", \"value\": \"Herbana Natur s.r.o.\"},\n  \"supplier_vat_id\": {\"page\": 1, \"quote\": \"IČ DPH: SK2993547293\", \"value\": \"SK2993547293\"},\n  \"tax_point_date\": {\"page\": 1, \"quote\": \"Dátum dodania tovaru/ | 30.06.2025\", \"value\": \"30.06.2025\"},\n  \"total\": {\"page\": 1, \"quote\": \"SPOLU NA ÚHRADU | -50,86\", \"value\": \"-50,86\"},\n  \"total_net\": {\"page\": 1, \"quote\": \"Súčet položiek | -41,35 | -9,51 | -50,86\", \"value\": \"-41,35\"},\n  \"total_vat\": {\"page\": 1, \"quote\": \"Súčet položiek | -41,35 | -9,51 | -50,86\", \"value\": \"-9,51\"},\n  \"variable_symbol\": {\"page\": 1, \"quote\": \"Variabilný symbol: | 253251722\", \"value\": \"253251722\"}\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2197,
+   "tokens_out": 1295,
+   "latency_ms": 28097
+  },
+  "cached": false
+ }
+}

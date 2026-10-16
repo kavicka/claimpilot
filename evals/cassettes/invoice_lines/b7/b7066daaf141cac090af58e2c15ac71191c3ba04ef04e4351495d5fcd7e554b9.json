@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "90b9a1e1192c319ceb94b1eb90b9f95efe2fa8e7b9954fa7d8b086e9f4b8d1ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 13,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"0033\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Nutrilek liekovka 300 ml s uzáverom\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"8\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"ks\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"27,52\"\n        },\n        {\n          \"field\": \"discount_pct\",\n          \"value\": \"15,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"187,14\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"23%\"\n        },\n        {\n          \"field\": \"vat_amount\",\n          \"value\": \"43,04\"\n        },\n        {\n          \"field\": \"line_gross\",\n          \"value\": \"230,18\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"4004577574267\"\n        }\n      ]\n    },\n    {\n      \"item\": 14,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"0029\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Vivera pleťový krém na citlivú pleť 50 ml\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"10\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"ks\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"9,38\"\n        },\n        {\n          \"field\": \"discount_pct\",\n          \"value\": \"15,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"79,73\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"23%\"\n        },\n        {\n          \"field\": \"vat_amount\",\n          \"value\": \"18,34\"\n        },\n        {\n          \"field\": \"line_gross\",\n          \"value\": \"98,07\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"3808804392010\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2029,
+   "tokens_out": 568,
+   "latency_ms": 11988
+  },
+  "cached": false
+ }
+}

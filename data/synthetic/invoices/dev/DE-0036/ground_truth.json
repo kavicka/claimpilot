@@ -122,6 +122,11 @@
    "printed": "15240",
    "value": "15240",
    "page": 1
+  },
+  "page_note": {
+   "printed": "strana 1 z 2",
+   "value": "strana 1 z 2",
+   "page": 1
   }
  },
  "lines": [
@@ -1417,5 +1422,9 @@
   }
  ],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Bohumila Mikuláková",
+  "+421 949 693 831"
+ ]
 }

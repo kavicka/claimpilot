@@ -56,6 +56,37 @@ export function ActionDialog({
   onClose: () => void;
   onDone: () => void;
 }) {
+  return (
+    <CaseActionDialog
+      reference={claim.reference}
+      action={action}
+      consequence={action ? consequence(action, claim) : undefined}
+      run={(a, note) => api.act(claim.id, a, claim.version, note)}
+      onClose={onClose}
+      onDone={onDone}
+    />
+  );
+}
+
+/** Confirmation with an optional note for a claim or invoice action; shows 403/409 refusals in place. */
+export function CaseActionDialog({
+  reference,
+  action,
+  consequence: description,
+  done,
+  run,
+  onClose,
+  onDone,
+}: {
+  reference: string;
+  action: ClaimAction | null;
+  consequence?: string;
+  /** Overrides the toast wording per action ("approved", "moved to Needs info"). */
+  done?: Partial<Record<ClaimAction, string>>;
+  run: (action: ClaimAction, note: string) => Promise<{ status: string }>;
+  onClose: () => void;
+  onDone: () => void;
+}) {
   const notify = useToast();
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
@@ -77,9 +108,9 @@ export function ActionDialog({
     setBusy(true);
     setProblem(null);
     try {
-      const res = await api.act(claim.id, action, claim.version, note);
+      const res = await run(action, note);
       const s = statusEntry(res.status).label;
-      notify("success", `${claim.reference} ${COPY[action].done}`, `Status: ${s}.`);
+      notify("success", `${reference} ${done?.[action] ?? COPY[action].done}`, `Status: ${s}.`);
       onDone();
     } catch (err) {
       const msg = errorMessage(err);
@@ -93,8 +124,8 @@ export function ActionDialog({
     <Dialog
       open={action !== null}
       onClose={busy ? () => undefined : onClose}
-      title={copy ? `${copy.title} ${claim.reference}?` : ""}
-      description={action ? consequence(action, claim) : undefined}
+      title={copy ? `${copy.title} ${reference}?` : ""}
+      description={description}
       footer={
         copy ? (
           <>

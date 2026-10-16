@@ -41,3 +41,15 @@ or explicit consent in the claim form, as the insurer's existing claims process 
 | Data reaching the internet from the tasks | No route out of the private subnets; only VPC endpoints | `terraform test`: nothing private has a way out |
 | Vault key exposure | Generated outside Terraform, held in Secrets Manager with a customer-managed KMS key, given only to the api and the worker | secrets.tf; `terraform test`: least secrets per task |
 | Provider keeps prompts | Bedrock data retention mode set to `none` before go-live; invocation logging stays off; Textract only with the AI opt-out policy | provider-terms.md, deploy.md |
+
+## Phase 3 additions (supplier invoices)
+
+Invoices are company documents. The personal data on them is the supplier's contact person, a
+phone number and sometimes a personal e-mail; a sole trader's company name is a person's name.
+
+| Risk | Mitigation | Evidence |
+| --- | --- | --- |
+| A contact person's name or phone reaching a model | The PII guard runs on invoices as on claims, with IBANs and addresses kept readable (company data the checks need); a name the NER model reads is a company when the document also prints it with a legal form; product names in the item table are never searched for names | `invoice_extraction` suite: leaked values in payloads = 0 (gate); `tests/worker/test_invoice_steps_db.py` |
+| Personal data in training data | Training examples are built from prompts as served, so names are tokens; real invoices are never trained on | `tests/evals/test_finetune_data.py`; ADR-014 |
+| Real supplier invoices in the repository | Private samples sit in `docs/private-samples/`, gitignored, used only for local reports | `.gitignore`; ADR-013 |
+| A sole trader's name kept readable as a company name | Known gap: a name with no legal form next to it is redacted, one with a legal form is not; a sole trader printed as "Ján Novák" is redacted, "Ján Novák - PHARMA" is not | needs real samples before production |

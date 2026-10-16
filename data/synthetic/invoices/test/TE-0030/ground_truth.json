@@ -130,6 +130,11 @@
    "printed": "250456697",
    "value": "250456697",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1 dokladu 258937522",
+   "value": "Strana 1 dokladu 258937522",
+   "page": 1
   }
  },
  "lines": [
@@ -323,5 +328,9 @@
    "line": null,
    "detail": ""
   }
+ ],
+ "pii": [
+  "Emil Pavlo",
+  "+421 917 478 120"
  ]
 }

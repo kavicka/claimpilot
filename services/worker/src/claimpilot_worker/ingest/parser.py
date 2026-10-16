@@ -136,15 +136,43 @@ def blocks_from(doc: DoclingDocument, pages: dict[int, PageInfo]) -> list[Block]
 
 def parse(path: Path, *, tables: bool = False) -> ParsedDocument:
     """Blocks of the document, with text a reader cannot see marked as hidden. With `tables`
-    (invoices), line-item tables are rebuilt from word positions into `cells`; claims leave it
-    off, so their parse output stays as it was."""
-    spans = hidden_spans(path)
-    parsed = mark_hidden(_parse(path), spans)
+    (invoices) the document is read from its words instead of Docling: blocks are visual lines
+    and line-item tables are rebuilt into `cells` (ingest/tables.py). Claims leave it off, so
+    their parse output stays as it was."""
     if tables:
-        from claimpilot_worker.ingest.tables import item_table_cells
+        return parse_invoice(path)
+    return mark_hidden(_parse(path), hidden_spans(path))
 
-        parsed.cells = item_table_cells(path, parsed.pages, spans)
-    return parsed
+
+def parse_invoice(path: Path) -> ParsedDocument:
+    from claimpilot_worker.ingest.tables import _visible, line_blocks, page_words, table_cells
+
+    started = time.perf_counter()
+    chars = _text_layer_chars(path)
+    with pymupdf.open(path) as doc:
+        pages = [
+            PageInfo(
+                page=(p.number or 0) + 1,
+                width=p.rect.width,
+                height=p.rect.height,
+                text_chars=chars.get((p.number or 0) + 1, 0),
+            )
+            for p in doc
+        ]
+    spans = hidden_spans(path)
+    words = page_words(path, pages)
+    blocks = line_blocks(words, spans)
+    if not any(p.text_chars for p in pages):
+        blocks = [b.model_copy(update={"ocr": True}) for b in blocks]
+    return ParsedDocument(
+        sha256=sha256_file(path),
+        mime_type=MIME_BY_SUFFIX.get(path.suffix.lower(), "application/octet-stream"),
+        pages=pages,
+        blocks=blocks,
+        cells=table_cells(_visible(words, spans)),
+        parser="words",
+        seconds=round(time.perf_counter() - started, 2),
+    )
 
 
 def _parse(path: Path) -> ParsedDocument:

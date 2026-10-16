@@ -23,6 +23,10 @@ steps:
   routing:           { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 512, fallback_model: "eu.anthropic.claude-opus-5-5" }
   coverage_decide:   { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 768, fallback_model: "eu.anthropic.claude-opus-5-5" }
   summaries:         { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 1024, fallback_model: "eu.anthropic.claude-opus-5-5" }
+  # Supplier invoices (Phase 3): company data, people's names tokenized; the local LoRA adapter
+  # has no counterpart here (ADR-014), the evals compare the two.
+  invoice_header:    { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 4096, fallback_model: "eu.anthropic.claude-opus-5-5" }
+  invoice_lines:     { model: "eu.anthropic.claude-sonnet-5-5", num_predict: 8192, fallback_model: "eu.anthropic.claude-opus-5-5" }
   # Evals and the data generator run where Ollama runs, never in the deployment: the judge stays a
   # different model family from the writer.
   judge:             { provider: ollama, model: "gemma3:12b", num_predict: 512 }

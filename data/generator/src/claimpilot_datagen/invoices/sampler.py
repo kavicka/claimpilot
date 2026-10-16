@@ -260,6 +260,8 @@ class InvoiceSampler:
             )
             compute(inv)
             findings.append(Finding("price_diff", i, f"{order_lines[i].unit_price} ordered"))
+        if inv.kind is DocKind.PROFORMA:
+            inv.edge_cases.discard("short_delivery")  # an advance comes before any receipt
         if "short_delivery" in inv.edge_cases:
             i = max(range(len(inv.lines)), key=lambda k: inv.lines[k].qty)
             short = max(Decimal(1), (inv.lines[i].qty / 4).to_integral_value())
@@ -318,8 +320,12 @@ class InvoiceSampler:
                 done.append(inv)
                 self.out.findings[inv.invoice_id] = self._erp(rng, inv)
                 if "iban_changed" in cases:
-                    inv.printed_iban = make_iban(rng, inv.supplier.country)
-                    self.out.findings[inv.invoice_id].append(Finding("iban_changed"))
+                    iban = make_iban(rng, inv.supplier.country)  # drawn always: the rest stays put
+                    if "unknown_supplier" in cases:
+                        inv.edge_cases.discard("iban_changed")  # no record to differ from
+                    else:
+                        inv.printed_iban = iban
+                        self.out.findings[inv.invoice_id].append(Finding("iban_changed"))
                 if "unknown_supplier" in cases:
                     self.out.findings[inv.invoice_id].append(Finding("unknown_supplier"))
                 if "truncated" in cases:

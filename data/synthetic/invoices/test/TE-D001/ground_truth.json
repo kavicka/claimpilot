@@ -124,6 +124,11 @@
    "printed": "89342",
    "value": "89342",
    "page": 1
+  },
+  "page_note": {
+   "printed": "strana 1 z 2",
+   "value": "strana 1 z 2",
+   "page": 1
   }
  },
  "lines": [
@@ -1123,5 +1128,9 @@
    "line": null,
    "detail": "TE-0001"
   }
+ ],
+ "pii": [
+  "Bohumila Mikuláková",
+  "+421 949 693 831"
  ]
 }

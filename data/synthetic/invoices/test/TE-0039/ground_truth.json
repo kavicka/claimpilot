@@ -136,6 +136,11 @@
    "printed": "DL/710269",
    "value": "DL/710269",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1/1",
+   "value": "Strana 1/1",
+   "page": 1
   }
  },
  "lines": [
@@ -731,5 +736,9 @@
    "line": 1,
    "detail": "30 received"
   }
+ ],
+ "pii": [
+  "Laura Masaryková",
+  "+421 940 807 771"
  ]
 }

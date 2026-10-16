@@ -130,6 +130,11 @@
    "printed": "OB25790029",
    "value": "OB25790029",
    "page": 1
+  },
+  "page_note": {
+   "printed": "Strana 1 dokladu 254507976",
+   "value": "Strana 1 dokladu 254507976",
+   "page": 1
   }
  },
  "lines": [
@@ -1381,5 +1386,9 @@
    "page": 2
   }
  ],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Emil Pavlo",
+  "+421 917 478 120"
+ ]
 }

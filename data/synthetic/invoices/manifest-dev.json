@@ -157,9 +157,8 @@
    "layout": "wholesale",
    "kind": "invoice",
    "file": "DE-0019/invoice.pdf",
-   "sha256": "d35e769ced78e94e091141392604301770b6af1284652940139d0a18acea22b8",
+   "sha256": "48fe752b3e95216c06047bc3e9465aeea0766550b745312261c40f5bbab4c3bc",
    "findings": [
-    "iban_changed",
     "unknown_supplier"
    ]
   },

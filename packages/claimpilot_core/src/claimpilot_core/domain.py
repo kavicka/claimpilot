@@ -107,6 +107,8 @@ class PipelineStep(StrEnum):
     INGEST = "ingest"
     REDACT = "redact"
     EXTRACT = "extract"
+    VALIDATE = "validate"
+    MATCH = "match"
     ROUTE = "route"
     ASSESS = "assess"
     SUMMARIZE = "summarize"

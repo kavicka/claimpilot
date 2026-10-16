@@ -36,3 +36,19 @@ suites:
   masking:  # local only (macOS, generated PDFs); not part of `all`
     personal_values_visible: { gate: zero }
     critical_values_readable_masked: { gate: item_level, max_drop_pp: 1.0 }
+  invoice_extraction:
+    kind_accuracy: { gate: item_level, max_drop_pp: 1.0, target: 0.99 }
+    header_field_accuracy: { gate: item_level, max_drop_pp: 1.0, target: 0.95 }
+    line_recall: { gate: min, min: 0.97 }
+    line_cell_accuracy: { gate: item_level, max_drop_pp: 1.0, target: 0.95 }
+    leaked_values_in_payloads: { gate: zero }
+  invoice_validation:
+    clean_invoices_pass: { gate: min, min: 1.0 }
+    planted_errors_caught: { gate: min, min: 1.0 }
+    injected_errors_caught: { gate: min, min: 1.0 }
+  matching:
+    planted_findings_found: { gate: min, min: 1.0 }
+    extra_findings: { gate: zero }
+  export:
+    accepted: { gate: min, min: 1.0 }
+    round_trip: { gate: min, min: 1.0 }

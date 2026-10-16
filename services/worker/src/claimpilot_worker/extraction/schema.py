@@ -46,7 +46,12 @@ def _is_list_of_models(ann: Any) -> type[BaseModel] | None:
 
 @lru_cache
 def grounded_model(doc_type: DocType) -> type[BaseModel]:
-    base = SCHEMAS[doc_type]
+    return grounded_schema(SCHEMAS[doc_type])
+
+
+@lru_cache
+def grounded_schema(base: type[BaseModel]) -> type[BaseModel]:
+    """Any field set (claim documents, invoice headers) as value + quote + page per field."""
     fields: dict[str, Any] = {}
     for name, f in base.model_fields.items():
         item = _is_list_of_models(f.annotation)
@@ -61,8 +66,12 @@ def grounded_model(doc_type: DocType) -> type[BaseModel]:
 
 def field_guide(doc_type: DocType) -> str:
     """Field names and descriptions for the prompt."""
+    return schema_guide(SCHEMAS[doc_type])
+
+
+def schema_guide(base: type[BaseModel]) -> str:
     lines = []
-    for name, f in SCHEMAS[doc_type].model_fields.items():
+    for name, f in base.model_fields.items():
         item = _is_list_of_models(f.annotation)
         if item is not None:
             sub = ", ".join(item.model_fields)

@@ -13,7 +13,7 @@ import { fieldLabel } from "./field-utils";
 const ZOOMS = [1, 1.25, 1.5, 2];
 const PAD = 0.004;
 
-function boxStyle(b: BBox): React.CSSProperties {
+export function boxStyle(b: BBox): React.CSSProperties {
   const x0 = Math.max(0, b.x0 - PAD);
   const y0 = Math.max(0, b.y0 - PAD);
   const x1 = Math.min(1, b.x1 + PAD);

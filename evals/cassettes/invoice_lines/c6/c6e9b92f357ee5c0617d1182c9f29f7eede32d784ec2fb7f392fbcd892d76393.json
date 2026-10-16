@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "90b9a1e1192c319ceb94b1eb90b9f95efe2fa8e7b9954fa7d8b086e9f4b8d1ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 13,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Vivera opaľovací krém SPF 50+ 50 ml\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"24,00\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"KS\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"2,98\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"23\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"71,52\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"3006216770253\"\n        }\n      ]\n    },\n    {\n      \"item\": 14,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Florea masť na hojenie rán 30 g\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"2,00\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"KS\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"6,88\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"5\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"13,76\"\n        },\n        {\n          \"field\": \"sukl_code\",\n          \"value\": \"S52571\"\n        },\n        {\n          \"field\": \"batch\",\n          \"value\": \"8N10360\"\n        },\n        {\n          \"field\": \"expiry\",\n          \"value\": \"12/27\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8593461073895\"\n        }\n      ]\n    },\n    {\n      \"item\": 15,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Florea manžeta k tlakomeru 22-42 cm\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"5,00\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"KS\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"14,85\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"23\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"74,25\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"4007050655477\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2098,
+   "tokens_out": 644,
+   "latency_ms": 13590
+  },
+  "cached": false
+ }
+}

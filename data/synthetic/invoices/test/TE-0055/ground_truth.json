@@ -92,6 +92,11 @@
    "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
    "value": true,
    "page": 1
+  },
+  "page_note": {
+   "printed": "Page: 1/1",
+   "value": "Page: 1/1",
+   "page": 1
   }
  },
  "lines": [
@@ -208,23 +213,11 @@
    "page": 1
   }
  ],
- "recap": [
-  {
-   "rate": {
-    "printed": "0",
-    "value": "0"
-   },
-   "base": {
-    "printed": "20 364,00",
-    "value": "20364.00"
-   },
-   "vat": {
-    "printed": "0,00",
-    "value": "0.00"
-   },
-   "page": 1
-  }
- ],
+ "recap": [],
  "fees": [],
- "findings": []
+ "findings": [],
+ "pii": [
+  "Zuzana Švecová",
+  "+420 954 329 329"
+ ]
 }

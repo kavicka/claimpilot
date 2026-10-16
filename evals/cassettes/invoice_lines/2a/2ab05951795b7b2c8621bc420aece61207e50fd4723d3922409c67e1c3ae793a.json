@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "90b9a1e1192c319ceb94b1eb90b9f95efe2fa8e7b9954fa7d8b086e9f4b8d1ff",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 1,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Florea - cukriky s medom a šalviou 40g\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"200\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"34,56\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"6 912,00\"\n        },\n        {\n          \"field\": \"customs_code\",\n          \"value\": \"21069098\"\n        },\n        {\n          \"field\": \"origin\",\n          \"value\": \"CZ\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8595246841569\"\n        },\n        {\n          \"field\": \"batch\",\n          \"value\": \"5N22184\"\n        },\n        {\n          \"field\": \"expiry\",\n          \"value\": \"06/28\"\n        },\n        {\n          \"field\": \"batch_quantity\",\n          \"value\": \"190\"\n        },\n        {\n          \"field\": \"batch\",\n          \"value\": \"5N22804\"\n        },\n        {\n          \"field\": \"expiry\",\n          \"value\": \"06/28\"\n        },\n        {\n          \"field\": \"batch_quantity\",\n          \"value\": \"10\"\n        }\n      ]\n    },\n    {\n      \"item\": 2,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"DermaVita tablety proti bolesti 500 mg 20 tbi\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"144\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"57,10\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"8 222,40\"\n        },\n        {\n          \"field\": \"customs_code\",\n          \"value\": \"30049000\"\n        },\n        {\n          \"field\": \"origin\",\n          \"value\": \"CZ\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8597856203416\"\n        },\n        {\n          \"field\": \"batch\",\n          \"value\": \"5K22490\"\n        },\n        {\n          \"field\": \"expiry\",\n          \"value\": \"09/29\"\n        },\n        {\n          \"field\": \"batch_quantity\",\n          \"value\": \"144\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2004,
+   "tokens_out": 609,
+   "latency_ms": 27926
+  },
+  "cached": false
+ }
+}

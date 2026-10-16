@@ -220,3 +220,15 @@ def test_the_birth_number_gives_the_date_of_birth_wherever_it_is_printed():
     r.observe(["Rodné číslo 905605/0003", "Ospedale Civile: 05/06/1990"])
     assert r.redact("Ospedale Civile: 05/06/1990") == "Ospedale Civile: <DOB_1>"
     assert r.redact("rođena 5. 6. 1990.") == "rođena <DOB_1>."
+
+
+@pytest.mark.parametrize(
+    "text", ["DIČ: 2155120011", "DIČ 2993547293", "IČ DPH: 2155120011", "VAT ID: 2155120011"]
+)
+def test_a_tax_number_after_its_label_is_not_a_birth_number(text):
+    # Both validate as a rodné číslo (mod 11, a plausible date); the label says they are tax ids.
+    assert not any(e == "BIRTH_NUMBER" for e, _ in entities(text))
+
+
+def test_a_birth_number_after_its_own_label_is_still_found():
+    assert ("BIRTH_NUMBER", "2155120011") in entities("RČ: 2155120011, DIČ: 2997673481")

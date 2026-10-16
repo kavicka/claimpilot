@@ -43,6 +43,23 @@ Five layers, from cheapest to most expensive. Everything except the live eval an
 | Claude declines a request (`stop_reason: refusal`) | Retried once on the fallback model; a second refusal sends the claim to a handler | `tests/core/test_bedrock.py` |
 | The Bedrock request as the Anthropic SDK sends it | Signed for eu-central-1, `bedrock-runtime` URL with the EU profile, structured output, image blocks first, no temperature or seed | `tests/core/test_bedrock.py` (real SDK, mocked HTTP) |
 
+### Supplier invoices (Phase 3)
+
+| Edge case | Expected behaviour | Test |
+| --- | --- | --- |
+| An item's EAN or batch printed on the line under it (the sample Docling cut a row late) | The continuation line belongs to the item above; every cell keeps its own box | `tests/worker/test_tables.py`; 6803/6803 dev cells |
+| A name wrapped around the numbers (numbers on its middle line) | The lines go to the nearest item | `tests/worker/test_tables.py` |
+| A table over seven pages with the supplier's header block on each page | The page header is skipped, the table goes on at its repeated header | `tests/worker/test_tables.py` |
+| A thousands space ("5 812,40"), a number inside a name ("250 ml"), a VAT recap after the items, a subtotal row | Joined, kept in the name, left out of the items, skipped | `tests/worker/test_tables.py` |
+| A scan tilted by up to 3 degrees | Words are deskewed before lines are formed | `tests/worker/test_tables.py`; 259/268 scan cells |
+| White or tiny text on an invoice | Never in a cell or a block a model sees; routed to a senior (I3) | `tests/worker/test_tables.py`, `routing/invoice.py` tests |
+| "30,000 ks", "0,6819", "1.912,4000", "5,3l" (OCR) | 30, 0.6819, 1912.40; a letter glued to digits is unreadable, not 5.3 | `tests/core/test_invoice_values.py` |
+| A company name the NER model takes for a person ("Lekárne Sever s.r.o.") | Stays readable; people's names, e-mails and phones become tokens | `tests/worker/test_invoice_steps_db.py`, `invoice_extraction` leak count |
+| VAT rounded per line instead of per rate | Both pass validation and the ERP; the printed VAT is exported | `tests/worker/test_invoice_validation.py`, `export` eval |
+| A page counter "strana 1 z 9" on a one-page file | NEEDS_INFO: pages are missing | `invoice_validation` eval |
+| Same supplier and number twice; changed IBAN; unknown supplier; price +2 %; short delivery; credit note with an unknown original | Duplicate and IBAN to fraud_review, unknown supplier and credit notes to a senior, line differences to standard; unknown original to NEEDS_INFO | `matching` eval, `tests/worker/test_matching.py`, `test_invoice_routing.py` |
+| A refused UBL document | Back to review with the broken rules (BR-CO-16, R120, ...) | `tests/worker/test_ubl_export.py` |
+
 ## Live runs (2026-10-10)
 
 Run against the compose stack and the native worker; not part of CI because they need the models.
