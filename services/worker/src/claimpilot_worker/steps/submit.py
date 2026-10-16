@@ -70,7 +70,7 @@ async def submit_claim(session, claim: Claim, ctx: dict[str, Any]) -> S:
         await core.aclose()
     session.add(
         AuditLog(
-            claim_id=claim.id,
+            case_id=claim.id,
             action="submission",
             details={
                 "status": result.status,

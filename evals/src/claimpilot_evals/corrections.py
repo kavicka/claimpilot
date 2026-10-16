@@ -26,7 +26,7 @@ async def export(target_dir: Path | None = None) -> Path:
                 select(Correction, ExtractedField, Document, Claim)
                 .join(ExtractedField, Correction.field_id == ExtractedField.id)
                 .join(Document, ExtractedField.document_id == Document.id)
-                .join(Claim, ExtractedField.claim_id == Claim.id)
+                .join(Claim, ExtractedField.case_id == Claim.id)
                 .order_by(Correction.id)
             )
         ).all()

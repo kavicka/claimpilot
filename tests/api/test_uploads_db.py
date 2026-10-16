@@ -88,7 +88,7 @@ async def test_filename_is_cleaned_not_trusted(client, tmp_path):
     assert r.status_code == 201
     async with db_session.session_scope() as s:
         names = (
-            await s.scalars(select(Document.filename).where(Document.claim_id == r.json()["id"]))
+            await s.scalars(select(Document.filename).where(Document.case_id == r.json()["id"]))
         ).all()
     # httpx percent-encodes control characters in multipart names, so they arrive as text
     assert sorted(names) == sorted(

@@ -34,11 +34,11 @@ class Vault:
     async def store(
         self, session: AsyncSession, claim_id: uuid.UUID, mapping: dict[str, tuple[str, str]]
     ) -> None:
-        await session.execute(delete(VaultEntry).where(VaultEntry.claim_id == claim_id))
+        await session.execute(delete(VaultEntry).where(VaultEntry.case_id == claim_id))
         for token, (entity, value) in mapping.items():
             session.add(
                 VaultEntry(
-                    claim_id=claim_id,
+                    case_id=claim_id,
                     token=token,
                     entity_type=entity,
                     value_encrypted=self.encrypt(value),
@@ -48,12 +48,12 @@ class Vault:
     async def add(self, session: AsyncSession, claim_id: uuid.UUID, entity: str, value: str) -> str:
         """A value the handler typed that the vault does not hold yet: give it the next token."""
         existing = (
-            await session.scalars(select(VaultEntry.token).where(VaultEntry.claim_id == claim_id))
+            await session.scalars(select(VaultEntry.token).where(VaultEntry.case_id == claim_id))
         ).all()
         token = next_token(entity, list(existing))
         session.add(
             VaultEntry(
-                claim_id=claim_id,
+                case_id=claim_id,
                 token=token,
                 entity_type=entity,
                 value_encrypted=self.encrypt(value),
@@ -68,7 +68,7 @@ class Vault:
         self, session: AsyncSession, claim_id: uuid.UUID
     ) -> dict[str, tuple[str, str]]:
         """token -> (entity type, value)."""
-        rows = await session.scalars(select(VaultEntry).where(VaultEntry.claim_id == claim_id))
+        rows = await session.scalars(select(VaultEntry).where(VaultEntry.case_id == claim_id))
         out = {}
         for row in rows:
             value = self.decrypt(row.value_encrypted)

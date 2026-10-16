@@ -10,6 +10,13 @@ from enum import StrEnum
 from pydantic import BaseModel, Field
 
 
+class CaseKind(StrEnum):
+    """What a case is. Documents, fields, vault entries and step runs hang off a case."""
+
+    CLAIM = "claim"
+    INVOICE = "invoice"
+
+
 class ClaimStatus(StrEnum):
     RECEIVED = "RECEIVED"
     PARSED = "PARSED"
@@ -20,6 +27,22 @@ class ClaimStatus(StrEnum):
     IN_REVIEW = "IN_REVIEW"
     APPROVED = "APPROVED"
     SUBMITTED = "SUBMITTED"
+    REJECTED = "REJECTED"
+    NEEDS_INFO = "NEEDS_INFO"
+    FAILED = "FAILED"
+
+
+class InvoiceStatus(StrEnum):
+    RECEIVED = "RECEIVED"
+    PARSED = "PARSED"
+    REDACTED = "REDACTED"
+    EXTRACTED = "EXTRACTED"
+    VALIDATED = "VALIDATED"
+    MATCHED = "MATCHED"
+    ROUTED = "ROUTED"
+    IN_REVIEW = "IN_REVIEW"
+    APPROVED = "APPROVED"
+    EXPORTED = "EXPORTED"
     REJECTED = "REJECTED"
     NEEDS_INFO = "NEEDS_INFO"
     FAILED = "FAILED"

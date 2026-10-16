@@ -20,7 +20,7 @@ MIN_OCR_CHARS = 80  # below this a page is treated as unreadable and goes to the
 
 @register(S.RECEIVED, PipelineStep.INGEST)
 async def ingest(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S:
-    docs = (await session.scalars(select(Document).where(Document.claim_id == claim.id))).all()
+    docs = (await session.scalars(select(Document).where(Document.case_id == claim.id))).all()
     problems: dict[str, Problem] = {}
     for doc in docs:
         path = storage_path(doc.storage_path)

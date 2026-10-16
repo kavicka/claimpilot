@@ -43,7 +43,7 @@ async def make_claim(storage, *, status="SUBMITTED", age_days=0) -> uuid.UUID:
         s.add(claim)
         await s.flush()
         doc = Document(
-            claim_id=claim.id,
+            case_id=claim.id,
             filename="a.pdf",
             mime_type="application/pdf",
             sha256="x" * 64,
@@ -58,7 +58,7 @@ async def make_claim(storage, *, status="SUBMITTED", age_days=0) -> uuid.UUID:
         s.add(DocBlock(document_id=doc.id, page=1, seq=0, kind="text", text="Jana", bbox={}))
         s.add(
             ExtractedField(
-                claim_id=claim.id,
+                case_id=claim.id,
                 document_id=doc.id,
                 field="patient_name",
                 value_raw="<PERSON_1>",
@@ -67,7 +67,7 @@ async def make_claim(storage, *, status="SUBMITTED", age_days=0) -> uuid.UUID:
         )
         s.add(
             VaultEntry(
-                claim_id=claim.id, token="<PERSON_1>", entity_type="PERSON", value_encrypted=b"x"
+                case_id=claim.id, token="<PERSON_1>", entity_type="PERSON", value_encrypted=b"x"
             )
         )
         return claim.id
@@ -86,8 +86,8 @@ async def test_erase_removes_rows_vault_and_files(tmp_path):
     async with db_session.session_scope() as s:
         await erase_claim(s, cid, tmp_path, reason="client request")
     assert await count(Claim, id=cid) == 0
-    assert await count(VaultEntry, claim_id=cid) == 0
-    assert await count(ExtractedField, claim_id=cid) == 0
+    assert await count(VaultEntry, case_id=cid) == 0
+    assert await count(ExtractedField, case_id=cid) == 0
     assert not (tmp_path / "claims" / str(cid)).exists()
     assert not any((tmp_path / "renders").iterdir())
     async with db_session.session_scope() as s:
@@ -96,7 +96,7 @@ async def test_erase_removes_rows_vault_and_files(tmp_path):
                 select(AuditLog).where(AuditLog.action == "erasure").order_by(AuditLog.id.desc())
             )
         ).first()
-    assert log is not None and log.claim_id is None and log.details["reason"] == "client request"
+    assert log is not None and log.case_id is None and log.details["reason"] == "client request"
     assert "Jana" not in str(log.details)
 
 

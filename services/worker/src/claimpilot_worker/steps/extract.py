@@ -66,7 +66,7 @@ async def extract(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S
         mapping.update({t: v for t, (_, v) in redactor.mapping().items()})
         return out
 
-    docs = (await session.scalars(select(Document).where(Document.claim_id == claim.id))).all()
+    docs = (await session.scalars(select(Document).where(Document.case_id == claim.id))).all()
     extractions: dict[Any, Extraction] = {}
     for doc in docs:
         rows = (
@@ -109,12 +109,12 @@ async def extract(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S
     if redactor is not None and len(redactor.entities) > len(entries):
         await vault.store(session, claim.id, redactor.mapping())  # values only the image showed
     cross_document_checks(list(extractions.values()))
-    await session.execute(delete(ExtractedField).where(ExtractedField.claim_id == claim.id))
+    await session.execute(delete(ExtractedField).where(ExtractedField.case_id == claim.id))
     for doc_id, ex in extractions.items():
         for f in ex.fields:
             session.add(
                 ExtractedField(
-                    claim_id=claim.id,
+                    case_id=claim.id,
                     document_id=doc_id,
                     field=f.name,
                     value_raw=f.value_raw,

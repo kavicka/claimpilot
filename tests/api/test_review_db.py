@@ -109,7 +109,7 @@ async def test_only_seniors_erase(client):
 
         assert (
             await s.scalar(
-                select(func.count()).select_from(VaultEntry).where(VaultEntry.claim_id == cid)
+                select(func.count()).select_from(VaultEntry).where(VaultEntry.case_id == cid)
             )
             == 0
         )
@@ -184,7 +184,7 @@ async def test_hidden_text_is_shown_to_a_handler_and_tokenized_for_an_agent(clie
 
     cid, _ = await make_claim(queue="senior")
     async with db_session.session_scope() as s:
-        doc = (await s.execute(Document.__table__.select().where(Document.claim_id == cid))).one()
+        doc = (await s.execute(Document.__table__.select().where(Document.case_id == cid))).one()
         for seq, hidden in ((0, None), (1, "low_contrast")):
             s.add(
                 DocBlock(

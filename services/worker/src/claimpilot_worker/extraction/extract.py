@@ -15,14 +15,13 @@ from typing import Any
 from rapidfuzz import fuzz
 
 from claimpilot_core.domain import DocType, ExtractionMethod
-from claimpilot_core.fields import kind_of, normalize
-from claimpilot_core.identifiers import is_valid_iban, parse_rodne_cislo
+from claimpilot_core.fields import normalize
 from claimpilot_core.llm.gateway import LLMGateway
 from claimpilot_core.llm.untrusted import neutralize
-from claimpilot_core.normalize import parse_amount
-from claimpilot_core.pii.guard import TOKEN_RE, fold, rehydrate
+from claimpilot_core.pii.guard import TOKEN_RE, fold
 from claimpilot_core.schemas.parsing import FracBox, ParsedDocument
 from claimpilot_core.settings import get_settings
+from claimpilot_worker.extraction.checks import run_checks
 from claimpilot_worker.extraction.schema import field_guide, grounded_model
 
 GROUNDING_MIN = 85
@@ -175,53 +174,6 @@ def flatten(raw: dict[str, Any]) -> list[Field]:
 
 
 # --- checks and confidence ----------------------------------------------------------------
-
-
-def run_checks(doc_type: DocType, fields: list[Field], mapping: dict[str, str]) -> None:
-    by_name = {f.name: f for f in fields}
-    for f in fields:
-        if f.value_raw is None:
-            continue
-        kind = kind_of(f.name)
-        if kind != "text":
-            f.checks["parses"] = f.value_norm is not None
-    if doc_type in (DocType.MEDICAL_INVOICE, DocType.PHARMACY_RECEIPT):
-        total = by_name.get("total")
-        lines = [
-            f for f in fields if f.name.startswith("line_items[") and f.name.endswith(".amount")
-        ]
-        if total and total.value_norm and lines:
-            amounts = [parse_amount(f.value_norm) for f in lines]
-            if all(a is not None for a in amounts):
-                ok = (
-                    abs(
-                        sum(a for a in amounts if a is not None)
-                        - (parse_amount(total.value_norm) or 0)
-                    )
-                    <= 0.01
-                )
-                total.checks["total_matches_lines"] = ok
-                for f in lines:
-                    f.checks["total_matches_lines"] = ok
-    if doc_type is DocType.CLAIM_FORM:
-        if (f := by_name.get("iban")) and f.value_raw:
-            f.checks["iban_checksum"] = is_valid_iban(rehydrate(f.value_raw, mapping))
-        if (f := by_name.get("insured_birth_number")) and f.value_raw:
-            f.checks["birth_number_valid"] = (
-                parse_rodne_cislo(rehydrate(f.value_raw, mapping)) is not None
-            )
-    for a, b in [
-        ("trip_start", "trip_end"),
-        ("policy_start", "policy_end"),
-        ("service_date", "issue_date"),
-        ("visit_date", "discharge_date"),
-        ("arrival_time", "delivery_time"),
-    ]:
-        fa, fb = by_name.get(a), by_name.get(b)
-        if fa and fb and fa.value_norm and fb.value_norm:
-            ok = fa.value_norm[:10] <= fb.value_norm[:10]
-            fa.checks["date_order"] = ok
-            fb.checks["date_order"] = ok
 
 
 def score_confidence(f: Field) -> float:

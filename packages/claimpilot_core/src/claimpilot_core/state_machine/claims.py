@@ -1,26 +1,15 @@
 """Claim state machine.
 
-Every status change in the system goes through `transition`. The table is the single source of
+Every status change of a claim goes through `transition`. The table is the single source of
 truth for which moves exist and who may make them: the pipeline (system) moves a claim forward,
 and only a handler approves, rejects or sends a claim back for more information.
 """
 
-from enum import StrEnum
 from itertools import pairwise
 
+from claimpilot_core.domain import CaseKind
 from claimpilot_core.domain import ClaimStatus as S
-
-
-class Actor(StrEnum):
-    SYSTEM = "system"
-    HANDLER = "handler"
-
-
-class InvalidTransitionError(ValueError):
-    def __init__(self, src: S, dst: S, actor: Actor) -> None:
-        super().__init__(f"{actor} cannot move a claim from {src} to {dst}")
-        self.src, self.dst, self.actor = src, dst, actor
-
+from claimpilot_core.state_machine.base import Actor, StateMachine
 
 _PIPELINE = [S.RECEIVED, S.PARSED, S.REDACTED, S.EXTRACTED, S.ROUTED, S.ASSESSED, S.IN_REVIEW]
 
@@ -50,12 +39,6 @@ ALLOWED: frozenset[tuple[S, S, Actor]] = frozenset(
 
 TERMINAL: frozenset[S] = frozenset({S.SUBMITTED, S.REJECTED})
 
-
-def can_transition(src: S, dst: S, actor: Actor) -> bool:
-    return (src, dst, actor) in ALLOWED
-
-
-def transition(src: S, dst: S, actor: Actor) -> S:
-    if not can_transition(src, dst, actor):
-        raise InvalidTransitionError(src, dst, actor)
-    return dst
+MACHINE = StateMachine(CaseKind.CLAIM, ALLOWED, TERMINAL)
+can_transition = MACHINE.can_transition
+transition = MACHINE.transition

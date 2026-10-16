@@ -14,7 +14,7 @@ from pathlib import Path
 from sqlalchemy import delete, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from claimpilot_core.db.models import AuditLog, Claim, Document, VaultEntry
+from claimpilot_core.db.models import AuditLog, Case, Claim, Document, VaultEntry
 
 FINISHED = ("SUBMITTED", "REJECTED")
 
@@ -30,27 +30,25 @@ async def erase_claim(
     claim = await session.get(Claim, claim_id)
     if claim is None:
         return False
-    doc_ids = (
-        await session.scalars(select(Document.id).where(Document.claim_id == claim_id))
-    ).all()
+    doc_ids = (await session.scalars(select(Document.id).where(Document.case_id == claim_id))).all()
     reference = claim.reference
-    await session.execute(delete(VaultEntry).where(VaultEntry.claim_id == claim_id))
+    await session.execute(delete(VaultEntry).where(VaultEntry.case_id == claim_id))
     # Handlers' notes may name the client: keep that an action happened, drop what was written.
     await session.execute(
         update(AuditLog)
-        .where(AuditLog.claim_id == claim_id)
-        .values(details={"erased": True}, claim_id=None)
+        .where(AuditLog.case_id == claim_id)
+        .values(details={"erased": True}, case_id=None)
     )
     session.expunge(claim)
     # SQL delete, so the database's ON DELETE CASCADE removes documents, blocks, fields, decisions,
-    # summaries and step runs in one statement.
-    await session.execute(delete(Claim).where(Claim.id == claim_id))
+    # summaries and step runs in one statement. The case row goes, and its claim row with it.
+    await session.execute(delete(Case).where(Case.id == claim_id))
     shutil.rmtree(storage / "claims" / str(claim_id), ignore_errors=True)
     for doc_id in doc_ids:
         shutil.rmtree(storage / "renders" / str(doc_id), ignore_errors=True)
     session.add(
         AuditLog(
-            claim_id=None,
+            case_id=None,
             user_id=user_id,
             action="erasure",
             details={"reference": reference, "reason": reason},

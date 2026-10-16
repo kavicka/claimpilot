@@ -17,7 +17,7 @@ from claimpilot_worker.pipeline import register
 
 @register(S.PARSED, PipelineStep.REDACT)
 async def redact(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S:
-    docs = (await session.scalars(select(Document).where(Document.claim_id == claim.id))).all()
+    docs = (await session.scalars(select(Document).where(Document.case_id == claim.id))).all()
     blocks = {
         d.id: (
             await session.scalars(

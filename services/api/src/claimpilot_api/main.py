@@ -150,7 +150,7 @@ async def create_claim(
         session.add(
             Document(
                 id=doc_id,
-                claim_id=claim.id,
+                case_id=claim.id,
                 filename=shown,
                 mime_type=ALLOWED[suffix],
                 sha256=hashlib.sha256(data).hexdigest(),
@@ -203,7 +203,7 @@ async def list_claims(
 async def claim_steps(claim_id: uuid.UUID, session: Session, user: User_) -> list[dict]:
     rows = await session.scalars(
         select(PipelineStepRun)
-        .where(PipelineStepRun.claim_id == claim_id)
+        .where(PipelineStepRun.case_id == claim_id)
         .order_by(PipelineStepRun.id)
     )
     return [

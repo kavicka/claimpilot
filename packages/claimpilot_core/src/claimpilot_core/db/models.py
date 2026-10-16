@@ -28,6 +28,8 @@ from sqlalchemy import (
 from sqlalchemy.dialects.postgresql import JSONB, TSVECTOR, UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
+from claimpilot_core.domain import CaseKind
+
 EMBEDDING_DIM = 1024  # bge-m3
 
 NAMING = {
@@ -62,23 +64,22 @@ class User(TimestampMixin, Base):
     password_hash: Mapped[str] = mapped_column(String(256))
 
 
-class Claim(TimestampMixin, Base):
-    __tablename__ = "claims"
+class Case(TimestampMixin, Base):
+    """What the pipeline moves: a claim or an invoice (joined-table inheritance on `kind`).
+
+    Documents, extracted fields, vault entries, step runs and the audit log hang off a case; the
+    kind's own table (claims, later invoices) holds what only that domain has.
+    """
+
+    __tablename__ = "cases"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=_uuid)
+    kind: Mapped[str] = mapped_column(String(16), index=True)
     reference: Mapped[str] = mapped_column(String(32), unique=True)
-    policy_id: Mapped[str | None] = mapped_column(String(64))
-    product: Mapped[str | None] = mapped_column(String(16))
     status: Mapped[str] = mapped_column(String(16), index=True)
     queue: Mapped[str | None] = mapped_column(String(16), index=True)
-    claim_type: Mapped[str | None] = mapped_column(String(16))
-    straight_through: Mapped[bool] = mapped_column(Boolean, default=False)
     scenario_id: Mapped[str | None] = mapped_column(String(64), index=True)
     error: Mapped[str | None] = mapped_column(Text)
-    # Snapshot of what routing looked at, and the payout breakdown with its explanation.
-    facts: Mapped[dict[str, Any] | None] = mapped_column(JSONB)
-    assessment: Mapped[dict[str, Any] | None] = mapped_column(JSONB)
-    core_claim_id: Mapped[str | None] = mapped_column(String(32))
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
     )
@@ -87,16 +88,53 @@ class Claim(TimestampMixin, Base):
     # version it showed, so nobody approves a payout they have not seen.
     version: Mapped[int] = mapped_column(Integer, nullable=False, server_default="1")
 
-    documents: Mapped[list["Document"]] = relationship(back_populates="claim")
+    documents: Mapped[list["Document"]] = relationship(back_populates="case")
 
-    __mapper_args__ = {"version_id_col": version}  # noqa: RUF012
+    # with_polymorphic "*": a query for Case joins the kind tables in the same SELECT. An async
+    # session cannot lazy-load a claim's own columns later, inside a pipeline step.
+    __mapper_args__ = {  # noqa: RUF012
+        "version_id_col": version,
+        "polymorphic_on": kind,
+        "with_polymorphic": "*",
+    }
+
+
+class Claim(Case):
+    __tablename__ = "claims"
+
+    id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("cases.id", ondelete="CASCADE"), primary_key=True
+    )
+    policy_id: Mapped[str | None] = mapped_column(String(64))
+    product: Mapped[str | None] = mapped_column(String(16))
+    claim_type: Mapped[str | None] = mapped_column(String(16))
+    straight_through: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Snapshot of what routing looked at, and the payout breakdown with its explanation.
+    facts: Mapped[dict[str, Any] | None] = mapped_column(JSONB)
+    assessment: Mapped[dict[str, Any] | None] = mapped_column(JSONB)
+    core_claim_id: Mapped[str | None] = mapped_column(String(32))
+
+    __mapper_args__ = {"polymorphic_identity": CaseKind.CLAIM.value}  # noqa: RUF012
+
+
+class Invoice(Case):
+    """A supplier invoice, credit note or proforma. Its own columns arrive with extraction and
+    matching (Phase 3); until then the row only gives the case its kind."""
+
+    __tablename__ = "invoices"
+
+    id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("cases.id", ondelete="CASCADE"), primary_key=True
+    )
+
+    __mapper_args__ = {"polymorphic_identity": CaseKind.INVOICE.value}  # noqa: RUF012
 
 
 class Document(TimestampMixin, Base):
     __tablename__ = "documents"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=_uuid)
-    claim_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("claims.id", ondelete="CASCADE"))
+    case_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("cases.id", ondelete="CASCADE"))
     filename: Mapped[str] = mapped_column(String(256))
     mime_type: Mapped[str] = mapped_column(String(64))
     sha256: Mapped[str] = mapped_column(String(64), index=True)
@@ -109,7 +147,7 @@ class Document(TimestampMixin, Base):
     language: Mapped[str | None] = mapped_column(String(8))
     needs_vision: Mapped[bool] = mapped_column(Boolean, default=False)
 
-    claim: Mapped[Claim] = relationship(back_populates="documents")
+    case: Mapped[Case] = relationship(back_populates="documents")
 
 
 class DocBlock(Base):
@@ -136,8 +174,8 @@ class ExtractedField(TimestampMixin, Base):
     __tablename__ = "extracted_fields"
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
-    claim_id: Mapped[uuid.UUID] = mapped_column(
-        ForeignKey("claims.id", ondelete="CASCADE"), index=True
+    case_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("cases.id", ondelete="CASCADE"), index=True
     )
     document_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("documents.id", ondelete="CASCADE"))
     field: Mapped[str] = mapped_column(String(64))
@@ -218,8 +256,8 @@ class PipelineStepRun(Base):
     __tablename__ = "pipeline_steps"
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
-    claim_id: Mapped[uuid.UUID] = mapped_column(
-        ForeignKey("claims.id", ondelete="CASCADE"), index=True
+    case_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("cases.id", ondelete="CASCADE"), index=True
     )
     step: Mapped[str] = mapped_column(String(16))
     status: Mapped[str] = mapped_column(String(16))  # running | ok | error
@@ -239,8 +277,8 @@ class AuditLog(TimestampMixin, Base):
     __tablename__ = "audit_log"
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
-    claim_id: Mapped[uuid.UUID | None] = mapped_column(
-        ForeignKey("claims.id", ondelete="SET NULL"), index=True
+    case_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("cases.id", ondelete="SET NULL"), index=True
     )
     user_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("users.id"))
     action: Mapped[str] = mapped_column(String(32))
@@ -253,7 +291,7 @@ class VaultEntry(TimestampMixin, Base):
     __tablename__ = "vault"
     __table_args__ = ({"schema": "pii"},)
 
-    claim_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True)
+    case_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True)
     token: Mapped[str] = mapped_column(String(32), primary_key=True)
     entity_type: Mapped[str] = mapped_column(String(32))
     value_encrypted: Mapped[bytes] = mapped_column(LargeBinary)

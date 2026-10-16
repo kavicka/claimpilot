@@ -7,9 +7,9 @@ from arq import Retry
 from sqlalchemy import func, select, text
 
 from claimpilot_core.db import session as db_session
-from claimpilot_core.db.models import Claim, PipelineStepRun
+from claimpilot_core.db.models import Claim, Invoice, PipelineStepRun
+from claimpilot_core.domain import CaseKind, InvoiceStatus, PipelineStep
 from claimpilot_core.domain import ClaimStatus as S
-from claimpilot_core.domain import PipelineStep
 from claimpilot_core.settings import get_settings
 from claimpilot_worker import pipeline
 
@@ -43,7 +43,7 @@ async def load(cid: uuid.UUID) -> tuple[Claim, list[PipelineStepRun]]:
     async with db_session.session_scope() as s:
         claim = await s.get(Claim, cid)
         runs = (
-            await s.scalars(select(PipelineStepRun).where(PipelineStepRun.claim_id == cid))
+            await s.scalars(select(PipelineStepRun).where(PipelineStepRun.case_id == cid))
         ).all()
         return claim, list(runs)
 
@@ -137,7 +137,7 @@ async def test_unreadable_files_go_back_to_the_client(monkeypatch, tmp_path):
 
     monkeypatch.setenv("CLAIMPILOT_STORAGE_DIR", str(tmp_path))
     get_settings.cache_clear()
-    pipeline.STEPS[S.RECEIVED] = (PipelineStep.INGEST, ingest)
+    pipeline.STEPS[(CaseKind.CLAIM, S.RECEIVED.value)] = (PipelineStep.INGEST, ingest)
     cid = await new_claim()
     locked = pymupdf.open()
     locked.new_page().insert_text((72, 72), "Faktúra")
@@ -152,14 +152,14 @@ async def test_unreadable_files_go_back_to_the_client(monkeypatch, tmp_path):
             (tmp_path / rel).write_bytes(data)
             s.add(
                 Document(
-                    claim_id=cid, filename=name, mime_type="x", sha256="0" * 64, storage_path=rel
+                    case_id=cid, filename=name, mime_type="x", sha256="0" * 64, storage_path=rel
                 )
             )
     assert await pipeline.advance({"job_try": 1}, str(cid)) == "NEEDS_INFO"
     async with db_session.session_scope() as s:
         docs = {
             d.filename: d.problem
-            for d in await s.scalars(select(Document).where(Document.claim_id == cid))
+            for d in await s.scalars(select(Document).where(Document.case_id == cid))
         }
         request = (await s.scalars(select(Summary).where(Summary.claim_id == cid))).one()
     assert docs == {"faktura.pdf": "protected by a password", "foto.jpg": "damaged or not an image"}
@@ -204,13 +204,16 @@ class FakeRedis:
 async def test_sweep_resumes_claims_that_stopped_moving():
     from sqlalchemy import update
 
+    from claimpilot_core.db.models import Case
+
     stuck = await new_claim(S.EXTRACTED)  # its job was lost when Redis restarted
     fresh = await new_claim(S.EXTRACTED)  # a step is still running on it
     waiting = await new_claim(S.IN_REVIEW)  # waits for a person: not the sweep's business
     async with db_session.session_scope() as s:
+        # updated_at lives on the case row; an UPDATE names the table that holds the column.
         await s.execute(
-            update(Claim)
-            .where(Claim.id.in_([stuck, waiting]))
+            update(Case)
+            .where(Case.id.in_([stuck, waiting]))
             .values(updated_at=func.now() - text("interval '2 hours'"))
         )
     redis = FakeRedis()
@@ -220,3 +223,97 @@ async def test_sweep_resumes_claims_that_stopped_moving():
     assert str(fresh) not in swept and str(waiting) not in swept
     job_id = next(j for _, args, j in redis.jobs if args[0] == str(stuck))
     assert job_id == f"sweep:{stuck}:1"  # one sweep per claim version, however often it runs
+
+
+async def new_invoice(status: InvoiceStatus = InvoiceStatus.RECEIVED) -> uuid.UUID:
+    async with db_session.session_scope() as s:
+        invoice = Invoice(reference=f"F-{uuid.uuid4().hex[:10]}", status=status.value)
+        s.add(invoice)
+        await s.flush()
+        return invoice.id
+
+
+async def test_an_invoice_runs_its_own_steps_through_its_own_machine():
+    seen = []
+
+    @pipeline.register(InvoiceStatus.EXTRACTED, PipelineStep.EXTRACT, kind=CaseKind.INVOICE)
+    async def validate(session, case, ctx):
+        seen.append(type(case).__name__)
+        return InvoiceStatus.VALIDATED
+
+    iid = await new_invoice(InvoiceStatus.EXTRACTED)
+    cid = await new_claim(S.EXTRACTED)
+    assert await pipeline.advance({"job_try": 1}, str(iid)) == "VALIDATED"
+    assert seen == ["Invoice"]
+    # The claim at the same status has no step registered for claims: it stays where it is.
+    assert await pipeline.advance({"job_try": 1}, str(cid)) == "EXTRACTED"
+    async with db_session.session_scope() as s:
+        assert (await s.get(Invoice, iid)).status == "VALIDATED"
+        runs = (
+            await s.scalars(select(PipelineStepRun).where(PipelineStepRun.case_id == iid))
+        ).all()
+        assert [(r.step, r.status) for r in runs] == [("extract", "ok")]
+
+
+async def test_a_claim_move_is_refused_for_an_invoice():
+    @pipeline.register(InvoiceStatus.ROUTED, PipelineStep.ROUTE, kind=CaseKind.INVOICE)
+    async def route(session, case, ctx):
+        return InvoiceStatus.APPROVED  # only a handler approves
+
+    iid = await new_invoice(InvoiceStatus.ROUTED)
+    with pytest.raises(Retry):
+        await pipeline.advance({"job_try": 1}, str(iid))
+    async with db_session.session_scope() as s:
+        assert (await s.get(Invoice, iid)).status == "ROUTED"
+
+
+async def test_an_invoice_fails_into_its_own_failed_status():
+    @pipeline.register(InvoiceStatus.MATCHED, PipelineStep.ROUTE, kind=CaseKind.INVOICE)
+    async def boom(session, case, ctx):
+        raise ValueError("ERP down")
+
+    iid = await new_invoice(InvoiceStatus.MATCHED)
+    assert await pipeline.advance({"job_try": 3}, str(iid)) == "FAILED"
+    async with db_session.session_scope() as s:
+        invoice = await s.get(Invoice, iid)
+        assert invoice.status == "FAILED"
+        assert invoice.error == "ValueError: ERP down"
+
+
+async def test_sweep_resumes_invoices_too_but_not_exported_ones():
+    from sqlalchemy import update
+
+    from claimpilot_core.db.models import Case
+
+    stuck = await new_invoice(InvoiceStatus.VALIDATED)
+    done = await new_invoice(InvoiceStatus.EXPORTED)
+    async with db_session.session_scope() as s:
+        await s.execute(
+            update(Case)
+            .where(Case.id.in_([stuck, done]))
+            .values(updated_at=func.now() - text("interval '2 hours'"))
+        )
+    redis = FakeRedis()
+    await pipeline.sweep({"redis": redis})
+    swept = [args[0] for _, args, _ in redis.jobs]
+    assert str(stuck) in swept
+    assert str(done) not in swept
+
+
+async def test_a_step_reads_claim_columns_of_the_case_it_was_given():
+    """advance loads a Case; the claim's own columns (claims table) must come with it, since an
+    async session cannot lazy-load them inside a step (MissingGreenlet)."""
+
+    @pipeline.register(S.ROUTED, PipelineStep.ASSESS)
+    async def assess(session, claim, ctx):
+        assert claim.facts == {"policy": None}
+        claim.product = "basic"
+        return S.ASSESSED
+
+    cid = await new_claim(S.ROUTED)
+    async with db_session.session_scope() as s:
+        claim = await s.get(Claim, cid)
+        claim.facts = {"policy": None}
+    assert await pipeline.advance({"job_try": 1}, str(cid)) == "ASSESSED"
+    claim, _ = await load(cid)
+    assert claim.product == "basic"

@@ -168,13 +168,13 @@ async def claim_detail(claim_id: uuid.UUID, user: User_, session: Session) -> di
 
     docs = (
         await session.scalars(
-            select(Document).where(Document.claim_id == claim.id).order_by(Document.created_at)
+            select(Document).where(Document.case_id == claim.id).order_by(Document.created_at)
         )
     ).all()
     fields = (
         await session.scalars(
             select(ExtractedField)
-            .where(ExtractedField.claim_id == claim.id)
+            .where(ExtractedField.case_id == claim.id)
             .order_by(ExtractedField.id)
         )
     ).all()
@@ -209,13 +209,13 @@ async def claim_detail(claim_id: uuid.UUID, user: User_, session: Session) -> di
     steps = (
         await session.scalars(
             select(PipelineStepRun)
-            .where(PipelineStepRun.claim_id == claim.id)
+            .where(PipelineStepRun.case_id == claim.id)
             .order_by(PipelineStepRun.id)
         )
     ).all()
     audit = (
         await session.scalars(
-            select(AuditLog).where(AuditLog.claim_id == claim.id).order_by(AuditLog.id)
+            select(AuditLog).where(AuditLog.case_id == claim.id).order_by(AuditLog.id)
         )
     ).all()
     trace_id = next((s.trace_id for s in steps if s.trace_id), None)
@@ -412,17 +412,17 @@ async def correct_field(
     row = await session.get(ExtractedField, field_id)
     if row is None:
         raise HTTPException(404, "no such field")
-    claim = await session.get(Claim, row.claim_id)
+    claim = await session.get(Claim, row.case_id)
     if claim is None or claim.status != S.IN_REVIEW.value:
         raise HTTPException(409, "fields can be corrected only while the claim is in review")
     check_version(claim, body.version)
-    mapping = await vault().load(session, row.claim_id)
+    mapping = await vault().load(session, row.case_id)
     reverse = {v: k for k, v in mapping.items()}
     stored = reverse.get(body.value)  # keep tokens for values the vault already holds
     if stored is None:
         entity = pii_entity(row.field, row.value_raw)
         if entity and body.value.strip():
-            stored = await vault().add(session, row.claim_id, entity, body.value)
+            stored = await vault().add(session, row.case_id, entity, body.value)
             mapping[stored] = body.value
         else:
             stored = body.value
@@ -431,7 +431,7 @@ async def correct_field(
     )
     session.add(
         AuditLog(
-            claim_id=row.claim_id,
+            case_id=row.case_id,
             user_id=user.id,
             action="correct_field",
             details={"field": row.field, "document_id": str(row.document_id)},
@@ -469,7 +469,7 @@ async def needs_reassessment(session: AsyncSession, claim_id: uuid.UUID) -> bool
     last_fix = await session.scalar(
         select(func.max(Correction.created_at))
         .join(ExtractedField, ExtractedField.id == Correction.field_id)
-        .where(ExtractedField.claim_id == claim_id)
+        .where(ExtractedField.case_id == claim_id)
     )
     assessed = await session.scalar(
         select(func.max(CoverageDecision.created_at)).where(CoverageDecision.claim_id == claim_id)
@@ -512,7 +512,7 @@ async def act(
             corrected = await session.scalar(
                 select(func.count())
                 .select_from(ExtractedField)
-                .where(ExtractedField.claim_id == claim.id, ExtractedField.corrected.is_(True))
+                .where(ExtractedField.case_id == claim.id, ExtractedField.corrected.is_(True))
             )
             claim.straight_through = not corrected
     else:
@@ -520,7 +520,7 @@ async def act(
     if action == "retry":
         claim.error = None
     session.add(
-        AuditLog(claim_id=claim.id, user_id=user.id, action=action, details={"note": body.note})
+        AuditLog(case_id=claim.id, user_id=user.id, action=action, details={"note": body.note})
     )
     await session.commit()
     if action in ("approve", "reassess", "retry"):
@@ -562,11 +562,15 @@ async def ops(user: User_, session: Session) -> dict:
         by_queue[c.queue or "none"] = by_queue.get(c.queue or "none", 0) + 1
         by_status[c.status] = by_status.get(c.status, 0) + 1
     runs = (
-        await session.scalars(select(PipelineStepRun).where(PipelineStepRun.status == "ok"))
+        await session.scalars(
+            select(PipelineStepRun)
+            .join(Claim, Claim.id == PipelineStepRun.case_id)
+            .where(PipelineStepRun.status == "ok")
+        )
     ).all()
     per_claim: dict[uuid.UUID, list[PipelineStepRun]] = {}
     for r in runs:
-        per_claim.setdefault(r.claim_id, []).append(r)
+        per_claim.setdefault(r.case_id, []).append(r)
     latency = sorted(sum(r.latency_ms or 0 for r in rs) for rs in per_claim.values())
     tokens = [sum(r.tokens_in + r.tokens_out for r in rs) for rs in per_claim.values()]
     decided = [c for c in claims if c.status in (S.APPROVED.value, S.SUBMITTED.value)]

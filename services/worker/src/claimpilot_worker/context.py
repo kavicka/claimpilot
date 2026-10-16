@@ -12,7 +12,7 @@ from typing import Any
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from claimpilot_core.db.models import DocBlock, Document, ExtractedField
+from claimpilot_core.db.models import Claim, DocBlock, Document, ExtractedField
 from claimpilot_core.domain import Coverage, DocType, ExtractionMethod, Product
 from claimpilot_core.schemas.parsing import Block, FracBox, PageInfo, ParsedDocument
 from claimpilot_worker.extraction.extract import Extraction, Field
@@ -29,7 +29,7 @@ class StoredDoc:
 async def load_docs(session: AsyncSession, claim_id: uuid.UUID) -> list[StoredDoc]:
     docs = (
         await session.scalars(
-            select(Document).where(Document.claim_id == claim_id).order_by(Document.created_at)
+            select(Document).where(Document.case_id == claim_id).order_by(Document.created_at)
         )
     ).all()
     out = []
@@ -111,20 +111,23 @@ def signals_of(rows: list[DocBlock]) -> list[Signal]:
 
 
 async def history_for(session: AsyncSession, claim_id: uuid.UUID) -> History:
-    """Files and invoice numbers submitted with other claims before this one."""
+    """Files and invoice numbers submitted with other claims before this one. Supplier invoices
+    are other cases, not other claims: their numbers must not look like a reused receipt."""
     h = History()
     rows = (
         await session.execute(
-            select(Document.sha256, Document.claim_id).where(Document.claim_id != claim_id)
+            select(Document.sha256, Document.case_id)
+            .join(Claim, Claim.id == Document.case_id)
+            .where(Document.case_id != claim_id)
         )
     ).all()
     for sha, cid in rows:
         h.files.setdefault(sha, str(cid))
     inv = (
         await session.execute(
-            select(ExtractedField.value_norm, ExtractedField.claim_id).where(
-                ExtractedField.field == "invoice_number", ExtractedField.claim_id != claim_id
-            )
+            select(ExtractedField.value_norm, ExtractedField.case_id)
+            .join(Claim, Claim.id == ExtractedField.case_id)
+            .where(ExtractedField.field == "invoice_number", ExtractedField.case_id != claim_id)
         )
     ).all()
     for number, cid in inv:

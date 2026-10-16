@@ -67,7 +67,7 @@ async def make_claim(status="IN_REVIEW", queue="standard") -> tuple[uuid.UUID, i
         s.add(claim)
         await s.flush()
         doc = Document(
-            claim_id=claim.id,
+            case_id=claim.id,
             filename="inv.pdf",
             mime_type="application/pdf",
             sha256="a" * 64,
@@ -78,7 +78,7 @@ async def make_claim(status="IN_REVIEW", queue="standard") -> tuple[uuid.UUID, i
         s.add(doc)
         await s.flush()
         field = ExtractedField(
-            claim_id=claim.id,
+            case_id=claim.id,
             document_id=doc.id,
             field="patient_name",
             value_raw="<PERSON_1>",

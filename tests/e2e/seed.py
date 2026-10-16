@@ -103,7 +103,7 @@ async def seed() -> None:
     from claimpilot_api.auth import ensure_demo_users, hash_password
 
     async with session_scope() as s:
-        await s.execute(text("TRUNCATE claims, audit_log CASCADE"))
+        await s.execute(text("TRUNCATE cases, audit_log CASCADE"))
         await s.execute(text("TRUNCATE pii.vault"))
         await ensure_demo_users(s)
         await s.flush()
@@ -132,7 +132,7 @@ async def seed() -> None:
             s.add(c)
             await s.flush()
             doc = Document(
-                claim_id=c.id,
+                case_id=c.id,
                 filename="fattura_ospedale.pdf",
                 mime_type="application/pdf",
                 sha256=uuid.uuid4().hex * 2,
@@ -149,7 +149,7 @@ async def seed() -> None:
             for field, _label, printed, _y in LINES:
                 s.add(
                     ExtractedField(
-                        claim_id=c.id,
+                        case_id=c.id,
                         document_id=doc.id,
                         field=field,
                         value_raw=printed or _label,
@@ -229,7 +229,7 @@ async def seed() -> None:
                 s.add(Summary(claim_id=c.id, kind=kind, language=lang, text=body))
             s.add(
                 PipelineStepRun(
-                    claim_id=c.id, step="extract", status="ok", attempt=1, latency_ms=16400
+                    case_id=c.id, step="extract", status="ok", attempt=1, latency_ms=16400
                 )
             )
             return c
