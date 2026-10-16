@@ -25,7 +25,7 @@ import yaml
 
 from claimpilot_core.llm.cassette import CassetteMode
 from claimpilot_core.settings import get_settings, repo_root
-from claimpilot_evals.compare import BASELINES, check, deltas
+from claimpilot_evals.compare import BASELINES, check, column_deltas, deltas
 
 BASE_MODEL = "mlx-community/Qwen3-8B-4bit"
 STEPS = ("invoice_header", "invoice_lines")
@@ -146,6 +146,8 @@ def run(name: str, *, iters: int, base: str = BASE_MODEL, rebuild_data: bool = F
         print("\n".join(deltas(report, baseline)))
         problems = promotion_problems(report, baseline)
         if problems:
+            for line in column_deltas(report, baseline):
+                print(f"  {line}")
             for p in problems:
                 print(f"  GATE: {p}")
             print("not promoted")

@@ -34,3 +34,17 @@ Status: accepted, 2026-10-16
   current model.
 - Adapter weights stay local (gitignored); the commit carries their training config and the
   reports. Running the promoted config needs `make mlx-serve` next to the worker.
+
+## First run, 2026-10-16 (`invoice-20261016`, 300 iterations ≈ 1 epoch): not promoted
+- The gate refused it: line-cell accuracy fell from 99.7 % to 95.4 % on dev. Header accuracy rose
+  (98.8 % → 99.1 %) and false values fell (122 → 8), so the format was learned; what it lost are
+  the fields printed on an item's continuation lines — EAN (-226), ŠUKL code (-33), batch (-19),
+  origin and customs code (-5 each).
+- It drops EAN on the pohoda layout (225 of 232) and keeps it everywhere else, and it does so on
+  a training prompt too, answering it field for field except that one pair. So the field was not
+  learned, not forgotten at inference.
+- Training loss 0.003 and validation loss 0.004 did not show this: one missing field is a handful
+  of tokens in a long answer, so token loss cannot see it. The eval gate is what caught it, and
+  a gate failure now prints the per-column deltas that name the field.
+- Next attempt: more epochs before anything else (300 iterations with batch 1 and 4 accumulation
+  steps is about one pass over 1183 examples).

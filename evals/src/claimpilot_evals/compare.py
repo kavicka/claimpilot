@@ -8,6 +8,7 @@ Exit code 1 when any gate trips or a suite is stale (a prompt changed without a 
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -77,6 +78,35 @@ def _show(m: dict[str, Any]) -> str:
     return Metric(m["value"], m["num"], m["den"]).show()
 
 
+COLUMN_NOTE = re.compile(r"column (\S+): (\d+)/(\d+)")
+
+
+def _columns(report: dict[str, Any] | None) -> dict[str, tuple[int, int]]:
+    """Per-column notes a suite writes ("column ean: 640/640")."""
+    if report is None:
+        return {}
+    found = (COLUMN_NOTE.fullmatch(n) for n in report.get("notes", []))
+    return {m[1]: (int(m[2]), int(m[3])) for m in found if m}
+
+
+def column_deltas(report: dict[str, Any], baseline: dict[str, Any] | None) -> list[str]:
+    """The columns that lost values against the baseline, worst first. A metric averages over
+    every column, so one field that broke shows here by name."""
+    base = _columns(baseline)
+    out = []
+    for name, (num, den) in _columns(report).items():
+        was = base.get(name)
+        if was is None or num >= was[0] or not den or not was[1]:
+            continue
+        out.append(
+            (
+                num - was[0],
+                f"column {name}: {was[0] / was[1]:.1%} -> {num / den:.1%} ({num - was[0]:+d})",
+            )
+        )
+    return [text for _, text in sorted(out)]
+
+
 def deltas(report: dict[str, Any], baseline: dict[str, Any] | None) -> list[str]:
     out = []
     for name, m in report["metrics"].items():
@@ -97,6 +127,9 @@ def compare_suite(suite: str, split: str, report_path: Path | None = None) -> li
     print(f"{suite} ({path.name}) vs {'baseline' if baseline else 'no baseline'}")
     print("\n".join(deltas(report, baseline)))
     problems = check(report, baseline)
+    if problems:
+        for line in column_deltas(report, baseline):
+            print(f"  {line}")
     for p in problems:
         print(f"  GATE: {p}")
     return problems
