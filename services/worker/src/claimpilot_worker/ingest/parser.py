@@ -134,9 +134,17 @@ def blocks_from(doc: DoclingDocument, pages: dict[int, PageInfo]) -> list[Block]
     return blocks
 
 
-def parse(path: Path) -> ParsedDocument:
-    """Blocks of the document, with text a reader cannot see marked as hidden."""
-    return mark_hidden(_parse(path), hidden_spans(path))
+def parse(path: Path, *, tables: bool = False) -> ParsedDocument:
+    """Blocks of the document, with text a reader cannot see marked as hidden. With `tables`
+    (invoices), line-item tables are rebuilt from word positions into `cells`; claims leave it
+    off, so their parse output stays as it was."""
+    spans = hidden_spans(path)
+    parsed = mark_hidden(_parse(path), spans)
+    if tables:
+        from claimpilot_worker.ingest.tables import item_table_cells
+
+        parsed.cells = item_table_cells(path, parsed.pages, spans)
+    return parsed
 
 
 def _parse(path: Path) -> ParsedDocument:

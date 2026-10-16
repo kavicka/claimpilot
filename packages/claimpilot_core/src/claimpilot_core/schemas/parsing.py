@@ -34,6 +34,22 @@ class Block(BaseModel):
     hidden: str | None = None
 
 
+class TableCell(BaseModel):
+    """One cell of a line-item table, rebuilt from word positions (ingest/tables.py).
+
+    `item` is the table row a reader sees (one invoice line); `line` counts the visual lines of
+    that item (0 = the line with the amounts, or the first line of a wrapped name)."""
+
+    page: int
+    table: int
+    item: int
+    line: int
+    col: int
+    header: str
+    text: str
+    bbox: FracBox
+
+
 class PageInfo(BaseModel):
     page: int
     width: float
@@ -46,6 +62,8 @@ class ParsedDocument(BaseModel):
     mime_type: str
     pages: list[PageInfo]
     blocks: list[Block] = Field(default_factory=list)
+    # Line-item tables, filled for invoices only; claims keep their block-only output.
+    cells: list[TableCell] = Field(default_factory=list)
     parser: str = "docling"
     seconds: float = 0.0
 

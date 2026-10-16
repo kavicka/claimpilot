@@ -170,6 +170,26 @@ class DocBlock(Base):
     hidden: Mapped[str | None] = mapped_column(String(16))
 
 
+class DocCell(Base):
+    """One cell of a line-item table (invoices): the grounding target for line values."""
+
+    __tablename__ = "doc_cells"
+
+    id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    document_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("documents.id", ondelete="CASCADE"), index=True
+    )
+    page: Mapped[int] = mapped_column(Integer)
+    tbl: Mapped[int] = mapped_column(Integer)
+    item: Mapped[int] = mapped_column(Integer)
+    line: Mapped[int] = mapped_column(Integer)
+    col: Mapped[int] = mapped_column(Integer)
+    header: Mapped[str] = mapped_column(Text)
+    text: Mapped[str] = mapped_column(Text)
+    text_redacted: Mapped[str | None] = mapped_column(Text)
+    bbox: Mapped[dict[str, Any]] = mapped_column(JSONB)
+
+
 class ExtractedField(TimestampMixin, Base):
     __tablename__ = "extracted_fields"
 

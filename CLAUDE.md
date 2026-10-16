@@ -25,7 +25,9 @@ Phase 3 adds supplier invoices on the same core (ADR-013): the pipeline moves a 
 `claim` or `invoice` (joined-table inheritance; `update(Case)` for status columns), one state
 machine per kind, steps registered per (kind, status). Invoice states: RECEIVED → PARSED →
 REDACTED → EXTRACTED → VALIDATED → MATCHED → ROUTED → IN_REVIEW → APPROVED → EXPORTED. Real
-sample invoices in `docs/private-samples/` are gitignored and never trained on.
+sample invoices in `docs/private-samples/` are gitignored and never trained on. Invoice line items are
+rebuilt from word positions (`ingest/tables.py`, `parse(path, tables=True)`) into `doc_cells`, one
+grounding target per cell; claims keep the block-only parse.
 
 Ports: Postgres 5438 (a native Postgres owns 5432), Redis 6389, api 4400, core_mock 4401,
 mcp 4402, ui 4410, Langfuse 4420, Ollama 11434.
