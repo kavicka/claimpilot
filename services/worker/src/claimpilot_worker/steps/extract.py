@@ -28,7 +28,15 @@ log = structlog.get_logger(__name__)
 
 def _parsed(doc: Document, rows: list[DocBlock]) -> tuple[ParsedDocument, dict[int, str]]:
     blocks = [
-        Block(page=r.page, seq=r.seq, kind=r.kind, text=r.text, bbox=FracBox(**r.bbox), ocr=r.ocr)
+        Block(
+            page=r.page,
+            seq=r.seq,
+            kind=r.kind,
+            text=r.text,
+            bbox=FracBox(**r.bbox),
+            ocr=r.ocr,
+            hidden=r.hidden,
+        )
         for r in rows
     ]
     pages = [PageInfo(page=p, width=1, height=1) for p in sorted({r.page for r in rows})]

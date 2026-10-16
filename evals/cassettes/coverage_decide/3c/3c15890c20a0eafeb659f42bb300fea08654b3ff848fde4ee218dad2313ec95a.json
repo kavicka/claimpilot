@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for an ankle sprain sustained during a walk in Budapest. Clause A4.1 covers reasonable and necessary medical expenses resulting from an acute illness or injury during travel. There is no indication of pre-existing conditions (A5.1), planned treatment (A5.2), intentional injury (A11.1), alcohol or drug influence (A11.2), or events related to war, terrorism, or nuclear incidents (A11.4). Additionally, the injury did not occur during an extreme sport, so A11.3 does not apply. The treatment provided (ice, compression, elevation, and medication) is consistent with standard care for an ankle sprain.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1174,
+   "tokens_out": 168,
+   "latency_ms": 16302
+  },
+  "cached": false
+ }
+}

@@ -83,8 +83,10 @@ class LLMGateway:
         overrides: dict[str, str] | None = None,
         event_hooks: dict[str, list[EventHook]] | None = None,
         cassette_mode: CassetteMode | None = None,
+        sample: int | None = None,
     ) -> None:
         self.settings = settings or get_settings()
+        self.sample = sample
         self.providers = load_providers(self.settings.config_dir, self.settings.providers_file)
         self.overrides = overrides or {}
         self.client = OllamaClient(self.settings.ollama_url, event_hooks=event_hooks)
@@ -114,6 +116,10 @@ class LLMGateway:
         merged = {**defaults, **step_cfg}
         if step in self.overrides or "*" in self.overrides:
             merged["model"] = self.overrides.get(step, self.overrides.get("*"))
+        if self.sample is not None:  # a variance run: sampled answers, one seed per repeat
+            merged["temperature"] = max(float(merged.get("temperature", 0.0)), 0.7)
+            merged["seed"] = int(merged.get("seed", 7)) + self.sample
+            merged["sample"] = self.sample
         return ModelSpec.model_validate(merged)
 
     @property

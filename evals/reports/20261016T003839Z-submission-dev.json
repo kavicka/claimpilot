@@ -1,0 +1,1751 @@
+{
+ "suite": "submission",
+ "split": "dev",
+ "metrics": {
+  "first_try_success": {
+   "value": 0.972972972972973,
+   "num": 36,
+   "den": 37
+  },
+  "after_retry_success": {
+   "value": 0.972972972972973,
+   "num": 36,
+   "den": 37
+  },
+  "invented_values": {
+   "value": 0.0,
+   "num": 0,
+   "den": 0
+  },
+  "agent_used_on_perturbed": {
+   "value": 0.972972972972973,
+   "num": 36,
+   "den": 37
+  }
+ },
+ "items": [
+  {
+   "id": "S42-001/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-001/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "claim_type_code"
+       ],
+       "msg": "use one of ['ACC', 'CXL', 'DLY', 'LIA', 'LUG', 'MED']",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-002/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-002/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-003/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-003/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "claim_type_code"
+       ],
+       "msg": "use one of ['ACC', 'CXL', 'DLY', 'LIA', 'LUG', 'MED']",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-004/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-004/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-005/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-005/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-006/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-006/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-007/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-007/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-008/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-008/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-009/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-009/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "claim_type_code"
+       ],
+       "msg": "use one of ['ACC', 'CXL', 'DLY', 'LIA', 'LUG', 'MED']",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-010/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-010/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-011/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-011/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-012/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-012/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-013/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-013/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-014/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-014/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-015/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-015/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-016/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-016/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "claim_type_code"
+       ],
+       "msg": "use one of ['ACC', 'CXL', 'DLY', 'LIA', 'LUG', 'MED']",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-018/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-018/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "claim_type_code"
+       ],
+       "msg": "use one of ['ACC', 'CXL', 'DLY', 'LIA', 'LUG', 'MED']",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-019/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-019/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-020/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-020/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-021/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-021/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-022/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-022/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-023/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-023/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "claim_type_code"
+       ],
+       "msg": "use one of ['ACC', 'CXL', 'DLY', 'LIA', 'LUG', 'MED']",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-024/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-024/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-025/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-025/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-026/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-026/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-027/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-027/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-028/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-028/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-029/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-029/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-030/clean",
+   "ok": false,
+   "expected": "registered",
+   "got": "needs_handler",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 0,
+    "first_try": false,
+    "agent": false,
+    "invented": [],
+    "fields": [
+     "event_country"
+    ],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-030/perturbed",
+   "ok": false,
+   "expected": "registered",
+   "got": "needs_handler",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 0,
+    "first_try": false,
+    "agent": false,
+    "invented": [],
+    "fields": [
+     "event_country"
+    ],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-031/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-031/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-034/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-034/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-035/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-035/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-036/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-036/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "claim_type_code"
+       ],
+       "msg": "use one of ['ACC', 'CXL', 'DLY', 'LIA', 'LUG', 'MED']",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-037/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-037/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-038/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-038/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-039/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-039/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "event_country"
+       ],
+       "msg": "ISO 3166 alpha-2 code expected",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "id": "S42-040/clean",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "clean_success"
+   ],
+   "detail": {
+    "submissions": 1,
+    "first_try": true,
+    "agent": false,
+    "invented": [],
+    "fields": [],
+    "errors": []
+   }
+  },
+  {
+   "id": "S42-040/perturbed",
+   "ok": true,
+   "expected": "registered",
+   "got": "registered",
+   "tags": [
+    "perturbed_success"
+   ],
+   "detail": {
+    "submissions": 2,
+    "first_try": false,
+    "agent": true,
+    "invented": [],
+    "fields": [],
+    "errors": [
+     [
+      {
+       "loc": [
+        "body",
+        "items",
+        0,
+        "coverage_code"
+       ],
+       "msg": "unknown coverage",
+       "type": "not_in_code_list"
+      }
+     ]
+    ]
+   }
+  }
+ ],
+ "meta": {
+  "created": "20261016T003839Z",
+  "git": {
+   "sha": "4f6ae4b",
+   "dirty": true
+  },
+  "dataset": "6bd4025701dc",
+  "seed": 42,
+  "cassette_mode": "auto",
+  "overrides": {},
+  "options": {},
+  "prompts": {
+   "doc_type/classify": "doc_type/classify@2+c2ea9f28",
+   "extraction/document": "extraction/document@1+e1460380",
+   "extraction/vision": "extraction/vision@1+81c8af53",
+   "submission/agent": "submission/agent@2+0771bb90"
+  },
+  "models": [
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:14b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 208,
+  "cached_calls": 208,
+  "tokens_in": 360998,
+  "tokens_out": 111908,
+  "tokens_per_item": 6390.6,
+  "latency_p50_ms": 0,
+  "latency_p95_ms": 0,
+  "worker_peak_rss_mb": 783,
+  "models": [
+   "ollama:qwen3-vl:8b",
+   "ollama:qwen3:14b",
+   "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+   "ollama:qwen3:4b-instruct"
+  ]
+ },
+ "notes": [],
+ "stale": []
+}

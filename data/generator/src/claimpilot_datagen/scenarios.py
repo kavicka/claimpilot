@@ -976,3 +976,5 @@ class Sampler:
                 )
                 doc.injection = texts[split]
                 target.edge_cases.append("prompt_injection")
+                if target.expected_rule in ("R7", "R8", "R9"):  # R10 comes before them
+                    target.expected_queue, target.expected_rule = Queue.SENIOR, "R10"

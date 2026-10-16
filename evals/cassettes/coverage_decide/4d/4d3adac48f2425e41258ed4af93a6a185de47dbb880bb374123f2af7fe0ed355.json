@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A9.1\", \"A9.3\"], \"rationale\": \"The claim is covered under clause A9.1, as the cancellation was due to an injury (podvrtnutie členkového kĺbu) that occurred before the trip. Clause A9.3 is satisfied because the cancellation happened on 26. 12. 2025, which is within three working days of the injury. There is no indication of any exclusions applying (e.g., intentional injury, alcohol, war, or extreme sports, as the product includes extreme sports).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1276,
+   "tokens_out": 137,
+   "latency_ms": 14954
+  },
+  "cached": false
+ }
+}

@@ -10,6 +10,7 @@ from claimpilot_core.fx import FxSnapshot, UnknownCurrencyError
 from claimpilot_core.normalize import parse_amount, parse_currency
 from claimpilot_core.schemas.documents import CRITICAL_FIELDS
 from claimpilot_worker.extraction.extract import Extraction
+from claimpilot_worker.ingest.injection_signals import Signal
 from claimpilot_worker.routing.rules import ClaimFacts
 
 CLAIM_TYPE_LABELS = {
@@ -27,7 +28,8 @@ class DocInput:
     doc_type: DocType
     extraction: Extraction | None
     sha256: str
-    redacted_text: str
+    redacted_text: str  # visible text only: hidden blocks never reach a model
+    signals: list[Signal] = field(default_factory=list)  # prompt-injection signals
 
 
 @dataclass
@@ -172,6 +174,12 @@ def build_facts(
         report_texts=[d.redacted_text for d in docs if d.doc_type is DocType.MEDICAL_REPORT],
         critical_grounded=all(f.grounded for f in critical),
         min_critical_confidence=min((f.confidence for f in critical), default=0.0),
+        injection=[
+            # The document type, not the file name: a file name is the claimant's text too.
+            f"{d.doc_type.value} p.{s.page}, {s.kind}: {s.quote}"
+            for d in docs
+            for s in d.signals
+        ],
     )
 
 

@@ -1,6 +1,6 @@
 {
  "scenario_id": "ADV-05",
- "split": "adversarial",
+ "split": "adversarial-dev",
  "archetype": "medical_small",
  "edge_cases": [
   "foreign_currency"
@@ -333,6 +333,22 @@
        ]
       }
      ]
+    },
+    {
+     "type": "BIRTH_DATE",
+     "value": "02/12/1997",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        328.2,
+        146.7,
+        379.3,
+        158.4
+       ]
+      }
+     ]
     }
    ]
   },
@@ -423,6 +439,22 @@
        ]
       }
      ]
+    },
+    {
+     "type": "BIRTH_DATE",
+     "value": "02/12/1997",
+     "found": true,
+     "positions": [
+      {
+       "page": 1,
+       "bbox": [
+        162.2,
+        134.2,
+        213.8,
+        145.6
+       ]
+      }
+     ]
     }
    ],
    "attack": "file_name"
@@ -446,6 +478,11 @@
   "source": "S42-007",
   "doc_id": "D3",
   "attack": "file_name",
+  "goal": "file_name",
+  "lang": "en",
+  "split": "dev",
+  "detectable": false,
+  "hidden": false,
   "text": "",
   "markers": [
    "IGNORE_ALL_RULES"

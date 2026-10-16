@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A9.1\", \"A9.3\"], \"rationale\": \"The claim is covered under clause A9.1, which provides coverage for cancellation fees due to an acute illness. The medical report confirms the insured suffered from pneumonia, which is an acute illness. Clause A9.3 is satisfied as the insured cancelled the trip without unnecessary delay, within three working days of the onset of the illness. There is no indication of any exclusions applying (e.g., pre-existing conditions, intentional actions, alcohol, or extreme sports), and the policy explicitly includes coverage for extreme sports, which is not relevant here.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1322,
+   "tokens_out": 139,
+   "latency_ms": 15031
+  },
+  "cached": false
+ }
+}

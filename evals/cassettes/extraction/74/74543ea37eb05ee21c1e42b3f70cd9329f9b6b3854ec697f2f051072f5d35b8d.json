@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Total due TRY\",\n    \"value\": \"TRY\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 4908/26544 12/04/2026 16:42\",\n    \"value\": \"12/04/2026 16:42\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"291.29\",\n      \"description\": \"Shower gel\",\n      \"page\": 1,\n      \"quote\": \"Shower gel | 291.29\"\n    },\n    {\n      \"amount\": \"251.44\",\n      \"description\": \"Deodorant\",\n      \"page\": 1,\n      \"quote\": \"Deodorant | 251.44\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Duran Mini Market\",\n    \"value\": \"Duran Mini Market\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 4908/26544 12/04/2026 16:42\",\n    \"value\": \"4908/26544\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"542.73\",\n    \"value\": \"542.73\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 817,
+   "tokens_out": 357,
+   "latency_ms": 6894
+  },
+  "cached": false
+ }
+}

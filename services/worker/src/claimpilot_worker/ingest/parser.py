@@ -31,6 +31,7 @@ from docling_core.types.doc.items.text import TextItem
 
 from claimpilot_core.schemas.parsing import Block, FracBox, PageInfo, ParsedDocument
 from claimpilot_core.settings import get_settings
+from claimpilot_worker.ingest.hidden_text import hidden_spans, mark_hidden
 
 OCR_LANGS_MAC = ["iso:cs", "iso:de", "iso:it", "iso:en", "iso:pl", "iso:tr"]
 PAGE_NUMBER = re.compile(r"\d+\s*/\s*\d+")
@@ -134,6 +135,11 @@ def blocks_from(doc: DoclingDocument, pages: dict[int, PageInfo]) -> list[Block]
 
 
 def parse(path: Path) -> ParsedDocument:
+    """Blocks of the document, with text a reader cannot see marked as hidden."""
+    return mark_hidden(_parse(path), hidden_spans(path))
+
+
+def _parse(path: Path) -> ParsedDocument:
     settings = get_settings()
     if settings.ocr_engine == "textract":
         from claimpilot_worker.ingest.textract import TextractReader, is_scan

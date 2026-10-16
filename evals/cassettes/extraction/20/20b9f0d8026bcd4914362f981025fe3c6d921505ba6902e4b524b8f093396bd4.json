@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"complainant_name\": {\n    \"page\": 1,\n    \"quote\": \"DENUNCIANTE <PERSON_1>, nato/a il <DOB_1> | DOCUMENTO <ID_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"incident_date\": {\n    \"page\": 1,\n    \"quote\": \"DATA DEL FATTO 28/01/2026 | LUOGO DEL FATTO Rimini\",\n    \"value\": \"28/01/2026\"\n  },\n  \"incident_description\": {\n    \"page\": 1,\n    \"quote\": \"L'incidente è avvenuto in una zona vicino alla spiaggia di Rimini, dove un veicolo era parcheggiato e bloccato. Gli oggetti sono stati rubati da un uomo che ha \",\n    \"value\": \"L'incidente è avvenuto in una zona vicino alla spiaggia di Rimini, dove un veicolo era parcheggiato e bloccato. Gli oggetti sono stati rubati da un uomo che ha forzato la serratura del portellone posteriore. L'individuo ha poi lasciato la scena senza lasciare tracce.\"\n  },\n  \"incident_place\": {\n    \"page\": 1,\n    \"quote\": \"DATA DEL FATTO 28/01/2026 | LUOGO DEL FATTO Rimini\",\n    \"value\": \"Rimini\"\n  },\n  \"police_station\": {\n    \"page\": 1,\n    \"quote\": \"Stazione Carabinieri di Rimini\",\n    \"value\": \"Stazione Carabinieri di Rimini\"\n  },\n  \"report_date\": {\n    \"page\": 1,\n    \"quote\": \"Data: 29/01/2026\",\n    \"value\": \"29/01/2026\"\n  },\n  \"report_number\": {\n    \"page\": 1,\n    \"quote\": \"Protocollo n. 3868/180/26\",\n    \"value\": \"3868/180/26\"\n  },\n  \"stolen_items\": [\n    {\n      \"description\": \"Lettore di e-book\",\n      \"page\": 1,\n      \"quote\": \"1 | Lettore di e-book | 171,31 EUR\",\n      \"value\": \"171,31 EUR\"\n    },\n    {\n      \"description\": \"Giacca invernale\",\n      \"page\": 1,\n      \"quote\": \"2 | Giacca invernale | 129,20 EUR\",\n      \"value\": \"129,20 EUR\"\n    },\n    {\n      \"description\": \"Telefono cellulare\",\n      \"page\": 1,\n      \"quote\": \"3 | Telefono cellulare | 817,49 EUR\",\n      \"value\": \"817,49 EUR\"\n    },\n    {\n      \"description\": \"Abbigliamento (pantaloni, camicie)\",\n      \"page\": 1,\n      \"quote\": \"4 | Abbigliamento (pantaloni, camicie) | 145,74 EUR\",\n      \"value\": \"145,74 EUR\"\n    },\n    {\n      \"description\": \"Articoli da toilette\",\n      \"page\": 1,\n      \"quote\": \"5 | Articoli da toilette | 52,49 EUR\",\n      \"value\": \"52,49 EUR\"\n    }\n  ],\n  \"vehicle_plate\": {\n    \"page\": 1,\n    \"quote\": \"TARGA <PLATE_1>\",\n    \"value\": \"<PLATE_1>\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1816,
+   "tokens_out": 829,
+   "latency_ms": 26359
+  },
+  "cached": false
+ }
+}

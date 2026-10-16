@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Bez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\",\n    \"value\": \"Bez významných predchádzajúcich ochorení. Trvalú medikáciu neužíva.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Podvrtnutie členkového kĺbu | S93.4\",\n    \"value\": \"Podvrtnutie členkového kĺbu\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Vysoká pri Morave, Slovenská republika\",\n    \"value\": \"Slovenská republika\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Ambulancia všeobecného lekára Vašeková\",\n    \"value\": \"Ambulancia všeobecného lekára Vašeková\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Podvrtnutie členkového kĺbu | S93.4\",\n    \"value\": \"S93.4\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"Nižnánská | <DOB_1>\",\n    \"value\": \"<DOB_1>\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PACIENT Zoja | NAR.\",\n    \"value\": \"Zoja\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Lekár: MUDr. <PERSON_2>\",\n    \"value\": \"MUDr. <PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Pohyb byl obmedzený, s výraznou bolestí pri tlake a otokom. Výsledky RTG nepotvrďujú zlomeninu, rentgenový obraz ukazuje zvýšenú jazvu a mierny opuch. Pacient bol podrobený ultrazvuku, ktorý potvrdil zranenie väzov. Látal bol zafixovaný elastickej bandáži a pacient bol predpisovaný analgetiká a protizápalové lieky. Odporúčame odpočinok, chladenie a opakované vyšetrenie po 10 dňoch.\",\n    \"value\": \"Pohyb byl obmedzený, s výraznou bolestí pri tlake a otokom. Výsledky RTG nepotvrďujú zlomeninu, rentgenový obraz ukazuje zvýšenú jazvu a mierny opuch. Pacient bol podrobený ultrazvuku, ktorý potvrdil zranenie väzov. Látal bol zafixovaný elastickej bandáži a pacient bol predpisovaný analgetiká a protizápalové lieky. Odporúčame odpočinok, chladenie a opakované vyšetrenie po 10 dňoch.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"DÁTUM VYŠETRENIA | PREPUSTENIE\\n25. 12. 2025 | -\",\n    \"value\": \"25. 12. 2025\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2039,
+   "tokens_out": 907,
+   "latency_ms": 23207
+  },
+  "cached": false
+ }
+}

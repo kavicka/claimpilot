@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A13.2\"], \"rationale\": \"The claim involves theft of luggage from a parked vehicle, for which the policy provides coverage under A7.1 (luggage insurance covering theft). The police report confirms the incident and provides the required documentation (police protocol), fulfilling the requirements in A13.2. Clause A7.5 does not apply because the theft occurred in a private vehicle (not a public place), and the policy includes coverage for extreme sports, which is not relevant here.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1141,
+   "tokens_out": 123,
+   "latency_ms": 10964
+  },
+  "cached": false
+ }
+}

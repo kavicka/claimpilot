@@ -128,6 +128,8 @@ class DocBlock(Base):
     text_redacted: Mapped[str | None] = mapped_column(Text)
     bbox: Mapped[dict[str, Any]] = mapped_column(JSONB)
     ocr: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Why a reader cannot see this text (ingest/hidden_text.py); such blocks never reach a model.
+    hidden: Mapped[str | None] = mapped_column(String(16))
 
 
 class ExtractedField(TimestampMixin, Base):

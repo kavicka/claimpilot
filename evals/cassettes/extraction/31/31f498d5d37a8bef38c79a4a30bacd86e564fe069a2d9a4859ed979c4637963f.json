@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"# | Leistung | Betrag (Fr.)\",\n    \"value\": \"Fr.\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": \"Rechnung Nr. RE-2026-91573\",\n    \"value\": \"RE-2026-91573\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Datum: 10.08.2026\",\n    \"value\": \"10.08.2026\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"107.07\",\n      \"description\": \"Ambulante Untersuchung\",\n      \"page\": 1,\n      \"quote\": \"1 | Ambulante Untersuchung | 107.07\"\n    },\n    {\n      \"amount\": \"65.87\",\n      \"description\": \"Infusionstherapie\",\n      \"page\": 1,\n      \"quote\": \"2 | Infusionstherapie | 65.87\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN | BEHANDLUNGSDATUM\\n<PERSON_1>, geb. <DOB_1> | 10.08.2026\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": \"Luzern, Schweiz\",\n    \"value\": \"Schweiz\"\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": \"Medizinisches Zentrum Stalder\",\n    \"value\": \"Medizinisches Zentrum Stalder\"\n  },\n  \"service_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN | BEHANDLUNGSDATUM\\n<PERSON_1>, geb. <DOB_1> | 10.08.2026\",\n    \"value\": \"10.08.2026\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Gesamtbetrag | 172.94 Fr.\",\n    \"value\": \"172.94\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1634,
+   "tokens_out": 534,
+   "latency_ms": 26022
+  },
+  "cached": false
+ }
+}

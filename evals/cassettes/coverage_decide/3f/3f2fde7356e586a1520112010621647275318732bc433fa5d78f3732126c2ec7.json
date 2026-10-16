@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment (fracture of the distal radius) resulting from an accident during a ski trip. Clause A4.1 covers medical expenses abroad due to an acute illness or injury during the trip. There is no indication of pre-existing conditions, planned treatment, or intentional injury, and the policy explicitly includes extreme sports (as stated in the product description). Therefore, the claim is covered under A4.1.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1241,
+   "tokens_out": 111,
+   "latency_ms": 15196
+  },
+  "cached": false
+ }
+}

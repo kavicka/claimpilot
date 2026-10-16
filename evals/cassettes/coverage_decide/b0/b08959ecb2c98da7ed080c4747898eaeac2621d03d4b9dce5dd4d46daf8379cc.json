@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment (fracture of the distal radius) resulting from an accident during a tandem paragliding flight. Clause A4.1 covers medical expenses incurred due to an acute illness or injury during the trip. There is no indication that the exclusion in A11.3 applies, as the policy does not specify that extreme sports are excluded in this product (the exclusion only applies if the policy explicitly includes extreme sports, which is not the case here).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1213,
+   "tokens_out": 121,
+   "latency_ms": 17438
+  },
+  "cached": false
+ }
+}

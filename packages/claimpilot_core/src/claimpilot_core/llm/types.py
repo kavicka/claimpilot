@@ -30,6 +30,8 @@ class ModelSpec(BaseModel):
     effort: str | None = None
     # Claude only: the model that answers when this one declines (stop_reason "refusal").
     fallback_model: str | None = None
+    # Repeat n of a variance run (adversarial repeats): sampled, own seed, own cassette.
+    sample: int | None = None
 
     @property
     def key(self) -> str:

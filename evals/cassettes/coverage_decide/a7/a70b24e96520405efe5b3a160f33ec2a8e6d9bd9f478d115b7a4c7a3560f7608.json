@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A7.4\"], \"rationale\": \"The claim involves the theft of clothing (trousers, shorts) from a vehicle in Rimini, reported to the police. Clause A7.1 covers theft of luggage, and clause A7.4 requires a police report for theft, which has been provided. There is no indication that the exclusion clauses (e.g., A7.5, A11.3) apply, as the clothing was not left unattended in a public place, and the policy includes coverage for extreme sports (though not relevant here).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1036,
+   "tokens_out": 136,
+   "latency_ms": 10977
+  },
+  "cached": false
+ }
+}

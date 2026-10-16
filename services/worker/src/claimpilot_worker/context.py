@@ -14,7 +14,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from claimpilot_core.db.models import DocBlock, Document, ExtractedField
 from claimpilot_core.domain import Coverage, DocType, ExtractionMethod, Product
+from claimpilot_core.schemas.parsing import Block, FracBox, PageInfo, ParsedDocument
 from claimpilot_worker.extraction.extract import Extraction, Field
+from claimpilot_worker.ingest.injection_signals import Signal, document_signals
 from claimpilot_worker.routing.facts import DocInput, History
 
 
@@ -71,16 +73,41 @@ async def load_docs(session: AsyncSession, claim_id: uuid.UUID) -> list[StoredDo
                 select(DocBlock).where(DocBlock.document_id == d.id).order_by(DocBlock.seq)
             )
         ).all()
-        text = "\n".join(b.text_redacted or "" for b in blocks)
+        text = "\n".join(b.text_redacted or "" for b in blocks if not b.hidden)
         out.append(
             StoredDoc(
                 d,
                 DocInput(
-                    DocType(d.doc_type) if d.doc_type else DocType.CLAIM_FORM, ex, d.sha256, text
+                    DocType(d.doc_type) if d.doc_type else DocType.CLAIM_FORM,
+                    ex,
+                    d.sha256,
+                    text,
+                    signals_of(list(blocks)),
                 ),
             )
         )
     return out
+
+
+def signals_of(rows: list[DocBlock]) -> list[Signal]:
+    """Prompt-injection signals of a stored document, on its redacted text."""
+    parsed = ParsedDocument(
+        sha256="",
+        mime_type="",
+        pages=[PageInfo(page=p, width=1, height=1) for p in sorted({r.page for r in rows})],
+        blocks=[
+            Block(
+                page=r.page,
+                seq=r.seq,
+                kind=r.kind,
+                text=r.text_redacted or "",
+                bbox=FracBox(**r.bbox),
+                hidden=r.hidden,
+            )
+            for r in rows
+        ],
+    )
+    return document_signals(parsed, {})
 
 
 async def history_for(session: AsyncSession, claim_id: uuid.UUID) -> History:

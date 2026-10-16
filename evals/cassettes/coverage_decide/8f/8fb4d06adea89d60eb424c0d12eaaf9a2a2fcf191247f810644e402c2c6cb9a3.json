@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A8.1\"], \"rationale\": \"The claim is for essential purchases due to a delayed luggage arrival, which is explicitly covered under clause A8.1. The evidence shows the luggage was delayed by 18 hours, which exceeds the 12-hour exclusion in A8.3. There is no indication of any exclusions applying (e.g., intentional actions, alcohol, extreme sports, or war/terrorism).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 961,
+   "tokens_out": 101,
+   "latency_ms": 11133
+  },
+  "cached": false
+ }
+}

@@ -133,7 +133,7 @@
   {
    "scenario_id": "S42-046",
    "archetype": "luggage_lost",
-   "expected_queue": "standard",
+   "expected_queue": "senior",
    "expected_status": "IN_REVIEW",
    "files": [
     {

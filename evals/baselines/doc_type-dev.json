@@ -1945,18 +1945,18 @@
   }
  ],
  "meta": {
-  "created": "20261015T214950Z",
+  "created": "20261015T235628Z",
   "git": {
-   "sha": "bd6a8ac",
+   "sha": "4f6ae4b",
    "dirty": true
   },
-  "dataset": "4aee4de982d2",
+  "dataset": "6bd4025701dc",
   "seed": 42,
   "cassette_mode": "auto",
   "overrides": {},
   "options": {},
   "prompts": {
-   "doc_type/classify": "doc_type/classify@1+1ae7e9f6"
+   "doc_type/classify": "doc_type/classify@2+c2ea9f28"
   },
   "models": [
    "ollama:qwen3:4b-instruct"
@@ -1965,13 +1965,13 @@
  },
  "ops": {
   "llm_calls": 1,
-  "cached_calls": 1,
-  "tokens_in": 306,
-  "tokens_out": 275,
-  "tokens_per_item": 3.9,
-  "latency_p50_ms": 0,
-  "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 700,
+  "cached_calls": 0,
+  "tokens_in": 340,
+  "tokens_out": 12,
+  "tokens_per_item": 2.4,
+  "latency_p50_ms": 2661,
+  "latency_p95_ms": 2661,
+  "worker_peak_rss_mb": 732,
   "models": [
    "ollama:qwen3:4b-instruct"
   ]

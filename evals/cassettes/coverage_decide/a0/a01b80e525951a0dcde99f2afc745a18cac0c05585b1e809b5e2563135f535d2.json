@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A8.1\"], \"rationale\": \"The claim is for the purchase of hygiene items and clothing due to a 20-hour delay in luggage arrival, which falls under the coverage for delayed luggage as defined in clause A8.1. The delay exceeds the 12-hour exclusion in A8.3, and there is no indication of any other exclusions applying (e.g., intentional acts, alcohol, extreme sports, etc.).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 931,
+   "tokens_out": 104,
+   "latency_ms": 11448
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves treatment for an acute injury (ankle sprain) that occurred during the trip. Clause A4.1 covers 'primerané a nevyhnutné náklady na ambulantné ošetrenie... ak boli vynaložené v dôsledku akútneho ochorenia alebo úrazu počas cesty.' The evidence confirms the injury occurred during the trip and required medical treatment, which is covered under this clause. No exclusions apply, as the injury is not related to a pre-existing condition, alcohol, or extreme sports (the policy includes extreme sports, so A11.3 does not apply here).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1161,
+   "tokens_out": 168,
+   "latency_ms": 16952
+  },
+  "cached": false
+ }
+}

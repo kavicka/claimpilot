@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"# | Prestazione | Importo (EUR)\",\n    \"value\": \"EUR\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": \"Fattura n. FT-2026-32029\",\n    \"value\": \"FT-2026-32029\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Data: 08/02/2026\",\n    \"value\": \"08/02/2026\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"209,40\",\n      \"description\": \"Pronto soccorso\",\n      \"page\": 1,\n      \"quote\": \"1 | Pronto soccorso | 209,40\"\n    },\n    {\n      \"amount\": \"138,27\",\n      \"description\": \"Radiografia\",\n      \"page\": 1,\n      \"quote\": \"2 | Radiografia | 138,27\"\n    },\n    {\n      \"amount\": \"332,55\",\n      \"description\": \"TAC\",\n      \"page\": 1,\n      \"quote\": \"3 | TAC | 332,55\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PAZIENTE <PERSON_1>, nato/a il <DOB_1> | PRESTAZIONE\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": \"Rimini, Italia\",\n    \"value\": \"Italia\"\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": \"Poliambulatorio Donati\",\n    \"value\": \"Poliambulatorio Donati\"\n  },\n  \"service_date\": {\n    \"page\": 1,\n    \"quote\": \"Data: 08/02/2026\",\n    \"value\": \"08/02/2026\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Totale da pagare | 680,22 EUR\",\n    \"value\": \"680,22\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 4428,
+   "tokens_out": 530,
+   "latency_ms": 34173
+  },
+  "cached": false
+ }
+}

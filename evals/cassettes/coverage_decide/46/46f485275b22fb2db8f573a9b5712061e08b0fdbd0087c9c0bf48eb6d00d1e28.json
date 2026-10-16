@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A6.1\", \"A6.2\"], \"rationale\": \"The evidence confirms a fracture of the distal radius caused by an accident during a tandem paragliding flight, which is covered under the accident coverage section. There is no indication that the event falls under any exclusion clause (e.g., extreme sports, alcohol, intentional injury, etc.). Clause A6.1 grants coverage for a one-time payment for a fracture confirmed by a medical report, and A6.2 clarifies that the payment is made once per incident, regardless of the number of fractures.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1011,
+   "tokens_out": 132,
+   "latency_ms": 11738
+  },
+  "cached": false
+ }
+}

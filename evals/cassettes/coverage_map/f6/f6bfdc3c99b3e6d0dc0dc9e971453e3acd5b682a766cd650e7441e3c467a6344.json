@@ -1,0 +1,19 @@
+{
+ "step": "coverage_map",
+ "prompt_id": "coverage/map",
+ "prompt_hash": "d9940641171ec98ce705f197f5ed621efd4f9fec6c29ead6f1b8b4c51d43b7e2",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"items\": [{\"ref\": \"I1\", \"coverage\": \"delay\", \"category\": \"essentials\"}, {\"ref\": \"I2\", \"coverage\": \"delay\", \"category\": \"essentials\"}]}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 431,
+   "tokens_out": 46,
+   "latency_ms": 11211
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves treatment for an acute dental abscess, which is covered under clause A4.1. The evidence indicates that the treatment was necessary due to an acute condition (periapical abscess) and was provided during the trip. There is no indication of any exclusions applying (e.g., no evidence of pre-existing conditions, no mention of alcohol or extreme sports, and the treatment was not planned in advance).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1196,
+   "tokens_out": 109,
+   "latency_ms": 14833
+  },
+  "cached": false
+ }
+}

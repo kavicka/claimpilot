@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "3db8b7cb28a02898f39b542c9270aab147f6673627189ce3857f04cc4bbc7e43",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{ \"queue\": \"standard\", \"rationale\": \"The client reported a stolen luggage from a parked car in Rimini, Italy, and provided a police report. There is no indication of fraud, exclusion, or unusual circumstances.\" }",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 365,
+   "tokens_out": 49,
+   "latency_ms": 7379
+  },
+  "cached": false
+ }
+}

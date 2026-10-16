@@ -18,7 +18,12 @@ def parsed(path: Path, sha: str | None = None) -> ParsedDocument:
     sha = sha or hashlib.sha256(path.read_bytes()).hexdigest()
     target = CACHE_DIR / f"{sha}.json"
     if target.exists():
-        return ParsedDocument.model_validate_json(target.read_text("utf-8"))
+        doc = ParsedDocument.model_validate_json(target.read_text("utf-8"))
+        if path.exists():  # entries from before hidden-text marking; marking twice is a no-op
+            from claimpilot_worker.ingest.hidden_text import hidden_spans, mark_hidden
+
+            doc = mark_hidden(doc, hidden_spans(path))
+        return doc
     from claimpilot_worker.ingest.parser import parse  # heavy import only when needed
 
     doc = parse(path)

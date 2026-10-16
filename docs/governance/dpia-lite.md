@@ -26,7 +26,7 @@ or explicit consent in the claim form, as the insurer's existing claims process 
 | Personal data sent to an external model | Redaction at one point (worker), leakage test on every eval run, the vision step refuses non-local providers | `pii` suite: 0 leaked values; `leaked_values_in_payloads` = 0 in every suite |
 | Wrong decision against the client | No automated decisions: a handler approves every claim; payouts computed by tested code | Human oversight doc; payout engine property tests |
 | Hallucinated values | Every value carries a quote matched to the page; unmatched values are flagged and capped in confidence | Extraction suite: grounded share, calibration |
-| Prompt injection through documents | Documents delimited as data, extraction calls have no tools, injected documents in the eval set | `injection` suite: decisions changed = 0 |
+| Prompt injection through documents | Hidden text (white, tiny, off-page, invisible, covered) never reaches a model; a detector sends any document that talks to the AI to a senior handler (R10); document text is delimited and its markup made inert; code guards can only make a queue or a verdict stricter; reading calls have no tools (ADR-012) | `injection` suite: decisions changed = 0, detector false positives = 0; `adversarial` suite: 34 attacks, 0 succeeded |
 | Data kept too long | Retention job erases finished claims after the retention period; erasure on request | retention-erasure.md |
 | Logs or traces holding PII | Vault values scrubbed from logs; database errors cut to their first line; traces hold tokens | Unit tests for both |
 | Access by unauthorised staff | Login with roles; every action in the audit log | api tests |

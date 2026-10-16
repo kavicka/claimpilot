@@ -1,0 +1,19 @@
+{
+ "step": "doc_type",
+ "prompt_id": "doc_type/classify",
+ "prompt_hash": "c2ea9f282f85c2a0722741cc5c6aa0037f4442f108761703ece4ce429ca32705",
+ "model": "ollama:qwen3:4b-instruct",
+ "response": {
+  "text": "{ \"doc_type\": \"pharmacy_receipt\" }",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:4b-instruct",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 340,
+   "tokens_out": 12,
+   "latency_ms": 2661
+  },
+  "cached": false
+ }
+}

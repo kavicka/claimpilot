@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A2.3\", \"A4.1\"], \"rationale\": \"The evidence indicates that the claimant suffered from acute gastroenteritis, which is defined as an acute illness in clause A2.3. Clause A4.1 covers the costs of medication prescribed by a doctor as part of treatment for an acute illness during a trip. The claimant received ondansetron for nausea, which is a medication prescribed by a doctor, and this is therefore covered under the policy.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1186,
+   "tokens_out": 114,
+   "latency_ms": 10477
+  },
+  "cached": false
+ }
+}

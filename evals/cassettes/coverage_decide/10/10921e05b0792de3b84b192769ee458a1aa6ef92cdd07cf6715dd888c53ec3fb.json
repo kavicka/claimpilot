@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A13.2\"], \"rationale\": \"The claim involves the theft of a winter coat from a parked car, which was reported to the police. Clause A7.1 covers theft of luggage, and the police report (A13.2) confirms the theft, fulfilling the required documentation. Clause A7.5 does not apply because the theft occurred in a vehicle, but the claim is still covered under A7.1 as it pertains to theft of luggage. Clause A11.3 does not apply because the policy explicitly includes extreme sports, and this is not related to an extreme sport activity.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1141,
+   "tokens_out": 146,
+   "latency_ms": 11946
+  },
+  "cached": false
+ }
+}

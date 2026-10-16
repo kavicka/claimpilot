@@ -681,7 +681,7 @@
   {
    "scenario_id": "S42-030",
    "archetype": "medical_standard",
-   "expected_queue": "standard",
+   "expected_queue": "senior",
    "expected_status": "IN_REVIEW",
    "files": [
     {

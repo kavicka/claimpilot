@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for an ankle sprain that occurred during a trip in a natural environment. Clause A4.1 covers medical expenses abroad for acute illness or injury during the trip, which applies here. There is no indication of pre-existing conditions, planned treatment, or exclusionary factors such as intentional injury, alcohol, or extreme sports.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1183,
+   "tokens_out": 93,
+   "latency_ms": 13460
+  },
+  "cached": false
+ }
+}

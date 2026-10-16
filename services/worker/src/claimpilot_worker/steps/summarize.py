@@ -12,6 +12,7 @@ from claimpilot_core.policy import load_products
 from claimpilot_core.settings import repo_root
 from claimpilot_worker.context import first, load_docs, to_date
 from claimpilot_worker.pipeline import register
+from claimpilot_worker.routing.rules import RuleHit, for_model
 from claimpilot_worker.summaries.write import DecisionFacts, write_all
 
 
@@ -61,7 +62,7 @@ async def summarize(session, claim: Claim, ctx: dict[str, Any]) -> S:
         total_payout=Decimal(a.get("total_payout_eur") or 0),
         deductible=Decimal(a.get("deductible_eur") or 0),
         red_flags=[
-            f"{h['rule']}: {h['detail']}"
+            for_model(RuleHit(h["rule"], h["detail"]))
             for h in (routing.rule_hits if routing else [])
             if h["rule"] != "R8"
         ],

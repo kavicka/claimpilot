@@ -14,6 +14,7 @@ from claimpilot_evals.dataset import GtClaim
 from claimpilot_evals.suites.common import RedactedClaim, RunContext, redact_claim
 from claimpilot_worker.extraction.extract import extract_document, extract_document_vision
 from claimpilot_worker.ingest.doctype import classify
+from claimpilot_worker.ingest.injection_signals import document_signals
 from claimpilot_worker.ingest.language import detect_language
 from claimpilot_worker.routing.facts import DocInput
 
@@ -56,7 +57,8 @@ async def load_claim(claim: GtClaim, ctx: RunContext) -> ClaimCtx:
                 mapping=mapping,
                 exclude_example=doc.gt.item_id,
             )
-        docs.append(DocInput(doc_type, ex, doc.gt.data["sha256"], doc.text(redacted=True)))
+        signals = document_signals(doc.parsed, doc.redacted)
+        docs.append(DocInput(doc_type, ex, doc.gt.data["sha256"], doc.text(redacted=True), signals))
     return ClaimCtx(claim, rc, docs, mapping)
 
 

@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\",\n    \"value\": \"Keine relevanten Vorerkrankungen. Keine Dauermedikation.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Mittelohrentzündung\",\n    \"value\": \"Mittelohrentzündung\"\n  },\n  \"discharge_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Luzern, Schweiz\",\n    \"value\": \"Schweiz\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Medizinisches Zentrum Stalder\",\n    \"value\": \"Medizinisches Zentrum Stalder\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Mittelohrentzündung\",\n    \"value\": \"H66.9\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN <PERSON_1> | GEB. <DOB_1>\",\n    \"value\": \"<DOB_1>\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT/IN <PERSON_1> | GEB. <DOB_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Behandelnde/r Ärztin/Arzt: <PERSON_2> Unterschrift, Stempel\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Bei der Untersuchung wurden rechtsseitig begrenzte Schmerzen beim Drücken am äußeren Ohrläppchen sowie ein leichtes Überdruckgefühl im Mittelohr festgestellt. Die Trommemembran zeigte eine leichte Rötung und Verdickung, keine Perforation. Die Hörleistungen waren nicht eingeschränkt. Ein Ohrenschmalzabstrich ergab keine bakterielle Besiedlung. Die Diagnose Otitis media wurde bestätigt. Die Patientin erhielt eine orale Antibiotikatherapie mit Amoxicillin und eine antipyrinhaltige Schmerzmitteltherapie. Nach 48 Stunden war eine deutliche Besserung der Beschwerden zu verzeichnen. Die Weiterbehandlung erfolgt ambulant mit Kontrolle in 7 Tagen.\",\n    \"value\": \"Bei der Untersuchung wurden rechtsseitig begrenzte Schmerzen beim Drücken am äußeren Ohrläppchen sowie ein leichtes Überdruckgefühl im Mittelohr festgestellt. Die Trommemembran zeigte eine leichte Rötung und Verdickung, keine Perforation. Die Hörleistungen waren nicht eingeschränkt. Ein Ohrenschmalzabstrich ergab keine bakterielle Besiedlung. Die Diagnose Otitis media wurde bestätigt. Die Patientin erhielt eine orale Antibiotikatherapie mit Amoxicillin und eine antipyrinhaltige Schmerzmitteltherapie. Nach 48 Stunden war eine deutliche Besserung der Beschwerden zu verzeichnen. Die Weiterbehandlung erfolgt ambulant mit Kontrolle in 7 Tagen.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"UNTERSUCHUNG / AUFNAHME 10.08.2026 | ENTLASSUNG -\",\n    \"value\": \"10.08.2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2584,
+   "tokens_out": 880,
+   "latency_ms": 24107
+  },
+  "cached": false
+ }
+}

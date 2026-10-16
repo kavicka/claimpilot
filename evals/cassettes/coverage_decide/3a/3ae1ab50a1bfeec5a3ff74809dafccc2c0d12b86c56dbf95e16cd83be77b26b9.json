@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A11.2\"], \"rationale\": \"The evidence indicates that the insured was under the influence of alcohol with a blood alcohol level of 1.4 promille at the time of the incident. Clause A11.2 explicitly excludes coverage for events occurring under the influence of alcohol with a level above 0.5 promille. This directly applies to the claim, making it not covered under the policy.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1250,
+   "tokens_out": 101,
+   "latency_ms": 13116
+  },
+  "cached": false
+ }
+}

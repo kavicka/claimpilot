@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "3db8b7cb28a02898f39b542c9270aab147f6673627189ce3857f04cc4bbc7e43",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{ \"queue\": \"standard\", \"rationale\": \"The claim is for a routine medical treatment of acute upper respiratory infection, with no signs of exclusion, fraud, or unusual circumstances. The medical report supports the client's description and is consistent with the diagnosis and treatment provided.\" }",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 622,
+   "tokens_out": 58,
+   "latency_ms": 12514
+  },
+  "cached": false
+ }
+}

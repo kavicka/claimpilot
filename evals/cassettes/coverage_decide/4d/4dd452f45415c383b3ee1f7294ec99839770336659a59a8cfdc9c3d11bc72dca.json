@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for pneumonia, which is an acute illness occurring during the trip. Clause A4.1 covers medical treatment, including hospitalization, for acute illnesses or injuries during the trip. There is no indication that the illness was pre-existing (clause A5.1 would apply if that were the case), nor is there any mention of alcohol, extreme sports, or other exclusions.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1214,
+   "tokens_out": 104,
+   "latency_ms": 17535
+  },
+  "cached": false
+ }
+}

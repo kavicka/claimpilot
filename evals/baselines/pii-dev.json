@@ -17,14 +17,19 @@
    "num": 46,
    "den": 46
   },
+  "recall_birth_dates": {
+   "value": 1.0,
+   "num": 60,
+   "den": 60
+  },
   "leaked_values": {
    "value": 0.0,
    "num": 0,
    "den": 0
   },
   "over_redactions": {
-   "value": 1.0,
-   "num": 1,
+   "value": 0.0,
+   "num": 0,
    "den": 0
   }
  },
@@ -160,6 +165,19 @@
    }
   },
   {
+   "id": "S42-001/D3/BIRTH_DATE/29/11/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
    "id": "S42-001/D4/PERSON/Bruno Paška",
    "ok": true,
    "expected": "redacted",
@@ -169,6 +187,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D4/BIRTH_DATE/29/11/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -277,6 +308,19 @@
    }
   },
   {
+   "id": "S42-002/D2/BIRTH_DATE/17.08.1965",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-002/D3/PERSON/Gabriela Salajová",
    "ok": true,
    "expected": "redacted",
@@ -286,6 +330,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-002/D3/BIRTH_DATE/17.08.1965",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": true
    }
   },
@@ -394,6 +451,19 @@
    }
   },
   {
+   "id": "S42-003/D2/BIRTH_DATE/28. 9. 1972",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-003/D3/PERSON/Igor Opluštil",
    "ok": true,
    "expected": "redacted",
@@ -403,6 +473,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-003/D3/BIRTH_DATE/28. 9. 1972",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -537,6 +620,19 @@
    }
   },
   {
+   "id": "S42-004/D3/BIRTH_DATE/05/14/1995",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-004/D4/PERSON/Vojtech Rys",
    "ok": true,
    "expected": "redacted",
@@ -546,6 +642,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D4/BIRTH_DATE/05/14/1995",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -680,6 +789,19 @@
    }
   },
   {
+   "id": "S42-005/D3/BIRTH_DATE/16/09/1959",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-005/D4/PERSON/Servác Kocák",
    "ok": true,
    "expected": "redacted",
@@ -689,6 +811,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D4/BIRTH_DATE/16/09/1959",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -810,6 +945,19 @@
    }
   },
   {
+   "id": "S42-006/D3/BIRTH_DATE/23. 2. 1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
    "id": "S42-007/D1/PERSON/Otília Havranová",
    "ok": true,
    "expected": "redacted",
@@ -914,6 +1062,19 @@
    }
   },
   {
+   "id": "S42-007/D2/BIRTH_DATE/02/12/1997",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-007/D3/PERSON/Otília Havranová",
    "ok": true,
    "expected": "redacted",
@@ -923,6 +1084,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D3/BIRTH_DATE/02/12/1997",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -1057,6 +1231,19 @@
    }
   },
   {
+   "id": "S42-008/D3/BIRTH_DATE/19/07/1956",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
    "id": "S42-008/D4/PERSON/Irena Machnáčová",
    "ok": true,
    "expected": "redacted",
@@ -1066,6 +1253,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D4/BIRTH_DATE/19/07/1956",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -1200,6 +1400,19 @@
    }
   },
   {
+   "id": "S42-009/D3/BIRTH_DATE/01.08.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-009/D4/PERSON/Miloslav Tomečko",
    "ok": true,
    "expected": "redacted",
@@ -1209,6 +1422,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D4/BIRTH_DATE/01.08.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -1486,6 +1712,19 @@
    }
   },
   {
+   "id": "S42-011/D3/BIRTH_DATE/27.10.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-011/D4/PERSON/Metod Jakubčík",
    "ok": true,
    "expected": "redacted",
@@ -1495,6 +1734,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D4/BIRTH_DATE/27.10.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -1590,6 +1842,19 @@
    }
   },
   {
+   "id": "S42-012/D2/BIRTH_DATE/08/08/1993",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-012/D3/PERSON/Maroš Šimek",
    "ok": true,
    "expected": "redacted",
@@ -1599,6 +1864,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D3/BIRTH_DATE/08/08/1993",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -1707,6 +1985,19 @@
    }
   },
   {
+   "id": "S42-013/D2/BIRTH_DATE/27.11.1974",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-013/D3/PERSON/Helena Šoltýsová",
    "ok": true,
    "expected": "redacted",
@@ -1716,6 +2007,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D3/BIRTH_DATE/27.11.1974",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -1837,6 +2141,19 @@
    }
   },
   {
+   "id": "S42-014/D3/BIRTH_DATE/05.11.2006.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-014/D4/PERSON/Nora Tomanová",
    "ok": true,
    "expected": "redacted",
@@ -1846,6 +2163,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D4/BIRTH_DATE/05.11.2006.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -1980,6 +2310,19 @@
    }
   },
   {
+   "id": "S42-015/D3/BIRTH_DATE/09.04.1991.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-015/D4/PERSON/Arnold Zúbek",
    "ok": true,
    "expected": "redacted",
@@ -1989,6 +2332,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-015/D4/BIRTH_DATE/09.04.1991.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": true
    }
   },
@@ -2223,6 +2579,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D3/BIRTH_DATE/2. 11. 1984",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": true
    }
   },
@@ -2474,6 +2843,19 @@
    }
   },
   {
+   "id": "S42-019/D2/BIRTH_DATE/25.10.1992.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-019/D3/PERSON/Emília Králová",
    "ok": true,
    "expected": "redacted",
@@ -2483,6 +2865,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-019/D3/BIRTH_DATE/25.10.1992.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -2617,6 +3012,19 @@
    }
   },
   {
+   "id": "S42-020/D3/BIRTH_DATE/07/01/1972",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-020/D4/PERSON/Zdenka Hlaváčová",
    "ok": true,
    "expected": "redacted",
@@ -2626,6 +3034,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D4/BIRTH_DATE/07/01/1972",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": true
    }
   },
@@ -2760,6 +3181,19 @@
    }
   },
   {
+   "id": "S42-021/D3/BIRTH_DATE/01.11.1988",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
    "id": "S42-021/D4/PERSON/Nataša Pavúková",
    "ok": true,
    "expected": "redacted",
@@ -2769,6 +3203,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-021/D4/BIRTH_DATE/01.11.1988",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -3033,6 +3480,19 @@
    }
   },
   {
+   "id": "S42-023/D4/BIRTH_DATE/11/10/1982",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-024/D1/PERSON/Zoja Nižnánská",
    "ok": true,
    "expected": "redacted",
@@ -3146,6 +3606,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-024/D4/BIRTH_DATE/29. 3. 1996",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -3289,6 +3762,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D4/BIRTH_DATE/3. 4. 1980",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -3566,6 +4052,19 @@
    }
   },
   {
+   "id": "S42-027/D3/BIRTH_DATE/22/02/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-027/D4/PERSON/Fridrich Kubička",
    "ok": true,
    "expected": "redacted",
@@ -3575,6 +4074,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D4/BIRTH_DATE/22/02/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -3735,6 +4247,19 @@
    }
   },
   {
+   "id": "S42-028/D3/BIRTH_DATE/16/05/1980",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-028/D3/LICENCE_PLATE/NR679FF",
    "ok": true,
    "expected": "redacted",
@@ -3878,6 +4403,19 @@
    }
   },
   {
+   "id": "S42-029/D3/BIRTH_DATE/31/03/1986",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
    "id": "S42-029/D4/PERSON/Bruno Veterník",
    "ok": true,
    "expected": "redacted",
@@ -3891,15 +4429,16 @@
    }
   },
   {
-   "id": "S42-030/over/<IBAN_1>",
+   "id": "S42-029/D4/BIRTH_DATE/31/03/1986",
    "ok": true,
-   "expected": null,
-   "got": "SKO3 6500 0000 0053 3851 1991",
+   "expected": "redacted",
+   "got": "redacted",
    "tags": [
-    "over_redaction"
+    "recall_birth_dates"
    ],
    "detail": {
-    "entity": "IBAN"
+    "entity": "BIRTH_DATE",
+    "scan": true
    }
   },
   {
@@ -4033,6 +4572,19 @@
    }
   },
   {
+   "id": "S42-030/D3/BIRTH_DATE/13/07/1963",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-030/D4/PERSON/Sofia Rubíková",
    "ok": true,
    "expected": "redacted",
@@ -4042,6 +4594,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D4/BIRTH_DATE/13/07/1963",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": true
    }
   },
@@ -4176,6 +4741,19 @@
    }
   },
   {
+   "id": "S42-031/D3/BIRTH_DATE/23.10.1991.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-031/D4/PERSON/Jaromíra Pavková",
    "ok": true,
    "expected": "redacted",
@@ -4185,6 +4763,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-031/D4/BIRTH_DATE/23.10.1991.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -4315,6 +4906,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-032/D3/BIRTH_DATE/26.05.1976",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -4566,6 +5170,19 @@
    }
   },
   {
+   "id": "S42-034/D3/BIRTH_DATE/1. 9. 1977",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-035/D1/PERSON/Vincent Cibulka",
    "ok": true,
    "expected": "redacted",
@@ -4696,6 +5313,19 @@
    }
   },
   {
+   "id": "S42-035/D3/BIRTH_DATE/27.02.1956",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
    "id": "S42-035/D4/PERSON/Vincent Cibulka",
    "ok": true,
    "expected": "redacted",
@@ -4705,6 +5335,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-035/D4/BIRTH_DATE/27.02.1956",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -4813,6 +5456,19 @@
    }
   },
   {
+   "id": "S42-036/D2/BIRTH_DATE/04.11.1977.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-036/D3/PERSON/Izabela Fabiánová",
    "ok": true,
    "expected": "redacted",
@@ -4822,6 +5478,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-036/D3/BIRTH_DATE/04.11.1977.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": true
    }
   },
@@ -4930,6 +5599,19 @@
    }
   },
   {
+   "id": "S42-037/D2/BIRTH_DATE/27.10.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-037/D3/PERSON/Metod Jakubčík",
    "ok": true,
    "expected": "redacted",
@@ -4939,6 +5621,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-037/D3/BIRTH_DATE/27.10.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -5047,6 +5742,19 @@
    }
   },
   {
+   "id": "S42-038/D2/BIRTH_DATE/22/02/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-038/D3/PERSON/Fridrich Kubička",
    "ok": true,
    "expected": "redacted",
@@ -5056,6 +5764,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-038/D3/BIRTH_DATE/22/02/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": false
    }
   },
@@ -5164,6 +5885,19 @@
    }
   },
   {
+   "id": "S42-039/D2/BIRTH_DATE/05/14/1995",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-039/D3/PERSON/Vojtech Rys",
    "ok": true,
    "expected": "redacted",
@@ -5173,6 +5907,19 @@
    ],
    "detail": {
     "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-039/D3/BIRTH_DATE/05/14/1995",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
     "scan": true
    }
   },
@@ -5268,6 +6015,19 @@
    }
   },
   {
+   "id": "S42-040/D2/BIRTH_DATE/05.11.2006.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
    "id": "S42-040/D3/PERSON/Nora Tomanová",
    "ok": true,
    "expected": "redacted",
@@ -5279,15 +6039,28 @@
     "entity": "PERSON",
     "scan": true
    }
+  },
+  {
+   "id": "S42-040/D3/BIRTH_DATE/05.11.2006.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
   }
  ],
  "meta": {
-  "created": "20261015T215030Z",
+  "created": "20261015T235708Z",
   "git": {
-   "sha": "bd6a8ac",
+   "sha": "4f6ae4b",
    "dirty": true
   },
-  "dataset": "4aee4de982d2",
+  "dataset": "6bd4025701dc",
   "seed": 42,
   "cassette_mode": "auto",
   "overrides": {},
@@ -5304,12 +6077,13 @@
   "tokens_per_item": 0.0,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 704,
+  "worker_peak_rss_mb": 736,
   "models": []
  },
  "notes": [
-  "5 ground-truth values were not in the parsed text (OCR, layout); not scored",
+  "8 ground-truth values were not in the parsed text (OCR, layout); not scored",
   "ADDRESS: 46/46 redacted",
+  "BIRTH_DATE: 60/60 redacted",
   "BIRTH_NUMBER: 65/65 redacted",
   "EMAIL: 40/40 redacted",
   "IBAN: 40/40 redacted",

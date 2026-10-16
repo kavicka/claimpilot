@@ -31,6 +31,7 @@ package = false
 
 [tool.uv.workspace]
 members = ["packages/*", "services/*", "data/generator", "evals"]
+exclude = ["packages/claimpilot-ui"]  # a pnpm package, not a Python one
 
 [[tool.uv.index]]
 name = "pytorch-cpu"

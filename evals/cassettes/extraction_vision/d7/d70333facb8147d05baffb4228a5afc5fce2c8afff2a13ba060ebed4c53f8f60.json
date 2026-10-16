@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP52213778\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP52213778\", \"page\": 1}, \"insured_name\": {\"value\": \"Zoja Nižnánská\", \"quote\": \"MENO A PRIEZVISKO Zoja Nižnánská\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"965329/2891\", \"quote\": \"RODNÉ ČÍSLO 965329/2891\", \"page\": 1}, \"insured_address\": {\"value\": \"Žihiľavová 90, 828 64 Vysoká pri Morave\", \"quote\": \"ADRESA Žihiľavová 90, 828 64 Vysoká pri Morave\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 922 615 291\", \"quote\": \"TELEFÓN +421 922 615 291\", \"page\": 1}, \"insured_email\": {\"value\": \"zoja.niznanska14@mail.example.sk\", \"quote\": \"E-MAIL zoja.niznanska14@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK14 1100 0000 0064 3961 4621\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK14 1100 0000 0064 3961 4621\", \"page\": 1}, \"destination_country\": {\"value\": \"Turecko\", \"quote\": \"KRAJINA CESTY Turecko\", \"page\": 1}, \"trip_start\": {\"value\": \"14. 1. 2026\", \"quote\": \"CESTA OD 14. 1. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"26. 1. 2026\", \"quote\": \"CESTA DO 26. 1. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"25. 12. 2025\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 25. 12. 2025\", \"page\": 1}, \"event_place\": {\"value\": \"Alanya, Turecko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Alanya, Turecko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Storno cesty\"], \"quote\": \"Druh udalosti Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Pred odchodom som ochorol, lekár mi cestovanie neodporušil. V dôsledku toho som cestu stornoval v cestovnej kancelárii. Udal sa podvtvnutie členkového klíbu.\", \"quote\": \"POPIS UDALOSTI Pred odchodom som ochorol, lekár mi cestovanie neodporušil. V dôsledku toho som cestu stornoval v cestovnej kancelárii. Udal sa podvtvnutie členkového klíbu.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Stornovací poplatok\", \"amount\": \"702,90\", \"currency\": \"EUR\", \"quote\": \"Popis Stornovací poplatok\", \"page\": 1}], \"signature_date\": {\"value\": \"3. 2. 2026\", \"quote\": \"Dátum: 3. 2. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 942,
+   "latency_ms": 40748
+  },
+  "cached": false
+ }
+}

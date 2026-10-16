@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A7.1\", \"A7.4\", \"A8.1\"], \"rationale\": \"The claim involves stolen clothing (trousers, t-shirts) from a vehicle in Rimini, reported to the police. Clause A7.1 covers theft of luggage, and the police report confirms the theft. Clause A7.4 requires a police report for theft, which is provided. Clause A8.1 covers necessary clothing in case of lost luggage, which applies here as the clothing was stolen. No exclusions apply, as the theft was not intentional, not related to alcohol, not related to extreme sports, and not caused by war, terrorism, or nuclear events.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1035,
+   "tokens_out": 153,
+   "latency_ms": 11784
+  },
+  "cached": false
+ }
+}

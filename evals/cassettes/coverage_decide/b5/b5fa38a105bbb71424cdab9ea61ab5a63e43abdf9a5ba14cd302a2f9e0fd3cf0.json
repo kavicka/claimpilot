@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The item (mobile phone) was stolen from a parked vehicle, which is explicitly excluded under clause A7.5. The policy does not cover theft of valuables or electronics left unattended in a vehicle or in a publicly accessible area. The evidence confirms the phone was stolen from a parked car, satisfying the condition of the exclusion.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 989,
+   "tokens_out": 93,
+   "latency_ms": 8690
+  },
+  "cached": false
+ }
+}

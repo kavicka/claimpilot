@@ -7,6 +7,7 @@ from pydantic import BaseModel, Field
 
 from claimpilot_core.domain import DocType, Queue
 from claimpilot_core.llm.gateway import LLMGateway
+from claimpilot_core.llm.untrusted import wrap
 from claimpilot_worker.routing.facts import DocInput
 from claimpilot_worker.routing.rules import ClaimFacts, RoutingResult, RuleHit, evaluate
 
@@ -45,8 +46,8 @@ async def route(
             "claim_type": facts.claim_type.value if facts.claim_type else "unknown",
             "total": facts.claimed_total_eur if facts.claimed_total_eur is not None else "unknown",
             "documents": ", ".join(d.doc_type.value for d in docs),
-            "description": description,
-            "reports": "\n---\n".join(reports),
+            "description": wrap(description, "client's description"),
+            "reports": "\n".join(wrap(r, "medical report") for r in reports),
         },
     )
     review = gen.value

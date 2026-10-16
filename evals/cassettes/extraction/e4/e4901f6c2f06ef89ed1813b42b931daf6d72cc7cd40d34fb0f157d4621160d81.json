@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"# | Description | Amount (Ft)\",\n    \"value\": \"Ft\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": \"Invoice No. INV-2026-86649\",\n    \"value\": \"INV-2026-86649\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Date: 05/06/2026\",\n    \"value\": \"05/06/2026\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"32,860.00\",\n      \"description\": \"Dental X-ray\",\n      \"page\": 1,\n      \"quote\": \"1 | Dental X-ray | 32,860.00\"\n    },\n    {\n      \"amount\": \"74,094.00\",\n      \"description\": \"Root canal treatment\",\n      \"page\": 1,\n      \"quote\": \"2 | Root canal treatment | 74,094.00\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 03/06/2026\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": \"Hévíz, Hungary\",\n    \"value\": \"Hungary\"\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": \"Farkas International Medical Centre\",\n    \"value\": \"Farkas International Medical Centre\"\n  },\n  \"service_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 03/06/2026\",\n    \"value\": \"03/06/2026\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Total due | 106,954.00 Ft\",\n    \"value\": \"106,954.00\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1579,
+   "tokens_out": 515,
+   "latency_ms": 13401
+  },
+  "cached": false
+ }
+}

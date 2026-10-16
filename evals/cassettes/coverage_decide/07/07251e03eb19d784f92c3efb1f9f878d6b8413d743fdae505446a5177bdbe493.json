@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A9.1\", \"A9.3\"], \"rationale\": \"The claim is covered under clause A9.1, which provides coverage for cancellation fees due to an acute illness. The medical report confirms the insured suffered from an acute condition (lumbal discopathy with radiculopathy) that prevented travel, and a doctor advised against traveling. Clause A9.3 is also satisfied as the insured canceled the trip without unnecessary delay, within three working days of the incident.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1449,
+   "tokens_out": 113,
+   "latency_ms": 16376
+  },
+  "cached": false
+ }
+}

@@ -18,6 +18,7 @@ from claimpilot_core.domain import DocType, ExtractionMethod
 from claimpilot_core.fields import kind_of, normalize
 from claimpilot_core.identifiers import is_valid_iban, parse_rodne_cislo
 from claimpilot_core.llm.gateway import LLMGateway
+from claimpilot_core.llm.untrusted import neutralize
 from claimpilot_core.normalize import parse_amount
 from claimpilot_core.pii.guard import TOKEN_RE, fold, rehydrate
 from claimpilot_core.schemas.parsing import FracBox, ParsedDocument
@@ -76,12 +77,15 @@ class Extraction:
 
 
 def page_marked_text(parsed: ParsedDocument, redacted: dict[int, str]) -> str:
+    """The visible blocks with page markers; text that imitates our markup is neutralized."""
     parts, page = [], 0
     for b in parsed.blocks:
+        if b.hidden:
+            continue
         if b.page != page:
             page = b.page
             parts.append(f"=== Page {page} ===")
-        parts.append(redacted.get(b.seq, b.text))
+        parts.append(neutralize(redacted.get(b.seq, b.text)))
     return "\n".join(parts)
 
 
@@ -250,6 +254,7 @@ async def extract_document(
     exclude_example: str | None = None,
     country_hint: str | None = None,
 ) -> Extraction:
+    parsed = parsed.visible()  # hidden text is neither model input nor a grounding target
     examples = load_examples(doc_type, language, exclude=exclude_example)
     variables = {
         "doc_type": DOC_TYPE_LABELS[doc_type],
@@ -300,6 +305,7 @@ async def extract_document_vision(
     local models only (ADR-003). A cloud model gets masked images (ingest/mask.py) together with
     the redacted OCR text, where personal values are tokens (ADR-010). Returned values are
     tokenized with the claim's redactor before anything else sees them."""
+    parsed = parsed.visible()
     spec = gateway.spec_for("extraction_vision")
     if spec.provider != "ollama" and not masked:
         raise PermissionError("page images with personal data may only go to a local model")

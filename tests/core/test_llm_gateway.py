@@ -238,3 +238,22 @@ async def test_cloud_steps_go_to_bedrock_and_keep_their_own_cassettes(tmp_settin
         assert gen.spec.key == "bedrock:eu.anthropic.claude-haiku-5-5"
     assert Messages.calls == 1  # the second run replayed
     assert list((settings.cassettes_dir / "smoke").rglob("*.json"))
+
+
+def test_a_sampled_repeat_has_its_own_cassette_and_sampling(tmp_settings):
+    """Variance runs (adversarial repeats): sample n sets temperature and seed and gets its own
+    cassette key; without a sample, specs and keys stay as they were."""
+    from claimpilot_core.llm.types import ChatMessage, LLMRequest
+
+    plain = LLMGateway(tmp_settings).spec_for("extraction")
+    sampled = LLMGateway(tmp_settings, sample=3).spec_for("extraction")
+    assert plain.sample is None and (plain.temperature, plain.seed) == (0.0, 7)
+    assert sampled.sample == 3 and sampled.temperature == 0.7 and sampled.seed == 7 + 3
+
+    def req(spec):
+        return LLMRequest(
+            step="extraction", spec=spec, messages=[ChatMessage(role="user", content="x")]
+        )
+
+    assert cassette_key(req(plain)) != cassette_key(req(sampled))
+    assert cassette_key(req(plain)) == cassette_key(req(plain.model_copy(update={"seed": 99})))

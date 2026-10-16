@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"anamnesis\": {\n    \"page\": 1,\n    \"quote\": \"Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\",\n    \"value\": \"Bez značajnih prethodnih bolesti. Ne uzima stalnu terapiju.\"\n  },\n  \"diagnosis\": {\n    \"page\": 1,\n    \"quote\": \"Upala pluća | J18.9\",\n    \"value\": \"Upala pluća\"\n  },\n  \"discharge_date\": {\n    \"page\": 1,\n    \"quote\": \"11.06.2026. | 14.06.2026.\",\n    \"value\": \"14.06.2026.\"\n  },\n  \"facility_country\": {\n    \"page\": 1,\n    \"quote\": \"Split, Hrvatska\",\n    \"value\": \"Hrvatska\"\n  },\n  \"facility_name\": {\n    \"page\": 1,\n    \"quote\": \"Opća bolnica Milotić\",\n    \"value\": \"Opća bolnica Milotić\"\n  },\n  \"icd10_code\": {\n    \"page\": 1,\n    \"quote\": \"Upala pluća | J18.9\",\n    \"value\": \"J18.9\"\n  },\n  \"patient_birth_date\": {\n    \"page\": 1,\n    \"quote\": \"PACIJENT <PERSON_1> | ROĐEN/A <DOB_1>\",\n    \"value\": \"<DOB_1>\"\n  },\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PACIJENT <PERSON_1> | ROĐEN/A <DOB_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"physician_name\": {\n    \"page\": 1,\n    \"quote\": \"Liječnik: <PERSON_2> Potpis i pečat\",\n    \"value\": \"<PERSON_2>\"\n  },\n  \"treatment\": {\n    \"page\": 1,\n    \"quote\": \"Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Lijecenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davano uputnica za nadzor u ambulantnoj klinici.\",\n    \"value\": \"Fizički pregled pokazao je povisenu temperaturu, pojačano disanje i plućne promjene na auskultaciji. Radi dijagnostičke potvrde provedeni su rendgenski snimci toraksa i laboratorijski pregled koji su potvrdili prisutnost infekcije. Lijecenje je započeto intravenoznim antibiotikom i paracetamolom za ublažavanje simptoma. Preporučeno je dovršavanje cijele terapije i ponovno pregledanje nakon 48 sati. Pacijentu je davano uputnica za nadzor u ambulantnoj klinici.\"\n  },\n  \"visit_date\": {\n    \"page\": 1,\n    \"quote\": \"11.06.2026. | 14.06.2026.\",\n    \"value\": \"11.06.2026.\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2789,
+   "tokens_out": 881,
+   "latency_ms": 22517
+  },
+  "cached": false
+ }
+}

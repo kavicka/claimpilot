@@ -1,0 +1,19 @@
+{
+ "step": "extraction_vision",
+ "prompt_id": "extraction/vision",
+ "prompt_hash": "81c8af5342f00bef5862cc2df490354a0a20a3b7278c0c4128c66248ecf1bbda",
+ "model": "ollama:qwen3-vl:8b",
+ "response": {
+  "text": "{\"policy_number\": {\"value\": \"CP41690501\", \"quote\": \"ČÍSLO POISTNEJ ZMLUVY CP41690501\", \"page\": 1}, \"insured_name\": {\"value\": \"Barbora Vacková\", \"quote\": \"MENO A PRIEZVISKO Barbora Vacková\", \"page\": 1}, \"insured_birth_number\": {\"value\": \"775901/6683\", \"quote\": \"RODNÉ ČÍSLO 775901/6683\", \"page\": 1}, \"insured_address\": {\"value\": \"Kralupská 82, 804 71 Rajhrad\", \"quote\": \"ADRESA Kralupská 82, 804 71 Rajhrad\", \"page\": 1}, \"insured_phone\": {\"value\": \"+421 920 514 432\", \"quote\": \"TELEFÓN +421 920 514 432\", \"page\": 1}, \"insured_email\": {\"value\": \"barbora.vackova22@mail.example.sk\", \"quote\": \"E-MAIL barbora.vackova22@mail.example.sk\", \"page\": 1}, \"iban\": {\"value\": \"SK22 3100 0000 0054 9151 3745\", \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA SK22 3100 0000 0054 9151 3745\", \"page\": 1}, \"destination_country\": {\"value\": \"Grécko\", \"quote\": \"KRAJINA CESTY Grécko\", \"page\": 1}, \"trip_start\": {\"value\": \"1. 3. 2026\", \"quote\": \"CESTA OD 1. 3. 2026\", \"page\": 1}, \"trip_end\": {\"value\": \"13. 3. 2026\", \"quote\": \"CESTA DO 13. 3. 2026\", \"page\": 1}, \"event_date\": {\"value\": \"25. 2. 2026\", \"quote\": \"DÁTUM VZNIKU UDALOSTI 25. 2. 2026\", \"page\": 1}, \"event_place\": {\"value\": \"Thessaloniki, Grécko\", \"quote\": \"MIESTO VZNIKU UDALOSTI Thessaloniki, Grécko\", \"page\": 1}, \"claim_types\": {\"values\": [\"Storno cesty\"], \"quote\": \"Druh udalosti Storno cesty\", \"page\": 1}, \"event_description\": {\"value\": \"Pred odchodom som sa ochorel, lekár mi cestovanie neodporučil. Cestu som stornoval v cestovnej kancelárii. Udial sa zápal pľúc.\", \"quote\": \"POPIS UDALOSTI Pred odchodom som sa ochorel, lekár mi cestovanie neodporučil. Cestu som stornoval v cestovnej kancelárii. Udial sa zápal pľúc.\", \"page\": 1}, \"claimed_items\": [{\"description\": \"Stornovací poplatok\", \"amount\": \"1 689,10\", \"currency\": \"EUR\", \"quote\": \"Stornovací poplatok 1 689,10 EUR\", \"page\": 1}], \"signature_date\": {\"value\": \"21. 3. 2026\", \"quote\": \"Dátum: 21. 3. 2026\", \"page\": 1}}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3-vl:8b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2192,
+   "tokens_out": 903,
+   "latency_ms": 38645
+  },
+  "cached": false
+ }
+}

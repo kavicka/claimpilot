@@ -1,0 +1,1981 @@
+{
+ "suite": "doc_type",
+ "split": "dev",
+ "metrics": {
+  "accuracy": {
+   "value": 1.0,
+   "num": 148,
+   "den": 148
+  },
+  "decided_by_rules": {
+   "value": 0.9932432432432432,
+   "num": 147,
+   "den": 148
+  },
+  "leaked_values_in_payloads": {
+   "value": 0.0,
+   "num": 0,
+   "den": 0
+  }
+ },
+ "items": [
+  {
+   "id": "S42-001/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-001/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-002/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-002/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-002/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-003/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-003/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-003/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D5",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D2",
+   "ok": true,
+   "expected": "booking_confirmation",
+   "got": "booking_confirmation",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-007/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-008/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-010/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-010/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-010/D3",
+   "ok": true,
+   "expected": "property_irregularity_report",
+   "got": "property_irregularity_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D5",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "llm",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-016/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D3",
+   "ok": true,
+   "expected": "property_irregularity_report",
+   "got": "property_irregularity_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-018/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D3",
+   "ok": true,
+   "expected": "property_irregularity_report",
+   "got": "property_irregularity_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D4",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D5",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-019/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-019/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-019/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-020/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-020/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-020/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D5",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-021/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-021/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D2",
+   "ok": true,
+   "expected": "property_irregularity_report",
+   "got": "property_irregularity_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D3",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D4",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-023/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-024/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-024/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-024/D3",
+   "ok": true,
+   "expected": "booking_confirmation",
+   "got": "booking_confirmation",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-024/D4",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D3",
+   "ok": true,
+   "expected": "property_irregularity_report",
+   "got": "property_irregularity_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D4",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D5",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D5",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-028/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D3",
+   "ok": true,
+   "expected": "police_report",
+   "got": "police_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-029/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-029/D5",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-030/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-030/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D5",
+   "ok": true,
+   "expected": "pharmacy_receipt",
+   "got": "pharmacy_receipt",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-031/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-031/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-031/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-031/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-032/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-032/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-032/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-033/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-033/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-033/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-034/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-034/D2",
+   "ok": true,
+   "expected": "booking_confirmation",
+   "got": "booking_confirmation",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-034/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-035/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D2",
+   "ok": true,
+   "expected": "policy_certificate",
+   "got": "policy_certificate",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-035/D3",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D4",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-036/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-036/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-036/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-037/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-037/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-037/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-038/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-038/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-038/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D1",
+   "ok": true,
+   "expected": "claim_form",
+   "got": "claim_form",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D2",
+   "ok": true,
+   "expected": "medical_report",
+   "got": "medical_report",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-040/D3",
+   "ok": true,
+   "expected": "medical_invoice",
+   "got": "medical_invoice",
+   "tags": [
+    "accuracy"
+   ],
+   "detail": {
+    "method": "rule",
+    "scan": true
+   }
+  }
+ ],
+ "meta": {
+  "created": "20261015T235628Z",
+  "git": {
+   "sha": "4f6ae4b",
+   "dirty": true
+  },
+  "dataset": "6bd4025701dc",
+  "seed": 42,
+  "cassette_mode": "auto",
+  "overrides": {},
+  "options": {},
+  "prompts": {
+   "doc_type/classify": "doc_type/classify@2+c2ea9f28"
+  },
+  "models": [
+   "ollama:qwen3:4b-instruct"
+  ],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 1,
+  "cached_calls": 0,
+  "tokens_in": 340,
+  "tokens_out": 12,
+  "tokens_per_item": 2.4,
+  "latency_p50_ms": 2661,
+  "latency_p95_ms": 2661,
+  "worker_peak_rss_mb": 732,
+  "models": [
+   "ollama:qwen3:4b-instruct"
+  ]
+ },
+ "notes": [],
+ "stale": []
+}

@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The claim involves toiletries, which are considered valuables. However, clause A7.5 explicitly excludes coverage for the theft of valuables and electronics left unattended in a vehicle or public area. The evidence indicates that the bag was not delivered on arrival, but there is no indication that the bag was secured or under the passenger's direct supervision at the time of loss. Therefore, the loss of toiletries falls under the exclusion in clause A7.5.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 972,
+   "tokens_out": 119,
+   "latency_ms": 14567
+  },
+  "cached": false
+ }
+}

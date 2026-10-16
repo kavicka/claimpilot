@@ -18,8 +18,8 @@
  "event_date": "2026-04-19",
  "expected": {
   "status": "IN_REVIEW",
-  "queue": "standard",
-  "rule": "R9",
+  "queue": "senior",
+  "rule": "R10",
   "total_payout_eur": "881.07",
   "deductible_eur": "0.00",
   "by_coverage": {

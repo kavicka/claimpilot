@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\", \"A2.3\"], \"rationale\": \"The claim involves medication prescribed by a doctor for an acute illness (acute upper respiratory tract infection) that occurred during the trip. Clause A4.1 covers the cost of medication prescribed by a doctor for an acute illness or injury during the trip. Clause A2.3 defines an acute illness as a sudden change in health that occurs during the trip and requires immediate care, which is satisfied in this case.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1232,
+   "tokens_out": 111,
+   "latency_ms": 11088
+  },
+  "cached": false
+ }
+}

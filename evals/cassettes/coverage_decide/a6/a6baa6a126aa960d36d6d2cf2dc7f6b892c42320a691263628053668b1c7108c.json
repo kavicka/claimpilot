@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"needs_review\", \"clause_ids\": [\"A7.3\", \"A7.5\"], \"rationale\": \"The claim involves a wristwatch (hodinky), which falls under the category of valuables. Clause A7.3 limits coverage for electronics, jewelry, and watches to 30% of the luggage limit. However, the evidence does not specify the value of the watch or the luggage limit, so it is unclear whether the claim would be covered within this percentage. Additionally, clause A7.5 excludes coverage for theft of valuables and electronics left unattended in a vehicle or public place. The evidence does not clarify whether the watch was left unattended, so it is uncertain if this exclusion applies. Therefore, the claim requires further review.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 937,
+   "tokens_out": 162,
+   "latency_ms": 11735
+  },
+  "cached": false
+ }
+}

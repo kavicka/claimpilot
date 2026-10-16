@@ -72,7 +72,7 @@ class RedactedDoc:
     redacted: dict[int, str]  # block seq -> redacted text
 
     def text(self, *, redacted: bool = True) -> str:
-        blocks = self.parsed.blocks
+        blocks = [b for b in self.parsed.blocks if not b.hidden]  # what a model may see
         return "\n".join(self.redacted[b.seq] if redacted else b.text for b in blocks)
 
 

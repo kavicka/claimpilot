@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"needs_review\", \"clause_ids\": [\"A7.1\", \"A7.5\", \"A7.6\"], \"rationale\": \"The claim involves a lost suitcase containing items such as a camera, e-reader, and other valuables. According to clause A7.1, the insurer covers loss of luggage during transportation. However, clause A7.5 excludes coverage for theft of valuables and electronics left unattended in public places. The evidence does not clarify whether the bag was left unattended or if the loss was due to the carrier's failure. Additionally, clause A7.6 excludes coverage for cash, payment cards, and travel documents, but this does not apply here as the items listed are not excluded by this clause. Due to the ambiguity regarding the circumstances of the loss, further review is needed.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 974,
+   "tokens_out": 174,
+   "latency_ms": 13204
+  },
+  "cached": false
+ }
+}

@@ -3,23 +3,23 @@
  "split": "dev",
  "metrics": {
   "verdict_accuracy": {
-   "value": 0.8,
-   "num": 48,
+   "value": 0.7833333333333333,
+   "num": 47,
    "den": 60
   },
   "verdict_only": {
-   "value": 0.8,
-   "num": 48,
+   "value": 0.7833333333333333,
+   "num": 47,
    "den": 60
   },
   "clause_match": {
-   "value": 0.85,
-   "num": 51,
+   "value": 0.8833333333333333,
+   "num": 53,
    "den": 60
   },
   "payout_exact_match": {
-   "value": 0.8378378378378378,
-   "num": 31,
+   "value": 0.8918918918918919,
+   "num": 33,
    "den": 37
   }
  },
@@ -65,24 +65,24 @@
    "id": "S42-002/I1",
    "ok": false,
    "expected": "not_covered ['A11.3']",
-   "got": "covered ['A4.1']",
+   "got": "needs_review ['A4.1']",
    "tags": [
     "verdict_accuracy"
    ],
    "detail": {
     "verdict_ok": false,
     "clause_ok": false,
-    "method": "llm",
-    "mapped": "medical/hospital",
+    "method": "llm+guard",
+    "mapped": "medical/treatment",
     "expected_map": "medical/treatment",
     "retrieved": [
-     "A4.2",
      "A4.1",
-     "A4.3",
+     "A4.2",
      "A5.1",
-     "A5.2"
+     "A5.2",
+     "A4.3"
     ],
-    "rationale": "The claim involves medical treatment (hospitalization and treatment for a fracture of the distal radius) resulting from an accident during a tandem paragliding flight. Clause A4.1 explicitly covers ne",
+    "rationale": "the model said covered, but a medical report mentions an extreme sport the product does not include (A11.3); a handler decides. Model: The claim involves medical treatment (fracture of the distal radi",
     "archetype": "extreme_sport"
    }
   },
@@ -90,32 +90,32 @@
    "id": "S42-002/I2",
    "ok": false,
    "expected": "not_covered ['A11.3']",
-   "got": "covered ['A6.1', 'A6.2']",
+   "got": "needs_review ['A6.1', 'A6.2']",
    "tags": [
     "verdict_accuracy"
    ],
    "detail": {
     "verdict_ok": false,
     "clause_ok": false,
-    "method": "llm",
+    "method": "llm+guard",
     "mapped": "accident/fracture",
     "expected_map": "accident/fracture",
     "retrieved": [
      "A6.1",
      "A6.2",
-     "A11.1",
      "A11.2",
+     "A11.3",
      "A3.2"
     ],
-    "rationale": "The claim involves a fracture of the distal radius confirmed by a medical report, which falls under the coverage for injury-related fractures as stated in clause A6.1. Clause A6.2 further clarifies th",
+    "rationale": "the model said covered, but a medical report mentions an extreme sport the product does not include (A11.3); a handler decides. Model: The evidence confirms a fracture of the distal radius caused by a",
     "archetype": "extreme_sport"
    }
   },
   {
    "id": "S42-002/payout",
-   "ok": false,
+   "ok": true,
    "expected": "0.00",
-   "got": "865.95",
+   "got": "0.00",
    "tags": [
     "payout_exact_match"
    ],
@@ -144,7 +144,7 @@
      "A5.1",
      "A5.2"
     ],
-    "rationale": "The claim involves medical treatment (hospitalization and examinations) resulting from a head injury during a trip. Clause A4.1 covers necessary and reasonable medical expenses incurred due to an acut",
+    "rationale": "The claim involves medical treatment (hospitalization and examinations) resulting from a head injury (otřes mozku) during a trip. Clause A4.1 covers necessary and reasonable medical expenses incurred ",
     "archetype": "early_claim"
    }
   },
@@ -206,7 +206,7 @@
      "A6.1",
      "A4.3"
     ],
-    "rationale": "The claim involves medication (nonsteroidal anti-inflammatory drugs) prescribed as part of treatment for an acute injury (ankle sprain) that occurred during the trip. Clause A4.1 covers the cost of me",
+    "rationale": "The claim involves medication (nonsteroidal anti-inflammatory medication) prescribed as part of treatment for an acute injury (ankle sprain) that occurred during the trip. Clause A4.1 covers the cost ",
     "archetype": "medical_small"
    }
   },
@@ -243,7 +243,7 @@
      "A4.2",
      "A5.2"
     ],
-    "rationale": "The claim involves treatment for an acute dental abscess, which is covered under A4.1 as it refers to 'primerané a nevyhnutné náklady na ambulantné ošetrenie... ak boli vynaložené v dôsledku akútneho ",
+    "rationale": "The claim involves treatment for an acute dental abscess, which is covered under clause A4.1. The evidence indicates that the treatment was necessary due to an acute condition (periapical abscess) and",
     "archetype": "dental_over_sublimit"
    }
   },
@@ -263,14 +263,14 @@
    "id": "S42-006/I1",
    "ok": false,
    "expected": "not_covered ['A9.4']",
-   "got": "covered ['A9.1', 'A9.3']",
+   "got": "needs_review ['A9.1', 'A9.3']",
    "tags": [
     "verdict_accuracy"
    ],
    "detail": {
     "verdict_ok": false,
     "clause_ok": false,
-    "method": "llm",
+    "method": "llm+guard",
     "mapped": "cancellation/cancellation_fee",
     "expected_map": "cancellation/cancellation_fee",
     "retrieved": [
@@ -280,15 +280,15 @@
      "A4.1",
      "A9.3"
     ],
-    "rationale": "The claim is covered under clause A9.1, which provides coverage for cancellation fees due to an acute illness. The medical report confirms the insured suffered from an acute condition (lumbal discopat",
+    "rationale": "the model said covered, but a medical report mentions a condition known before the trip (A5.1, A9.4); a handler decides. Model: The claim is covered under clause A9.1, which provides coverage for canc",
     "archetype": "cancellation_known_reason"
    }
   },
   {
    "id": "S42-006/payout",
-   "ok": false,
+   "ok": true,
    "expected": "0.00",
-   "got": "841.12",
+   "got": "0.00",
    "tags": [
     "payout_exact_match"
    ],
@@ -317,7 +317,7 @@
      "A5.1",
      "A5.2"
     ],
-    "rationale": "The claim involves medical treatment for an ankle sprain sustained during a walk in New York, USA. According to clause [A4.1], the insurance covers reasonable and necessary costs for outpatient treatm",
+    "rationale": "The claim involves medical treatment for an ankle sprain sustained during a walk in New York, USA. According to clause [A4.1], the insurer covers reasonable and necessary costs for outpatient treatmen",
     "archetype": "medical_small"
    }
   },
@@ -376,7 +376,7 @@
     "verdict_ok": true,
     "clause_ok": true,
     "method": "llm",
-    "mapped": "medical/hospital",
+    "mapped": "medical/treatment",
     "expected_map": "medical/treatment",
     "retrieved": [
      "A4.1",
@@ -385,7 +385,7 @@
      "A5.1",
      "A5.2"
     ],
-    "rationale": "The claim involves medical treatment (hospitalization) for a fracture of the distal radius caused by an accident during a ski trip. Clause A4.1 covers medical expenses abroad resulting from an acute i",
+    "rationale": "The claim involves medical treatment (fracture of the distal radius) resulting from an accident during a ski trip. Clause A4.1 covers medical expenses abroad due to an acute illness or injury during t",
     "archetype": "accident_fracture"
    }
   },
@@ -410,7 +410,7 @@
      "A14.1",
      "A11.1"
     ],
-    "rationale": "The claim involves a fracture of the distal radius confirmed by a medical report, which falls under the coverage for fractures under the accident section. The policy explicitly states that a one-time ",
+    "rationale": "The claim involves a fracture of the distal radius confirmed by a medical report, which falls under the coverage for fractures under the accident section. The policy explicitly covers such fractures w",
     "archetype": "accident_fracture"
    }
   },
@@ -447,7 +447,7 @@
      "A7.6",
      "A7.2"
     ],
-    "rationale": "The item 'Kozmetika' (toiletries) falls under the category of 'valuables'. According to clause [A7.5], the insurer does not cover theft of valuables and electronics left unattended in a vehicle or in ",
+    "rationale": "The claim involves toiletries, which are considered valuables. However, clause A7.5 explicitly excludes coverage for the theft of valuables and electronics left unattended in a vehicle or public area.",
     "archetype": "luggage_aggregate_limit"
    }
   },
@@ -472,7 +472,7 @@
      "A7.5",
      "A7.6"
     ],
-    "rationale": "The item is a wristwatch (hodinky), which falls under the category of valuables. Clause A7.3 limits coverage for electronics, jewelry, and watches to 30% of the luggage limit. However, clause A7.5 exc",
+    "rationale": "The claim involves a wristwatch (hodinky), which falls under the category of valuables. Clause A7.3 limits coverage for electronics, jewelry, and watches to 30% of the luggage limit. However, the evid",
     "archetype": "luggage_aggregate_limit"
    }
   },
@@ -497,7 +497,7 @@
      "A7.6",
      "A7.3"
     ],
-    "rationale": "The claim involves a lost camera, which is considered a valuable item. Clause A7.1 provides coverage for loss of luggage during transport, which applies here. However, clause A7.5 excludes coverage fo",
+    "rationale": "The claim involves a lost camera, which falls under the 'valuables' category. Clause A7.1 provides coverage for loss of luggage during transport, which applies here as the bag was lost at the airport.",
     "archetype": "luggage_aggregate_limit"
    }
   },
@@ -522,7 +522,7 @@
      "A7.2",
      "A7.5"
     ],
-    "rationale": "The claim involves the loss of luggage during transportation, which is covered under clause A7.1. The passenger provided a Property Irregularity Report as required by clause A7.4. There is no indicati",
+    "rationale": "The claim involves the loss of luggage at an airport, and the insured has provided a Property Irregularity Report as required by clause A7.4. Clause A7.1 covers loss of luggage during transportation b",
     "archetype": "luggage_aggregate_limit"
    }
   },
@@ -530,15 +530,15 @@
    "id": "S42-010/I5",
    "ok": false,
    "expected": "covered ['A7.1', 'A7.2']",
-   "got": "not_covered ['A7.5']",
+   "got": "needs_review ['A7.1', 'A7.5', 'A7.6']",
    "tags": [
     "verdict_accuracy"
    ],
    "detail": {
     "verdict_ok": false,
-    "clause_ok": false,
+    "clause_ok": true,
     "method": "llm",
-    "mapped": "delay/essentials",
+    "mapped": "luggage/luggage",
     "expected_map": "luggage/valuables",
     "retrieved": [
      "A7.4",
@@ -547,7 +547,7 @@
      "A7.5",
      "A7.6"
     ],
-    "rationale": "The item 'E-reader' falls under the category of 'electronics' mentioned in clause A7.5, which explicitly excludes coverage for theft of valuable items and electronics left unattended in a vehicle or p",
+    "rationale": "The claim involves a lost suitcase containing items such as a camera, e-reader, and other valuables. According to clause A7.1, the insurer covers loss of luggage during transportation. However, clause",
     "archetype": "luggage_aggregate_limit"
    }
   },
@@ -584,7 +584,7 @@
      "A5.2",
      "A5.1"
     ],
-    "rationale": "The claim involves medical treatment (antibiotic therapy and pain management) for an acute condition (otitis media) that occurred during travel. Clause A4.1 explicitly covers such costs when they resu",
+    "rationale": "The claim involves medical treatment for an acute condition (otitis media) that occurred during travel. Clause A4.1 explicitly covers the costs of outpatient treatment, including prescribed medication",
     "archetype": "medical_small"
    }
   },
@@ -621,7 +621,7 @@
      "A5.2",
      "A4.3"
     ],
-    "rationale": "The medical report indicates that the insured was under the influence of alcohol upon arrival, with a blood alcohol level of 1.4 g/l, which exceeds the 0.5 promile threshold specified in clause A11.2.",
+    "rationale": "The evidence indicates that the insured was under the influence of alcohol at the time of the incident (alcolemia 1,4 g/l), which exceeds the 0.5 promile threshold specified in clause A11.2. This excl",
     "archetype": "alcohol"
    }
   },
@@ -658,7 +658,7 @@
      "A5.2",
      "A4.3"
     ],
-    "rationale": "The medical report indicates that the patient was under the influence of alcohol with a blood alcohol level of 1.4 promille at the time of the incident. Clause A11.2 explicitly excludes coverage for e",
+    "rationale": "The evidence indicates that the insured was under the influence of alcohol with a blood alcohol level of 1.4 promille at the time of the incident. Clause A11.2 explicitly excludes coverage for events ",
     "archetype": "alcohol"
    }
   },
@@ -695,7 +695,7 @@
      "A4.1",
      "A5.2"
     ],
-    "rationale": "The claim involves medical treatment for an acute illness (acute upper respiratory tract infection) that occurred during a trip. Clause A4.1 explicitly covers 'reasonable and necessary costs for outpa",
+    "rationale": "The claim involves medical treatment for an acute illness (acute upper respiratory infection) that occurred during a trip. Clause A4.1 explicitly covers 'reasonable and necessary costs for outpatient ",
     "archetype": "medical_small"
    }
   },
@@ -757,7 +757,7 @@
      "A5.1",
      "A5.2"
     ],
-    "rationale": "The claim involves medical treatment for pneumonia (upala pluća) that occurred after the insured person returned home from Croatia. According to clause A4.1, the insurer covers necessary and appropria",
+    "rationale": "The claim involves treatment for pneumonia (upala pluća) that occurred after the insured person returned home from abroad. According to clause A4.1, the insurer covers necessary and appropriate costs ",
     "archetype": "hospital_large"
    }
   },
@@ -794,7 +794,7 @@
      "A7.6",
      "A7.2"
     ],
-    "rationale": "The claim involves a lost camera, which falls under the 'valuables' category. Clause A7.1 provides coverage for loss of luggage during transport, including theft. However, clause A7.5 excludes coverag",
+    "rationale": "The claim involves a lost camera, which falls under the luggage coverage section for valuables. Clause A7.1 grants coverage for loss of luggage during transport. However, clause A7.5 excludes coverage",
     "archetype": "luggage_over_limit"
    }
   },
@@ -819,7 +819,7 @@
      "A7.6",
      "A7.2"
     ],
-    "rationale": "The mobile phone is considered a valuable item and electronic equipment. According to clause A7.5, the insurer does not cover theft of valuable items and electronics left unattended in a vehicle or in",
+    "rationale": "The mobile phone is considered a valuable item (cenné veci) and was lost while unattended at the airport, which is a publicly accessible location. Clause A7.5 explicitly excludes coverage for the thef",
     "archetype": "luggage_over_limit"
    }
   },
@@ -844,7 +844,7 @@
      "A7.2",
      "A7.6"
     ],
-    "rationale": "The claim involves the loss of a laptop (a valuable item) during travel. Clause A7.1 provides coverage for loss of luggage during transportation, which seems applicable. However, clause A7.5 excludes ",
+    "rationale": "The claim involves the loss of a laptop (a valuable item) during travel. According to [A7.1], the insurer covers loss of luggage due to loss during transport. However, [A7.5] excludes coverage for the",
     "archetype": "luggage_over_limit"
    }
   },
@@ -894,7 +894,7 @@
      "A7.6",
      "A7.5"
     ],
-    "rationale": "The claim involves the loss of luggage (specifically shoes) during transportation by the carrier, which is covered under clause A7.1. The passenger provided a Property Irregularity Report as required ",
+    "rationale": "The claim involves the loss of luggage (specifically shoes) during transit, which is covered under clause A7.1. The client provided a Property Irregularity Report as required by clause A7.4, fulfillin",
     "archetype": "luggage_over_limit"
    }
   },
@@ -931,7 +931,7 @@
      "A7.1",
      "A7.6"
     ],
-    "rationale": "The claim is for essential purchases due to a delayed luggage arrival, which is covered under clause A8.1. The evidence shows a delay of 18 hours, which exceeds the 12-hour exclusion in A8.3, and the ",
+    "rationale": "The claim is for essential purchases due to a delayed luggage arrival. The evidence states the luggage was delayed by 18 hours, and the policy clause A8.1 covers proven costs for essential hygiene ite",
     "archetype": "luggage_delay_small"
    }
   },
@@ -956,7 +956,7 @@
      "A7.1",
      "A7.6"
     ],
-    "rationale": "The claim is for essential purchases due to a delayed luggage arrival, which is covered under clause A8.1. The evidence shows a delay of 18 hours, which exceeds the 12-hour exclusion in A8.3, and the ",
+    "rationale": "The claim is for essential purchases due to a delayed luggage arrival. The evidence states the luggage was delayed by 18 hours, and the policy clause A8.1 covers proven costs for essential hygiene ite",
     "archetype": "luggage_delay_small"
    }
   },
@@ -993,7 +993,7 @@
      "A5.2",
      "A4.4"
     ],
-    "rationale": "The claim involves medical treatment (pneumonia) received abroad during a trip due to an acute illness. Clause A4.1 explicitly covers necessary and reasonable costs for inpatient care, outpatient trea",
+    "rationale": "The claim involves medical treatment (pneumonia) received abroad during a trip due to an acute illness. Clause A4.1 explicitly covers 'reasonable and necessary costs for outpatient care, hospitalizati",
     "archetype": "hospital_large"
    }
   },
@@ -1080,7 +1080,7 @@
      "A5.2",
      "A4.3"
     ],
-    "rationale": "The claim involves medical treatment (ambulantné ošetrenie, medikamentöse Unterstützung) resulting from an acute injury (Gehirnerschütterung) during a trip, which is covered under clause A4.1. There i",
+    "rationale": "The claim involves medical treatment (ambulantné ošetrenie, medikamentöse Unterstützung) resulting from an acute injury (Gehirnerschütterung) during a trip, which is explicitly covered under clause A4",
     "archetype": "date_inconsistency"
    }
   },
@@ -1117,7 +1117,7 @@
      "A7.5",
      "A7.3"
     ],
-    "rationale": "The claim is for the purchase of essential hygiene items and clothing due to a significant delay in luggage arrival (20 hours). Clause A8.1 explicitly covers such expenses when luggage is delayed by t",
+    "rationale": "The claim is for the purchase of essential hygiene items and clothing due to a significant delay in luggage arrival (20 hours). Clause A8.1 explicitly covers such expenses when the luggage is delayed ",
     "archetype": "luggage_delay_small"
    }
   },
@@ -1142,7 +1142,7 @@
      "A7.5",
      "A7.3"
     ],
-    "rationale": "The claim is for the purchase of essential hygiene items and clothing due to a significant delay in luggage arrival (20 hours). Clause A8.1 explicitly covers such expenses when luggage is delayed by t",
+    "rationale": "The claim is for the purchase of essential hygiene items and clothing due to a significant delay in luggage arrival (20 hours). Clause A8.1 explicitly covers such expenses when the luggage is delayed ",
     "archetype": "luggage_delay_small"
    }
   },
@@ -1160,15 +1160,15 @@
   },
   {
    "id": "S42-023/I1",
-   "ok": false,
+   "ok": true,
    "expected": "not_covered ['A5.1']",
-   "got": "covered ['A4.1']",
+   "got": "not_covered ['A5.1']",
    "tags": [
     "verdict_accuracy"
    ],
    "detail": {
-    "verdict_ok": false,
-    "clause_ok": false,
+    "verdict_ok": true,
+    "clause_ok": true,
     "method": "llm",
     "mapped": "medical/treatment",
     "expected_map": "medical/treatment",
@@ -1179,15 +1179,15 @@
      "A5.1",
      "A5.2"
     ],
-    "rationale": "The claim involves medical treatment for unstable angina, which is an acute medical condition. Clause A4.1 covers the costs of outpatient care, hospitalization, and prescribed medications if incurred ",
+    "rationale": "The claim involves treatment for unstable angina, which is described as a pre-existing condition (known arterial hypertension treated since 2024 and a cardiology check-up two months ago for chest pain",
     "archetype": "pre_existing"
    }
   },
   {
    "id": "S42-023/payout",
-   "ok": false,
+   "ok": true,
    "expected": "0.00",
-   "got": "473.94",
+   "got": "0.00",
    "tags": [
     "payout_exact_match"
    ],
@@ -1216,7 +1216,7 @@
      "A9.3",
      "A3.3"
     ],
-    "rationale": "The claim is for a cancellation fee due to an injury (podvrtnutie členkového kĺbu) that occurred before the trip and led to the cancellation. Clause A9.1 covers cancellation due to injury, and the med",
+    "rationale": "The claim is for a cancellation fee due to an injury (sprain of the joint) that occurred before the trip and led to the cancellation. Clause A9.1 covers cancellation due to an injury, and the evidence",
     "archetype": "cancellation"
    }
   },
@@ -1253,7 +1253,7 @@
      "A5.2",
      "A4.2"
     ],
-    "rationale": "The claim involves treatment for acute gastroenteritis, which occurred during the trip and is covered under clause A4.1. There is no evidence indicating that the condition was pre-existing, related to",
+    "rationale": "The evidence indicates that the insured person developed acute gastroenteritis during their stay in the Czech Republic, which required medical treatment including hydration, dietary advice, and medica",
     "archetype": "date_inconsistency"
    }
   },
@@ -1290,7 +1290,7 @@
      "A7.1",
      "A7.5"
     ],
-    "rationale": "The claim is for essential purchases due to a significant delay in luggage arrival (35 hours), which falls under the coverage for delayed luggage as defined in clause A8.1. The delay exceeds the 12-ho",
+    "rationale": "The claim is for essential purchases due to a significant delay in luggage arrival (35 hours), which falls under the coverage for delayed luggage as defined in clause A8.1. The evidence shows the lugg",
     "archetype": "luggage_delay_small"
    }
   },
@@ -1315,7 +1315,7 @@
      "A7.1",
      "A7.5"
     ],
-    "rationale": "The claim is for essential purchases due to a significant delay in luggage arrival (35 hours), which falls under the coverage for delayed luggage as defined in clause A8.1. The delay exceeds the 12-ho",
+    "rationale": "The claim is for essential purchases due to a significant delay in luggage arrival (35 hours), which falls under the coverage for delayed luggage as defined in clause A8.1. The evidence shows the lugg",
     "archetype": "luggage_delay_small"
    }
   },
@@ -1352,7 +1352,7 @@
      "A5.2",
      "A5.1"
     ],
-    "rationale": "The claim involves medical treatment for an ankle sprain that occurred during a trip in a natural environment. Clause A4.1 covers medical expenses abroad for acute illness or injury during travel, whi",
+    "rationale": "The claim involves medical treatment for an ankle sprain that occurred during a trip in a natural environment. Clause A4.1 covers medical expenses abroad for acute illness or injury during the trip, w",
     "archetype": "medical_small"
    }
   },
@@ -1414,7 +1414,7 @@
      "A7.6",
      "A7.3"
     ],
-    "rationale": "The item was stolen from a vehicle that was parked and locked, which falls under the exclusion in clause A7.5. The claim form and police report confirm that the theft occurred from a vehicle, and the ",
+    "rationale": "The item was stolen from a vehicle that was parked and locked, which falls under the exclusion in clause A7.5. The police report confirms the theft occurred from a vehicle, and there is no mention of ",
     "archetype": "luggage_theft_unattended"
    }
   },
@@ -1439,7 +1439,7 @@
      "A8.1",
      "A13.2"
     ],
-    "rationale": "The claim involves the theft of a winter coat from a parked car, which was reported to the police. Clause A7.1 covers theft of luggage, and the police report (A13.2) confirms the incident and provides",
+    "rationale": "The claim involves the theft of a winter coat from a parked car, which was reported to the police. Clause A7.1 covers theft of luggage, and the police report (A13.2) confirms the theft, fulfilling the",
     "archetype": "luggage_theft_unattended"
    }
   },
@@ -1464,7 +1464,7 @@
      "A7.6",
      "A7.3"
     ],
-    "rationale": "The item was stolen from a vehicle while unattended, which is explicitly excluded under clause A7.5. The claim meets the conditions of this exclusion.",
+    "rationale": "The item (mobile phone) was stolen from a parked vehicle, which is explicitly excluded under clause A7.5. The claim meets the conditions of this exclusion, as the phone was left unattended in a vehicl",
     "archetype": "luggage_theft_unattended"
    }
   },
@@ -1551,7 +1551,7 @@
      "A5.1",
      "A5.2"
     ],
-    "rationale": "The claim involves treatment for acute gastroenteritis, which is covered under clause A4.1 as it is an acute illness occurring during travel. There is no indication of pre-existing conditions, planned",
+    "rationale": "The claim involves treatment for acute gastroenteritis, which is covered under clause A4.1 as it refers to 'akútne ochorenie' (acute illness) occurring during the trip. There is no indication of pre-e",
     "archetype": "early_claim"
    }
   },
@@ -1576,7 +1576,7 @@
      "A4.2",
      "A4.3"
     ],
-    "rationale": "The claim involves acute gastroenteritis, which is defined as an acute illness in clause A2.3. Clause A4.1 covers the costs of prescribed medication as part of treatment for an acute illness during tr",
+    "rationale": "The evidence indicates that the claimant suffered from acute gastroenteritis, which is defined as an acute illness in clause A2.3. Clause A4.1 covers the costs of medication prescribed by a doctor as ",
     "archetype": "early_claim"
    }
   },
@@ -1594,16 +1594,16 @@
   },
   {
    "id": "S42-030/I1",
-   "ok": true,
+   "ok": false,
    "expected": "covered ['A4.1']",
-   "got": "covered ['A4.1']",
+   "got": "needs_review ['A4.1']",
    "tags": [
     "verdict_accuracy"
    ],
    "detail": {
-    "verdict_ok": true,
+    "verdict_ok": false,
     "clause_ok": true,
-    "method": "llm",
+    "method": "llm+guard",
     "mapped": "medical/treatment",
     "expected_map": "medical/treatment",
     "retrieved": [
@@ -1613,22 +1613,22 @@
      "A5.1",
      "A5.2"
     ],
-    "rationale": "The claim involves medical treatment for an ankle sprain sustained during a walk in Budapest, which is an acute injury during travel. Clause A4.1 covers reasonable and necessary medical expenses for t",
+    "rationale": "the model said covered, but a document of this claim holds text addressed to an AI system or hidden from the reader; a handler decides. Model: The claim involves medical treatment for an ankle sprain ",
     "archetype": "medical_standard"
    }
   },
   {
    "id": "S42-030/I2",
-   "ok": true,
+   "ok": false,
    "expected": "covered ['A4.1']",
-   "got": "covered ['A4.1']",
+   "got": "needs_review ['A4.1']",
    "tags": [
     "verdict_accuracy"
    ],
    "detail": {
-    "verdict_ok": true,
+    "verdict_ok": false,
     "clause_ok": true,
-    "method": "llm",
+    "method": "llm+guard",
     "mapped": "medical/medication",
     "expected_map": "medical/medication",
     "retrieved": [
@@ -1638,15 +1638,15 @@
      "A5.2",
      "A4.2"
     ],
-    "rationale": "The claim involves medication (nonsteroidal anti-inflammatory drugs) prescribed as part of treatment for an acute injury (ankle sprain) that occurred during travel. Clause A4.1 covers the cost of medi",
+    "rationale": "the model said covered, but a document of this claim holds text addressed to an AI system or hidden from the reader; a handler decides. Model: The claim involves medication (nonsteroidal anti-inflamma",
     "archetype": "medical_standard"
    }
   },
   {
    "id": "S42-030/payout",
-   "ok": true,
+   "ok": false,
    "expected": "1064.40",
-   "got": "1064.40",
+   "got": "0.00",
    "tags": [
     "payout_exact_match"
    ],
@@ -1675,7 +1675,7 @@
      "A4.2",
      "A5.2"
     ],
-    "rationale": "The claim involves medical treatment for an injury (ankle sprain) that occurred during a walk in Split, Croatia. The treatment was necessary and provided by a medical facility. Clause A4.1 covers the ",
+    "rationale": "The claim involves medical treatment for an injury (ankle sprain) that occurred during a walk in Split, Croatia. The evidence indicates that the injury was acute and required medical care, including t",
     "archetype": "early_claim"
    }
   },
@@ -1712,7 +1712,7 @@
      "A9.3",
      "A3.3"
     ],
-    "rationale": "The claim is for a cancellation fee due to an acute illness (pneumonia) that occurred before the trip, as stated in the medical report. Clause A9.1 covers cancellation due to an acute illness. Clause ",
+    "rationale": "The claim is covered under clause A9.1, which provides coverage for cancellation fees due to an acute illness. The medical report confirms the insured suffered from pneumonia, which is an acute illnes",
     "archetype": "cancellation"
    }
   },
@@ -1749,7 +1749,7 @@
      "A5.2",
      "A4.3"
     ],
-    "rationale": "The claim involves medical treatment (ambulantné ošetrenie, medikamentöse Unterstützung) for a brain concussion (Gehirnerschütterung) that occurred during a trip. Clause A4.1 covers reasonable and nec",
+    "rationale": "The claim involves medical treatment for a brain concussion (Gehirnerschütterung) that occurred during a trip. According to clause A4.1, the insurer covers reasonable and necessary costs for outpatien",
     "archetype": "date_inconsistency"
    }
   },
@@ -1786,7 +1786,7 @@
      "A5.2",
      "A4.4"
     ],
-    "rationale": "The claim involves medical treatment (pneumonia) received abroad during a trip due to an acute illness. Clause A4.1 explicitly covers 'reasonable and necessary costs for outpatient care, hospitalizati",
+    "rationale": "The claim involves medical treatment for pneumonia (upala pluća) that occurred during a trip. According to clause A4.1, the insurer covers necessary and appropriate costs for inpatient care, outpatien",
     "archetype": "hospital_large"
    }
   },
@@ -1928,20 +1928,20 @@
   }
  ],
  "meta": {
-  "created": "20261015T215615Z",
+  "created": "20261016T003719Z",
   "git": {
-   "sha": "bd6a8ac",
+   "sha": "4f6ae4b",
    "dirty": true
   },
-  "dataset": "4aee4de982d2",
+  "dataset": "6bd4025701dc",
   "seed": 42,
   "cassette_mode": "auto",
   "overrides": {},
   "options": {},
   "prompts": {
-   "coverage/decide": "coverage/decide@1+bb9451c3",
-   "coverage/map": "coverage/map@2+3adfabab",
-   "doc_type/classify": "doc_type/classify@1+1ae7e9f6",
+   "coverage/decide": "coverage/decide@2+ea10e3c3",
+   "coverage/map": "coverage/map@3+d9940641",
+   "doc_type/classify": "doc_type/classify@2+c2ea9f28",
    "extraction/document": "extraction/document@1+e1460380",
    "extraction/vision": "extraction/vision@1+81c8af53"
   },
@@ -1956,12 +1956,12 @@
  "ops": {
   "llm_calls": 239,
   "cached_calls": 239,
-  "tokens_in": 404099,
-  "tokens_out": 117771,
-  "tokens_per_item": 5380.1,
+  "tokens_in": 406829,
+  "tokens_out": 117239,
+  "tokens_per_item": 5402.8,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 1588,
+  "worker_peak_rss_mb": 1122,
   "models": [
    "ollama:qwen3-vl:8b",
    "ollama:qwen3:14b",

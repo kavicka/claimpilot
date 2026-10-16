@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "3db8b7cb28a02898f39b542c9270aab147f6673627189ce3857f04cc4bbc7e43",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{ \"queue\": \"standard\", \"rationale\": \"The client's description indicates a lost luggage incident at the airport in Bodrum, with no mention of any unusual circumstances or potential exclusions. There are no signs of fraud or complex judgment required.\" }",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 376,
+   "tokens_out": 53,
+   "latency_ms": 3276
+  },
+  "cached": false
+ }
+}

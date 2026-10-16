@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A5.1\"], \"rationale\": \"The claim involves treatment for unstable angina, which is described as a pre-existing condition (known arterial hypertension treated since 2024 and a cardiology check-up two months ago for chest pain). Clause A5.1 explicitly excludes coverage for the treatment of pre-existing health conditions and their complications. The evidence indicates that the condition is not new or acute but related to a pre-existing state, thus falling under the exclusion in A5.1.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1188,
+   "tokens_out": 117,
+   "latency_ms": 14205
+  },
+  "cached": false
+ }
+}

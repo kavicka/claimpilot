@@ -41,6 +41,7 @@ async def ingest(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S:
                     text=b.text,
                     bbox=b.bbox.model_dump(),
                     ocr=b.ocr,
+                    hidden=b.hidden,
                 )
             )
         doc.page_count = len(parsed.pages)

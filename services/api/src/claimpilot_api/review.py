@@ -29,6 +29,7 @@ from claimpilot_core.db.models import (
     Claim,
     Correction,
     CoverageDecision,
+    DocBlock,
     Document,
     ExtractedField,
     PipelineStepRun,
@@ -177,6 +178,15 @@ async def claim_detail(claim_id: uuid.UUID, user: User_, session: Session) -> di
             .order_by(ExtractedField.id)
         )
     ).all()
+    # Text a reader of the document cannot see (white on white, 1 pt, off the page): never sent to
+    # a model, shown to the handler with the R10 warning.
+    hidden = (
+        await session.scalars(
+            select(DocBlock)
+            .where(DocBlock.document_id.in_([d.id for d in docs]), DocBlock.hidden.is_not(None))
+            .order_by(DocBlock.seq)
+        )
+    ).all()
     routing = (
         await session.scalars(
             select(RoutingDecision)
@@ -251,6 +261,19 @@ async def claim_detail(claim_id: uuid.UUID, user: User_, session: Session) -> di
                     }
                     for f in fields
                     if f.document_id == d.id
+                ],
+                "hidden_text": [
+                    {
+                        "page": b.page,
+                        "bbox": b.bbox,
+                        "reason": b.hidden,
+                        # Tokens re-hydrated for a handler; an agent gets tokens only.
+                        "text": show(b.text_redacted)
+                        if b.text_redacted is not None
+                        else (None if user.role == "agent" else b.text),
+                    }
+                    for b in hidden
+                    if b.document_id == d.id
                 ],
             }
             for d in docs

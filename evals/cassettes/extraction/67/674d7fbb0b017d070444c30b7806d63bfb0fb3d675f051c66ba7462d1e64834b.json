@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"X Liečebné náklady Úraz Batožina Oneskorenie batožiny\",\n    \"values\": [\n      \"Liečebné náklady\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"680,22\",\n      \"currency\": \"EUR\",\n      \"description\": \"Liečebné náklady – Poliambulatorio Donati\",\n      \"page\": 1,\n      \"quote\": \"Liečebné náklady - Poliambulatorio Donati | 680,22 | EUR\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Taliansko\",\n    \"value\": \"Taliansko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"8. 2. 2026\",\n    \"value\": \"8. 2. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Bol som v Rimini, Taliansko, kde sa mi zlomila dolná časť vretennej kosti. Po zranení som bol hospitalizovaný a podstrel som ležiacu liečbu. Poistná udalosť sa týka zdravotného problému spôsobeného touto zlomeninou.\",\n    \"value\": \"Bol som v Rimini, Taliansko, kde sa mi zlomila dolná časť vretennej kosti. Po zranení som bol hospitalizovaný a podstrel som ležiacu liečbu. Poistná udalosť sa týka zdravotného problému spôsobeného touto zlomeninou.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Rimini, Taliansko\",\n    \"value\": \"Rimini, Taliansko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 816 44 Babinec\",\n    \"value\": \"<ADDRESS_1>, 816 44 Babinec\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP58024342\",\n    \"value\": \"CP58024342\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 2. 3. 2026\",\n    \"value\": \"2. 3. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"11. 2. 2026\",\n    \"value\": \"11. 2. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"6. 2. 2026\",\n    \"value\": \"6. 2. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3619,
+   "tokens_out": 924,
+   "latency_ms": 24418
+  },
+  "cached": false
+ }
+}

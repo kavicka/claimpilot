@@ -13,6 +13,7 @@ version lives in `config/routing.yaml` and `data/policies/products.yaml`; this t
 | R4 | Required document missing | NEEDS_INFO (no queue) | VPP A13.2, A13.3 |
 | R5 | Claimed total above 3,000 EUR | senior | Authority limit |
 | R6 | Medical or accident claim whose medical report mentions a possible exclusion (alcohol, extreme sport, pre-existing condition) | senior | Needs judgement; a known reason on a cancellation is decided in coverage (A9.4) |
+| R10 | A document addresses an AI system, tells it to drop its rules, imitates its answer, or holds text a reader cannot see (white on white, under 4 pt, off the page, invisible render mode, covered) | senior | Prompt injection: the model's view of the claim may be manipulated; added after R9, so it keeps the next free id |
 | R7 | Cancellation claim | standard | Always needs a reason check |
 | R8 | All extracted fields grounded, confidence ≥ 0.9, total ≤ 500 EUR, no rule hit | fast_track | Straight-through candidate |
 | R9 | Anything else | standard | |

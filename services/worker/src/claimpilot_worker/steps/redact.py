@@ -36,7 +36,8 @@ async def redact(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S:
     )
     gateway: LLMGateway = ctx["gateway"]
     for d in docs:
-        result = await classify("\n".join(b.text_redacted or "" for b in blocks[d.id]), gateway)
+        visible = "\n".join(b.text_redacted or "" for b in blocks[d.id] if not b.hidden)
+        result = await classify(visible, gateway)
         d.doc_type, d.doc_type_confidence, d.doc_type_method = (
             result.doc_type.value,
             result.confidence,

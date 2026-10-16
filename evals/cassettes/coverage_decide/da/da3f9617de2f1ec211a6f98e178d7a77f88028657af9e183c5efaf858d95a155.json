@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A9.1\", \"A9.3\"], \"rationale\": \"The evidence indicates that the insured became ill (pneumonia) before the trip and was advised by a doctor not to travel. The cancellation was made in time (within 3 working days of the onset of the illness) and was due to an acute illness, which is covered under clause A9.1. Additionally, the cancellation was made without unnecessary delay, as required by clause A9.3.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1322,
+   "tokens_out": 113,
+   "latency_ms": 14747
+  },
+  "cached": false
+ }
+}

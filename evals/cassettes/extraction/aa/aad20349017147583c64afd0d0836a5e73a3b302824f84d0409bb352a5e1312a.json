@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Total due TRY\",\n    \"value\": \"TRY\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 9090/67377 25/07/2026 10:38\",\n    \"value\": \"25/07/2026 10:38\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"916.92\",\n      \"description\": \"T-shirt\",\n      \"page\": 1,\n      \"quote\": \"T-shirt | 916.92\"\n    },\n    {\n      \"amount\": \"815.24\",\n      \"description\": \"Underwear\",\n      \"page\": 1,\n      \"quote\": \"Underwear | 815.24\"\n    },\n    {\n      \"amount\": \"398.92\",\n      \"description\": \"Toothbrush and toothpaste\",\n      \"page\": 1,\n      \"quote\": \"Toothbrush and toothpaste | 398.92\"\n    },\n    {\n      \"amount\": \"229.00\",\n      \"description\": \"Shower gel\",\n      \"page\": 1,\n      \"quote\": \"Shower gel | 229.00\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Karadeniz Mini Market Bodrum\",\n    \"value\": \"Karadeniz Mini Market\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Receipt Receipt No. 9090/67377 25/07/2026 10:38\",\n    \"value\": \"9090/67377\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"2,360.08\",\n    \"value\": \"2,360.08\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1281,
+   "tokens_out": 465,
+   "latency_ms": 11065
+  },
+  "cached": false
+ }
+}

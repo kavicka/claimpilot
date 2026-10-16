@@ -67,16 +67,25 @@ files under pictures (letterheads, forms, stamps) and running headers; the test 
 | Extraction | critical fields correct (amounts, dates, policy number, IBAN, diagnosis) | 450/454 (99.1 %) | 295/297 (99.3 %) |
 | Extraction | all fields, F1 | 96.4 % | 94.9 % |
 | Extraction | claims where every critical field is confident (≥ 0.9), and all of them correct | 34/40, 34 correct | 14/20, 14 correct |
-| Routing | right queue | 37/40 (92.5 %) | 18/20 (90.0 %) |
+| Routing | right queue | 39/40 (97.5 %) | 18/20 (90.0 %) \* |
 | Routing | fraud cases caught | 10/10 | 5/5 |
-| Retrieval | deciding clause in the top 5 | 44/53 (83.0 %) | 20/24 (83.3 %) |
-| Coverage | item verdicts right | 48/60 (80.0 %) | 26/28 (92.9 %) |
-| Coverage | payout to the cent | 31/37 (83.8 %) | 16/18 (88.9 %) |
+| Retrieval | deciding clause in the top 5 | 45/53 (84.9 %) | 20/24 (83.3 %) \* |
+| Coverage | item verdicts right | 47/60 (78.3 %) | 26/28 (92.9 %) \* |
+| Coverage | payout to the cent | 33/37 (89.2 %) | 16/18 (88.9 %) \* |
 | Submission | registered on the first try | 36/37 | 18/18 |
 | Submission | values the agent invented | 0 | 0 |
 | Letters | numbers, dates or clauses not in the facts | 0 of 111 texts | 0 of 54 texts |
 | Letters | judge score (gemma3:12b, 1 to 5) | 4.52 | 4.56 |
 | Prompt injection | decisions changed by instructions planted in a document | 0 | 0 |
+| Prompt injection | attacks that helped a claim (34 attacks, `adversarial` suite; test cases held out) | 0 of 26 | 0 of 8 |
+| Prompt injection | attacks detected where the text reaches the parse | 19/19 | 8/8 |
+| Prompt injection | detector false positives on clean documents | 0 of 147 | not scored |
+
+\* Test column measured before the prompt-injection defense (ADR-012, 2026-10-16); the dev column
+after it. The defense sends claims with a planted instruction to a senior handler (rule R10) and
+turns a model's "covered" into needs_review where a medical report names an exclusion or a document
+talks to the AI: that fixed three dev payouts and costs the dataset's injected claim its automatic
+verdicts.
 
 The parser change raised document typing and confident straight-through claims, and the
 extraction step now also requires a value to match the page as printed (calibration error 0.090
@@ -132,11 +141,12 @@ faster, so it extracts and writes the letters. Thinking mode stays off: on a 14B
 
 ## Testing
 
-684 unit and database tests, 10 Playwright tests of the review UI, and ten eval suites replayed
+827 unit and database tests, 11 Playwright tests of the review UI, and ten eval suites replayed
 in CI. The edge cases have their own list in [docs/testing.md](docs/testing.md): hostile uploads,
 two handlers on one claim, a worker killed mid-step, Redis and the model server going down,
-tampered sessions, password guessing, names in declined forms, and six prompt-injection attacks
-(none helped a claim; one was noticed and escalated). Hardening them found and fixed 13 problems,
+tampered sessions, password guessing, names in declined forms, and 34 prompt-injection attacks in
+six languages: hidden text, fake answers and delimiters, role tags, obfuscation, metadata, form
+fields (none helped a claim; ADR-012). Hardening them found and fixed 13 problems,
 among them claim references that repeated after an erasure, a login form that could put the
 password in the URL, and a worker that exited for good when Redis restarted.
 

@@ -28,12 +28,23 @@ class ClaimFacts:
     report_texts: list[str] = field(default_factory=list)
     critical_grounded: bool = True
     min_critical_confidence: float = 1.0
+    # Prompt-injection signals, one line each: "D4 p.1, hidden text (low_contrast): ..."
+    injection: list[str] = field(default_factory=list)
 
 
 @dataclass
 class RuleHit:
     rule: str
     detail: str
+
+
+def for_model(hit: RuleHit) -> str:
+    """A rule hit as a later prompt (the handler summary) may see it. An R10 hit keeps where the
+    signal was and its kind, not the planted text, so the text cannot act on that model too."""
+    if hit.rule != "R10":
+        return f"{hit.rule}: {hit.detail}"
+    where = hit.detail.split(": ", 1)[0]
+    return f"{hit.rule}: {where} (text addressed to an AI system or hidden from the reader)"
 
 
 @dataclass
@@ -110,6 +121,8 @@ def evaluate(facts: ClaimFacts, cfg: dict | None = None) -> RoutingResult:
     signals = exclusion_signals(facts.report_texts, cfg["signals"]) if medical_like else []
     if signals:
         hits.append(RuleHit("R6", f"medical report mentions: {', '.join(signals)}"))
+    # R10 sits between R6 and R7 in the order: added later, so its id is the next free one.
+    hits.extend(RuleHit("R10", detail) for detail in facts.injection)
     if facts.claim_type is ClaimType.CANCELLATION:
         hits.append(RuleHit("R7", "cancellation claim"))
 
@@ -118,7 +131,7 @@ def evaluate(facts: ClaimFacts, cfg: dict | None = None) -> RoutingResult:
         return RoutingResult(Queue.FRAUD_REVIEW, ClaimStatus.ROUTED, first, hits)
     if first == "R4":
         return RoutingResult(None, ClaimStatus.NEEDS_INFO, "R4", hits)
-    if first in ("R5", "R6"):
+    if first in ("R5", "R6", "R10"):
         return RoutingResult(Queue.SENIOR, ClaimStatus.ROUTED, first, hits)
     if first == "R7":
         return RoutingResult(Queue.STANDARD, ClaimStatus.ROUTED, "R7", hits)

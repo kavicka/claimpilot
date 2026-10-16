@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"needs_review\", \"clause_ids\": [\"A7.1\", \"A7.5\"], \"rationale\": \"The claim involves the loss of a laptop (a valuable item) during travel. According to [A7.1], the insurer covers loss of luggage due to loss during transport. However, [A7.5] excludes coverage for theft of valuables and electronics left unattended in a vehicle or public place. The evidence does not clarify whether the laptop was left unattended, which is necessary to determine if the exclusion applies.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 964,
+   "tokens_out": 117,
+   "latency_ms": 9797
+  },
+  "cached": false
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"# | Leistung | Betrag (€)\",\n    \"value\": \"€\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": \"Rechnung Nr. RE-2026-41001\",\n    \"value\": \"RE-2026-41001\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Datum: 16.07.2026\",\n    \"value\": \"16.07.2026\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"168,94\",\n      \"description\": \"Notfallbehandlung\",\n      \"page\": 1,\n      \"quote\": \"1 | Notfallbehandlung | 168,94\"\n    },\n    {\n      \"amount\": \"159,82\",\n      \"description\": \"Röntgen\",\n      \"page\": 1,\n      \"quote\": \"2 | Röntgen | 159,82\"\n    },\n    {\n      \"amount\": \"436,50\",\n      \"description\": \"Computertomographie\",\n      \"page\": 1,\n      \"quote\": \"3 | Computertomographie | 436,50\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>, geb. <DOB_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": \"Kitzbühel, Österreich\",\n    \"value\": \"Österreich\"\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": \"Medizinisches Zentrum Stark\",\n    \"value\": \"Medizinisches Zentrum Stark\"\n  },\n  \"service_date\": {\n    \"page\": 1,\n    \"quote\": \"16.07.2026\",\n    \"value\": \"16.07.2026\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Gesamtbetrag | 765,26 €\",\n    \"value\": \"765,26\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1152,
+   "tokens_out": 525,
+   "latency_ms": 11223
+  },
+  "cached": false
+ }
+}

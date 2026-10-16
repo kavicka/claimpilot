@@ -1,0 +1,19 @@
+{
+ "step": "coverage_map",
+ "prompt_id": "coverage/map",
+ "prompt_hash": "d9940641171ec98ce705f197f5ed621efd4f9fec6c29ead6f1b8b4c51d43b7e2",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"items\": [{\"ref\": \"I1\", \"coverage\": \"luggage\", \"category\": \"valuables\"}, {\"ref\": \"I2\", \"coverage\": \"luggage\", \"category\": \"valuables\"}, {\"ref\": \"I3\", \"coverage\": \"luggage\", \"category\": \"valuables\"}, {\"ref\": \"I4\", \"coverage\": \"luggage\", \"category\": \"luggage\"}, {\"ref\": \"I5\", \"coverage\": \"luggage\", \"category\": \"luggage\"}]}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 449,
+   "tokens_out": 111,
+   "latency_ms": 10765
+  },
+  "cached": false
+ }
+}

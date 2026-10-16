@@ -1,0 +1,19 @@
+{
+ "step": "routing",
+ "prompt_id": "routing/review",
+ "prompt_hash": "3db8b7cb28a02898f39b542c9270aab147f6673627189ce3857f04cc4bbc7e43",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{ \"queue\": \"standard\", \"rationale\": \"The medical report confirms an acute upper respiratory infection with no pre-existing conditions, and the claim is for a reasonable amount with supporting documents.\" }",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 644,
+   "tokens_out": 41,
+   "latency_ms": 4112
+  },
+  "cached": false
+ }
+}

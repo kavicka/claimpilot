@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"X Liečebné náklady Úraz Batožina Oneskorenie batožiny\",\n    \"values\": [\n      \"Liečebné náklady\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"616,36\",\n      \"currency\": \"EUR\",\n      \"description\": \"Liečebné náklady – Roberts International Medical Centre\",\n      \"page\": 1,\n      \"quote\": \"Liečebné náklady - Roberts International Medical Centre | 616,36 | EUR\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Grécko\",\n    \"value\": \"Grécko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"8. 7. 2026\",\n    \"value\": \"8. 7. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Bol som v Thessaloniki, Grécko, kde som sa nedávno nedokázal cítiť dobre. Zdravotný problém, ktorý som mal, bol akútna infekcia horných dýchacích ciest. Som v lekárni, kde mi pomáhajú s liečením.\",\n    \"value\": \"Bol som v Thessaloniki, Grécko, kde som sa nedávno nedokázal cítiť dobre. Zdravotný problém, ktorý som mal, bol akútna infekcia horných dýchacích ciest. Som v lekárni, kde mi pomáhajú s liečením.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Thessaloniki, Grécko\",\n    \"value\": \"Thessaloniki, Grécko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"<IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 979 29 Nižná Hutka\",\n    \"value\": \"<ADDRESS_1>, 979 29 Nižná Hutka\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP49823450\",\n    \"value\": \"CP49823450\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 25. 7. 2026\",\n    \"value\": \"25. 7. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"5. 7. 2026\",\n    \"value\": \"5. 7. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"23. 6. 2026\",\n    \"value\": \"23. 6. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3615,
+   "tokens_out": 898,
+   "latency_ms": 23651
+  },
+  "cached": false
+ }
+}

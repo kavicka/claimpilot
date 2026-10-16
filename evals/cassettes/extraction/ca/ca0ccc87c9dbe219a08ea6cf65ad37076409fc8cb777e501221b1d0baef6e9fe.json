@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Ukupno za platiti EUR\",\n    \"value\": \"EUR\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Račun Broj računa 4228/57739 19.08.2026. 15:04\",\n    \"value\": \"19.08.2026. 15:04\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"6,36\",\n      \"description\": \"Ibuprofen 400 mg\",\n      \"page\": 1,\n      \"quote\": \"Ibuprofen 400 mg | 6,36\"\n    },\n    {\n      \"amount\": \"9,05\",\n      \"description\": \"Elastični zavoj\",\n      \"page\": 1,\n      \"quote\": \"Elastični zavoj | 9,05\"\n    },\n    {\n      \"amount\": \"6,60\",\n      \"description\": \"Paracetamol 500 mg\",\n      \"page\": 1,\n      \"quote\": \"Paracetamol 500 mg | 6,60\"\n    },\n    {\n      \"amount\": \"19,48\",\n      \"description\": \"Amoksicilin 1 g\",\n      \"page\": 1,\n      \"quote\": \"Amoksicilin 1 g | 19,48\"\n    }\n  ],\n  \"pharmacy_name\": {\n    \"page\": 1,\n    \"quote\": \"Ljekarna Hodak\",\n    \"value\": \"Ljekarna Hodak\"\n  },\n  \"receipt_number\": {\n    \"page\": 1,\n    \"quote\": \"Račun Broj računa 4228/57739 19.08.2026. 15:04\",\n    \"value\": \"4228/57739\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"41,49\",\n    \"value\": \"41,49\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1064,
+   "tokens_out": 501,
+   "latency_ms": 20565
+  },
+  "cached": false
+ }
+}

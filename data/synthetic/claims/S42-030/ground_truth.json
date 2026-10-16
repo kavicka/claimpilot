@@ -19,8 +19,8 @@
  "event_date": "2026-07-25",
  "expected": {
   "status": "IN_REVIEW",
-  "queue": "standard",
-  "rule": "R9",
+  "queue": "senior",
+  "rule": "R10",
   "total_payout_eur": "1064.40",
   "deductible_eur": "0.00",
   "by_coverage": {

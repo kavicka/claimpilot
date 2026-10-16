@@ -23,8 +23,8 @@
    "den": 1832
   },
   "grounded_share": {
-   "value": 0.947945205479452,
-   "num": 1730,
+   "value": 0.9484931506849315,
+   "num": 1731,
    "den": 1825
   },
   "leaked_values_in_payloads": {
@@ -81,7 +81,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Ospedale Civile Schiavone | 6 920,28 | EUR",
+    "quote": "Liečebné náklady - Ospedale Civile Schiavone | 6 920,28 | EUR",
     "kind": "pair"
    }
   },
@@ -99,7 +99,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Ospedale Civile Schiavone | 6 920,28 | EUR",
+    "quote": "Liečebné náklady - Ospedale Civile Schiavone | 6 920,28 | EUR",
     "kind": "pair"
    }
   },
@@ -117,7 +117,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "Liečebné náklady – Ospedale Civile Schiavone | 6 920,28 | EUR",
+    "quote": "Liečebné náklady - Ospedale Civile Schiavone | 6 920,28 | EUR",
     "kind": "pair"
    }
   },
@@ -209,7 +209,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -492,7 +492,7 @@
    "id": "S42-001/D3/patient_birth_date",
    "ok": true,
    "expected": "29/11/1968",
-   "got": "29/11/1968",
+   "got": "29. 11. 1968",
    "tags": [
     "all_field_f1"
    ],
@@ -502,7 +502,7 @@
     "language": "it",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "29/11/1968",
+    "quote": "<DOB_1>",
     "kind": "pair"
    }
   },
@@ -1167,7 +1167,7 @@
    "id": "S42-002/D3/patient_name",
    "ok": false,
    "expected": "Gabriela Salajová",
-   "got": "Gabriela Salajová, geb. 17.08.1965",
+   "got": "Gabriela Salajová, geb. 17. 8. 1965",
    "tags": [
     "all_field_f1"
    ],
@@ -1177,7 +1177,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, geb. 17.08.1965",
+    "quote": "<PERSON_1>, geb. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -2018,7 +2018,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady - Farkas International Medical Centre 106 954,00 HUF",
+    "quote": "Liečebné náklady - Farkas International Medical Centre | 106 954,00 | HUF",
     "kind": "pair"
    }
   },
@@ -2036,7 +2036,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady - Farkas International Medical Centre 106 954,00 HUF",
+    "quote": "Liečebné náklady - Farkas International Medical Centre | 106 954,00 | HUF",
     "kind": "pair"
    }
   },
@@ -2054,7 +2054,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady - Farkas International Medical Centre 106 954,00 HUF",
+    "quote": "Liečebné náklady - Farkas International Medical Centre | 106 954,00 | HUF",
     "kind": "pair"
    }
   },
@@ -2624,7 +2624,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1>, DOB 16/09/1959 | DATE OF SERVICE 03/06/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 03/06/2026",
     "kind": "pair"
    }
   },
@@ -2678,7 +2678,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1>, DOB 16/09/1959 | DATE OF SERVICE 03/06/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 03/06/2026",
     "kind": "pair"
    }
   },
@@ -3134,8 +3134,8 @@
     "doc_type": "medical_report",
     "scan": true,
     "language": "sk",
-    "grounded": true,
-    "confidence": 0.55,
+    "grounded": false,
+    "confidence": 0.3,
     "quote": "29. 2. 1969",
     "kind": "pair"
    }
@@ -3638,7 +3638,7 @@
    "id": "S42-007/D2/patient_birth_date",
    "ok": true,
    "expected": "02/12/1997",
-   "got": "02/12/1997",
+   "got": "12. 2. 1997",
    "tags": [
     "all_field_f1"
    ],
@@ -3648,7 +3648,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 02/12/1997",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -3666,7 +3666,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 02/12/1997",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -3757,7 +3757,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Roberts International Medical Centre | 616,36 | EUR",
+    "quote": "Liečebné náklady - Roberts International Medical Centre | 616,36 | EUR",
     "kind": "pair"
    }
   },
@@ -3775,7 +3775,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Roberts International Medical Centre | 616,36 | EUR",
+    "quote": "Liečebné náklady - Roberts International Medical Centre | 616,36 | EUR",
     "kind": "pair"
    }
   },
@@ -3793,7 +3793,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "Liečebné náklady – Roberts International Medical Centre | 616,36 | EUR",
+    "quote": "Liečebné náklady - Roberts International Medical Centre | 616,36 | EUR",
     "kind": "pair"
    }
   },
@@ -4316,7 +4316,7 @@
    "id": "S42-008/D3/patient_birth_date",
    "ok": true,
    "expected": "19/07/1956",
-   "got": "19/07/1956",
+   "got": "19. 7. 1956",
    "tags": [
     "all_field_f1"
    ],
@@ -4326,7 +4326,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "19/07/1956",
+    "quote": "<DOB_1>",
     "kind": "pair"
    }
   },
@@ -4618,7 +4618,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1>, DOB 19/07/1956 | DATE OF SERVICE 08/07/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 08/07/2026",
     "kind": "pair"
    }
   },
@@ -4672,7 +4672,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1>, DOB 19/07/1956 | DATE OF SERVICE 08/07/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 08/07/2026",
     "kind": "pair"
    }
   },
@@ -4727,7 +4727,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady - Medizinisches Zentrum Holzmann | 775,82 | EUR",
+    "quote": "Liečebné náklady – Medizinisches Zentrum Holzmann | 775,82 | EUR",
     "kind": "pair"
    }
   },
@@ -4745,7 +4745,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady - Medizinisches Zentrum Holzmann | 775,82 | EUR",
+    "quote": "Liečebné náklady – Medizinisches Zentrum Holzmann | 775,82 | EUR",
     "kind": "pair"
    }
   },
@@ -4763,7 +4763,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "Liečebné náklady - Medizinisches Zentrum Holzmann | 775,82 | EUR",
+    "quote": "Liečebné náklady – Medizinisches Zentrum Holzmann | 775,82 | EUR",
     "kind": "pair"
    }
   },
@@ -4909,7 +4909,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -5340,7 +5340,7 @@
    "id": "S42-009/D3/patient_birth_date",
    "ok": true,
    "expected": "01.08.1969",
-   "got": "01.08.1969",
+   "got": "1. 8. 1969",
    "tags": [
     "all_field_f1"
    ],
@@ -5350,7 +5350,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT/IN | GEB. <PERSON_1> | 01.08.1969",
+    "quote": "<PERSON_1> | <DOB_1>",
     "kind": "pair"
    }
   },
@@ -5368,7 +5368,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT/IN | GEB. <PERSON_1> | 01.08.1969",
+    "quote": "<PERSON_1> | <DOB_1>",
     "kind": "pair"
    }
   },
@@ -5678,7 +5678,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, geb. 01.08.1969 | 20.03.2026",
+    "quote": "<PERSON_1>, geb. <DOB_1> | 20.03.2026",
     "kind": "pair"
    }
   },
@@ -6348,9 +6348,9 @@
     "doc_type": "policy_certificate",
     "scan": false,
     "language": "sk",
-    "grounded": false,
-    "confidence": 0.45,
-    "quote": "POISTNÉ 89,00 EUR | DÁTUM UZAVRETIA 15. 9. 2025",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "POISTNÉ | DÁTUM UZAVRETIA 89,00 EUR | 15. 9. 2025",
     "kind": "pair"
    }
   },
@@ -6441,9 +6441,9 @@
     "doc_type": "policy_certificate",
     "scan": false,
     "language": "sk",
-    "grounded": false,
-    "confidence": 0.45,
-    "quote": "POISTNÉ 89,00 EUR | DÁTUM UZAVRETIA 15. 9. 2025",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "POISTNÉ | DÁTUM UZAVRETIA 89,00 EUR | 15. 9. 2025",
     "kind": "pair"
    }
   },
@@ -6681,7 +6681,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Medizinisches Zentrum Stalder | 172,94 | CHF",
+    "quote": "Liečebné náklady - Medizinisches Zentrum Stalder 172,94 CHF",
     "kind": "pair"
    }
   },
@@ -6699,7 +6699,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Medizinisches Zentrum Stalder | 172,94 | CHF",
+    "quote": "Liečebné náklady - Medizinisches Zentrum Stalder 172,94 CHF",
     "kind": "pair"
    }
   },
@@ -6717,7 +6717,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "Liečebné náklady – Medizinisches Zentrum Stalder | 172,94 | CHF",
+    "quote": "Liečebné náklady - Medizinisches Zentrum Stalder 172,94 CHF",
     "kind": "pair"
    }
   },
@@ -6809,7 +6809,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -7232,7 +7232,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Mittelohrentzündung",
+    "quote": "H66.9",
     "kind": "pair"
    }
   },
@@ -7240,7 +7240,7 @@
    "id": "S42-011/D3/patient_birth_date",
    "ok": true,
    "expected": "27.10.1969",
-   "got": "27.10.1969",
+   "got": "27. 10. 1969",
    "tags": [
     "all_field_f1"
    ],
@@ -7250,7 +7250,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 27.10.1969",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -7268,7 +7268,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 27.10.1969",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -7359,7 +7359,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Poliambulatorio Donati | 680,22 | EUR",
+    "quote": "Liečebné náklady - Poliambulatorio Donati | 680,22 | EUR",
     "kind": "pair"
    }
   },
@@ -7377,7 +7377,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Poliambulatorio Donati | 680,22 | EUR",
+    "quote": "Liečebné náklady - Poliambulatorio Donati | 680,22 | EUR",
     "kind": "pair"
    }
   },
@@ -7395,7 +7395,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "Liečebné náklady – Poliambulatorio Donati | 680,22 | EUR",
+    "quote": "Liečebné náklady - Poliambulatorio Donati | 680,22 | EUR",
     "kind": "pair"
    }
   },
@@ -7487,7 +7487,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -7688,7 +7688,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Medizinisches Zentrum Stark",
+    "quote": "Liečebné náklady - Medizinisches Zentrum Stark | 765,26 | EUR",
     "kind": "pair"
    }
   },
@@ -7706,7 +7706,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Medizinisches Zentrum Stark",
+    "quote": "Liečebné náklady - Medizinisches Zentrum Stark | 765,26 | EUR",
     "kind": "pair"
    }
   },
@@ -7724,7 +7724,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "Liečebné náklady – Medizinisches Zentrum Stark",
+    "quote": "Liečebné náklady - Medizinisches Zentrum Stark | 765,26 | EUR",
     "kind": "pair"
    }
   },
@@ -7816,7 +7816,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -8081,7 +8081,7 @@
    "id": "S42-013/D2/patient_birth_date",
    "ok": true,
    "expected": "27.11.1974",
-   "got": "27.11.1974",
+   "got": "27. 11. 1974",
    "tags": [
     "all_field_f1"
    ],
@@ -8091,7 +8091,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 27.11.1974",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -8109,7 +8109,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 27.11.1974",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -8200,7 +8200,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady - Poliklinika Tomičić | 172,71 | EUR",
+    "quote": "Liečebné náklady – Poliklinika Tomičić | 172,71 | EUR",
     "kind": "pair"
    }
   },
@@ -8218,7 +8218,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady - Poliklinika Tomičić | 172,71 | EUR",
+    "quote": "Liečebné náklady – Poliklinika Tomičić | 172,71 | EUR",
     "kind": "pair"
    }
   },
@@ -8226,7 +8226,7 @@
    "id": "S42-014/D1/claimed_items[0].description",
    "ok": true,
    "expected": "Liečebné náklady – Poliklinika Tomičić",
-   "got": "Liečebné náklady - Poliklinika Tomičić",
+   "got": "Liečebné náklady – Poliklinika Tomičić",
    "tags": [
     "all_field_f1"
    ],
@@ -8235,8 +8235,8 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.95,
-    "quote": "Liečebné náklady - Poliklinika Tomičić | 172,71 | EUR",
+    "confidence": 0.55,
+    "quote": "Liečebné náklady – Poliklinika Tomičić | 172,71 | EUR",
     "kind": "pair"
    }
   },
@@ -8382,7 +8382,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -8877,7 +8877,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -9318,7 +9318,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "J18.9",
+    "quote": "MKB-10 J18.9",
     "kind": "pair"
    }
   },
@@ -9326,7 +9326,7 @@
    "id": "S42-015/D3/patient_birth_date",
    "ok": true,
    "expected": "09.04.1991.",
-   "got": "09.04.1991.",
+   "got": "9. 4. 1991",
    "tags": [
     "all_field_f1"
    ],
@@ -9336,7 +9336,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "ROĐEN/A 09.04.1991.",
+    "quote": "ROĐEN/A <DOB_1>",
     "kind": "pair"
    }
   },
@@ -9354,7 +9354,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>",
+    "quote": "PACIJENT <PERSON_1>",
     "kind": "pair"
    }
   },
@@ -9372,7 +9372,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liječnik: <PERSON_2> Potpis i pečat",
+    "quote": "Liječnik: <PERSON_2> Potpis i pečat ROĐEN/A <DOB_1>",
     "kind": "pair"
    }
   },
@@ -9409,7 +9409,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "29.03.2026.",
+    "quote": "DATUM PREGLEDA / PRIJEMA 29.03.2026.",
     "kind": "pair"
    }
   },
@@ -10356,7 +10356,7 @@
    "id": "S42-015/D4/line_items[31].description",
    "ok": false,
    "expected": "Ultrazvuk",
-   "got": "Arnold Zúbek, rođen/a 09.04.1991.",
+   "got": "Arnold Zúbek, rođen/a 9. 4. 1991",
    "tags": [
     "all_field_f1"
    ],
@@ -11104,7 +11104,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, rođen/a 09.04.1991.",
+    "quote": "<PERSON_1>, rođen/a <DOB_1>",
     "kind": "pair"
    }
   },
@@ -11557,7 +11557,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -12601,7 +12601,7 @@
     "language": "cs",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, nar. 2. 11. 1984",
+    "quote": "<PERSON_1>, nar. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -12764,7 +12764,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Nákup nevyhnutných vecí | 1 393,23 | TRY",
+    "quote": "Nákup nevyhnutných vecí | 1 393,23 | TRY",
     "kind": "pair"
    }
   },
@@ -12782,7 +12782,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Nákup nevyhnutných vecí | 1 393,23 | TRY",
+    "quote": "Nákup nevyhnutných vecí | 1 393,23 | TRY",
     "kind": "pair"
    }
   },
@@ -12800,7 +12800,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Nákup nevyhnutných vecí | 1 393,23 | TRY",
+    "quote": "Nákup nevyhnutných vecí | 1 393,23 | TRY",
     "kind": "pair"
    }
   },
@@ -12892,7 +12892,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -13670,7 +13670,7 @@
    "id": "S42-019/D2/patient_birth_date",
    "ok": true,
    "expected": "25.10.1992.",
-   "got": "25.10.1992.",
+   "got": "25. 10. 1992",
    "tags": [
     "all_field_f1"
    ],
@@ -13680,7 +13680,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PACIJENT <PERSON_1> | ROĐEN/A 25.10.1992.",
+    "quote": "PACIJENT <PERSON_1> | ROĐEN/A <DOB_1>",
     "kind": "pair"
    }
   },
@@ -13698,7 +13698,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PACIJENT <PERSON_1> | ROĐEN/A 25.10.1992.",
+    "quote": "PACIJENT <PERSON_1> | ROĐEN/A <DOB_1>",
     "kind": "pair"
    }
   },
@@ -15700,7 +15700,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PACIJENT <PERSON_1>, rođen/a 25.10.1992. | DATUM USLUGE 07.07.2026.",
+    "quote": "PACIJENT <PERSON_1>, rođen/a <DOB_1> | DATUM USLUGE 07.07.2026.",
     "kind": "pair"
    }
   },
@@ -15754,7 +15754,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PACIJENT <PERSON_1>, rođen/a 25.10.1992. | DATUM USLUGE 07.07.2026.",
+    "quote": "PACIJENT <PERSON_1>, rođen/a <DOB_1> | DATUM USLUGE 07.07.2026.",
     "kind": "pair"
    }
   },
@@ -16541,7 +16541,7 @@
     "language": "it",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, nato/a il 07/01/1972",
+    "quote": "<PERSON_1>, nato/a il <DOB_1>",
     "kind": "pair"
    }
   },
@@ -17209,7 +17209,7 @@
    "id": "S42-021/D3/patient_birth_date",
    "ok": true,
    "expected": "01.11.1988",
-   "got": "01.11.1988",
+   "got": "1. 11. 1988",
    "tags": [
     "all_field_f1"
    ],
@@ -17219,7 +17219,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "GEB. 01.11.1988",
+    "quote": "GEB. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -17511,7 +17511,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, geb. 01.11.1988 | BEHANDLUNGSDATUM 03.06.2026",
+    "quote": "<PERSON_1>, geb. <DOB_1> | BEHANDLUNGSDATUM 03.06.2026",
     "kind": "pair"
    }
   },
@@ -17585,389 +17585,6 @@
     "grounded": true,
     "confidence": 0.95,
     "quote": "Gesamtbetrag | 784,57 €",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/claim_types",
-   "ok": true,
-   "expected": "[\"Oneskorenie batožiny\"]",
-   "got": "[\"Oneskorenie batožiny\"]",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.9,
-    "quote": "Liečebné náklady Úraz Batožina X Oneskorenie batožiny",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/claimed_items[0].amount",
-   "ok": true,
-   "expected": "2 360,08",
-   "got": "2 360,08",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Nákup nevyhnutných vecí | 2 360,08 | TRY",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/claimed_items[0].currency",
-   "ok": true,
-   "expected": "TRY",
-   "got": "TRY",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Nákup nevyhnutných vecí | 2 360,08 | TRY",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/claimed_items[0].description",
-   "ok": true,
-   "expected": "Nákup nevyhnutných vecí",
-   "got": "Nákup nevyhnutných vecí",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Nákup nevyhnutných vecí | 2 360,08 | TRY",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/claimed_items[1].amount",
-   "ok": true,
-   "expected": "1 673,08",
-   "got": "1 673,08",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Nákup nevyhnutných vecí | 1 673,08 | TRY",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/claimed_items[1].currency",
-   "ok": true,
-   "expected": "TRY",
-   "got": "TRY",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Nákup nevyhnutných vecí | 1 673,08 | TRY",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/claimed_items[1].description",
-   "ok": true,
-   "expected": "Nákup nevyhnutných vecí",
-   "got": "Nákup nevyhnutných vecí",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Nákup nevyhnutných vecí | 1 673,08 | TRY",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/destination_country",
-   "ok": true,
-   "expected": "Turecko",
-   "got": "Turecko",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Turecko",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/event_date",
-   "ok": true,
-   "expected": "25. 7. 2026",
-   "got": "25. 7. 2026",
-   "tags": [
-    "all_field_f1",
-    "critical_field_accuracy"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "25. 7. 2026",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/event_description",
-   "ok": true,
-   "expected": "Batožina prišla s veľkým oneskorením, asi 20 hodín. Musel som si kúpiť hygienu a oblečenie, pretože ma neušla.",
-   "got": "Batožina prišla s veľkým oneskorením, asi 20 hodín. Musel som si kúpiť hygienu a oblečenie, pretože ma neušla.",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Batožina prišla s veľkým oneskorením, asi 20 hodín. Musel som si kúpiť hygienu a",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/event_place",
-   "ok": true,
-   "expected": "Bodrum, Turecko",
-   "got": "Bodrum, Turecko",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Bodrum, Turecko",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/iban",
-   "ok": true,
-   "expected": "SK23 5200 0000 0053 8050 8550",
-   "got": "SK23 5200 0000 0053 8050 8550",
-   "tags": [
-    "all_field_f1",
-    "critical_field_accuracy"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "<IBAN_1>",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/insured_address",
-   "ok": true,
-   "expected": "Šalátová 1, 872 86 Moravany",
-   "got": "Šalátová 1, 872 86 Moravany",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "<ADDRESS_1>, 872 86 Moravany",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/insured_birth_number",
-   "ok": true,
-   "expected": "846011/3838",
-   "got": "846011/3838",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "<RC_1>",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/insured_email",
-   "ok": true,
-   "expected": "olga.danova57@example.com",
-   "got": "olga.danova57@example.com",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "<EMAIL_1>",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/insured_name",
-   "ok": true,
-   "expected": "Oľga Danová",
-   "got": "Oľga Danová",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "<PERSON_1>",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/insured_phone",
-   "ok": true,
-   "expected": "+421 927 656 123",
-   "got": "+421 927 656 123",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "<PHONE_1>",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/policy_number",
-   "ok": true,
-   "expected": "CP67061186",
-   "got": "CP67061186",
-   "tags": [
-    "all_field_f1",
-    "critical_field_accuracy"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "CP67061186",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/signature_date",
-   "ok": true,
-   "expected": "18. 8. 2026",
-   "got": "18. 8. 2026",
-   "tags": [
-    "all_field_f1"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "Dátum: 18. 8. 2026",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/trip_end",
-   "ok": true,
-   "expected": "8. 8. 2026",
-   "got": "8. 8. 2026",
-   "tags": [
-    "all_field_f1",
-    "critical_field_accuracy"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "8. 8. 2026",
-    "kind": "pair"
-   }
-  },
-  {
-   "id": "S42-022/D1/trip_start",
-   "ok": true,
-   "expected": "25. 7. 2026",
-   "got": "25. 7. 2026",
-   "tags": [
-    "all_field_f1",
-    "critical_field_accuracy"
-   ],
-   "detail": {
-    "doc_type": "claim_form",
-    "scan": false,
-    "language": "sk",
-    "grounded": true,
-    "confidence": 0.95,
-    "quote": "25. 7. 2026",
     "kind": "pair"
    }
   },
@@ -19000,7 +18617,7 @@
    "id": "S42-023/D3/patient_birth_date",
    "ok": true,
    "expected": "11/10/1982",
-   "got": "11/10/1982",
+   "got": "11. 10. 1982",
    "tags": [
     "all_field_f1"
    ],
@@ -19010,7 +18627,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "DOB 11/10/1982",
+    "quote": "DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -19302,7 +18919,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, DOB 11/10/1982 | 15/05/2026",
+    "quote": "<PERSON_1>, DOB <DOB_1> | 15/05/2026",
     "kind": "pair"
    }
   },
@@ -19356,7 +18973,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, DOB 11/10/1982 | 15/05/2026",
+    "quote": "<PERSON_1>, DOB <DOB_1> | 15/05/2026",
     "kind": "pair"
    }
   },
@@ -19906,7 +19523,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Poliklinika Veselá | 5 245,00 | CZK",
+    "quote": "Liečebné náklady - Poliklinika Veselá",
     "kind": "pair"
    }
   },
@@ -19924,7 +19541,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady – Poliklinika Veselá | 5 245,00 | CZK",
+    "quote": "Liečebné náklady - Poliklinika Veselá",
     "kind": "pair"
    }
   },
@@ -19942,7 +19559,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "Liečebné náklady – Poliklinika Veselá | 5 245,00 | CZK",
+    "quote": "Liečebné náklady - Poliklinika Veselá",
     "kind": "pair"
    }
   },
@@ -20366,6 +19983,389 @@
     "grounded": true,
     "confidence": 0.95,
     "quote": "Poistný certifikát - Cestovné poistenie Basic",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/claim_types",
+   "ok": true,
+   "expected": "[\"Oneskorenie batožiny\"]",
+   "got": "[\"Oneskorenie batožiny\"]",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.9,
+    "quote": "Liečebné náklady Úraz Batožina X Oneskorenie batožiny",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/claimed_items[0].amount",
+   "ok": true,
+   "expected": "1 949,24",
+   "got": "1 949,24",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Nákup nevyhnutných vecí | 1 949,24 | TRY",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/claimed_items[0].currency",
+   "ok": true,
+   "expected": "TRY",
+   "got": "TRY",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Nákup nevyhnutných vecí | 1 949,24 | TRY",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/claimed_items[0].description",
+   "ok": true,
+   "expected": "Nákup nevyhnutných vecí",
+   "got": "Nákup nevyhnutných vecí",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Nákup nevyhnutných vecí | 1 949,24 | TRY",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/claimed_items[1].amount",
+   "ok": true,
+   "expected": "2 451,21",
+   "got": "2 451,21",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Nákup nevyhnutných vecí | 1 949,24 | TRY",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/claimed_items[1].currency",
+   "ok": true,
+   "expected": "TRY",
+   "got": "TRY",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Nákup nevyhnutných vecí | 1 949,24 | TRY",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/claimed_items[1].description",
+   "ok": true,
+   "expected": "Nákup nevyhnutných vecí",
+   "got": "Nákup nevyhnutných vecí",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Nákup nevyhnutných vecí | 1 949,24 | TRY",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/destination_country",
+   "ok": true,
+   "expected": "Turecko",
+   "got": "Turecko",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Turecko",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/event_date",
+   "ok": true,
+   "expected": "21. 4. 2026",
+   "got": "21. 4. 2026",
+   "tags": [
+    "all_field_f1",
+    "critical_field_accuracy"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "21. 4. 2026",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/event_description",
+   "ok": true,
+   "expected": "Batožina prišla s veľkým oneskorením, asi 35 hodín. Musel som si kúpiť hygienu a oblečenie, pretože ma batožina nedostala.",
+   "got": "Batožina prišla s veľkým oneskorením, asi 35 hodín. Musel som si kúpiť hygienu a oblečenie, pretože ma batožina nedostala.",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Batožina prišla s veľkým oneskorením, asi 35 hodín. Musel som si kúpiť hygienu a",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/event_place",
+   "ok": true,
+   "expected": "Antalya, Turecko",
+   "got": "Antalya, Turecko",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Antalya, Turecko",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/iban",
+   "ok": true,
+   "expected": "SK26 8330 9069 9417 1684 5768",
+   "got": "SK26 8330 9069 9417 1684 5768",
+   "tags": [
+    "all_field_f1",
+    "critical_field_accuracy"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/insured_address",
+   "ok": true,
+   "expected": "Ulica Karola Adlera 42, 837 84 Ráztočno",
+   "got": "Ulica Karola Adlera 42, 837 84 Ráztočno",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "<ADDRESS_1>, 837 84 Ráztočno",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/insured_birth_number",
+   "ok": true,
+   "expected": "860303/2614",
+   "got": "860303/2614",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "<RC_1>",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/insured_email",
+   "ok": true,
+   "expected": "levoslav.spilar12@mail.example.sk",
+   "got": "levoslav.spilar12@mail.example.sk",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "<EMAIL_1>",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/insured_name",
+   "ok": true,
+   "expected": "Levoslav Špilár",
+   "got": "Levoslav Špilár",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "<PERSON_1>",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/insured_phone",
+   "ok": true,
+   "expected": "+421 914 129 797",
+   "got": "+421 914 129 797",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "<PHONE_1>",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/policy_number",
+   "ok": true,
+   "expected": "CP71308842",
+   "got": "CP71308842",
+   "tags": [
+    "all_field_f1",
+    "critical_field_accuracy"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "CP71308842",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/signature_date",
+   "ok": true,
+   "expected": "21. 5. 2026",
+   "got": "21. 5. 2026",
+   "tags": [
+    "all_field_f1"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "Dátum: 21. 5. 2026",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/trip_end",
+   "ok": true,
+   "expected": "3. 5. 2026",
+   "got": "3. 5. 2026",
+   "tags": [
+    "all_field_f1",
+    "critical_field_accuracy"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "3. 5. 2026",
+    "kind": "pair"
+   }
+  },
+  {
+   "id": "S42-026/D1/trip_start",
+   "ok": true,
+   "expected": "21. 4. 2026",
+   "got": "21. 4. 2026",
+   "tags": [
+    "all_field_f1",
+    "critical_field_accuracy"
+   ],
+   "detail": {
+    "doc_type": "claim_form",
+    "scan": false,
+    "language": "sk",
+    "grounded": true,
+    "confidence": 0.95,
+    "quote": "21. 4. 2026",
     "kind": "pair"
    }
   },
@@ -21224,7 +21224,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady - Andrews International Medical Centre | 252,45 | EUR",
+    "quote": "Liečebné náklady – Andrews International Medical Centre | 252,45 | EUR",
     "kind": "pair"
    }
   },
@@ -21242,7 +21242,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Liečebné náklady - Andrews International Medical Centre | 252,45 | EUR",
+    "quote": "Liečebné náklady – Andrews International Medical Centre | 252,45 | EUR",
     "kind": "pair"
    }
   },
@@ -21250,7 +21250,7 @@
    "id": "S42-027/D1/claimed_items[0].description",
    "ok": true,
    "expected": "Liečebné náklady – Andrews International Medical Centre",
-   "got": "Liečebné náklady - Andrews International Medical Centre",
+   "got": "Liečebné náklady – Andrews International Medical Centre",
    "tags": [
     "all_field_f1"
    ],
@@ -21259,8 +21259,8 @@
     "scan": false,
     "language": "sk",
     "grounded": true,
-    "confidence": 0.95,
-    "quote": "Liečebné náklady - Andrews International Medical Centre | 252,45 | EUR",
+    "confidence": 0.55,
+    "quote": "Liečebné náklady – Andrews International Medical Centre | 252,45 | EUR",
     "kind": "pair"
    }
   },
@@ -21406,7 +21406,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -21837,7 +21837,7 @@
    "id": "S42-027/D3/patient_birth_date",
    "ok": true,
    "expected": "22/02/1968",
-   "got": "22/02/1968",
+   "got": "22. 2. 1968",
    "tags": [
     "all_field_f1"
    ],
@@ -21847,7 +21847,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 22/02/1968",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -21865,7 +21865,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 22/02/1968",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -22067,7 +22067,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1>, DOB 22/02/1968 | DATE OF SERVICE 18/04/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 18/04/2026",
     "kind": "pair"
    }
   },
@@ -22121,7 +22121,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1>, DOB 22/02/1968 | DATE OF SERVICE 18/04/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 18/04/2026",
     "kind": "pair"
    }
   },
@@ -23270,7 +23270,7 @@
     "language": "sk",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<IBAN_1>",
+    "quote": "IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>",
     "kind": "pair"
    }
   },
@@ -23701,7 +23701,7 @@
    "id": "S42-029/D3/patient_birth_date",
    "ok": true,
    "expected": "31/03/1986",
-   "got": "31/03/1986",
+   "got": "31. 3. 1986",
    "tags": [
     "all_field_f1"
    ],
@@ -23711,7 +23711,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "31/03/1986",
+    "quote": "<DOB_1>",
     "kind": "pair"
    }
   },
@@ -23931,7 +23931,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, DOB 31/03/1986",
+    "quote": "<PERSON_1>, DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -24854,7 +24854,7 @@
    "id": "S42-030/D3/patient_birth_date",
    "ok": true,
    "expected": "13/07/1963",
-   "got": "13/07/1963",
+   "got": "13. 7. 1963",
    "tags": [
     "all_field_f1"
    ],
@@ -24864,7 +24864,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 13/07/1963",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -24882,7 +24882,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 13/07/1963",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -25156,7 +25156,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, DOB 13/07/1963",
+    "quote": "<PERSON_1>, DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -27015,7 +27015,7 @@
    "id": "S42-033/D3/patient_birth_date",
    "ok": true,
    "expected": "22.11.1963",
-   "got": "22.11.1963",
+   "got": "22. 11. 1963",
    "tags": [
     "all_field_f1"
    ],
@@ -27025,7 +27025,7 @@
     "language": "de",
     "grounded": false,
     "confidence": 0.45,
-    "quote": "GEB. 22.11.1963",
+    "quote": "GEB. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -27856,7 +27856,7 @@
    "id": "S42-035/D3/patient_birth_date",
    "ok": true,
    "expected": "27.02.1956",
-   "got": "27.02.1956",
+   "got": "27. 2. 1956",
    "tags": [
     "all_field_f1"
    ],
@@ -27866,7 +27866,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "GEB. 27.02.1956",
+    "quote": "GEB. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -28158,7 +28158,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, geb. 27.02.1956 | BEHANDLUNGSDATUM 27.07.2026",
+    "quote": "<PERSON_1>, geb. <DOB_1> | BEHANDLUNGSDATUM 27.07.2026",
     "kind": "pair"
    }
   },
@@ -28678,7 +28678,7 @@
    "id": "S42-036/D2/patient_birth_date",
    "ok": true,
    "expected": "04.11.1977.",
-   "got": "04.11.1977.",
+   "got": "4. 11. 1977",
    "tags": [
     "all_field_f1"
    ],
@@ -28688,7 +28688,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PACIJENT <PERSON_1> | ROĐEN/A 04.11.1977.",
+    "quote": "PACIJENT <PERSON_1> | ROĐEN/A <DOB_1>",
     "kind": "pair"
    }
   },
@@ -28706,7 +28706,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PACIJENT <PERSON_1> | ROĐEN/A 04.11.1977.",
+    "quote": "PACIJENT <PERSON_1> | ROĐEN/A <DOB_1>",
     "kind": "pair"
    }
   },
@@ -29700,7 +29700,7 @@
     "language": "hr",
     "grounded": false,
     "confidence": 0.45,
-    "quote": "31 PACJEN Laboratorijske pretrage <PERSON_1>, rođen/a 04.11.1977.",
+    "quote": "31 PACJEN Laboratorijske pretrage <PERSON_1>, rođen/a <DOB_1>",
     "kind": "pair"
    }
   },
@@ -29718,7 +29718,7 @@
     "language": "hr",
     "grounded": false,
     "confidence": 0.45,
-    "quote": "31 PACJEN Laboratorijske pretrage <PERSON_1>, rođen/a 04.11.1977.",
+    "quote": "31 PACJEN Laboratorijske pretrage <PERSON_1>, rođen/a <DOB_1>",
     "kind": "pair"
    }
   },
@@ -30626,7 +30626,7 @@
    "id": "S42-036/D3/patient_name",
    "ok": false,
    "expected": "Izabela Fabiánová",
-   "got": "Izabela Fabiánová, rođen/a 04.11.1977.",
+   "got": "Izabela Fabiánová, rođen/a 4. 11. 1977",
    "tags": [
     "all_field_f1"
    ],
@@ -30636,7 +30636,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "<PERSON_1>, rođen/a 04.11.1977.",
+    "quote": "<PERSON_1>, rođen/a <DOB_1>",
     "kind": "pair"
    }
   },
@@ -31130,7 +31130,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "Mittelohrentzündung",
+    "quote": "H66.9",
     "kind": "pair"
    }
   },
@@ -31138,7 +31138,7 @@
    "id": "S42-037/D2/patient_birth_date",
    "ok": true,
    "expected": "27.10.1969",
-   "got": "27.10.1969",
+   "got": "27. 10. 1969",
    "tags": [
     "all_field_f1"
    ],
@@ -31148,7 +31148,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 27.10.1969",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -31166,7 +31166,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT/IN <PERSON_1> | GEB. 27.10.1969",
+    "quote": "PATIENT/IN <PERSON_1> | GEB. <DOB_1>",
     "kind": "pair"
    }
   },
@@ -31368,7 +31368,7 @@
     "language": "de",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, geb. 27.10.1969 | 10.08.2026",
+    "quote": "<PERSON_1>, geb. <DOB_1> | 10.08.2026",
     "kind": "pair"
    }
   },
@@ -31870,7 +31870,7 @@
    "id": "S42-038/D2/patient_birth_date",
    "ok": true,
    "expected": "22/02/1968",
-   "got": "22/02/1968",
+   "got": "22. 2. 1968",
    "tags": [
     "all_field_f1"
    ],
@@ -31880,7 +31880,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 22/02/1968",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -31898,7 +31898,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 22/02/1968",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -32100,7 +32100,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1>, DOB 22/02/1968 | DATE OF SERVICE 18/04/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 18/04/2026",
     "kind": "pair"
    }
   },
@@ -32154,7 +32154,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1>, DOB 22/02/1968 | DATE OF SERVICE 18/04/2026",
+    "quote": "PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 18/04/2026",
     "kind": "pair"
    }
   },
@@ -32602,7 +32602,7 @@
    "id": "S42-039/D2/patient_birth_date",
    "ok": true,
    "expected": "05/14/1995",
-   "got": "05/14/1995",
+   "got": "14. 5. 1995",
    "tags": [
     "all_field_f1"
    ],
@@ -32612,7 +32612,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 05/14/1995",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -32630,7 +32630,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PATIENT <PERSON_1> | DOB 05/14/1995",
+    "quote": "PATIENT <PERSON_1> | DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -32832,7 +32832,7 @@
     "language": "en",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, DOB 05/14/1995",
+    "quote": "<PERSON_1>, DOB <DOB_1>",
     "kind": "pair"
    }
   },
@@ -33334,7 +33334,7 @@
    "id": "S42-040/D2/patient_birth_date",
    "ok": true,
    "expected": "05.11.2006.",
-   "got": "05.11.2006.",
+   "got": "5. 11. 2006",
    "tags": [
     "all_field_f1"
    ],
@@ -33344,7 +33344,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "PACIJENT Nora | ROĐEN/A 05.11.2006.",
+    "quote": "PACIJENT Nora | ROĐEN/A <DOB_1>",
     "kind": "pair"
    }
   },
@@ -33362,7 +33362,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.55,
-    "quote": "PACIJENT Nora | ROĐEN/A 05.11.2006.",
+    "quote": "PACIJENT Nora | ROĐEN/A <DOB_1>",
     "kind": "pair"
    }
   },
@@ -33564,7 +33564,7 @@
     "language": "hr",
     "grounded": true,
     "confidence": 0.95,
-    "quote": "<PERSON_1>, rođen/a 05.11.2006.",
+    "quote": "<PERSON_1>, rođen/a <DOB_1>",
     "kind": "pair"
    }
   },
@@ -33648,15 +33648,15 @@
    {
     "lo": 0.3,
     "hi": 0.5,
-    "n": 94,
-    "accuracy": 0.809,
-    "mean_conf": 0.429
+    "n": 93,
+    "accuracy": 0.796,
+    "mean_conf": 0.427
    },
    {
     "lo": 0.5,
     "hi": 0.7,
-    "n": 118,
-    "accuracy": 0.737,
+    "n": 119,
+    "accuracy": 0.748,
     "mean_conf": 0.55
    },
    {
@@ -33674,12 +33674,12 @@
     "mean_conf": 0.95
    }
   ],
-  "created": "20261015T215131Z",
+  "created": "20261015T235809Z",
   "git": {
-   "sha": "bd6a8ac",
+   "sha": "4f6ae4b",
    "dirty": true
   },
-  "dataset": "4aee4de982d2",
+  "dataset": "6bd4025701dc",
   "seed": 42,
   "cassette_mode": "auto",
   "overrides": {},
@@ -33697,12 +33697,12 @@
  "ops": {
   "llm_calls": 112,
   "cached_calls": 112,
-  "tokens_in": 273508,
-  "tokens_out": 84334,
+  "tokens_in": 273687,
+  "tokens_out": 84209,
   "tokens_per_item": 194.4,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 1071,
+  "worker_peak_rss_mb": 1072,
   "models": [
    "ollama:qwen3-vl:8b",
    "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M"

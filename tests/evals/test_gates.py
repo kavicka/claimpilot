@@ -105,3 +105,10 @@ def test_list_rows_are_matched_by_content_not_position():
     assert out["line_items[0].description"].value_raw == "EKG"
     assert out["line_items[1].amount"].value_raw == "20,00"
     assert out["line_items[2].description"].value_raw == "Extra"  # unmatched rows stay extra
+
+
+def test_min_gate_needs_no_baseline_and_skips_an_empty_metric():
+    assert check(report("adversarial", {"injection_detected": m(0.95, 19, 20)}), None) == []
+    problems = check(report("adversarial", {"injection_detected": m(0.8, 16, 20)}), None)
+    assert problems and "below 90%" in problems[0]
+    assert check(report("adversarial", {"injection_detected": m(0.0, 0, 0)}), None) == []

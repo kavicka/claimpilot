@@ -1,0 +1,6096 @@
+{
+ "suite": "pii",
+ "split": "dev",
+ "metrics": {
+  "recall_identifiers": {
+   "value": 1.0,
+   "num": 191,
+   "den": 191
+  },
+  "recall_names": {
+   "value": 1.0,
+   "num": 166,
+   "den": 166
+  },
+  "recall_address": {
+   "value": 1.0,
+   "num": 46,
+   "den": 46
+  },
+  "recall_birth_dates": {
+   "value": 1.0,
+   "num": 60,
+   "den": 60
+  },
+  "leaked_values": {
+   "value": 0.0,
+   "num": 0,
+   "den": 0
+  },
+  "over_redactions": {
+   "value": 0.0,
+   "num": 0,
+   "den": 0
+  }
+ },
+ "items": [
+  {
+   "id": "S42-001/D1/PERSON/Bruno Paška",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D1/BIRTH_NUMBER/681129/9825",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D1/ADDRESS/Brnianska 25",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D1/PHONE/+421 942 815 911",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D1/EMAIL/bruno.paska13@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D1/IBAN/SK93 0200 0000 0077 7153 2252",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D2/PERSON/Bruno Paška",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D2/BIRTH_NUMBER/681129/9825",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D3/PERSON/Bruno Paška",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-001/D3/PERSON/Nina Milanesi",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-001/D3/BIRTH_DATE/29/11/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-001/D4/PERSON/Bruno Paška",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-001/D4/BIRTH_DATE/29/11/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-002/D1/PERSON/Gabriela Salajová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-002/D1/BIRTH_NUMBER/655817/8396",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-002/D1/ADDRESS/Skýcovská 7",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-002/D1/PHONE/+421 909 198 264",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-002/D1/EMAIL/gabriela.salajova66@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-002/D1/IBAN/SK65 3100 0000 0060 7596 2803",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-002/D2/PERSON/Gabriela Salajová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-002/D2/PERSON/Volker Fuchs",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-002/D2/BIRTH_DATE/17.08.1965",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-002/D3/PERSON/Gabriela Salajová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-002/D3/BIRTH_DATE/17.08.1965",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-003/D1/PERSON/Igor Opluštil",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-003/D1/BIRTH_NUMBER/720928/9648",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-003/D1/ADDRESS/Košická 8",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-003/D1/PHONE/+421 918 381 178",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-003/D1/EMAIL/igor.oplustil67@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-003/D1/IBAN/SK88 0200 0000 0079 6964 8149",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-003/D2/PERSON/Igor Opluštil",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-003/D2/PERSON/Mária Němcová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-003/D2/BIRTH_DATE/28. 9. 1972",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-003/D3/PERSON/Igor Opluštil",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-003/D3/BIRTH_DATE/28. 9. 1972",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D1/PERSON/Vojtech Rys",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D1/BIRTH_NUMBER/950514/1701",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D1/ADDRESS/Kaplinská 208",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D1/PHONE/+421 949 427 151",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D1/EMAIL/vojtech.rys76@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D1/IBAN/SK61 5200 0000 0038 4608 6691",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D2/PERSON/Vojtech Rys",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D2/BIRTH_NUMBER/950514/1701",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D3/PERSON/Vojtech Rys",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D3/PERSON/Mark Jackson",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D3/BIRTH_DATE/05/14/1995",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D4/PERSON/Vojtech Rys",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-004/D4/BIRTH_DATE/05/14/1995",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D1/PERSON/Servác Kocák",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D1/BIRTH_NUMBER/590916/4844",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D1/ADDRESS/Hydinárska 4",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D1/PHONE/+421 949 185 466",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D1/EMAIL/servac.kocak17@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D1/IBAN/SK40 1100 0000 0023 2080 1705",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D2/PERSON/Servác Kocák",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D2/BIRTH_NUMBER/590916/4844",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D3/PERSON/Servác Kocák",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D3/PERSON/József Szabó",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D3/BIRTH_DATE/16/09/1959",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D4/PERSON/Servác Kocák",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-005/D4/BIRTH_DATE/16/09/1959",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D1/PERSON/Alexej Máčik",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D1/BIRTH_NUMBER/690223/0027",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D1/ADDRESS/F. Kostku 82",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D1/PHONE/+421 908 852 117",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D1/EMAIL/alexej.macik44@posta.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D1/IBAN/SK39 5600 7371 7093 7616 5192",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D2/PERSON/Alexej Máčik",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-006/D3/PERSON/Alexej Máčik",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-006/D3/PERSON/Xénia Zachariašová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-006/D3/BIRTH_DATE/23. 2. 1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-007/D1/PERSON/Otília Havranová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D1/BIRTH_NUMBER/975212/5130",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D1/ADDRESS/Pod Kobylou 7",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D1/PHONE/+421 901 124 658",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D1/EMAIL/otilia.havranova79@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D1/IBAN/SK35 5200 0000 0019 4325 8141",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D2/PERSON/Otília Havranová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D2/PERSON/Jody Esparza",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D2/BIRTH_DATE/02/12/1997",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D3/PERSON/Otília Havranová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-007/D3/BIRTH_DATE/02/12/1997",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D1/PERSON/Irena Machnáčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D1/BIRTH_NUMBER/565719/1111",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D1/ADDRESS/Na pažiti 18",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D1/PHONE/+421 907 679 737",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D1/EMAIL/irena.machnacova54@posta.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D1/IBAN/SK60 0200 0000 0057 9487 7613",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D2/PERSON/Irena Machnáčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D2/BIRTH_NUMBER/565719/1111",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D3/PERSON/Irena Machnáčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-008/D3/PERSON/Stacey Martin",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-008/D3/BIRTH_DATE/19/07/1956",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-008/D4/PERSON/Irena Machnáčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-008/D4/BIRTH_DATE/19/07/1956",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D1/PERSON/Miloslav Tomečko",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D1/BIRTH_NUMBER/690801/7094",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D1/ADDRESS/Kýčerského 92",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D1/PHONE/+421 915 144 192",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D1/EMAIL/miloslav.tomecko35@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D1/IBAN/SK60 0900 0000 0024 5879 1686",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D2/PERSON/Miloslav Tomečko",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D2/BIRTH_NUMBER/690801/7094",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D3/PERSON/Miloslav Tomečko",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D3/PERSON/Leopold Forster",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D3/BIRTH_DATE/01.08.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D4/PERSON/Miloslav Tomečko",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-009/D4/BIRTH_DATE/01.08.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-010/D1/PERSON/Šárka Jandová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-010/D1/BIRTH_NUMBER/057228/4867",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-010/D1/ADDRESS/Neužilova 74",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-010/D1/PHONE/+421 918 683 784",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-010/D1/EMAIL/sarka.jandova57@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-010/D1/IBAN/SK91 5600 7887 6213 0274 3100",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-010/D2/PERSON/Šárka Jandová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-010/D2/BIRTH_NUMBER/057228/4867",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-010/D3/PERSON/JANDOVA/SARKA MS",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-010/D3/ADDRESS/Neužilova 74",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-010/D3/PHONE/+421 918 683 784",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D1/PERSON/Metod Jakubčík",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D1/BIRTH_NUMBER/691027/6208",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D1/ADDRESS/Bojnická 74",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D1/PHONE/+421 941 210 918",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D1/EMAIL/metod.jakubcik82@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D1/IBAN/SK30 1111 6403 5655 5400 2894",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D2/PERSON/Metod Jakubčík",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D2/BIRTH_NUMBER/691027/6208",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D3/PERSON/Metod Jakubčík",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D3/PERSON/Ernesto Lehmann",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D3/BIRTH_DATE/27.10.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D4/PERSON/Metod Jakubčík",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-011/D4/BIRTH_DATE/27.10.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D1/PERSON/Maroš Šimek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D1/BIRTH_NUMBER/930808/3048",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D1/ADDRESS/Kamzík 923",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D1/PHONE/+421 929 553 810",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D1/EMAIL/maros.simek35@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D1/IBAN/SK98 6500 0000 0025 6691 7253",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D2/PERSON/Raimondo Casini",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D2/BIRTH_DATE/08/08/1993",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D3/PERSON/Maroš Šimek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-012/D3/BIRTH_DATE/08/08/1993",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D1/PERSON/Helena Šoltýsová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D1/BIRTH_NUMBER/746127/2423",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D1/ADDRESS/Márie Medveďovej 651",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D1/PHONE/+421 923 408 544",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D1/EMAIL/helena.soltysova31@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D1/IBAN/SK33 0200 3176 4848 0499 5586",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D2/PERSON/Helena Šoltýsová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D2/PERSON/Sabine Schlager",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D2/BIRTH_DATE/27.11.1974",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D3/PERSON/Helena Šoltýsová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-013/D3/BIRTH_DATE/27.11.1974",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D1/PERSON/Nora Tomanová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D1/BIRTH_NUMBER/068105/7333",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D1/ADDRESS/U Mlýnského Rybníka 993",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D1/PHONE/+421 916 611 497",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D1/EMAIL/nora.tomanova68@posta.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D1/IBAN/SK40 3100 0000 0071 6601 4333",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D2/PERSON/Nora Tomanová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D2/BIRTH_NUMBER/068105/7333",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D3/PERSON/Mislav Lukša",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D3/BIRTH_DATE/05.11.2006.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D4/PERSON/Nora Tomanová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-014/D4/BIRTH_DATE/05.11.2006.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D1/PERSON/Arnold Zúbek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D1/BIRTH_NUMBER/910409/0523",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D1/ADDRESS/Tyršovo nábrežie 3",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D1/PHONE/+421 928 746 570",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D1/EMAIL/arnold.zubek72@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D1/IBAN/SK76 0200 0000 0073 8512 5298",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D2/PERSON/Arnold Zúbek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D2/BIRTH_NUMBER/910409/0523",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D3/PERSON/Arnold Zúbek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D3/PERSON/Marijan Solomun",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D3/BIRTH_DATE/09.04.1991.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-015/D4/PERSON/Arnold Zúbek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-015/D4/BIRTH_DATE/09.04.1991.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-016/D1/PERSON/Drahomíra Senková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D1/BIRTH_NUMBER/745611/4589",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D1/ADDRESS/Ulica padlých hrdino 404",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D1/PHONE/+421 943 791 656",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D1/EMAIL/drahomira.senkova55@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D1/IBAN/SK26 0200 0000 0011 8429 6341",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D2/PERSON/Drahomíra Senková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D2/BIRTH_NUMBER/745611/4589",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-016/D3/PERSON/SENKOVA/DRAHOMIRA MS",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-016/D3/ADDRESS/Ulica padlých hrdino 404",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-016/D3/PHONE/+421 943 791 656",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D1/PERSON/Zoltán Pavlíček",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D1/BIRTH_NUMBER/841102/1894",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D1/ADDRESS/Vlárska 969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D1/PHONE/+421 922 309 432",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D1/EMAIL/zoltan.pavlicek16@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D1/IBAN/SK63 0900 0000 0019 0835 7275",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D3/PERSON/Zoltán Pavlíček",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-017/D3/BIRTH_DATE/2. 11. 1984",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-018/D1/PERSON/Alana Lukáčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D1/BIRTH_NUMBER/656214/1014",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D1/ADDRESS/K horárskej studni 7",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D1/PHONE/+421 904 730 994",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D1/EMAIL/alana.lukacova65@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D1/IBAN/SK40 5600 0000 0036 1131 1987",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D2/PERSON/Alana Lukáčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D2/BIRTH_NUMBER/656214/1014",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D3/PERSON/LUKACOVA/ALANA MS",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D3/ADDRESS/K horárskej studni 7",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-018/D3/PHONE/+421 904 730 994",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-019/D1/PERSON/Emília Králová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-019/D1/BIRTH_NUMBER/926025/9690",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-019/D1/ADDRESS/Dankovského 53",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-019/D1/PHONE/+421 926 779 436",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-019/D1/EMAIL/emilia.kralova59@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-019/D1/IBAN/SK02 8330 0000 0096 6214 3091",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-019/D2/PERSON/Emília Králová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-019/D2/PERSON/Jasminka Štifanić",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-019/D2/BIRTH_DATE/25.10.1992.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-019/D3/PERSON/Emília Králová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-019/D3/BIRTH_DATE/25.10.1992.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-020/D1/PERSON/Zdenka Hlaváčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D1/BIRTH_NUMBER/725107/7867",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D1/ADDRESS/Botanická 184",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D1/PHONE/+421 928 179 572",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D1/EMAIL/zdenka.hlavacova14@posta.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D1/IBAN/SK06 5600 6871 4675 4727 6750",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D2/PERSON/Zdenka Hlaváčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-020/D2/BIRTH_NUMBER/725107/7867",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-020/D3/PERSON/Zdenka Hlaváčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-020/D3/PERSON/Mattia Caboto",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-020/D3/BIRTH_DATE/07/01/1972",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-020/D4/PERSON/Zdenka Hlaváčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-020/D4/BIRTH_DATE/07/01/1972",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D1/PERSON/Nataša Pavúková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D1/BIRTH_NUMBER/886101/1049",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D1/ADDRESS/Smikova 977",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D1/PHONE/+421 908 111 635",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D1/EMAIL/natasa.pavukova77@posta.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D1/IBAN/SK26 0200 0000 0038 2132 1366",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D2/PERSON/Nataša Pavúková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-021/D2/BIRTH_NUMBER/886101/1049",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-021/D3/PERSON/Nataša Pavúková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D3/PERSON/Melanie Wilms",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D3/BIRTH_DATE/01.11.1988",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-021/D4/PERSON/Nataša Pavúková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-021/D4/BIRTH_DATE/01.11.1988",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D1/PERSON/Oľga Danová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D1/BIRTH_NUMBER/846011/3838",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D1/ADDRESS/Šalátová 1",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D1/PHONE/+421 927 656 123",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D1/EMAIL/olga.danova57@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D1/IBAN/SK23 5200 0000 0053 8050 8550",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D2/PERSON/DANOVA/OLGA MS",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D2/ADDRESS/Šalátová 1",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-022/D2/PHONE/+421 927 656 123",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D1/PERSON/Boleslav Stejskal",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D1/BIRTH_NUMBER/821011/0260",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D1/ADDRESS/Žherská 4",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D1/PHONE/+421 919 133 227",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D1/EMAIL/boleslav.stejskal83@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D1/IBAN/SK28 6500 0000 0041 7801 9546",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D2/PERSON/Boleslav Stejskal",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D2/BIRTH_NUMBER/821011/0260",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D3/PERSON/Boleslav Stejskal",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-023/D3/PERSON/Ross Sutton",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-023/D4/PERSON/Boleslav Stejskal",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-023/D4/BIRTH_DATE/11/10/1982",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-024/D1/PERSON/Zoja Nižnánská",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-024/D1/BIRTH_NUMBER/965329/2891",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-024/D1/ADDRESS/Žihľavová 90",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-024/D1/EMAIL/zoja.niznanska14@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-024/D1/IBAN/SK14 1100 0000 0064 3961 4621",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-024/D2/PERSON/Zoja Nižnánská",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-024/D2/BIRTH_NUMBER/965329/2891",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-024/D3/PERSON/Zoja Nižnánská",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-024/D4/PERSON/Irena Klepáčová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-024/D4/BIRTH_DATE/29. 3. 1996",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D1/PERSON/Demeter Dudek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D1/BIRTH_NUMBER/800403/9274",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D1/ADDRESS/Priemyselná 1",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D1/PHONE/+421 935 420 410",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D1/EMAIL/demeter.dudek79@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D1/IBAN/SK17 3100 0635 7047 4170 3187",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D2/PERSON/Demeter Dudek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D2/BIRTH_NUMBER/800403/9274",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D3/PERSON/Demeter Dudek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D3/PERSON/Petr Křížová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D4/PERSON/Demeter Dudek",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-025/D4/BIRTH_DATE/3. 4. 1980",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D1/PERSON/Levoslav Špilár",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D1/BIRTH_NUMBER/860303/2614",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D1/ADDRESS/Ulica Karola Adlera 42",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D1/PHONE/+421 914 129 797",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D1/EMAIL/levoslav.spilar12@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D1/IBAN/SK26 8330 9069 9417 1684 5768",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D2/PERSON/Levoslav Špilár",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D2/BIRTH_NUMBER/860303/2614",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D3/PERSON/SPILAR/LEVOSLAV MR",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D3/ADDRESS/Ulica Karola Adlera 42",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-026/D3/PHONE/+421 914 129 797",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D1/PERSON/Fridrich Kubička",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D1/BIRTH_NUMBER/680222/5397",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D1/ADDRESS/Zlatá 34",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D1/PHONE/+421 948 170 480",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D1/EMAIL/fridrich.kubicka79@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D1/IBAN/SK18 0900 0000 0014 7132 3518",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D2/PERSON/Fridrich Kubička",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D2/BIRTH_NUMBER/680222/5397",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D3/PERSON/Fridrich Kubička",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D3/PERSON/Toby Lewis",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D3/BIRTH_DATE/22/02/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D4/PERSON/Fridrich Kubička",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-027/D4/BIRTH_DATE/22/02/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D1/PERSON/Alena Králiková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-028/D1/BIRTH_NUMBER/805516/4040",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-028/D1/ADDRESS/Gercenova 4",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-028/D1/PHONE/+421 929 708 815",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-028/D1/EMAIL/alena.kralikova89@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-028/D1/IBAN/SK86 5200 0000 0045 2035 1283",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-028/D2/PERSON/Alena Králiková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D2/BIRTH_NUMBER/805516/4040",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D3/PERSON/Alena Králiková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D3/PERSON/Mercedes Gabrieli",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D3/ID_CARD/MH430593",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "ID_CARD",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D3/ADDRESS/Gercenova 4",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D3/BIRTH_DATE/16/05/1980",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-028/D3/LICENCE_PLATE/NR679FF",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "LICENCE_PLATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D1/PERSON/Bruno Veterník",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D1/BIRTH_NUMBER/860331/0947",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D1/ADDRESS/Jahodová 877",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D1/PHONE/+421 928 821 752",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D1/EMAIL/bruno.veternik2@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D1/IBAN/SK14 1100 0000 0024 1036 5086",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D2/PERSON/Bruno Veterník",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D2/BIRTH_NUMBER/860331/0947",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-029/D3/PERSON/Bruno Veterník",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-029/D3/PERSON/Alexandra Nagy",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-029/D3/BIRTH_DATE/31/03/1986",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-029/D4/PERSON/Bruno Veterník",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-029/D4/BIRTH_DATE/31/03/1986",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D1/PERSON/Sofia Rubíková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D1/BIRTH_NUMBER/635713/2947",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D1/ADDRESS/Tokajícka 8",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D1/PHONE/+421 930 813 435",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D1/EMAIL/sofia.rubikova16@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D1/IBAN/SK03 6500 0000 0053 3851 1991",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D2/PERSON/Sofia Rubíková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-030/D2/BIRTH_NUMBER/635713/2947",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-030/D3/PERSON/Sofia Rubíková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-030/D3/PERSON/Szilvia Bogdán",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-030/D3/BIRTH_DATE/13/07/1963",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-030/D4/PERSON/Sofia Rubíková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-030/D4/BIRTH_DATE/13/07/1963",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-031/D1/PERSON/Jaromíra Pavková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-031/D1/BIRTH_NUMBER/916023/1278",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-031/D1/ADDRESS/Pasienková 73",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-031/D1/PHONE/+421 908 159 812",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-031/D1/EMAIL/jaromira.pavkova94@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-031/D1/IBAN/SK85 3100 0000 0087 3079 4243",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-031/D2/PERSON/Jaromíra Pavková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-031/D2/BIRTH_NUMBER/916023/1278",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-031/D3/PERSON/Jaromíra Pavková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-031/D3/PERSON/Nada Milovac",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-031/D3/BIRTH_DATE/23.10.1991.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-031/D4/PERSON/Jaromíra Pavková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-031/D4/BIRTH_DATE/23.10.1991.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-032/D1/PERSON/Marta Sedláčková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-032/D1/BIRTH_NUMBER/765526/3341",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-032/D1/ADDRESS/Habartovská 586",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-032/D1/PHONE/+421 931 738 531",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-032/D1/EMAIL/marta.sedlackova71@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-032/D1/IBAN/SK07 6500 0969 1123 3973 9843",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-032/D2/PERSON/Marta Sedláčková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-032/D2/BIRTH_NUMBER/765526/3341",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-032/D3/PERSON/Marta Sedláčková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-032/D3/PERSON/Iris Mangold",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-032/D3/BIRTH_DATE/26.05.1976",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-033/D1/PERSON/Zina Janečeková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-033/D1/BIRTH_NUMBER/636122/7741",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-033/D1/ADDRESS/Sudová 97",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-033/D1/PHONE/+421 903 312 196",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-033/D1/EMAIL/zina.janecekova50@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-033/D1/IBAN/SK87 1100 7662 0542 8442 5887",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-033/D2/PERSON/Zina Janečeková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-033/D2/BIRTH_NUMBER/636122/7741",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-033/D3/PERSON/Zina Janečeková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-033/D3/PERSON/Philippa Steinberger",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-034/D1/PERSON/Barbora Vacková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-034/D1/BIRTH_NUMBER/775901/6683",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-034/D1/ADDRESS/Kralupská 82",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-034/D1/PHONE/+421 920 514 432",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-034/D1/EMAIL/barbora.vackova22@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-034/D1/IBAN/SK22 3100 0000 0054 9151 3745",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-034/D2/PERSON/Barbora Vacková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-034/D3/PERSON/Barbora Vacková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-034/D3/PERSON/Božena Bašková",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-034/D3/BIRTH_DATE/1. 9. 1977",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-035/D1/PERSON/Vincent Cibulka",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D1/BIRTH_NUMBER/560227/0256",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D1/ADDRESS/Gronárska 491",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D1/PHONE/+421 907 800 266",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D1/EMAIL/vincent.cibulka67@posta.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D1/IBAN/SK22 8330 0000 0016 3810 8149",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D2/PERSON/Vincent Cibulka",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-035/D2/BIRTH_NUMBER/560227/0256",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-035/D3/PERSON/Vincent Cibulka",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D3/PERSON/Linnea Staudinger",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D3/BIRTH_DATE/27.02.1956",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-035/D4/PERSON/Vincent Cibulka",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-035/D4/BIRTH_DATE/27.02.1956",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-036/D1/PERSON/Izabela Fabiánová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-036/D1/BIRTH_NUMBER/776104/5710",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-036/D1/ADDRESS/Nitrianska 3",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-036/D1/PHONE/+421 905 280 947",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-036/D1/EMAIL/izabela.fabianova40@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-036/D1/IBAN/SK43 3100 0000 0025 9032 3877",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-036/D2/PERSON/Izabela Fabiánová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-036/D2/PERSON/Jasminka Vižintin",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-036/D2/BIRTH_DATE/04.11.1977.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-036/D3/PERSON/Izabela Fabiánová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-036/D3/BIRTH_DATE/04.11.1977.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-037/D1/PERSON/Metod Jakubčík",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-037/D1/BIRTH_NUMBER/691027/6208",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-037/D1/ADDRESS/Bojnická 74",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-037/D1/PHONE/+421 941 210 918",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-037/D1/EMAIL/metod.jakubcik82@example.com",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-037/D1/IBAN/SK30 1111 6403 5655 5400 2894",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-037/D2/PERSON/Metod Jakubčík",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-037/D2/PERSON/Ernesto Lehmann",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-037/D2/BIRTH_DATE/27.10.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-037/D3/PERSON/Metod Jakubčík",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-037/D3/BIRTH_DATE/27.10.1969",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-038/D1/PERSON/Fridrich Kubička",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-038/D1/BIRTH_NUMBER/680222/5397",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-038/D1/ADDRESS/Zlatá 34",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-038/D1/PHONE/+421 948 170 480",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-038/D1/EMAIL/fridrich.kubicka79@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-038/D1/IBAN/SK18 0900 0000 0014 7132 3518",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-038/D2/PERSON/Fridrich Kubička",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-038/D2/PERSON/Toby Lewis",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-038/D2/BIRTH_DATE/22/02/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-038/D3/PERSON/Fridrich Kubička",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-038/D3/BIRTH_DATE/22/02/1968",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D1/PERSON/Vojtech Rys",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D1/BIRTH_NUMBER/950514/1701",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D1/ADDRESS/Kaplinská 208",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D1/PHONE/+421 949 427 151",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D1/EMAIL/vojtech.rys76@mail.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D1/IBAN/SK61 5200 0000 0038 4608 6691",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D2/PERSON/Vojtech Rys",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D2/PERSON/Mark Jackson",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D2/BIRTH_DATE/05/14/1995",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-039/D3/PERSON/Vojtech Rys",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-039/D3/BIRTH_DATE/05/14/1995",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D1/PERSON/Nora Tomanová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D1/BIRTH_NUMBER/068105/7333",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "BIRTH_NUMBER",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D1/ADDRESS/U Mlýnského Rybníka 993",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_address"
+   ],
+   "detail": {
+    "entity": "ADDRESS",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D1/PHONE/+421 916 611 497",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "PHONE",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D1/EMAIL/nora.tomanova68@posta.example.sk",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "EMAIL",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D1/IBAN/SK40 3100 0000 0071 6601 4333",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_identifiers"
+   ],
+   "detail": {
+    "entity": "IBAN",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D2/PERSON/Mislav Lukša",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-040/D2/BIRTH_DATE/05.11.2006.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": false
+   }
+  },
+  {
+   "id": "S42-040/D3/PERSON/Nora Tomanová",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_names"
+   ],
+   "detail": {
+    "entity": "PERSON",
+    "scan": true
+   }
+  },
+  {
+   "id": "S42-040/D3/BIRTH_DATE/05.11.2006.",
+   "ok": true,
+   "expected": "redacted",
+   "got": "redacted",
+   "tags": [
+    "recall_birth_dates"
+   ],
+   "detail": {
+    "entity": "BIRTH_DATE",
+    "scan": true
+   }
+  }
+ ],
+ "meta": {
+  "created": "20261015T235708Z",
+  "git": {
+   "sha": "4f6ae4b",
+   "dirty": true
+  },
+  "dataset": "6bd4025701dc",
+  "seed": 42,
+  "cassette_mode": "auto",
+  "overrides": {},
+  "options": {},
+  "prompts": {},
+  "models": [],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 0,
+  "cached_calls": 0,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "tokens_per_item": 0.0,
+  "latency_p50_ms": 0,
+  "latency_p95_ms": 0,
+  "worker_peak_rss_mb": 736,
+  "models": []
+ },
+ "notes": [
+  "8 ground-truth values were not in the parsed text (OCR, layout); not scored",
+  "ADDRESS: 46/46 redacted",
+  "BIRTH_DATE: 60/60 redacted",
+  "BIRTH_NUMBER: 65/65 redacted",
+  "EMAIL: 40/40 redacted",
+  "IBAN: 40/40 redacted",
+  "ID_CARD: 1/1 redacted",
+  "LICENCE_PLATE: 1/1 redacted",
+  "PERSON: 166/166 redacted",
+  "PHONE: 44/44 redacted"
+ ],
+ "stale": []
+}

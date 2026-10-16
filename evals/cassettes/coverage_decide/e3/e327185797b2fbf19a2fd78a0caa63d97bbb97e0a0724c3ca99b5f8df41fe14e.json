@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A6.1\", \"A6.2\"], \"rationale\": \"The claim involves a fracture of the distal radius confirmed by a medical report, which falls under the coverage for fractures under the accident section. The policy explicitly covers such fractures with a one-time payment per incident, as stated in clauses A6.1 and A6.2. There is no evidence of any exclusions such as intentional injury, alcohol use, extreme sports (since the policy includes extreme sports), or events related to war, terrorism, or nuclear incidents.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1026,
+   "tokens_out": 124,
+   "latency_ms": 10280
+  },
+  "cached": false
+ }
+}

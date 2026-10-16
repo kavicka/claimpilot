@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"needs_review\", \"clause_ids\": [\"A7.1\", \"A7.5\"], \"rationale\": \"The claim involves a lost camera, which falls under the luggage coverage section for valuables. Clause A7.1 grants coverage for loss of luggage during transport. However, clause A7.5 excludes coverage for theft of valuables and electronics left unattended in a vehicle or public place. The evidence does not clearly indicate whether the camera was left unattended or not, so it is unclear if the exclusion applies. Therefore, the claim needs review to determine if the exclusion condition is met.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 967,
+   "tokens_out": 129,
+   "latency_ms": 14466
+  },
+  "cached": false
+ }
+}

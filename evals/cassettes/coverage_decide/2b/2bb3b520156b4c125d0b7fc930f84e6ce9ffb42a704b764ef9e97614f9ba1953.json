@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"not_covered\", \"clause_ids\": [\"A7.5\"], \"rationale\": \"The mobile phone is considered a valuable item (cenné veci) and was lost while unattended at the airport, which is a publicly accessible location. Clause A7.5 explicitly excludes coverage for the theft of valuable items and electronics left unattended in a vehicle or on a publicly accessible place.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 969,
+   "tokens_out": 87,
+   "latency_ms": 8467
+  },
+  "cached": false
+ }
+}

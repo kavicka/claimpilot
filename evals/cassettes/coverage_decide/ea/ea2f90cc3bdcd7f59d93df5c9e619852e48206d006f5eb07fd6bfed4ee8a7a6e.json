@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A9.1\", \"A9.3\"], \"rationale\": \"The claim is for a cancellation fee due to an injury (sprain of the joint) that occurred before the trip and led to the cancellation. Clause A9.1 covers cancellation due to an injury, and the evidence shows the injury occurred before the trip and led to the cancellation. Clause A9.3 is satisfied as the cancellation was done without unnecessary delay, within three working days of the incident.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1277,
+   "tokens_out": 111,
+   "latency_ms": 13705
+  },
+  "cached": false
+ }
+}

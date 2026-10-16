@@ -10,6 +10,7 @@ from pydantic import BaseModel, Field
 
 from claimpilot_core.domain import DocType
 from claimpilot_core.llm.gateway import LLMGateway
+from claimpilot_core.llm.untrusted import wrap
 
 # Phrases per type, all languages the dataset uses. Weight 3 = decisive title, 1 = supporting word.
 KEYWORDS: dict[DocType, list[tuple[str, int]]] = {
@@ -60,6 +61,6 @@ async def classify(text: str, gateway: LLMGateway, *, max_chars: int = 2500) -> 
         return by_rules
     scores = {k.value: v for k, v in rule_scores(text).items()}
     gen = await gateway.generate_json(
-        "doc_type", "doc_type/classify", DocTypeAnswer, {"text": text[:max_chars]}
+        "doc_type", "doc_type/classify", DocTypeAnswer, {"text": wrap(text[:max_chars])}
     )
     return DocTypeResult(gen.value.doc_type, 0.7, "llm", scores)

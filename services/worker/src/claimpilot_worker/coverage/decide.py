@@ -17,12 +17,14 @@ from pydantic import BaseModel, Field
 from claimpilot_core.domain import ClaimType, Coverage, CoverageVerdict, DocType, Product
 from claimpilot_core.fx import FxSnapshot
 from claimpilot_core.llm.gateway import LLMGateway
+from claimpilot_core.llm.untrusted import neutralize, wrap
 from claimpilot_core.normalize import parse_amount, parse_currency
 from claimpilot_core.policy import ProductCatalog, load_terms
 from claimpilot_core.settings import repo_root
 from claimpilot_worker.coverage.payout import PayoutItem, PayoutResult, compute_payout
 from claimpilot_worker.coverage.retrieve import Hit
 from claimpilot_worker.routing.facts import DocInput
+from claimpilot_worker.routing.rules import exclusion_signals, load_config
 
 CATEGORIES = Literal[
     "treatment",
@@ -67,7 +69,7 @@ class ClaimItem:
     verdict: CoverageVerdict | None = None
     clause_ids: list[str] = field(default_factory=list)
     rationale: str = ""
-    method: str = ""  # precheck | llm
+    method: str = ""  # precheck | llm | llm+guard
     retrieved: list[str] = field(default_factory=list)
 
 
@@ -162,6 +164,47 @@ def evidence(docs: list[DocInput]) -> str:
     return "\n".join(parts)[:4000]
 
 
+CAUTION = {
+    "alcohol": "a medical report mentions alcohol (A11.2)",
+    "pre_existing": "a medical report mentions a condition known before the trip (A5.1, A9.4)",
+    "extreme_sport": "a medical report mentions an extreme sport the product does not include "
+    "(A11.3)",
+    "injection": "a document of this claim holds text addressed to an AI system or hidden from "
+    "the reader",
+}
+
+
+def caution_signals(docs: list[DocInput]) -> list[str]:
+    """What should stop a model's "covered" from standing: the routing exclusion signals found in
+    the medical reports (R6) and any prompt-injection signal (R10)."""
+    reports = [d.redacted_text for d in docs if d.doc_type is DocType.MEDICAL_REPORT]
+    found = exclusion_signals(reports, load_config()["signals"])
+    if any(d.signals for d in docs):
+        found.append("injection")
+    return found
+
+
+def guard_verdict(
+    verdict: CoverageVerdict,
+    clause_ids: list[str],
+    *,
+    signals: list[str],
+    extreme_sports_covered: bool,
+) -> tuple[CoverageVerdict, str | None]:
+    """The model's verdict after code checks, and why it changed. Only "covered" is ever changed,
+    and only to needs_review: code never makes a verdict looser."""
+    if verdict is not CoverageVerdict.COVERED:
+        return verdict, None
+    if not clause_ids:
+        return CoverageVerdict.NEEDS_REVIEW, "the model cited no clause that grants cover"
+    for name in signals:
+        if name == "extreme_sport" and extreme_sports_covered:
+            continue
+        if name in CAUTION:
+            return CoverageVerdict.NEEDS_REVIEW, f"the model said covered, but {CAUTION[name]}"
+    return verdict, None
+
+
 def precheck(
     item: ClaimItem,
     *,
@@ -251,9 +294,10 @@ async def decide_coverage(
             "claim_type": claim_type.value if claim_type else "unknown",
             "documents": ", ".join(d.doc_type.value for d in docs),
             "items": [
-                {"ref": i.ref, "description": i.description, "source": i.source} for i in items
+                {"ref": i.ref, "description": neutralize(i.description), "source": i.source}
+                for i in items
             ],
-            "evidence": ev[:1500] or "(none)",
+            "evidence": wrap(ev[:1500] or "(none)"),
         },
     )
     by_ref = {m.ref: m for m in mapping.value.items}
@@ -264,6 +308,7 @@ async def decide_coverage(
             Coverage(m.coverage) if m else Coverage.MEDICAL
         )
     terms = catalog.product(product) if product else None
+    caution = caution_signals(docs)
     for it in items:
         if precheck(
             it,
@@ -288,10 +333,10 @@ async def decide_coverage(
                 "product": terms.name if terms else "unknown",
                 "extreme_sports": bool(terms and terms.extreme_sports),
                 "claim_type": claim_type.value if claim_type else "unknown",
-                "item": it.description,
+                "item": neutralize(it.description),
                 "coverage": it.coverage.value if it.coverage else "?",
                 "category": it.category,
-                "evidence": ev or "(none)",
+                "evidence": wrap(ev or "(none)"),
                 "clauses": [
                     {"clause_id": h.clause_id, "heading": h.heading, "text": h.text} for h in hits
                 ],
@@ -299,10 +344,15 @@ async def decide_coverage(
         )
         v = gen.value
         allowed = {h.clause_id for h in hits}
-        it.verdict = CoverageVerdict(v.verdict)
         it.clause_ids = [c for c in v.clause_ids if c in allowed]
-        it.rationale = v.rationale
-        it.method = "llm"
+        it.verdict, why = guard_verdict(
+            CoverageVerdict(v.verdict),
+            it.clause_ids,
+            signals=caution,
+            extreme_sports_covered=bool(terms and terms.extreme_sports),
+        )
+        it.rationale = f"{why}; a handler decides. Model: {v.rationale}" if why else v.rationale
+        it.method = "llm+guard" if why else "llm"
     payout = None
     if terms:
         payout = compute_payout(

@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"agency_name\": {\n    \"page\": 1,\n    \"quote\": \"Cestovná kancelária Horizont Tour, s. r. o.\",\n    \"value\": \"Cestovná kancelária Horizont Tour, s. r. o.\"\n  },\n  \"booking_number\": {\n    \"page\": 1,\n    \"quote\": \"BOOKING NUMBER 2026093 | DESTINATION Thessaloniki, Grécko\",\n    \"value\": \"2026093\"\n  },\n  \"cancellation_date\": {\n    \"page\": 1,\n    \"quote\": \"Cancelled on: 26. 2. 2026\",\n    \"value\": \"26. 2. 2026\"\n  },\n  \"cancellation_fee\": {\n    \"page\": 1,\n    \"quote\": \"Cancellation fee charged | 1 689,10\",\n    \"value\": \"1 689,10\"\n  },\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"Item | Amount (EUR)\",\n    \"value\": \"EUR\"\n  },\n  \"destination\": {\n    \"page\": 1,\n    \"quote\": \"BOOKING NUMBER 2026093 | DESTINATION Thessaloniki, Grécko\",\n    \"value\": \"Thessaloniki, Grécko\"\n  },\n  \"total_price\": {\n    \"page\": 1,\n    \"quote\": \"Total trip price | 2 413,00\",\n    \"value\": \"2 413,00\"\n  },\n  \"traveler_names\": {\n    \"page\": 1,\n    \"quote\": \"TRAVELLERS <PERSON_1> | 2026\",\n    \"values\": [\n      \"<PERSON_1>\"\n    ]\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"DEPARTURE 1. 3. 2026 | RETURN 13. 3.\",\n    \"value\": \"13. 3. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"DEPARTURE 1. 3. 2026 | RETURN 13. 3.\",\n    \"value\": \"1. 3. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1775,
+   "tokens_out": 528,
+   "latency_ms": 21287
+  },
+  "cached": false
+ }
+}

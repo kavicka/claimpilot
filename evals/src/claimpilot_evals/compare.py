@@ -47,6 +47,13 @@ def check(report: dict[str, Any], baseline: dict[str, Any] | None) -> list[str]:
             if metric["num"] > 0:
                 problems.append(f"{suite}.{name} = {metric['num']} (must be 0)")
             continue
+        if kind == "min":  # an absolute floor, no baseline needed
+            if metric["den"] and metric["value"] < rule["min"]:
+                problems.append(
+                    f"{suite}.{name} = {metric['value']:.1%} ({metric['num']}/{metric['den']}), "
+                    f"below {rule['min']:.0%}"
+                )
+            continue
         if baseline is None or name not in baseline["metrics"]:
             continue
         base = baseline["metrics"][name]

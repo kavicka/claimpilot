@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment (ambulantné ošetrenie, medikamentöse Unterstützung) resulting from an acute injury (Gehirnerschütterung) during a trip, which is explicitly covered under clause A4.1. There is no evidence indicating any of the exclusions apply (e.g., pre-existing condition, intentional injury, alcohol, extreme sports, etc.).\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1268,
+   "tokens_out": 105,
+   "latency_ms": 15070
+  },
+  "cached": false
+ }
+}

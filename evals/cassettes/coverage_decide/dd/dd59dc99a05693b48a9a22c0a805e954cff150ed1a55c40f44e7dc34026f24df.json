@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment for pneumonia (upala pluća) that occurred during a trip. According to clause A4.1, the insurer covers necessary and appropriate costs for inpatient care, outpatient treatment, and medications prescribed by a doctor, provided they were incurred as a result of an acute illness or injury during the trip. The evidence confirms the acute illness (pneumonia) and the treatment received (intravenous antibiotics and paracetamol). There is no indication of any exclusions applying, such as pre-existing conditions, intentional actions, alcohol, or extreme sports.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1286,
+   "tokens_out": 143,
+   "latency_ms": 15853
+  },
+  "cached": false
+ }
+}

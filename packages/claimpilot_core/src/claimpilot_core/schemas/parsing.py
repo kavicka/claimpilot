@@ -29,6 +29,9 @@ class Block(BaseModel):
     text: str
     bbox: FracBox
     ocr: bool = False
+    # Why a reader cannot see this text (white on white, 1 pt, off the page...); None when visible.
+    # Hidden blocks are kept for the handler and the injection signals, never sent to a model.
+    hidden: str | None = None
 
 
 class PageInfo(BaseModel):
@@ -50,9 +53,19 @@ class ParsedDocument(BaseModel):
     def has_text_layer(self) -> bool:
         return any(p.text_chars > 20 for p in self.pages)
 
+    def visible(self) -> "ParsedDocument":
+        """The document as a reader sees it: without hidden blocks."""
+        if not any(b.hidden for b in self.blocks):
+            return self
+        return self.model_copy(update={"blocks": [b for b in self.blocks if not b.hidden]})
+
     def page_text(self, page: int, *, redacted: dict[int, str] | None = None) -> str:
-        parts = [(redacted or {}).get(b.seq, b.text) for b in self.blocks if b.page == page]
+        parts = [
+            (redacted or {}).get(b.seq, b.text)
+            for b in self.blocks
+            if b.page == page and not b.hidden
+        ]
         return "\n".join(parts)
 
     def full_text(self) -> str:
-        return "\n".join(b.text for b in self.blocks)
+        return "\n".join(b.text for b in self.blocks if not b.hidden)

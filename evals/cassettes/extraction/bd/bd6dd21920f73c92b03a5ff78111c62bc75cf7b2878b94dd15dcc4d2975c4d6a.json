@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"currency\": {\n    \"page\": 1,\n    \"quote\": \"# | Description | Amount (EUR)\",\n    \"value\": \"EUR\"\n  },\n  \"invoice_number\": {\n    \"page\": 1,\n    \"quote\": \"Invoice No. INV-2026-25356\",\n    \"value\": \"INV-2026-25356\"\n  },\n  \"issue_date\": {\n    \"page\": 1,\n    \"quote\": \"Date: 08/07/2026\",\n    \"value\": \"08/07/2026\"\n  },\n  \"line_items\": [\n    {\n      \"amount\": \"322.27\",\n      \"description\": \"Emergency room treatment\",\n      \"page\": 1,\n      \"quote\": \"1 | Emergency room treatment | 322.27\"\n    },\n    {\n      \"amount\": \"93.11\",\n      \"description\": \"Laboratory tests\",\n      \"page\": 1,\n      \"quote\": \"2 | Laboratory tests | 93.11\"\n    },\n    {\n      \"amount\": \"65.12\",\n      \"description\": \"IV infusion\",\n      \"page\": 1,\n      \"quote\": \"3 | IV infusion | 65.12\"\n    },\n    {\n      \"amount\": \"135.86\",\n      \"description\": \"Ultrasound\",\n      \"page\": 1,\n      \"quote\": \"4 | Ultrasound | 135.86\"\n    }\n  ],\n  \"patient_name\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 08/07/2026\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"provider_country\": {\n    \"page\": 1,\n    \"quote\": \"Thessaloniki, Greece\",\n    \"value\": \"Greece\"\n  },\n  \"provider_name\": {\n    \"page\": 1,\n    \"quote\": \"Roberts International Medical Centre\",\n    \"value\": \"Roberts International Medical Centre\"\n  },\n  \"service_date\": {\n    \"page\": 1,\n    \"quote\": \"PATIENT <PERSON_1>, DOB <DOB_1> | DATE OF SERVICE 08/07/2026\",\n    \"value\": \"08/07/2026\"\n  },\n  \"total\": {\n    \"page\": 1,\n    \"quote\": \"Total due | 616.36 EUR\",\n    \"value\": \"616.36\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1590,
+   "tokens_out": 583,
+   "latency_ms": 12635
+  },
+  "cached": false
+ }
+}

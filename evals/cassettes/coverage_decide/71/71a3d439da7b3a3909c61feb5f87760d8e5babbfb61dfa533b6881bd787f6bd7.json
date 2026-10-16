@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A4.1\"], \"rationale\": \"The claim involves medical treatment (hospitalization and examinations) resulting from a head injury (otřes mozku) during a trip. Clause A4.1 covers necessary and reasonable medical expenses incurred due to an acute illness or injury during the trip. There is no indication that the injury was pre-existing, planned, or related to excluded activities (e.g., alcohol, war, terrorism). The policy explicitly includes extreme sports, so clause A11.3 does not apply here.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1311,
+   "tokens_out": 121,
+   "latency_ms": 15165
+  },
+  "cached": false
+ }
+}

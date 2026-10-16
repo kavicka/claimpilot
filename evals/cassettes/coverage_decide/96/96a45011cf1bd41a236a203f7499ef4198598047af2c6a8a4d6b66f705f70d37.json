@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A9.1\", \"A9.3\"], \"rationale\": \"The evidence indicates that the insured person canceled the trip due to an injury (podvrtnutie členkového kĺbu) before the trip began, which falls under the coverage for cancellation due to an acute illness or injury under clause A9.1. Additionally, the cancellation occurred within three working days of the injury, satisfying the condition in clause A9.3 that the insured must cancel the trip without unnecessary delay. There is no indication of any exclusions applying, such as intentional actions, alcohol, or extreme sports, as the injury was not related to these factors.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1276,
+   "tokens_out": 149,
+   "latency_ms": 17280
+  },
+  "cached": false
+ }
+}

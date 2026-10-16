@@ -1,0 +1,19 @@
+{
+ "step": "coverage_decide",
+ "prompt_id": "coverage/decide",
+ "prompt_hash": "ea10e3c38ff0a46dd39be3ac3e5e6145f3dcb2abce6dd914d9467859ffeffb60",
+ "model": "ollama:qwen3:14b",
+ "response": {
+  "text": "{\"verdict\": \"covered\", \"clause_ids\": [\"A6.1\", \"A6.2\"], \"rationale\": \"The claim involves a fracture of the distal radius confirmed by a medical report, which is covered under the accident coverage section. Clause A6.1 explicitly states that the insurer will pay a one-time payout for a fracture confirmed by a medical report. Clause A6.2 supports this by confirming that the payout is made once per insured event, regardless of the number of fractures. No exclusions apply here, as there is no evidence of intentional injury, alcohol or drug influence, war, terrorism, or nuclear events. The fact that the product includes extreme sports (as stated in the product name) means that clause A11.3 does not apply as an exclusion.\"}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:14b",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1026,
+   "tokens_out": 165,
+   "latency_ms": 12421
+  },
+  "cached": false
+ }
+}

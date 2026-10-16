@@ -1,0 +1,19 @@
+{
+ "step": "extraction",
+ "prompt_id": "extraction/document",
+ "prompt_hash": "e1460380af8f8690ed7a9c0a2ca160103ead789b6333f3d0bb3f5a3693ba3606",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"claim_types\": {\n    \"page\": 1,\n    \"quote\": \"Liečebné náklady Úraz Batožina X Oneskorenie batožiny\",\n    \"values\": [\n      \"Oneskorenie batožiny\"\n    ]\n  },\n  \"claimed_items\": [\n    {\n      \"amount\": \"542,73\",\n      \"currency\": \"TRY\",\n      \"description\": \"Nákup nevyhnutných vecí\",\n      \"page\": 1,\n      \"quote\": \"Nákup nevyhnutných vecí | 542,73 | TRY\"\n    },\n    {\n      \"amount\": \"1 393,23\",\n      \"currency\": \"TRY\",\n      \"description\": \"Nákup nevyhnutných vecí\",\n      \"page\": 1,\n      \"quote\": \"Nákup nevyhnutných vecí | 1 393,23 | TRY\"\n    }\n  ],\n  \"destination_country\": {\n    \"page\": 1,\n    \"quote\": \"Turecko\",\n    \"value\": \"Turecko\"\n  },\n  \"event_date\": {\n    \"page\": 1,\n    \"quote\": \"12. 4. 2026\",\n    \"value\": \"12. 4. 2026\"\n  },\n  \"event_description\": {\n    \"page\": 1,\n    \"quote\": \"Batožina prišla s veľkým oneskorením, asi 18 hodín po prílete. Musel som si kúpiť hygienu a oblečenie, lebo som nemal žiadne vlastné.\",\n    \"value\": \"Batožina prišla s veľkým oneskorením, asi 18 hodín po prílete. Musel som si kúpiť hygienu a oblečenie, lebo som nemal žiadne vlastné.\"\n  },\n  \"event_place\": {\n    \"page\": 1,\n    \"quote\": \"Alanya, Turecko\",\n    \"value\": \"Alanya, Turecko\"\n  },\n  \"iban\": {\n    \"page\": 1,\n    \"quote\": \"IBAN NA VÝPLATU POISTNÉHO PLNENIA <IBAN_1>\",\n    \"value\": \"<IBAN_1>\"\n  },\n  \"insured_address\": {\n    \"page\": 1,\n    \"quote\": \"<ADDRESS_1>, 877 04 Bašovce\",\n    \"value\": \"<ADDRESS_1>, 877 04 Bašovce\"\n  },\n  \"insured_birth_number\": {\n    \"page\": 1,\n    \"quote\": \"<RC_1>\",\n    \"value\": \"<RC_1>\"\n  },\n  \"insured_email\": {\n    \"page\": 1,\n    \"quote\": \"<EMAIL_1>\",\n    \"value\": \"<EMAIL_1>\"\n  },\n  \"insured_name\": {\n    \"page\": 1,\n    \"quote\": \"<PERSON_1>\",\n    \"value\": \"<PERSON_1>\"\n  },\n  \"insured_phone\": {\n    \"page\": 1,\n    \"quote\": \"<PHONE_1>\",\n    \"value\": \"<PHONE_1>\"\n  },\n  \"policy_number\": {\n    \"page\": 1,\n    \"quote\": \"CP60885459\",\n    \"value\": \"CP60885459\"\n  },\n  \"signature_date\": {\n    \"page\": 1,\n    \"quote\": \"Dátum: 9. 5. 2026\",\n    \"value\": \"9. 5. 2026\"\n  },\n  \"trip_end\": {\n    \"page\": 1,\n    \"quote\": \"22. 4. 2026\",\n    \"value\": \"22. 4. 2026\"\n  },\n  \"trip_start\": {\n    \"page\": 1,\n    \"quote\": \"12. 4. 2026\",\n    \"value\": \"12. 4. 2026\"\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3611,
+   "tokens_out": 930,
+   "latency_ms": 24289
+  },
+  "cached": false
+ }
+}
