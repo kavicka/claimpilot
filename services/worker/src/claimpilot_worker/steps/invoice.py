@@ -213,12 +213,12 @@ def _values(rows: list[ExtractedField]) -> tuple[dict[str, str], list[dict[str, 
     header: dict[str, str] = {}
     lines: dict[int, dict[str, str]] = {}
     for r in rows:
-        if r.value_raw is None:
-            continue
         m = re.fullmatch(r"lines\[(\d+)\]\.(.+)", r.field)
         if m:
-            lines.setdefault(int(m[1]), {})[m[2]] = r.value_raw
-        else:
+            line = lines.setdefault(int(m[1]), {})  # a line of empty fields is still a line
+            if r.value_raw is not None:
+                line[m[2]] = r.value_raw
+        elif r.value_raw is not None:
             header[r.field] = r.value_raw
     return header, [lines[n] for n in sorted(lines)]
 
@@ -267,7 +267,8 @@ async def validate_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, 
     invoice.invoice_number = number
     invoice.supplier_ico = supplier_ico
     invoice.supplier_vat_id = (header.get("supplier_vat_id") or "").replace(" ", "") or None
-    invoice.total = parse_number(header.get("total"))
+    # The senior limit needs an amount: the amount due when the total is not printed.
+    invoice.total = parse_number(header.get("total")) or parse_number(header.get("amount_due"))
     invoice.currency = (header.get("currency") or "")[:3] or None
     invoice.validation = checks
     return S.NEEDS_INFO if result.needs_info else S.VALIDATED

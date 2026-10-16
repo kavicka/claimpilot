@@ -107,6 +107,9 @@ def expected_line_net(line: dict[str, str]) -> Decimal | None:
 
 def check_line(result: ValidationResult, i: int, line: dict[str, str], tol: Tolerance) -> None:
     ref = f"lines[{i}]"
+    # A line the export cannot do without; extraction leaves an empty field to fill in.
+    missing = [f"{ref}.{k}" for k in ("quantity", "line_net") if _num(line, k) is None]
+    result.add("line_complete", not missing, missing or [f"{ref}.quantity", f"{ref}.line_net"])
     line_net = _num(line, "line_net")
     expected = expected_line_net(line)
     if "line_net" in line:
@@ -149,12 +152,13 @@ def validate(
     result = ValidationResult()
     for i, line in enumerate(lines, start=1):
         check_line(result, i, line, tol)
+    _pages(result, header, pages_present)  # first: missing pages explain a missing total
     _recap(result, header, lines, tol)
+    _lines_total(result, header, lines, tol)
     _totals(result, header, tol)
     _identity(result, header, ours)
     _regime(result, header, lines)
     _dates(result, header)
-    _pages(result, header, pages_present)
     _second_currency(result, header, tol)
     if kind == "credit_note":
         _credit_note(result, header)
@@ -204,9 +208,39 @@ def _recap(
             result.add("recap_vat", ok, [f"{ref}.vat"], f"{per_rate} per rate, {per_line} per line")
 
 
+def _lines_total(
+    result: ValidationResult, header: dict[str, str], lines: list[dict[str, str]], tol: Tolerance
+) -> None:
+    """The lines against the printed totals, so a line left out cannot pass. The recap already
+    holds them per rate; without one (scans), the net total or the total itself does."""
+    nets = [_num(line, "line_net") for line in lines]
+    if not lines or any(n is None for n in nets) or _rows(header, "recap"):
+        return
+    fees = [n for f in _rows(header, "fees") if (n := parse_number(f.get("net"))) is not None]
+    lines_sum = sum((n for n in nets if n is not None), Decimal(0)) + sum(fees, Decimal(0))
+    if (net := _num(header, "total_net")) is not None:
+        ok = abs(net - lines_sum) <= tol.sum
+        result.add("lines_total", ok, ["total_net"], f"lines sum to {lines_sum}")
+        return
+    if (total := _num(header, "total")) is None:
+        return
+    rates = [parse_vat_rate(line.get("vat_rate")) or 0 for line in lines]
+    vat = Decimal(0)
+    if not header.get("reverse_charge"):
+        vat = sum((r2(n * r / HUNDRED) for n, r in zip(nets, rates, strict=True) if n), Decimal(0))
+        vat += sum((r2(f * max(rates) / HUNDRED) for f in fees), Decimal(0))
+    computed = lines_sum + vat
+    # VAT rounded per line may sit a cent per line away from VAT rounded per rate.
+    ok = abs(total - computed) <= tol.sum * max(1, len(nets) + len(fees))
+    result.add("lines_total", ok, ["total"], f"lines with VAT come to {computed}")
+
+
 def _totals(result: ValidationResult, header: dict[str, str], tol: Tolerance) -> None:
     recap = _rows(header, "recap")
     net, vat, total = _num(header, "total_net"), _num(header, "total_vat"), _num(header, "total")
+    if total is None and _num(header, "amount_due") is None and not result.needs_info:
+        # Some layouts print only the amount due; with neither, nothing holds the lines.
+        result.add("total", False, ["total", "amount_due"], "no final amount read")
     bases = [parse_number(r.get("base")) for r in recap]
     vats = [parse_number(r.get("vat")) for r in recap]
     if recap and all(b is not None for b in bases):

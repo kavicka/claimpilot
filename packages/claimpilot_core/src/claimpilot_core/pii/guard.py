@@ -273,16 +273,18 @@ class ClaimRedactor:
         self.entities.append(Entity(token, entity, value, _variants(entity, value)))
         register_secret(value)
 
-    def detect(self, text: str) -> list[Span]:
+    def detect(self, text: str, *, ner: bool = True) -> list[Span]:
         spans = pattern_spans(text)
-        if self.ner is not None:
+        if ner and self.ner is not None:
             spans += self.ner(text)
         return [s for s in spans if s.entity not in self.keep] if self.keep else spans
 
-    def observe(self, texts: Iterable[str]) -> None:
+    def observe(self, texts: Iterable[str], *, ner: bool = True) -> None:
+        """`ner=False`: identifiers by pattern only (e-mail, phone, IBAN, birth number), for text
+        where the name model mistakes other words for people (product names)."""
         label_before = False
         for text in texts:
-            for span in self.detect(text):
+            for span in self.detect(text, ner=ner):
                 self._register(span.entity, span.text)
             # OCR often splits a form cell into a label block ("GEB.") and a value block, or glues
             # the label to the end of the block before ("Podpis, pečiatka NAR.").

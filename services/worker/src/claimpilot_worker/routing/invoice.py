@@ -3,7 +3,7 @@
   I1 fraud_review   the IBAN is not on the supplier's record
   I2 fraud_review   the same supplier and number arrived before
   I3 senior         text addressed to an AI system or hidden from the reader (R10 for claims)
-  I4 senior         the supplier is not in the ERP
+  I4 senior         the supplier is not in the ERP, or the order is another party's
   I5 senior         a credit note (money goes back; no order to check it against)
   I6 senior         the amount is above the senior limit
   I7 standard       a line differs from the order or the receipt, or the order is unknown
@@ -68,6 +68,8 @@ def route_invoice(
     hits += [Hit("I3", d) for d in injection or []]
     if "unknown_supplier" in kinds:
         hits.append(Hit("I4", "supplier not in the ERP"))
+    if "order_mismatch" in kinds:
+        hits.append(Hit("I4", "the order belongs to another supplier or buyer"))
     if kind == "credit_note":
         hits.append(Hit("I5", "credit note"))
     if total is not None and abs(total) > senior_amount:

@@ -118,6 +118,16 @@ def match(
     if order is None:
         result.findings.append(Finding("unknown_order", detail=number or "no order number"))
         return result
+    buyer = re.sub(r"\D", "", header.get("buyer_ico") or "")
+    if order.get("supplier_ico") != ico or (
+        buyer and order.get("buyer_ico") and order["buyer_ico"] != buyer
+    ):
+        # Another party's order: its lines and receipts say nothing about this invoice.
+        detail = (
+            f"order {order['number']} of {order.get('supplier_ico')} for {order.get('buyer_ico')}"
+        )
+        result.findings.append(Finding("order_mismatch", detail=detail))
+        return result
     result.order = order
     receipt_lines = [rl for r in erp.receipts_for(order["number"]) for rl in r["lines"]]
     tolerance = settings.tolerance_for(ico)

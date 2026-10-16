@@ -222,6 +222,12 @@ async def extract_invoice(
             if answer.item not in allowed or answer.item in results:
                 continue  # an item the model invented, or one from another call
             results[answer.item] = _line_result(answer, by_n[answer.item], redacted_cells or {})
+    # Every item on the page becomes a line, answered or not; what the export needs and the model
+    # did not give stays as an empty field, which validation flags and a handler fills in.
+    for it in items:
+        lr = results.setdefault(it.n, LineResult(it.n))
+        for name in REQUIRED_LINE_FIELDS:
+            lr.fields.setdefault(name, Field(name, None, None, it.page))
     return InvoiceExtraction(
         kind,
         header,
@@ -234,6 +240,7 @@ async def extract_invoice(
 
 
 CHUNK_ITEMS = 12
+REQUIRED_LINE_FIELDS = ("quantity", "line_net")
 
 
 def _chunks(items: list[Item]) -> list[list[Item]]:
@@ -355,7 +362,8 @@ def company_aware_ner(text: str) -> list[Any]:
 def redact_invoice(parsed: ParsedDocument, *, ner: Any = company_aware_ner) -> RedactedInvoice:
     """People's names, e-mails and phones become tokens; company data stays (KEEP_ENTITIES).
     Names are looked for only outside the item table: product names ("France Lait") are not
-    people, and a contact person found in the header is replaced wherever it appears."""
+    people, and a contact person found in the header is replaced wherever it appears. Patterned
+    identifiers (e-mail, phone, birth number) are looked for everywhere."""
     from claimpilot_core.pii.guard import ClaimRedactor
 
     redactor = ClaimRedactor(ner, keep=KEEP_ENTITIES)
@@ -366,6 +374,9 @@ def redact_invoice(parsed: ParsedDocument, *, ner: Any = company_aware_ner) -> R
         return not lo <= (b.bbox.y0 + b.bbox.y1) / 2 <= hi
 
     redactor.observe(b.text for b in parsed.blocks if outside(b))
+    # Inside the table, identifiers by pattern still count: a patient's phone in an item note.
+    redactor.observe((b.text for b in parsed.blocks if not outside(b)), ner=False)
+    redactor.observe((c.text for c in parsed.cells), ner=False)
     # A name that appears anywhere with a legal form is a company ("Lekárne Sever s.r.o." also
     # printed as "Lekárne Sever - sklad Senec"): it stays readable.
     text = " ".join(b.text.replace(" | ", " ") for b in parsed.blocks)

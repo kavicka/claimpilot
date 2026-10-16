@@ -202,7 +202,10 @@ def build(inv: UblInvoice) -> bytes:
         _sub(line, "cbc:ID", str(i))
         unit = UNIT_CODES.get(ln.unit.lower().rstrip("."), "H87")
         qty_tag = "cbc:CreditedQuantity" if credit else "cbc:InvoicedQuantity"
-        _sub(line, qty_tag, f"{abs(ln.quantity).normalize():f}", unitCode=unit)
+        # The price is never negative (BR-27): a return or discount line carries its sign in the
+        # quantity, so quantity x price still gives the line amount (R120).
+        qty = abs(ln.quantity) * (-1 if ln.line_net * sign < 0 else 1)
+        _sub(line, qty_tag, f"{qty.normalize():f}", unitCode=unit)
         _amount(line, "cbc:LineExtensionAmount", ln.line_net * sign, inv.currency)
         item = _sub(line, "cac:Item")
         _sub(item, "cbc:Name", ln.name)

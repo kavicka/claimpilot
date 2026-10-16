@@ -1,0 +1,1166 @@
+{
+ "suite": "export",
+ "split": "dev",
+ "metrics": {
+  "accepted": {
+   "value": 1.0,
+   "num": 56,
+   "den": 56
+  },
+  "round_trip": {
+   "value": 1.0,
+   "num": 56,
+   "den": 56
+  }
+ },
+ "items": [
+  {
+   "id": "DE-0001/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0006/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0006/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0007/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0007/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0015/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0015/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0020/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0020/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0021/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0021/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0034/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0034/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0038/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0038/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0042/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0042/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0045/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0045/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0060/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0060/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/accepted",
+   "ok": true,
+   "expected": true,
+   "got": [],
+   "tags": [
+    "accepted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/round_trip",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "round_trip"
+   ],
+   "detail": {}
+  }
+ ],
+ "meta": {
+  "created": "20261016T161057Z",
+  "git": {
+   "sha": "0509093",
+   "dirty": true
+  },
+  "dataset": "6bd4025701dc",
+  "seed": 42,
+  "cassette_mode": "off",
+  "overrides": {},
+  "options": {},
+  "prompts": {},
+  "models": [],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 0,
+  "cached_calls": 0,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "tokens_per_item": 0.0,
+  "latency_p50_ms": 0,
+  "latency_p95_ms": 0,
+  "worker_peak_rss_mb": 495,
+  "models": []
+ },
+ "notes": [],
+ "stale": []
+}

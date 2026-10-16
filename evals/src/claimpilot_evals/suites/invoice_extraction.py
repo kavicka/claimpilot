@@ -129,6 +129,8 @@ async def run(ctx: RunContext) -> Report:
                 )
             if lr:
                 for name, f in lr.fields.items():
+                    if f.value_raw is None:
+                        continue  # an empty field left for the handler, not a prediction
                     predicted += 1
                     grounded += f.grounded
                     if name not in gt_line_cells(line):

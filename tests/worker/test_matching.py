@@ -145,3 +145,18 @@ def test_a_credit_note_needs_a_known_original():
 def test_a_proforma_is_not_checked_against_a_receipt():
     result = match(HEADER, LINES, Erp(receipts=[]), MatchSettings(), kind="proforma")
     assert result.findings == []
+
+
+def test_an_order_of_another_supplier_is_not_a_match():
+    other = dict(ORDER, supplier_ico="97145289")
+    result = match(HEADER, LINES, Erp(orders=(other,)), MatchSettings())
+    assert ("order_mismatch", None) in kinds(result)
+    assert result.lines == []  # its lines are not held against this invoice
+
+
+def test_an_order_of_another_buyer_is_not_a_match():
+    order = dict(ORDER, buyer_ico="93533446")
+    header = dict(HEADER, buyer_ico="90882750")
+    assert ("order_mismatch", None) in kinds(
+        match(header, LINES, Erp(orders=(order,)), MatchSettings())
+    )

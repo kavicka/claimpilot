@@ -60,7 +60,7 @@ def r2(x: Decimal) -> Decimal:
 
 def _iban_ok(iban: str) -> bool:
     s = iban.replace(" ", "").upper()
-    if len(s) < 15 or not s[:2].isalpha():
+    if len(s) < 15 or not s[:2].isalpha() or not s.isascii() or not s.isalnum():
         return False
     n = int("".join(str(int(c, 36)) for c in s[4:] + s[:4]))
     return n % 97 == 1

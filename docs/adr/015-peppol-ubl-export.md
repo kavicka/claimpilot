@@ -6,8 +6,10 @@ Status: accepted, 2026-10-16
 - An approved invoice or credit note is sent to the mock ERP as a UBL 2.1 `Invoice` or
   `CreditNote` that follows Peppol BIS Billing 3.0 (EN 16931).
 - The document is built in code from normalized, handler-approved values, never from model output.
-- The mock ERP validates the XML against the UBL schema and the EN 16931 and Peppol business
-  rules, and names the rule and the field when it refuses. A refused invoice goes back to review
+- The mock ERP applies a subset of the EN 16931 and Peppol business rules (the ones an invoice
+  from this pipeline can break: parties, dates, totals, VAT breakdown, line amounts, payment
+  account) and names the rule and the field when it refuses. It does not run the full UBL schema
+  or the Schematron sets; a real ERP would. A refused invoice goes back to review
   with that reason.
 - Nothing is exported without a handler's approval, fast track included.
 

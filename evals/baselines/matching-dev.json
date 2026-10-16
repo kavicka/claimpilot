@@ -921,9 +921,9 @@
   }
  ],
  "meta": {
-  "created": "20261016T150155Z",
+  "created": "20261016T160841Z",
   "git": {
-   "sha": "dfe1e61",
+   "sha": "0509093",
    "dirty": true
   },
   "dataset": "6bd4025701dc",
@@ -943,7 +943,7 @@
   "tokens_per_item": 0.0,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 495,
+  "worker_peak_rss_mb": 494,
   "models": []
  },
  "notes": [

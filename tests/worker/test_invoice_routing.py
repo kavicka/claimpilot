@@ -55,3 +55,10 @@ def test_the_most_serious_hit_decides_and_all_are_kept():
 
 def test_the_senior_limit_counts_the_amount_either_way():
     assert route(kind="credit_note", total=Decimal("-25000")).hits[-1].rule == "I6"
+
+
+def test_another_partys_order_goes_to_a_senior():
+    r = route_invoice(
+        [], [{"kind": "order_mismatch"}], kind="invoice", total=None, senior_amount=LIMIT
+    )
+    assert (r.queue.value, r.rule) == ("senior", "I4")

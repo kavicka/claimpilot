@@ -14,8 +14,8 @@
   },
   "injected_errors_caught": {
    "value": 1.0,
-   "num": 313,
-   "den": 313
+   "num": 366,
+   "den": 366
   },
   "false_alarms": {
    "value": 0.0,
@@ -67,6 +67,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -152,6 +164,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -245,6 +269,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0003/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0003/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -305,6 +341,18 @@
   },
   {
    "id": "DE-0004/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/line_dropped",
    "ok": true,
    "expected": "recap_base",
    "got": [
@@ -400,6 +448,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0005/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0005/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -450,7 +510,20 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0006/line_dropped",
+   "ok": true,
+   "expected": "lines_total",
+   "got": [
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -496,7 +569,20 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0007/line_dropped",
+   "ok": true,
+   "expected": "lines_total",
+   "got": [
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -569,6 +655,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -661,6 +759,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0009/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0009/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -721,6 +831,18 @@
   },
   {
    "id": "DE-0010/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/line_dropped",
    "ok": true,
    "expected": "recap_base",
    "got": [
@@ -816,6 +938,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0011/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0011/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -893,6 +1027,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -978,6 +1124,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -1071,6 +1229,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0014/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0014/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1121,7 +1291,8 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -1289,6 +1460,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0017/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0017/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1374,6 +1557,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0018/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0018/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1445,6 +1640,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0019/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0019/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1495,7 +1702,8 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -1541,7 +1749,20 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0021/line_dropped",
+   "ok": true,
+   "expected": "lines_total",
+   "got": [
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -1614,6 +1835,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -1700,6 +1933,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -1876,6 +2121,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0025/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0025/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1936,6 +2193,18 @@
   },
   {
    "id": "DE-0026/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/line_dropped",
    "ok": true,
    "expected": "recap_base",
    "got": [
@@ -2034,6 +2303,19 @@
    "detail": {}
   },
   {
+   "id": "DE-0027/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base",
+    "recap_vat"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0027/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2113,6 +2395,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -2206,6 +2500,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0029/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0029/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2266,6 +2572,18 @@
   },
   {
    "id": "DE-0030/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/line_dropped",
    "ok": true,
    "expected": "recap_base",
    "got": [
@@ -2363,6 +2681,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0031/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0031/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2442,6 +2772,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -2535,6 +2877,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0033/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0033/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2585,7 +2939,20 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0034/line_dropped",
+   "ok": true,
+   "expected": "lines_total",
+   "got": [
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -2641,6 +3008,18 @@
   },
   {
    "id": "DE-0035/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/line_dropped",
    "ok": true,
    "expected": "recap_base",
    "got": [
@@ -2723,6 +3102,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0036/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0036/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2773,7 +3164,20 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0038/line_dropped",
+   "ok": true,
+   "expected": "lines_total",
+   "got": [
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -2842,8 +3246,8 @@
    "ok": true,
    "expected": "buyer_is_ours",
    "got": [
-    "buyer_is_ours",
-    "pages_complete"
+    "pages_complete",
+    "buyer_is_ours"
    ],
    "tags": [
     "injected"
@@ -2855,8 +3259,8 @@
    "ok": true,
    "expected": "supplier_iban",
    "got": [
-    "supplier_iban",
-    "pages_complete"
+    "pages_complete",
+    "supplier_iban"
    ],
    "tags": [
     "injected"
@@ -2868,8 +3272,8 @@
    "ok": true,
    "expected": "date_order",
    "got": [
-    "date_order",
-    "pages_complete"
+    "pages_complete",
+    "date_order"
    ],
    "tags": [
     "injected"
@@ -2901,6 +3305,18 @@
   },
   {
    "id": "DE-0040/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/line_dropped",
    "ok": true,
    "expected": "recap_base",
    "got": [
@@ -2962,7 +3378,20 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0042/line_dropped",
+   "ok": true,
+   "expected": "lines_total",
+   "got": [
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -3018,6 +3447,18 @@
   },
   {
    "id": "DE-0043/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/line_dropped",
    "ok": true,
    "expected": "recap_base",
    "got": [
@@ -3100,6 +3541,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0044/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0044/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3150,7 +3603,20 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0045/line_dropped",
+   "ok": true,
+   "expected": "lines_total",
+   "got": [
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -3223,6 +3689,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -3316,6 +3794,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0047/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0047/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3402,6 +3892,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0048/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0048/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3475,8 +3977,8 @@
    "ok": true,
    "expected": "buyer_is_ours",
    "got": [
-    "buyer_is_ours",
-    "pages_complete"
+    "pages_complete",
+    "buyer_is_ours"
    ],
    "tags": [
     "injected"
@@ -3488,8 +3990,8 @@
    "ok": true,
    "expected": "supplier_iban",
    "got": [
-    "supplier_iban",
-    "pages_complete"
+    "pages_complete",
+    "supplier_iban"
    ],
    "tags": [
     "injected"
@@ -3501,8 +4003,8 @@
    "ok": true,
    "expected": "date_order",
    "got": [
-    "date_order",
-    "pages_complete"
+    "pages_complete",
+    "date_order"
    ],
    "tags": [
     "injected"
@@ -3643,6 +4145,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0051/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0051/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3720,6 +4234,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -3813,6 +4339,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0053/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0053/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3898,6 +4436,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0054/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0054/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3958,6 +4508,18 @@
   },
   {
    "id": "DE-0055/recap_base+1",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/line_dropped",
    "ok": true,
    "expected": "recap_base",
    "got": [
@@ -4040,6 +4602,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0056/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0056/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -4105,6 +4679,18 @@
    "got": [
     "recap_base",
     "recap_vat"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -4189,6 +4775,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -4281,6 +4879,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0059/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0059/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -4331,7 +4941,20 @@
    "ok": true,
    "expected": "line_math",
    "got": [
-    "line_math"
+    "line_math",
+    "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0060/line_dropped",
+   "ok": true,
+   "expected": "lines_total",
+   "got": [
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -4405,6 +5028,18 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -4498,6 +5133,18 @@
    "detail": {}
   },
   {
+   "id": "DE-D002/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-D002/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -4535,9 +5182,9 @@
   }
  ],
  "meta": {
-  "created": "20261016T150147Z",
+  "created": "20261016T161014Z",
   "git": {
-   "sha": "dfe1e61",
+   "sha": "0509093",
    "dirty": true
   },
   "dataset": "6bd4025701dc",
@@ -4557,7 +5204,7 @@
   "tokens_per_item": 0.0,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 492,
+  "worker_peak_rss_mb": 496,
   "models": []
  },
  "notes": [],

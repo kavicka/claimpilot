@@ -98,3 +98,17 @@ def test_a_wrong_iban_and_a_missing_original_are_refused():
 def test_a_dtd_is_refused():
     with pytest.raises(ValueError, match="DTD"):
         parse(b'<?xml version="1.0"?><!DOCTYPE x [<!ENTITY a "aaaa">]><x>&a;</x>')
+
+
+@pytest.mark.parametrize(
+    ("qty", "price", "net"),
+    [(Dec("-1"), Dec("10.00"), Dec("-10.00")), (Dec("1"), Dec("-10.00"), Dec("-10.00"))],
+)
+def test_a_return_line_on_an_invoice_passes(qty, price, net):
+    # Printed either way: a negative quantity, or a negative price (a discount line).
+    lines = [*invoice().lines, Line(qty, "ks", "Vrátenie", price, net, 23)]
+    assert rules(build(invoice(lines=lines))) == set()
+
+
+def test_an_iban_with_dashes_is_refused_not_a_crash():
+    assert "IBAN" in rules(build(invoice(iban="SK63-1100-0000-0029-4006-8012")))

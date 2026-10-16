@@ -1,0 +1,1019 @@
+{
+ "suite": "matching",
+ "split": "test",
+ "metrics": {
+  "planted_findings_found": {
+   "value": 1.0,
+   "num": 14,
+   "den": 14
+  },
+  "invoices_exact": {
+   "value": 1.0,
+   "num": 60,
+   "den": 60
+  },
+  "extra_findings": {
+   "value": 0.0,
+   "num": 0,
+   "den": 0
+  }
+ },
+ "items": [
+  {
+   "id": "TE-0001/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0002/iban_changed/None",
+   "ok": true,
+   "expected": "iban_changed",
+   "got": [
+    [
+     "iban_changed",
+     null
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0002/exact",
+   "ok": true,
+   "expected": [
+    [
+     "iban_changed",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "iban_changed",
+     null
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0003/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0004/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0005/short_delivery/21",
+   "ok": true,
+   "expected": "short_delivery",
+   "got": [
+    [
+     "short_delivery",
+     21
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0005/exact",
+   "ok": true,
+   "expected": [
+    [
+     "short_delivery",
+     21
+    ]
+   ],
+   "got": [
+    [
+     "short_delivery",
+     21
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0006/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0007/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0008/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0009/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0010/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0011/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0012/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0013/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0014/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0015/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0016/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0017/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0018/unknown_supplier/None",
+   "ok": true,
+   "expected": "unknown_supplier",
+   "got": [
+    [
+     "unknown_supplier",
+     null
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0018/exact",
+   "ok": true,
+   "expected": [
+    [
+     "unknown_supplier",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "unknown_supplier",
+     null
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0019/iban_changed/None",
+   "ok": true,
+   "expected": "iban_changed",
+   "got": [
+    [
+     "iban_changed",
+     null
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0019/exact",
+   "ok": true,
+   "expected": [
+    [
+     "iban_changed",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "iban_changed",
+     null
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0020/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0021/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0022/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0023/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0024/short_delivery/3",
+   "ok": true,
+   "expected": "short_delivery",
+   "got": [
+    [
+     "short_delivery",
+     3
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0024/exact",
+   "ok": true,
+   "expected": [
+    [
+     "short_delivery",
+     3
+    ]
+   ],
+   "got": [
+    [
+     "short_delivery",
+     3
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0025/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0026/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0027/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0028/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0029/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0030/unknown_original/None",
+   "ok": true,
+   "expected": "unknown_original",
+   "got": [
+    [
+     "unknown_original",
+     null
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0030/exact",
+   "ok": true,
+   "expected": [
+    [
+     "unknown_original",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "unknown_original",
+     null
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0031/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0032/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0033/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0034/iban_changed/None",
+   "ok": true,
+   "expected": "iban_changed",
+   "got": [
+    [
+     "iban_changed",
+     null
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0034/exact",
+   "ok": true,
+   "expected": [
+    [
+     "iban_changed",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "iban_changed",
+     null
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0035/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0036/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0037/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0038/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0039/price_diff/3",
+   "ok": true,
+   "expected": "price_diff",
+   "got": [
+    [
+     "price_diff",
+     3
+    ],
+    [
+     "short_delivery",
+     1
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0039/short_delivery/1",
+   "ok": true,
+   "expected": "short_delivery",
+   "got": [
+    [
+     "price_diff",
+     3
+    ],
+    [
+     "short_delivery",
+     1
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0039/exact",
+   "ok": true,
+   "expected": [
+    [
+     "price_diff",
+     3
+    ],
+    [
+     "short_delivery",
+     1
+    ]
+   ],
+   "got": [
+    [
+     "price_diff",
+     3
+    ],
+    [
+     "short_delivery",
+     1
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0040/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0041/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0042/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0043/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0044/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0045/short_delivery/6",
+   "ok": true,
+   "expected": "short_delivery",
+   "got": [
+    [
+     "price_diff",
+     6
+    ],
+    [
+     "short_delivery",
+     6
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0045/price_diff/6",
+   "ok": true,
+   "expected": "price_diff",
+   "got": [
+    [
+     "price_diff",
+     6
+    ],
+    [
+     "short_delivery",
+     6
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0045/exact",
+   "ok": true,
+   "expected": [
+    [
+     "price_diff",
+     6
+    ],
+    [
+     "short_delivery",
+     6
+    ]
+   ],
+   "got": [
+    [
+     "price_diff",
+     6
+    ],
+    [
+     "short_delivery",
+     6
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0046/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0047/price_diff/2",
+   "ok": true,
+   "expected": "price_diff",
+   "got": [
+    [
+     "price_diff",
+     2
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0047/exact",
+   "ok": true,
+   "expected": [
+    [
+     "price_diff",
+     2
+    ]
+   ],
+   "got": [
+    [
+     "price_diff",
+     2
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0048/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0049/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0050/price_diff/9",
+   "ok": true,
+   "expected": "price_diff",
+   "got": [
+    [
+     "price_diff",
+     9
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0050/exact",
+   "ok": true,
+   "expected": [
+    [
+     "price_diff",
+     9
+    ]
+   ],
+   "got": [
+    [
+     "price_diff",
+     9
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0051/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0052/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0053/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0054/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0055/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0057/unknown_supplier/None",
+   "ok": true,
+   "expected": "unknown_supplier",
+   "got": [
+    [
+     "unknown_supplier",
+     null
+    ]
+   ],
+   "tags": [
+    "planted"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0057/exact",
+   "ok": true,
+   "expected": [
+    [
+     "unknown_supplier",
+     null
+    ]
+   ],
+   "got": [
+    [
+     "unknown_supplier",
+     null
+    ]
+   ],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0059/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-0060/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-D001/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "TE-D002/exact",
+   "ok": true,
+   "expected": [],
+   "got": [],
+   "tags": [
+    "invoice"
+   ],
+   "detail": {}
+  }
+ ],
+ "meta": {
+  "created": "20261016T160844Z",
+  "git": {
+   "sha": "0509093",
+   "dirty": true
+  },
+  "dataset": "a02080a1d6f7",
+  "seed": 42,
+  "cassette_mode": "off",
+  "overrides": {},
+  "options": {},
+  "prompts": {},
+  "models": [],
+  "limit": null
+ },
+ "ops": {
+  "llm_calls": 0,
+  "cached_calls": 0,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "tokens_per_item": 0.0,
+  "latency_p50_ms": 0,
+  "latency_p95_ms": 0,
+  "worker_peak_rss_mb": 494,
+  "models": []
+ },
+ "notes": [
+  "iban_changed: missed 0, extra 0",
+  "price_diff: missed 0, extra 0",
+  "short_delivery: missed 0, extra 0",
+  "unknown_original: missed 0, extra 0",
+  "unknown_supplier: missed 0, extra 0"
+ ],
+ "stale": []
+}

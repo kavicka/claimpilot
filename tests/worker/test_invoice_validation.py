@@ -162,3 +162,41 @@ def test_ean_check_digit():
 def test_unreadable_values_fail_their_check_instead_of_passing():
     lines = [dict(LINES[0], line_net="5,3l")]  # OCR read a letter
     assert "line_math" in failed(validate(GOOD_SK, lines, OURS, pages_present=1))
+
+
+# --- a missing line or total must not pass --------------------------------------------------
+
+NO_RECAP = {k: v for k, v in GOOD_SK.items() if not k.startswith("recap") and k != "total_net"}
+
+
+def test_a_line_left_out_fails_the_lines_total_without_a_recap():
+    # Scans print no recap: the total is the only thing to hold the lines against.
+    bad = failed(validate(NO_RECAP, LINES[:1], OURS, pages_present=1))
+    assert "lines_total" in bad
+
+
+def test_the_lines_total_holds_for_a_complete_invoice_without_a_recap():
+    assert failed(validate(NO_RECAP, LINES, OURS, pages_present=1)) == {}
+
+
+def test_a_line_left_out_fails_against_the_printed_net_total():
+    header = {k: v for k, v in GOOD_SK.items() if not k.startswith("recap")}
+    bad = failed(validate(header, LINES[:1], OURS, pages_present=1))
+    assert "lines_total" in bad and "total_net" in bad["lines_total"]
+
+
+def test_a_line_without_quantity_or_amount_is_incomplete():
+    lines = [{"name": "Šampón", "vat_rate": "23%"}, LINES[1]]
+    bad = failed(validate(GOOD_SK, lines, OURS, pages_present=1))
+    assert bad["line_complete"] == ["lines[1].quantity", "lines[1].line_net"]
+
+
+def test_an_unread_final_amount_fails():
+    header = {k: v for k, v in GOOD_SK.items() if k not in ("total", "amount_due")}
+    bad = failed(validate(header, LINES, OURS, pages_present=1))
+    assert bad["total"] == ["total", "amount_due"]
+
+
+def test_the_amount_due_alone_is_a_final_amount():
+    header = {k: v for k, v in GOOD_SK.items() if k != "total"}
+    assert failed(validate(header, LINES, OURS, pages_present=1)) == {}

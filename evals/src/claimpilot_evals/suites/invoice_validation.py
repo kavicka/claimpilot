@@ -93,6 +93,10 @@ def mutations(header: dict[str, str], lines: list[dict[str, str]]) -> list[tuple
                 mutated(lambda h, ls: h.update({"recap[0].base": _shift(h["recap[0].base"], "1")})),
             )
         )
+    if len(lines) >= 2 and ("total" in header or "total_net" in header or "amount_due" in header):
+        # A line the extraction left out: the recap (per rate) or the totals must not hold.
+        check = "recap_base" if "recap[0].base" in header else "lines_total"
+        out.append(("line_dropped", check, mutated(lambda h, ls: ls.pop())))
     if "buyer_vat_id" in header:
         out.append(
             (
