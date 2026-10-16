@@ -1,10 +1,9 @@
-import { Bot, ListChecks, Route } from "lucide-react";
+import { DetailCard, EmptyState, Tag } from "@claimpilot/ui";
 
-import { Chip } from "@/components/ui/chip";
-import { EmptyState } from "@/components/ui/empty-state";
 import { queueEntry, statusEntry } from "@/lib/enums";
 import type { ClaimStatus, Routing } from "@/lib/types";
 
+/** Titled block inside the claim side panel, in the popover-section style (DF 2:1078). */
 export function PanelSection({
   title,
   children,
@@ -15,9 +14,9 @@ export function PanelSection({
   trailing?: React.ReactNode;
 }) {
   return (
-    <section className="border-b border-line px-5 py-4 last:border-b-0">
-      <div className="mb-2.5 flex items-center justify-between gap-3">
-        <h3 className="text-[11px] font-medium uppercase tracking-[0.06em] text-ink-3">{title}</h3>
+    <section className="flex flex-col gap-12 px-20 py-16 hairline-b last:shadow-none">
+      <div className="flex items-center justify-between gap-12">
+        <h3 className="cp-text-label text-ink-subtle">{title}</h3>
         {trailing}
       </div>
       {children}
@@ -29,8 +28,7 @@ export function RoutingPanel({ routing, status }: { routing: Routing | null; sta
   if (!routing) {
     return (
       <EmptyState
-        icon={Route}
-        compact
+        icon="route"
         title="Not routed yet."
         description={`Routing runs after extraction. Status now: ${statusEntry(status).label}.`}
       />
@@ -40,47 +38,45 @@ export function RoutingPanel({ routing, status }: { routing: Routing | null; sta
   return (
     <div>
       <PanelSection title="Decision">
-        <dl className="grid grid-cols-2 gap-4">
-          <div>
-            <dt className="text-xs text-ink-3">Queue</dt>
-            <dd className="mt-1">
-              {queue ? (
-                <Chip dot variant={queue.variant}>
+        <DetailCard
+          rows={[
+            {
+              label: "Queue",
+              value: queue ? (
+                <Tag tone={queue.tone} dot size="md">
                   {queue.label}
-                </Chip>
+                </Tag>
               ) : (
-                <span className="text-sm text-ink-3">None</span>
-              )}
-            </dd>
-          </div>
-          <div>
-            <dt className="text-xs text-ink-3">Decided by</dt>
-            <dd className="mt-1">
-              {routing.llm_used ? (
-                <Chip variant="purple" icon={Bot}>
+                <span className="text-ink-subtle">None</span>
+              ),
+            },
+            {
+              label: "Decided by",
+              value: routing.llm_used ? (
+                <Tag tone="purple" icon="bot" size="md">
                   Rules and LLM
-                </Chip>
+                </Tag>
               ) : (
-                <Chip variant="neutral" icon={ListChecks}>
+                <Tag tone="neutral" icon="check-list" size="md">
                   Rules only
-                </Chip>
-              )}
-            </dd>
-          </div>
-        </dl>
+                </Tag>
+              ),
+            },
+          ]}
+        />
       </PanelSection>
 
       <PanelSection title={`Rule hits (${routing.rule_hits.length})`}>
         {routing.rule_hits.length === 0 ? (
-          <p className="text-sm text-ink-2">No rules fired.</p>
+          <p className="cp-text-cell text-ink-subtle">No rules fired.</p>
         ) : (
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-8">
             {routing.rule_hits.map((h, i) => (
-              <li key={`${h.rule}-${i}`} className="flex items-start gap-2.5">
-                <Chip mono variant="neutral" className="mt-px">
+              <li key={`${h.rule}-${i}`} className="flex items-start gap-10">
+                <Tag tone="neutral" size="md">
                   {h.rule}
-                </Chip>
-                <span className="text-[13px] leading-snug">{h.detail}</span>
+                </Tag>
+                <span className="cp-text-cell pt-2 text-ink-cell">{h.detail}</span>
               </li>
             ))}
           </ul>
@@ -89,9 +85,9 @@ export function RoutingPanel({ routing, status }: { routing: Routing | null; sta
 
       <PanelSection title="Rationale">
         {routing.rationale ? (
-          <p className="whitespace-pre-wrap text-[13px] leading-relaxed">{routing.rationale}</p>
+          <p className="cp-text-cell whitespace-pre-wrap text-ink-cell">{routing.rationale}</p>
         ) : (
-          <p className="text-sm text-ink-3">No rationale recorded.</p>
+          <p className="cp-text-cell text-ink-subtle">No rationale recorded.</p>
         )}
       </PanelSection>
     </div>

@@ -1,11 +1,8 @@
 "use client";
 
-import { Scale } from "lucide-react";
+import { EmptyState, Stat, Tag, Tooltip } from "@claimpilot/ui";
 import { useState } from "react";
 
-import { Chip } from "@/components/ui/chip";
-import { EmptyState } from "@/components/ui/empty-state";
-import { Tooltip } from "@/components/ui/tooltip";
 import { COVERAGE, VERDICT, categoryEntry, statusEntry } from "@/lib/enums";
 import { eur, money } from "@/lib/format";
 import type { Assessment, ClaimStatus, CoverageItem } from "@/lib/types";
@@ -27,8 +24,7 @@ export function CoveragePanel({
   if (items.length === 0 && !assessment) {
     return (
       <EmptyState
-        icon={Scale}
-        compact
+        icon="scale"
         title="No coverage decisions yet."
         description={`Assessment runs after routing. Status now: ${statusEntry(status).label}.`}
       />
@@ -39,51 +35,45 @@ export function CoveragePanel({
     <div>
       <PanelSection title={`Items (${items.length})`}>
         {items.length === 0 ? (
-          <p className="text-sm text-ink-2">No claimed items were assessed.</p>
+          <p className="cp-text-cell text-ink-subtle">No claimed items were assessed.</p>
         ) : (
-          <ul className="-mx-5 divide-y divide-line">
+          <ul className="-mx-20 flex flex-col">
             {items.map((it) => {
               const section = categoryEntry(COVERAGE, it.coverage);
-              const verdict = VERDICT[it.verdict] ?? { label: it.verdict, variant: "neutral" as const };
+              const verdict = VERDICT[it.verdict] ?? { label: it.verdict, tone: "neutral" as const };
               return (
-                <li key={it.ref} className="px-5 py-3">
-                  <div className="flex items-start gap-3">
-                    <div className="min-w-0 flex-1">
+                <li key={it.ref} className="flex flex-col gap-6 px-20 py-12 hairline-t">
+                  <div className="flex items-start gap-12">
+                    <div className="flex min-w-0 flex-1 flex-col gap-6">
                       <Tooltip content={it.description} className="w-full">
-                        <p className="truncate text-[13px] font-medium">{it.description ?? it.ref}</p>
+                        <p className="cp-text-tab truncate text-ink">{it.description ?? it.ref}</p>
                       </Tooltip>
-                      <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                      <div className="flex flex-wrap items-center gap-6">
                         {section ? (
-                          <Chip dot variant={section.variant}>
+                          <Tag tone={section.tone} dot size="md">
                             {section.label}
-                          </Chip>
+                          </Tag>
                         ) : null}
-                        <Chip variant={verdict.variant} icon={verdict.icon}>
+                        <Tag tone={verdict.tone} icon={verdict.icon ?? null} size="md">
                           {verdict.label}
-                        </Chip>
+                        </Tag>
                         {it.clauses.map((c) => (
                           <Tooltip key={c} content="Show clause text">
-                            <button
-                              type="button"
-                              onClick={() => setClause(c)}
-                              className="rounded-full bg-ink/[0.04] px-2 py-0.5 font-mono text-[11.5px] font-medium text-ink ring-1 ring-inset ring-line-2 transition hover:bg-marker-soft hover:ring-marker-edge"
-                            >
+                            <button type="button" onClick={() => setClause(c)} className="cp-chip">
                               {c}
                             </button>
                           </Tooltip>
                         ))}
                       </div>
                     </div>
-                    <div className="shrink-0 text-right">
-                      <p className="tnum text-[13px] font-semibold">{eur(it.payout_eur)}</p>
-                      <p className="tnum text-[11.5px] text-ink-3">
+                    <div className="flex shrink-0 flex-col items-end gap-2">
+                      <p className="cp-text-tab tnum text-ink">{eur(it.payout_eur)}</p>
+                      <p className="cp-text-meta tnum text-ink-subtle">
                         {it.claimed !== null && it.currency ? `of ${money(it.claimed, it.currency)}` : "amount unreadable"}
                       </p>
                     </div>
                   </div>
-                  {it.rationale ? (
-                    <p className="mt-1.5 text-[12.5px] leading-snug text-ink-2">{it.rationale}</p>
-                  ) : null}
+                  {it.rationale ? <p className="cp-text-label-regular text-ink-subtle">{it.rationale}</p> : null}
                 </li>
               );
             })}
@@ -94,20 +84,20 @@ export function CoveragePanel({
       {assessment ? (
         <>
           <PanelSection title="Totals">
-            <dl className="grid grid-cols-3 gap-3">
-              <Total label="Payout" value={assessment.total_payout_eur} strong />
+            <div className="grid grid-cols-3 gap-8">
+              <Total label="Payout" value={assessment.total_payout_eur} />
               <Total label="Deductible" value={assessment.deductible_eur} />
               <Total label="Held" value={assessment.held_eur} />
-            </dl>
+            </div>
             {Object.keys(assessment.by_coverage).length > 0 ? (
-              <table className="mt-3 w-full text-[13px]">
+              <table className="cp-text-cell w-full text-ink-cell">
                 <tbody>
                   {Object.entries(assessment.by_coverage).map(([cov, amount]) => {
                     const e = categoryEntry(COVERAGE, cov);
                     return (
-                      <tr key={cov} className="border-t border-line/70">
-                        <td className="py-1.5 text-ink-2">{e?.label ?? cov}</td>
-                        <td className="tnum py-1.5 text-right">{eur(amount)}</td>
+                      <tr key={cov} className="hairline-t">
+                        <td className="py-6 text-ink-subtle">{e?.label ?? cov}</td>
+                        <td className="tnum py-6 text-right">{eur(amount)}</td>
                       </tr>
                     );
                   })}
@@ -117,12 +107,12 @@ export function CoveragePanel({
           </PanelSection>
           <PanelSection title="How the payout was computed">
             {assessment.explanation.length === 0 ? (
-              <p className="text-sm text-ink-3">No explanation recorded.</p>
+              <p className="cp-text-cell text-ink-subtle">No explanation recorded.</p>
             ) : (
-              <ol className="flex flex-col gap-1.5">
+              <ol className="flex flex-col gap-6">
                 {assessment.explanation.map((line, i) => (
-                  <li key={i} className="flex gap-2.5 text-[13px] leading-snug">
-                    <span className="tnum w-4 shrink-0 text-right font-mono text-[11.5px] text-ink-3">{i + 1}</span>
+                  <li key={i} className="cp-text-cell flex gap-10 text-ink-cell">
+                    <span className="tnum w-16 shrink-0 text-right text-ink-subtle">{i + 1}</span>
                     <span>{line}</span>
                   </li>
                 ))}
@@ -137,11 +127,10 @@ export function CoveragePanel({
   );
 }
 
-function Total({ label, value, strong = false }: { label: string; value: string | null; strong?: boolean }) {
+function Total({ label, value }: { label: string; value: string | null }) {
   return (
-    <div className="rounded-xl border border-line bg-stone-50/60 px-3 py-2.5">
-      <dt className="text-xs text-ink-3">{label}</dt>
-      <dd className={strong ? "tnum mt-0.5 text-[17px] font-semibold" : "tnum mt-0.5 text-[15px]"}>{eur(value)}</dd>
+    <div className="rounded-(--radius-12) px-12 py-10 hairline">
+      <Stat label={label} value={<span className="tnum">{eur(value)}</span>} />
     </div>
   );
 }

@@ -1,10 +1,8 @@
 "use client";
 
-import { FileX, ImageOff, Minus, Plus, ScanSearch } from "lucide-react";
+import { Alert, EmptyState, IconButton, Tooltip } from "@claimpilot/ui";
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 
-import { EmptyState } from "@/components/ui/empty-state";
-import { Tooltip } from "@/components/ui/tooltip";
 import { cn } from "@/lib/cn";
 import { docTypeLabel } from "@/lib/enums";
 import type { BBox, ClaimDocument, Field } from "@/lib/types";
@@ -88,7 +86,7 @@ export function DocumentViewer({
   if (!doc) {
     return (
       <section className="viewer-bg flex min-h-0 items-center justify-center">
-        <EmptyState icon={FileX} title="This claim has no documents." compact />
+        <EmptyState icon="file-remove" title="This claim has no documents." />
       </section>
     );
   }
@@ -101,9 +99,10 @@ export function DocumentViewer({
         : null;
 
   return (
-    <section className="flex min-h-0 flex-col bg-[#e6e4de]">
-      <div className="flex items-center gap-2 border-b border-line bg-[#f3f1ec] px-3 py-2">
-        <div role="tablist" aria-label="Documents" className="flex min-w-0 flex-1 flex-wrap gap-1">
+    <section className="flex min-h-0 flex-col bg-surface-tabs">
+      <div className="flex items-center gap-12 bg-surface px-16 py-8 hairline-b">
+        {/* Documents as a pill tab track (DF 2:33), with the file name under each type */}
+        <div role="tablist" aria-label="Documents" className="cp-tabs flex min-w-0 flex-1 flex-wrap">
           {documents.map((d) => {
             const active = d.id === doc.id;
             return (
@@ -114,61 +113,58 @@ export function DocumentViewer({
                 aria-selected={active}
                 onClick={() => onActiveDocChange(d.id)}
                 className={cn(
-                  "flex shrink-0 flex-col items-start rounded-lg px-2.5 py-1.5 text-left transition",
-                  active ? "bg-sheet shadow-sm ring-1 ring-black/5" : "hover:bg-black/[0.04]",
+                  "cp-tab h-auto flex-col items-start gap-2 py-4 text-left transition-[background-color,box-shadow,color] duration-(--cp-dur-2)",
+                  active && "bg-surface",
                 )}
               >
-                <span className={cn("text-[12.5px] font-medium leading-tight", active ? "text-ink" : "text-ink-2")}>
-                  {docTypeLabel(d.doc_type)}
-                </span>
-                <span className="font-mono text-[10.5px] leading-tight text-ink-3">{d.filename}</span>
+                <span>{docTypeLabel(d.doc_type)}</span>
+                <span className="cp-text-meta text-ink-subtle">{d.filename}</span>
               </button>
             );
           })}
         </div>
-        <div className="flex shrink-0 items-center gap-1 self-start border-l border-line pl-2 pt-1">
+        <div className="flex shrink-0 items-center gap-12">
           <Tooltip content={showAll ? "Hide field boxes" : "Show every field box on the page"} side="bottom">
-            <button
-              type="button"
+            <IconButton
+              variant="toolbar"
+              icon="bounding-box"
+              iconSize={20}
               aria-pressed={showAll}
-              aria-label="Show all field boxes"
+              label="Show all field boxes"
               onClick={() => setShowAll((v) => !v)}
-              className={cn(
-                "rounded-md p-1.5 transition",
-                showAll ? "bg-ink text-white" : "text-ink-2 hover:bg-black/5 hover:text-ink",
-              )}
-            >
-              <ScanSearch className="size-4" />
-            </button>
+              className={cn(showAll && "text-accent")}
+            />
           </Tooltip>
           <Tooltip content="Zoom out" side="bottom">
-            <button
-              type="button"
-              aria-label="Zoom out"
+            <IconButton
+              variant="toolbar"
+              icon="minus"
+              iconSize={20}
+              label="Zoom out"
               disabled={zoomIndex === 0}
               onClick={() => setZoomIndex((z) => Math.max(0, z - 1))}
-              className="rounded-md p-1.5 text-ink-2 transition hover:bg-black/5 hover:text-ink disabled:opacity-35"
-            >
-              <Minus className="size-4" />
-            </button>
+              className="disabled:opacity-40"
+            />
           </Tooltip>
-          <span className="tnum w-11 text-center text-xs text-ink-2">{Math.round(zoom * 100)} %</span>
+          <span className="cp-text-label tnum w-[44px] text-center text-ink-cell">{Math.round(zoom * 100)} %</span>
           <Tooltip content="Zoom in" side="bottom">
-            <button
-              type="button"
-              aria-label="Zoom in"
+            <IconButton
+              variant="toolbar"
+              icon="plus-lg"
+              iconSize={20}
+              label="Zoom in"
               disabled={zoomIndex === ZOOMS.length - 1}
               onClick={() => setZoomIndex((z) => Math.min(ZOOMS.length - 1, z + 1))}
-              className="rounded-md p-1.5 text-ink-2 transition hover:bg-black/5 hover:text-ink disabled:opacity-35"
-            >
-              <Plus className="size-4" />
-            </button>
+              className="disabled:opacity-40"
+            />
           </Tooltip>
         </div>
       </div>
 
       {notice ? (
-        <div className="border-b border-amber-200 bg-amber-50 px-4 py-1.5 text-xs text-amber-900">{notice}</div>
+        <Alert tone="warning" className="rounded-none">
+          {notice}
+        </Alert>
       ) : null}
 
       <div
@@ -176,12 +172,12 @@ export function DocumentViewer({
         tabIndex={0} // keyboard users scroll the pages with the arrow keys
         role="region"
         aria-label="Document pages"
-        className="viewer-bg pane-scroll relative min-h-0 flex-1 overflow-auto focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ink"
+        className="viewer-bg pane-scroll relative min-h-0 flex-1 overflow-auto focus-visible:-outline-offset-2"
       >
         {doc.pages.length === 0 ? (
-          <EmptyState icon={ImageOff} title="No page images for this document." compact />
+          <EmptyState icon="image-off" title="No page images for this document." />
         ) : (
-          <div className="flex flex-col items-center gap-5 px-4 py-5" style={{ width: zoom > 1 ? `${zoom * 100}%` : undefined }}>
+          <div className="flex flex-col items-center gap-20 px-16 py-20" style={{ width: zoom > 1 ? `${zoom * 100}%` : undefined }}>
             {doc.pages.map((src, i) => {
               const n = i + 1;
               const onPage = doc.fields.filter((f) => f.page === n && f.bbox);
@@ -197,19 +193,19 @@ export function DocumentViewer({
               const highlight = target && target.page === n && target.bbox ? target : null;
               return (
                 <div key={src} className="w-full max-w-[900px]" style={zoom > 1 ? { maxWidth: "none" } : undefined}>
-                  <div className="mb-1.5 flex items-center justify-between text-[11px] text-ink-3">
+                  <div className="cp-text-meta mb-6 flex items-center justify-between text-ink-subtle">
                     <span>
                       Page {n} of {doc.pages.length}
                     </span>
-                    {i === 0 && doc.language ? <span className="font-mono uppercase">{doc.language}</span> : null}
+                    {i === 0 && doc.language ? <span className="uppercase">{doc.language}</span> : null}
                   </div>
                   <div
                     data-page={n}
-                    className="relative overflow-hidden rounded-[3px] bg-white shadow-[0_1px_2px_rgb(0_0_0/0.08),0_8px_24px_rgb(0_0_0/0.08)]"
+                    className="relative overflow-hidden rounded-(--radius-4) bg-surface shadow-(--shadow-panel) hairline"
                   >
                     {broken[src] ? (
                       <div className="flex aspect-[1/1.414] items-center justify-center">
-                        <EmptyState icon={ImageOff} title="Page image could not be loaded." compact />
+                        <EmptyState icon="image-off" title="Page image could not be loaded." />
                       </div>
                     ) : (
                       <img
@@ -228,17 +224,16 @@ export function DocumentViewer({
                         title={fieldLabel(f.field)}
                         onClick={() => onSelectField(f, doc.id)}
                         style={boxStyle(f.bbox!)}
-                        className="absolute rounded-[2px] border border-sky-500/60 bg-sky-400/[0.06] transition hover:border-sky-600 hover:bg-sky-400/15"
+                        className="absolute rounded-(--radius-2) bg-accent-track/40 shadow-[inset_0_0_0_var(--stroke-1)_var(--accent)] opacity-70 transition-opacity duration-(--cp-dur-1) hover:opacity-100"
                       />
                     ))}
                     {highlight ? (
                       <div key={`${highlight.id}-${selection?.nonce}`} className="pointer-events-none absolute" style={boxStyle(highlight.bbox!)}>
-                        <div className="absolute inset-0 animate-mark rounded-[3px] bg-marker/45 mix-blend-multiply" />
-                        <div className="absolute inset-0 rounded-[3px] ring-2 ring-marker-edge" />
+                        <div className="absolute inset-0 animate-mark rounded-(--radius-2) bg-accent-track shadow-[inset_0_0_0_var(--stroke-focus)_var(--accent)]" />
                         <span
                           className={cn(
-                            "absolute left-0 whitespace-nowrap rounded bg-ink px-1.5 py-0.5 font-mono text-[10.5px] text-white shadow",
-                            highlight.bbox!.y0 < 0.04 ? "top-full mt-1" : "bottom-full mb-1",
+                            "cp-text-meta absolute left-0 whitespace-nowrap rounded-(--radius-4) bg-surface-dark px-6 py-2 text-ink-on-dark-soft shadow-(--shadow-coachmark)",
+                            highlight.bbox!.y0 < 0.04 ? "top-full mt-4" : "bottom-full mb-4",
                           )}
                         >
                           {highlight.field}

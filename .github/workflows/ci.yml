@@ -106,7 +106,7 @@ jobs:
           - { name: api, dockerfile: services/api/Dockerfile, context: . }
           - { name: core-mock, dockerfile: services/core_mock/Dockerfile, context: . }
           - { name: mcp, dockerfile: services/mcp_server/Dockerfile, context: . }
-          - { name: ui, dockerfile: ui/Dockerfile, context: ui }
+          - { name: ui, dockerfile: ui/Dockerfile, context: . } # ui/ installs packages/claimpilot-ui
     steps:
       - uses: actions/checkout@v4
       - uses: docker/setup-buildx-action@v3

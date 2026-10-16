@@ -1,14 +1,11 @@
 "use client";
 
-import { CircleAlert, Inbox, LoaderCircle, RefreshCw, Search, X } from "lucide-react";
+import { Alert, Checkbox, EmptyState, IconButton, SearchField, Spinner, TableToolbar, Tabs, Tooltip, type TabItem } from "@claimpilot/ui";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 
-import { EmptyState, ErrorNote } from "@/components/ui/empty-state";
-import { PillTabs, type TabItem } from "@/components/ui/tabs";
-import { Tooltip } from "@/components/ui/tooltip";
+import { DataPage } from "@/components/shell/page";
 import { api } from "@/lib/api";
-import { cn } from "@/lib/cn";
 import { DECIDED_STATUSES, PIPELINE_STATUSES } from "@/lib/enums";
 import type { ClaimRow } from "@/lib/types";
 import { useFetch } from "@/lib/use-fetch";
@@ -76,17 +73,14 @@ export function QueueView() {
     router.replace(`${pathname}?${q.toString()}`, { scroll: false });
   }
 
-  const visible = useMemo(() => {
-    const needle = search.trim().toLowerCase();
-    return rows
-      .filter((r) => inTab(r, tab, withDecided))
-      .filter(
-        (r) =>
-          !needle ||
-          r.reference.toLowerCase().includes(needle) ||
-          (r.insured ?? "").toLowerCase().includes(needle),
-      );
-  }, [rows, tab, withDecided, search]);
+  const needle = search.trim().toLowerCase();
+  const visible = useMemo(
+    () =>
+      rows
+        .filter((r) => inTab(r, tab, withDecided))
+        .filter((r) => !needle || r.reference.toLowerCase().includes(needle) || (r.insured ?? "").toLowerCase().includes(needle)),
+    [rows, tab, withDecided, needle],
+  );
 
   const tabs: TabItem<TabKey>[] = ORDER.map((key) => ({
     key,
@@ -97,99 +91,76 @@ export function QueueView() {
 
   const inReview = counts.fast_track + counts.standard + counts.senior + counts.fraud_review;
 
-  return (
-    <div className="mx-auto max-w-[1400px] px-6 py-7">
-      <header className="flex items-end justify-between gap-4">
-        <div>
-          <h1 className="text-[22px] font-semibold tracking-tight">Queue</h1>
-          <p className="mt-0.5 text-sm text-ink-2">
-            {data ? (
-              <>
-                <span className="tnum">{inReview}</span> in review · <span className="tnum">{counts.pipeline}</span> in
-                the pipeline · <span className="tnum">{rows.length}</span> total
-              </>
-            ) : (
-              " "
-            )}
-          </p>
-        </div>
-        <Tooltip content="Reload now. The list also refreshes every 15 seconds." side="bottom">
-          <button
-            type="button"
-            onClick={reload}
-            aria-label="Reload"
-            className="rounded-lg border border-line-2 bg-sheet p-2 text-ink-2 transition hover:text-ink"
-          >
-            <RefreshCw className="size-4" />
-          </button>
-        </Tooltip>
-      </header>
+  const empty = loading ? (
+    <div className="flex items-center justify-center gap-8 py-80 text-ink-subtle" role="status">
+      <Spinner /> Loading claims
+    </div>
+  ) : (
+    <EmptyState
+      icon={needle ? "search-remove" : tab === "failed" ? "alert-circle" : "inbox"}
+      title={needle ? `No claims match “${search.trim()}”.` : EMPTY[tab]}
+      description={
+        !needle && QUEUE_TABS.has(tab) && counts.pipeline > 0
+          ? `${counts.pipeline} ${counts.pipeline === 1 ? "claim is" : "claims are"} still in the pipeline.`
+          : undefined
+      }
+    />
+  );
 
-      <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-        <PillTabs tabs={tabs} value={tab} onChange={selectTab} label="Queues" className="shrink-0" />
-        <div className="flex items-center gap-3">
-          {QUEUE_TABS.has(tab) ? (
-            <label className="flex cursor-pointer select-none items-center gap-2 text-[13px] text-ink-2">
-              <input
-                type="checkbox"
-                checked={withDecided}
-                onChange={(e) => setWithDecided(e.target.checked)}
-                className="size-3.5 accent-ink"
-              />
-              Show decided
-            </label>
-          ) : null}
-          <div className="relative">
-            <Search className="pointer-events-none absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-ink-3" aria-hidden />
-            <input
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Reference or name"
-              aria-label="Search claims"
-              className="h-9 w-52 rounded-lg border border-line-2 bg-sheet pl-8 pr-8 text-sm outline-none transition placeholder:text-ink-3 focus:border-ink focus:ring-2 focus:ring-ink/10"
-            />
-            {search ? (
-              <button
-                type="button"
-                onClick={() => setSearch("")}
-                aria-label="Clear search"
-                className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-0.5 text-ink-3 hover:text-ink"
-              >
-                <X className="size-3.5" />
-              </button>
+  return (
+    <DataPage
+      crumbs={[{ label: "Claims", href: "/" }, { label: "Queue" }]}
+      meta="Refreshes every 15 seconds"
+      actions={
+        <Tooltip content="Reload now" side="bottom">
+          <IconButton variant="toolbar" icon="refresh" iconSize={16} label="Reload" onClick={reload} />
+        </Tooltip>
+      }
+      title="Queue"
+      subtitle={
+        data ? (
+          <>
+            <span className="tnum">{inReview}</span> in review · <span className="tnum">{counts.pipeline}</span> in the
+            pipeline · <span className="tnum">{rows.length}</span> total
+          </>
+        ) : (
+          " "
+        )
+      }
+    >
+      <TableToolbar
+        actions={
+          <>
+            {QUEUE_TABS.has(tab) ? (
+              <Checkbox variant="table" checked={withDecided} onCheckedChange={setWithDecided}>
+                Show decided
+              </Checkbox>
             ) : null}
-          </div>
-        </div>
-      </div>
+            <div className="w-[220px]">
+              <SearchField
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Reference or name"
+                aria-label="Search claims"
+              />
+            </div>
+          </>
+        }
+      >
+        <Tabs tabs={tabs} value={tab} onValueChange={selectTab} label="Queues" />
+      </TableToolbar>
 
       {error ? (
-        <div className="mt-4">
-          <ErrorNote message={error} onRetry={reload} />
-        </div>
+        <Alert tone="danger" action={{ label: "Retry", onClick: reload }}>
+          {error}
+        </Alert>
       ) : null}
 
-      <section className="mt-4 overflow-hidden rounded-2xl border border-line bg-sheet shadow-[0_1px_2px_rgb(0_0_0/0.03)]">
-        {loading ? (
-          <div className="flex items-center justify-center gap-2 py-20 text-sm text-ink-2">
-            <LoaderCircle className="size-4 animate-spin" aria-hidden /> Loading claims
-          </div>
-        ) : visible.length === 0 ? (
-          <EmptyState
-            icon={search ? Search : tab === "failed" ? CircleAlert : Inbox}
-            title={search ? `No claims match “${search.trim()}”.` : EMPTY[tab]}
-            description={
-              !search && QUEUE_TABS.has(tab) && counts.pipeline > 0
-                ? `${counts.pipeline} ${counts.pipeline === 1 ? "claim is" : "claims are"} still in the pipeline.`
-                : undefined
-            }
-          />
-        ) : (
-          <QueueTable rows={visible} failed={tab === "failed"} />
-        )}
-      </section>
-      <p className={cn("mt-3 text-xs text-ink-3", !data && "invisible")}>
+      <QueueTable rows={loading ? [] : visible} failed={tab === "failed"} empty={empty} />
+
+      <p className="cp-text-meta text-ink-subtle" hidden={!data}>
         Queue tabs list claims in review. Approved, submitted and rejected claims appear with Show decided.
       </p>
-    </div>
+    </DataPage>
   );
 }

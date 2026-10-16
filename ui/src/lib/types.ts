@@ -61,6 +61,14 @@ export interface Field {
   corrected: boolean;
 }
 
+/** Text a reader of the document cannot see; it never reached a model. */
+export interface HiddenText {
+  page: number;
+  bbox: BBox;
+  reason: "low_contrast" | "tiny" | "off_page" | "invisible" | "transparent" | "covered";
+  text: string | null;
+}
+
 export interface ClaimDocument {
   id: string;
   filename: string;
@@ -68,6 +76,7 @@ export interface ClaimDocument {
   language: string | null;
   pages: string[];
   fields: Field[];
+  hidden_text?: HiddenText[];
 }
 
 export interface RuleHit {

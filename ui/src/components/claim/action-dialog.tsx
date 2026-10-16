@@ -1,11 +1,8 @@
 "use client";
 
-import { LoaderCircle } from "lucide-react";
+import { Alert, Button, Dialog, Textarea, useToast } from "@claimpilot/ui";
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
-import { Dialog } from "@/components/ui/dialog";
-import { useNotify } from "@/components/ui/toast";
 import { ApiError, api, errorMessage } from "@/lib/api";
 import { statusEntry } from "@/lib/enums";
 import { eur } from "@/lib/format";
@@ -59,7 +56,7 @@ export function ActionDialog({
   onClose: () => void;
   onDone: () => void;
 }) {
-  const notify = useNotify();
+  const notify = useToast();
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [problem, setProblem] = useState<string | null>(null);
@@ -104,30 +101,28 @@ export function ActionDialog({
             <Button variant="ghost" onClick={onClose} disabled={busy}>
               Cancel
             </Button>
-            <Button variant={copy.variant} onClick={confirm} disabled={busy}>
-              {busy ? <LoaderCircle className="animate-spin" aria-hidden /> : null}
+            <Button variant={copy.variant} onClick={confirm} loading={busy}>
               {copy.confirm}
             </Button>
           </>
         ) : null
       }
     >
-      <label htmlFor="action-note" className="block text-[13px] font-medium">
-        Note <span className="font-normal text-ink-3">(optional)</span>
-      </label>
-      <textarea
-        id="action-note"
-        value={note}
-        onChange={(e) => setNote(e.target.value)}
-        rows={3}
-        placeholder="Saved in the audit log"
-        className="mt-1.5 w-full resize-y rounded-lg border border-line-2 bg-white px-3 py-2 text-sm outline-none transition placeholder:text-ink-3 focus:border-ink focus:ring-2 focus:ring-ink/10"
-      />
-      {problem ? (
-        <p role="alert" className="mt-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
-          {problem}
-        </p>
-      ) : null}
+      <div className="flex flex-col gap-12">
+        <Textarea
+          id="action-note"
+          label="Note (optional)"
+          value={note}
+          onChange={(e) => setNote(e.target.value)}
+          rows={3}
+          placeholder="Saved in the audit log"
+        />
+        {problem ? (
+          <Alert tone="danger" className="items-start">
+            {problem}
+          </Alert>
+        ) : null}
+      </div>
     </Dialog>
   );
 }

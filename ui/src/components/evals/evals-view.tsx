@@ -1,8 +1,8 @@
 "use client";
 
-import { FlaskConical, LoaderCircle } from "lucide-react";
+import { Alert, EmptyState, Spinner, Tag } from "@claimpilot/ui";
 
-import { EmptyState, ErrorNote } from "@/components/ui/empty-state";
+import { DataPage } from "@/components/shell/page";
 import { api } from "@/lib/api";
 import { humanize, int, metric, when } from "@/lib/format";
 import type { EvalReport } from "@/lib/types";
@@ -34,24 +34,24 @@ function SuiteCard({ report, index }: { report: EvalReport; index: number }) {
   const ops = opsLine(report.ops ?? {});
   return (
     <article
-      className="animate-rise flex flex-col rounded-2xl border border-line bg-sheet shadow-[0_1px_2px_rgb(0_0_0/0.03)]"
+      className="flex animate-rise flex-col overflow-hidden rounded-(--radius-12) bg-surface hairline"
       style={{ animationDelay: `${index * 40}ms` }}
     >
-      <header className="flex items-baseline justify-between gap-3 border-b border-line px-5 py-3.5">
-        <h2 className="font-mono text-[15px] font-medium">{report.suite}</h2>
-        <span className="tnum text-xs text-ink-3">{when(report.created)}</span>
+      <header className="flex items-baseline justify-between gap-12 px-16 py-12 hairline-b">
+        <h2 className="cp-text-panel-title text-ink">{report.suite}</h2>
+        <span className="cp-text-meta tnum text-ink-subtle">{when(report.created)}</span>
       </header>
 
-      <div className="px-5 py-3">
+      <div className="px-16 py-8">
         {metrics.length === 0 ? (
-          <p className="text-sm text-ink-3">No metrics in this report.</p>
+          <p className="cp-text-cell text-ink-subtle">No metrics in this report.</p>
         ) : (
-          <table className="w-full text-[13px]">
+          <table className="cp-text-cell w-full text-ink-cell">
             <tbody>
               {metrics.map(([name, m]) => (
-                <tr key={name} className="border-b border-line/70 last:border-b-0">
-                  <td className="py-1.5 pr-3 text-ink-2">{humanize(name)}</td>
-                  <td className="tnum py-1.5 text-right font-medium">{metric(m)}</td>
+                <tr key={name} className="hairline-b last:shadow-none">
+                  <td className="py-8 pr-12 text-ink-subtle">{humanize(name)}</td>
+                  <td className="cp-text-tab tnum py-8 text-right">{metric(m)}</td>
                 </tr>
               ))}
             </tbody>
@@ -59,27 +59,16 @@ function SuiteCard({ report, index }: { report: EvalReport; index: number }) {
         )}
       </div>
 
-      <div className="mt-auto flex flex-col gap-2.5 border-t border-line bg-stone-50/50 px-5 py-3 text-xs">
-        <div className="flex flex-wrap items-center gap-1.5">
-          <span className="text-ink-3">Models</span>
-          {models.length ? (
-            models.map((m) => (
-              <span key={m} className="rounded bg-white px-1.5 py-px font-mono text-[11px] text-ink-2 ring-1 ring-line">
-                {m}
-              </span>
-            ))
-          ) : (
-            <span className="text-ink-2">none (no model calls)</span>
-          )}
+      <div className="cp-text-label-regular mt-auto flex flex-col gap-8 bg-surface-popover-footer px-16 py-10 text-ink-subtle hairline-t">
+        <div className="flex flex-wrap items-center gap-6">
+          <span>Models</span>
+          {models.length ? models.map((m) => <Tag key={m} tone="neutral">{m}</Tag>) : <span>none (no model calls)</span>}
         </div>
-        {ops.length ? <p className="tnum text-ink-2">{ops.join(" · ")}</p> : null}
+        {ops.length ? <p className="tnum">{ops.join(" · ")}</p> : null}
         {report.notes.length ? (
-          <ul className="flex flex-col gap-1 text-ink-2">
+          <ul className="flex list-disc flex-col gap-4 pl-16">
             {report.notes.map((n, i) => (
-              <li key={i} className="flex gap-2">
-                <span aria-hidden className="mt-[7px] size-1 shrink-0 rounded-full bg-ink-3" />
-                <span>{n}</span>
-              </li>
+              <li key={i}>{n}</li>
             ))}
           </ul>
         ) : null}
@@ -92,41 +81,32 @@ export function EvalsView() {
   const { data, error, loading, reload } = useFetch("evals", api.evals);
 
   return (
-    <div className="mx-auto max-w-[1200px] px-6 py-7">
-      <header>
-        <h1 className="text-[22px] font-semibold tracking-tight">Evals</h1>
-        <p className="mt-0.5 text-sm text-ink-2">Latest dev-split report per suite.</p>
-      </header>
-
+    <DataPage crumbs={[{ label: "Operations", href: "/ops" }, { label: "Evals" }]} title="Evals" subtitle="Latest dev-split report per suite.">
       {error ? (
-        <div className="mt-5">
-          <ErrorNote message={error} onRetry={reload} />
-        </div>
+        <Alert tone="danger" action={{ label: "Retry", onClick: reload }}>
+          {error}
+        </Alert>
       ) : null}
 
       {loading ? (
-        <div className="flex items-center justify-center gap-2 py-24 text-sm text-ink-2">
-          <LoaderCircle className="size-4 animate-spin" aria-hidden /> Loading
+        <div className="flex items-center justify-center gap-8 py-96 text-ink-subtle" role="status">
+          <Spinner /> Loading
         </div>
       ) : data && data.length === 0 ? (
-        <div className="mt-6 rounded-2xl border border-line bg-sheet">
+        <div className="rounded-(--radius-12) hairline">
           <EmptyState
-            icon={FlaskConical}
+            icon="flask"
             title="No eval reports."
-            description={
-              <>
-                The API reads <code className="font-mono text-[12.5px]">evals/reports/*-dev.json</code> and found none.
-              </>
-            }
+            description={<>The API reads evals/reports/*-dev.json and found none.</>}
           />
         </div>
       ) : data ? (
-        <div className="mt-6 grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-12">
           {data.map((r, i) => (
             <SuiteCard key={r.suite} report={r} index={i} />
           ))}
         </div>
       ) : null}
-    </div>
+    </DataPage>
   );
 }

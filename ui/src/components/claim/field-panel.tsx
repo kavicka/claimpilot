@@ -1,11 +1,8 @@
 "use client";
 
-import { Check, LoaderCircle, Pencil, PencilLine, SearchX, X } from "lucide-react";
+import { Checkbox, EmptyState, IconButton, Tag, Tooltip } from "@claimpilot/ui";
 import { useEffect, useRef, useState } from "react";
 
-import { Chip } from "@/components/ui/chip";
-import { EmptyState } from "@/components/ui/empty-state";
-import { Tooltip } from "@/components/ui/tooltip";
 import { api, errorMessage } from "@/lib/api";
 import { cn } from "@/lib/cn";
 import { docTypeLabel, failedCheckLabel, statusEntry } from "@/lib/enums";
@@ -14,11 +11,11 @@ import type { ClaimDocument, ClaimStatus, Field, FieldPatchResult } from "@/lib/
 import { confidenceLevel, failedChecks, groupFields, isFlagged, type Level } from "./field-utils";
 
 const DOT: Record<Level, string> = {
-  high: "bg-emerald-500",
-  medium: "bg-amber-400",
-  low: "bg-red-500",
-  empty: "bg-stone-300",
-  unknown: "bg-stone-300",
+  high: "bg-status-online",
+  medium: "bg-marker-comment",
+  low: "bg-danger-swipe",
+  empty: "bg-icon-caret",
+  unknown: "bg-icon-caret",
 };
 
 function dotTip(f: Field, level: Level): string {
@@ -58,30 +55,24 @@ export function FieldPanel({
   }, [selectedFieldId]);
 
   if (documents.length === 0) {
-    return <EmptyState icon={SearchX} title="No documents, so no fields." compact />;
+    return <EmptyState icon="search-remove" title="No documents, so no fields." />;
   }
 
   return (
-    <div className="pb-8">
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-line px-5 py-2.5 text-xs text-ink-2">
-        <label className="flex cursor-pointer select-none items-center gap-2">
-          <input
-            type="checkbox"
-            checked={onlyFlagged}
-            onChange={(e) => setOnlyFlagged(e.target.checked)}
-            className="size-3.5 accent-ink"
-          />
-          Only fields to check <span className="tnum text-ink-3">({flaggedTotal})</span>
-        </label>
-        <span className="ml-auto flex items-center gap-3 text-ink-3">
-          <Legend className="bg-emerald-500" label="≥ 0.9" />
-          <Legend className="bg-amber-400" label="0.7–0.9" />
-          <Legend className="bg-red-500" label="< 0.7" />
-          <Legend className="bg-stone-300" label="no value" />
+    <div className="pb-32">
+      <div className="flex flex-wrap items-center gap-x-16 gap-y-8 px-20 py-10 hairline-b">
+        <Checkbox variant="table" checked={onlyFlagged} onCheckedChange={setOnlyFlagged}>
+          Only fields to check <span className="tnum text-ink-subtle">({flaggedTotal})</span>
+        </Checkbox>
+        <span className="cp-text-meta ml-auto flex items-center gap-12 text-ink-subtle">
+          <Legend className={DOT.high} label="≥ 0.9" />
+          <Legend className={DOT.medium} label="0.7–0.9" />
+          <Legend className={DOT.low} label="< 0.7" />
+          <Legend className={DOT.empty} label="no value" />
         </span>
       </div>
       {!editable ? (
-        <p className="border-b border-line bg-stone-50 px-5 py-2 text-xs text-ink-2">
+        <p className="cp-text-label-regular bg-surface-subtle px-20 py-8 text-ink-subtle hairline-b">
           Fields can be corrected while the claim is in review. Status now: {statusEntry(status).label}.
         </p>
       ) : null}
@@ -95,27 +86,28 @@ export function FieldPanel({
             <button
               type="button"
               onClick={() => onShowDocument(doc.id)}
+              aria-current={active || undefined}
               className={cn(
-                "sticky top-0 z-10 flex w-full items-center gap-2 border-b border-line px-5 py-2 text-left backdrop-blur transition",
-                active ? "bg-marker-soft/95" : "bg-sheet/95 hover:bg-stone-50/95",
+                "sticky top-0 z-10 flex w-full items-center gap-8 px-20 py-8 text-left hairline-b transition-colors duration-(--cp-dur-1)",
+                active ? "bg-accent-soft" : "bg-surface-header hover:bg-surface-subtle",
               )}
             >
-              <span className="text-[13px] font-semibold">{docTypeLabel(doc.doc_type)}</span>
-              <span className="truncate font-mono text-[11px] text-ink-3">{doc.filename}</span>
-              <span className="ml-auto flex shrink-0 items-center gap-2 text-[11px] text-ink-3">
-                {flagged ? <span className="text-amber-700">{flagged} to check</span> : null}
+              <span className="cp-text-tab text-ink">{docTypeLabel(doc.doc_type)}</span>
+              <span className={cn("cp-text-meta truncate", active ? "text-ink-secondary" : "text-ink-subtle")}>{doc.filename}</span>
+              <span className={cn("cp-text-meta ml-auto flex shrink-0 items-center gap-8", active ? "text-ink-secondary" : "text-ink-subtle")}>
+                {flagged ? <span className="text-warning-ink">{flagged} to check</span> : null}
                 <span className="tnum">{doc.fields.length} fields</span>
               </span>
             </button>
             {groups.length === 0 ? (
-              <p className="px-5 py-3 text-xs text-ink-3">
+              <p className="cp-text-label-regular px-20 py-12 text-ink-subtle">
                 {onlyFlagged ? "Nothing to check in this document." : "No fields extracted from this document."}
               </p>
             ) : (
               groups.map((g) => (
                 <div key={g.key}>
                   {g.title ? (
-                    <p className="px-5 pb-1 pt-3 text-[11px] font-medium uppercase tracking-[0.06em] text-ink-3">{g.title}</p>
+                    <p className="cp-text-label px-20 pb-4 pt-12 text-ink-subtle">{g.title}</p>
                   ) : null}
                   {g.fields.map(({ field, label }) => (
                     <FieldRow
@@ -142,8 +134,8 @@ export function FieldPanel({
 
 function Legend({ className, label }: { className: string; label: string }) {
   return (
-    <span className="flex items-center gap-1">
-      <span className={cn("size-2 rounded-full", className)} aria-hidden />
+    <span className="flex items-center gap-4">
+      <span className={cn("size-8 rounded-(--radius-pill)", className)} aria-hidden />
       {label}
     </span>
   );
@@ -214,13 +206,15 @@ function FieldRow({
       id={`field-${field.id}`}
       onClick={() => !editing && onSelect()}
       className={cn(
-        "group relative grid cursor-pointer grid-cols-[10px_minmax(110px,0.75fr)_minmax(0,1.5fr)_28px] items-start gap-x-3 border-l-[3px] py-2 pr-3 transition-colors",
-        indent ? "pl-7" : "pl-[17px]",
-        selected ? "border-marker-edge bg-marker-soft" : "border-transparent hover:bg-stone-50 focus-within:bg-stone-50",
+        "group relative grid cursor-pointer grid-cols-[10px_minmax(110px,0.75fr)_minmax(0,1.5fr)_28px] items-start gap-x-12 py-8 pr-12 transition-colors duration-(--cp-dur-1)",
+        indent ? "pl-28" : "pl-20",
+        selected
+          ? "bg-accent-soft shadow-[inset_var(--stroke-focus)_0_0_var(--accent)]"
+          : "hover:bg-surface-subtle focus-within:bg-surface-subtle",
       )}
     >
-      <Tooltip content={dotTip(field, level)} side="right" className="pt-[5px]">
-        <span role="img" className={cn("block size-2.5 rounded-full", DOT[level])} aria-label={dotTip(field, level)} />
+      <Tooltip content={dotTip(field, level)} side="right" className="pt-4">
+        <span role="img" className={cn("block size-10 rounded-(--radius-pill)", DOT[level])} aria-label={dotTip(field, level)} />
       </Tooltip>
 
       <Tooltip content={field.field} className="min-w-0">
@@ -231,15 +225,15 @@ function FieldRow({
             e.stopPropagation();
             if (!editing) onSelect();
           }}
-          className="block w-full truncate pt-px text-left text-[13px] text-ink-2 focus-visible:underline focus-visible:outline-none"
+          className="cp-text-cell block w-full truncate text-left text-ink-subtle focus-visible:underline focus-visible:outline-none"
         >
           {label}
         </button>
       </Tooltip>
 
-      <div className="min-w-0">
+      <div className="flex min-w-0 flex-col gap-4">
         {editing ? (
-          <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
+          <div className="flex items-center gap-6" onClick={(e) => e.stopPropagation()}>
             <input
               ref={input}
               value={draft}
@@ -250,59 +244,43 @@ function FieldRow({
               }}
               disabled={saving}
               aria-label={`New value for ${label}`}
-              className="h-7 min-w-0 flex-1 rounded-md border border-ink/30 bg-white px-2 text-[13px] outline-none focus:border-ink focus:ring-2 focus:ring-ink/10"
+              className="cp-input min-w-0 flex-1 bg-surface shadow-[inset_0_0_0_var(--stroke-1)_var(--accent)]"
             />
             <Tooltip content="Save (Enter)">
-              <button
-                type="button"
-                onClick={save}
-                disabled={saving}
-                aria-label="Save"
-                className="rounded-md bg-ink p-1 text-white transition hover:bg-neutral-800"
-              >
-                {saving ? <LoaderCircle className="size-3.5 animate-spin" /> : <Check className="size-3.5" />}
-              </button>
+              <IconButton icon={saving ? "spinner" : "check"} iconSize={14} label="Save" onClick={save} disabled={saving} className={cn(saving && "[&_.cp-icon]:animate-[cp-spin_0.8s_linear_infinite]")} />
             </Tooltip>
             <Tooltip content="Cancel (Esc)">
-              <button
-                type="button"
-                onClick={() => setEditing(false)}
-                disabled={saving}
-                aria-label="Cancel"
-                className="rounded-md p-1 text-ink-3 transition hover:bg-black/5 hover:text-ink"
-              >
-                <X className="size-3.5" />
-              </button>
+              <IconButton icon="close" iconSize={14} label="Cancel" onClick={() => setEditing(false)} disabled={saving} />
             </Tooltip>
           </div>
         ) : hasValue ? (
-          <p className="whitespace-pre-wrap break-words text-[13px] font-medium leading-snug">
+          <p className="cp-text-tab whitespace-pre-wrap break-words text-ink-cell">
             {field.value}
-            {showNorm ? <span className="ml-1.5 font-mono text-[11.5px] font-normal text-ink-3">→ {field.value_norm}</span> : null}
+            {showNorm ? <span className="cp-text-label-regular ml-6 text-ink-subtle">→ {field.value_norm}</span> : null}
           </p>
         ) : (
-          <p className="text-[13px] italic text-ink-3">Not found</p>
+          <p className="cp-text-cell italic text-ink-subtle">Not found</p>
         )}
 
-        {problem ? <p className="mt-1 text-xs text-red-700">{problem}</p> : null}
+        {problem ? <p className="cp-field__error">{problem}</p> : null}
 
         {(!field.grounded && hasValue) || failed.length > 0 || field.corrected ? (
-          <div className="mt-1 flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-4">
             {field.corrected ? (
-              <Chip variant="info" icon={PencilLine}>
+              <Tag tone="info" icon="pencil">
                 Corrected
-              </Chip>
+              </Tag>
             ) : null}
             {!field.grounded && hasValue ? (
               <Tooltip content="The value was not found in the document text.">
-                <Chip variant="orange">Not grounded</Chip>
+                <Tag tone="orange">Not grounded</Tag>
               </Tooltip>
             ) : null}
             {failed.map((name) => (
               <Tooltip key={name} content={`Check: ${name}`}>
-                <Chip variant="danger" icon={X}>
+                <Tag tone="danger" icon="close">
                   {failedCheckLabel(name)}
-                </Chip>
+                </Tag>
               </Tooltip>
             ))}
           </div>
@@ -312,14 +290,14 @@ function FieldRow({
       <div className="flex justify-end">
         {editable && !editing ? (
           <Tooltip content="Correct value">
-            <button
-              type="button"
+            <IconButton
+              variant="bare"
+              icon="pencil"
+              iconSize={14}
+              label={`Correct ${label}`}
               onClick={startEdit}
-              aria-label={`Correct ${label}`}
-              className="rounded-md p-1 text-ink-3 opacity-0 transition hover:bg-black/5 hover:text-ink focus-visible:opacity-100 group-hover:opacity-100"
-            >
-              <Pencil className="size-3.5" />
-            </button>
+              className="p-4 text-ink-subtle opacity-0 transition-opacity duration-(--cp-dur-1) focus-visible:opacity-100 group-hover:opacity-100"
+            />
           </Tooltip>
         ) : null}
       </div>

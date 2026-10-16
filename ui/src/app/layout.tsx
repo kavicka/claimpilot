@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
+import { Courier_Prime, Inter, Plus_Jakarta_Sans } from "next/font/google";
 
-import { ToastProvider } from "@/components/ui/toast";
+import { Providers } from "@/components/shell/providers";
 
 import "./globals.css";
 
-const sans = IBM_Plex_Sans({
+// The design system's three families (packages/claimpilot-ui README). globals.css points the
+// --font-inter / --font-jakarta / --font-mono tokens at these.
+const inter = Inter({
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600"],
-  variable: "--font-plex-sans",
+  weight: ["400", "500", "600", "800"],
+  variable: "--font-inter-next",
 });
-const mono = IBM_Plex_Mono({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500"],
-  variable: "--font-plex-mono",
+  weight: ["500", "600", "700"],
+  variable: "--font-jakarta-next",
 });
-const serif = IBM_Plex_Serif({
+const mono = Courier_Prime({
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500"],
-  variable: "--font-plex-serif",
+  weight: ["400"],
+  variable: "--font-mono-next",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +30,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable} ${serif.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jakarta.variable} ${mono.variable}`}>
       <body>
-        <ToastProvider>{children}</ToastProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

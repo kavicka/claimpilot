@@ -1,16 +1,14 @@
-import { ExternalLink, History, Workflow } from "lucide-react";
+import { EmptyState, Icon, InlineLink, Tag, type IconName } from "@claimpilot/ui";
 
-import { Chip } from "@/components/ui/chip";
-import { EmptyState } from "@/components/ui/empty-state";
 import { cn } from "@/lib/cn";
 import { duration, firstLine, humanize, int, when } from "@/lib/format";
 import type { AuditEntry, StepRun } from "@/lib/types";
 
 import { PanelSection } from "./routing-panel";
 
-const STEP_DOT: Record<string, string> = {
-  ok: "bg-emerald-500 ring-emerald-100",
-  error: "bg-red-500 ring-red-100",
+const STEP_ICON: Record<string, { icon: IconName; className: string; label: string }> = {
+  ok: { icon: "check-circle", className: "text-activity-success", label: "Succeeded" },
+  error: { icon: "alert-circle", className: "text-danger-ink", label: "Failed" },
 };
 
 function auditDetails(details: AuditEntry["details"]): string | null {
@@ -44,72 +42,62 @@ export function PipelinePanel({
         title={`Steps (${steps.length})`}
         trailing={
           traceUrl ? (
-            <a
-              href={traceUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1 text-[12.5px] font-medium text-ink underline-offset-2 hover:underline"
-            >
-              Langfuse trace <ExternalLink className="size-3.5" aria-hidden />
-            </a>
+            <InlineLink href={traceUrl} target="_blank" rel="noreferrer" className="cp-text-label inline-flex items-center gap-4">
+              Langfuse trace <Icon name="external-link" size={12} />
+            </InlineLink>
           ) : (
-            <span className="text-xs text-ink-3">No trace</span>
+            <span className="cp-text-meta text-ink-subtle">No trace</span>
           )
         }
       >
         {steps.length === 0 ? (
-          <EmptyState icon={Workflow} compact title="No pipeline steps recorded." />
+          <EmptyState icon="workflow" title="No pipeline steps recorded." />
         ) : (
           <>
-            <p className="mb-3 text-xs text-ink-2">
+            <p className="cp-text-label-regular text-ink-subtle">
               <span className="tnum">{duration(totalMs)}</span> in successful steps ·{" "}
               <span className="tnum">{int(totalTokens)}</span> tokens
             </p>
-            <ol className="relative">
-              {steps.map((s, i) => (
-                <li key={i} className="relative flex gap-3 pb-3.5 last:pb-0">
-                  {i < steps.length - 1 ? (
-                    <span aria-hidden className="absolute left-[4.5px] top-3.5 h-full w-px bg-line-2" />
-                  ) : null}
-                  <span
-                    aria-hidden
-                    className={cn(
-                      "relative mt-[5px] size-2.5 shrink-0 rounded-full ring-4",
-                      STEP_DOT[s.status] ?? "bg-stone-400 ring-stone-100",
-                    )}
-                  />
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                      <span className="font-mono text-[13px] font-medium">{s.step}</span>
-                      {s.attempt > 1 ? <Chip variant="warning">Attempt {s.attempt}</Chip> : null}
-                      {s.status !== "ok" ? (
-                        <Chip variant={s.status === "error" ? "danger" : "neutral"}>{humanize(s.status)}</Chip>
-                      ) : null}
-                      <span className="tnum ml-auto text-xs text-ink-2">
-                        {duration(s.latency_ms)}
-                        {s.tokens ? ` · ${int(s.tokens)} tokens` : ""}
-                      </span>
-                    </div>
-                    {s.models.length ? (
-                      <div className="mt-1 flex flex-wrap gap-1">
-                        {s.models.map((m) => (
-                          <span key={m} className="rounded bg-stone-100 px-1.5 py-px font-mono text-[11px] text-ink-2">
-                            {m}
-                          </span>
-                        ))}
+            {/* Timeline rail and spacing from the drawer (DF 2:513); the step icon says how it ended. */}
+            <ol className="cp-timeline">
+              {steps.map((s, i) => {
+                const mark = STEP_ICON[s.status] ?? { icon: "circle-dashed" as const, className: "text-ink-subtle", label: humanize(s.status) };
+                return (
+                  <li key={i} className="cp-timeline__item pb-14" style={{ animationDelay: `${Math.min(i, 12) * 30}ms` }}>
+                    <span className={cn("cp-timeline__icon", mark.className)}>
+                      <Icon name={mark.icon} size={16} label={mark.label} />
+                    </span>
+                    <div className="flex min-w-0 flex-col gap-4">
+                      <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+                        <span className="cp-text-tab text-ink">{s.step}</span>
+                        {s.attempt > 1 ? <Tag tone="warning">Attempt {s.attempt}</Tag> : null}
+                        {s.status !== "ok" ? <Tag tone={s.status === "error" ? "danger" : "neutral"}>{humanize(s.status)}</Tag> : null}
+                        <span className="cp-text-meta tnum ml-auto text-ink-subtle">
+                          {duration(s.latency_ms)}
+                          {s.tokens ? ` · ${int(s.tokens)} tokens` : ""}
+                        </span>
                       </div>
-                    ) : null}
-                    {s.error ? (
-                      <details className="mt-1.5 rounded-lg border border-red-200 bg-red-50/70 text-xs text-red-800">
-                        <summary className="cursor-pointer truncate px-2.5 py-1.5 font-mono">{firstLine(s.error, 120)}</summary>
-                        <pre className="pane-scroll max-h-56 overflow-auto whitespace-pre-wrap break-all border-t border-red-200 px-2.5 py-2 font-mono text-[11px]">
-                          {s.error}
-                        </pre>
-                      </details>
-                    ) : null}
-                  </div>
-                </li>
-              ))}
+                      {s.models.length ? (
+                        <div className="flex flex-wrap gap-4">
+                          {s.models.map((m) => (
+                            <Tag key={m} tone="neutral">
+                              {m}
+                            </Tag>
+                          ))}
+                        </div>
+                      ) : null}
+                      {s.error ? (
+                        <details className="cp-text-label-regular rounded-(--radius-8) bg-danger-bg text-danger-ink">
+                          <summary className="cursor-pointer truncate px-10 py-6">{firstLine(s.error, 120)}</summary>
+                          <pre className="pane-scroll max-h-[224px] overflow-auto whitespace-pre-wrap break-all px-10 py-8 font-num hairline-t">
+                            {s.error}
+                          </pre>
+                        </details>
+                      ) : null}
+                    </div>
+                  </li>
+                );
+              })}
             </ol>
           </>
         )}
@@ -117,16 +105,16 @@ export function PipelinePanel({
 
       <PanelSection title={`Audit log (${audit.length})`}>
         {audit.length === 0 ? (
-          <EmptyState icon={History} compact title="No handler actions yet." />
+          <EmptyState icon="history" title="No handler actions yet." />
         ) : (
-          <ul className="flex flex-col divide-y divide-line">
+          <ul className="flex flex-col">
             {[...audit].reverse().map((a, i) => {
               const details = auditDetails(a.details);
               return (
-                <li key={i} className="flex items-baseline gap-3 py-2 first:pt-0">
-                  <span className="text-[13px] font-medium">{humanize(a.action.replace(/-/g, "_"))}</span>
-                  {details ? <span className="min-w-0 flex-1 truncate text-[13px] text-ink-2">{details}</span> : <span className="flex-1" />}
-                  <span className="tnum shrink-0 text-xs text-ink-3">{when(a.at)}</span>
+                <li key={i} className="flex items-baseline gap-12 py-8 hairline-b last:shadow-none">
+                  <span className="cp-text-tab text-ink">{humanize(a.action.replace(/-/g, "_"))}</span>
+                  <span className="cp-text-cell min-w-0 flex-1 truncate text-ink-subtle">{details ?? ""}</span>
+                  <span className="cp-text-meta tnum shrink-0 text-ink-subtle">{when(a.at)}</span>
                 </li>
               );
             })}

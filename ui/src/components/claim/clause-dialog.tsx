@@ -1,8 +1,7 @@
 "use client";
 
-import { LoaderCircle } from "lucide-react";
+import { Alert, Dialog, Spinner } from "@claimpilot/ui";
 
-import { Dialog } from "@/components/ui/dialog";
 import { api } from "@/lib/api";
 import { useFetch } from "@/lib/use-fetch";
 
@@ -16,26 +15,26 @@ export function ClauseDialog({ clauseId, onClose }: { clauseId: string | null; o
       className="w-[min(600px,calc(100vw-32px))]"
       title={
         data ? (
-          <span className="flex items-baseline gap-2">
+          <span className="flex items-baseline gap-8">
             <span>{data.display}</span>
-            <span className="font-mono text-xs font-normal text-ink-3">{data.clause_id}</span>
+            <span className="cp-text-meta text-ink-subtle">{data.clause_id}</span>
           </span>
         ) : (
-          <span className="font-mono">{clauseId}</span>
+          clauseId
         )
       }
       description={data?.heading}
     >
       {loading ? (
-        <p className="flex items-center gap-2 text-sm text-ink-2">
-          <LoaderCircle className="size-4 animate-spin" aria-hidden /> Loading clause
+        <p className="flex items-center gap-8 text-ink-subtle" role="status">
+          <Spinner /> Loading clause
         </p>
       ) : error ? (
-        <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+        <Alert tone="danger">
           Clause {clauseId} could not be loaded: {error}
-        </p>
+        </Alert>
       ) : data ? (
-        <p lang="sk" className="whitespace-pre-wrap font-serif text-[15px] leading-relaxed">
+        <p lang="sk" className="cp-text-message-body whitespace-pre-wrap text-ink-strong">
           {data.text}
         </p>
       ) : null}

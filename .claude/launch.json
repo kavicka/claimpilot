@@ -6,6 +6,12 @@
       "runtimeExecutable": "pnpm",
       "runtimeArgs": ["--dir", "ui", "dev"],
       "port": 4410
+    },
+    {
+      "name": "claimpilot-ui-gallery",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4411", "--directory", "packages/claimpilot-ui/.gallery"],
+      "port": 4411
     }
   ]
 }

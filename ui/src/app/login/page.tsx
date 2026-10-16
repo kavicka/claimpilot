@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Log in" };
 
 export default function LoginPage() {
   return (
-    <div className="grid min-h-screen place-items-center bg-desk px-4">
+    <div className="grid min-h-screen place-items-center bg-surface-sidebar px-16">
       <Suspense>
         <LoginForm />
       </Suspense>

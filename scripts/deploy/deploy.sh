@@ -55,7 +55,7 @@ build api services/api/Dockerfile .
 build worker services/worker/Dockerfile .
 build core-mock services/core_mock/Dockerfile .
 build mcp services/mcp_server/Dockerfile .
-build ui ui/Dockerfile ui
+build ui ui/Dockerfile .
 
 echo "== infrastructure"
 tf apply -input=false -auto-approve -var "image_tag=$tag"

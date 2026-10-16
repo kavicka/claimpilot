@@ -1,12 +1,8 @@
 "use client";
 
-import { FileQuestion, LoaderCircle } from "lucide-react";
-import Link from "next/link";
+import { Alert, EmptyState, InlineLink, Spinner, Tabs, useToast, type TabItem } from "@claimpilot/ui";
 import { useMemo, useState } from "react";
 
-import { EmptyState, ErrorNote } from "@/components/ui/empty-state";
-import { LineTabs, type TabItem } from "@/components/ui/tabs";
-import { useNotify } from "@/components/ui/toast";
 import { api } from "@/lib/api";
 import { PIPELINE_STATUSES } from "@/lib/enums";
 import type { ClaimDetail, Field, FieldPatchResult } from "@/lib/types";
@@ -17,6 +13,7 @@ import { CoveragePanel } from "./coverage-panel";
 import { DocumentViewer } from "./document-viewer";
 import { FieldPanel } from "./field-panel";
 import { isFlagged } from "./field-utils";
+import { InjectionWarning, injectionHits } from "./injection-warning";
 import { PipelinePanel } from "./pipeline-panel";
 import { RoutingPanel } from "./routing-panel";
 import { TextsPanel } from "./texts-panel";
@@ -31,7 +28,7 @@ export interface Selection {
 }
 
 export function ClaimView({ id }: { id: string }) {
-  const notify = useNotify();
+  const notify = useToast();
   // Poll while the pipeline still owns the claim; stop once it reaches review or a final state.
   const { data: claim, error, loading, reload, mutate } = useFetch<ClaimDetail>(`claim:${id}`, () => api.claim(id), {
     pollMs: 10000,
@@ -80,8 +77,8 @@ export function ClaimView({ id }: { id: string }) {
 
   if (loading) {
     return (
-      <div className="flex h-full items-center justify-center gap-2 text-sm text-ink-2">
-        <LoaderCircle className="size-4 animate-spin" aria-hidden /> Loading claim
+      <div className="cp-text-cell flex h-full items-center justify-center gap-8 text-ink-subtle" role="status">
+        <Spinner /> Loading claim
       </div>
     );
   }
@@ -89,20 +86,18 @@ export function ClaimView({ id }: { id: string }) {
   if (!claim) {
     const notFound = error === "no such claim";
     return (
-      <div className="mx-auto max-w-xl px-8 py-16">
+      <div className="mx-auto max-w-[560px] px-32 py-64">
         {notFound ? (
           <EmptyState
-            icon={FileQuestion}
+            icon="file-unknown"
             title="Claim not found."
             description={`No claim has the ID ${id}.`}
-            action={
-              <Link href="/" className="text-sm font-medium underline underline-offset-2">
-                Back to the queue
-              </Link>
-            }
+            action={<InlineLink href="/">Back to the queue</InlineLink>}
           />
         ) : (
-          <ErrorNote message={error ?? "The claim could not be loaded."} onRetry={reload} />
+          <Alert tone="danger" action={{ label: "Retry", onClick: reload }}>
+            {error ?? "The claim could not be loaded."}
+          </Alert>
         )}
       </div>
     );
@@ -122,7 +117,13 @@ export function ClaimView({ id }: { id: string }) {
       flag: flagged ? "warning" : undefined,
       title: flagged ? `${flagged} fields to check` : undefined,
     },
-    { key: "routing", label: "Routing", count: claim.routing ? claim.routing.rule_hits.length : undefined },
+    {
+      key: "routing",
+      label: "Routing",
+      count: claim.routing ? claim.routing.rule_hits.length : undefined,
+      flag: injectionHits(claim).length ? "danger" : undefined,
+      title: injectionHits(claim).length ? "A document addresses the AI system" : undefined,
+    },
     {
       key: "coverage",
       label: "Coverage",
@@ -136,7 +137,8 @@ export function ClaimView({ id }: { id: string }) {
   return (
     <div className="flex h-full min-h-0 flex-col">
       <ClaimHeader claim={claim} error={error} running={running} onChanged={reload} />
-      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.08fr)_minmax(460px,1fr)]">
+      <InjectionWarning claim={claim} />
+      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.08fr)_minmax(480px,1fr)]">
         <DocumentViewer
           documents={claim.documents}
           activeDocId={docId}
@@ -145,9 +147,14 @@ export function ClaimView({ id }: { id: string }) {
           selectedField={selectedField}
           onSelectField={selectFromViewer}
         />
-        <section className="flex min-h-0 flex-col border-l border-line bg-sheet">
-          <LineTabs tabs={tabs} value={panel} onChange={setPanel} label="Claim details" className="px-5 pt-2" />
-          <div className="pane-scroll min-h-0 flex-1 overflow-y-auto" id="claim-panel-scroll">
+        <section className="flex min-h-0 flex-col bg-surface hairline-l">
+          <Tabs variant="line" tabs={tabs} value={panel} onValueChange={setPanel} label="Claim details" className="px-20 pt-12" />
+          <div
+            className="pane-scroll min-h-0 flex-1 overflow-y-auto"
+            id="claim-panel-scroll"
+            role="tabpanel"
+            aria-label={tabs.find((t) => t.key === panel)?.label as string}
+          >
             {panel === "fields" ? (
               <FieldPanel
                 documents={claim.documents}

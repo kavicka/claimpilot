@@ -1,177 +1,158 @@
 "use client";
 
-import { CircleCheck, LoaderCircle, RefreshCw } from "lucide-react";
-import Link from "next/link";
+import { Alert, BarChart, ChartCard, DataTable, EmptyState, IconButton, Spinner, Tag, Tooltip, type BarDatum } from "@claimpilot/ui";
+import { useRouter } from "next/navigation";
 
-import { Chip } from "@/components/ui/chip";
-import { EmptyState, ErrorNote } from "@/components/ui/empty-state";
-import { Tooltip } from "@/components/ui/tooltip";
+import { DataPage } from "@/components/shell/page";
 import { api } from "@/lib/api";
-import { cn } from "@/lib/cn";
 import { QUEUES, STATUS_ORDER, queueEntry, statusEntry } from "@/lib/enums";
 import { firstLine, int, percent, seconds } from "@/lib/format";
 import type { Ops } from "@/lib/types";
 import { useFetch } from "@/lib/use-fetch";
 
-const BAR: Record<string, string> = {
-  success: "bg-emerald-500",
-  info: "bg-sky-500",
-  purple: "bg-violet-500",
-  danger: "bg-red-500",
-  warning: "bg-amber-500",
-  orange: "bg-orange-500",
-  neutral: "bg-stone-400",
-};
-
-function Stat({ label, value, hint, delay }: { label: string; value: string; hint?: string; delay: number }) {
+/** One figure in a hairline card, in the columns-card style (DF 2:823). */
+function Stat({ label, value, hint, index }: { label: string; value: string; hint?: string; index: number }) {
   return (
-    <div
-      className="animate-rise rounded-2xl border border-line bg-sheet px-5 py-4 shadow-[0_1px_2px_rgb(0_0_0/0.03)]"
-      style={{ animationDelay: `${delay}ms` }}
+    <section
+      className="flex animate-rise flex-col gap-8 rounded-(--radius-12) bg-surface px-16 py-12 hairline"
+      style={{ animationDelay: `${index * 40}ms` }}
     >
-      <p className="text-[12px] font-medium text-ink-2">{label}</p>
-      <p className="tnum mt-1.5 text-[28px] font-semibold leading-none tracking-tight">{value}</p>
-      {hint ? <p className="mt-2 text-xs text-ink-3">{hint}</p> : null}
-    </div>
-  );
-}
-
-function Bars({ rows, total }: { rows: { key: string; label: string; variant: string; count: number }[]; total: number }) {
-  return (
-    <ul className="flex flex-col gap-2.5">
-      {rows.map((r) => (
-        <li key={r.key} className="grid grid-cols-[120px_1fr_36px] items-center gap-3 text-[13px]">
-          <span className="truncate text-ink-2">{r.label}</span>
-          <span className="h-2 overflow-hidden rounded-full bg-stone-100">
-            <span
-              className={cn("block h-full rounded-full transition-[width] duration-500", BAR[r.variant] ?? BAR.neutral)}
-              style={{ width: total ? `${(r.count / total) * 100}%` : 0 }}
-            />
-          </span>
-          <span className="tnum text-right font-medium">{r.count}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function Card({ title, children, className }: { title: string; children: React.ReactNode; className?: string }) {
-  return (
-    <section className={cn("rounded-2xl border border-line bg-sheet px-5 py-4 shadow-[0_1px_2px_rgb(0_0_0/0.03)]", className)}>
-      <h2 className="mb-4 text-[13px] font-semibold">{title}</h2>
-      {children}
+      <h2 className="cp-text-tab text-ink">{label}</h2>
+      <p className="cp-text-stat-xl tnum text-ink">{value}</p>
+      <p className="cp-text-meta text-ink-subtle">{hint ?? " "}</p>
     </section>
   );
 }
 
-function queueRows(ops: Ops) {
-  const keys = [...QUEUES, ...Object.keys(ops.by_queue).filter((k) => !(QUEUES as readonly string[]).includes(k))];
-  return keys.map((k) => {
-    const e = queueEntry(k);
-    return { key: k, label: e?.label ?? "Not routed", variant: e?.variant ?? "neutral", count: ops.by_queue[k] ?? 0 };
-  });
+/** Tick values for a count axis: 0 and up to four steps of 1, 2 or 5 × 10^n. */
+function countTicks(max: number): { ticks: number[]; top: number } {
+  if (max <= 0) return { ticks: [0, 1], top: 1 };
+  const raw = max / 4;
+  const mag = 10 ** Math.floor(Math.log10(raw));
+  const step = [1, 2, 5, 10].map((m) => m * mag).find((s) => s >= raw) ?? raw;
+  const top = Math.ceil(max / step) * step;
+  return { ticks: Array.from({ length: Math.round(top / step) + 1 }, (_, i) => i * step), top };
 }
 
-function statusRows(ops: Ops) {
+function Bars({ data }: { data: BarDatum[] }) {
+  const { ticks, top } = countTicks(Math.max(0, ...data.map((d) => d.value)));
+  return (
+    <BarChart
+      data={data}
+      max={top}
+      ticks={ticks}
+      size="md"
+      labelWidth={96}
+      formatTick={(v) => String(v)}
+      formatValue={(v) => `${int(v)} ${v === 1 ? "claim" : "claims"}`}
+      valueCaption=""
+    />
+  );
+}
+
+function queueRows(ops: Ops): BarDatum[] {
+  const keys = [...QUEUES, ...Object.keys(ops.by_queue).filter((k) => !(QUEUES as readonly string[]).includes(k))];
+  return keys.map((k, i) => ({ label: queueEntry(k)?.label ?? "Not routed", value: ops.by_queue[k] ?? 0, color: ((i % 3) + 1) as 1 | 2 | 3 }));
+}
+
+function statusRows(ops: Ops): BarDatum[] {
   const known = STATUS_ORDER.filter((s) => ops.by_status[s]);
   const extra = Object.keys(ops.by_status).filter((s) => !(STATUS_ORDER as string[]).includes(s));
-  return [...known, ...extra].map((s) => {
-    const e = statusEntry(s);
-    return { key: s, label: e.label, variant: e.variant, count: ops.by_status[s] ?? 0 };
-  });
+  return [...known, ...extra].map((s, i) => ({ label: statusEntry(s).label, value: ops.by_status[s] ?? 0, color: ((i % 3) + 1) as 1 | 2 | 3 }));
 }
 
+type DeadLetter = Ops["dead_letter"][number];
+
 export function OpsView() {
+  const router = useRouter();
   const { data: ops, error, loading, reload } = useFetch("ops", api.ops, { pollMs: 30000 });
 
   return (
-    <div className="mx-auto max-w-[1200px] px-6 py-7">
-      <header className="flex items-end justify-between gap-4">
-        <div>
-          <h1 className="text-[22px] font-semibold tracking-tight">Ops</h1>
-          <p className="mt-0.5 text-sm text-ink-2">Throughput, latency and failures across all claims.</p>
-        </div>
-        <Tooltip content="Reload now. The page also refreshes every 30 seconds." side="bottom">
-          <button
-            type="button"
-            onClick={reload}
-            aria-label="Reload"
-            className="rounded-lg border border-line-2 bg-sheet p-2 text-ink-2 transition hover:text-ink"
-          >
-            <RefreshCw className="size-4" />
-          </button>
+    <DataPage
+      crumbs={[{ label: "Operations", href: "/ops" }, { label: "Ops" }]}
+      meta="Refreshes every 30 seconds"
+      actions={
+        <Tooltip content="Reload now" side="bottom">
+          <IconButton variant="toolbar" icon="refresh" iconSize={16} label="Reload" onClick={reload} />
         </Tooltip>
-      </header>
-
+      }
+      title="Ops"
+      subtitle="Throughput, latency and failures across all claims."
+    >
       {error ? (
-        <div className="mt-5">
-          <ErrorNote message={error} onRetry={reload} />
-        </div>
+        <Alert tone="danger" action={{ label: "Retry", onClick: reload }}>
+          {error}
+        </Alert>
       ) : null}
 
       {loading ? (
-        <div className="flex items-center justify-center gap-2 py-24 text-sm text-ink-2">
-          <LoaderCircle className="size-4 animate-spin" aria-hidden /> Loading
+        <div className="flex items-center justify-center gap-8 py-96 text-ink-subtle" role="status">
+          <Spinner /> Loading
         </div>
       ) : ops ? (
         <>
-          <div className="mt-6 grid grid-cols-5 gap-3">
-            <Stat label="Claims" value={int(ops.claims)} delay={0} />
+          <div className="grid grid-cols-5 gap-12">
+            <Stat label="Claims" value={int(ops.claims)} index={0} />
             <Stat
               label="Straight-through rate"
               value={percent(ops.straight_through_rate)}
               hint={ops.straight_through_rate === null ? "No approved claims yet" : "Approved without corrections"}
-              delay={40}
+              index={1}
             />
-            <Stat label="Latency p50" value={seconds(ops.latency_p50_s)} hint="Pipeline time per claim" delay={80} />
-            <Stat label="Latency p95" value={seconds(ops.latency_p95_s)} hint="Pipeline time per claim" delay={120} />
-            <Stat label="Tokens per claim" value={int(ops.tokens_per_claim)} hint="Input and output" delay={160} />
+            <Stat label="Latency p50" value={seconds(ops.latency_p50_s)} hint="Pipeline time per claim" index={2} />
+            <Stat label="Latency p95" value={seconds(ops.latency_p95_s)} hint="Pipeline time per claim" index={3} />
+            <Stat label="Tokens per claim" value={int(ops.tokens_per_claim)} hint="Input and output" index={4} />
           </div>
 
-          <div className="mt-3 grid grid-cols-2 gap-3">
-            <Card title="Claims per queue">
-              <Bars rows={queueRows(ops)} total={ops.claims} />
-            </Card>
-            <Card title="Claims per status">
+          <div className="grid grid-cols-2 gap-12">
+            <ChartCard title="Claims per queue">
+              <Bars data={queueRows(ops)} />
+            </ChartCard>
+            <ChartCard title="Claims per status">
               {Object.keys(ops.by_status).length === 0 ? (
-                <p className="text-sm text-ink-3">No claims yet.</p>
+                <p className="cp-text-cell text-ink-subtle">No claims yet.</p>
               ) : (
-                <Bars rows={statusRows(ops)} total={ops.claims} />
+                <Bars data={statusRows(ops)} />
               )}
-            </Card>
+            </ChartCard>
           </div>
 
-          <Card title={`Dead letter (${ops.dead_letter.length})`} className="mt-3">
-            {ops.dead_letter.length === 0 ? (
-              <EmptyState icon={CircleCheck} compact title="No failed claims." />
-            ) : (
-              <ul className="-mx-5 divide-y divide-line border-t border-line">
-                {ops.dead_letter.map((d) => (
-                  <li key={d.id} className="flex items-start gap-4 px-5 py-3">
-                    <Link
-                      href={`/claims/${d.id}`}
-                      className="shrink-0 font-mono text-[13px] font-medium underline-offset-2 hover:underline"
-                    >
-                      {d.reference}
-                    </Link>
-                    <Chip variant="danger">Failed</Chip>
-                    {d.error ? (
-                      <details className="min-w-0 flex-1 text-xs text-red-800">
-                        <summary className="cursor-pointer truncate font-mono">{firstLine(d.error, 160)}</summary>
-                        <pre className="pane-scroll mt-2 max-h-56 overflow-auto whitespace-pre-wrap break-all rounded-lg bg-red-50 p-2.5 font-mono text-[11px]">
-                          {d.error}
-                        </pre>
-                      </details>
-                    ) : (
-                      <span className="text-xs text-ink-3">No error recorded</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </Card>
+          <h2 className="cp-text-panel-title mt-20 text-ink">Dead letter ({ops.dead_letter.length})</h2>
+          <DataTable<DeadLetter>
+            label="Dead letter"
+            rows={ops.dead_letter}
+            rowKey={(d) => d.id}
+            onRowClick={(d) => router.push(`/claims/${d.id}`)}
+            empty={<EmptyState icon="circle-check" title="No failed claims." />}
+            columns={[
+              { key: "reference", header: "Reference", icon: "hash", width: 170, value: (d) => d.reference },
+              {
+                key: "status",
+                header: "Status",
+                icon: "circle-dashed",
+                width: 120,
+                value: () => "Failed",
+                render: () => (
+                  <Tag tone="danger" icon="alert-circle" size="md">
+                    Failed
+                  </Tag>
+                ),
+              },
+              {
+                key: "error",
+                header: "Error",
+                icon: "warning",
+                value: (d) => d.error,
+                render: (d) => (
+                  <Tooltip content={d.error ? firstLine(d.error, 600) : null} className="w-full">
+                    <span className="cp-td__text text-danger-ink">{d.error ? firstLine(d.error, 160) : "No error recorded"}</span>
+                  </Tooltip>
+                ),
+              },
+            ]}
+          />
         </>
       ) : null}
-    </div>
+    </DataPage>
   );
 }
