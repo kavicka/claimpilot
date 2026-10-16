@@ -62,6 +62,8 @@ def cassette_key(req: LLMRequest, tools: list[dict] | None = None) -> str:
     }
     if tools_key:  # only tool-calling requests carry it, so other keys stay stable
         material["tools"] = tools_key
+    if req.spec.adapter:  # a LoRA adapter answers differently from its base model
+        material["adapter"] = req.spec.adapter
     if req.spec.sample is not None:  # repeats of a variance run, likewise
         material["sample"] = req.spec.sample
     blob = json.dumps(material, sort_keys=True, ensure_ascii=False)

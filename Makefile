@@ -6,7 +6,7 @@ MODELS := qwen3:14b qwen3-vl:8b bge-m3 qwen3:4b-instruct qwen3:30b-a3b-instruct-
 
 .PHONY: help up up-obs down logs ps migrate worker api test test-db lint fmt typecheck check \
         smoke data eval-fast eval compare vault-key models ui seed mcp fewshot corrections e2e \
-        infra-check deploy destroy
+        infra-check deploy destroy finetune mlx-serve
 
 help:  ## List targets
 	@grep -E '^[a-z-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-12s %s\n", $$1, $$2}'
@@ -64,6 +64,12 @@ smoke:  ## Day 1 smoke tests against local Ollama
 
 data:  ## Generate the synthetic claims dataset
 	uv run claimpilot-datagen generate --seed $(SEED)
+
+finetune:  ## Train an invoice LoRA adapter (MLX), promote it only if the eval gate passes (ADR-014)
+	uv run claimpilot-eval finetune --name $(or $(NAME),invoice-$(shell date +%Y%m%d)) --iters $(or $(ITERS),300)
+
+mlx-serve:  ## Serve the adapter base model for the promoted invoice steps (port 4430)
+	uv run python -m mlx_lm server --model mlx-community/Qwen3-8B-4bit --port 4430
 
 data-invoices:  ## Generate the synthetic supplier invoices and their ERP records
 	uv run claimpilot-datagen invoices --seed $(or $(SEED),42)

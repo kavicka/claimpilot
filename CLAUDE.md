@@ -36,7 +36,7 @@ ERP matching, routing (rules I1-I8) and the UBL export are code (`validation/`, 
 invoices the PII guard keeps IBANs and addresses (company data) and tokenizes people.
 
 Ports: Postgres 5438 (a native Postgres owns 5432), Redis 6389, api 4400, core_mock 4401,
-mcp 4402, erp_mock 4403, ui 4410, Langfuse 4420, Ollama 11434.
+mcp 4402, erp_mock 4403, ui 4410, Langfuse 4420, mlx_lm.server 4430, Ollama 11434.
 
 ## Commands
 
@@ -53,6 +53,8 @@ make data-invoices # synthetic supplier invoices + ERP records (train/dev/test);
 make eval-fast   # gated suites on dev, compare with baselines
 make eval        # live run that records cassettes
 make seed N=5    # upload synthetic claims through the api
+make finetune    # LoRA adapter for the invoice steps (MLX, Qwen3-8B); promoted only past the eval gate
+make mlx-serve   # base model + adapters for the invoice steps once an adapter is promoted
 make mcp         # read-only MCP server (stdio)
 make infra-check # Terraform fmt/validate/mocked test, tflint, checkov (no AWS account)
 make deploy      # AWS deployment (docs/deploy.md); make destroy removes it

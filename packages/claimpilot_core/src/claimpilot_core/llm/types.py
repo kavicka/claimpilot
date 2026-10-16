@@ -17,8 +17,10 @@ class ChatMessage(BaseModel):
 class ModelSpec(BaseModel):
     """Which model runs a pipeline step, set per step in config/providers.yaml."""
 
-    provider: Literal["ollama", "bedrock"] = "ollama"
+    provider: Literal["ollama", "bedrock", "mlx"] = "ollama"
     model: str
+    # MLX only: a LoRA adapter (a directory under settings.adapters_dir) on top of the base model.
+    adapter: str | None = None
     think: bool = False
     temperature: float = 0.0
     num_ctx: int = 16384
@@ -35,7 +37,8 @@ class ModelSpec(BaseModel):
 
     @property
     def key(self) -> str:
-        return f"{self.provider}:{self.model}"
+        adapter = f"+{self.adapter}" if self.adapter else ""
+        return f"{self.provider}:{self.model}{adapter}"
 
 
 class LLMRequest(BaseModel):

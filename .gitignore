@@ -37,3 +37,5 @@ data/real/
 
 # Fine-tuning data and adapters (stage 3.9): rebuilt by `make finetune`
 data/finetune/
+# Adapter weights stay local; their lora.yaml and adapter_config.json are committed on promotion.
+models/adapters/*/*.safetensors

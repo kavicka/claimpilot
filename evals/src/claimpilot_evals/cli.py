@@ -78,6 +78,10 @@ def main() -> None:
     ft = sub.add_parser("finetune-data", help="invoice extraction training data (train split)")
     ft.add_argument("--out", type=Path, default=None)
     ft.add_argument("--limit", type=int, default=None)
+    fr = sub.add_parser("finetune", help="train an invoice adapter, promote it through the gate")
+    fr.add_argument("--name", required=True, help="adapter name, e.g. invoice-20261016")
+    fr.add_argument("--iters", type=int, default=300)
+    fr.add_argument("--rebuild-data", action="store_true")
     sd = sub.add_parser("seed", help="upload synthetic claims through the api")
     sd.add_argument("--split", default="dev")
     sd.add_argument("--n", type=int, default=5)
@@ -107,6 +111,10 @@ def main() -> None:
         out = args.out or repo_root() / "data" / "finetune" / "invoices"
         print(json.dumps(build_dataset(out, limit=args.limit)))
         return
+    if args.cmd == "finetune":
+        from claimpilot_evals.finetune_run import run as finetune
+
+        sys.exit(finetune(args.name, iters=args.iters, rebuild_data=args.rebuild_data))
     if args.cmd == "reparse":
         from claimpilot_evals.cache import reparse
 

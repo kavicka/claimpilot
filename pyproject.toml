@@ -25,9 +25,14 @@ dev = [
     "pyright>=1.1.390",
     "pre-commit>=4.0",
 ]
+finetune = [
+    "mlx-lm>=0.26 ; sys_platform == 'darwin'",
+]
 
 [tool.uv]
 package = false
+# mlx-lm (LoRA training and serving, ADR-014) installs on macOS only: its group marker skips Linux.
+default-groups = ["dev", "finetune"]
 
 [tool.uv.workspace]
 members = ["packages/*", "services/*", "data/generator", "evals"]

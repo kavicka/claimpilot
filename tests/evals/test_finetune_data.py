@@ -42,3 +42,62 @@ def test_the_contact_person_never_appears(examples):
         text = json.dumps([e["messages"] for e in ex], ensure_ascii=False)
         assert inv.supplier.contact not in text
         assert inv.supplier.phone not in text
+
+
+# --- handler corrections as training answers ---------------------------------------------------
+
+from claimpilot_evals.finetune import header_from_fields, lines_from_fields  # noqa: E402
+
+
+def test_stored_header_fields_become_the_header_answer():
+    fields = {
+        "invoice_number": ("260104417", "Faktúra č. 260104417", 1),
+        "buyer_name": ("<PERSON_1>", "Odberateľ: <PERSON_1>", 1),  # a sole trader
+        "recap[0].rate": ("23%", None, 1),
+        "recap[0].base": ("29,31", None, 1),
+        "recap[0].vat": ("6,74", None, 1),
+        "total": (None, None, None),
+        "page_note": ("strana 1 z 1", None, 1),  # read by rule, never asked of the model
+    }
+    answer = header_from_fields(fields)
+    assert answer["invoice_number"] == {
+        "value": "260104417",
+        "quote": "Faktúra č. 260104417",
+        "page": 1,
+    }
+    assert answer["buyer_name"]["value"] == "<PERSON_1>"
+    assert answer["total"] == {"value": None, "quote": None, "page": None}
+    assert answer["recap"] == [
+        {"rate": "23%", "base": "29,31", "vat": "6,74", "quote": None, "page": 1}
+    ]
+    assert "page_note" not in answer and answer["fees"] == []
+
+
+def test_stored_line_fields_become_the_line_answers():
+    values = {
+        "lines[1].quantity": "2",
+        "lines[1].line_net": "5,31",
+        "lines[1].batches[0].batch": "2L58861",
+        "lines[1].batches[0].expiry": "11/28",
+        "lines[2].quantity": "96",
+        "lines[2].batches[0].batch": "5L63585",
+        "lines[2].batches[0].quantity": "93",
+        "lines[2].batches[1].batch": "5L63168",
+        "lines[2].batches[1].quantity": "3",
+        "lines[3].line_net": None,  # an empty field nobody filled
+    }
+    out = lines_from_fields(values)
+    assert out[1] == [
+        {"field": "quantity", "value": "2"},
+        {"field": "line_net", "value": "5,31"},
+        {"field": "batch", "value": "2L58861"},
+        {"field": "expiry", "value": "11/28"},
+    ]
+    assert [v["field"] for v in out[2]] == [
+        "quantity",
+        "batch",
+        "batch_quantity",
+        "batch",
+        "batch_quantity",
+    ]
+    assert out[3] == []

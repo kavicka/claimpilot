@@ -19,6 +19,7 @@ from pydantic import BaseModel, ValidationError
 
 from claimpilot_core.llm.bedrock import BedrockClaudeClient, BedrockEmbedder
 from claimpilot_core.llm.cassette import CassetteMode, CassetteStore
+from claimpilot_core.llm.mlx import MlxClient
 from claimpilot_core.llm.ollama import EventHook, OllamaClient
 from claimpilot_core.llm.prompts import Prompt, load_prompt
 from claimpilot_core.llm.types import ChatMessage, LLMRequest, LLMResponse, ModelSpec
@@ -75,6 +76,21 @@ def load_providers(config_dir: Path, name: str = "providers.yaml") -> dict[str, 
     return yaml.safe_load((config_dir / name).read_text(encoding="utf-8"))
 
 
+PROVIDERS = ("ollama", "bedrock", "mlx")
+
+
+def parse_model(value: str) -> dict[str, str]:
+    """An override as `--model step=...` gives it: "qwen3:14b" (Ollama), or with a provider
+    prefix, "bedrock:eu.anthropic...", "mlx:<base>+<adapter>"."""
+    provider, sep, rest = value.partition(":")
+    if not sep or provider not in PROVIDERS:
+        return {"model": value}
+    out = {"provider": provider, "model": rest}
+    if provider == "mlx" and "+" in rest:
+        out["model"], out["adapter"] = rest.split("+", 1)
+    return out
+
+
 class LLMGateway:
     def __init__(
         self,
@@ -91,6 +107,7 @@ class LLMGateway:
         self.overrides = overrides or {}
         self.client = OllamaClient(self.settings.ollama_url, event_hooks=event_hooks)
         self._bedrock: BedrockClaudeClient | None = None
+        self._mlx: MlxClient | None = None
         self._embedder: BedrockEmbedder | None = None
         mode = cassette_mode or CassetteMode(self.settings.llm_cassette_mode)
         self.cassettes = CassetteStore(self.settings.cassettes_dir, mode)
@@ -99,8 +116,14 @@ class LLMGateway:
         await self.client.aclose()
         if self._bedrock is not None:
             await self._bedrock.aclose()
+        if self._mlx is not None:
+            await self._mlx.aclose()
 
-    def _client_for(self, spec: ModelSpec) -> OllamaClient | BedrockClaudeClient:
+    def _client_for(self, spec: ModelSpec) -> OllamaClient | BedrockClaudeClient | MlxClient:
+        if spec.provider == "mlx":
+            if self._mlx is None:
+                self._mlx = MlxClient(self.settings.mlx_url, self.settings.adapters_dir)
+            return self._mlx
         if spec.provider == "bedrock":
             if self._bedrock is None:
                 region = self.providers.get("bedrock", {}).get("region", self.settings.aws_region)
@@ -115,7 +138,7 @@ class LLMGateway:
             raise KeyError(f"no model configured for step '{step}' in providers.yaml")
         merged = {**defaults, **step_cfg}
         if step in self.overrides or "*" in self.overrides:
-            merged["model"] = self.overrides.get(step, self.overrides.get("*"))
+            merged |= parse_model(self.overrides.get(step, self.overrides.get("*")) or "")
         if self.sample is not None:  # a variance run: sampled answers, one seed per repeat
             merged["temperature"] = max(float(merged.get("temperature", 0.0)), 0.7)
             merged["seed"] = int(merged.get("seed", 7)) + self.sample

@@ -3,9 +3,12 @@
 Status: accepted, 2026-10-16
 
 ## Decision
-- Handler corrections on invoices, together with a synthetic train split, train a LoRA adapter for
-  the local extraction model (`mlx-lm` on Apple silicon). The adapter is served by Ollama as its
-  own model name.
+- Handler corrections on invoices, together with a synthetic train split, train a LoRA adapter on
+  Qwen3-8B (4-bit MLX weights, `mlx-lm` on Apple silicon). `mlx_lm.server` serves the base model
+  and picks the adapter per request; `LLMGateway` reaches it as provider `mlx`
+  (`mlx:<base>+<adapter>`). No conversion to GGUF: the adapter is used as trained.
+- The server has no schema-constrained decoding. The adapter learns the JSON shape from its
+  training answers; the gateway's retry with the validation error stays the safety net.
 - Training starts by hand (`make finetune`). The adapter replaces the current model in
   `config/providers.yaml` only when it beats it on the dev split: line-cell accuracy rises and no
   other gated metric drops beyond its tolerance. The test split runs once per promoted adapter.
@@ -26,4 +29,8 @@ Status: accepted, 2026-10-16
 
 ## Consequences
 - Every promotion is a commit with its eval report.
-- The base model size (8B or 14B) is chosen by the first eval, not up front.
+- The base model is Qwen3-8B (owner's choice, 2026-10-16): it trains in the 48 GB next to a
+  stopped compose stack. 14B stays an option if the first gate run shows 8B cannot reach the
+  current model.
+- Adapter weights stay local (gitignored); the commit carries their training config and the
+  reports. Running the promoted config needs `make mlx-serve` next to the worker.
