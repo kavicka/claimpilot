@@ -89,7 +89,8 @@ two large models plus Docker do not fit in 48 GB.
 - UI copy and docs follow the `no-ai-slop` skill: plain, specific, no filler.
 - **UI uses the design system only.** Colours, text styles, radii and shadows come from `@claimpilot/ui`
   tokens; Tailwind in `ui/` is for layout (its palette and font sizes are switched off). Text meets
-  WCAG AA (the e2e suite runs axe).
+  WCAG AA (the e2e suite runs axe). Sizes are rem (1 step = 1 design px at 1440, `w-[13.75rem]`),
+  never px except strokes: `scaling.css` grows the whole UI with screens wider than 1440 px.
 
 ## Phase 2 (AWS, prepared, not deployed)
 

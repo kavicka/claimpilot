@@ -1,4 +1,4 @@
-import { DetailCard, EmptyState, Tag } from "@claimpilot/ui";
+import { DetailCard, EmptyState, InsightCard, Tag } from "@claimpilot/ui";
 
 import { queueEntry, statusEntry } from "@/lib/enums";
 import type { ClaimStatus, Routing } from "@/lib/types";
@@ -72,11 +72,11 @@ export function RoutingPanel({ routing, status }: { routing: Routing | null; sta
         ) : (
           <ul className="flex flex-col gap-8">
             {routing.rule_hits.map((h, i) => (
-              <li key={`${h.rule}-${i}`} className="flex items-start gap-10">
-                <Tag tone="neutral" size="md">
-                  {h.rule}
-                </Tag>
-                <span className="cp-text-cell pt-2 text-ink-cell">{h.detail}</span>
+              <li key={`${h.rule}-${i}`}>
+                <InsightCard
+                  priority={h.rule === "R10" ? { label: `${h.rule} · Urgent`, tone: "danger" } : { label: h.rule, tone: "neutral" }}
+                  title={h.detail}
+                />
               </li>
             ))}
           </ul>

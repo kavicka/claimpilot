@@ -1,0 +1,423 @@
+<!doctype html>
+<!--
+  juicy-ui live preview for ClaimPilot. Loads the real design-system CSS from packages/claimpilot-ui, so the
+  pieces look like the review app. Serve the repo root (launch config "juicy-preview") and open
+  /.claude/juicy-ui/review/playground.html. The new motion is in the <style> block below, written with the
+  names it would get in styles.css.
+-->
+<html lang="sk" data-intensity="medium">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Juice preview · ClaimPilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Plus+Jakarta+Sans:wght@500;600;700&family=Courier+Prime&display=swap" />
+<link rel="stylesheet" href="/packages/claimpilot-ui/src/tokens.css" />
+<link rel="stylesheet" href="/packages/claimpilot-ui/src/type.css" />
+<link rel="stylesheet" href="/packages/claimpilot-ui/src/styles.css" />
+<style>
+:root { --font-inter: "Inter", system-ui, sans-serif; --font-jakarta: "Plus Jakarta Sans", system-ui, sans-serif; --font-mono: "Courier Prime", monospace; }
+
+/* ---------- MOTION tokens per intensity (PROFILE.md). medium = today's values + new roles ---------- */
+html[data-intensity='lite'] {
+    --cp-dur-1: 100ms; --cp-dur-2: 140ms; --cp-dur-3: 200ms; --cp-dur-flash: 600ms;
+    --cp-ease: cubic-bezier(0.4, 0, 0.2, 1); --cp-ease-emph: cubic-bezier(0.4, 0, 0.2, 1); --cp-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+    --cp-nudge: 1px; --cp-rise: 3px; --cp-shift: 4px; --cp-press: 1; --cp-pop-from: 0.85;
+}
+html[data-intensity='medium'] {
+    --cp-dur-1: 120ms; --cp-dur-2: 180ms; --cp-dur-3: 240ms; --cp-dur-flash: 900ms;
+    --cp-ease: cubic-bezier(0.4, 0, 0.2, 1); --cp-ease-emph: cubic-bezier(0.34, 1.4, 0.64, 1); --cp-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+    --cp-nudge: 2px; --cp-rise: 6px; --cp-shift: 8px; --cp-press: 0.97; --cp-pop-from: 0.6;
+}
+html[data-intensity='full'] {
+    --cp-dur-1: 140ms; --cp-dur-2: 220ms; --cp-dur-3: 300ms; --cp-dur-flash: 1200ms;
+    --cp-ease: cubic-bezier(0.22, 1, 0.36, 1); --cp-ease-emph: cubic-bezier(0.34, 1.56, 0.64, 1); --cp-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+    --cp-nudge: 3px; --cp-rise: 9px; --cp-shift: 14px; --cp-press: 0.95; --cp-pop-from: 0.4;
+}
+
+/* ---------- proposed vocabulary (would go to styles.css) ---------- */
+@keyframes cp-pop-in { from { opacity: 0; transform: scale(var(--cp-pop-from)); } }
+@keyframes cp-pop-out2 { to { opacity: 0; transform: scale(0.75); } }
+@keyframes cp-tick-a { from { opacity: 0.35; transform: translateY(calc(-1 * var(--cp-nudge))); } }
+@keyframes cp-tick-b { from { opacity: 0.35; transform: translateY(calc(-1 * var(--cp-nudge))); } }
+@keyframes cp-flash { from { background-color: var(--cp-flash-color, var(--accent-soft)); } }
+@keyframes cp-shake { 20%, 60% { transform: translateX(calc(-1.5 * var(--cp-nudge))); } 40%, 80% { transform: translateX(calc(1.5 * var(--cp-nudge))); } }
+@keyframes cp-pulse { 0% { box-shadow: 0 0 0 0 var(--accent-track); } 70% { box-shadow: 0 0 0 calc(3 * var(--cp-nudge)) transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+@keyframes cp-swap-next { from { opacity: 0; transform: translateX(var(--cp-shift)); } }
+@keyframes cp-swap-prev { from { opacity: 0; transform: translateX(calc(-1 * var(--cp-shift))); } }
+@keyframes cp-swap-up { from { opacity: 0; transform: translateY(var(--cp-rise)); } }
+.cp-pop-in { animation: cp-pop-in var(--cp-dur-2) var(--cp-ease-emph) both; }
+.cp-pop-out { animation: cp-pop-out2 calc(var(--cp-dur-2) * 0.75) var(--cp-ease-exit) both; }
+[data-tick='a'] { animation: cp-tick-a var(--cp-dur-2) var(--cp-ease); }
+[data-tick='b'] { animation: cp-tick-b var(--cp-dur-2) var(--cp-ease); }
+.cp-flash { animation: cp-flash var(--cp-dur-flash) var(--cp-ease); }
+.cp-flash--ok { --cp-flash-color: var(--status-success-bg); }
+.cp-shake { animation: cp-shake var(--cp-dur-3) var(--cp-ease); }
+.cp-pulse { animation: cp-pulse 600ms var(--cp-ease) 1; }
+.cp-swap-next { animation: cp-swap-next var(--cp-dur-3) var(--cp-ease); }
+.cp-swap-prev { animation: cp-swap-prev var(--cp-dur-3) var(--cp-ease); }
+.cp-swap-up { animation: cp-swap-up var(--cp-dur-3) var(--cp-ease); }
+.cp-reveal { display: grid; grid-template-rows: 1fr; opacity: 1; transition: grid-template-rows var(--cp-dur-2) var(--cp-ease), opacity var(--cp-dur-2) var(--cp-ease); }
+.cp-reveal[data-open='false'] { grid-template-rows: 0fr; opacity: 0; transition-duration: calc(var(--cp-dur-2) * 0.75); transition-timing-function: var(--cp-ease-exit); }
+.cp-reveal > div { overflow: hidden; min-height: 0; }
+.cp-row-press:active { background: var(--surface-tabs) !important; }
+.btn-done .cp-icon { animation: cp-pop-in var(--cp-dur-2) var(--cp-ease-emph) both; }
+.pencil { opacity: 0; transform: translateX(calc(-1 * var(--cp-nudge))); transition: opacity var(--cp-dur-1) var(--cp-ease), transform var(--cp-dur-1) var(--cp-ease); }
+.fieldrow:hover .pencil, .pencil:focus-visible { opacity: 1; transform: none; }
+
+/* ---------- preview chrome (neutral) ---------- */
+* { box-sizing: border-box; }
+body { margin: 0; background: #eef0f3; color: #111; font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, sans-serif; }
+.bar { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 12px 16px; background: rgb(255 255 255 / 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #dde1e6; }
+.bar h1 { font-size: 14px; margin: 0 auto 0 0; font-weight: 600; }
+.seg { display: inline-flex; padding: 3px; gap: 2px; border-radius: 8px; background: #e7e9ed; }
+.seg button { border: 0; background: transparent; padding: 5px 10px; border-radius: 6px; font: inherit; font-size: 13px; cursor: pointer; color: #444; }
+.seg button[aria-pressed='true'] { background: #fff; color: #111; box-shadow: 0 1px 2px rgb(0 0 0 / 0.12); }
+.chip { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; color: #333; cursor: pointer; }
+.tool { border: 1px solid #d5d9df; background: #fff; border-radius: 8px; padding: 6px 10px; font: inherit; font-size: 13px; cursor: pointer; }
+main { max-width: 1240px; margin: 0 auto; padding: 20px 16px 80px; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 370px), 1fr)); }
+.item { background: #fff; border: 1px solid #dde1e6; border-radius: 12px; display: flex; flex-direction: column; overflow: hidden; }
+.item > header { display: flex; gap: 8px; align-items: start; padding: 12px 14px 0; }
+.item > header h2 { font-size: 14px; margin: 0; font-weight: 600; flex: 1; }
+.item .id { font: 600 11px/1 ui-monospace, monospace; background: #111; color: #fff; padding: 4px 6px; border-radius: 5px; }
+.item .lvl { font-size: 11px; color: #666; border: 1px solid #ddd; border-radius: 99px; padding: 2px 7px; }
+.item .why { margin: 6px 14px 10px; color: #555; font-size: 13px; }
+.stage { margin: 0 14px; padding: 18px; border-radius: 10px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line-soft); font: var(--type-cell); color: var(--ink-cell); min-height: 140px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+.controls { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px 14px 14px; }
+.controls button { border: 1px solid #d5d9df; background: #fff; border-radius: 7px; padding: 5px 9px; font: inherit; font-size: 12px; cursor: pointer; }
+#out { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: #111; color: #fff; padding: 8px 12px; border-radius: 8px; font-size: 13px; opacity: 0; pointer-events: none; transition: opacity 200ms; z-index: 20; }
+#out.on { opacity: 1; }
+
+/* small mock pieces in design-system style */
+.row { display: flex; align-items: center; gap: 10px; }
+.between { justify-content: space-between; }
+.fieldrow { display: grid; grid-template-columns: 10px minmax(90px, .7fr) 1fr 24px; gap: 10px; align-items: start; padding: 8px 10px; border-radius: 6px; cursor: pointer; transition: background-color var(--cp-dur-1) var(--cp-ease); }
+.fieldrow:hover { background: var(--surface-subtle); }
+.dot { width: 10px; height: 10px; border-radius: 99px; margin-top: 3px; }
+.lbl { color: var(--ink-subtle); }
+.val { font: var(--type-tab); color: var(--ink-cell); display: inline-block; }
+.tags { display: flex; gap: 4px; margin-top: 4px; min-height: 18px; }
+.qrow { display: grid; grid-template-columns: 120px 1fr 90px 80px; gap: 8px; padding: 9px 10px; border-radius: 6px; cursor: pointer; transition: background-color var(--cp-dur-1) var(--cp-ease); box-shadow: inset 0 -1px 0 var(--line-soft); }
+.qrow:hover { background: var(--surface-subtle); }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.figure { font: var(--type-stat-xl); color: var(--ink); font-variant-numeric: tabular-nums; display: inline-block; }
+.page { height: 90px; border-radius: 4px; background: var(--surface); box-shadow: 0 3px 6px rgb(0 0 0 / .04), inset 0 0 0 1px var(--line-soft); padding: 10px; font-size: 11px; color: var(--ink-subtle); }
+.viewer { background: var(--surface-tabs); padding: 12px; border-radius: 8px; }
+.login { display: flex; flex-direction: column; gap: 8px; max-width: 240px; margin: 0 auto; width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; transition-delay: 0ms !important; }
+}
+html.rm *, html.rm *::before, html.rm *::after { animation-duration: 0.01ms !important; animation-delay: 0ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; transition-delay: 0ms !important; }
+</style>
+</head>
+<body>
+<div class="bar">
+    <h1>Juice preview · ClaimPilot review</h1>
+    <div class="seg" role="group" aria-label="Intenzita">
+        <button type="button" data-intensity="lite" aria-pressed="false">Jemne</button>
+        <button type="button" data-intensity="medium" aria-pressed="true">Stredne (dnešné tempo)</button>
+        <button type="button" data-intensity="full" aria-pressed="false">Naplno</button>
+    </div>
+    <label class="chip"><input type="checkbox" id="rm" /> Obmedzený pohyb</label>
+    <button type="button" class="tool" id="replay-all">Prehrať všetko</button>
+    <button type="button" class="tool" id="copy">Kopírovať výber</button>
+</div>
+
+<template id="i-check"><svg class="cp-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></template>
+<template id="i-spin"><svg class="cp-icon cp-btn__spinner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9" stroke-linecap="round"/></svg></template>
+
+<main>
+    <!-- A1 -->
+    <article class="item" data-id="A1">
+        <header><span class="id">A1</span><h2>Tlačidlo: načítanie → hotovo</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Prešlo to.“ Spinner sa zmení na fajku s malým prekmitom, šírka tlačidla ostáva.</p>
+        <div class="stage" style="align-items:center"><button type="button" class="cp-btn cp-btn--approve" id="a1"><span class="ic"></span><span class="lb">Approve</span></button></div>
+        <div class="controls"><button type="button" data-replay data-act="a1">Spustiť</button></div>
+    </article>
+
+    <!-- A2 + B5 + A5 -->
+    <article class="item" data-id="A2">
+        <header><span class="id">A2</span><h2>Riadok poľa po uložení opravy (+ B5 ceruzka, A5 stlačenie)</h2><span class="lvl">L</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Uložené tu.“ Hodnota sa jemne pohne, riadok dostane zelený nádych, ktorý doznie, tag Corrected naskočí. Ceruzka pri hoveri prikĺzne.</p>
+        <div class="stage">
+            <div class="fieldrow cp-row-press" id="a2row">
+                <span class="dot" style="background:var(--status-online)"></span>
+                <span class="lbl">Total</span>
+                <div><span class="val" id="a2val">1 260,00 EUR</span><div class="tags" id="a2tags"></div></div>
+                <button type="button" class="cp-icon-btn cp-icon-btn--bare pencil" aria-label="Correct Total"><svg class="cp-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20h4L19 9l-4-4L4 16v4z"/></svg></button>
+            </div>
+        </div>
+        <div class="controls"><button type="button" data-replay data-act="a2">Uložiť opravu</button></div>
+    </article>
+
+    <!-- A3 -->
+    <article class="item" data-id="A3">
+        <header><span class="id">A3</span><h2>Inline edit: otvorenie a odmietnutie servera</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Edituješ“ / „toto server odmietol“. Input sa ukáže plynulo, pri chybe sa 2× zatrasie a pod ním sa rozbalí dôvod.</p>
+        <div class="stage">
+            <div id="a3edit" style="display:flex;gap:6px;align-items:center"><input class="cp-input" id="a3in" value="31.02.2026" style="flex:1" aria-label="Service date" /></div>
+            <div class="cp-reveal" data-open="false" id="a3err"><div><p class="cp-field__error" style="margin:0">409: The claim changed since you opened it.</p></div></div>
+        </div>
+        <div class="controls"><button type="button" data-act="a3open">Otvoriť edit</button><button type="button" data-replay data-act="a3err">Server odmietol</button></div>
+    </article>
+
+    <!-- A4 -->
+    <article class="item" data-id="A4">
+        <header><span class="id">A4</span><h2>Kopírovať referenciu</h2><span class="lvl">L</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Je v schránke.“ Ikona sa zmení na fajku s pop, po chvíli sa vráti.</p>
+        <div class="stage" style="align-items:center">
+            <nav class="cp-crumbs"><ol><li><span>Claims</span></li><li><span>›</span></li><li><span aria-current="page">CP-2026-000005</span>
+                <button type="button" class="cp-icon-btn cp-icon-btn--bare cp-crumbs__copy" id="a4" aria-label="Copy path"><span class="ic"></span></button></li></ol></nav>
+        </div>
+        <div class="controls"><button type="button" data-replay data-act="a4">Kopírovať</button></div>
+    </article>
+
+    <!-- B1 -->
+    <article class="item" data-id="B1">
+        <header><span class="id">B1</span><h2>Obsah panela pri prepnutí tabu</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Prešiel si na ďalší panel.“ Obsah príde zo strany, kam ide tab, súčasne s posunom indikátora.</p>
+        <div class="stage" style="justify-content:flex-start">
+            <div class="cp-tabs cp-tabs--line" role="tablist" id="b1tabs" style="position:relative">
+                <button type="button" class="cp-tab" role="tab" aria-selected="true">Fields <span class="cp-tab__count">50</span></button>
+                <button type="button" class="cp-tab" role="tab" aria-selected="false">Routing <span class="cp-tab__count">1</span></button>
+                <button type="button" class="cp-tab" role="tab" aria-selected="false">Coverage</button>
+                <button type="button" class="cp-tab" role="tab" aria-selected="false">Pipeline</button>
+            </div>
+            <div id="b1panel" style="padding-top:6px"></div>
+        </div>
+        <div class="controls"><button type="button" data-replay data-act="b1next">Ďalší tab →</button><button type="button" data-act="b1prev">← Predošlý</button></div>
+    </article>
+
+    <!-- B2 -->
+    <article class="item" data-id="B2">
+        <header><span class="id">B2</span><h2>Prepnutie dokumentu</h2><span class="lvl">L</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Iný dokument.“ Stránky sa objavia jemne zdola; samotný dokument sa nezoomuje.</p>
+        <div class="stage"><div class="viewer"><div class="page" id="b2page"><b style="color:var(--ink-cell)">Medical invoice</b><br />D4_medical_invoice.pdf · strana 1</div></div></div>
+        <div class="controls"><button type="button" data-replay data-act="b2">Prepnúť dokument</button></div>
+    </article>
+
+    <!-- B3 -->
+    <article class="item" data-id="B3">
+        <header><span class="id">B3</span><h2>Alert pod hlavičkou odíde plynulo</h2><span class="lvl">L</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Vyriešené.“ Keď pipeline dobehne, banner sa zbalí a obsah pod ním sa posunie hore plynule, nie skokom.</p>
+        <div class="stage">
+            <div class="cp-reveal" data-open="true" id="b3"><div><div class="cp-alert cp-alert--info"><p class="cp-alert__text">The pipeline is still working on this claim. This page reloads every 10 seconds.</p></div></div></div>
+            <p style="margin:0;color:var(--ink-subtle)">Obsah pod bannerom</p>
+        </div>
+        <div class="controls"><button type="button" data-replay data-act="b3">Prepnúť</button></div>
+    </article>
+
+    <!-- B4 + C1 -->
+    <article class="item" data-id="B4">
+        <header><span class="id">B4</span><h2>Flag a počet na tabe (+ C1 tick počtu)</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Pribudlo niečo.“ Bodka naskočí s pop, číslo sa pri zmene jemne pohne zhora.</p>
+        <div class="stage" style="align-items:flex-start">
+            <div class="cp-tabs" role="tablist">
+                <button type="button" class="cp-tab" role="tab" aria-selected="true" style="background:var(--surface);border-radius:var(--radius-6)">Fast track <span class="cp-tab__count" id="c1count">5</span></button>
+                <button type="button" class="cp-tab" role="tab" aria-selected="false" id="b4tab">Failed <span class="cp-tab__count" id="b4count">0</span></button>
+            </div>
+        </div>
+        <div class="controls"><button type="button" data-replay data-act="b4">Poll: nový failed</button><button type="button" data-act="c1">Poll: +1 fast track</button></div>
+    </article>
+
+    <!-- C2 -->
+    <article class="item" data-id="C2">
+        <header><span class="id">C2</span><h2>Nový claim vo fronte pri pollingu</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Toto je nové.“ Nový riadok vbehne ako dnes a ešte chvíľu svieti modrým nádychom, ktorý doznie.</p>
+        <div class="stage" style="justify-content:flex-start;gap:0" id="c2list">
+            <div class="qrow"><span>CP-2026-000016</span><span>Alena Lukáčová</span><span class="num">€42.27</span><span class="num">4 d</span></div>
+            <div class="qrow"><span>CP-2026-000013</span><span>Ivona Tomanová</span><span class="num">€214.20</span><span class="num">4 d</span></div>
+        </div>
+        <div class="controls"><button type="button" data-replay data-act="c2">Poll: nový claim</button></div>
+    </article>
+
+    <!-- C3 -->
+    <article class="item" data-id="C3">
+        <header><span class="id">C3</span><h2>Zmena stavu v hlavičke</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Stav sa zmenil.“ Nový tag naskočí s malým prekmitom, keď sa stav zmení akciou alebo pollingom.</p>
+        <div class="stage" style="align-items:flex-start"><div class="row"><h1 class="cp-text-title-xl" style="margin:0">CP-2026-000005</h1><span id="c3"></span></div></div>
+        <div class="controls"><button type="button" data-replay data-act="c3">Zmeniť stav</button></div>
+    </article>
+
+    <!-- C4 -->
+    <article class="item" data-id="C4">
+        <header><span class="id">C4</span><h2>Payout po prepočítaní</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Suma sa prepočítala.“ Číslo sa pohne a krátko zafarbí podľa smeru zmeny.</p>
+        <div class="stage" style="align-items:flex-end"><p class="cp-text-label" style="margin:0;color:var(--ink-subtle)">Payout</p><span class="figure" id="c4">€100.00</span><p class="cp-text-meta" style="margin:0;color:var(--ink-subtle)">Claimed €1,500.00</p></div>
+        <div class="controls"><button type="button" data-replay data-act="c4">Reassess</button></div>
+    </article>
+
+    <!-- C5 -->
+    <article class="item" data-id="C5">
+        <header><span class="id">C5</span><h2>Approve sa odomkne po reassess</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Teraz môžeš schváliť.“ Jeden mäkký pulz okolo tlačidla, raz, len ako následok tvojej akcie.</p>
+        <div class="stage" style="align-items:center"><div class="row"><button type="button" class="cp-btn cp-btn--danger">Reject</button><button type="button" class="cp-btn cp-btn--approve" id="c5" disabled>Approve</button></div></div>
+        <div class="controls"><button type="button" data-replay data-act="c5">Reassess dobehol</button></div>
+    </article>
+
+    <!-- D1 -->
+    <article class="item" data-id="D1">
+        <header><span class="id">D1</span><h2>Schválenie claimu: celá sekvencia</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Rozhodnuté.“ Tlačidlo → fajka, stav sa zmení na Approved, rozhodovacie tlačidlá postupne zošednú, toast.</p>
+        <div class="stage">
+            <div class="row between"><div class="row"><b class="cp-text-title-xl">CP-2026-000005</b><span id="d1tag"></span></div></div>
+            <div class="row" id="d1btns"><button type="button" class="cp-btn cp-btn--danger">Reject</button><button type="button" class="cp-btn">Escalate</button><button type="button" class="cp-btn">Request information</button><button type="button" class="cp-btn cp-btn--approve" id="d1ok"><span class="ic"></span><span class="lb">Approve</span></button></div>
+        </div>
+        <div class="controls"><button type="button" data-replay data-act="d1">Schváliť</button><button type="button" data-act="d1reset">Reset</button></div>
+    </article>
+
+    <!-- D2 -->
+    <article class="item" data-id="D2">
+        <header><span class="id">D2</span><h2>Login: zlé heslo / úspech</h2><span class="lvl">M</span><input type="checkbox" class="pick" checked aria-label="Zahrnúť" /></header>
+        <p class="why">„Skús znova“: formulár sa 2× zatrasie a chyba sa rozbalí. „Si dnu“: tlačidlo s fajkou.</p>
+        <div class="stage">
+            <div class="login" id="d2">
+                <input class="cp-input" value="handler.demo" aria-label="Username" />
+                <input class="cp-input" type="password" value="••••••" aria-label="Password" />
+                <div class="cp-reveal" data-open="false" id="d2err"><div><p class="cp-field__error" style="margin:0">Wrong username or password.</p></div></div>
+                <button type="button" class="cp-btn cp-btn--primary" id="d2btn" style="justify-content:center"><span class="ic"></span><span class="lb">Log in</span></button>
+            </div>
+        </div>
+        <div class="controls"><button type="button" data-replay data-act="d2bad">Zlé heslo</button><button type="button" data-act="d2ok">Úspech</button></div>
+    </article>
+</main>
+<div id="out" role="status"></div>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s)
+const root = document.documentElement
+const icon = (id) => $('#' + id).content.firstElementChild.cloneNode(true)
+const replay = (el, cls) => { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls) }
+const tick = (el) => { el.dataset.tick = el.dataset.tick === 'a' ? 'b' : 'a' }
+const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+const flash = (t) => { const o = $('#out'); o.textContent = t; o.classList.add('on'); setTimeout(() => o.classList.remove('on'), 1600) }
+const tag = (tone, text, iconOn = true) => {
+    const s = document.createElement('span'); s.className = `cp-tag cp-tag--${tone} cp-tag--md`
+    if (iconOn) s.append(icon('i-check'))
+    s.append(text); return s
+}
+
+// --- toolbar
+document.querySelectorAll('.seg button').forEach((b) => b.addEventListener('click', () => {
+    root.dataset.intensity = b.dataset.intensity
+    document.querySelectorAll('.seg button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)))
+}))
+$('#rm').addEventListener('change', (e) => root.classList.toggle('rm', e.target.checked))
+$('#replay-all').addEventListener('click', () => document.querySelectorAll('[data-replay]').forEach((b, i) => setTimeout(() => b.click(), i * 600)))
+$('#copy').addEventListener('click', async () => {
+    const ids = [...document.querySelectorAll('.item')].filter((a) => $('.pick', a).checked).map((a) => a.dataset.id)
+    const text = `intenzita: ${root.dataset.intensity}; položky: ${ids.join(', ') || '(nič)'}`
+    try { await navigator.clipboard.writeText(text); flash('Skopírované: ' + text) } catch { flash(text) }
+})
+
+// Button loading -> done, then back. Width is locked so the label swap never resizes it.
+async function busyDone(btn, doneLabel, ms = 700) {
+    const ic = $('.ic', btn), lb = $('.lb', btn), label = lb.textContent
+    btn.style.minWidth = btn.offsetWidth + 'px'
+    btn.disabled = true; ic.replaceChildren(icon('i-spin'))
+    await wait(ms)
+    btn.classList.add('btn-done'); ic.replaceChildren(icon('i-check')); lb.textContent = doneLabel
+    await wait(1100)
+    btn.classList.remove('btn-done'); ic.replaceChildren(); lb.textContent = label; btn.disabled = false; btn.style.minWidth = ''
+}
+
+// B1 panels
+const PANELS = [
+    'Invoice number · INV-2026-86649<br>Issue date · 05/06/2026',
+    'Queue · <span class="cp-tag cp-tag--info cp-tag--md">Fast track</span><br>Rule R2 · amount under limit',
+    'Medical · <span class="cp-tag cp-tag--success cp-tag--md">Covered</span><br>Limit 50 000 EUR',
+    'parse ✓ 1.2 s · redact ✓ 0.4 s · extract ✓ 8.1 s',
+]
+let b1 = 0
+function b1go(next) {
+    const tabs = [...$('#b1tabs').children]
+    next = (next + tabs.length) % tabs.length
+    const dir = next > b1 ? 'cp-swap-next' : 'cp-swap-prev'
+    b1 = next
+    tabs.forEach((t, i) => t.setAttribute('aria-selected', String(i === b1)))
+    const p = $('#b1panel'); p.innerHTML = PANELS[b1]
+    p.classList.remove('cp-swap-next', 'cp-swap-prev'); void p.offsetWidth; p.classList.add(dir)
+}
+b1go(0)
+$('#b1tabs').addEventListener('click', (e) => { const t = e.target.closest('.cp-tab'); if (t) b1go([...$('#b1tabs').children].indexOf(t)) })
+
+let b2 = 0, c3 = 0, failed = 0, fast = 5, payout = 100, newN = 17
+const DOCS = [['Medical invoice', 'D4_medical_invoice.pdf'], ['Claim form', 'D1_claim_form.pdf'], ['Policy certificate', 'D2_policy_certificate.pdf']]
+const STATES = [['info', 'In review'], ['success', 'Approved'], ['warning', 'Needs info']]
+$('#c3').replaceWith(Object.assign(tag('info', 'In review'), { id: 'c3' }))
+$('#d1tag').replaceWith(Object.assign(tag('info', 'In review'), { id: 'd1tag' }))
+
+const actions = {
+    a1() { busyDone($('#a1'), 'Approved') },
+    async a2() {
+        const row = $('#a2row'), v = $('#a2val'), tags = $('#a2tags')
+        v.textContent = v.textContent.startsWith('1 260') ? '1 240,00 EUR' : '1 260,00 EUR'; tick(v)
+        row.classList.add('cp-flash--ok'); replay(row, 'cp-flash')
+        if (!tags.firstChild) { const t = tag('info', 'Corrected', false); t.classList.add('cp-pop-in'); tags.append(t) }
+        else replay(tags.firstChild, 'cp-pop-in')
+    },
+    a3open() { const e = $('#a3edit'); $('#a3err').dataset.open = 'false'; e.classList.remove('cp-swap-up'); void e.offsetWidth; e.classList.add('cp-swap-up'); $('#a3in').focus(); $('#a3in').select() },
+    a3err() { replay($('#a3in'), 'cp-shake'); $('#a3err').dataset.open = 'true' },
+    async a4() {
+        const ic = $('#a4 .ic'); ic.replaceChildren(icon('i-check')); replay(ic.firstChild, 'cp-pop-in'); $('#a4').setAttribute('aria-label', 'Copied')
+        await wait(1400); ic.replaceChildren(svgCopy()); $('#a4').setAttribute('aria-label', 'Copy path')
+    },
+    b1next() { b1go(b1 + 1) },
+    b1prev() { b1go(b1 - 1) },
+    b2() { b2 = (b2 + 1) % DOCS.length; const p = $('#b2page'); p.innerHTML = `<b style="color:var(--ink-cell)">${DOCS[b2][0]}</b><br>${DOCS[b2][1]} · strana 1`; replay(p, 'cp-swap-up') },
+    b3() { const b = $('#b3'); b.dataset.open = b.dataset.open === 'true' ? 'false' : 'true'; b.firstElementChild.inert = b.dataset.open === 'false' },
+    async b4() {
+        const tab = $('#b4tab'), n = $('#b4count'); let f = $('.cp-tab__flag', tab)
+        if (failed === 0) {
+            failed = 1; n.textContent = '1'; tick(n)
+            f = document.createElement('span'); f.className = 'cp-tab__flag cp-tab__flag--danger cp-pop-in'; tab.append(f)
+        } else {
+            failed = 0; n.textContent = '0'; tick(n)
+            if (f) { f.classList.replace('cp-pop-in', 'cp-pop-out'); f.addEventListener('animationend', () => f.remove(), { once: true }) }
+        }
+    },
+    c1() { fast += 1; const n = $('#c1count'); n.textContent = fast; tick(n) },
+    c2() {
+        const r = document.createElement('div'); r.className = 'qrow'
+        r.innerHTML = `<span>CP-2026-0000${newN++}</span><span>Peter Novák</span><span class="num">€88.40</span><span class="num">1 min</span>`
+        r.style.animation = 'cp-rise-in var(--cp-dur-3) var(--cp-ease) both, cp-flash var(--cp-dur-flash) var(--cp-ease) var(--cp-dur-3) both'
+        $('#c2list').prepend(r)
+        const list = $('#c2list'); while (list.children.length > 4) list.lastElementChild.remove()
+    },
+    c3() { c3 = (c3 + 1) % STATES.length; const t = tag(...STATES[c3]); t.id = 'c3'; t.classList.add('cp-pop-in'); $('#c3').replaceWith(t) },
+    c4() {
+        const el = $('#c4'), up = Math.random() > 0.4
+        payout = Math.max(0, payout + (up ? 120 : -40)); el.textContent = `€${payout.toFixed(2)}`; tick(el)
+        el.style.color = up ? 'var(--status-success-ink)' : 'var(--ink-subtle)'
+        el.style.transition = 'none'; requestAnimationFrame(() => { el.style.transition = 'color var(--cp-dur-flash) var(--cp-ease)'; el.style.color = '' })
+    },
+    async c5() { const b = $('#c5'); b.disabled = true; await wait(250); b.disabled = false; replay(b, 'cp-pulse') },
+    d1reset() { const t = tag('info', 'In review'); t.id = 'd1tag'; $('#d1tag').replaceWith(t); $('#d1btns').querySelectorAll('button').forEach((b) => { b.disabled = false; b.style.transitionDelay = '' }) },
+    async d2bad() { const e = $('#d2err'); e.dataset.open = 'false'; await wait(60); replay($('#d2'), 'cp-shake'); e.dataset.open = 'true' },
+    d2ok() { $('#d2err').dataset.open = 'false'; busyDone($('#d2btn'), 'Logged in') },
+}
+// D1 needs its own sequence after the button: status tag, then buttons disable one after another, then toast.
+actions.d1 = async () => {
+    const ok = $('#d1ok'); if (ok.disabled) return
+    const ic = $('.ic', ok), lb = $('.lb', ok)
+    ok.style.minWidth = ok.offsetWidth + 'px'; ok.disabled = true; ic.replaceChildren(icon('i-spin'))
+    await wait(600)
+    ok.classList.add('btn-done'); ic.replaceChildren(icon('i-check')); lb.textContent = 'Approved'
+    await wait(350)
+    const t = tag('success', 'Approved'); t.id = 'd1tag'; t.classList.add('cp-pop-in'); $('#d1tag').replaceWith(t)
+    const btns = [...$('#d1btns').querySelectorAll('button')]
+    btns.forEach((b, i) => { b.style.transitionDelay = `${i * 30}ms`; b.disabled = true })
+    flash('CP-2026-000005 approved · Status: Approved.')
+    await wait(900); ok.classList.remove('btn-done'); ic.replaceChildren(); lb.textContent = 'Approve'; ok.style.minWidth = ''
+}
+function svgCopy() {
+    const d = document.createElement('div')
+    d.innerHTML = '<svg class="cp-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>'
+    return d.firstChild
+}
+$('#a4 .ic').append(svgCopy())
+document.addEventListener('click', (e) => { const b = e.target.closest('[data-act]'); if (b) actions[b.dataset.act]?.() })
+</script>
+</body>
+</html>

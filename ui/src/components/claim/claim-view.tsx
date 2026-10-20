@@ -1,14 +1,14 @@
 "use client";
 
-import { Alert, EmptyState, InlineLink, Spinner, Tabs, useToast, type TabItem } from "@claimpilot/ui";
+import { Alert, EmptyState, InlineLink, Spinner, Tabs, useSwapDirection, useToast, type TabItem } from "@claimpilot/ui";
 import { useMemo, useState } from "react";
 
 import { api } from "@/lib/api";
-import { PIPELINE_STATUSES } from "@/lib/enums";
-import type { ClaimDetail, Field, FieldPatchResult } from "@/lib/types";
+import { PIPELINE_STATUSES, queueEntry } from "@/lib/enums";
+import type { ClaimDetail, ClaimRow, Field, FieldPatchResult } from "@/lib/types";
 import { useFetch } from "@/lib/use-fetch";
 
-import { ClaimHeader } from "./claim-header";
+import { ClaimHeader, type QueueNav } from "./claim-header";
 import { CoveragePanel } from "./coverage-panel";
 import { DocumentViewer } from "./document-viewer";
 import { FieldPanel } from "./field-panel";
@@ -20,11 +20,23 @@ import { TextsPanel } from "./texts-panel";
 
 type PanelKey = "fields" | "routing" | "coverage" | "texts" | "pipeline";
 
+const PANEL_ORDER: PanelKey[] = ["fields", "routing", "coverage", "texts", "pipeline"];
+
 export interface Selection {
   fieldId: number;
   docId: string;
   /** bumps on every click so the viewer scrolls again even for the same field */
   nonce: number;
+}
+
+/** Neighbours of the claim in its queue tab, in the queue page's order (oldest first). */
+function queueNav(claim: ClaimDetail | undefined, list: ClaimRow[] | undefined): QueueNav | undefined {
+  if (!claim?.queue || !list) return undefined;
+  const rows = list.filter((r) => r.queue === claim.queue && r.status === "IN_REVIEW").sort((a, b) => b.age_hours - a.age_hours);
+  const i = rows.findIndex((r) => r.id === claim.id);
+  if (i < 0) return undefined;
+  const link = (r: ClaimRow | undefined) => (r ? { href: `/claims/${r.id}`, label: r.reference } : undefined);
+  return { prev: link(rows[i - 1]), next: link(rows[i + 1]), position: `${i + 1} of ${rows.length} in ${queueEntry(claim.queue)?.label ?? "the queue"}` };
 }
 
 export function ClaimView({ id }: { id: string }) {
@@ -37,6 +49,11 @@ export function ClaimView({ id }: { id: string }) {
   const [panel, setPanel] = useState<PanelKey>("fields");
   const [activeDoc, setActiveDoc] = useState<string | null>(null);
   const [selection, setSelection] = useState<Selection | null>(null);
+  // The queue the claim sits in, in the queue page's order (oldest first), for ‹ › and "Approve and open next".
+  const { data: list } = useFetch("claims:nav", () => api.claims());
+  const nav = queueNav(claim, list);
+  // The new panel slides in from the side of the tab the handler moved to.
+  const swap = useSwapDirection(PANEL_ORDER.indexOf(panel));
 
   const running = claim ? PIPELINE_STATUSES.includes(claim.status) : false;
 
@@ -86,7 +103,7 @@ export function ClaimView({ id }: { id: string }) {
   if (!claim) {
     const notFound = error === "no such claim";
     return (
-      <div className="mx-auto max-w-[560px] px-32 py-64">
+      <div className="mx-auto max-w-[35rem] px-32 py-64">
         {notFound ? (
           <EmptyState
             icon="file-unknown"
@@ -136,9 +153,9 @@ export function ClaimView({ id }: { id: string }) {
 
   return (
     <div className="flex h-full min-h-0 flex-col">
-      <ClaimHeader claim={claim} error={error} running={running} onChanged={reload} />
+      <ClaimHeader claim={claim} error={error} running={running} onChanged={reload} nav={nav} />
       <InjectionWarning claim={claim} />
-      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.08fr)_minmax(480px,1fr)]">
+      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1.08fr)_minmax(30rem,1fr)]">
         <DocumentViewer
           documents={claim.documents}
           activeDocId={docId}
@@ -155,6 +172,7 @@ export function ClaimView({ id }: { id: string }) {
             role="tabpanel"
             aria-label={tabs.find((t) => t.key === panel)?.label as string}
           >
+            <div key={panel} className={swap}>
             {panel === "fields" ? (
               <FieldPanel
                 documents={claim.documents}
@@ -176,6 +194,7 @@ export function ClaimView({ id }: { id: string }) {
             ) : (
               <PipelinePanel steps={claim.steps} audit={claim.audit} traceUrl={claim.trace_url} />
             )}
+            </div>
           </div>
         </section>
       </div>

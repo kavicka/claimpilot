@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Button, TextField } from "@claimpilot/ui";
+import { Alert, Button, Reveal, TextField, useReplay } from "@claimpilot/ui";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
@@ -18,6 +18,10 @@ export function LoginForm() {
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [done, setDone] = useState(false);
+  // A refused login shakes the form once, next to the message that says why.
+  const [refused, setRefused] = useState(0);
+  const shake = useReplay(refused);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -25,20 +29,22 @@ export function LoginForm() {
     setError(null);
     try {
       await api.login(username.trim(), password);
+      setDone(true);
       router.replace(safeNext(params.get("next")));
     } catch (err) {
       setError(err instanceof ApiError && err.status === 401 ? "Wrong username or password." : errorMessage(err));
+      setRefused((n) => n + 1);
       setBusy(false);
     }
   }
 
   return (
-    <div className="flex w-full max-w-[340px] animate-rise flex-col gap-20">
+    <div className="flex w-full max-w-[21.25rem] animate-rise flex-col gap-20">
       <div className="flex justify-center">
         <Brand />
       </div>
       {/* POST, so a submit before the page has loaded its script never puts the password in the URL */}
-      <form method="post" onSubmit={submit} className="cp-floating flex flex-col gap-14 p-20">
+      <form method="post" onSubmit={submit} className="cp-floating flex flex-col gap-14 p-20" data-shake={shake}>
         <div className="flex flex-col gap-4">
           <h1 className="cp-text-panel-title text-ink">Log in</h1>
           <p className="cp-text-label-regular text-ink-subtle">Use your handler account.</p>
@@ -63,13 +69,16 @@ export function LoginForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        {error ? (
-          <Alert tone="danger" className="items-start">
-            {error}
-          </Alert>
-        ) : null}
-        <Button type="submit" variant="primary" block loading={busy}>
-          {busy ? "Logging in" : "Log in"}
+        {/* Closed, the reveal still takes a flex gap; the negative margin cancels it and the alert's margin gives it back when open. */}
+        <Reveal open={error !== null} className="-my-7">
+          {error ? (
+            <Alert tone="danger" className="my-7 items-start">
+              {error}
+            </Alert>
+          ) : null}
+        </Reveal>
+        <Button type="submit" variant="primary" block loading={busy && !done} done={done}>
+          {done ? "Logged in" : busy ? "Logging in" : "Log in"}
         </Button>
       </form>
     </div>

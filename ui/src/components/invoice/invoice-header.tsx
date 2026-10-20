@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, AppHeader, Crumbs, Tag, Tooltip } from "@claimpilot/ui";
+import { Alert, AppHeader, Crumbs, Tag, Tooltip, useReplay } from "@claimpilot/ui";
 import { useState } from "react";
 
 import { CaseActionDialog } from "@/components/claim/action-dialog";
@@ -46,6 +46,7 @@ export function InvoiceHeader({
   const user = useUser();
   const [action, setAction] = useState<ClaimAction | null>(null);
   const status = statusEntry(invoice.status);
+  const statusCue = useReplay(invoice.status);
   const queue = queueEntry(invoice.queue);
   const kind = categoryEntry(INVOICE_KIND, invoice.kind);
   const inReview = invoice.status === "IN_REVIEW";
@@ -79,9 +80,11 @@ export function InvoiceHeader({
         <div className="flex min-w-0 flex-1 flex-col gap-14">
           <div className="flex flex-wrap items-center gap-10">
             <h1 className="cp-text-title-xl text-ink">{invoice.reference}</h1>
-            <Tag tone={status.tone} icon={status.icon ?? null} size="md">
-              {status.label}
-            </Tag>
+            <span key={invoice.status} data-pop={statusCue} className="inline-flex">
+              <Tag tone={status.tone} icon={status.icon ?? null} size="md">
+                {status.label}
+              </Tag>
+            </span>
             {queue ? (
               <Tag tone={queue.tone} dot size="md">
                 {queue.label}
@@ -92,7 +95,7 @@ export function InvoiceHeader({
               </Tag>
             )}
           </div>
-          <dl className="grid max-w-[820px] grid-cols-[minmax(0,1.6fr)_repeat(4,minmax(0,1fr))] gap-16">
+          <dl className="grid max-w-[51.25rem] grid-cols-[minmax(0,1.6fr)_repeat(4,minmax(0,1fr))] gap-16">
             <Meta label="Supplier">{supplier ?? <span className="text-ink-subtle">Not read</span>}</Meta>
             <Meta label="Kind">{kind ? kind.label : "–"}</Meta>
             <Meta label="Invoice number">{invoice.invoice_number ?? "–"}</Meta>

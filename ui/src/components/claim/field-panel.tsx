@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox, EmptyState, IconButton, Tag, Tooltip } from "@claimpilot/ui";
+import { Checkbox, EmptyState, IconButton, Tag, Tooltip, useReplay } from "@claimpilot/ui";
 import { useEffect, useRef, useState } from "react";
 
 import { api, errorMessage } from "@/lib/api";
@@ -165,6 +165,12 @@ export function FieldRow({
   const [saving, setSaving] = useState(false);
   const [problem, setProblem] = useState<string | null>(null);
   const input = useRef<HTMLInputElement>(null);
+  // Cues: a saved correction tints the row green and ticks the value; a refusal shakes the input.
+  const [saved, setSaved] = useState(0);
+  const [refused, setRefused] = useState(0);
+  const savedCue = useReplay(saved);
+  const refusedCue = useReplay(refused);
+  const correctedCue = useReplay(field.corrected);
 
   const level = confidenceLevel(field);
   const failed = failedChecks(field);
@@ -191,9 +197,11 @@ export function FieldRow({
       const res = await api.patchField(field.id, draft, claimVersion);
       onSaved(res);
       setEditing(false);
+      setSaved((n) => n + 1);
     } catch (err) {
       const msg = errorMessage(err);
       setProblem(msg.charAt(0).toUpperCase() + msg.slice(1));
+      setRefused((n) => n + 1);
     } finally {
       setSaving(false);
     }
@@ -205,8 +213,9 @@ export function FieldRow({
     <div
       id={`field-${field.id}`}
       onClick={() => !editing && onSelect()}
+      data-flash={savedCue}
       className={cn(
-        "group relative grid cursor-pointer grid-cols-[10px_minmax(110px,0.75fr)_minmax(0,1.5fr)_28px] items-start gap-x-12 py-8 pr-12 transition-colors duration-(--cp-dur-1)",
+        "cp-flash--ok group relative grid cursor-pointer active:bg-surface-tabs grid-cols-[0.625rem_minmax(6.875rem,0.75fr)_minmax(0,1.5fr)_1.75rem] items-start gap-x-12 py-8 pr-12 transition-colors duration-(--cp-dur-1)",
         indent ? "pl-28" : "pl-20",
         selected
           ? "bg-accent-soft shadow-[inset_var(--stroke-focus)_0_0_var(--accent)]"
@@ -233,7 +242,7 @@ export function FieldRow({
 
       <div className="flex min-w-0 flex-col gap-4">
         {editing ? (
-          <div className="flex items-center gap-6" onClick={(e) => e.stopPropagation()}>
+          <div className="flex animate-rise items-center gap-6" onClick={(e) => e.stopPropagation()} data-shake={refusedCue}>
             <input
               ref={input}
               value={draft}
@@ -255,7 +264,7 @@ export function FieldRow({
           </div>
         ) : hasValue ? (
           <p className="cp-text-tab whitespace-pre-wrap break-words text-ink-cell">
-            {field.value}
+            <span data-tick={savedCue}>{field.value}</span>
             {showNorm ? <span className="cp-text-label-regular ml-6 text-ink-subtle">→ {field.value_norm}</span> : null}
           </p>
         ) : (
@@ -267,9 +276,11 @@ export function FieldRow({
         {(!field.grounded && hasValue) || failed.length > 0 || field.corrected ? (
           <div className="flex flex-wrap gap-4">
             {field.corrected ? (
-              <Tag tone="info" icon="pencil">
-                Corrected
-              </Tag>
+              <span data-pop={correctedCue} className="inline-flex">
+                <Tag tone="info" icon="pencil">
+                  Corrected
+                </Tag>
+              </span>
             ) : null}
             {!field.grounded && hasValue ? (
               <Tooltip content="The value was not found in the document text.">
@@ -296,7 +307,7 @@ export function FieldRow({
               iconSize={14}
               label={`Correct ${label}`}
               onClick={startEdit}
-              className="p-4 text-ink-subtle opacity-0 transition-opacity duration-(--cp-dur-1) focus-visible:opacity-100 group-hover:opacity-100"
+              className="-translate-x-2 p-4 text-ink-subtle opacity-0 transition-[opacity,translate] duration-(--cp-dur-1) focus-visible:translate-x-0 focus-visible:opacity-100 group-hover:translate-x-0 group-hover:opacity-100"
             />
           </Tooltip>
         ) : null}

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* Root font size follows the screen above 1440 px; every size below is rem, so the whole UI scales. */
+@import "@claimpilot/ui/scaling.css" layer(base);
 /* Design system: tokens, text styles and component styles (packages/claimpilot-ui). The component
    styles sit in the components layer, so a Tailwind utility on a design-system element wins. */
 @import "@claimpilot/ui/tokens.css" layer(components); /* holds the .cp-text-* styles, which must beat preflight */
@@ -9,7 +11,9 @@
  * Tailwind is used for layout only. Its default colours, font sizes, fonts, radii and shadows are
  * switched off, so every colour comes from a design-system token (text-ink-subtle, bg-surface-tabs),
  * text comes from the cp-text-* styles, and radii and shadows are written as rounded-(--radius-12)
- * and shadow-(--shadow-card). Spacing is 1 px per step, so p-12 is 12 px, the same number as --space-12.
+ * and shadow-(--shadow-card). Spacing is one design px per step (1/16 rem), so p-12 is 12 px at the
+ * 1440 px frame, the same as --space-12, and grows with the screen above it. Arbitrary sizes are rem
+ * too (w-[13.75rem] = 220 design px); px only for strokes.
  */
 @theme {
   --color-*: initial;
@@ -18,7 +22,7 @@
   --radius-*: initial;
   --shadow-*: initial;
   --animate-*: initial;
-  --spacing: 1px;
+  --spacing: 0.0625rem;
 
   --color-transparent: transparent;
   --color-current: currentColor;
@@ -154,7 +158,7 @@
 @utility viewer-bg {
   background-color: var(--surface-tabs);
   background-image: radial-gradient(var(--line-soft) var(--stroke-1), transparent var(--stroke-1));
-  background-size: 14px 14px;
+  background-size: 0.875rem 0.875rem;
 }
 
 /* Hairline borders the way the design system draws them: inset shadows, so 0.5 px stays a hairline. */

@@ -1,4 +1,4 @@
-import { EmptyState, Icon, InlineLink, Tag, type IconName } from "@claimpilot/ui";
+import { DayGroup, EmptyState, Icon, InlineLink, Tag, type IconName } from "@claimpilot/ui";
 
 import { cn } from "@/lib/cn";
 import { duration, firstLine, humanize, int, when } from "@/lib/format";
@@ -10,6 +10,28 @@ const STEP_ICON: Record<string, { icon: IconName; className: string; label: stri
   ok: { icon: "check-circle", className: "text-activity-success", label: "Succeeded" },
   error: { icon: "alert-circle", className: "text-danger-ink", label: "Failed" },
 };
+
+/** "Today", "Yesterday" or the date, for grouping the audit log. */
+function dayLabel(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "Earlier";
+  const start = (x: Date) => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
+  const days = Math.round((start(new Date()) - start(d)) / 86400000);
+  if (days === 0) return "Today";
+  if (days === 1) return "Yesterday";
+  return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+}
+
+function byDay(entries: AuditEntry[]): { label: string; entries: AuditEntry[] }[] {
+  const groups: { label: string; entries: AuditEntry[] }[] = [];
+  for (const a of [...entries].reverse()) {
+    const label = dayLabel(a.at);
+    const last = groups[groups.length - 1];
+    if (last && last.label === label) last.entries.push(a);
+    else groups.push({ label, entries: [a] });
+  }
+  return groups;
+}
 
 function auditDetails(details: AuditEntry["details"]): string | null {
   if (!details) return null;
@@ -89,7 +111,7 @@ export function PipelinePanel({
                       {s.error ? (
                         <details className="cp-text-label-regular rounded-(--radius-8) bg-danger-bg text-danger-ink">
                           <summary className="cursor-pointer truncate px-10 py-6">{firstLine(s.error, 120)}</summary>
-                          <pre className="pane-scroll max-h-[224px] overflow-auto whitespace-pre-wrap break-all px-10 py-8 font-num hairline-t">
+                          <pre className="pane-scroll max-h-[14rem] overflow-auto whitespace-pre-wrap break-all px-10 py-8 font-num hairline-t">
                             {s.error}
                           </pre>
                         </details>
@@ -107,18 +129,24 @@ export function PipelinePanel({
         {audit.length === 0 ? (
           <EmptyState icon="history" title="No handler actions yet." />
         ) : (
-          <ul className="flex flex-col">
-            {[...audit].reverse().map((a, i) => {
-              const details = auditDetails(a.details);
-              return (
-                <li key={i} className="flex items-baseline gap-12 py-8 hairline-b last:shadow-none">
-                  <span className="cp-text-tab text-ink">{humanize(a.action.replace(/-/g, "_"))}</span>
-                  <span className="cp-text-cell min-w-0 flex-1 truncate text-ink-subtle">{details ?? ""}</span>
-                  <span className="cp-text-meta tnum shrink-0 text-ink-subtle">{when(a.at)}</span>
-                </li>
-              );
-            })}
-          </ul>
+          <div className="flex flex-col gap-12">
+            {byDay(audit).map((g) => (
+              <DayGroup key={g.label} label={g.label} count={g.entries.length}>
+                <ul className="flex flex-col">
+                  {g.entries.map((a, i) => {
+                    const details = auditDetails(a.details);
+                    return (
+                      <li key={i} className="flex items-baseline gap-12 py-8 hairline-b last:shadow-none">
+                        <span className="cp-text-tab text-ink">{humanize(a.action.replace(/-/g, "_"))}</span>
+                        <span className="cp-text-cell min-w-0 flex-1 truncate text-ink-subtle">{details ?? ""}</span>
+                        <span className="cp-text-meta tnum shrink-0 text-ink-subtle">{when(a.at)}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </DayGroup>
+            ))}
+          </div>
         )}
       </PanelSection>
     </div>

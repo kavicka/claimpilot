@@ -8,7 +8,7 @@ import { Brand, Sidebar } from "@/components/shell/sidebar";
 /** App shell: sidebar left, white main area right. Designed at 1440 px. */
 function Frame({ side, children }: { side: React.ReactNode; children: React.ReactNode }) {
   return (
-    <div className="flex h-screen min-w-[1180px] overflow-hidden bg-surface">
+    <div className="flex h-screen min-w-[65.5rem] overflow-hidden bg-surface">
       {side}
       <main className="pane-scroll min-w-0 flex-1 overflow-y-auto">{children}</main>
     </div>
@@ -36,7 +36,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       fallback={placeholder}
       renderError={(message, retry) => (
         <Frame side={bareSide}>
-          <div className="max-w-[560px] px-60 py-42">
+          <div className="max-w-[35rem] px-60 py-42">
             <Alert tone="danger" action={{ label: "Retry", onClick: retry }}>
               {message}
             </Alert>

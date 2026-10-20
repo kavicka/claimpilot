@@ -21,7 +21,7 @@ const NAV: { label: string; href: string; icon: IconName; match: (p: string) => 
 export function Brand() {
   return (
     <SidebarBrand
-      logo={<img src="/brand/claimpilot.svg" alt="" width={24} height={24} />}
+      logo={<img src="/brand/claimpilot.svg" alt="" width={24} height={24} className="h-24 w-24" />}
       name="ClaimPilot"
       detail="Claims review"
     />

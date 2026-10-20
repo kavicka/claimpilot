@@ -4,14 +4,39 @@
     {
       "name": "claimpilot-ui",
       "runtimeExecutable": "pnpm",
-      "runtimeArgs": ["--dir", "ui", "dev"],
+      "runtimeArgs": [
+        "--dir",
+        "ui",
+        "dev"
+      ],
       "port": 4410
     },
     {
       "name": "claimpilot-ui-gallery",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4411", "--directory", "packages/claimpilot-ui/.gallery"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4411",
+        "--directory",
+        "packages/claimpilot-ui/.gallery"
+      ],
       "port": 4411
+    },
+    {
+      "name": "juicy-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4399",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "."
+      ],
+      "port": 4399,
+      "autoPort": true
     }
   ]
 }

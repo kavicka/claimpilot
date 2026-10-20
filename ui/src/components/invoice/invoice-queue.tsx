@@ -27,6 +27,7 @@ import { INVOICE_DECIDED_STATUSES, INVOICE_KIND, INVOICE_PIPELINE_STATUSES, INVO
 import { age, firstLine, money } from "@/lib/format";
 import type { InvoiceRow } from "@/lib/types";
 import { useFetch } from "@/lib/use-fetch";
+import { useFreshRows } from "@/lib/use-fresh-rows";
 
 type TabKey = "fast_track" | "standard" | "senior" | "fraud_review" | "pipeline" | "needs_info" | "failed";
 
@@ -195,6 +196,7 @@ export function InvoiceQueue() {
   const params = useSearchParams();
   const notify = useToast();
   const { data, error, loading, reload } = useFetch("invoices", () => api.invoices(), { pollMs: 15000 });
+  const fresh = useFreshRows(data, (r) => `${r.id}:${r.status}`);
   const [search, setSearch] = useState("");
   const [withDecided, setWithDecided] = useState(false);
   const [sending, setSending] = useState(false);
@@ -307,7 +309,7 @@ export function InvoiceQueue() {
                 Show decided
               </Checkbox>
             ) : null}
-            <div className="w-[220px]">
+            <div className="w-[13.75rem]">
               <SearchField
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -355,6 +357,7 @@ export function InvoiceQueue() {
         rowKey={(r) => r.id}
         onRowClick={(r) => router.push(`/invoices/${r.id}`)}
         isInactive={(r) => INVOICE_DECIDED_STATUSES.includes(r.status)}
+        isNew={(r) => fresh.has(`${r.id}:${r.status}`)}
         defaultSort={{ key: "age", dir: "desc" }}
         empty={empty}
       />

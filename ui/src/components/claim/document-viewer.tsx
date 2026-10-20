@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, EmptyState, IconButton, Tooltip } from "@claimpilot/ui";
+import { Alert, EmptyState, IconButton, Tooltip, useSwapDirection } from "@claimpilot/ui";
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 
 import { cn } from "@/lib/cn";
@@ -47,6 +47,8 @@ export function DocumentViewer({
   const [broken, setBroken] = useState<Record<string, true>>({});
   const doc = documents.find((d) => d.id === activeDocId) ?? documents[0] ?? null;
   const zoom = ZOOMS[zoomIndex] ?? 1;
+  // Another document: its pages rise in, so the switch reads as a new document, not a glitch.
+  const docSwap = useSwapDirection(doc ? documents.indexOf(doc) : -1);
 
   const target = selection && selectedField && doc && selection.docId === doc.id ? selectedField : null;
 
@@ -146,7 +148,7 @@ export function DocumentViewer({
               className="disabled:opacity-40"
             />
           </Tooltip>
-          <span className="cp-text-label tnum w-[44px] text-center text-ink-cell">{Math.round(zoom * 100)} %</span>
+          <span className="cp-text-label tnum w-[2.75rem] text-center text-ink-cell">{Math.round(zoom * 100)} %</span>
           <Tooltip content="Zoom in" side="bottom">
             <IconButton
               variant="toolbar"
@@ -177,7 +179,7 @@ export function DocumentViewer({
         {doc.pages.length === 0 ? (
           <EmptyState icon="image-off" title="No page images for this document." />
         ) : (
-          <div className="flex flex-col items-center gap-20 px-16 py-20" style={{ width: zoom > 1 ? `${zoom * 100}%` : undefined }}>
+          <div key={doc.id} className={cn("flex flex-col items-center gap-20 px-16 py-20", docSwap && "cp-swap-up")} style={{ width: zoom > 1 ? `${zoom * 100}%` : undefined }}>
             {doc.pages.map((src, i) => {
               const n = i + 1;
               const onPage = doc.fields.filter((f) => f.page === n && f.bbox);
@@ -192,7 +194,7 @@ export function DocumentViewer({
                 : [];
               const highlight = target && target.page === n && target.bbox ? target : null;
               return (
-                <div key={src} className="w-full max-w-[900px]" style={zoom > 1 ? { maxWidth: "none" } : undefined}>
+                <div key={src} className="w-full max-w-[56.25rem]" style={zoom > 1 ? { maxWidth: "none" } : undefined}>
                   <div className="cp-text-meta mb-6 flex items-center justify-between text-ink-subtle">
                     <span>
                       Page {n} of {doc.pages.length}

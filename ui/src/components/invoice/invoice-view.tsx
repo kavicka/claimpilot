@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, EmptyState, InlineLink, Spinner, Tabs, useToast, type TabItem } from "@claimpilot/ui";
+import { Alert, EmptyState, InlineLink, Spinner, Tabs, useSwapDirection, useToast, type TabItem } from "@claimpilot/ui";
 import { useMemo, useState } from "react";
 
 import { isFlagged } from "@/components/claim/field-utils";
@@ -20,6 +20,8 @@ import { LinesPanel } from "./lines-panel";
 
 type PanelKey = "header" | "lines" | "checks" | "pipeline";
 
+const PANEL_ORDER: PanelKey[] = ["header", "lines", "checks", "pipeline"];
+
 type Selection = { kind: "field"; id: number; nonce: number } | { kind: "line"; n: number; nonce: number };
 
 /** The worker owns the invoice: still in the pipeline, or approved and being exported. */
@@ -34,6 +36,7 @@ export function InvoiceView({ id }: { id: string }) {
     pollWhile: owned,
   });
   const [panel, setPanel] = useState<PanelKey>("lines");
+  const swap = useSwapDirection(PANEL_ORDER.indexOf(panel));
   const [selection, setSelection] = useState<Selection | null>(null);
   const [hoverLine, setHoverLine] = useState<number | null>(null);
 
@@ -58,7 +61,7 @@ export function InvoiceView({ id }: { id: string }) {
 
   if (!invoice) {
     return (
-      <div className="mx-auto max-w-[560px] px-32 py-64">
+      <div className="mx-auto max-w-[35rem] px-32 py-64">
         {error === "no such invoice" ? (
           <EmptyState
             icon="file-unknown"
@@ -204,11 +207,12 @@ export function InvoiceView({ id }: { id: string }) {
         hits={injection}
         hidden={hidden}
       />
-      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,0.9fr)_minmax(560px,1.1fr)]">
+      <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,0.9fr)_minmax(35rem,1.1fr)]">
         <InvoicePages document={invoice.document} marks={marks} boxes={boxes} target={target} notice={notice} />
         <section className="flex min-h-0 flex-col bg-surface hairline-l">
           <Tabs variant="line" tabs={tabs} value={panel} onValueChange={setPanel} label="Invoice details" className="px-20 pt-12" />
           <div className="pane-scroll min-h-0 flex-1 overflow-y-auto" role="tabpanel" aria-label={tabs.find((t) => t.key === panel)?.label as string}>
+            <div key={panel} className={swap}>
             {panel === "header" ? (
               <HeaderPanel
                 invoice={invoice}
@@ -249,6 +253,7 @@ export function InvoiceView({ id }: { id: string }) {
                 traceUrl={null}
               />
             )}
+            </div>
           </div>
         </section>
       </div>

@@ -144,7 +144,17 @@ const FAILED_COLUMNS: Column<ClaimRow>[] = [
   ageCol,
 ];
 
-export function QueueTable({ rows, failed, empty }: { rows: ClaimRow[]; failed: boolean; empty: React.ReactNode }) {
+export function QueueTable({
+  rows,
+  failed,
+  empty,
+  isNew,
+}: {
+  rows: ClaimRow[];
+  failed: boolean;
+  empty: React.ReactNode;
+  isNew?: (row: ClaimRow) => boolean;
+}) {
   const router = useRouter();
   return (
     <DataTable
@@ -154,6 +164,7 @@ export function QueueTable({ rows, failed, empty }: { rows: ClaimRow[]; failed: 
       rowKey={(r) => r.id}
       onRowClick={(r) => router.push(`/claims/${r.id}`)}
       isInactive={(r) => DECIDED_STATUSES.includes(r.status)}
+      isNew={isNew}
       defaultSort={{ key: "age", dir: "desc" }}
       empty={empty}
     />
