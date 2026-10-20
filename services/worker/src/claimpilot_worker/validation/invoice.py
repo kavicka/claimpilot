@@ -18,7 +18,14 @@ from datetime import date
 from decimal import ROUND_HALF_UP, Decimal
 
 from claimpilot_core.identifiers import is_valid_iban
-from claimpilot_core.invoice_values import parse_number, parse_percent, parse_vat_rate
+from claimpilot_core.invoice_values import (
+    DEFAULT_CURRENCIES,
+    DEFAULT_VAT_RATES,
+    currency_code,
+    parse_number,
+    parse_percent,
+    parse_vat_rate,
+)
 from claimpilot_core.normalize import parse_date
 from claimpilot_core.trade_ids import is_valid_ico, is_valid_vat_id, normalize_gtin
 
@@ -146,6 +153,8 @@ def validate(
     kind: str = "invoice",
     tolerance: Tolerance | None = None,
     today: date | None = None,
+    vat_rates: frozenset[int] = DEFAULT_VAT_RATES,
+    currencies: frozenset[str] = DEFAULT_CURRENCIES,
 ) -> ValidationResult:
     """`lines` in reading order; check fields name them "lines[N]" with N counted from 1."""
     tol = tolerance or Tolerance()
@@ -153,6 +162,9 @@ def validate(
     for i, line in enumerate(lines, start=1):
         check_line(result, i, line, tol)
     _pages(result, header, pages_present)  # first: missing pages explain a missing total
+    _currency(result, header, currencies)
+    _line_rates(result, header, lines, vat_rates)
+    _sign(result, header, kind)
     _recap(result, header, lines, tol)
     _lines_total(result, header, lines, tol)
     _totals(result, header, tol)
@@ -208,6 +220,50 @@ def _recap(
             result.add("recap_vat", ok, [f"{ref}.vat"], f"{per_rate} per rate, {per_line} per line")
 
 
+def _currency(result: ValidationResult, header: dict[str, str], currencies: frozenset[str]) -> None:
+    code = currency_code(header.get("currency"))
+    if code is None and result.needs_info:
+        return  # the currency may sit on a page that is missing; the file is asked for again
+    ok = code in currencies
+    detail = "" if ok else f"{header.get('currency')!r} is not a currency we process"
+    result.add("currency", ok, ["currency"], detail)
+
+
+def recap_rate(header: dict[str, str]) -> int | None:
+    """The one VAT rate the recap carries; a line that prints no rate takes it. With reverse
+    charge the lines carry none. None when the recap holds several rates or none."""
+    rates = {parse_vat_rate(r.get("rate")) for r in _rows(header, "recap")} - {None}
+    if len(rates) == 1:
+        return next(iter(rates))
+    return 0 if not rates and header.get("reverse_charge") else None
+
+
+def _line_rates(
+    result: ValidationResult,
+    header: dict[str, str],
+    lines: list[dict[str, str]],
+    vat_rates: frozenset[int],
+) -> None:
+    """Every line has a VAT rate we know, printed or taken from the recap. An unreadable or
+    unknown rate must never be exported as 0 %."""
+    fallback = recap_rate(header)
+    for i, line in enumerate(lines, start=1):
+        printed = line.get("vat_rate")
+        rate = parse_vat_rate(printed) if printed else fallback
+        ok = rate is not None and rate in vat_rates
+        detail = "" if ok else f"{printed!r}" if printed else "no rate printed or in the recap"
+        result.add("vat_rate", ok, [f"lines[{i}].vat_rate"], detail)
+
+
+def _sign(result: ValidationResult, header: dict[str, str], kind: str) -> None:
+    """Only a credit note may carry a negative amount."""
+    amount = (
+        _num(header, "total") if _num(header, "total") is not None else _num(header, "amount_due")
+    )
+    if amount is not None and kind != "credit_note":
+        result.add("amount_sign", amount >= 0, ["total"], "" if amount >= 0 else f"{amount}")
+
+
 def _lines_total(
     result: ValidationResult, header: dict[str, str], lines: list[dict[str, str]], tol: Tolerance
 ) -> None:
@@ -225,14 +281,20 @@ def _lines_total(
     if (total := _num(header, "total")) is None:
         return
     rates = [parse_vat_rate(line.get("vat_rate")) or 0 for line in lines]
-    vat = Decimal(0)
+    candidates = [lines_sum]
     if not header.get("reverse_charge"):
-        vat = sum((r2(n * r / HUNDRED) for n, r in zip(nets, rates, strict=True) if n), Decimal(0))
-        vat += sum((r2(f * max(rates) / HUNDRED) for f in fees), Decimal(0))
-    computed = lines_sum + vat
-    # VAT rounded per line may sit a cent per line away from VAT rounded per rate.
-    ok = abs(total - computed) <= tol.sum * max(1, len(nets) + len(fees))
-    result.add("lines_total", ok, ["total"], f"lines with VAT come to {computed}")
+        standard = max(rates, default=0)
+        charged = [*zip(nets, rates, strict=True), *((f, standard) for f in fees)]
+        by_rate: dict[int, Decimal] = defaultdict(Decimal)
+        for n, r in charged:
+            by_rate[r] += n or Decimal(0)
+        # VAT may be rounded per line or once per rate; both are lawful, so each is a candidate.
+        # Neither widens with the number of lines: a missing cent is a cent.
+        per_line = sum((r2(n * r / HUNDRED) for n, r in charged if n), Decimal(0))
+        per_rate = sum((r2(base * r / HUNDRED) for r, base in by_rate.items()), Decimal(0))
+        candidates = [lines_sum + per_line, lines_sum + per_rate]
+    ok = any(abs(total - c) <= tol.sum for c in candidates)
+    result.add("lines_total", ok, ["total"], f"lines with VAT come to {candidates[0]}")
 
 
 def _totals(result: ValidationResult, header: dict[str, str], tol: Tolerance) -> None:

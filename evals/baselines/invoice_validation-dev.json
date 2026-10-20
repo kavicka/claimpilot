@@ -14,8 +14,8 @@
   },
   "injected_errors_caught": {
    "value": 1.0,
-   "num": 366,
-   "den": 366
+   "num": 527,
+   "den": 527
   },
   "false_alarms": {
    "value": 0.0,
@@ -79,6 +79,45 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0001/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total",
+    "second_currency"
    ],
    "tags": [
     "injected"
@@ -176,6 +215,45 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0002/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total",
+    "second_currency"
    ],
    "tags": [
     "injected"
@@ -281,6 +359,45 @@
    "detail": {}
   },
   {
+   "id": "DE-0003/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0003/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0003/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -357,6 +474,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0004/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -460,6 +615,44 @@
    "detail": {}
   },
   {
+   "id": "DE-0005/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0005/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0005/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -531,6 +724,32 @@
    "detail": {}
   },
   {
+   "id": "DE-0006/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0006/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0006/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -583,6 +802,32 @@
    "expected": "lines_total",
    "got": [
     "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0007/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0007/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -667,6 +912,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0008/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
    ],
    "tags": [
     "injected"
@@ -771,6 +1054,45 @@
    "detail": {}
   },
   {
+   "id": "DE-0009/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0009/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0009/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -847,6 +1169,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0010/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -950,6 +1310,44 @@
    "detail": {}
   },
   {
+   "id": "DE-0011/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0011/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0011/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1039,6 +1437,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0012/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
    ],
    "tags": [
     "injected"
@@ -1136,6 +1572,45 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0013/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total",
+    "second_currency"
    ],
    "tags": [
     "injected"
@@ -1241,6 +1716,46 @@
    "detail": {}
   },
   {
+   "id": "DE-0014/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0014/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0014/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1293,6 +1808,32 @@
    "got": [
     "line_math",
     "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0015/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0015/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -1367,6 +1908,32 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
    ],
    "tags": [
     "injected"
@@ -1472,6 +2039,45 @@
    "detail": {}
   },
   {
+   "id": "DE-0017/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0017/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0017/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1569,6 +2175,45 @@
    "detail": {}
   },
   {
+   "id": "DE-0018/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0018/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0018/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1652,6 +2297,44 @@
    "detail": {}
   },
   {
+   "id": "DE-0019/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0019/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0019/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0019/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1711,6 +2394,32 @@
    "detail": {}
   },
   {
+   "id": "DE-0020/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0020/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0020/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -1763,6 +2472,32 @@
    "expected": "lines_total",
    "got": [
     "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0021/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0021/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -1847,6 +2582,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0022/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
    ],
    "tags": [
     "injected"
@@ -1952,6 +2725,32 @@
    "detail": {}
   },
   {
+   "id": "DE-0023/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0023/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0023/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2030,6 +2829,45 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total",
+    "second_currency"
    ],
    "tags": [
     "injected"
@@ -2133,6 +2971,44 @@
    "detail": {}
   },
   {
+   "id": "DE-0025/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0025/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0025/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2209,6 +3085,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0026/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -2316,6 +3230,46 @@
    "detail": {}
   },
   {
+   "id": "DE-0027/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base",
+    "recap_vat"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0027/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0027/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2407,6 +3361,45 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0028/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
    ],
    "tags": [
     "injected"
@@ -2512,6 +3505,45 @@
    "detail": {}
   },
   {
+   "id": "DE-0029/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0029/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0029/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2588,6 +3620,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0030/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -2693,6 +3763,32 @@
    "detail": {}
   },
   {
+   "id": "DE-0031/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0031/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0031/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2784,6 +3880,45 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0032/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
    ],
    "tags": [
     "injected"
@@ -2889,6 +4024,45 @@
    "detail": {}
   },
   {
+   "id": "DE-0033/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0033/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0033/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -2960,6 +4134,32 @@
    "detail": {}
   },
   {
+   "id": "DE-0034/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0034/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0034/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3024,6 +4224,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0035/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3114,6 +4352,44 @@
    "detail": {}
   },
   {
+   "id": "DE-0036/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0036/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0036/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3185,6 +4461,32 @@
    "detail": {}
   },
   {
+   "id": "DE-0038/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0038/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0038/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3235,6 +4537,19 @@
    "got": [
     "line_math",
     "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0039/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "pages_complete",
+    "vat_rate"
    ],
    "tags": [
     "injected"
@@ -3328,6 +4643,44 @@
    "detail": {}
   },
   {
+   "id": "DE-0040/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0040/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0040/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3399,6 +4752,32 @@
    "detail": {}
   },
   {
+   "id": "DE-0042/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0042/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0042/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3463,6 +4842,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0043/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3553,6 +4970,44 @@
    "detail": {}
   },
   {
+   "id": "DE-0044/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0044/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0044/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3617,6 +5072,32 @@
    "expected": "lines_total",
    "got": [
     "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0045/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0045/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3701,6 +5182,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0046/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
    ],
    "tags": [
     "injected"
@@ -3806,6 +5325,45 @@
    "detail": {}
   },
   {
+   "id": "DE-0047/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0047/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0047/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3904,6 +5462,45 @@
    "detail": {}
   },
   {
+   "id": "DE-0048/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0048/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0048/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -3966,6 +5563,19 @@
    "got": [
     "line_math",
     "pages_complete"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0049/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "pages_complete",
+    "vat_rate"
    ],
    "tags": [
     "injected"
@@ -4054,6 +5664,45 @@
    "got": [
     "recap_base",
     "total_net"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total",
+    "second_currency"
    ],
    "tags": [
     "injected"
@@ -4157,6 +5806,44 @@
    "detail": {}
   },
   {
+   "id": "DE-0051/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0051/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0051/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -4246,6 +5933,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0052/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
    ],
    "tags": [
     "injected"
@@ -4351,6 +6076,32 @@
    "detail": {}
   },
   {
+   "id": "DE-0053/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0053/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0053/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -4448,6 +6199,45 @@
    "detail": {}
   },
   {
+   "id": "DE-0054/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0054/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total",
+    "second_currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0054/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -4524,6 +6314,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0055/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -4614,6 +6442,44 @@
    "detail": {}
   },
   {
+   "id": "DE-0056/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0056/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0056/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -4691,6 +6557,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0057/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -4787,6 +6691,44 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0058/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
    ],
    "tags": [
     "injected"
@@ -4891,6 +6833,31 @@
    "detail": {}
   },
   {
+   "id": "DE-0059/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0059/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0059/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -4955,6 +6922,32 @@
    "expected": "lines_total",
    "got": [
     "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0060/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0060/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "lines_total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -5040,6 +7033,45 @@
    "expected": "recap_base",
    "got": [
     "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D001/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total",
+    "second_currency"
    ],
    "tags": [
     "injected"
@@ -5145,6 +7177,45 @@
    "detail": {}
   },
   {
+   "id": "DE-D002/vat_rate_99",
+   "ok": true,
+   "expected": "vat_rate",
+   "got": [
+    "line_vat",
+    "vat_rate",
+    "recap_base"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/currency_gone",
+   "ok": true,
+   "expected": "currency",
+   "got": [
+    "currency"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-D002/negative_total",
+   "ok": true,
+   "expected": "amount_sign",
+   "got": [
+    "amount_sign",
+    "total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-D002/foreign_buyer",
    "ok": true,
    "expected": "buyer_is_ours",
@@ -5182,9 +7253,9 @@
   }
  ],
  "meta": {
-  "created": "20261016T161014Z",
+  "created": "20261020T144552Z",
   "git": {
-   "sha": "0509093",
+   "sha": "26fc48d",
    "dirty": true
   },
   "dataset": "6bd4025701dc",
@@ -5204,7 +7275,7 @@
   "tokens_per_item": 0.0,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 496,
+  "worker_peak_rss_mb": 527,
   "models": []
  },
  "notes": [],

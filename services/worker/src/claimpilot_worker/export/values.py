@@ -5,7 +5,12 @@ import re
 from decimal import Decimal
 from typing import Any
 
-from claimpilot_core.invoice_values import parse_number, parse_quantity, parse_vat_rate
+from claimpilot_core.invoice_values import (
+    currency_code,
+    parse_number,
+    parse_quantity,
+    parse_vat_rate,
+)
 from claimpilot_core.normalize import parse_date
 from claimpilot_core.trade_ids import normalize_gtin
 from claimpilot_worker.export.ubl import Line, Party, UblInvoice
@@ -31,6 +36,18 @@ def _num(values: dict[str, str], name: str, ref: str) -> Decimal:
     return n
 
 
+def _line_rate(
+    ln: dict[str, str], ref: str, fallback: int | None, vat_rates: frozenset[int]
+) -> int:
+    """The line's VAT rate: printed, or the recap's only rate, or 0 under reverse charge. A rate
+    that is unreadable or not one we know stops the export; it is never filled in as 0 %."""
+    printed = ln.get("vat_rate")
+    rate = parse_vat_rate(printed) if printed else fallback
+    if rate is None or rate not in vat_rates:
+        raise ExportError(f"{ref}.vat_rate", printed)
+    return rate
+
+
 def _country(vat_id: str | None, default: str) -> str:
     return vat_id[:2].upper() if vat_id and vat_id[:2].isalpha() else default
 
@@ -42,7 +59,19 @@ def from_values(
     kind: str,
     supplier_record: dict[str, Any] | None,
     buyer_record: dict[str, Any] | None,
+    vat_rates: frozenset[int] | None = None,
+    currencies: frozenset[str] | None = None,
 ) -> UblInvoice:
+    """`vat_rates` and `currencies` default to config/invoices.yaml."""
+    from claimpilot_worker.validation import settings
+    from claimpilot_worker.validation.invoice import recap_rate
+
+    vat_rates = vat_rates if vat_rates is not None else settings.vat_rates()
+    currencies = currencies if currencies is not None else settings.currencies()
+    currency = currency_code(header.get("currency"))
+    if currency is None or currency not in currencies:
+        raise ExportError("currency", header.get("currency"))
+    fallback = recap_rate(header)
     supplier_vat = (header.get("supplier_vat_id") or "").replace(" ", "").upper() or None
     buyer_vat = (header.get("buyer_vat_id") or "").replace(" ", "").upper() or None
     s, b = supplier_record or {}, buyer_record or {}
@@ -55,7 +84,7 @@ def from_values(
         if qty is None:
             raise ExportError(f"lines[{i}].quantity", ln.get("quantity"))
         net = _num(ln, "line_net", f"lines[{i}].line_net")
-        rate = parse_vat_rate(ln.get("vat_rate"))
+        rate = _line_rate(ln, f"lines[{i}]", fallback, vat_rates)
         gtin = normalize_gtin(ln["ean"]).gtin if ln.get("ean") else None
         out_lines.append(
             Line(
@@ -64,7 +93,7 @@ def from_values(
                 name=_need(ln, "name") if ln.get("name") else f"line {i}",
                 net_price=(net / qty) if qty else net,
                 line_net=net,
-                vat_rate=rate if rate is not None else 0,
+                vat_rate=rate,
                 gtin=gtin.zfill(14) if gtin else None,
                 supplier_code=ln.get("supplier_code"),
             )
@@ -95,7 +124,7 @@ def from_values(
         issue_date=issue,
         due_date=parse_date(header.get("due_date")),
         tax_point_date=parse_date(header.get("tax_point_date")),
-        currency=(header.get("currency") or "EUR")[:3].upper(),
+        currency=currency,
         supplier=Party(
             name=s.get("name") or _need(header, "supplier_name"),
             ico=re.sub(r"\D", "", header.get("supplier_ico") or "") or s.get("ico"),

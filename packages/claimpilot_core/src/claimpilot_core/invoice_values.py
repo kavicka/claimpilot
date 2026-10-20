@@ -54,6 +54,20 @@ def parse_percent(printed: str | None) -> Decimal | None:
     return parse_number(printed.replace("%", "") if printed else None)
 
 
+# What config/invoices.yaml carries too; used where no config is loaded (tests, tools).
+DEFAULT_VAT_RATES = frozenset({0, 5, 10, 12, 15, 19, 20, 21, 23})
+DEFAULT_CURRENCIES = frozenset({"EUR", "CZK"})
+CURRENCY_SIGNS = {"€": "EUR", "KČ": "CZK", "K\u010d": "CZK"}
+
+
+def currency_code(printed: str | None) -> str | None:
+    """'EUR' | 'eur' | '€' | 'Kč' -> the ISO code; None when nothing readable is printed."""
+    s = (printed or "").strip().upper()
+    if not s:
+        return None
+    return CURRENCY_SIGNS.get(s) or (s if re.fullmatch(r"[A-Z]{3}", s) else None)
+
+
 def parse_vat_rate(printed: str | None) -> int | None:
     """'A 19%' | '19' | '19,00%' -> 19. Rates are whole percents; anything else is refused."""
     if not printed:

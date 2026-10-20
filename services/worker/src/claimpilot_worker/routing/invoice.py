@@ -5,7 +5,8 @@
   I3 senior         text addressed to an AI system or hidden from the reader (R10 for claims)
   I4 senior         the supplier is not in the ERP, or the order is another party's
   I5 senior         a credit note (money goes back; no order to check it against)
-  I6 senior         the amount is above the senior limit
+  I6 senior         the amount is above the senior limit of its currency, is not read, or
+                    its currency has no limit
   I7 standard       a line differs from the order or the receipt, or the order is unknown
   I8 standard       a validation check failed
   -  fast_track     everything checked out; a handler still approves with one click
@@ -13,6 +14,7 @@
 The first hit decides the queue; every hit is kept for the review screen.
 """
 
+from collections.abc import Mapping
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Any
@@ -54,7 +56,8 @@ def route_invoice(
     *,
     kind: str,
     total: Decimal | None,
-    senior_amount: Decimal,
+    currency: str | None,
+    senior_amount: Mapping[str, Decimal],
     injection: list[str] | None = None,
 ) -> InvoiceRoute:
     kinds = {f["kind"] for f in findings}
@@ -72,8 +75,13 @@ def route_invoice(
         hits.append(Hit("I4", "the order belongs to another supplier or buyer"))
     if kind == "credit_note":
         hits.append(Hit("I5", "credit note"))
-    if total is not None and abs(total) > senior_amount:
-        hits.append(Hit("I6", f"amount {total} above {senior_amount}"))
+    limit = senior_amount.get((currency or "").upper())
+    if total is None:
+        hits.append(Hit("I6", "amount not read"))
+    elif limit is None:
+        hits.append(Hit("I6", f"currency {currency or 'not read'} has no senior limit"))
+    elif abs(total) > limit:
+        hits.append(Hit("I6", f"amount {total} {currency} above {limit}"))
     line_findings = sorted(f["kind"] for f in findings if f["kind"] in LINE_FINDINGS)
     if line_findings:
         hits.append(Hit("I7", ", ".join(dict.fromkeys(line_findings))))

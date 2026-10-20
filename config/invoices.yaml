@@ -16,6 +16,15 @@ matching:
   total_tolerance: "0.05"
   per_supplier: {}
 
-# Routing (stage 3.7): above this amount a senior handler decides.
+# VAT rates an invoice may carry (whole percents): Slovakia 5/19/23 (10 and 20 until 2024), Czechia
+# 12/21 (10, 15 until 2024), and 0. A line with any other rate is not exported.
+vat:
+  rates: [0, 5, 10, 12, 15, 19, 20, 21, 23]
+
+# Currencies we process. Another one is not exported and goes to a senior handler.
+currencies: [EUR, CZK]
+
+# Routing (stage 3.7): above this amount, in the invoice's own currency, a senior handler decides.
+# A currency without a limit goes to a senior handler too.
 routing:
-  senior_amount: "20000.00"
+  senior_amount: { EUR: "20000.00", CZK: "500000.00" }

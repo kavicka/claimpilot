@@ -133,6 +133,7 @@ def test_a_second_currency_total_matches_the_rate():
 def test_a_credit_note_has_negative_amounts_and_an_original():
     lines = [{"quantity": "-3,00", "unit_price": "1,52", "line_net": "-4,56", "vat_rate": "19"}]
     header = {
+        "currency": "EUR",
         "total_net": "-4,56",
         "total_vat": "-0,87",
         "total": "-5,43",
@@ -200,3 +201,90 @@ def test_an_unread_final_amount_fails():
 def test_the_amount_due_alone_is_a_final_amount():
     header = {k: v for k, v in GOOD_SK.items() if k != "total"}
     assert failed(validate(header, LINES, OURS, pages_present=1)) == {}
+
+
+# --- money safety: VAT rate, currency, sign, tolerance --------------------------------------------
+
+
+def test_a_vat_rate_that_does_not_exist_fails_the_line():
+    lines = [dict(LINES[0], vat_rate="99%"), LINES[1]]
+    bad = failed(validate(GOOD_SK, lines, OURS, pages_present=1))
+    assert bad["vat_rate"] == ["lines[1].vat_rate"]
+
+
+def test_a_line_without_a_rate_takes_the_only_rate_of_the_recap():
+    lines = [
+        {k: v for k, v in ln.items() if k not in ("vat_rate", "vat_amount", "line_gross")}
+        for ln in LINES
+    ]
+    assert "vat_rate" not in failed(validate(GOOD_SK, lines, OURS, pages_present=1))
+
+
+def test_a_line_without_a_rate_and_two_rates_in_the_recap_fails():
+    header = dict(GOOD_SK) | {
+        "recap[1].rate": "19%",
+        "recap[1].base": "1,00",
+        "recap[1].vat": "0,19",
+    }
+    lines = [{k: v for k, v in ln.items() if k != "vat_rate"} for ln in LINES]
+    assert "vat_rate" in failed(validate(header, lines, OURS, pages_present=1))
+
+
+def test_a_missing_or_unknown_currency_fails():
+    for header in (
+        {k: v for k, v in GOOD_SK.items() if k != "currency"},
+        dict(GOOD_SK, currency="XXX"),
+    ):
+        assert failed(validate(header, LINES, OURS, pages_present=1))["currency"] == ["currency"]
+    assert "currency" not in failed(
+        validate(dict(GOOD_SK, currency="CZK"), LINES, OURS, pages_present=1)
+    )
+
+
+def test_a_negative_total_on_an_invoice_fails_but_not_on_a_credit_note():
+    header = dict(GOOD_SK, total="-36,05", amount_due="-36,05", original_invoice_number="250008600")
+    assert "amount_sign" in failed(validate(header, LINES, OURS, pages_present=1))
+    assert "amount_sign" not in failed(
+        validate(header, LINES, OURS, pages_present=1, kind="credit_note")
+    )
+
+
+def test_a_long_invoice_without_a_recap_does_not_get_a_wider_tolerance():
+    # 300 lines of 1.00: 3 cents missing from the total must be seen, not absorbed by 300 x 0.01.
+    lines = [
+        {"quantity": "1", "unit_price": "1,00", "line_net": "1,00", "vat_rate": "0%"}
+        for _ in range(300)
+    ]
+    header = {
+        k: v
+        for k, v in GOOD_SK.items()
+        if not k.startswith("recap") and k not in ("total_net", "total_vat")
+    }
+    header |= {"total": "300,00", "amount_due": "300,00"}
+    assert "lines_total" not in failed(validate(header, lines, OURS, pages_present=1))
+    header |= {"total": "299,97", "amount_due": "299,97"}
+    assert "lines_total" in failed(validate(header, lines, OURS, pages_present=1))
+
+
+def test_vat_rounded_per_line_or_per_rate_both_pass_without_a_recap():
+    # 3 lines of 0.10 at 23 %: per line 3 x 0.02 = 0.06, per rate round(0.30 x 0.23) = 0.07.
+    lines = [
+        {"quantity": "1", "unit_price": "0,10", "line_net": "0,10", "vat_rate": "23%"}
+        for _ in range(3)
+    ]
+    base = {
+        k: v
+        for k, v in GOOD_SK.items()
+        if not k.startswith("recap") and k not in ("total_net", "total_vat")
+    }
+    for total in ("0,36", "0,37"):
+        header = base | {"total": total, "amount_due": total}
+        assert "lines_total" not in failed(validate(header, lines, OURS, pages_present=1))
+    header = base | {"total": "0,39", "amount_due": "0,39"}
+    assert "lines_total" in failed(validate(header, lines, OURS, pages_present=1))
+
+
+def test_a_missing_currency_is_not_blamed_when_pages_are_missing():
+    header = {k: v for k, v in GOOD_SK.items() if k != "currency"} | {"page_note": "strana 1 z 3"}
+    result = validate(header, LINES, OURS, pages_present=1)
+    assert result.needs_info and "currency" not in failed(result)

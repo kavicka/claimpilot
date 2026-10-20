@@ -155,3 +155,61 @@ async def test_an_item_the_model_skipped_keeps_empty_fields_to_fill_in():
     assert [lr.n for lr in ex.lines] == [1, 2]
     skipped = ex.lines[1].fields
     assert {k: f.value_raw for k, f in skipped.items()} == {"quantity": None, "line_net": None}
+
+
+# --- totals the model copied into fields the invoice does not print ----------------------------
+
+
+def header_fields(**values):
+    from claimpilot_core.invoice_values import normalize_invoice
+    from claimpilot_worker.extraction.extract import Field
+
+    out = []
+    for name, v in values.items():
+        f = Field(name, v, None, 1)
+        f.value_norm = normalize_invoice(name, v)
+        out.append(f)
+    return out
+
+
+def names(fields):
+    return {f.name for f in fields}
+
+
+def test_net_and_vat_equal_to_the_total_are_copies_and_dropped():
+    from claimpilot_worker.extraction.invoice import drop_copied_totals
+
+    kept = drop_copied_totals(
+        header_fields(
+            total="5.776,4000",
+            total_net="5.776,4000",
+            total_vat="5.776,4000",
+            second_currency_total="5.776,4000",
+            amount_due="5.776,40",
+            currency="EUR",
+        )
+    )
+    assert names(kept) == {"total", "amount_due", "currency"}
+
+
+def test_a_vat_equal_to_the_total_is_dropped_on_its_own():
+    from claimpilot_worker.extraction.invoice import drop_copied_totals
+
+    kept = drop_copied_totals(header_fields(total="100,00", total_vat="100,00", total_net="81,30"))
+    assert names(kept) == {"total", "total_net"}
+
+
+def test_a_net_equal_to_the_total_stays_when_the_vat_is_zero():
+    from claimpilot_worker.extraction.invoice import drop_copied_totals
+
+    kept = drop_copied_totals(header_fields(total="100,00", total_net="100,00", total_vat="0,00"))
+    assert names(kept) == {"total", "total_net", "total_vat"}
+
+
+def test_a_second_currency_total_that_is_the_euro_total_is_dropped():
+    from claimpilot_worker.extraction.invoice import drop_copied_totals
+
+    kept = drop_copied_totals(header_fields(total="4.291,04", second_currency_total="4.291,04"))
+    assert names(kept) == {"total"}
+    kept = drop_copied_totals(header_fields(total="4.291,04", second_currency_total="107.490,55"))
+    assert names(kept) == {"total", "second_currency_total"}

@@ -23,14 +23,14 @@
    "den": 7071
   },
   "false_values": {
-   "value": 122.0,
-   "num": 122,
+   "value": 113.0,
+   "num": 113,
    "den": 0
   },
   "grounded_share": {
-   "value": 0.9637771955803622,
-   "num": 8461,
-   "den": 8779
+   "value": 0.9637400228050171,
+   "num": 8452,
+   "den": 8770
   },
   "leaked_values_in_payloads": {
    "value": 0.0,
@@ -22410,16 +22410,6 @@
    "detail": {}
   },
   {
-   "id": "DE-0019/header.second_currency_total",
-   "ok": false,
-   "expected": null,
-   "got": "3.181,1100",
-   "tags": [
-    "false_value"
-   ],
-   "detail": {}
-  },
-  {
    "id": "DE-0019/line1.name",
    "ok": true,
    "expected": "Vivera - čaj na pokojný spánok 20x2g",
@@ -38164,26 +38154,6 @@
    "ok": false,
    "expected": null,
    "got": "258490744",
-   "tags": [
-    "false_value"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0030/header.total_net",
-   "ok": false,
-   "expected": null,
-   "got": "5.286,5700",
-   "tags": [
-    "false_value"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0030/header.total_vat",
-   "ok": false,
-   "expected": null,
-   "got": "5.286,5700",
    "tags": [
     "false_value"
    ],
@@ -74710,36 +74680,6 @@
    "detail": {}
   },
   {
-   "id": "DE-0055/header.total_net",
-   "ok": false,
-   "expected": null,
-   "got": "9.882,7900",
-   "tags": [
-    "false_value"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0055/header.total_vat",
-   "ok": false,
-   "expected": null,
-   "got": "9.882,7900",
-   "tags": [
-    "false_value"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0055/header.second_currency_total",
-   "ok": false,
-   "expected": null,
-   "got": "9.882,7900",
-   "tags": [
-    "false_value"
-   ],
-   "detail": {}
-  },
-  {
    "id": "DE-0055/line1.name",
    "ok": true,
    "expected": "Florea vitamín C 500 mg 60 tbl",
@@ -77094,36 +77034,6 @@
    "ok": false,
    "expected": null,
    "got": "252278409",
-   "tags": [
-    "false_value"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0056/header.total_net",
-   "ok": false,
-   "expected": null,
-   "got": "5.776,4000",
-   "tags": [
-    "false_value"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0056/header.total_vat",
-   "ok": false,
-   "expected": null,
-   "got": "5.776,4000",
-   "tags": [
-    "false_value"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0056/header.second_currency_total",
-   "ok": false,
-   "expected": null,
-   "got": "5.776,4000",
    "tags": [
     "false_value"
    ],
@@ -88571,9 +88481,9 @@
   }
  ],
  "meta": {
-  "created": "20261016T153732Z",
+  "created": "20261020T144534Z",
   "git": {
-   "sha": "dfe1e61",
+   "sha": "26fc48d",
    "dirty": true
   },
   "dataset": "6bd4025701dc",
@@ -88595,10 +88505,10 @@
   "cached_calls": 176,
   "tokens_in": 450555,
   "tokens_out": 276242,
-  "tokens_per_item": 82.1,
+  "tokens_per_item": 82.2,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 634,
+  "worker_peak_rss_mb": 748,
   "models": [
    "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M"
   ]

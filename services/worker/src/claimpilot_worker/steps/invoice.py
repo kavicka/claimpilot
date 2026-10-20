@@ -10,7 +10,6 @@ extraction stores the header fields under their names and line values as "lines[
 """
 
 import re
-from decimal import Decimal
 from typing import Any
 
 import httpx
@@ -20,7 +19,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from claimpilot_core.db.models import DocBlock, DocCell, Document, ExtractedField, Invoice
 from claimpilot_core.domain import CaseKind, ExtractionMethod, PipelineStep
 from claimpilot_core.domain import InvoiceStatus as S
-from claimpilot_core.invoice_values import parse_number
+from claimpilot_core.invoice_values import currency_code, parse_number
 from claimpilot_core.llm.gateway import LLMGateway
 from claimpilot_core.pii.vault import Vault
 from claimpilot_core.schemas.parsing import Block, FracBox, PageInfo, ParsedDocument, TableCell
@@ -38,7 +37,14 @@ from claimpilot_worker.pipeline import register
 from claimpilot_worker.routing.invoice import route_invoice
 from claimpilot_worker.steps.common import storage_path
 from claimpilot_worker.validation.invoice import validate
-from claimpilot_worker.validation.settings import config, ours, tolerance
+from claimpilot_worker.validation.settings import (
+    config,
+    currencies,
+    ours,
+    senior_amounts,
+    tolerance,
+    vat_rates,
+)
 
 INVOICE = CaseKind.INVOICE
 
@@ -241,6 +247,8 @@ async def validate_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, 
         pages_present=doc.page_count or 1,
         kind=doc.doc_type or "invoice",
         tolerance=tolerance(),
+        vat_rates=vat_rates(),
+        currencies=currencies(),
     )
     by_name = {r.field: r for r in rows}
     line_numbers = sorted({int(m[1]) for r in rows if (m := re.match(r"lines\[(\d+)\]", r.field))})
@@ -269,7 +277,7 @@ async def validate_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, 
     invoice.supplier_vat_id = (header.get("supplier_vat_id") or "").replace(" ", "") or None
     # The senior limit needs an amount: the amount due when the total is not printed.
     invoice.total = parse_number(header.get("total")) or parse_number(header.get("amount_due"))
-    invoice.currency = (header.get("currency") or "")[:3] or None
+    invoice.currency = currency_code(header.get("currency"))
     invoice.validation = checks
     return S.NEEDS_INFO if result.needs_info else S.VALIDATED
 
@@ -408,7 +416,8 @@ async def route_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, Any
         (invoice.matching or {}).get("findings", []),
         kind=invoice.doc_kind or "invoice",
         total=invoice.total,
-        senior_amount=Decimal(config()["routing"]["senior_amount"]),
+        currency=invoice.currency,
+        senior_amount=senior_amounts(),
         injection=[f"page {s.page}: {s.kind}" for s in signals],
     )
     invoice.queue = route.queue.value

@@ -97,6 +97,30 @@ def mutations(header: dict[str, str], lines: list[dict[str, str]]) -> list[tuple
         # A line the extraction left out: the recap (per rate) or the totals must not hold.
         check = "recap_base" if "recap[0].base" in header else "lines_total"
         out.append(("line_dropped", check, mutated(lambda h, ls: ls.pop())))
+    if lines and "vat_rate" in lines[0]:
+        out.append(
+            (
+                "vat_rate_99",
+                "vat_rate",
+                mutated(lambda h, ls: ls[0].update(vat_rate="99%")),
+            )
+        )
+    if "currency" in header:
+        out.append(
+            (
+                "currency_gone",
+                "currency",
+                mutated(lambda h, ls: h.pop("currency")),
+            )
+        )
+    if "total" in header and not header["total"].startswith("-"):  # a credit note is negative
+        out.append(
+            (
+                "negative_total",
+                "amount_sign",
+                mutated(lambda h, ls: h.update(total="-" + h["total"])),
+            )
+        )
     if "buyer_vat_id" in header:
         out.append(
             (

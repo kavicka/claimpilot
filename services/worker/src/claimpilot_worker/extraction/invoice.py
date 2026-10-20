@@ -10,6 +10,7 @@ Normalization reads Slovak and Czech numbers (invoice_values); checks run in val
 import re
 from collections import defaultdict
 from dataclasses import dataclass, field
+from decimal import Decimal, InvalidOperation
 from enum import StrEnum
 from typing import Any
 
@@ -155,6 +156,35 @@ class InvoiceExtraction:
         return next((f.value_norm for f in self.header if f.name == name), None)
 
 
+COPY_CHECKED = ("total_net", "total_vat", "second_currency_total")
+
+
+def drop_copied_totals(header: list[Field]) -> list[Field]:
+    """A model that finds only one amount tends to copy it into the fields next to it: net, VAT
+    and second-currency total all equal to the total. Those are dropped; code recomputes net and
+    VAT from the recap. Dropped: a VAT as large as the total, a net equal to the total when the
+    VAT was copied too (a zero-VAT invoice keeps its net), and a second-currency total that is
+    the total itself (it is only printed when it differs)."""
+    norm: dict[str, Decimal] = {}
+    for f in header:
+        try:
+            norm[f.name] = Decimal(f.value_norm or "")
+        except InvalidOperation:
+            continue
+    total = norm.get("total")
+    if not total:
+        return header
+    same = {n for n in COPY_CHECKED if norm.get(n) == total}
+    drop = set()
+    if "total_vat" in same:
+        drop.add("total_vat")
+        if "total_net" in same:
+            drop.add("total_net")
+    if "second_currency_total" in same:
+        drop.add("second_currency_total")
+    return [f for f in header if f.name not in drop]
+
+
 def _squash(text: str) -> str:
     return "".join(fold(text).split())
 
@@ -200,6 +230,7 @@ async def extract_invoice(
         f.grounded, f.bbox = ground(f.quote, f.value_raw, f.page, parsed, redacted)
         f.value_norm = normalize_invoice(f.name, f.value_raw)
         f.confidence = score_confidence(f)
+    header = drop_copied_totals(header)
     if (note := page_note(parsed)) is not None:
         header.append(note)
 
