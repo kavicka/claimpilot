@@ -302,3 +302,16 @@ def test_a_line_that_prints_no_rate_counts_in_the_only_rate_of_the_recap():
 def test_a_recap_row_with_no_lines_of_its_rate_fails_when_rates_are_printed_on_lines():
     header = dict(GOOD_SK) | {"recap[0].rate": "19%"}
     assert "recap_base" in failed(validate(header, LINES, OURS, pages_present=1))
+
+
+def test_a_wrong_net_total_is_one_finding_not_a_cascade():
+    # total and the recap agree; only the printed net is off. The total must be held against the
+    # recap's own sums, so total and amount_due do not fail because of a wrong net.
+    header = dict(GOOD_SK, total_net="30,00")
+    bad = failed(validate(header, LINES, OURS, pages_present=1))
+    assert set(bad) == {"total_net"}
+
+
+def test_a_wrong_total_still_fails_against_the_recap():
+    header = dict(GOOD_SK, total="36,50", amount_due="36,50")
+    assert {"total", "amount_due"} <= set(failed(validate(header, LINES, OURS, pages_present=1)))

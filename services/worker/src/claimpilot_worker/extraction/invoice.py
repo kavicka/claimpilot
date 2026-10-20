@@ -185,6 +185,36 @@ def drop_copied_totals(header: list[Field]) -> list[Field]:
     return [f for f in header if f.name not in drop]
 
 
+DERIVED_TOTALS = ("total_net", "total_vat", "second_currency_total")
+
+
+def _digits(text: str) -> str:
+    return re.sub(r"\D", "", text)
+
+
+def drop_ungrounded_totals(header: list[Field], page_text: str = "") -> list[Field]:
+    """Net, VAT and second-currency totals that are not printed on the page are the model's own
+    sums (the prompt forbids adding up the recap, and it still does, sometimes wrongly): dropped,
+    the recap says what they are. The number itself must be on the page, in the digits it has
+    once spacing and separators are aside; a real quote around an invented number is not enough."""
+    digits = _digits(page_text)
+    return [
+        f
+        for f in header
+        if f.name not in DERIVED_TOTALS or (f.grounded and _digits(f.value_raw or "") in digits)
+    ]
+
+
+def _printed_token(value: str, item: Item, redacted: dict[int, str]) -> bool:
+    """The value is a whole token of a cell of the item, not a piece of a longer number."""
+    target = _squash(value)
+    return any(
+        _squash(tok) == target
+        for c in item.cells
+        for tok in re.split(r"\s+", redacted.get(id(c), c.text))
+    )
+
+
 def _squash(text: str) -> str:
     return "".join(fold(text).split())
 
@@ -230,7 +260,8 @@ async def extract_invoice(
         f.grounded, f.bbox = ground(f.quote, f.value_raw, f.page, parsed, redacted)
         f.value_norm = normalize_invoice(f.name, f.value_raw)
         f.confidence = score_confidence(f)
-    header = drop_copied_totals(header)
+    page_text = " ".join(redacted.get(b.seq, b.text) for b in parsed.blocks)
+    header = drop_ungrounded_totals(drop_copied_totals(header), page_text)
     if (note := page_note(parsed)) is not None:
         header.append(note)
 
@@ -306,8 +337,18 @@ def printed_batches(item: Item) -> list[tuple[str, str, list[TableCell]]]:
     return out
 
 
+DERIVED_LINE_FIELDS = ("vat_amount", "line_gross")
+
+
 def _line_result(answer: ItemValues, item: Item, redacted_cells: dict[int, str]) -> LineResult:
     out = _model_line_result(answer, item, redacted_cells)
+    # A VAT amount or gross the item does not print is the model's own sum, not a read value.
+    for name in DERIVED_LINE_FIELDS:
+        f = out.fields.get(name)
+        if f is not None and not (
+            f.grounded and _printed_token(f.value_raw or "", item, redacted_cells)
+        ):
+            del out.fields[name]
     printed = printed_batches(item)
     if not printed:
         return out

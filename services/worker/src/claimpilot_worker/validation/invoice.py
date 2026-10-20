@@ -312,10 +312,13 @@ def _totals(result: ValidationResult, header: dict[str, str], tol: Tolerance) ->
         sum_base = sum((b for b in bases if b is not None), Decimal(0))
         if net is not None:
             result.add("total_net", abs(net - sum_base) <= tol.sum, ["total_net"])
-        if vat is not None and all(v is not None for v in vats):
+        # The recap's own sums decide what the total must be: a wrong printed (or misread) net
+        # is one finding, not also a wrong total and a wrong amount due.
+        net = sum_base
+        if all(v is not None for v in vats):
             sum_vat = sum((v for v in vats if v is not None), Decimal(0))
-            result.add("total_vat", abs(vat - sum_vat) <= tol.sum, ["total_vat"])
-            net = net if net is not None else sum_base
+            if vat is not None:
+                result.add("total_vat", abs(vat - sum_vat) <= tol.sum, ["total_vat"])
             vat_total = sum_vat
         else:
             vat_total = vat

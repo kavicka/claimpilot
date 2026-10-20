@@ -213,3 +213,65 @@ def test_a_second_currency_total_that_is_the_euro_total_is_dropped():
     assert names(kept) == {"total"}
     kept = drop_copied_totals(header_fields(total="4.291,04", second_currency_total="107.490,55"))
     assert names(kept) == {"total", "second_currency_total"}
+
+
+def test_a_net_or_vat_total_that_is_not_on_the_page_is_the_models_own_sum():
+    from claimpilot_worker.extraction.invoice import drop_ungrounded_totals
+
+    fields = header_fields(
+        total="41.218,37", total_net="35.000,0000", total_vat="6.218,37", invoice_number="2025/1"
+    )
+    for f in fields:
+        f.grounded = f.name in ("total", "invoice_number")
+    kept = drop_ungrounded_totals(fields, "41.218,37 35.000,0000 6.218,37")
+    assert names(kept) == {"total", "invoice_number"}
+
+
+def test_a_grounded_net_total_stays():
+    from claimpilot_worker.extraction.invoice import drop_ungrounded_totals
+
+    fields = header_fields(total="100,00", total_net="81,30", total_vat="18,70")
+    for f in fields:
+        f.grounded = True
+    page = "Základ 81,30  DPH 18,70  Spolu 100,00"
+    assert names(drop_ungrounded_totals(fields, page)) == {"total", "total_net", "total_vat"}
+
+
+def test_a_line_vat_or_gross_the_item_does_not_print_is_dropped():
+    item = wholesale_item()  # cells: a name and a total, no VAT amount, no gross
+    answer = ItemValues(
+        item=1,
+        values=[
+            CellValue(field="line_net", value="27,80"),
+            CellValue(field="vat_amount", value="5,28"),  # the model's own sum
+            CellValue(field="line_gross", value="33,08"),
+        ],
+    )
+    got = values(_line_result(answer, item, {}))
+    assert got == {"line_net": "27,80"}
+
+
+def test_a_line_vat_the_item_prints_is_kept():
+    item = Item(1, 1, [cell(0, "Šampón"), cell(0, "27,80", 5, "Spolu"), cell(0, "5,28", 6, "DPH")])
+    answer = ItemValues(item=1, values=[CellValue(field="vat_amount", value="5,28")])
+    assert values(_line_result(answer, item, {})) == {"vat_amount": "5,28"}
+
+
+def test_a_net_total_must_be_printed_on_the_page_itself_not_only_quoted():
+    from claimpilot_worker.extraction.invoice import drop_ungrounded_totals
+
+    fields = header_fields(total="41.218,37", total_net="35.000,0000", total_vat="6.218,37")
+    for f in fields:
+        f.grounded = True  # the model's quote exists on the page
+    page = "Spolu 41.218,37 EUR  Zaklad 5% 1.912,40  DPH 95,62  ucet SK31 1200"
+    assert names(drop_ungrounded_totals(fields, page)) == {"total"}
+    assert names(drop_ungrounded_totals(fields, page + " 6 218,37 35 000")) == {
+        "total",
+        "total_vat",
+    }  # 5 117,56 is printed (spacing aside); 35.000,0000 is not
+
+
+def test_a_line_vat_that_is_only_part_of_another_number_is_dropped():
+    item = Item(1, 1, [cell(0, "Šampón"), cell(0, "115,28", 5, "Spolu")])
+    answer = ItemValues(item=1, values=[CellValue(field="vat_amount", value="5,28")])
+    assert values(_line_result(answer, item, {})) == {}
