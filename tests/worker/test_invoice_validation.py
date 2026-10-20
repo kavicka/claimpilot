@@ -288,3 +288,17 @@ def test_a_missing_currency_is_not_blamed_when_pages_are_missing():
     header = {k: v for k, v in GOOD_SK.items() if k != "currency"} | {"page_note": "strana 1 z 3"}
     result = validate(header, LINES, OURS, pages_present=1)
     assert result.needs_info and "currency" not in failed(result)
+
+
+def test_a_line_that_prints_no_rate_counts_in_the_only_rate_of_the_recap():
+    # A page that prints the rate once, in the recap, and not on the lines.
+    lines = [
+        {k: v for k, v in ln.items() if k not in ("vat_rate", "vat_amount", "line_gross")}
+        for ln in LINES
+    ]
+    assert failed(validate(GOOD_SK, lines, OURS, pages_present=1)) == {}
+
+
+def test_a_recap_row_with_no_lines_of_its_rate_fails_when_rates_are_printed_on_lines():
+    header = dict(GOOD_SK) | {"recap[0].rate": "19%"}
+    assert "recap_base" in failed(validate(header, LINES, OURS, pages_present=1))

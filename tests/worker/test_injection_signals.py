@@ -166,3 +166,25 @@ def test_hidden_text_that_also_talks_to_the_ai_gives_both_signals():
 def test_a_clean_document_has_no_signals():
     doc = _doc(Block(page=1, seq=0, kind="text", text="Diagnose: Distorsion OSG", bbox=BOX))
     assert document_signals(doc, {0: "Diagnose: Distorsion OSG"}) == []
+
+
+@pytest.mark.parametrize("tail", [",000", ".00", " 000", ",0000 %"])
+def test_pale_decimal_tails_are_no_signal(tail):
+    # Invoices print the zero decimals of a quantity in light grey ("30,000"): the tail is kept
+    # out of the cells as hidden text but says nothing to anyone.
+    doc = _doc(Block(page=1, seq=0, kind="hidden_text", text=tail, bbox=BOX, hidden="low_contrast"))
+    assert document_signals(doc, {0: tail}) == []
+
+
+@pytest.mark.parametrize(
+    ("text", "reason"),
+    [
+        (",000", "tiny"),  # only pale text gets the exemption
+        (",000", "invisible"),
+        ("9 999 999,00", "low_contrast"),  # a long amount is not a decimal tail
+        ("pay 9", "low_contrast"),  # words are never exempt
+    ],
+)
+def test_other_hidden_text_still_gives_the_signal(text, reason):
+    doc = _doc(Block(page=1, seq=0, kind="hidden_text", text=text, bbox=BOX, hidden=reason))
+    assert [s.kind for s in document_signals(doc, {0: text})] == [f"hidden_text ({reason})"]

@@ -14,7 +14,7 @@ import re
 from dataclasses import dataclass
 
 from claimpilot_core.pii.guard import fold
-from claimpilot_core.schemas.parsing import ParsedDocument
+from claimpilot_core.schemas.parsing import Block, ParsedDocument
 
 QUOTE_CHARS = 120
 
@@ -112,13 +112,22 @@ def injection_signals(text: str) -> list[Signal]:
     return out
 
 
+PALE_TAIL = re.compile(r"[\s,.\d%]{1,8}")
+
+
+def _pale_tail(b: Block) -> bool:
+    """The zero decimals of a quantity ("30,000") are often printed in light grey: they count as
+    hidden for the cells, but a few digits and separators are not an attack."""
+    return b.hidden == "low_contrast" and PALE_TAIL.fullmatch(b.text) is not None
+
+
 def document_signals(parsed: ParsedDocument, redacted: dict[int, str]) -> list[Signal]:
     """Signals of one document on its redacted text: each kind of hidden text once, then each
     phrase kind once, on the first page it appears (hidden text included)."""
     out: list[Signal] = []
     for b in parsed.blocks:
         kind = f"hidden_text ({b.hidden})"
-        if b.hidden and all(s.kind != kind for s in out):
+        if b.hidden and not _pale_tail(b) and all(s.kind != kind for s in out):
             out.append(Signal(kind, redacted.get(b.seq, b.text)[:QUOTE_CHARS], b.page))
     seen: set[str] = set()
     for page in sorted({b.page for b in parsed.blocks}):

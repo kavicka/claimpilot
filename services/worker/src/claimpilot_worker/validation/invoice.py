@@ -186,8 +186,11 @@ def _recap(
     bases: dict[int, Decimal] = defaultdict(Decimal)
     line_vat: dict[int, Decimal] = defaultdict(Decimal)
     counts: dict[int, int] = defaultdict(int)
+    fallback = recap_rate(header)  # a page may print the rate once, in the recap
     for line in lines:
-        rate, net = parse_vat_rate(line.get("vat_rate")), _num(line, "line_net")
+        printed = line.get("vat_rate")
+        rate = parse_vat_rate(printed) if printed else fallback
+        net = _num(line, "line_net")
         if rate is None or net is None:
             continue
         bases[rate] += net
