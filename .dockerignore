@@ -15,6 +15,9 @@ data/storage
 data/synthetic
 # core_mock's image carries the synthetic policies (no PDFs)
 !data/synthetic/policies.json
+# ... and the mock ERP's records of the dev and test splits (no invoices, no train split)
+!data/synthetic/invoices/erp-dev.json
+!data/synthetic/invoices/erp-test.json
 evals/cassettes
 evals/reports
 evals/cache

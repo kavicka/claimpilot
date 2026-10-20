@@ -135,9 +135,9 @@ run "only_the_worker_calls_bedrock_and_only_in_the_eu" {
 
   assert {
     condition = alltrue([
-      for k in ["ui", "core-mock", "mcp"] : aws_ecs_task_definition.service[k].task_role_arn == null
+      for k in ["ui", "core-mock", "erp-mock", "mcp"] : aws_ecs_task_definition.service[k].task_role_arn == null
     ])
-    error_message = "ui, core-mock and mcp run without a task role."
+    error_message = "ui, core-mock, erp-mock and mcp run without a task role."
   }
 }
 
@@ -160,9 +160,9 @@ run "tasks_get_what_they_need_and_no_more" {
   assert {
     condition = (
       sort([for s in jsondecode(aws_ecs_task_definition.service["worker"].container_definitions)[0].secrets : s.name])
-      == sort(["CLAIMPILOT_DATABASE_PASSWORD", "CLAIMPILOT_REDIS_URL", "CLAIMPILOT_PII_VAULT_KEY"])
+      == sort(["CLAIMPILOT_DATABASE_PASSWORD", "CLAIMPILOT_REDIS_URL", "CLAIMPILOT_PII_VAULT_KEY", "CLAIMPILOT_ERP_TOKEN"])
     )
-    error_message = "The worker sees the database, the queue and the vault key; no login or intake secrets."
+    error_message = "The worker sees the database, the queue, the vault key and the ERP token; no login or intake secrets."
   }
 
   assert {
@@ -173,6 +173,34 @@ run "tasks_get_what_they_need_and_no_more" {
   assert {
     condition     = !strcontains(aws_ecs_task_definition.service["api"].container_definitions, random_password.redis.result)
     error_message = "Secrets reach tasks through Secrets Manager, never as plain environment values."
+  }
+}
+
+run "the_erp_is_inside_and_asks_for_its_token" {
+  assert {
+    condition = (
+      contains([for e in jsondecode(aws_ecs_task_definition.service["worker"].container_definitions)[0].environment : "${e.name}=${e.value}"], "CLAIMPILOT_ERP_URL=http://erp-mock:8000")
+      && aws_ecs_service.service["erp-mock"].service_connect_configuration[0].service[0].client_alias[0].dns_name == "erp-mock"
+    )
+    error_message = "The worker reaches the ERP by its Service Connect name."
+  }
+
+  assert {
+    condition = (
+      [for s in jsondecode(aws_ecs_task_definition.service["erp-mock"].container_definitions)[0].secrets : s.name] == ["ERP_MOCK_TOKEN"]
+      && jsondecode(aws_ecs_task_definition.service["erp-mock"].container_definitions)[0].command[1] == "claimpilot_core_mock.erp:app"
+    )
+    error_message = "erp-mock runs the ERP app and gets the token, nothing else."
+  }
+
+  assert {
+    condition     = !contains(keys(aws_lb_target_group.app), "erp-mock") && length([for s in aws_ecs_service.service["erp-mock"].load_balancer : s]) == 0
+    error_message = "The ERP is not behind the load balancer."
+  }
+
+  assert {
+    condition     = !strcontains(aws_ecs_task_definition.service["worker"].container_definitions, random_password.erp.result) && !strcontains(aws_ecs_task_definition.service["erp-mock"].container_definitions, random_password.erp.result)
+    error_message = "The ERP token reaches the tasks through Secrets Manager, never as a plain value."
   }
 }
 

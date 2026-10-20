@@ -20,6 +20,8 @@ COPY services/core_mock services/core_mock
 # Synthetic policies; compose mounts the same files over these for local runs.
 COPY data/synthetic/policies.json data/policies.json
 COPY data/policies/products.yaml data/products.yaml
+# Records of the mock ERP (the erp-mock service runs this image with another command).
+COPY data/synthetic/invoices/erp-dev.json data/synthetic/invoices/erp-test.json data/invoices/
 COPY config config
 COPY prompts prompts
 RUN --mount=type=cache,target=/root/.cache/uv \

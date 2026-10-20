@@ -237,7 +237,7 @@ eu-central-1 with Claude on Amazon Bedrock; [docs/deploy.md](docs/deploy.md) is 
   state, WAF, a budget alert. `make infra-check` validates it without an account (mocked
   `terraform test`, tflint, checkov with 0 failed checks); `make deploy` is the one command for a
   real account.
-- **Cost:** about 330 USD a month for the idle demo stack and 0.07 to 0.09 USD of Bedrock per claim
+- **Cost:** about 339 USD a month for the idle demo stack and 0.07 to 0.09 USD of Bedrock per claim
   ([estimate](docs/governance/cost.md)).
 - **Not measured yet:** extraction and coverage quality on Claude. The live eval workflow runs on
   pull requests once an account is connected.

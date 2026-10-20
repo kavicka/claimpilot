@@ -1,8 +1,9 @@
-# Five Fargate services on ARM64 (Graviton, about 20 % below x86 in Frankfurt):
+# Six Fargate services on ARM64 (Graviton, about 20 % below x86 in Frankfurt):
 #   ui        Next.js review app, behind the load balancer
 #   api       FastAPI, behind the load balancer under /api/*, reachable inside as http://api:8000
 #   worker    every pipeline step and every model call (Claude on Bedrock, masked images only)
 #   core-mock the target core claims system, inside only
+#   erp-mock  the mock ERP (master data, UBL intake; bearer token), inside only, core-mock's image
 #   mcp       read-only MCP tools over the api, inside only
 # Service Connect gives them short names; nothing but the load balancer is reachable from outside.
 
@@ -21,7 +22,7 @@ resource "aws_service_discovery_http_namespace" "main" {
 
 resource "aws_cloudwatch_log_group" "service" {
   #checkov:skip=CKV_AWS_338:Logs hold claim ids and step names, no personal data; 30 days serve debugging (var.log_retention_days).
-  for_each          = toset(["ui", "api", "worker", "core-mock", "mcp", "migrate"])
+  for_each          = toset(["ui", "api", "worker", "core-mock", "erp-mock", "mcp", "migrate"])
   name              = "/claimpilot/${var.environment}/${each.key}"
   retention_in_days = var.log_retention_days
   kms_key_id        = aws_kms_key.main.arn
@@ -85,16 +86,24 @@ locals {
         CLAIMPILOT_PROVIDERS_FILE = "providers.cloud.yaml"
         CLAIMPILOT_AWS_REGION     = var.region
         CLAIMPILOT_OCR_ENGINE     = var.ocr_engine
+        CLAIMPILOT_ERP_URL        = "http://erp-mock:8000"
         # Models are baked into the image; nothing may be fetched at run time (no internet route).
         HF_HUB_OFFLINE       = "1"
         TRANSFORMERS_OFFLINE = "1"
       })
-      secrets = ["database_password", "redis_url", "pii_vault_key"]
+      secrets = ["database_password", "redis_url", "pii_vault_key", "erp_token"]
       scratch = ["/tmp"]
     }
     core-mock = {
       cpu = 256, memory = 512, count = 1, port = 8000, efs = false
       env = {}, secrets = [], scratch = ["/tmp"]
+    }
+    erp-mock = {
+      cpu = 256, memory = 512, count = 1, port = 8000, efs = false
+      # The core-mock image holds the ERP's records (data/invoices); only the command differs.
+      image   = "core-mock"
+      command = ["uvicorn", "claimpilot_core_mock.erp:app", "--host", "0.0.0.0", "--port", "8000"]
+      env     = {}, secrets = ["erp_mock_token"], scratch = ["/tmp"]
     }
     mcp = {
       cpu     = 256, memory = 512, count = 1, port = 8000, efs = false
@@ -120,9 +129,9 @@ resource "aws_ecs_task_definition" "service" {
     cpu_architecture        = "ARM64"
   }
 
-  container_definitions = jsonencode(concat([{
+  container_definitions = jsonencode(concat([merge({
     name                   = each.key
-    image                  = "${aws_ecr_repository.app[each.key].repository_url}:${var.image_tag}"
+    image                  = "${aws_ecr_repository.app[try(each.value.image, each.key)].repository_url}:${var.image_tag}"
     essential              = true
     readonlyRootFilesystem = true
     portMappings = each.value.port == null ? [] : [{
@@ -134,7 +143,7 @@ resource "aws_ecs_task_definition" "service" {
       for k, v in merge(each.value.env, contains(local.traced, each.key) ? local.trace_env[each.key] : {}) :
       { name = k, value = v }
     ]
-    secrets = [for s in each.value.secrets : local.secret_env[s]]
+    secrets = [for s in each.value.secrets : merge(local.secret_env, local.erp_secret_env)[s]]
     mountPoints = concat(
       [for i, p in each.value.scratch : { sourceVolume = "scratch-${i}", containerPath = p, readOnly = false }],
       each.value.efs ? [{ sourceVolume = "documents", containerPath = "/data/storage", readOnly = false }] : [],
@@ -147,7 +156,7 @@ resource "aws_ecs_task_definition" "service" {
         awslogs-stream-prefix = each.key
       }
     }
-  }], contains(local.traced, each.key) ? [local.adot_container[each.key]] : []))
+  }, try(each.value.command, null) == null ? {} : { command = each.value.command })], contains(local.traced, each.key) ? [local.adot_container[each.key]] : []))
 
   dynamic "volume" {
     for_each = { for i, p in each.value.scratch : "scratch-${i}" => p }

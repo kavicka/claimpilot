@@ -94,7 +94,7 @@ async def receipts(number: str) -> list[dict[str, Any]]:
 
 
 POSTED: dict[str, dict[str, Any]] = {}  # erp id -> posted document (memory: a mock)
-KEYS: dict[str, dict[str, str]] = {}  # idempotency key -> {erp_id, sha256 of the XML, kind}
+KEYS: dict[str, dict[str, Any]] = {}  # idempotency key -> {erp_id, sha256 of the XML, kind}
 
 
 def refusal(status: int, rule: str, message: str, **extra: Any) -> HTTPException:
