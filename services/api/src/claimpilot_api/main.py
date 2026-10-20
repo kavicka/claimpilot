@@ -19,6 +19,9 @@ from sqlalchemy.orm.exc import StaleDataError
 
 from claimpilot_api.auth import Intake, User_, ensure_demo_users
 from claimpilot_api.invoices import router as invoices_router
+from claimpilot_api.limits import enforce_rate_limit, reject_oversized, store_and_commit
+from claimpilot_api.ready import router as ready_router
+from claimpilot_api.retention import router as retention_router
 from claimpilot_api.review import enqueue
 from claimpilot_api.review import router as review_router
 from claimpilot_core.db.models import Claim, Document, Invoice, PipelineStepRun
@@ -32,7 +35,6 @@ ALLOWED = {
     ".jpeg": "image/jpeg",
     ".png": "image/png",
 }
-MAX_BYTES = 20 * 1024 * 1024
 
 
 @asynccontextmanager
@@ -46,8 +48,11 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
 
 app = FastAPI(title="ClaimPilot API", version="0.1.0", lifespan=lifespan)
+app.middleware("http")(reject_oversized)
 app.include_router(review_router)
 app.include_router(invoices_router)
+app.include_router(retention_router)
+app.include_router(ready_router)
 
 
 @app.exception_handler(StaleDataError)
@@ -115,21 +120,23 @@ async def create_claim(
     files: Annotated[list[UploadFile], File(description="Claim documents: PDF, JPG or PNG")],
     scenario_id: Annotated[str | None, Form(max_length=64)] = None,
 ) -> ClaimOut:
+    await enforce_rate_limit(request, source)
     if not files:
         raise HTTPException(422, "at least one document is required")
     if len(files) > MAX_FILES:
         raise HTTPException(422, f"at most {MAX_FILES} documents per claim")
     # Check every file before anything is stored, so a bad file leaves nothing behind.
     accepted: list[tuple[str, str, bytes]] = []
+    max_mb = get_settings().max_upload_mb
     for upload in files:
         suffix = Path(upload.filename or "").suffix.lower()
         shown = safe_filename(upload.filename, suffix)
         if suffix not in ALLOWED:
             hint = REJECTED_HINTS.get(suffix, "only PDF, JPG and PNG are accepted")
             raise HTTPException(415, f"{shown}: {hint}")
-        data = await upload.read(MAX_BYTES + 1)
-        if len(data) > MAX_BYTES:
-            raise HTTPException(413, f"{shown}: larger than 20 MB")
+        data = await upload.read(max_mb * 1024 * 1024 + 1)
+        if len(data) > max_mb * 1024 * 1024:
+            raise HTTPException(413, f"{shown}: larger than {max_mb} MB")
         if not data:
             raise HTTPException(422, f"{shown}: the file is empty")
         if not MAGIC[suffix](data):
@@ -137,18 +144,17 @@ async def create_claim(
         accepted.append((suffix, shown, data))
     number = await session.scalar(text("SELECT nextval('claim_reference_seq')"))
     claim = Claim(
-        reference=f"CP-2026-{number:06d}",
+        reference=f"{get_settings().claim_reference_prefix}{number:06d}",
         status=ClaimStatus.RECEIVED.value,
         scenario_id=scenario_id,
     )
     session.add(claim)
     await session.flush()
-    storage = get_settings().storage_dir
+    to_store: list[tuple[str, bytes]] = []
     for suffix, shown, data in accepted:
         doc_id = uuid.uuid4()
         relative = f"claims/{claim.id}/{doc_id}{suffix}"
-        (storage / relative).parent.mkdir(parents=True, exist_ok=True)
-        (storage / relative).write_bytes(data)
+        to_store.append((relative, data))
         session.add(
             Document(
                 id=doc_id,
@@ -159,7 +165,7 @@ async def create_claim(
                 storage_path=relative,
             )
         )
-    await session.commit()
+    await store_and_commit(session, get_settings().storage_dir, to_store)
     await enqueue(request, claim.id)
     return ClaimOut(
         id=claim.id,
@@ -188,26 +194,28 @@ async def create_invoice(
     ],
 ) -> InvoiceOut:
     """One supplier document per case; its pages are read as one invoice."""
+    await enforce_rate_limit(request, source)
     suffix = Path(file.filename or "").suffix.lower()
     shown = safe_filename(file.filename, suffix)
     if suffix not in ALLOWED:
         raise HTTPException(
             415, f"{shown}: {REJECTED_HINTS.get(suffix, 'only PDF, JPG and PNG are accepted')}"
         )
-    data = await file.read(MAX_BYTES + 1)
-    if len(data) > MAX_BYTES:
-        raise HTTPException(413, f"{shown}: larger than 20 MB")
+    max_mb = get_settings().max_upload_mb
+    data = await file.read(max_mb * 1024 * 1024 + 1)
+    if len(data) > max_mb * 1024 * 1024:
+        raise HTTPException(413, f"{shown}: larger than {max_mb} MB")
     if not data or not MAGIC[suffix](data):
         raise HTTPException(415, f"{shown}: the content is not a {suffix[1:].upper()} file")
     number = await session.scalar(text("SELECT nextval('invoice_reference_seq')"))
-    invoice = Invoice(reference=f"FA-2026-{number:06d}", status=InvoiceStatus.RECEIVED.value)
+    invoice = Invoice(
+        reference=f"{get_settings().invoice_reference_prefix}{number:06d}",
+        status=InvoiceStatus.RECEIVED.value,
+    )
     session.add(invoice)
     await session.flush()
     doc_id = uuid.uuid4()
     relative = f"invoices/{invoice.id}/{doc_id}{suffix}"
-    storage = get_settings().storage_dir
-    (storage / relative).parent.mkdir(parents=True, exist_ok=True)
-    (storage / relative).write_bytes(data)
     session.add(
         Document(
             id=doc_id,
@@ -218,7 +226,7 @@ async def create_invoice(
             storage_path=relative,
         )
     )
-    await session.commit()
+    await store_and_commit(session, get_settings().storage_dir, [(relative, data)])
     await enqueue(request, invoice.id)
     return InvoiceOut(id=invoice.id, reference=invoice.reference, status=invoice.status)
 

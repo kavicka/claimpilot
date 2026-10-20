@@ -19,3 +19,17 @@ matching:
 # Routing (stage 3.7): above this amount a senior handler decides.
 routing:
   senior_amount: "20000.00"
+
+# Hard limits (stage 3.10): an invoice with more items than this goes to NEEDS_INFO ("split the
+# invoice"). 400 items are about 34 extraction calls; the budget for that is in the worker settings.
+limits:
+  max_items: 400
+
+# Retention (ADR-016). `invoice_years`: the invoice record and its export.xml are kept this many
+# full calendar years after the end of the year the invoice closed in (accounting records);
+# then the case and its files are deleted. `personal_data_days`: after a final state, or when
+# nothing has moved for this long, the personal data (vault, page text, uploaded file and renders,
+# handler notes) is erased and the accounting record stays.
+retention:
+  invoice_years: 10
+  personal_data_days: 365

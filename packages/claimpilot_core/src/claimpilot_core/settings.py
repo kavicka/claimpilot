@@ -50,8 +50,24 @@ class Settings(BaseSettings):
     # missing; off: call the model, write nothing.
     llm_cassette_mode: str = "off"
 
-    # Finished claims older than this are erased by the worker's daily purge job.
+    # Finished claims older than this are erased by the worker's daily purge job. Invoices have
+    # their own periods in config/invoices.yaml (`retention:`, ADR-016).
     retention_days: int = 3650
+
+    # Intake limits (api): one upload, and uploads per minute for each intake token or user.
+    max_upload_mb: int = 25
+    intake_rate_per_min: int = 60
+    # Reference numbers are PREFIX + six digits from a database sequence.
+    claim_reference_prefix: str = "CP-2026-"
+    invoice_reference_prefix: str = "FA-2026-"
+
+    # Worker: time budget of one pipeline step, in seconds, by "kind.step" ("invoice.extract").
+    # A step over its budget moves the case to FAILED. arq's job_timeout is derived from the
+    # largest budget, so the budget always fires first. 840 s sits below the old 900 s job limit.
+    step_timeout_s: int = 840
+    step_timeouts: dict[str, int] = Field(default_factory=lambda: {"invoice.extract": 3600})
+    # /ready: the worker counts as alive while its arq heartbeat is younger than this.
+    ready_worker_max_age_s: int = 120
     # OCR for scans and photos: "docling" (RapidOCR or Apple Vision, inside the worker) or
     # "textract" (Amazon Textract; only with the AWS AI services opt-out policy, docs/deploy.md).
     ocr_engine: str = "docling"
@@ -81,3 +97,17 @@ class Settings(BaseSettings):
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
+
+
+def step_budget(settings: Settings, kind: str, step: str) -> int:
+    """Seconds one pipeline step of this kind may run."""
+    return settings.step_timeouts.get(f"{kind}.{step}", settings.step_timeout_s)
+
+
+def longest_step_budget(settings: Settings) -> int:
+    return max([settings.step_timeout_s, *settings.step_timeouts.values()])
+
+
+# arq writes the worker's heartbeat key this often (WorkerSettings.health_check_interval); the api
+# derives the heartbeat's age from the key's remaining time.
+WORKER_HEARTBEAT_INTERVAL_S = 30

@@ -60,7 +60,7 @@ async def test_bad_files_are_rejected_and_nothing_is_stored(
 
 
 async def test_oversized_file(client, tmp_path):
-    big = b"%PDF-1.7\n" + b"0" * (20 * 1024 * 1024)
+    big = b"%PDF-1.7\n" + b"0" * (25 * 1024 * 1024)
     r = await upload(client, ("huge.pdf", big))
     assert r.status_code == 413
     assert stored(tmp_path) == []
