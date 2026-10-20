@@ -12,8 +12,9 @@ help:  ## List targets
 	@grep -E '^[a-z-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-12s %s\n", $$1, $$2}'
 
 up:  ## Start Postgres, Redis, api, core_mock, mcp_server; apply migrations
-	docker compose up -d --build --wait postgres redis api core_mock erp_mock mcp_server
-	uv run alembic upgrade head
+	docker compose up -d --wait postgres redis
+	uv run alembic upgrade head  # before the api: it reads the users table when it starts
+	docker compose up -d --build --wait api core_mock erp_mock mcp_server
 
 up-obs:  ## Also start self-hosted Langfuse on :4420
 	docker compose --profile observability up -d --wait
