@@ -12,7 +12,7 @@ from arq.connections import RedisSettings
 import claimpilot_worker.steps  # noqa: F401 - registers the pipeline steps
 from claimpilot_core.llm.gateway import LLMGateway
 from claimpilot_core.logging import configure_logging
-from claimpilot_core.settings import get_settings, longest_step_budget
+from claimpilot_core.settings import WORKER_HEARTBEAT_INTERVAL_S, get_settings, longest_step_budget
 from claimpilot_worker.pipeline import MAX_TRIES, advance, safe_error, sweep
 
 log = structlog.get_logger(__name__)
@@ -103,7 +103,7 @@ class WorkerSettings:
     max_tries = MAX_TRIES
     # arq writes a heartbeat key this often; /ready and the ECS health check read it. Cron jobs and
     # steps run on the same event loop, so a step that blocks it for minutes stops the heartbeat.
-    health_check_interval = 30
+    health_check_interval = WORKER_HEARTBEAT_INTERVAL_S
     # Every step has its own time budget (pipeline.advance, settings.step_timeouts) that fires
     # first and moves the case to FAILED. This limit only catches what escapes the budget: it
     # sits above the longest one. A job lost with a crashed worker is retried after it, or found

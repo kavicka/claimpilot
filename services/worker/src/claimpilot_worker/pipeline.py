@@ -94,8 +94,9 @@ async def advance(ctx: dict[str, Any], case_id: str) -> str:
             ):
                 run.trace_id = trace_id
                 budget = step_budget(ctx.get("settings") or get_settings(), kind.value, step.value)
+                scope = asyncio.timeout(budget)
                 try:
-                    async with asyncio.timeout(budget) as scope:
+                    async with scope:
                         new_status = await fn(session, case, ctx)
                 except TimeoutError:
                     if not scope.expired():

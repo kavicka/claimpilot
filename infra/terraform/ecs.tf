@@ -55,6 +55,17 @@ locals {
     }
   }
 
+  # The worker has no port. arq writes a heartbeat key to Redis every 30 s; the check passes while
+  # it exists (claimpilot_worker.healthcheck). A step can block the event loop for minutes (a
+  # large scan in the parser), so the check is slow and patient: five misses a minute apart.
+  worker_health_check = {
+    command     = ["CMD", "python", "-m", "claimpilot_worker.healthcheck"]
+    interval    = 60
+    timeout     = 15
+    retries     = 5
+    startPeriod = 900
+  }
+
   database_url = "postgresql+psycopg://claimpilot@${aws_db_instance.main.address}:5432/claimpilot?sslmode=require"
 
   common_env = {
@@ -125,6 +136,7 @@ resource "aws_ecs_task_definition" "service" {
     image                  = "${aws_ecr_repository.app[each.key].repository_url}:${var.image_tag}"
     essential              = true
     readonlyRootFilesystem = true
+    healthCheck            = each.key == "worker" ? local.worker_health_check : null
     portMappings = each.value.port == null ? [] : [{
       name          = each.key
       containerPort = each.value.port

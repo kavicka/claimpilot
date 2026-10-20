@@ -279,3 +279,23 @@ run "textract_only_when_chosen" {
     error_message = "The worker is told to use Textract."
   }
 }
+
+run "the_worker_is_restarted_when_its_heartbeat_stops" {
+  assert {
+    condition = (
+      jsondecode(aws_ecs_task_definition.service["worker"].container_definitions)[0].healthCheck.command
+      == ["CMD", "python", "-m", "claimpilot_worker.healthcheck"]
+    )
+    error_message = "The worker container checks the arq heartbeat key in Redis."
+  }
+
+  assert {
+    condition     = jsondecode(aws_ecs_task_definition.service["worker"].container_definitions)[0].healthCheck.startPeriod >= 600
+    error_message = "The worker loads its models before the first heartbeat: give it time."
+  }
+
+  assert {
+    condition     = alltrue([for k in ["ui", "api", "core-mock", "mcp"] : jsondecode(aws_ecs_task_definition.service[k].container_definitions)[0].healthCheck == null])
+    error_message = "Only the worker gets this check; the others are checked by the load balancer or not at all."
+  }
+}

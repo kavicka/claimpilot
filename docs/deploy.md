@@ -113,6 +113,22 @@ checkov (0 failed checks; each skip names its reason in the code). CI runs the s
 
 - **Logs:** CloudWatch log groups `/claimpilot/<environment>/<service>`, 30 days. They hold claim
   ids and step names, no personal data.
+- **Health:** `/health` (api and database; the load balancer and compose use it) is unchanged.
+  `/ready` also checks Redis and the worker's heartbeat (arq writes it every 30 s; older than
+  120 s counts as down) and reports `failed_cases` and `queue_length`; it answers 503 when a
+  component is down, so alert on its status code. The worker container has an ECS health check on
+  the same heartbeat (five misses a minute apart restart the task, 15 minutes of start-up grace).
+  A step that blocks the event loop for longer stops the heartbeat; set `count = 0` before
+  loading the worker with work you expect to block.
+- **Time budgets:** a pipeline step that runs past `CLAIMPILOT_STEP_TIMEOUT_S` (840 s) moves its
+  case to FAILED; invoice extraction has 3600 s (`CLAIMPILOT_STEP_TIMEOUTS`, JSON by `kind.step`).
+  Budgets fire at the next `await`, so a step stuck in a blocking library call is cut off only
+  when it returns. A case whose step failed three times is also moved to FAILED by the sweep.
+- **Intake limits (api):** `CLAIMPILOT_MAX_UPLOAD_MB` (25), `CLAIMPILOT_INTAKE_RATE_PER_MIN` (60
+  per token or user, 429 with `Retry-After`), `CLAIMPILOT_INVOICE_REFERENCE_PREFIX` and
+  `CLAIMPILOT_CLAIM_REFERENCE_PREFIX`.
+- **Retention:** the worker's daily purge covers claims and invoices; the periods are in
+  `config/invoices.yaml` and `CLAIMPILOT_RETENTION_DAYS` (docs/governance/retention-erasure.md).
 - **Worker size:** `worker = { cpu, memory, count }`. Set `count = 0` to stop paying for the
   worker while nobody uses the demo; claims wait in the queue.
 - **High availability:** `ha = true` for Multi-AZ RDS, two Valkey nodes, endpoints in both AZs and
