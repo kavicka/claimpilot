@@ -6,7 +6,6 @@ Values are re-hydrated from the vault here, for the person looking at the claim,
 
 import json
 import re
-import time
 import uuid
 from datetime import UTC, datetime
 from pathlib import Path
@@ -23,7 +22,17 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm.attributes import flag_modified
 
-from claimpilot_api.auth import COOKIE, TTL_SECONDS, User_, hash_password, sign, verify_password
+from claimpilot_api.auth import (
+    CurrentUser,
+    User_,
+    clear_session_cookie,
+    db,
+    hash_password,
+    set_session_cookie,
+    verify_password,
+)
+from claimpilot_api.throttle import client_ip, login_throttle
+from claimpilot_core.audit import record
 from claimpilot_core.db.models import (
     AuditLog,
     Case,
@@ -33,12 +42,12 @@ from claimpilot_core.db.models import (
     DocBlock,
     Document,
     ExtractedField,
+    Invoice,
     PipelineStepRun,
     RoutingDecision,
     Summary,
     User,
 )
-from claimpilot_core.db.session import get_sessionmaker
 from claimpilot_core.domain import ClaimStatus as S
 from claimpilot_core.domain import Queue
 from claimpilot_core.fields import normalize as normalize_field
@@ -52,11 +61,6 @@ from claimpilot_core.state_machine import Actor, InvalidTransitionError, transit
 log = structlog.get_logger(__name__)
 
 router = APIRouter(prefix="/api")
-
-
-async def db() -> Any:
-    async with get_sessionmaker()() as session:
-        yield session
 
 
 Session = Annotated[AsyncSession, Depends(db)]
@@ -74,45 +78,40 @@ class Login(BaseModel):
     password: str
 
 
-# Failed logins per username in the last window; one api process, so memory is enough here.
-FAILED_LOGINS: dict[str, list[float]] = {}
-MAX_FAILED, WINDOW_S = 5, 15 * 60
 DUMMY_HASH = hash_password("timing-equalizer")
 
 
 @router.post("/auth/login")
-async def login(body: Login, response: Response, session: Session) -> dict[str, str]:
-    now = time.monotonic()
-    recent = [t for t in FAILED_LOGINS.get(body.username, []) if now - t < WINDOW_S]
-    if len(recent) >= MAX_FAILED:
+async def login(
+    body: Login, request: Request, response: Response, session: Session
+) -> dict[str, str]:
+    redis = getattr(request.app.state, "arq", None)
+    ip = client_ip(request, get_settings().trust_forwarded_for)
+    if await login_throttle.blocked(redis, body.username, ip):
         raise HTTPException(429, "too many failed logins; try again in 15 minutes")
     user = await session.scalar(select(User).where(User.username == body.username))
-    # An unknown user costs the same scrypt as a wrong password, so timing does not tell them apart.
+    # An unknown user costs the same scrypt as a wrong password, so timing does not tell them apart;
+    # a disabled user looks like a wrong password.
     valid = verify_password(body.password, user.password_hash if user else DUMMY_HASH)
-    if user is None or not valid:
-        FAILED_LOGINS[body.username] = [*recent, now]
+    if user is None or not valid or not user.active:
+        await login_throttle.failed(redis, body.username, ip)
         raise HTTPException(401, "wrong username or password")
-    FAILED_LOGINS.pop(body.username, None)
-    response.set_cookie(
-        COOKIE, sign(user.id, user.role), max_age=TTL_SECONDS, httponly=True, samesite="lax"
-    )
+    await login_throttle.succeeded(redis, body.username, ip)
+    set_session_cookie(response, user.id)
     return {"username": user.username, "name": user.display_name, "role": user.role}
 
 
 @router.post("/auth/logout")
 async def logout(response: Response) -> dict[str, bool]:
-    response.delete_cookie(COOKIE)
+    clear_session_cookie(response)
     return {"ok": True}
 
 
 @router.get("/auth/me")
-async def me(user: User_, session: Session) -> dict[str, str]:
+async def me(user: User_) -> dict[str, str]:
     if user.role == "agent":
         return {"username": "mcp", "name": "MCP server", "role": "agent"}
-    row = await session.get(User, user.id)
-    if row is None:
-        raise HTTPException(401, "log in first")
-    return {"username": row.username, "name": row.display_name, "role": row.role}
+    return {"username": user.username, "name": user.name, "role": user.role}
 
 
 # --- claims -----------------------------------------------------------------------------------
@@ -367,11 +366,61 @@ class FieldEdit(BaseModel):
 
 
 def check_version(case: Case, seen: int | None) -> None:
-    if seen is not None and seen != case.version:
-        noun = "claim" if case.kind == "claim" else "invoice"
+    """A person decides on what they saw: the version of that page is required (428 without it)
+    and must still be current (409 if the case changed since)."""
+    noun = "claim" if case.kind == "claim" else "invoice"
+    if seen is None:
+        raise HTTPException(
+            428, f"send the {noun} version you saw (the page's `version`); reload and try again"
+        )
+    if seen != case.version:
         raise HTTPException(
             409, f"the {noun} changed since you opened it; reload to see the current version"
         )
+
+
+def require_senior_in_senior_queue(case: Case, user: CurrentUser) -> None:
+    """Fraud-review and senior cases belong to senior handlers for everything that changes them:
+    a plain handler could otherwise correct the field that raised the flag, reassess so the case
+    is routed to a normal queue, and approve it there."""
+    if case.queue in SENIOR_QUEUES and user.role != "senior":
+        noun = "claims" if case.kind == "claim" else "invoices"
+        raise HTTPException(403, f"{noun} in this queue need a senior handler")
+
+
+async def count_corrected(session: AsyncSession, case_id: uuid.UUID) -> int:
+    return (
+        await session.scalar(
+            select(func.count())
+            .select_from(ExtractedField)
+            .where(ExtractedField.case_id == case_id, ExtractedField.corrected.is_(True))
+        )
+    ) or 0
+
+
+async def audit_decision(
+    session: AsyncSession, case: Case, user: CurrentUser, action: str, body: "ActionBody"
+) -> None:
+    """The audit row of a handler action: what was decided, on which version of what amount."""
+    if isinstance(case, Invoice):
+        total, currency = case.total, case.currency
+    else:
+        total, currency = (getattr(case, "assessment", None) or {}).get("total_payout_eur"), "EUR"
+    record(
+        session,
+        case.id,
+        user.id,
+        action,
+        {
+            "note": body.note,
+            "total": str(total) if total is not None else None,
+            "currency": currency,
+            "version": body.version,
+            "queue": case.queue,
+            "status": case.status,
+            "corrected_fields": await count_corrected(session, case.id),
+        },
+    )
 
 
 async def enqueue(request: Request, claim_id: uuid.UUID) -> None:
@@ -419,6 +468,7 @@ async def correct_field(
     if case is None or case.status != S.IN_REVIEW.value:
         raise HTTPException(409, "fields can be corrected only while the case is in review")
     check_version(case, body.version)
+    require_senior_in_senior_queue(case, user)
     invoice = case.kind == "invoice"
     mapping = await vault().load(session, row.case_id)
     reverse = {v: k for k, v in mapping.items()}
@@ -435,13 +485,12 @@ async def correct_field(
     session.add(
         Correction(field_id=row.id, old_value=row.value_raw, new_value=stored, user_id=user.id)
     )
-    session.add(
-        AuditLog(
-            case_id=row.case_id,
-            user_id=user.id,
-            action="correct_field",
-            details={"field": row.field, "document_id": str(row.document_id)},
-        )
+    record(
+        session,
+        row.case_id,
+        user.id,
+        "correct_field",
+        {"field": row.field, "document_id": str(row.document_id), "version": body.version},
     )
     norm = normalize_invoice(row.field, stored) if invoice else normalize_field(row.field, stored)
     row.value_raw, row.value_norm = stored, norm
@@ -468,7 +517,6 @@ ACTIONS = {
     "reassess": S.EXTRACTED,
     "retry": S.RECEIVED,  # a failed claim starts over from ingest
 }
-NOT_DECISIONS = {"reassess", "retry"}
 
 
 async def needs_reassessment(session: AsyncSession, claim_id: uuid.UUID) -> bool:
@@ -502,13 +550,12 @@ async def act(
     if claim is None:
         raise HTTPException(404, "no such claim")
     check_version(claim, body.version)
+    require_senior_in_senior_queue(claim, user)
     if action == "escalate":
         if claim.status != S.IN_REVIEW.value:
             raise HTTPException(409, "only claims in review can be escalated")
         claim.queue = Queue.SENIOR.value
     elif action in ACTIONS:
-        if claim.queue in SENIOR_QUEUES and user.role != "senior" and action not in NOT_DECISIONS:
-            raise HTTPException(403, "claims in this queue need a senior handler")
         if action == "approve" and await needs_reassessment(session, claim.id):
             raise HTTPException(409, "fields were corrected after the assessment; reassess first")
         try:
@@ -516,19 +563,12 @@ async def act(
         except InvalidTransitionError as exc:
             raise HTTPException(409, str(exc)) from exc
         if action == "approve":
-            corrected = await session.scalar(
-                select(func.count())
-                .select_from(ExtractedField)
-                .where(ExtractedField.case_id == claim.id, ExtractedField.corrected.is_(True))
-            )
-            claim.straight_through = not corrected
+            claim.straight_through = not await count_corrected(session, claim.id)
     else:
         raise HTTPException(404, f"unknown action {action}")
     if action == "retry":
         claim.error = None
-    session.add(
-        AuditLog(case_id=claim.id, user_id=user.id, action=action, details={"note": body.note})
-    )
+    await audit_decision(session, claim, user, action, body)
     await session.commit()
     if action in ("approve", "reassess", "retry"):
         await enqueue(request, claim.id)

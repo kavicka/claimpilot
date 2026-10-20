@@ -28,3 +28,10 @@ currencies: [EUR, CZK]
 # A currency without a limit goes to a senior handler too.
 routing:
   senior_amount: { EUR: "20000.00", CZK: "500000.00" }
+
+# Approval (stage E1): at or above this amount, per currency, the approver must be someone who did
+# not correct a field of the invoice (four eyes). No limit for a currency means always four eyes.
+approval:
+  four_eyes_amount:
+    EUR: "5000"
+    CZK: "125000"

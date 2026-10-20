@@ -12,12 +12,22 @@ The system prepares; a person decides.
 
 - Every decision is a handler action through the state machine (`claimpilot_core.state_machine`);
   the system actor has no transition to APPROVED or REJECTED, and a test proves it.
-- Claims in the senior and fraud-review queues need a senior handler for every decision (approve, reject, request information). Only a senior handler can erase a claim.
+- Cases (claims and invoices) in the senior and fraud-review queues need a senior handler for
+  everything that changes them: decisions, field corrections, reassess, retry, escalate. Without
+  that, a plain handler could correct the field that raised the flag, reassess so the case is
+  routed to a normal queue, and approve it there. Only a senior handler can erase a claim.
+- Invoices at or above the four-eyes amount (`approval:` in `config/invoices.yaml`, per currency)
+  are approved by someone other than the people who corrected their fields.
+- Users are managed with `claimpilot-admin`. The session cookie only names the user; role and
+  active flag are read from the database on every request, so a demoted or disabled user loses
+  access at once. Production has no demo users.
 - The MCP server exposes read-only tools; there is no approve or submit tool.
 - Every action and every field correction lands in the audit log with the user.
 - A correction made after the assessment blocks approval until the handler reassesses: routing,
   payout and letters are computed again from the corrected fields.
-- A handler approves what they saw: every action carries the claim version their page showed, and
-  the api refuses it (409) if the claim changed since, for example after another handler's
-  escalation or correction.
+- A handler approves what they saw: every action and correction carries the case version their
+  page showed. The api refuses a request without it (428) and one whose version is out of date
+  (409), for example after another handler's escalation or correction.
+- Every decision is logged with the user, the total and currency, the version approved, the queue
+  and the number of corrected fields.
 - Corrections feed the golden dataset, so the next eval run measures what handlers had to fix.

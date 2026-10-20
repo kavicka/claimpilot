@@ -86,5 +86,4 @@ aws ecs wait services-stable --region "$region" --cluster "$cluster" --services 
 
 echo
 echo "ClaimPilot runs at $(tf output -raw url)"
-echo "Demo password: aws secretsmanager get-secret-value --region $region \\"
-echo "  --secret-id $(tf output -raw app_secret_arn) --query SecretString --output text | jq -r .DEMO_PASSWORD"
+echo "Production has no demo users: create the first user as described in docs/deploy.md (Users)."

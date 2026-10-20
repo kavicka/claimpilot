@@ -17,14 +17,14 @@ from sqlalchemy import func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm.exc import StaleDataError
 
-from claimpilot_api.auth import Intake, User_, ensure_demo_users
+from claimpilot_api.auth import Intake, User_, db, ensure_demo_users
 from claimpilot_api.invoices import router as invoices_router
 from claimpilot_api.review import enqueue
 from claimpilot_api.review import router as review_router
 from claimpilot_core.db.models import Claim, Document, Invoice, PipelineStepRun
 from claimpilot_core.db.session import get_engine, get_sessionmaker
 from claimpilot_core.domain import ClaimStatus, InvoiceStatus
-from claimpilot_core.settings import get_settings
+from claimpilot_core.settings import check_production, get_settings
 
 ALLOWED = {
     ".pdf": "application/pdf",
@@ -37,6 +37,7 @@ MAX_BYTES = 20 * 1024 * 1024
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
+    check_production(get_settings(), "api")  # raises before the api takes a request
     app.state.arq = await create_pool(RedisSettings.from_dsn(get_settings().redis_url))
     async with get_sessionmaker()() as session:
         await ensure_demo_users(session)
@@ -58,11 +59,6 @@ async def concurrent_change(_request: Request, _exc: StaleDataError) -> JSONResp
         status_code=409,
         content={"detail": "someone else changed the claim at the same time; reload"},
     )
-
-
-async def db() -> AsyncIterator[AsyncSession]:
-    async with get_sessionmaker()() as session:
-        yield session
 
 
 Session = Annotated[AsyncSession, Depends(db)]

@@ -63,6 +63,7 @@ locals {
     CLAIMPILOT_STORAGE_DIR   = "/data/storage"
     CLAIMPILOT_CORE_MOCK_URL = "http://core-mock:8000"
     CLAIMPILOT_LANGFUSE_HOST = ""
+    CLAIMPILOT_ENVIRONMENT   = "production" # api and worker refuse to start with dev leftovers
     AWS_REGION               = var.region
   }
 
@@ -77,7 +78,7 @@ locals {
     api = {
       cpu     = 1024, memory = 2048, count = var.ha ? 2 : 1, port = 8000, efs = true
       env     = local.common_env
-      secrets = ["database_password", "redis_url", "pii_vault_key", "session_secret", "demo_password", "intake_token", "mcp_token"]
+      secrets = ["database_password", "redis_url", "pii_vault_key", "session_secret", "intake_token", "mcp_token"]
       scratch = ["/tmp"]
     }
     worker = {

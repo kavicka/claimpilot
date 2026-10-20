@@ -153,7 +153,7 @@ password in the URL, and a worker that exited for good when Redis restarted.
 ## Review UI
 
 `make ui` serves it on :4410. Log in as `handler.demo` or `senior.demo` with the password from
-`CLAIMPILOT_DEMO_PASSWORD`. The queue has tabs per queue with counts; a claim shows its pages with
+`CLAIMPILOT_DEMO_PASSWORD` (dev only; real users come from `uv run claimpilot-admin users add`). The queue has tabs per queue with counts; a claim shows its pages with
 a box over every extracted value, the rule hits, each item with its clauses and the payout
 breakdown, the letters, and the pipeline timeline with latency and tokens per step. Claims in the
 senior and fraud-review queues need a senior handler. A correction made after the assessment

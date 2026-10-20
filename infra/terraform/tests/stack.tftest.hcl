@@ -166,6 +166,21 @@ run "tasks_get_what_they_need_and_no_more" {
   }
 
   assert {
+    condition = alltrue([
+      for s in ["api", "worker"] :
+      contains([for e in jsondecode(aws_ecs_task_definition.service[s].container_definitions)[0].environment : "${e.name}=${e.value}"], "CLAIMPILOT_ENVIRONMENT=production")
+    ])
+    error_message = "The api and the worker run in production mode: they refuse dev leftovers at start."
+  }
+
+  assert {
+    condition = !anytrue(flatten([
+      for s in ["api", "worker"] : [for x in jsondecode(aws_ecs_task_definition.service[s].container_definitions)[0].secrets : x.name == "CLAIMPILOT_DEMO_PASSWORD"]
+    ]))
+    error_message = "No service gets a demo password: production has no demo users."
+  }
+
+  assert {
     condition     = length(jsondecode(aws_ecs_task_definition.service["ui"].container_definitions)[0].secrets) == 0
     error_message = "The ui holds no secrets."
   }

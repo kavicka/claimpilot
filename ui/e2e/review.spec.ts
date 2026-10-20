@@ -74,7 +74,8 @@ test("approving a claim that changed in another tab is refused", async ({ page }
   await senior.post("/api/auth/login", { data: { username: "senior.demo", password: PASSWORD } });
   const claims = await (await senior.get("/api/review/claims")).json();
   const id = claims.find((c: { reference: string }) => c.reference === "CP-2026-900001").id;
-  expect((await senior.post(`/api/review/claims/${id}/actions/escalate`, { data: {} })).ok()).toBe(true);
+  const { version } = await (await senior.get(`/api/review/claims/${id}`)).json();
+  expect((await senior.post(`/api/review/claims/${id}/actions/escalate`, { data: { version } })).ok()).toBe(true);
   await senior.dispose();
   // The handler's page still shows the old claim; its approval must not go through.
   await page.getByRole("button", { name: "Request information" }).click();

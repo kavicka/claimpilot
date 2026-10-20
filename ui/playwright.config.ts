@@ -20,6 +20,7 @@ export const e2eEnv: Record<string, string> = {
   ...inherited,
   CLAIMPILOT_DATABASE_URL: "postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot_e2e",
   CLAIMPILOT_STORAGE_DIR: path.join(os.tmpdir(), "claimpilot-e2e"),
+  CLAIMPILOT_ENVIRONMENT: "dev",
   CLAIMPILOT_DEMO_PASSWORD: "e2e-password",
   CLAIMPILOT_SESSION_SECRET: "e2e-session-secret",
   CLAIMPILOT_INTAKE_TOKEN: "e2e-intake-token",

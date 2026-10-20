@@ -9,6 +9,8 @@ import re
 import uuid
 from collections import defaultdict
 from datetime import UTC, datetime
+from functools import lru_cache
+from pathlib import Path
 from typing import Any
 
 from fastapi import APIRouter, HTTPException, Request
@@ -17,13 +19,15 @@ from sqlalchemy import func, select
 
 from claimpilot_api.auth import User_
 from claimpilot_api.review import (
-    SENIOR_QUEUES,
     ActionBody,
     Session,
+    audit_decision,
     check_version,
     enqueue,
+    require_senior_in_senior_queue,
     vault,
 )
+from claimpilot_core.approval import FourEyes, load_four_eyes
 from claimpilot_core.db.models import (
     AuditLog,
     Correction,
@@ -49,8 +53,23 @@ ACTIONS = {
     "reassess": S.EXTRACTED,  # validation, matching and routing run again on the corrections
     "retry": S.RECEIVED,
 }
-NOT_DECISIONS = {"reassess", "retry"}
 LINE = re.compile(r"lines\[(\d+)\]\.(.+)")
+
+
+@lru_cache
+def _four_eyes(config_dir: Path) -> FourEyes:
+    return load_four_eyes(config_dir)
+
+
+async def correctors(session: Session, invoice_id: uuid.UUID) -> set[uuid.UUID]:
+    """Everyone who corrected a field of this invoice."""
+    rows = await session.scalars(
+        select(Correction.user_id)
+        .join(ExtractedField, ExtractedField.id == Correction.field_id)
+        .where(ExtractedField.case_id == invoice_id)
+        .distinct()
+    )
+    return set(rows.all())
 
 
 def _header_value(fields: list[ExtractedField], name: str) -> str | None:
@@ -276,15 +295,24 @@ async def invoice_action(
     if inv is None:
         raise HTTPException(404, "no such invoice")
     check_version(inv, body.version)
+    require_senior_in_senior_queue(inv, user)  # every action, reassess and retry included
     if action == "escalate":
         if inv.status != S.IN_REVIEW.value:
             raise HTTPException(409, "only invoices in review can be escalated")
         inv.queue = Queue.SENIOR.value
     elif action in ACTIONS:
-        if inv.queue in SENIOR_QUEUES and user.role != "senior" and action not in NOT_DECISIONS:
-            raise HTTPException(403, "invoices in this queue need a senior handler")
-        if action == "approve" and await needs_revalidation(session, inv.id):
-            raise HTTPException(409, "fields were corrected after validation; reassess first")
+        if action == "approve":
+            if await needs_revalidation(session, inv.id):
+                raise HTTPException(409, "fields were corrected after validation; reassess first")
+            rule = _four_eyes(get_settings().config_dir)
+            if rule.applies(inv.total, inv.currency) and user.id in await correctors(
+                session, inv.id
+            ):
+                raise HTTPException(
+                    403,
+                    "you corrected fields of this invoice and its amount needs a second approver; "
+                    "another handler must approve it",
+                )
         try:
             inv.status = invoices.transition(S(inv.status), ACTIONS[action], Actor.HANDLER).value
         except InvalidTransitionError as exc:
@@ -293,9 +321,7 @@ async def invoice_action(
         raise HTTPException(404, f"unknown action {action}")
     if action == "retry":
         inv.error = None
-    session.add(
-        AuditLog(case_id=inv.id, user_id=user.id, action=action, details={"note": body.note})
-    )
+    await audit_decision(session, inv, user, action, body)
     await session.commit()
     if action in ("approve", "reassess", "retry"):
         await enqueue(request, inv.id)

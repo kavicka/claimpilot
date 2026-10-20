@@ -11,12 +11,13 @@ from arq.connections import RedisSettings
 import claimpilot_worker.steps  # noqa: F401 - registers the pipeline steps
 from claimpilot_core.llm.gateway import LLMGateway
 from claimpilot_core.logging import configure_logging
-from claimpilot_core.settings import get_settings
+from claimpilot_core.settings import check_production, get_settings
 from claimpilot_worker.pipeline import MAX_TRIES, advance, sweep
 
 
 async def startup(ctx: dict[str, Any]) -> None:
     configure_logging("INFO")
+    check_production(get_settings(), "worker")  # raises before the first job
     ctx["settings"] = get_settings()
     ctx["gateway"] = LLMGateway(ctx["settings"])
     await ensure_index(ctx["gateway"])

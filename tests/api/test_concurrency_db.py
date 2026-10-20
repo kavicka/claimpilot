@@ -3,13 +3,17 @@
 import asyncio
 
 import pytest
-from apitools import login, make_claim
+from apitools import decide, login, make_claim
 from sqlalchemy.orm.exc import StaleDataError
 
 from claimpilot_core.db import session as db_session
 from claimpilot_core.db.models import Claim
 
 pytestmark = pytest.mark.db
+
+
+async def seen_version(client, cid):
+    return (await client.get(f"/api/review/claims/{cid}")).json()["version"]
 
 
 def approve(client, cid, **body):
@@ -21,7 +25,8 @@ async def test_double_approve_registers_once(client):
 
     cid, _ = await make_claim()
     await login(client)
-    rs = await asyncio.gather(approve(client, cid), approve(client, cid))
+    v = await seen_version(client, cid)
+    rs = await asyncio.gather(approve(client, cid, version=v), approve(client, cid, version=v))
     assert sorted(r.status_code for r in rs) == [200, 409]
     assert app.state.arq.jobs.count(("advance", (str(cid),))) == 1
 
@@ -29,8 +34,9 @@ async def test_double_approve_registers_once(client):
 async def test_correction_and_approval_at_once_cannot_both_win(client):
     cid, fid = await make_claim()
     await login(client)
-    fix = client.patch(f"/api/review/fields/{fid}", json={"value": "Jana Nováková"})
-    rs = await asyncio.gather(fix, approve(client, cid))
+    v = await seen_version(client, cid)
+    fix = client.patch(f"/api/review/fields/{fid}", json={"value": "Jana Nováková", "version": v})
+    rs = await asyncio.gather(fix, approve(client, cid, version=v))
     assert sorted(r.status_code for r in rs) == [200, 409]
     async with db_session.session_scope() as s:
         claim = await s.get(Claim, cid)
@@ -58,7 +64,9 @@ async def test_every_change_bumps_the_version(client):
     cid, fid = await make_claim()
     await login(client)
     v0 = (await client.get(f"/api/review/claims/{cid}")).json()["version"]
-    r = await client.patch(f"/api/review/fields/{fid}", json={"value": "Jana Nováková"})
+    r = await client.patch(
+        f"/api/review/fields/{fid}", json={"value": "Jana Nováková", "version": v0}
+    )
     assert r.json()["claim_version"] == v0 + 1
     r = await client.post(f"/api/review/claims/{cid}/actions/reassess", json={"version": v0 + 1})
     assert r.json()["version"] == v0 + 2
@@ -71,7 +79,7 @@ async def test_worker_and_handler_writes_do_not_overwrite_each_other(client):
     async with db_session.session_scope() as worker:
         stale = await worker.get(Claim, cid)
         await login(client)
-        r = await client.post(f"/api/review/claims/{cid}/actions/escalate", json={})
+        r = await decide(client, f"/api/review/claims/{cid}", "escalate")
         assert r.status_code == 200
         stale.error = "worker note"
         with pytest.raises(StaleDataError):
