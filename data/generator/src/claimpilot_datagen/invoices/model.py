@@ -135,6 +135,10 @@ class Invoice:
     proforma_settled: Decimal = Decimal(0)
     printed_iban: str | None = None  # None: the supplier's IBAN on record
     edge_cases: set[str] = field(default_factory=set)
+    # Print quirks seen on real layouts, set by tests only (the sampler never sets them,
+    # so the committed datasets do not change). TANGRAM: header_note, pale_decimals,
+    # wrapped_names.
+    quirks: frozenset[str] = frozenset()
     duplicate_of: str | None = None  # same file sent again
     # computed by calc
     vat_method: VatMethod = VatMethod.PER_RATE
