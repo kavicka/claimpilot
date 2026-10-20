@@ -11,6 +11,9 @@ dependencies = [
     "arq>=0.26",
 ]
 
+[project.scripts]
+claimpilot-admin = "claimpilot_api.admin:main"
+
 [tool.uv.sources]
 claimpilot-core = { workspace = true }
 

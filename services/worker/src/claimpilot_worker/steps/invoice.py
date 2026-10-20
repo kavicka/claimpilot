@@ -14,12 +14,13 @@ from decimal import Decimal
 from typing import Any
 
 import httpx
-from sqlalchemy import delete, select
+from sqlalchemy import delete, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from claimpilot_core.db.models import DocBlock, DocCell, Document, ExtractedField, Invoice
 from claimpilot_core.domain import CaseKind, ExtractionMethod, PipelineStep
 from claimpilot_core.domain import InvoiceStatus as S
+from claimpilot_core.identifiers import normalize_invoice_number
 from claimpilot_core.invoice_values import parse_number
 from claimpilot_core.llm.gateway import LLMGateway
 from claimpilot_core.pii.vault import Vault
@@ -265,6 +266,7 @@ async def validate_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, 
         )
     invoice.doc_kind = doc.doc_type
     invoice.invoice_number = number
+    invoice.invoice_number_norm = normalize_invoice_number(number)
     invoice.supplier_ico = supplier_ico
     invoice.supplier_vat_id = (header.get("supplier_vat_id") or "").replace(" ", "") or None
     # The senior limit needs an amount: the amount due when the total is not printed.
@@ -286,14 +288,24 @@ def _confidence(row: ExtractedField) -> float:
 async def _duplicate_of(
     session: AsyncSession, invoice: Invoice, supplier_ico: str | None, number: str | None
 ) -> str | None:
-    """The reference of an earlier invoice with the same supplier and number, if any."""
-    if not supplier_ico or not number:
+    """The reference of an earlier invoice with the same supplier and number, if any.
+
+    Numbers are compared normalized ("FA-001" is "fa 001"). Two workers validating the same
+    invoice at once would both see nothing, so the check runs under an advisory lock on
+    (supplier, number) that is held until this transaction commits, with the new number in it:
+    the second worker waits, then sees the first one's invoice."""
+    norm = normalize_invoice_number(number)
+    if not supplier_ico or not norm:
         return None
+    await session.execute(
+        text("SELECT pg_advisory_xact_lock(hashtextextended(:key, 0))"),
+        {"key": f"invoice-duplicate:{supplier_ico}:{norm}"},
+    )
     other = (
         await session.scalars(
             select(Invoice).where(
                 Invoice.supplier_ico == supplier_ico,
-                Invoice.invoice_number == number,
+                Invoice.invoice_number_norm == norm,
                 Invoice.id != invoice.id,
                 Invoice.status != S.FAILED.value,
             )

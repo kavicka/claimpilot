@@ -5,7 +5,7 @@
 resource "aws_secretsmanager_secret" "app" {
   #checkov:skip=CKV2_AWS_57:Rotating the PII vault key means re-encrypting the vault; that is a migration, not a Lambda rotation. docs/deploy.md describes it.
   name        = "${local.name}/app"
-  description = "JSON: PII_VAULT_KEY, SESSION_SECRET, DEMO_PASSWORD, INTAKE_TOKEN, MCP_TOKEN"
+  description = "JSON: PII_VAULT_KEY, SESSION_SECRET, INTAKE_TOKEN, MCP_TOKEN"
   kms_key_id  = aws_kms_key.main.arn
   # Demo stack: destroy deletes the secret at once, so a redeploy can reuse the name. A production
   # stack needs a recovery window: the vault key is the only way to read pii.vault.
@@ -26,7 +26,7 @@ resource "aws_secretsmanager_secret_version" "redis_url" {
 }
 
 locals {
-  app_secret_keys = ["PII_VAULT_KEY", "SESSION_SECRET", "DEMO_PASSWORD", "INTAKE_TOKEN", "MCP_TOKEN"]
+  app_secret_keys = ["PII_VAULT_KEY", "SESSION_SECRET", "INTAKE_TOKEN", "MCP_TOKEN"]
 
   # ECS "secrets" entries, per service. valueFrom "<arn>:<json key>::" picks one key of a JSON secret.
   secret_env = {
@@ -34,7 +34,6 @@ locals {
     redis_url         = { name = "CLAIMPILOT_REDIS_URL", valueFrom = aws_secretsmanager_secret.redis_url.arn }
     pii_vault_key     = { name = "CLAIMPILOT_PII_VAULT_KEY", valueFrom = "${aws_secretsmanager_secret.app.arn}:PII_VAULT_KEY::" }
     session_secret    = { name = "CLAIMPILOT_SESSION_SECRET", valueFrom = "${aws_secretsmanager_secret.app.arn}:SESSION_SECRET::" }
-    demo_password     = { name = "CLAIMPILOT_DEMO_PASSWORD", valueFrom = "${aws_secretsmanager_secret.app.arn}:DEMO_PASSWORD::" }
     intake_token      = { name = "CLAIMPILOT_INTAKE_TOKEN", valueFrom = "${aws_secretsmanager_secret.app.arn}:INTAKE_TOKEN::" }
     mcp_token         = { name = "CLAIMPILOT_MCP_TOKEN", valueFrom = "${aws_secretsmanager_secret.app.arn}:MCP_TOKEN::" }
   }

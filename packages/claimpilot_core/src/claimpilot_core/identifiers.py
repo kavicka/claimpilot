@@ -142,3 +142,9 @@ def repair_iban_ocr(text: str) -> str:
     if compact[:2] not in NUMERIC_BBAN:
         return compact
     return compact[:2] + compact[2:].translate(str.maketrans("OoIlSB", "001158"))
+
+
+def normalize_invoice_number(value: str | None) -> str | None:
+    """The form in which two invoice numbers are compared: upper case, letters and digits only,
+    so "FA-001", "fa 001" and "FA/001" are one number. None when nothing is left."""
+    return "".join(ch for ch in (value or "").upper() if ch.isalnum()) or None

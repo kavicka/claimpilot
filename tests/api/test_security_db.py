@@ -19,24 +19,39 @@ async def me(client, cookie):
     return await client.get("/api/auth/me")
 
 
-async def test_a_cookie_with_a_changed_role_is_rejected(client):
+async def test_a_cookie_with_another_user_id_is_rejected(client):
     await login(client, "handler.demo")
     raw = base64.urlsafe_b64decode(client.cookies.get(auth.COOKIE)).decode()
-    uid, _role, exp, mac = raw.split(":")
-    forged = base64.urlsafe_b64encode(f"{uid}:senior:{exp}:{mac}".encode()).decode()
+    _uid, issued, mac = raw.split(":")
+    forged = base64.urlsafe_b64encode(f"{uuid.uuid4()}:{issued}:{mac}".encode()).decode()
     assert (await me(client, forged)).status_code == 401
 
 
-async def test_an_expired_cookie_is_rejected(client, monkeypatch):
-    monkeypatch.setattr(time, "time", lambda: 1_000_000.0)  # signed long ago
-    old = auth.sign(uuid.uuid4(), "senior")
-    monkeypatch.undo()
+async def test_a_cookie_from_the_future_is_rejected(client):
+    assert (await me(client, auth.sign(uuid.uuid4(), int(time.time()) + 3600))).status_code == 401
+
+
+async def test_a_valid_cookie_of_a_user_that_does_not_exist_is_rejected(client):
+    assert (await me(client, auth.sign(uuid.uuid4()))).status_code == 401
+
+
+async def real_user_id(client) -> uuid.UUID:
+    await login(client, "handler.demo")
+    return auth.unsign(client.cookies.get(auth.COOKIE))[0]
+
+
+async def test_an_expired_cookie_is_rejected(client):
+    uid = await real_user_id(client)
+    fresh = auth.sign(uid, int(time.time()) - auth.TTL_SECONDS + 60)
+    assert (await me(client, fresh)).status_code == 200  # a user that exists passes
+    old = auth.sign(uid, int(time.time()) - auth.TTL_SECONDS - 60)
     assert (await me(client, old)).status_code == 401
 
 
 async def test_a_cookie_signed_with_another_secret_is_rejected(client, monkeypatch):
+    uid = await real_user_id(client)
     monkeypatch.setenv("CLAIMPILOT_SESSION_SECRET", "attacker-secret")
-    forged = auth.sign(uuid.uuid4(), "senior")
+    forged = auth.sign(uid)
     monkeypatch.setenv("CLAIMPILOT_SESSION_SECRET", "server-secret")
     assert (await me(client, forged)).status_code == 401
 

@@ -24,7 +24,6 @@ from cryptography.fernet import Fernet
 print(json.dumps({
     "PII_VAULT_KEY": Fernet.generate_key().decode(),
     "SESSION_SECRET": secrets.token_urlsafe(48),
-    "DEMO_PASSWORD": secrets.token_urlsafe(18),
     "INTAKE_TOKEN": secrets.token_urlsafe(32),
     "MCP_TOKEN": secrets.token_urlsafe(32),
 }), end="")

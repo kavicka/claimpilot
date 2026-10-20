@@ -53,8 +53,7 @@ make deploy
 1. Creates the state bucket once per account (`infra/terraform/bootstrap`, KMS-encrypted,
    versioned, S3 native locking) and writes `infra/terraform/backend.hcl`.
 2. Creates the image repositories and the empty application secret.
-3. Generates the application secrets (PII vault key, session secret, demo password, intake and
-   MCP tokens) and pipes them into Secrets Manager. They do not pass through Terraform, the
+3. Generates the application secrets (PII vault key, session secret, intake and MCP tokens) and pipes them into Secrets Manager. They do not pass through Terraform, the
    terminal or process arguments. An existing value is left alone.
 4. Builds the five images for linux/arm64 and pushes them, skipping tags already in ECR. The
    worker image loads every model once at build time (`claimpilot-prefetch`) and checks the loads
@@ -66,12 +65,29 @@ make deploy
 On the worker's first start it builds the coverage index from the policy terms with Cohere
 embeddings.
 
-It prints the URL and the command that reads the demo password:
+It prints the URL. The stack runs with `CLAIMPILOT_ENVIRONMENT=production`: the api and the worker
+refuse to start with a demo password, an empty vault key, an empty session secret or intake token
+(api), or the default database password, and the login cookie is `Secure` and `SameSite=strict`.
+There are no demo users.
+
+### Users
+
+Create the first user with the admin CLI, which ships in the api image, as a one-off task on the
+api task definition. The password is read from `CLAIMPILOT_ADMIN_NEW_PASSWORD`, never from an
+argument. Every change lands in the audit log.
 
 ```bash
-aws secretsmanager get-secret-value --region eu-central-1 --secret-id <app_secret_arn> \
-  --query SecretString --output text | jq -r .DEMO_PASSWORD
+aws ecs run-task --region eu-central-1 --cluster <cluster> --launch-type FARGATE \
+  --task-definition <api task definition> --network-configuration <same as the api service> \
+  --overrides '{"containerOverrides":[{"name":"api",
+    "command":["claimpilot-admin","users","add","anna.novakova","--name","Anna Nováková","--role","senior"],
+    "environment":[{"name":"CLAIMPILOT_ADMIN_NEW_PASSWORD","value":"<12+ characters>"}]}]}'
 ```
+
+The override is visible in the ECS console and CloudTrail, so treat that password as temporary and
+replace it the same way (`users set-password`). Other commands: `users list`, `users disable`,
+`users enable`, `users set-role`. A disabled user and a changed role apply on the next request:
+the session cookie only names the user.
 
 Upload demo claims the way the local demo does, with the deployed URL and the intake token from
 the same secret:

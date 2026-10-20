@@ -19,3 +19,10 @@ matching:
 # Routing (stage 3.7): above this amount a senior handler decides.
 routing:
   senior_amount: "20000.00"
+
+# Approval (stage E1): at or above this amount, per currency, the approver must be someone who did
+# not correct a field of the invoice (four eyes). No limit for a currency means always four eyes.
+approval:
+  four_eyes_amount:
+    EUR: "5000"
+    CZK: "125000"

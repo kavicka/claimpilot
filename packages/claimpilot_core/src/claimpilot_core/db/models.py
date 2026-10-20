@@ -24,6 +24,7 @@ from sqlalchemy import (
     String,
     Text,
     func,
+    true,
 )
 from sqlalchemy.dialects.postgresql import JSONB, TSVECTOR, UUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
@@ -62,6 +63,8 @@ class User(TimestampMixin, Base):
     display_name: Mapped[str] = mapped_column(String(128))
     role: Mapped[str] = mapped_column(String(16))  # handler | senior
     password_hash: Mapped[str] = mapped_column(String(256))
+    # A disabled user is refused on the next request: the session cookie only names the user.
+    active: Mapped[bool] = mapped_column(Boolean, default=True, server_default=true())
 
 
 class Case(TimestampMixin, Base):
@@ -128,6 +131,9 @@ class Invoice(Case):
     # What validation and matching key on, copied from the extracted fields (normalized).
     doc_kind: Mapped[str | None] = mapped_column(String(16))  # invoice | credit_note | proforma
     invoice_number: Mapped[str | None] = mapped_column(String(40), index=True)
+    # Upper case, letters and digits only: what duplicate detection compares (not unique: a
+    # duplicate is stored and routed, never refused by a constraint).
+    invoice_number_norm: Mapped[str | None] = mapped_column(String(40))
     supplier_ico: Mapped[str | None] = mapped_column(String(16), index=True)
     supplier_vat_id: Mapped[str | None] = mapped_column(String(20))
     total: Mapped[Decimal | None] = mapped_column(Numeric(14, 2))
@@ -141,6 +147,10 @@ class Invoice(Case):
     # The ERP's id once the UBL document was accepted; the last export attempt and its errors
     erp_id: Mapped[str | None] = mapped_column(String(32))
     export: Mapped[dict[str, Any] | None] = mapped_column(JSONB)
+
+    __table_args__ = (
+        Index("ix_invoices_supplier_number_norm", "supplier_ico", "invoice_number_norm"),
+    )
 
     __mapper_args__ = {"polymorphic_identity": CaseKind.INVOICE.value}  # noqa: RUF012
 
