@@ -18,8 +18,9 @@ const inherited = Object.fromEntries(
 
 export const e2eEnv: Record<string, string> = {
   ...inherited,
-  CLAIMPILOT_DATABASE_URL: "postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot_e2e",
-  CLAIMPILOT_STORAGE_DIR: path.join(os.tmpdir(), "claimpilot-e2e"),
+  // Overridable so worktrees on other branches (other migrations) can each use their own database.
+  CLAIMPILOT_DATABASE_URL: process.env.E2E_DATABASE_URL ?? "postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot_e2e",
+  CLAIMPILOT_STORAGE_DIR: process.env.E2E_STORAGE_DIR ?? path.join(os.tmpdir(), "claimpilot-e2e"),
   CLAIMPILOT_ENVIRONMENT: "dev",
   CLAIMPILOT_DEMO_PASSWORD: "e2e-password",
   CLAIMPILOT_SESSION_SECRET: "e2e-session-secret",

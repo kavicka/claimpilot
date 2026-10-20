@@ -49,6 +49,10 @@ test("a correction blocks approval until the claim is reassessed", async ({ page
   await page.getByLabel("New value for Total").fill("297,50");
   await page.getByRole("button", { name: "Save" }).click();
   await expect(page.getByText("Field corrected")).toBeVisible();
+  // The saved row says so in place: green tint (data-flash) and the Corrected tag pops in.
+  const row = page.locator("[id^=field-]").filter({ has: page.getByRole("button", { name: "Total", exact: true }) });
+  await expect(row).toHaveAttribute("data-flash", /^[ab]$/);
+  await expect(row.locator("[data-pop]")).toContainText("Corrected");
   await expect(page.getByRole("button", { name: "Approve" })).toBeDisabled();
   await page.getByRole("button", { name: "Reassess" }).click();
   await page.getByRole("dialog").getByRole("button", { name: "Reassess" }).click();
@@ -81,6 +85,8 @@ test("approving a claim that changed in another tab is refused", async ({ page }
   await page.getByRole("button", { name: "Request information" }).click();
   await page.getByRole("dialog").getByRole("button", { name: "Request information" }).click();
   await expect(page.getByRole("dialog").getByRole("alert")).toContainText(/changed since you opened it/);
+  // The refusal shakes the message once, next to the text that explains it.
+  await expect(page.getByRole("dialog").locator("[data-shake]")).toHaveAttribute("data-shake", /^[ab]$/);
 });
 
 test("approve submits and the claim leaves review", async ({ page }) => {
@@ -90,6 +96,8 @@ test("approve submits and the claim leaves review", async ({ page }) => {
   await expect(page.getByRole("dialog")).toContainText("€229.50");
   await page.getByRole("dialog").getByRole("button", { name: "Approve" }).click();
   await expect(page.getByText(/CP-2026-900001 approved/)).toBeVisible();
+  // The dialog's button shows a check for a moment, then the dialog leaves and the header updates.
+  await expect(page.getByRole("dialog")).toBeHidden();
   await expect(page.getByRole("button", { name: "Approve" })).toBeDisabled();
 });
 

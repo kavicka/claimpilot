@@ -107,7 +107,7 @@ export function InvoicePages({
               className="disabled:opacity-40"
             />
           </Tooltip>
-          <span className="cp-text-label tnum w-[44px] text-center text-ink-cell">{Math.round(zoom * 100)} %</span>
+          <span className="cp-text-label tnum w-[2.75rem] text-center text-ink-cell">{Math.round(zoom * 100)} %</span>
           <Tooltip content="Zoom in" side="bottom">
             <IconButton
               variant="toolbar"
@@ -143,7 +143,7 @@ export function InvoicePages({
               const n = i + 1;
               const here = marks.filter((m) => m.page === n);
               return (
-                <div key={src} className="w-full max-w-[900px]" style={zoom > 1 ? { maxWidth: "none" } : undefined}>
+                <div key={src} className="w-full max-w-[56.25rem]" style={zoom > 1 ? { maxWidth: "none" } : undefined}>
                   <p className="cp-text-meta mb-6 text-ink-subtle">
                     Page {n} of {doc.pages.length}
                   </p>

@@ -1,27 +1,61 @@
 "use client";
 
-import { Alert, BarChart, ChartCard, DataTable, EmptyState, IconButton, Spinner, Tag, Tooltip, type BarDatum } from "@claimpilot/ui";
+import {
+  Alert,
+  BarChart,
+  ChartCard,
+  DataTable,
+  Donut,
+  EmptyState,
+  IconButton,
+  KpiCard,
+  SegmentBar,
+  Spinner,
+  Tag,
+  Tooltip,
+  type BarDatum,
+  type MetricTone,
+  type Segment,
+} from "@claimpilot/ui";
 import { useRouter } from "next/navigation";
 
 import { DataPage } from "@/components/shell/page";
 import { api } from "@/lib/api";
-import { QUEUES, STATUS_ORDER, queueEntry, statusEntry } from "@/lib/enums";
+import { DECIDED_STATUSES, PIPELINE_STATUSES, QUEUES, STATUS_ORDER, queueEntry, statusEntry } from "@/lib/enums";
 import { firstLine, int, percent, seconds } from "@/lib/format";
 import type { Ops } from "@/lib/types";
 import { useFetch } from "@/lib/use-fetch";
 
-/** One figure in a hairline card, in the columns-card style (DF 2:823). */
+/** One figure as a KPI card. No delta or trend: the api reports current totals only. */
 function Stat({ label, value, hint, index }: { label: string; value: string; hint?: string; index: number }) {
   return (
-    <section
-      className="flex animate-rise flex-col gap-8 rounded-(--radius-12) bg-surface px-16 py-12 hairline"
-      style={{ animationDelay: `${index * 40}ms` }}
-    >
-      <h2 className="cp-text-tab text-ink">{label}</h2>
-      <p className="cp-text-stat-xl tnum text-ink">{value}</p>
-      <p className="cp-text-meta text-ink-subtle">{hint ?? " "}</p>
-    </section>
+    <div className="animate-rise" style={{ animationDelay: `${index * 40}ms` }}>
+      <KpiCard title={label} value={value} comparison={hint ?? " "} className="h-full" />
+    </div>
   );
+}
+
+const QUEUE_TONE: Record<string, MetricTone> = { fast_track: "success", standard: "accent", senior: "purple", fraud_review: "danger" };
+
+/** Claims per queue as one bar that adds up to all routed claims. */
+function queueSegments(ops: Ops): Segment[] {
+  const keys = [...QUEUES, ...Object.keys(ops.by_queue).filter((k) => !(QUEUES as readonly string[]).includes(k))];
+  return keys.map((k) => {
+    const n = ops.by_queue[k] ?? 0;
+    return { key: k, label: queueEntry(k)?.label ?? "Not routed", value: n, display: int(n), detail: n === 1 ? "claim" : "claims", tone: QUEUE_TONE[k] ?? "neutral" };
+  });
+}
+
+/** Statuses folded into the phases a handler thinks in. */
+function phaseSegments(ops: Ops): Segment[] {
+  const sum = (match: (s: string) => boolean) => Object.entries(ops.by_status).reduce((n, [s, c]) => n + (match(s) ? c : 0), 0);
+  return [
+    { key: "pipeline", label: "In pipeline", value: sum((s) => (PIPELINE_STATUSES as string[]).includes(s)), tone: "soft" },
+    { key: "review", label: "In review", value: sum((s) => s === "IN_REVIEW"), tone: "accent" },
+    { key: "info", label: "Needs info", value: sum((s) => s === "NEEDS_INFO"), tone: "warning" },
+    { key: "decided", label: "Decided", value: sum((s) => (DECIDED_STATUSES as string[]).includes(s)), tone: "success" },
+    { key: "failed", label: "Failed", value: sum((s) => s === "FAILED"), tone: "danger" },
+  ];
 }
 
 /** Tick values for a count axis: 0 and up to four steps of 1, 2 or 5 × 10^n. */
@@ -50,10 +84,6 @@ function Bars({ data }: { data: BarDatum[] }) {
   );
 }
 
-function queueRows(ops: Ops): BarDatum[] {
-  const keys = [...QUEUES, ...Object.keys(ops.by_queue).filter((k) => !(QUEUES as readonly string[]).includes(k))];
-  return keys.map((k, i) => ({ label: queueEntry(k)?.label ?? "Not routed", value: ops.by_queue[k] ?? 0, color: ((i % 3) + 1) as 1 | 2 | 3 }));
-}
 
 function statusRows(ops: Ops): BarDatum[] {
   const known = STATUS_ORDER.filter((s) => ops.by_status[s]);
@@ -104,10 +134,16 @@ export function OpsView() {
             <Stat label="Tokens per claim" value={int(ops.tokens_per_claim)} hint="Input and output" index={4} />
           </div>
 
-          <div className="grid grid-cols-2 gap-12">
-            <ChartCard title="Claims per queue">
-              <Bars data={queueRows(ops)} />
+          <div className="grid grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] gap-12">
+            <ChartCard title="Claims per queue" icon="route">
+              <SegmentBar label="Claims per queue" segments={queueSegments(ops)} />
             </ChartCard>
+            <ChartCard title="Claims by phase" icon="workflow">
+              <Donut label="Claims by phase" center={{ value: int(ops.claims), label: ops.claims === 1 ? "claim" : "claims" }} segments={phaseSegments(ops)} />
+            </ChartCard>
+          </div>
+
+          <div className="grid grid-cols-1 gap-12">
             <ChartCard title="Claims per status">
               {Object.keys(ops.by_status).length === 0 ? (
                 <p className="cp-text-cell text-ink-subtle">No claims yet.</p>

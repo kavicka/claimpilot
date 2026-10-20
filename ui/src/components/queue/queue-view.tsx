@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Checkbox, EmptyState, IconButton, SearchField, Spinner, TableToolbar, Tabs, Tooltip, type TabItem } from "@claimpilot/ui";
+import { Alert, Checkbox, EmptyState, IconButton, SearchField, SegmentedControl, Spinner, TableToolbar, Tabs, Tooltip, type TabItem } from "@claimpilot/ui";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 
@@ -9,7 +9,9 @@ import { api } from "@/lib/api";
 import { DECIDED_STATUSES, PIPELINE_STATUSES } from "@/lib/enums";
 import type { ClaimRow } from "@/lib/types";
 import { useFetch } from "@/lib/use-fetch";
+import { useFreshRows } from "@/lib/use-fresh-rows";
 
+import { QueueBoard } from "./queue-board";
 import { QueueTable } from "./queue-table";
 
 type TabKey = "fast_track" | "standard" | "senior" | "fraud_review" | "pipeline" | "needs_info" | "failed";
@@ -58,11 +60,21 @@ export function QueueView() {
   const [withDecided, setWithDecided] = useState(false);
 
   const rows = useMemo(() => data ?? [], [data]);
+  const fresh = useFreshRows(data, (r) => `${r.id}:${r.status}`);
   const counts = useMemo(() => {
     const c = Object.fromEntries(ORDER.map((t) => [t, 0])) as Record<TabKey, number>;
     for (const r of rows) for (const t of ORDER) if (inTab(r, t, false)) c[t] += 1;
     return c;
   }, [rows]);
+
+  // Table (buckets as tabs) or Board (one column per queue); kept in the URL like the tab.
+  const view: "table" | "board" = params.get("view") === "board" ? "board" : "table";
+  function selectView(next: "table" | "board") {
+    const q = new URLSearchParams(params.toString());
+    if (next === "board") q.set("view", "board");
+    else q.delete("view");
+    router.replace(`${pathname}?${q.toString()}`, { scroll: false });
+  }
 
   const requested = params.get("tab");
   const tab: TabKey = isTab(requested) ? requested : (ORDER.find((t) => counts[t] > 0) ?? "fast_track");
@@ -131,12 +143,21 @@ export function QueueView() {
       <TableToolbar
         actions={
           <>
-            {QUEUE_TABS.has(tab) ? (
+            <SegmentedControl
+              aria-label="View"
+              value={view}
+              onValueChange={selectView}
+              options={[
+                { value: "table", label: "Table", icon: "rows" },
+                { value: "board", label: "Board", icon: "column-insert" },
+              ]}
+            />
+            {view === "table" && QUEUE_TABS.has(tab) ? (
               <Checkbox variant="table" checked={withDecided} onCheckedChange={setWithDecided}>
                 Show decided
               </Checkbox>
             ) : null}
-            <div className="w-[220px]">
+            <div className="w-[13.75rem]">
               <SearchField
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -147,7 +168,7 @@ export function QueueView() {
           </>
         }
       >
-        <Tabs tabs={tabs} value={tab} onValueChange={selectTab} label="Queues" />
+        {view === "table" ? <Tabs tabs={tabs} value={tab} onValueChange={selectTab} label="Queues" /> : null}
       </TableToolbar>
 
       {error ? (
@@ -156,7 +177,18 @@ export function QueueView() {
         </Alert>
       ) : null}
 
-      <QueueTable rows={loading ? [] : visible} failed={tab === "failed"} empty={empty} />
+      {view === "board" ? (
+        loading ? (
+          empty
+        ) : (
+          <QueueBoard
+            rows={rows.filter((r) => !needle || r.reference.toLowerCase().includes(needle) || (r.insured ?? "").toLowerCase().includes(needle))}
+            isNew={(r) => fresh.has(`${r.id}:${r.status}`)}
+          />
+        )
+      ) : (
+        <QueueTable rows={loading ? [] : visible} failed={tab === "failed"} empty={empty} isNew={(r) => fresh.has(`${r.id}:${r.status}`)} />
+      )}
 
       <p className="cp-text-meta text-ink-subtle" hidden={!data}>
         Queue tabs list claims in review. Approved, submitted and rejected claims appear with Show decided.

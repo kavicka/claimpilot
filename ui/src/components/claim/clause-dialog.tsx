@@ -12,7 +12,7 @@ export function ClauseDialog({ clauseId, onClose }: { clauseId: string | null; o
     <Dialog
       open={clauseId !== null}
       onClose={onClose}
-      className="w-[min(600px,calc(100vw-32px))]"
+      className="w-[min(37.5rem,calc(100vw-2rem))]"
       title={
         data ? (
           <span className="flex items-baseline gap-8">

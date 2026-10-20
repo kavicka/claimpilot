@@ -1,11 +1,12 @@
 "use client";
 
-import { Alert, Button, Dialog, Textarea, useToast } from "@claimpilot/ui";
+import { Alert, Button, Dialog, Reveal, Textarea, useReplay, useToast } from "@claimpilot/ui";
 import { useState } from "react";
 
 import { ApiError, api, errorMessage } from "@/lib/api";
 import { statusEntry } from "@/lib/enums";
 import { eur } from "@/lib/format";
+import { DONE_MS, reducedMotion } from "@/lib/motion";
 import type { ClaimAction, ClaimDetail } from "@/lib/types";
 
 const COPY: Record<
@@ -73,7 +74,7 @@ export function CaseActionDialog({
   reference,
   action,
   consequence: description,
-  done,
+  done: doneCopy,
   run,
   onClose,
   onDone,
@@ -91,7 +92,10 @@ export function CaseActionDialog({
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [problem, setProblem] = useState<string | null>(null);
+  const [done, setDone] = useState(false);
+  const [refused, setRefused] = useState(0);
   const [shownFor, setShownFor] = useState<ClaimAction | null>(null);
+  const shake = useReplay(refused);
 
   // Fresh form each time the dialog opens for an action.
   if (action !== shownFor) {
@@ -99,6 +103,7 @@ export function CaseActionDialog({
     setNote("");
     setProblem(null);
     setBusy(false);
+    setDone(false);
   }
 
   const copy = action ? COPY[action] : null;
@@ -110,12 +115,16 @@ export function CaseActionDialog({
     try {
       const res = await run(action, note);
       const s = statusEntry(res.status).label;
-      notify("success", `${reference} ${done?.[action] ?? COPY[action].done}`, `Status: ${s}.`);
+      notify("success", `${reference} ${doneCopy?.[action] ?? COPY[action].done}`, `Status: ${s}.`);
+      // The confirm button turns into a check for a moment before the dialog leaves: the decision went through.
+      setDone(true);
+      await new Promise((r) => window.setTimeout(r, reducedMotion() ? 0 : DONE_MS));
       onDone();
     } catch (err) {
       const msg = errorMessage(err);
       const prefix = err instanceof ApiError && (err.status === 403 || err.status === 409) ? `${err.status}: ` : "";
       setProblem(`${prefix}${msg.charAt(0).toUpperCase()}${msg.slice(1)}`);
+      setRefused((n) => n + 1);
       setBusy(false);
     }
   }
@@ -132,7 +141,7 @@ export function CaseActionDialog({
             <Button variant="ghost" onClick={onClose} disabled={busy}>
               Cancel
             </Button>
-            <Button variant={copy.variant} onClick={confirm} loading={busy}>
+            <Button variant={copy.variant} onClick={confirm} loading={busy && !done} done={done} disabled={done}>
               {copy.confirm}
             </Button>
           </>
@@ -148,11 +157,14 @@ export function CaseActionDialog({
           rows={3}
           placeholder="Saved in the audit log"
         />
-        {problem ? (
-          <Alert tone="danger" className="items-start">
-            {problem}
-          </Alert>
-        ) : null}
+        {/* -mt cancels the flex gap while closed; the padding inside brings it back when open. */}
+        <Reveal open={problem !== null} className="-mt-12">
+          <div data-shake={shake} className="pt-12">
+            <Alert tone="danger" className="items-start">
+              {problem}
+            </Alert>
+          </div>
+        </Reveal>
       </div>
     </Dialog>
   );

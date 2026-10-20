@@ -1,6 +1,6 @@
 "use client";
 
-import { EmptyState, Icon, IconButton, Tabs, Tooltip, useToast, type TabItem } from "@claimpilot/ui";
+import { EmptyState, Icon, IconButton, RecommendationCard, Tabs, Tooltip, useToast, type TabItem } from "@claimpilot/ui";
 import { useState } from "react";
 
 import { SUMMARY_KIND, statusEntry } from "@/lib/enums";
@@ -39,6 +39,8 @@ export function TextsPanel({ summaries, status }: { summaries: Summary[]; status
   });
 
   const summary = summaries.find((s) => s.kind === kind);
+  const letter = summaries.find((s) => s.kind === "client_letter" && s.text);
+  const showReco = status === "IN_REVIEW" && letter && kind !== "client_letter";
 
   async function copy(text: string) {
     try {
@@ -51,6 +53,22 @@ export function TextsPanel({ summaries, status }: { summaries: Summary[]; status
 
   return (
     <div className="flex flex-col gap-16 px-20 py-12">
+      {showReco ? (
+        <RecommendationCard
+          label="Before you approve"
+          title="Read the client letter"
+          reason={
+            letter.fact_violations.length > 0
+              ? `The fact check flagged ${letter.fact_violations.length} ${letter.fact_violations.length === 1 ? "statement" : "statements"} in it.`
+              : "It goes to the client with the decision. The fact check found nothing to fix."
+          }
+          draft={{
+            title: `${SUMMARY_KIND.client_letter} (${letter.language.toUpperCase()})`,
+            detail: (letter.text ?? "").split("\n", 1)[0]?.slice(0, 90),
+            review: { label: "Review", onClick: () => setPicked("client_letter") },
+          }}
+        />
+      ) : null}
       <Tabs variant="line" tabs={tabs} value={kind} onValueChange={setPicked} label="Texts" />
       {!summary || !summary.text ? (
         <p className="cp-text-cell py-24 text-ink-subtle">No {SUMMARY_KIND[kind]!.toLowerCase()} for this claim.</p>
