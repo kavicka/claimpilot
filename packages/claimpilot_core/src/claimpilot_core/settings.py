@@ -64,8 +64,8 @@ class Settings(BaseSettings):
     # Worker: time budget of one pipeline step, in seconds, by "kind.step" ("invoice.extract").
     # A step over its budget moves the case to FAILED. arq's job_timeout is derived from the
     # largest budget, so the budget always fires first. 840 s sits below the old 900 s job limit.
-    step_timeout_s: int = 840
-    step_timeouts: dict[str, int] = Field(default_factory=lambda: {"invoice.extract": 3600})
+    step_timeout_s: float = 840
+    step_timeouts: dict[str, float] = Field(default_factory=lambda: {"invoice.extract": 3600})
     # /ready: the worker counts as alive while its arq heartbeat is younger than this.
     ready_worker_max_age_s: int = 120
     # OCR for scans and photos: "docling" (RapidOCR or Apple Vision, inside the worker) or
@@ -99,12 +99,12 @@ def get_settings() -> Settings:
     return Settings()
 
 
-def step_budget(settings: Settings, kind: str, step: str) -> int:
+def step_budget(settings: Settings, kind: str, step: str) -> float:
     """Seconds one pipeline step of this kind may run."""
     return settings.step_timeouts.get(f"{kind}.{step}", settings.step_timeout_s)
 
 
-def longest_step_budget(settings: Settings) -> int:
+def longest_step_budget(settings: Settings) -> float:
     return max([settings.step_timeout_s, *settings.step_timeouts.values()])
 
 

@@ -108,4 +108,4 @@ class WorkerSettings:
     # first and moves the case to FAILED. This limit only catches what escapes the budget: it
     # sits above the longest one. A job lost with a crashed worker is retried after it, or found
     # by the sweep.
-    job_timeout = longest_step_budget(get_settings()) + 120
+    job_timeout = int(longest_step_budget(get_settings())) + 120

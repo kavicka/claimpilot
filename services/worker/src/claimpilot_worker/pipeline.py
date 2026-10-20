@@ -6,6 +6,7 @@ keeps failing is retried up to MAX_TRIES times by arq; after that the case moves
 shows up in the dead-letter list in the UI.
 """
 
+import asyncio
 import time
 import uuid
 from collections.abc import Awaitable, Callable
@@ -15,17 +16,25 @@ from typing import Any
 
 import structlog
 from arq import Retry
+from sqlalchemy import func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from claimpilot_core.db.models import Case, PipelineStepRun
+from claimpilot_core.db.models import AuditLog, Case, PipelineStepRun
 from claimpilot_core.db.session import session_scope
 from claimpilot_core.domain import CaseKind, ClaimStatus, InvoiceStatus, PipelineStep
 from claimpilot_core.llm.gateway import collect_calls
 from claimpilot_core.observability import get_tracer
+from claimpilot_core.settings import get_settings, step_budget
 from claimpilot_core.state_machine import Actor, for_kind
 
 log = structlog.get_logger(__name__)
 MAX_TRIES = 3
+
+
+class StepTimeoutError(Exception):
+    """A step ran past its time budget (settings.step_timeouts). Retrying a step that took an hour
+    only costs another hour, so the case goes to FAILED and a person decides."""
+
 
 # A step takes the case of its kind (Claim, later Invoice) and returns the next status.
 StepFn = Callable[[AsyncSession, Any, dict[str, Any]], Awaitable[StrEnum]]
@@ -84,7 +93,15 @@ async def advance(ctx: dict[str, Any], case_id: str) -> str:
                 collect_calls() as calls,
             ):
                 run.trace_id = trace_id
-                new_status = await fn(session, case, ctx)
+                budget = step_budget(ctx.get("settings") or get_settings(), kind.value, step.value)
+                try:
+                    async with asyncio.timeout(budget) as scope:
+                        new_status = await fn(session, case, ctx)
+                except TimeoutError:
+                    if not scope.expired():
+                        raise  # a timeout of the step's own (a socket), not the budget
+                    msg = f"{kind.value} {step.value} exceeded its time budget of {budget:g} s"
+                    raise StepTimeoutError(msg) from None
             case.status = for_kind(kind).transition(status, new_status, Actor.SYSTEM).value
             case.error = None
             run.status = "ok"
@@ -132,7 +149,14 @@ async def _fail(
             )
         )
         case = await session.get(Case, cid)
-        if case is not None and tries >= MAX_TRIES:
+        await session.flush()
+        # arq counts tries per job; a sweep or a restart starts a new job, so count the runs.
+        final = (
+            tries >= MAX_TRIES
+            or isinstance(exc, StepTimeoutError)
+            or await failed_runs(session, cid, step.value) >= MAX_TRIES
+        )
+        if case is not None and final:
             kind = CaseKind(case.kind)
             status = STATUSES[kind]
             case.status = (
@@ -146,7 +170,7 @@ async def _fail(
         attempt=tries,
         error=detail,
     )
-    if tries < MAX_TRIES:
+    if not final:
         # A model server or database that is down needs minutes, not seconds, to come back.
         raise Retry(defer=tries * (60 if transient(exc) else 5)) from None  # no cause: arq logs it
     return "FAILED"
@@ -169,19 +193,43 @@ ACTIVE: dict[CaseKind, list[str]] = {
 }
 
 
+async def failed_runs(session: AsyncSession, case_id: uuid.UUID, step: str) -> int:
+    """Error runs of one step since a person last acted on the case (a retry or a reassess
+    starts the count again)."""
+    last_action = (
+        select(func.max(AuditLog.created_at))
+        .where(AuditLog.case_id == case_id, AuditLog.user_id.is_not(None))
+        .scalar_subquery()
+    )
+    count = await session.scalar(
+        select(func.count())
+        .select_from(PipelineStepRun)
+        .where(
+            PipelineStepRun.case_id == case_id,
+            PipelineStepRun.step == step,
+            PipelineStepRun.status == "error",
+            or_(last_action.is_(None), PipelineStepRun.started_at > last_action),
+        )
+    )
+    return count or 0
+
+
 async def sweep(ctx: dict[str, Any], *, older_than_minutes: int = 20) -> int:
     """Re-enqueue cases that stopped moving: a job lost when Redis restarted, or an enqueue that
-    failed after the api had committed. The threshold is above the job timeout (15 min), so a
-    step that is still running is not picked up; the job id makes one sweep per case version."""
+    failed after the api had committed. A case is left alone while its step may still be running
+    (the step's time budget plus five minutes, never less than `older_than_minutes`); the job id
+    makes one sweep per case version. A case whose step already failed MAX_TRIES times goes to
+    FAILED instead: with one worker slot, a poison case would block the queue every cycle."""
     from datetime import timedelta
 
-    from sqlalchemy import or_, select
-
-    cutoff = datetime.now(UTC) - timedelta(minutes=older_than_minutes)
+    settings = ctx.get("settings") or get_settings()
+    now = datetime.now(UTC)
+    cutoff = now - timedelta(minutes=older_than_minutes)
+    resumable: list[tuple[uuid.UUID, int]] = []
     async with session_scope() as session:
         rows = (
             await session.execute(
-                select(Case.id, Case.version).where(
+                select(Case.id, Case.version, Case.kind, Case.status, Case.updated_at).where(
                     or_(
                         *(
                             (Case.kind == kind.value) & Case.status.in_(statuses)
@@ -192,8 +240,27 @@ async def sweep(ctx: dict[str, Any], *, older_than_minutes: int = 20) -> int:
                 )
             )
         ).all()
-    for cid, version in rows:
+        for cid, version, kind_name, status, updated_at in rows:
+            kind = CaseKind(kind_name)
+            step = STEPS.get((kind, status), (None, None))[0]
+            budget = step_budget(settings, kind_name, step.value) if step else 0
+            if updated_at > now - timedelta(seconds=budget + 300):
+                continue  # the step may still be running
+            if step is not None and await failed_runs(session, cid, step.value) >= MAX_TRIES:
+                case = await session.get(Case, cid)
+                if case is not None:
+                    machine = STATUSES[kind]
+                    case.status = (
+                        for_kind(kind)
+                        .transition(machine(case.status), machine("FAILED"), Actor.SYSTEM)
+                        .value
+                    )
+                    case.error = f"{step.value} failed {MAX_TRIES} times; not retried again"
+                    log.error("sweep.poison", case_id=str(cid), step=step.value)
+                continue
+            resumable.append((cid, version))
+    for cid, version in resumable:
         await ctx["redis"].enqueue_job("advance", str(cid), _job_id=f"sweep:{cid}:{version}")
-    if rows:
-        log.info("sweep.enqueued", cases=len(rows))
-    return len(rows)
+    if resumable:
+        log.info("sweep.enqueued", cases=len(resumable))
+    return len(resumable)

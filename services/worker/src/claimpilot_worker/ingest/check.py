@@ -7,6 +7,8 @@ from pathlib import Path
 import pymupdf
 from PIL import Image, ImageFile
 
+from claimpilot_worker.ingest.renders import RENDER_DPI, PageTooLargeError, capped_dpi
+
 MAX_PAGES = 40
 MAX_PIXELS = 60_000_000  # a 60-megapixel photo is already far beyond any phone camera
 
@@ -32,6 +34,15 @@ def _pdf(path: Path) -> Problem | None:
                     f"má {doc.page_count} strán, najviac {MAX_PAGES} na jeden dokument",
                 )
             doc.load_page(0).get_text()  # a broken page tree fails here
+            for page in doc:  # a MediaBox in the thousands of metres: refuse before any render
+                try:
+                    capped_dpi(page.rect.width, page.rect.height, RENDER_DPI)
+                except PageTooLargeError:
+                    return Problem(
+                        "page_too_large",
+                        f"page {(page.number or 0) + 1} is far larger than any paper size",
+                        f"strana {(page.number or 0) + 1} má neprimerane veľký rozmer",
+                    )
     except Exception:
         return Problem("damaged", "damaged or not a PDF", "je poškodený alebo to nie je PDF")
     return None
