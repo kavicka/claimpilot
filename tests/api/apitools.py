@@ -59,24 +59,18 @@ class FakeRedis:
         self.ttl.pop(key, None)
 
 
-class FakeArq:
-    """The arq pool as the api uses it: enqueue, the rate-limit counters and the /ready probes."""
+class FakeArq(FakeRedis):
+    """The arq pool as the api uses it: enqueue, the Redis commands of the login throttle and the
+    intake rate limit (from FakeRedis), and the /ready probes."""
 
     def __init__(self):
+        super().__init__()
         self.jobs = []
-        self.counters: dict[str, int] = {}
         self.queue_length = 0
         self.heartbeat_ttl_ms = 30_000  # a worker that wrote its heartbeat a second ago
 
     async def enqueue_job(self, name, *args):
         self.jobs.append((name, args))
-
-    async def incr(self, key):
-        self.counters[key] = self.counters.get(key, 0) + 1
-        return self.counters[key]
-
-    async def expire(self, key, seconds):
-        return True
 
     async def ping(self):
         return True
