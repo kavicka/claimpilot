@@ -11,6 +11,7 @@ extraction stores the header fields under their names and line values as "lines[
 
 import hashlib
 import re
+from decimal import Decimal
 from typing import Any
 
 import httpx
@@ -345,9 +346,15 @@ class PrefetchedErp:
     """The ERP records one invoice needs, fetched before matching (matching itself is sync)."""
 
     def __init__(
-        self, supplier: dict | None, order: dict | None, receipts: list[dict], known: bool
+        self,
+        supplier: dict | None,
+        order: dict | None,
+        receipts: list[dict],
+        known: bool,
+        invoiced: dict[int, Decimal] | None = None,
     ):
         self._supplier, self._order, self._receipts, self._known = supplier, order, receipts, known
+        self._invoiced = invoiced or {}
 
     def supplier(self, ico: str | None, vat_id: str | None) -> dict | None:
         return self._supplier
@@ -360,6 +367,9 @@ class PrefetchedErp:
 
     def invoice_known(self, supplier_ico: str, number: str) -> bool:
         return self._known
+
+    def invoiced_before(self, number: str) -> dict[int, Decimal]:
+        return self._invoiced
 
 
 async def _get(client: httpx.AsyncClient, url: str, **params: str) -> Any:
@@ -375,6 +385,7 @@ async def prefetch(
     session: AsyncSession,
     header: dict[str, str],
     kind: str,
+    invoice: Invoice,
 ) -> PrefetchedErp:
     ico = re.sub(r"\D", "", header.get("supplier_ico") or "")
     vat_id = (header.get("supplier_vat_id") or "").replace(" ", "").upper()
@@ -394,7 +405,44 @@ async def prefetch(
                 )
             )
         ).first() is not None
-    return PrefetchedErp(supplier, order, receipts, known)
+    invoiced = (
+        await _invoiced_before(session, invoice, supplier, order) if kind == "invoice" else {}
+    )
+    return PrefetchedErp(supplier, order, receipts, known, invoiced)
+
+
+async def _invoiced_before(
+    session: AsyncSession, invoice: Invoice, supplier: dict | None, order: dict | None
+) -> dict[int, Decimal]:
+    """What other invoices of this supplier already bill of each line of this order. Their
+    matching result holds the quantity per order line. Two invoices matched at the same time
+    would both see nothing, so the lookup runs under an advisory lock on (supplier, order) that is
+    held until this transaction commits: the second one waits, then sees the first."""
+    if supplier is None or order is None:
+        return {}
+    await session.execute(
+        text("SELECT pg_advisory_xact_lock(hashtextextended(:key, 0))"),
+        {"key": f"invoice-receipt:{supplier['ico']}:{order['number']}"},
+    )
+    rows = (
+        await session.scalars(
+            select(Invoice.matching).where(
+                Invoice.supplier_ico == supplier["ico"],
+                Invoice.doc_kind == "invoice",
+                Invoice.id != invoice.id,
+                Invoice.status.notin_([S.REJECTED.value, S.FAILED.value]),
+                Invoice.matching["order"].as_string() == order["number"],
+            )
+        )
+    ).all()
+    out: dict[int, Decimal] = {}
+    for matching in rows:
+        for ln in (matching or {}).get("lines", []):
+            if ln.get("order_line") is not None and ln.get("quantity") is not None:
+                out[ln["order_line"]] = out.get(ln["order_line"], Decimal(0)) + Decimal(
+                    ln["quantity"]
+                )
+    return out
 
 
 @register(S.VALIDATED, PipelineStep.MATCH, kind=INVOICE)
@@ -411,9 +459,9 @@ async def match_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, Any
     client = ctx.get("erp_client")
     if client is None:
         async with erp_client(ctx["settings"]) as own:
-            erp = await prefetch(own, session, header, kind)
+            erp = await prefetch(own, session, header, kind, invoice)
     else:
-        erp = await prefetch(client, session, header, kind)
+        erp = await prefetch(client, session, header, kind, invoice)
     result = match(header, lines, erp, match_settings(), kind=kind)
     line_numbers = sorted({int(m[1]) for r in rows if (m := re.match(r"lines\[(\d+)\]", r.field))})
     by_name = {r.field: r for r in rows}
@@ -424,6 +472,7 @@ async def match_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, Any
             "price_diff": "line_net",
             "short_delivery": "quantity",
             "over_delivery": "quantity",
+            "already_invoiced": "quantity",
         }
         if row := by_name.get(f"lines[{line_numbers[f.line]}].{target.get(f.kind, 'name')}"):
             row.checks = {**(row.checks or {}), f.kind: False}
@@ -432,7 +481,14 @@ async def match_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, Any
         "supplier": result.supplier["ico"] if result.supplier else None,
         "order": result.order["number"] if result.order else None,
         "findings": [{"kind": f.kind, "line": f.line, "detail": f.detail} for f in result.findings],
-        "lines": [{"line": m.line, "order_line": m.order_line} for m in result.lines],
+        "lines": [
+            {
+                "line": m.line,
+                "order_line": m.order_line,
+                "quantity": str(m.quantity) if m.quantity is not None else None,
+            }
+            for m in result.lines
+        ],
     }
     return S.NEEDS_INFO if result.needs_info else S.MATCHED
 

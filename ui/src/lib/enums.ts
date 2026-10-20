@@ -188,6 +188,7 @@ export const FINDING: Record<string, string> = {
   price_diff: "Price differs from the order",
   short_delivery: "Less received than invoiced",
   over_delivery: "More received than invoiced",
+  already_invoiced: "Goods already on an earlier invoice",
   not_ordered: "Not on the order",
   not_received: "No goods receipt",
   unknown_order: "Order not found in the ERP",

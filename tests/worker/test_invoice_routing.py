@@ -89,3 +89,8 @@ def test_an_amount_that_was_not_read_goes_to_a_senior():
     r = route(total=None)
     assert (r.queue, r.rule) == (Queue.SENIOR, "I6")
     assert "not read" in r.hits[0].detail
+
+
+def test_goods_invoiced_twice_go_to_a_standard_handler():
+    r = route(findings=[{"kind": "already_invoiced", "line": 0}])
+    assert (r.queue, r.rule) == (Queue.STANDARD, "I7")

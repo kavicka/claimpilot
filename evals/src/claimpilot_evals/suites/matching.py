@@ -41,6 +41,9 @@ class JsonErp:
     def invoice_known(self, supplier_ico: str, number: str) -> bool:
         return (supplier_ico, number) in self.known
 
+    def invoiced_before(self, number: str) -> dict[int, Any]:
+        return {}  # each synthetic invoice is judged on its own, against an untouched receipt
+
 
 async def run(ctx: RunContext) -> Report:
     report = Report("matching", ctx.split)

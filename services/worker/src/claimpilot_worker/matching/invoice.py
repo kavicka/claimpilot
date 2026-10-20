@@ -1,5 +1,6 @@
 """Match an invoice against the ERP: who sent it, where the money goes, what was ordered and
-what arrived. Each difference is a named finding; nothing here calls a model.
+what arrived and what earlier invoices already took of it. Each difference is a named finding;
+nothing here calls a model.
 
 Order of work: the supplier by VAT id, then by IČO (none found ends matching: an unknown
 supplier is for a person to look at); the IBAN against the supplier's record; for a credit note,
@@ -24,6 +25,10 @@ class ErpView(Protocol):
     def order(self, number: str) -> dict[str, Any] | None: ...
     def receipts_for(self, number: str) -> list[dict[str, Any]]: ...
     def invoice_known(self, supplier_ico: str, number: str) -> bool: ...
+    def invoiced_before(self, number: str) -> dict[int, Decimal]:
+        """Per order line (index), the quantity on earlier invoices of this supplier and order
+        that still stand (not rejected, not failed)."""
+        ...
 
 
 @dataclass(frozen=True)
@@ -47,6 +52,8 @@ class LineMatch:
     line: int
     order_line: int | None
     received: Decimal | None = None
+    quantity: Decimal | None = None  # what this invoice bills, kept for the invoices after it
+    invoiced_before: Decimal = Decimal(0)  # what earlier invoices billed of the same order line
 
 
 @dataclass
@@ -133,10 +140,13 @@ def match(
     tolerance = settings.tolerance_for(ico)
     used_order: set[int] = set()
     used_receipt: set[int] = set()
+    # A receipt can be invoiced once: what earlier invoices took is not left for this one.
+    billed = erp.invoiced_before(order["number"]) if kind != "proforma" else {}
     for i, line in enumerate(lines):
         j = _pick(line, order["lines"], used_order)
         lm = LineMatch(i, j)
         result.lines.append(lm)
+        lm.quantity = parse_number(line.get("quantity"))
         if j is None:
             result.findings.append(Finding("not_ordered", i))
             continue
@@ -158,11 +168,16 @@ def match(
             continue
         used_receipt.add(k)
         lm.received = Decimal(str(receipt_lines[k]["qty"]))
-        if qty is not None and lm.received != qty:
-            short = lm.received < qty
-            result.findings.append(
-                Finding(
-                    "short_delivery" if short else "over_delivery", i, f"{lm.received} received"
+        lm.invoiced_before = before = billed.get(j, Decimal(0))
+        left = max(lm.received - before, Decimal(0))
+        if qty is not None and left != qty:
+            if qty < left:
+                finding = Finding("over_delivery", i, f"{lm.received} received")
+            elif before > 0:
+                finding = Finding(
+                    "already_invoiced", i, f"{lm.received} received, {before} on earlier invoices"
                 )
-            )
+            else:
+                finding = Finding("short_delivery", i, f"{lm.received} received")
+            result.findings.append(finding)
     return result

@@ -23,7 +23,7 @@ from claimpilot_core.domain import Queue
 
 LINE_FINDINGS = {
     "price_diff", "short_delivery", "over_delivery", "not_ordered", "not_received",
-    "unknown_order",
+    "unknown_order", "already_invoiced",
 }  # fmt: skip
 QUEUE_OF = {
     "I1": Queue.FRAUD_REVIEW,

@@ -32,9 +32,20 @@ LINES = [
 
 
 class Erp:
-    def __init__(self, suppliers=(SUPPLIER,), orders=(ORDER,), receipts=(RECEIPT,), invoices=()):
+    def __init__(
+        self,
+        suppliers=(SUPPLIER,),
+        orders=(ORDER,),
+        receipts=(RECEIPT,),
+        invoices=(),
+        invoiced=None,
+    ):
         self.suppliers, self.orders, self.receipts = list(suppliers), list(orders), list(receipts)
         self.invoices = set(invoices)
+        self.invoiced = invoiced or {}  # order line index -> quantity on earlier invoices
+
+    def invoiced_before(self, number):
+        return {j: Decimal(str(q)) for j, q in self.invoiced.items()}
 
     def supplier(self, ico, vat_id):
         return next((s for s in self.suppliers if s["vat_id"] == vat_id or s["ico"] == ico), None)
@@ -160,3 +171,43 @@ def test_an_order_of_another_buyer_is_not_a_match():
     assert ("order_mismatch", None) in kinds(
         match(header, LINES, Erp(orders=(order,)), MatchSettings())
     )
+
+
+# --- goods invoiced twice -------------------------------------------------------------------------
+
+
+def test_a_second_invoice_for_the_same_receipt_is_flagged_on_every_line():
+    erp = Erp(invoiced={0: 2, 1: 6})  # the first invoice took everything that was received
+    result = match(HEADER, LINES, erp, MatchSettings())
+    assert kinds(result) == {("already_invoiced", 0), ("already_invoiced", 1)}
+    assert "2 on earlier invoices" in result.findings[0].detail
+
+
+def test_the_rest_of_a_receipt_can_be_invoiced_once_more():
+    # 6 received on line 2, 4 already invoiced: 2 are left.
+    erp = Erp(invoiced={1: 4})
+    two = [LINES[0], dict(LINES[1], quantity="2", line_net="8,00")]
+    assert match(HEADER, two, erp, MatchSettings()).findings == []
+    three = [LINES[0], dict(LINES[1], quantity="3", line_net="12,00")]
+    assert ("already_invoiced", 1) in kinds(match(HEADER, three, erp, MatchSettings()))
+
+
+def test_an_invoice_for_less_than_what_is_left_is_an_over_delivery_as_before():
+    erp = Erp(invoiced={1: 1})  # 5 left, 3 invoiced
+    three = [LINES[0], dict(LINES[1], quantity="3", line_net="12,00")]
+    assert ("over_delivery", 1) in kinds(match(HEADER, three, erp, MatchSettings()))
+
+
+def test_more_than_was_received_with_nothing_invoiced_before_is_a_short_delivery():
+    more = [LINES[0], dict(LINES[1], quantity="7", line_net="28,00")]
+    assert ("short_delivery", 1) in kinds(match(HEADER, more, Erp(), MatchSettings()))
+
+
+def test_a_proforma_does_not_count_the_receipt():
+    erp = Erp(invoiced={0: 2, 1: 6})
+    assert match(HEADER, LINES, erp, MatchSettings(), kind="proforma").findings == []
+
+
+def test_the_invoiced_quantity_is_kept_per_line_for_the_next_invoice():
+    result = match(HEADER, LINES, Erp(), MatchSettings())
+    assert [m.quantity for m in result.lines] == [Decimal(2), Decimal(6)]

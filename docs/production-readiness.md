@@ -19,6 +19,7 @@ provider or enough real invoices. Read "Open" before calling it ready.
 | Demo-password identity, role in the cookie, no user admin | `users.active`, role read from the database on every request, `claimpilot-admin`, production mode refuses to start with demo or empty secrets |
 | Login throttle per username and per task | Per (username, IP), counters in Redis with a bounded in-process fallback |
 | Blind approval (no version), same person corrects and approves | Decisions and corrections need `version`; four eyes above `approval.four_eyes_amount` |
+| Goods invoiced twice under different numbers | `already_invoiced`: earlier invoices of the supplier and order are subtracted from the receipt, under an advisory lock |
 | Duplicates compared raw and racy | Normalized number and an advisory lock per (supplier, number) |
 | Invoices never retained or erased | ADR-016: personal data erased after 365 days, record and `export.xml` kept 10 years |
 | Step timeouts never reached FAILED; poison invoice blocked the queue | Step budgets, FAILED after 3 error runs, item limit (400) to NEEDS_INFO |
@@ -36,8 +37,7 @@ Blockers for a real deployment:
   model; they are not part of the repository and not an accuracy figure. Remaining failures there
   were single lines (a VAT amount taken from the rate) and an invoice that prints no VAT rate (a
   handler decides). A pilot with a real supplier mix and handlers correcting is the measure.
-- **Receipts invoiced twice and credit notes with an original that exists only in the ERP**
-  (two separate tasks, not merged here).
+- **Credit notes whose original exists only in the ERP** (a separate task, not merged here).
 
 Should fix:
 
