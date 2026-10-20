@@ -15,6 +15,8 @@ class DownArq:
     async def enqueue_job(self, *args, **kwargs):
         raise RedisConnectionError("Connection refused")
 
+    incr = expire = enqueue_job  # the rate limit counts in Redis too and lets uploads through
+
 
 async def test_upload_and_approval_survive_a_redis_outage(client):
     """The change is committed before the enqueue; the worker's sweep picks the claim up later."""

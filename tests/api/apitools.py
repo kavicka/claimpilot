@@ -60,11 +60,32 @@ class FakeRedis:
 
 
 class FakeArq:
+    """The arq pool as the api uses it: enqueue, the rate-limit counters and the /ready probes."""
+
     def __init__(self):
         self.jobs = []
+        self.counters: dict[str, int] = {}
+        self.queue_length = 0
+        self.heartbeat_ttl_ms = 30_000  # a worker that wrote its heartbeat a second ago
 
     async def enqueue_job(self, name, *args):
         self.jobs.append((name, args))
+
+    async def incr(self, key):
+        self.counters[key] = self.counters.get(key, 0) + 1
+        return self.counters[key]
+
+    async def expire(self, key, seconds):
+        return True
+
+    async def ping(self):
+        return True
+
+    async def zcard(self, key):
+        return self.queue_length
+
+    async def pttl(self, key):
+        return self.heartbeat_ttl_ms
 
 
 @pytest.fixture

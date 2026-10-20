@@ -37,3 +37,8 @@ def senior_amounts() -> dict[str, Decimal]:
 def tolerance() -> Tolerance:
     v = config()["validation"]
     return Tolerance(line=Decimal(v["line_tolerance"]), sum=Decimal(v["sum_tolerance"]))
+
+
+def max_items() -> int:
+    """An invoice with more items than this goes back to the supplier ('split the invoice')."""
+    return int(config().get("limits", {}).get("max_items", 400))

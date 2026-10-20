@@ -35,7 +35,12 @@ from claimpilot_core.schemas.parsing import Block, FracBox, PageInfo, ParsedDocu
 from claimpilot_core.settings import Settings
 from claimpilot_worker.export.ubl import build as build_ubl
 from claimpilot_worker.export.values import ExportError, from_values
-from claimpilot_worker.extraction.invoice import extract_invoice, invoice_kind, redact_invoice
+from claimpilot_worker.extraction.invoice import (
+    extract_invoice,
+    invoice_kind,
+    items_of,
+    redact_invoice,
+)
 from claimpilot_worker.ingest.check import problem_of
 from claimpilot_worker.ingest.injection_signals import document_signals
 from claimpilot_worker.ingest.language import detect_language
@@ -50,6 +55,7 @@ from claimpilot_worker.validation.invoice import validate
 from claimpilot_worker.validation.settings import (
     config,
     currencies,
+    max_items,
     ours,
     senior_amounts,
     tolerance,
@@ -79,6 +85,10 @@ async def ingest(session: AsyncSession, invoice: Invoice, ctx: dict[str, Any]) -
     if problem:
         return S.NEEDS_INFO
     parsed = parse(path, tables=True)
+    items = len(items_of(parsed.cells))
+    if items > max_items():  # 400 items are 34 model calls: the supplier splits the invoice
+        doc.problem = f"too many items, split the invoice: {items} lines, at most {max_items()}"
+        return S.NEEDS_INFO
     await session.execute(delete(DocBlock).where(DocBlock.document_id == doc.id))
     await session.execute(delete(DocCell).where(DocCell.document_id == doc.id))
     for b in parsed.blocks:
