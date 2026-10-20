@@ -14,7 +14,7 @@ count 10 to 30 % more on Slovak and German text.
 | Fargate worker (ARM64) | 2 vCPU, 8 GB | 78.27 |
 | Fargate api | 1 vCPU, 2 GB | 33.16 |
 | Fargate ui | 0.5 vCPU, 1 GB | 16.58 |
-| Fargate core-mock, mcp | 0.25 vCPU, 0.5 GB each | 16.58 |
+| Fargate core-mock, erp-mock, mcp | 0.25 vCPU, 0.5 GB each | 24.87 |
 | VPC interface endpoints | 6 endpoints in 1 AZ ($0.012/h each) | 52.56 |
 | Container Insights (enhanced) | 626 metrics at $0.07 | 43.82 |
 | Load balancer | $0.027/h, about 0.5 LCU, 2 public IPv4 addresses | 29.93 |
@@ -24,19 +24,19 @@ count 10 to 30 % more on Slovak and German text.
 | ECR | 5 kept versions, about 11 GB each (the worker image is 9.2 GB with its models) | 5.50 |
 | KMS | application key and state key | 2.00 |
 | CloudWatch Logs | about 2 GB ingested | 1.26 |
-| Secrets Manager | 3 secrets | 1.20 |
+| Secrets Manager | 4 secrets | 1.60 |
 | EFS | about 2 GB of documents | 0.72 |
 | X-Ray, Budgets | inside the free tier | 0.00 |
-| **Total** | | **about 330** |
+| **Total** | | **about 339** |
 
 What moves it:
 
-- **Worker parked** (`worker.count = 0` between demos): about 252 a month. Claims wait in the
+- **Worker parked** (`worker.count = 0` between demos): about 261 a month. Claims wait in the
   queue until it runs again.
 - **Container Insights** is the second-largest line for a stack this small; switching it to the
   standard level or off removes most of the 43.82 (checkov's CKV_AWS_65 then needs a skip).
 - **`ha = true`**: Multi-AZ RDS (+29.75), a second cache node (+10.51), endpoints in both AZs
-  (+52.56), a second ui and api task (+49.74). About 472 a month.
+  (+52.56), a second ui and api task (+49.74). About 481 a month.
 - **Worker at 4 vCPU and 16 GB** (faster parsing): +78.27.
 - **No NAT gateway** saves $0.052/h plus $0.052/GB; the endpoints that replace it cost more at
   this size (52.56 against about 38 plus traffic), and are there for the no-internet-route
@@ -69,7 +69,7 @@ out, Sonnet 5.5 $2.20 / $11.00 per million tokens.
   dev claim triggers one locally, so it is left out.
 - Textract, if turned on, adds $0.0015 per scanned page.
 
-At 1,000 claims a month, Bedrock adds about 70 to 90 USD to the fixed 330.
+At 1,000 claims a month, Bedrock adds about 70 to 90 USD to the fixed 339.
 
 ## Check it after the first deploy
 

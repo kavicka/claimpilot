@@ -34,6 +34,8 @@ class Settings(BaseSettings):
     intake_token: str = ""
     core_mock_url: str = "http://127.0.0.1:4401"
     erp_url: str = "http://127.0.0.1:4403"
+    # Bearer token for every call to the ERP (the ERP checks it when it has one configured).
+    erp_token: SecretStr = SecretStr("")
     # mlx_lm.server with the base model of the invoice adapters (ADR-014), `make mlx-serve`.
     mlx_url: str = "http://127.0.0.1:4430"
 

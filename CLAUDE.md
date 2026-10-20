@@ -10,7 +10,8 @@ portfolio project. The plan and build steps live in the ClaimPilot Implementatio
 - `services/worker` (arq, **native macOS**): every pipeline step and every model call. Runs natively so
   Docling, the reranker and NER get MPS. CI builds and tests its Docker image anyway.
 - `services/core_mock` (FastAPI, Docker): the target core claims system with strict validation;
-  the same package holds the mock ERP (`erp.py`, its own container `erp_mock`): suppliers, orders,
+  the same package holds the mock ERP (`erp.py`, its own container `erp_mock`, bearer token, `Idempotency-Key`
+  on the intake): suppliers, orders,
   receipts, and the Peppol UBL intake with EN 16931 / Peppol rules (`ubl_rules.py`).
 - `services/mcp_server` (MCP SDK 2.x `MCPServer`, Docker): read-only tools over the api.
 - `packages/claimpilot_core`: domain enums, SQLAlchemy models, LLM gateway, PII vault, state machine.

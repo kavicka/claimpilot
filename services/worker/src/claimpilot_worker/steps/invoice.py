@@ -9,6 +9,7 @@ its item table (doc_cells); redaction tokenizes people's data and keeps company 
 extraction stores the header fields under their names and line values as "lines[N].<field>".
 """
 
+import hashlib
 import re
 from typing import Any
 
@@ -16,13 +17,21 @@ import httpx
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from claimpilot_core.db.models import DocBlock, DocCell, Document, ExtractedField, Invoice
+from claimpilot_core.db.models import (
+    AuditLog,
+    DocBlock,
+    DocCell,
+    Document,
+    ExtractedField,
+    Invoice,
+)
 from claimpilot_core.domain import CaseKind, ExtractionMethod, PipelineStep
 from claimpilot_core.domain import InvoiceStatus as S
 from claimpilot_core.invoice_values import currency_code, parse_number
 from claimpilot_core.llm.gateway import LLMGateway
 from claimpilot_core.pii.vault import Vault
 from claimpilot_core.schemas.parsing import Block, FracBox, PageInfo, ParsedDocument, TableCell
+from claimpilot_core.settings import Settings
 from claimpilot_worker.export.ubl import build as build_ubl
 from claimpilot_worker.export.values import ExportError, from_values
 from claimpilot_worker.extraction.invoice import extract_invoice, invoice_kind, redact_invoice
@@ -379,7 +388,7 @@ async def match_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, Any
     kind = invoice.doc_kind or "invoice"
     client = ctx.get("erp_client")
     if client is None:
-        async with httpx.AsyncClient(base_url=ctx["settings"].erp_url, timeout=20) as own:
+        async with erp_client(ctx["settings"]) as own:
             erp = await prefetch(own, session, header, kind)
     else:
         erp = await prefetch(client, session, header, kind)
@@ -431,10 +440,35 @@ async def ready_for_review(session: AsyncSession, invoice: Invoice, ctx: dict[st
     return S.IN_REVIEW
 
 
+def erp_client(settings: Settings) -> httpx.AsyncClient:
+    """A client for the ERP that sends the bearer token on every call, when there is one."""
+    token = settings.erp_token.get_secret_value()
+    headers = {"Authorization": f"Bearer {token}"} if token else {}
+    return httpx.AsyncClient(base_url=settings.erp_url, headers=headers, timeout=30)
+
+
+def _refusal(invoice: Invoice, session: AsyncSession, errors: list[Any], **extra: Any) -> S:
+    """The export is refused: the reasons go to the export JSON (shown in review) and to the
+    audit log, and the invoice goes back to review."""
+    invoice.export = {"errors": errors, **extra}
+    session.add(
+        AuditLog(
+            case_id=invoice.id,
+            action="export_refused",
+            details={"actor": "system", "errors": errors, **extra},
+        )
+    )
+    return S.IN_REVIEW
+
+
 @register(S.APPROVED, PipelineStep.SUBMIT, kind=INVOICE)
 async def export_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, Any]) -> S:
-    """APPROVED -> EXPORTED: the approved values as Peppol UBL to the ERP. A refusal sends the
-    invoice back to review with the rules it broke (ADR-015)."""
+    """APPROVED -> EXPORTED: the approved values as Peppol UBL to the ERP (ADR-015).
+
+    The invoice id is the Idempotency-Key: a repeat after a crash between the POST and our commit
+    gets the first answer from the ERP, so the document is stored once. A refusal (rules broken,
+    or another document with this supplier and number already posted) sends the invoice back to
+    review with the reason; it is never taken for success."""
     rows = list(
         (
             await session.scalars(
@@ -446,7 +480,7 @@ async def export_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, An
     client = ctx.get("erp_client")
     own = None
     if client is None:
-        own = client = httpx.AsyncClient(base_url=ctx["settings"].erp_url, timeout=30)
+        own = client = erp_client(ctx["settings"])
     try:
         ico = re.sub(r"\D", "", header.get("supplier_ico") or "")
         vat_id = (header.get("supplier_vat_id") or "").replace(" ", "").upper()
@@ -464,24 +498,43 @@ async def export_step(session: AsyncSession, invoice: Invoice, ctx: dict[str, An
                 )
             )
         except ExportError as exc:
-            invoice.export = {"errors": [{"rule": "READ", "field": exc.field, "message": str(exc)}]}
-            return S.IN_REVIEW
+            return _refusal(
+                invoice, session, [{"rule": "READ", "field": exc.field, "message": str(exc)}]
+            )
         path = storage_path(f"invoices/{invoice.id}/export.xml")
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(body)
         resp = await client.post(
-            "/invoices", content=body, headers={"content-type": "application/xml"}
+            "/invoices",
+            content=body,
+            headers={"content-type": "application/xml", "Idempotency-Key": str(invoice.id)},
         )
     finally:
         if own is not None:
             await own.aclose()
-    if resp.status_code == 422:
-        invoice.export = {"errors": resp.json()["detail"]["errors"]}
-        return S.IN_REVIEW
-    if resp.status_code == 409:
-        invoice.export = {"note": "posted before; the ERP keeps the first one"}
-        return S.EXPORTED
+    digest = hashlib.sha256(body).hexdigest()
+    if resp.status_code in (409, 422):
+        detail = resp.json().get("detail")
+        errors = detail.get("errors", []) if isinstance(detail, dict) else []
+        extra: dict[str, Any] = {"status": resp.status_code, "sha256": digest}
+        if isinstance(detail, dict) and detail.get("erp_id"):
+            extra["existing_erp_id"] = detail["erp_id"]  # another document's id: not ours to keep
+        return _refusal(invoice, session, errors, **extra)
     resp.raise_for_status()  # a server error is retried by the pipeline
     invoice.erp_id = resp.json()["erp_id"]
-    invoice.export = {"erp_id": invoice.erp_id, "errors": []}
+    invoice.export = {"erp_id": invoice.erp_id, "errors": [], "sha256": digest}
+    session.add(
+        AuditLog(
+            case_id=invoice.id,
+            action="exported",
+            details={
+                "actor": "system",
+                "erp_id": invoice.erp_id,
+                "total": str(invoice.total) if invoice.total is not None else None,
+                "currency": invoice.currency,
+                "sha256": digest,
+                "replayed": resp.status_code == 200,  # the ERP had this document already
+            },
+        )
+    )
     return S.EXPORTED

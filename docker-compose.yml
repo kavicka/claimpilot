@@ -76,6 +76,9 @@ services:
       context: .
       dockerfile: services/core_mock/Dockerfile
     command: ["uvicorn", "claimpilot_core_mock.erp:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      # Bearer token every call but /health must carry; the worker sends CLAIMPILOT_ERP_TOKEN.
+      ERP_MOCK_TOKEN: ${CLAIMPILOT_ERP_TOKEN:-}
     ports:
       - "127.0.0.1:4403:8000"
     volumes:

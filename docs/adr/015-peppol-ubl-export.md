@@ -21,4 +21,14 @@ Status: accepted, 2026-10-16
 
 ## Consequences
 - The mock ERP holds the master data (suppliers, orders, goods receipts, catalogue) and the UBL
-  intake; it runs as its own service next to `core_mock`.
+  intake; it runs as its own service next to `core_mock`, locally and in AWS (`erp-mock`).
+- The export is safe to repeat. The worker sends the invoice id as `Idempotency-Key`; the ERP
+  answers a repeat with the first `erp_id` (200), refuses another document with the same supplier
+  and number (409, naming the id it holds) and the same key with other content (422). A refusal
+  is never a success: the invoice goes back to review with the reason in `Invoice.export`, and
+  `erp_id` stays empty unless the ERP accepted this invoice's document.
+- Every call to the ERP carries a bearer token when one is configured (`CLAIMPILOT_ERP_TOKEN`,
+  `ERP_MOCK_TOKEN`); `/health` stays open.
+- `exported` and `export_refused` rows go to the audit log (actor `system`).
+- A crash between the ERP's answer and the database commit leaves the invoice APPROVED; the sweep
+  re-drives it and the key makes the second POST harmless.
