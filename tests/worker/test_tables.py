@@ -108,6 +108,57 @@ def test_a_header_on_two_lines_is_one_header():
     assert {c.header for c in cells} == {"popis", "množstvo", "Cena/MJ bez DPH", "Spolu bez DPH"}
 
 
+def test_a_delivery_note_printed_in_the_header_stays_out_of_the_column_title():
+    # A header row of its own right under the column titles carries a delivery note in the
+    # name column ("Dodací list DL/12 ..."); the titles above must not absorb it.
+    header = [
+        *line(0.10, (0.05, "Kód a názov tovaru"), (0.50, "Množstvo"), (0.70, "Jednotková"), (0.88, "Spolu")),
+        *line(0.112, (0.05, "Dodací list DL/7 05.02.2024 (HLAVNÝ)"), (0.70, "cena bez DPH"), (0.88, "bez DPH")),
+    ]  # fmt: skip
+    words = header + line(0.14, (0.05, "Gél"), (0.53, "1,00 ks"), (0.72, "2,00"), (0.89, "2,00"))
+    cells = table_cells([words])
+    assert {c.header for c in cells} == {
+        "Kód a názov tovaru",
+        "Množstvo",
+        "Jednotková cena bez DPH",
+        "Spolu bez DPH",
+    }
+
+
+def test_a_quantity_with_pale_decimals_keeps_its_digits(tmp_path):
+    # "30,000" printed with ",000" in a colour a reader barely sees: the span is flagged as low
+    # contrast, but the word is mostly visible, so it must stay in its cell.
+    path = tmp_path / "pale.pdf"
+    doc = pymupdf.open()
+    page = doc.new_page(width=595, height=842)
+    for x, text in [
+        (30, "popis"),
+        (300, "mnozstvo"),
+        (420, "Cena/MJ"),
+        (480, "DPH"),
+        (530, "Spolu"),
+    ]:
+        page.insert_text((x, 100), text, fontsize=8)
+    for x, text in [(30, "Gel"), (430, "2,00"), (480, "23"), (530, "60,00")]:
+        page.insert_text((x, 115), text, fontsize=8)
+    page.insert_text((310, 115), "30", fontsize=8)
+    page.insert_text(
+        (310 + pymupdf.get_text_length("30", fontsize=8), 115),
+        ",000",
+        fontsize=8,
+        color=(0.93, 0.93, 0.93),
+    )
+    doc.save(path)
+    from claimpilot_core.schemas.parsing import PageInfo
+    from claimpilot_worker.ingest.parser import _text_layer_chars
+
+    spans = hidden_spans(path)
+    assert [s.text for s in spans] == [",000"], "the pale tail is what the detector flags"
+    pages = [PageInfo(page=1, width=595, height=842, text_chars=_text_layer_chars(path).get(1, 0))]
+    (got,) = items(item_table_cells(path, pages, spans))
+    assert got["mnozstvo"] == "30,000"
+
+
 def test_the_table_goes_on_over_a_page_break():
     page1 = HEADER + line(
         0.13,
@@ -231,3 +282,35 @@ def test_every_line_cell_of_the_synthetic_layouts_is_found(rendered, tmp_path):
         total.add(score(table_cells(words_from_pdf(path)), v["lines"], inv.invoice_id, fees))
     assert total.items_found == total.items_expected
     assert total.cells_exact == total.cells_expected, total.misses
+
+
+def test_print_quirks_of_the_real_layouts_keep_every_cell(rendered, tmp_path):
+    """Real layouts print a delivery note in the header block, a quantity with its zero
+    decimals in pale grey, and a name wrapped around vertically centred amounts."""
+    import copy
+
+    from claimpilot_datagen.invoices.model import Layout
+    from claimpilot_datagen.invoices.render import render
+    from claimpilot_worker.ingest.table_score import score
+    from claimpilot_worker.ingest.tables import _visible, words_from_pdf
+
+    base = next(inv for inv, *_ in rendered if inv.layout is Layout.TANGRAM)
+    for quirks in [
+        {"header_note"},
+        {"pale_decimals"},
+        {"wrapped_names"},
+        {"header_note", "pale_decimals", "wrapped_names"},
+    ]:
+        inv = copy.copy(base)
+        inv.quirks = frozenset(quirks)
+        data, _ext, v = render(inv, 42)
+        path = tmp_path / f"{'_'.join(sorted(quirks))}.pdf"
+        path.write_bytes(data)
+        if "pale_decimals" in quirks:
+            assert any(s.reason == "low_contrast" for s in hidden_spans(path)), "the quirk shows"
+        cells = table_cells(_visible(words_from_pdf(path), hidden_spans(path)))
+        s = score(cells, v["lines"], str(sorted(quirks)))
+        assert s.items_found == s.items_expected, quirks
+        assert s.cells_exact == s.cells_expected, (quirks, s.misses)
+        if "header_note" in quirks:
+            assert not any("Dodací list" in c.header for c in cells)

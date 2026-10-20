@@ -183,6 +183,8 @@ def header_columns(lines: list[Line]) -> list[Column]:
     cols = [Column(p.text, p.x0, p.x1) for p in lines[0].phrases]
     for extra in lines[1:]:
         for p in extra.phrases:
+            if _is_header_note(p):
+                continue
             target = _best_column(cols, p.x0, p.x1, touch=True)
             if target is None:
                 cols.append(Column(p.text, p.x0, p.x1))
@@ -191,6 +193,13 @@ def header_columns(lines: list[Line]) -> list[Column]:
                 target.x0, target.x1 = min(target.x0, p.x0), max(target.x1, p.x1)
     cols.sort(key=lambda c: c.x0)
     return cols
+
+
+def _is_header_note(p: Phrase) -> bool:
+    """A note printed in the header block ("Dodací list DL/12 03.02.2026 (SKLAD)"): digits and no
+    header term. It sits among the column titles but is no part of one."""
+    tokens = {t.lower().strip("():") for t in p.text.split()}
+    return not tokens & HEADER_TERMS and any(ch.isdigit() for ch in p.text)
 
 
 def _best_column(cols: list[Column], x0: float, x1: float, *, touch: bool = False) -> Column | None:
@@ -545,6 +554,14 @@ def line_blocks(pages: list[list[Word]], hidden: list) -> list:
     return blocks
 
 
+HIDDEN_SHARE = 0.9  # share of a word's width a hidden span must cover to hide the word
+
+
 def _inside(w: Word, box: FracBox) -> bool:
-    cx, cy = (w.x0 + w.x1) / 2, w.yc
-    return box.x0 <= cx <= box.x1 and box.y0 <= cy <= box.y1
+    """A word is hidden when a hidden span covers it. A word the span only touches stays: "30,000"
+    printed with ",000" in pale grey is a mostly visible word, and dropping it loses the number."""
+    if not box.y0 <= w.yc <= box.y1:
+        return False
+    width = w.x1 - w.x0
+    covered = min(w.x1, box.x1) - max(w.x0, box.x0)
+    return covered >= HIDDEN_SHARE * width if width > 0 else box.x0 <= w.x0 <= box.x1
