@@ -196,7 +196,7 @@ export function UploadView() {
         }}
       >
         <span className="cp-list-item__tile">
-          <Icon name="file-text" size={16} stroke={1} />
+          <Icon name="file-text" size={16} />
         </span>
         <p className="cp-text-body-strong text-ink">Drop files here</p>
         <p className="cp-text-meta text-ink-subtle">

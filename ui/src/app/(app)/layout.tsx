@@ -8,7 +8,7 @@ import { Brand, Sidebar } from "@/components/shell/sidebar";
 /** App shell: sidebar left, white main area right. Designed at 1440 px. */
 function Frame({ side, children }: { side: React.ReactNode; children: React.ReactNode }) {
   return (
-    <div className="flex h-screen min-w-[65.5rem] overflow-hidden bg-surface">
+    <div className="flex h-screen min-w-[73.75rem] overflow-hidden bg-surface">
       {side}
       <main className="pane-scroll min-w-0 flex-1 overflow-y-auto">{children}</main>
     </div>
