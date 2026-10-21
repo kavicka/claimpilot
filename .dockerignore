@@ -9,8 +9,6 @@ ui/node_modules
 ui/.next
 ui/test-results
 ui/playwright-report
-packages/claimpilot-ui/node_modules
-packages/claimpilot-ui/.gallery
 data/storage
 data/synthetic
 # core_mock's image carries the synthetic policies (no PDFs)

@@ -1,4 +1,4 @@
-import type { IconName, TagTone } from "@claimpilot/ui";
+import type { IconName, TagTone } from "@crm-ui/react";
 
 import { humanize } from "./format";
 import type { ClaimStatus, InvoiceStatus } from "./types";

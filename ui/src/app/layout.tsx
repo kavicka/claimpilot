@@ -5,7 +5,7 @@ import { Providers } from "@/components/shell/providers";
 
 import "./globals.css";
 
-// The design system's three families (packages/claimpilot-ui README). globals.css points the
+// The design system's three families (@crm-ui/react README). globals.css points the
 // --font-inter / --font-jakarta / --font-mono tokens at these.
 const inter = Inter({
   subsets: ["latin", "latin-ext"],

@@ -1,6 +1,6 @@
 "use client";
 
-import { AppHeader, Crumbs, PageHeader } from "@claimpilot/ui";
+import { AppHeader, Crumbs, PageHeader } from "@crm-ui/react";
 
 /**
  * Data page: 47 px header with the breadcrumb, then the page title block

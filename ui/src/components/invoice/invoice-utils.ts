@@ -1,4 +1,4 @@
-import type { LineItem, LineItemColumn } from "@claimpilot/ui";
+import type { LineItem, LineItemColumn } from "@crm-ui/react";
 
 import { failedCheckLabel, findingLabel } from "@/lib/enums";
 import { humanize } from "@/lib/format";

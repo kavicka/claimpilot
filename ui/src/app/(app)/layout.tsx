@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Sidebar as DsSidebar, Skeleton } from "@claimpilot/ui";
+import { Alert, Sidebar as DsSidebar, Skeleton } from "@crm-ui/react";
 
 import { AuthGate } from "@/components/shell/auth";
 import { Brand, Sidebar } from "@/components/shell/sidebar";

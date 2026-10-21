@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, EmptyState, IconButton, Tooltip, useSwapDirection } from "@claimpilot/ui";
+import { Alert, EmptyState, IconButton, Tooltip, useSwapDirection } from "@crm-ui/react";
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 
 import { cn } from "@/lib/cn";

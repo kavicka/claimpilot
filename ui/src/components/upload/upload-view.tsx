@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Button, DataTable, EmptyState, Icon, IconButton, Tag, useToast, type Column } from "@claimpilot/ui";
+import { Alert, Button, DataTable, EmptyState, Icon, IconButton, Tag, useToast, type Column } from "@crm-ui/react";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 

@@ -106,12 +106,21 @@ jobs:
           - { name: api, dockerfile: services/api/Dockerfile, context: . }
           - { name: core-mock, dockerfile: services/core_mock/Dockerfile, context: . }
           - { name: mcp, dockerfile: services/mcp_server/Dockerfile, context: . }
-          - { name: ui, dockerfile: ui/Dockerfile, context: . } # ui/ installs packages/claimpilot-ui
+          - { name: ui, dockerfile: ui/Dockerfile, context: ., extra: --build-context crm-ui=../crm-ui }
     steps:
       - uses: actions/checkout@v4
+      # The review UI's design system lives in its own repository (@crm-ui/react), next to this one.
+      - uses: actions/checkout@v4
+        if: matrix.name == 'ui'
+        with:
+          repository: ${{ vars.CRM_UI_REPOSITORY }}
+          token: ${{ secrets.CRM_UI_TOKEN }}
+          path: crm-ui
+      - if: matrix.name == 'ui'
+        run: mv crm-ui ../crm-ui
       - uses: docker/setup-buildx-action@v3
       - name: Build ${{ matrix.name }}
-        run: docker build -f ${{ matrix.dockerfile }} -t claimpilot-${{ matrix.name }}:ci ${{ matrix.context }}
+        run: docker build -f ${{ matrix.dockerfile }} ${{ matrix.extra }} -t claimpilot-${{ matrix.name }}:ci ${{ matrix.context }}
 
   e2e:
     # The review UI against the real api and a seeded database; no models run.
@@ -146,6 +155,15 @@ jobs:
           node-version: 22
           cache: pnpm
           cache-dependency-path: ui/pnpm-lock.yaml
+      # ui/ links the design system from ../../crm-ui/packages/ui (its own repository).
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.CRM_UI_REPOSITORY }}
+          token: ${{ secrets.CRM_UI_TOKEN }}
+          path: crm-ui
+      - run: mv crm-ui ../crm-ui
+      - run: pnpm install --frozen-lockfile
+        working-directory: ../crm-ui/packages/ui
       - run: pnpm install --frozen-lockfile
         working-directory: ui
       - run: pnpm exec playwright install --with-deps chromium

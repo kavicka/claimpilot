@@ -1,6 +1,6 @@
 "use client";
 
-import { EmptyState, LineItemTable, type LineItemColumn } from "@claimpilot/ui";
+import { EmptyState, LineItemTable, type LineItemColumn } from "@crm-ui/react";
 import { useMemo } from "react";
 
 import { api, errorMessage } from "@/lib/api";

@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, Board, BoardCard, BoardColumn, Tag } from "@claimpilot/ui";
+import { Avatar, Board, BoardCard, BoardColumn, Tag } from "@crm-ui/react";
 import { useRouter } from "next/navigation";
 
 import { CLAIM_TYPE, QUEUES, categoryEntry, queueEntry } from "@/lib/enums";

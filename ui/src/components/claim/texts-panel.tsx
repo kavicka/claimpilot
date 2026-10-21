@@ -1,6 +1,6 @@
 "use client";
 
-import { EmptyState, Icon, IconButton, RecommendationCard, Tabs, Tooltip, useToast, type TabItem } from "@claimpilot/ui";
+import { EmptyState, Icon, IconButton, RecommendationCard, Tabs, Tooltip, useToast, type TabItem } from "@crm-ui/react";
 import { useState } from "react";
 
 import { SUMMARY_KIND, statusEntry } from "@/lib/enums";

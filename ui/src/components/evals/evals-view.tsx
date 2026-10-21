@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, EmptyState, Spinner, Tag } from "@claimpilot/ui";
+import { Alert, EmptyState, Spinner, Tag } from "@crm-ui/react";
 
 import { DataPage } from "@/components/shell/page";
 import { api } from "@/lib/api";

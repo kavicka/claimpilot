@@ -1,4 +1,4 @@
-import { DayGroup, EmptyState, Icon, InlineLink, Tag, type IconName } from "@claimpilot/ui";
+import { DayGroup, EmptyState, Icon, InlineLink, Tag, type IconName } from "@crm-ui/react";
 
 import { cn } from "@/lib/cn";
 import { duration, firstLine, humanize, int, when } from "@/lib/format";

@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, DataTable, Tag, Tooltip, type Column } from "@claimpilot/ui";
+import { Avatar, DataTable, Tag, Tooltip, type Column } from "@crm-ui/react";
 import { useRouter } from "next/navigation";
 
 import { CLAIM_TYPE, DECIDED_STATUSES, categoryEntry, statusEntry } from "@/lib/enums";

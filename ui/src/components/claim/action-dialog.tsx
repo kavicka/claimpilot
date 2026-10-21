@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Button, Dialog, Reveal, Textarea, useReplay, useToast } from "@claimpilot/ui";
+import { Alert, Button, Dialog, Reveal, Textarea, useReplay, useToast } from "@crm-ui/react";
 import { useState } from "react";
 
 import { ApiError, api, errorMessage } from "@/lib/api";

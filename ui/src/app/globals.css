@@ -1,11 +1,11 @@
 @import "tailwindcss";
 /* Root font size follows the screen above 1440 px; every size below is rem, so the whole UI scales. */
-@import "@claimpilot/ui/scaling.css" layer(base);
-/* Design system: tokens, text styles and component styles (packages/claimpilot-ui). The component
+@import "@crm-ui/react/scaling.css" layer(base);
+/* Design system: tokens, text styles and component styles (@crm-ui/react, ~/programming/crm-ui). The component
    styles sit in the components layer, so a Tailwind utility on a design-system element wins. */
-@import "@claimpilot/ui/tokens.css" layer(components); /* holds the .cp-text-* styles, which must beat preflight */
-@import "@claimpilot/ui/type.css" layer(theme);
-@import "@claimpilot/ui/styles.css" layer(components);
+@import "@crm-ui/react/tokens.css" layer(components); /* holds the .cp-text-* styles, which must beat preflight */
+@import "@crm-ui/react/type.css" layer(theme);
+@import "@crm-ui/react/styles.css" layer(components);
 
 /*
  * Tailwind is used for layout only. Its default colours, font sizes, fonts, radii and shadows are

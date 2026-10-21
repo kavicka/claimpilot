@@ -16,7 +16,7 @@ import {
   type BarDatum,
   type MetricTone,
   type Segment,
-} from "@claimpilot/ui";
+} from "@crm-ui/react";
 import { useRouter } from "next/navigation";
 
 import { DataPage } from "@/components/shell/page";

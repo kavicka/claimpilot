@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@claimpilot/ui':
-        specifier: file:../packages/claimpilot-ui
-        version: file:../packages/claimpilot-ui(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@crm-ui/react':
+        specifier: link:../../crm-ui/packages/ui
+        version: link:../../crm-ui/packages/ui
       next:
         specifier: 16.4.0
         version: 16.4.0(@babel/core@7.29.7)(@playwright/test@1.64.0)(@types/node@24.19.2)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -130,12 +130,6 @@ packages:
     resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
 
-  '@claimpilot/ui@file:../packages/claimpilot-ui':
-    resolution: {directory: ../packages/claimpilot-ui, type: directory}
-    peerDependencies:
-      react: '>=18.3'
-      react-dom: '>=18.3'
-
   '@emnapi/core@1.10.0':
     resolution: {integrity: sha512-yq6OkJ4p82CAfPl0u9mQebQHKPJkY7WrIuk205cTYnYe+k2Z8YBh11FrbRG/H6ihirqcacOgl2BIO8oyMQLeXw==}
 
@@ -191,14 +185,6 @@ packages:
   '@eslint/plugin-kit@0.4.1':
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@hugeicons/core-free-icons@4.3.5':
-    resolution: {integrity: sha512-Sv+NjHRPnQk+yZsGCMcGznCHdTfJR9PMMOEKcJYAQU4gy90dmlc9PwdtvYOImBZIjiheMsTLL5eMn2DmHxUiUg==}
-
-  '@hugeicons/react@1.1.10':
-    resolution: {integrity: sha512-9tAsd92yMVVGP+E+d8cM+wc0VnXuYZHNbWQi7TOe8k2neawmhiaFmVFbzyruejhOMa197/LbgvSED32ayUo3ZA==}
-    peerDependencies:
-      react: '>=16.0.0'
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -2126,13 +2112,6 @@ snapshots:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@claimpilot/ui@file:../packages/claimpilot-ui(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
-    dependencies:
-      '@hugeicons/core-free-icons': 4.3.5
-      '@hugeicons/react': 1.1.10(react@19.3.0)
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
-
   '@emnapi/core@1.10.0':
     dependencies:
       '@emnapi/wasi-threads': 1.2.1
@@ -2204,12 +2183,6 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
       levn: 0.4.1
-
-  '@hugeicons/core-free-icons@4.3.5': {}
-
-  '@hugeicons/react@1.1.10(react@19.3.0)':
-    dependencies:
-      react: 19.3.0
 
   '@humanfs/core@0.19.2':
     dependencies:

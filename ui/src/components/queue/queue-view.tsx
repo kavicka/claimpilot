@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Checkbox, EmptyState, IconButton, SearchField, SegmentedControl, Spinner, TableToolbar, Tabs, Tooltip, type TabItem } from "@claimpilot/ui";
+import { Alert, Checkbox, EmptyState, IconButton, SearchField, SegmentedControl, Spinner, TableToolbar, Tabs, Tooltip, type TabItem } from "@crm-ui/react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 

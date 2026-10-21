@@ -1,4 +1,4 @@
-import { DetailCard, EmptyState, InsightCard, Tag } from "@claimpilot/ui";
+import { DetailCard, EmptyState, InsightCard, Tag } from "@crm-ui/react";
 
 import { queueEntry, statusEntry } from "@/lib/enums";
 import type { ClaimStatus, Routing } from "@/lib/types";

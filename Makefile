@@ -90,7 +90,7 @@ models:  ## Pull the local models
 	for m in $(MODELS); do ollama pull $$m; done
 
 ui:  ## Review UI dev server on :4410
-	pnpm --dir ui install --prefer-offline --silent # refreshes the copy of packages/claimpilot-ui
+	pnpm --dir ui install --prefer-offline --silent # @crm-ui/react is linked from ../crm-ui, not copied
 	pnpm --dir ui dev
 
 seed:  ## Upload N synthetic dev claims through the api (N=5)
