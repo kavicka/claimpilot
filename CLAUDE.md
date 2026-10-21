@@ -16,9 +16,11 @@ portfolio project. The plan and build steps live in the ClaimPilot Implementatio
 - `services/mcp_server` (MCP SDK 2.x `MCPServer`, Docker): read-only tools over the api.
 - `packages/claimpilot_core`: domain enums, SQLAlchemy models, LLM gateway, PII vault, state machine.
 - `data/generator`: synthetic claims with exact ground truth. `evals/`: runner, suites, baselines, cassettes.
-- `packages/claimpilot-ui`: design system (tokens, React components) from the two Figma files.
-- `ui/`: Next.js review app on :4410, built on `@claimpilot/ui` (a `file:` dependency: pnpm keeps a
-  copy in `ui/node_modules`, so after changing the package run `pnpm --dir ui install`).
+- Design system `@crm-ui/react` (tokens, React components from the two Figma files) lives in its own
+  repository, `~/programming/crm-ui` (`packages/ui`). Change it there.
+- `ui/`: Next.js review app on :4410, built on `@crm-ui/react`, a pnpm `link:` dependency
+  (`../../crm-ui/packages/ui`): edits there show up without a reinstall. A fresh clone needs
+  crm-ui next to this repo and `pnpm install` in its `packages/ui` once.
 
 Pipeline: RECEIVED → PARSED → REDACTED → EXTRACTED → ROUTED → ASSESSED → IN_REVIEW → (handler)
 APPROVED → SUBMITTED | REJECTED | NEEDS_INFO; after corrections a handler sends the claim back to
@@ -88,7 +90,7 @@ two large models plus Docker do not fit in 48 GB.
 - **Synthetic data only.** No real customer data, no real insurer names or branding.
 - Code, docs and README in English. Client-facing outputs in Slovak (formal, vykanie) and German.
 - UI copy and docs follow the `no-ai-slop` skill: plain, specific, no filler.
-- **UI uses the design system only.** Colours, text styles, radii and shadows come from `@claimpilot/ui`
+- **UI uses the design system only.** Colours, text styles, radii and shadows come from `@crm-ui/react`
   tokens; Tailwind in `ui/` is for layout (its palette and font sizes are switched off). Text meets
   WCAG AA (the e2e suite runs axe). Sizes are rem (1 step = 1 design px at 1440, `w-[13.75rem]`),
   never px except strokes: `scaling.css` grows the whole UI with screens wider than 1440 px.

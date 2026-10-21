@@ -1,4 +1,4 @@
-import { Icon } from "@claimpilot/ui";
+import { Icon } from "@crm-ui/react";
 
 import type { ClaimDetail, HiddenText } from "@/lib/types";
 

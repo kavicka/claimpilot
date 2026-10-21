@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox, EmptyState, IconButton, Tag, Tooltip, useReplay } from "@claimpilot/ui";
+import { Checkbox, EmptyState, IconButton, Tag, Tooltip, useReplay } from "@crm-ui/react";
 import { useEffect, useRef, useState } from "react";
 
 import { api, errorMessage } from "@/lib/api";

@@ -41,7 +41,7 @@ registry=$(jq -r '.api' <<<"$repos" | cut -d/ -f1)
 aws ecr get-login-password --region "$region" |
   docker login --username AWS --password-stdin "$registry" >/dev/null
 
-build() { # service dockerfile context
+build() { # service dockerfile context [extra buildx args]
   local repo
   repo=$(jq -r --arg s "$1" '.[$s]' <<<"$repos")
   if aws ecr describe-images --region "$region" --repository-name "${repo#*/}" \
@@ -49,13 +49,14 @@ build() { # service dockerfile context
     echo "$1:$tag is already in ECR"
     return
   fi
-  docker buildx build --platform linux/arm64 -f "$2" -t "$repo:$tag" --push "$3"
+  docker buildx build --platform linux/arm64 -f "$2" -t "$repo:$tag" "${@:4}" --push "$3"
 }
 build api services/api/Dockerfile .
 build worker services/worker/Dockerfile .
 build core-mock services/core_mock/Dockerfile .
 build mcp services/mcp_server/Dockerfile .
-build ui ui/Dockerfile .
+# The design system (@crm-ui/react) is its own repository, checked out next to this one.
+build ui ui/Dockerfile . --build-context crm-ui=../crm-ui
 
 echo "== infrastructure"
 tf apply -input=false -auto-approve -var "image_tag=$tag"

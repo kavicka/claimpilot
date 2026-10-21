@@ -1,6 +1,6 @@
 "use client";
 
-import { DetailCard, EmptyState, Icon, Tag, type LineItemColumn } from "@claimpilot/ui";
+import { DetailCard, EmptyState, Icon, Tag, type LineItemColumn } from "@crm-ui/react";
 
 import { PanelSection } from "@/components/claim/routing-panel";
 import { INVOICE_RULE, failedCheckLabel, findingLabel, statusEntry } from "@/lib/enums";

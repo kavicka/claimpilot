@@ -16,7 +16,7 @@ import {
   useToast,
   type Column,
   type TabItem,
-} from "@claimpilot/ui";
+} from "@crm-ui/react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useRef, useState } from "react";
 

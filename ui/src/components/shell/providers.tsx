@@ -1,6 +1,6 @@
 "use client";
 
-import { LinkProvider, ToastProvider } from "@claimpilot/ui";
+import { LinkProvider, ToastProvider } from "@crm-ui/react";
 import Link from "next/link";
 
 /** Design-system links navigate client-side; toasts show bottom right. */

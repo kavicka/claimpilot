@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Dialog, Spinner } from "@claimpilot/ui";
+import { Alert, Dialog, Spinner } from "@crm-ui/react";
 
 import { api } from "@/lib/api";
 import { useFetch } from "@/lib/use-fetch";

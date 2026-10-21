@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, EmptyState, IconButton, Tooltip } from "@claimpilot/ui";
+import { Alert, EmptyState, IconButton, Tooltip } from "@crm-ui/react";
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 
 import { boxStyle } from "@/components/claim/document-viewer";

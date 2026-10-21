@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Button, Reveal, TextField, useReplay } from "@claimpilot/ui";
+import { Alert, Button, Reveal, TextField, useReplay } from "@crm-ui/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { IconButton, NavItem, NavList, Sidebar as DsSidebar, SidebarBrand, SidebarUser, Tooltip, type IconName } from "@claimpilot/ui";
+import { IconButton, NavItem, NavList, Sidebar as DsSidebar, SidebarBrand, SidebarUser, Tooltip, type IconName } from "@crm-ui/react";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 

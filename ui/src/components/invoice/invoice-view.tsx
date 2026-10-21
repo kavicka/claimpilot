@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, EmptyState, InlineLink, Spinner, Tabs, useSwapDirection, useToast, type TabItem } from "@claimpilot/ui";
+import { Alert, EmptyState, InlineLink, Spinner, Tabs, useSwapDirection, useToast, type TabItem } from "@crm-ui/react";
 import { useMemo, useState } from "react";
 
 import { isFlagged } from "@/components/claim/field-utils";

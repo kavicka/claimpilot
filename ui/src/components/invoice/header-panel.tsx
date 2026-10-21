@@ -1,6 +1,6 @@
 "use client";
 
-import { Checkbox, EmptyState } from "@claimpilot/ui";
+import { Checkbox, EmptyState } from "@crm-ui/react";
 import { useEffect, useState } from "react";
 
 import { DOT, FieldRow, Legend } from "@/components/claim/field-panel";

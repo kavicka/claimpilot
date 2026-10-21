@@ -19,7 +19,7 @@
         "http.server",
         "4411",
         "--directory",
-        "packages/claimpilot-ui/.gallery"
+        "../crm-ui/packages/ui/.gallery"
       ],
       "port": 4411
     },

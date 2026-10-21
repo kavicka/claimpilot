@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, AppHeader, Button, Crumbs, RecordNav, Reveal, SplitButton, Tag, Tooltip, useReplay, type ButtonVariant, type IconName } from "@claimpilot/ui";
+import { Alert, AppHeader, Button, Crumbs, RecordNav, Reveal, SplitButton, Tag, Tooltip, useReplay, type ButtonVariant, type IconName } from "@crm-ui/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 

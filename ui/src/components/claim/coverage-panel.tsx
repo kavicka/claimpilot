@@ -1,6 +1,6 @@
 "use client";
 
-import { EmptyState, Stat, Tag, Tooltip } from "@claimpilot/ui";
+import { EmptyState, Stat, Tag, Tooltip } from "@crm-ui/react";
 import { useState } from "react";
 
 import { COVERAGE, VERDICT, categoryEntry, statusEntry } from "@/lib/enums";

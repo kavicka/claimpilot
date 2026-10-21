@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, AppHeader, Crumbs, Tag, Tooltip, useReplay } from "@claimpilot/ui";
+import { Alert, AppHeader, Crumbs, Tag, Tooltip, useReplay } from "@crm-ui/react";
 import { useState } from "react";
 
 import { CaseActionDialog } from "@/components/claim/action-dialog";
