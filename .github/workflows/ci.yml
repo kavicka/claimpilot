@@ -140,7 +140,8 @@ jobs:
         env:
           POSTGRES_USER: claimpilot
           POSTGRES_PASSWORD: claimpilot
-          POSTGRES_DB: claimpilot
+          # The database ui/playwright.config.ts points the api at; it must exist before the api starts.
+          POSTGRES_DB: claimpilot_e2e
         ports: ["5438:5432"]
         options: >-
           --health-cmd "pg_isready -U claimpilot" --health-interval 5s --health-retries 20
@@ -156,6 +157,10 @@ jobs:
         with:
           enable-cache: true
       - run: uv sync --frozen
+      - name: Migrations
+        run: uv run alembic upgrade head
+        env:
+          CLAIMPILOT_DATABASE_URL: postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot_e2e
       - uses: pnpm/action-setup@v4
         with:
           version: 10.12.1
