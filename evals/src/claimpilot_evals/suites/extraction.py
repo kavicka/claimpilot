@@ -13,6 +13,7 @@ from rapidfuzz import fuzz
 
 from claimpilot_core.domain import DocType
 from claimpilot_core.fields import kind_of, normalize
+from claimpilot_core.llm.cassette import CassetteMode
 from claimpilot_core.pii.guard import fold, rehydrate
 from claimpilot_core.schemas.documents import CRITICAL_FIELDS
 from claimpilot_core.settings import get_settings
@@ -142,6 +143,7 @@ def align_rows(
 async def run(ctx: RunContext) -> Report:
     report = Report("extraction", ctx.split)
     scan_path = ctx.options.get("scan_path", get_settings().scan_path)  # the pipeline's default
+    replay = ctx.cassette_mode is CassetteMode.REPLAY
     report.meta["scan_path"] = scan_path
     sources = _fewshot_sources()
     gt_values: list[str] = []
@@ -160,7 +162,8 @@ async def run(ctx: RunContext) -> Report:
             doc_type = DocType(doc.gt.doc_type)
             if scan_path == "vision" and doc.gt.data["scan"]:
                 images = [
-                    page_image(doc.gt.path, p.page, doc.gt.data["sha256"]) for p in doc.parsed.pages
+                    page_image(doc.gt.path, p.page, doc.gt.data["sha256"], replay=replay)
+                    for p in doc.parsed.pages
                 ]
                 ex = await extract_document_vision(
                     doc_type,

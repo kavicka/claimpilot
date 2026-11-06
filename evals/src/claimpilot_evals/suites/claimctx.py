@@ -8,6 +8,7 @@ from datetime import date, datetime
 from decimal import Decimal
 
 from claimpilot_core.domain import Coverage, DocType, Product
+from claimpilot_core.llm.cassette import CassetteMode
 from claimpilot_core.settings import get_settings, repo_root
 from claimpilot_evals.cache import page_image
 from claimpilot_evals.dataset import GtClaim
@@ -31,6 +32,7 @@ async def load_claim(claim: GtClaim, ctx: RunContext) -> ClaimCtx:
     rc = redact_claim(claim)
     mapping = {t: v for t, (_, v) in rc.redactor.mapping().items()}
     vision = ctx.options.get("scan_path", get_settings().scan_path) == "vision"
+    replay = ctx.cassette_mode is CassetteMode.REPLAY
     docs = []
     for doc in rc.docs:
         # As in the pipeline: the type comes from the classifier and the language from the text,
@@ -40,7 +42,10 @@ async def load_claim(claim: GtClaim, ctx: RunContext) -> ClaimCtx:
         if vision and any(b.ocr for b in doc.parsed.blocks):  # the pipeline's test for a scan
             ex = await extract_document_vision(
                 doc_type,
-                [page_image(doc.gt.path, p.page, doc.gt.data["sha256"]) for p in doc.parsed.pages],
+                [
+                    page_image(doc.gt.path, p.page, doc.gt.data["sha256"], replay=replay)
+                    for p in doc.parsed.pages
+                ],
                 doc.parsed,
                 doc.redacted,
                 ctx.gateway,

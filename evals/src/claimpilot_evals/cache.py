@@ -32,14 +32,19 @@ def parsed(path: Path, sha: str | None = None) -> ParsedDocument:
     return doc
 
 
-def page_image(path: Path, page: int, sha: str) -> str:
+def page_image(path: Path, page: int, sha: str, *, replay: bool = False) -> str:
     """The page as base64 PNG for the vision model when the file is here; otherwise a
-    "sha256:<hex>" reference from the committed index, which only a cassette replay can serve."""
+    "sha256:<hex>" reference from the committed index, which only a cassette replay can serve.
+
+    A replay takes the indexed reference even when the file is here: the PNG bytes depend on the
+    platform's renderer, so a page rendered on Linux would miss a cassette recorded on macOS."""
     from claimpilot_core.llm.cassette import IMAGE_REF, image_digest
     from claimpilot_worker.ingest.renders import page_png_b64
 
     index = json.loads(PAGE_INDEX.read_text("utf-8")) if PAGE_INDEX.exists() else {}
     key = f"{sha}:{page}"
+    if replay and key in index:
+        return IMAGE_REF + index[key]
     if not path.exists():
         if key not in index:
             raise FileNotFoundError(f"{path.name} is missing and page {page} is not indexed")
