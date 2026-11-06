@@ -11,6 +11,7 @@ name: deploy
 #   ALERT_EMAIL          budget alerts
 #   CERTIFICATE_ARN      optional ACM certificate for HTTPS
 #   CRM_UI_REPOSITORY    owner/name of the design system repository (also used by ci)
+#   CRM_UI_REF           commit of that repository to build with (also used by ci)
 # Secret CRM_UI_TOKEN: read access to that repository (not needed if it is public).
 # No AWS keys are stored in GitHub: the job assumes the role through OIDC.
 
@@ -37,6 +38,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: ${{ vars.CRM_UI_REPOSITORY || 'kavicka/crm-ui' }}
+          # The design system commit this UI is built and tested against; bump it on purpose.
+          ref: ${{ vars.CRM_UI_REF || '54f426eba5dce94a2e269557b3f8fe734c3161d7' }}
           token: ${{ secrets.CRM_UI_TOKEN || github.token }}
           path: crm-ui
       - run: mv crm-ui ../crm-ui

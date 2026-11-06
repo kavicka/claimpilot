@@ -123,6 +123,8 @@ jobs:
         if: matrix.name == 'ui'
         with:
           repository: ${{ vars.CRM_UI_REPOSITORY || 'kavicka/crm-ui' }}
+          # The design system commit this UI is built and tested against; bump it on purpose.
+          ref: ${{ vars.CRM_UI_REF || '54f426eba5dce94a2e269557b3f8fe734c3161d7' }}
           token: ${{ secrets.CRM_UI_TOKEN || github.token }}
           path: crm-ui
       - if: matrix.name == 'ui'
@@ -177,6 +179,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: ${{ vars.CRM_UI_REPOSITORY || 'kavicka/crm-ui' }}
+          # The design system commit this UI is built and tested against; bump it on purpose.
+          ref: ${{ vars.CRM_UI_REF || '54f426eba5dce94a2e269557b3f8fe734c3161d7' }}
           token: ${{ secrets.CRM_UI_TOKEN || github.token }}
           path: crm-ui
       - run: mv crm-ui ../crm-ui
