@@ -38,8 +38,13 @@ jobs:
           uv run ruff format --check .
       - name: Types
         run: uv run pyright
-      - name: Migrations
-        run: uv run alembic upgrade head
+      - name: Database for the api
+        # ui/playwright.config.ts points the api at claimpilot_e2e; it must exist before the api
+        # starts. The seed (tests/e2e/seed.py) connects to claimpilot as its admin database.
+        run: |
+          PGPASSWORD=claimpilot psql -h 127.0.0.1 -p 5438 -U claimpilot -d claimpilot \
+            -c 'CREATE DATABASE claimpilot_e2e'
+          uv run alembic upgrade head
       - name: Unit tests
         run: uv run pytest
       - name: Database tests
@@ -140,8 +145,7 @@ jobs:
         env:
           POSTGRES_USER: claimpilot
           POSTGRES_PASSWORD: claimpilot
-          # The database ui/playwright.config.ts points the api at; it must exist before the api starts.
-          POSTGRES_DB: claimpilot_e2e
+          POSTGRES_DB: claimpilot
         ports: ["5438:5432"]
         options: >-
           --health-cmd "pg_isready -U claimpilot" --health-interval 5s --health-retries 20
@@ -157,8 +161,13 @@ jobs:
         with:
           enable-cache: true
       - run: uv sync --frozen
-      - name: Migrations
-        run: uv run alembic upgrade head
+      - name: Database for the api
+        # ui/playwright.config.ts points the api at claimpilot_e2e; it must exist before the api
+        # starts. The seed (tests/e2e/seed.py) connects to claimpilot as its admin database.
+        run: |
+          PGPASSWORD=claimpilot psql -h 127.0.0.1 -p 5438 -U claimpilot -d claimpilot \
+            -c 'CREATE DATABASE claimpilot_e2e'
+          uv run alembic upgrade head
         env:
           CLAIMPILOT_DATABASE_URL: postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot_e2e
       - uses: pnpm/action-setup@v4
