@@ -1,5 +1,5 @@
 ---
-version: 5
+version: 6
 description: Grounded header fields of a supplier invoice, credit note or proforma (everything but the line items)
 ---
 ## system
@@ -18,7 +18,7 @@ Rules:
 - total_net and total_vat only when the invoice prints them as totals; never add up the recap rows yourself. A row "Súčet položiek | 734,20 | 146,84 | 881,04" holds total_net, total_vat and total, in that order.
 - second_currency_total is the total in the other currency (e.g. "107.490,55 CZK" next to "4.291,04 EUR"), never the euro total.
 - recap: one entry per VAT rate, from the rows that pair a rate with its base and VAT (e.g. "19,00%  5 812,40  1 104,36"). The overall "Základ" and "Daň" totals are not recap rows.
-- reverse_charge: only a sentence that exempts the supply from VAT or moves the tax to the buyer. A legend that explains VAT regime letters ("Režim DPH: A=Tuzemsko, B=...") is not one.
+- reverse_charge: only a sentence that exempts the supply from VAT or moves the tax to the buyer. A legend that explains VAT codes ("Kód DPH: T = tuzemské plnenie, P = ...") is not one.
 - Personal data is replaced by tokens such as <PERSON_1>, <EMAIL_1>. Copy tokens exactly.
 - A field that is not printed gets value null, quote null and page null. Do not guess.
 - quote is a short exact excerpt of the text (at most 100 characters) that contains the value. page is the number from the nearest "=== Page N ===" line above it.

@@ -50372,8 +50372,8 @@
   {
    "id": "DE-0036/header.supplier_ico",
    "ok": true,
-   "expected": "98618881",
-   "got": "98618881",
+   "expected": "91874874",
+   "got": "91874874",
    "tags": [
     "header"
    ],
@@ -50382,8 +50382,8 @@
   {
    "id": "DE-0036/header.supplier_vat_id",
    "ok": true,
-   "expected": "SK2918078559",
-   "got": "SK2918078559",
+   "expected": "SK2996426807",
+   "got": "SK2996426807",
    "tags": [
     "header"
    ],
@@ -50462,8 +50462,8 @@
   {
    "id": "DE-0036/header.supplier_dic",
    "ok": true,
-   "expected": "2918078559",
-   "got": "2918078559",
+   "expected": "2996426807",
+   "got": "2996426807",
    "tags": [
     "header"
    ],
@@ -59222,8 +59222,8 @@
   {
    "id": "DE-0043/header.supplier_ico",
    "ok": true,
-   "expected": "98618881",
-   "got": "98618881",
+   "expected": "91874874",
+   "got": "91874874",
    "tags": [
     "header"
    ],
@@ -59232,8 +59232,8 @@
   {
    "id": "DE-0043/header.supplier_vat_id",
    "ok": true,
-   "expected": "SK2918078559",
-   "got": "SK2918078559",
+   "expected": "SK2996426807",
+   "got": "SK2996426807",
    "tags": [
     "header"
    ],
@@ -59312,8 +59312,8 @@
   {
    "id": "DE-0043/header.supplier_dic",
    "ok": true,
-   "expected": "2918078559",
-   "got": "2918078559",
+   "expected": "2996426807",
+   "got": "2996426807",
    "tags": [
     "header"
    ],
@@ -74402,8 +74402,8 @@
   {
    "id": "DE-0055/header.supplier_ico",
    "ok": true,
-   "expected": "98618881",
-   "got": "98618881",
+   "expected": "91874874",
+   "got": "91874874",
    "tags": [
     "header"
    ],
@@ -74412,8 +74412,8 @@
   {
    "id": "DE-0055/header.supplier_vat_id",
    "ok": true,
-   "expected": "SK2918078559",
-   "got": "SK2918078559",
+   "expected": "SK2996426807",
+   "got": "SK2996426807",
    "tags": [
     "header"
    ],
@@ -74492,8 +74492,8 @@
   {
    "id": "DE-0055/header.supplier_dic",
    "ok": true,
-   "expected": "2918078559",
-   "got": "2918078559",
+   "expected": "2996426807",
+   "got": "2996426807",
    "tags": [
     "header"
    ],
@@ -76752,8 +76752,8 @@
   {
    "id": "DE-0056/header.supplier_ico",
    "ok": true,
-   "expected": "98618881",
-   "got": "98618881",
+   "expected": "91874874",
+   "got": "91874874",
    "tags": [
     "header"
    ],
@@ -76762,8 +76762,8 @@
   {
    "id": "DE-0056/header.supplier_vat_id",
    "ok": true,
-   "expected": "SK2918078559",
-   "got": "SK2918078559",
+   "expected": "SK2996426807",
+   "got": "SK2996426807",
    "tags": [
     "header"
    ],
@@ -76842,8 +76842,8 @@
   {
    "id": "DE-0056/header.supplier_dic",
    "ok": true,
-   "expected": "2918078559",
-   "got": "2918078559",
+   "expected": "2996426807",
+   "got": "2996426807",
    "tags": [
     "header"
    ],

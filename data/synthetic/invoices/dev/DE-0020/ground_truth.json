@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "7df55bbf7deb6f0beecd6e41f8eb5c1754cc0d17630c7eb7c4aa1b86d737c60b",
+ "sha256": "9b9884b2ecde3319f57bef3f9d4a7d038e73ef0de215b067c8e6476528b43e79",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -20,7 +20,7 @@
  "supplier_key": "enzymo",
  "supplier_registered": true,
  "buyer_key": "central",
- "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
  "header": {
   "document_kind": {
    "printed": "Invoice",
@@ -28,13 +28,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "256410",
-   "value": "256410",
+   "printed": "251677",
+   "value": "251677",
    "page": 1
   },
   "issue_date": {
-   "printed": "01.05.2025",
-   "value": "2025-05-01",
+   "printed": "09.01.2025",
+   "value": "2025-01-09",
    "page": 1
   },
   "supplier_name": {
@@ -43,18 +43,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94545154",
-   "value": "94545154",
+   "printed": "94999538",
+   "value": "94999538",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94545154",
-   "value": "CZ94545154",
+   "printed": "CZ94999538",
+   "value": "CZ94999538",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ12 6100 0000 0043 8138 6643",
-   "value": "CZ1261000000004381386643",
+   "printed": "CZ48 0100 0000 0059 4634 5297",
+   "value": "CZ4801000000005946345297",
    "page": 1
   },
   "buyer_name": {
@@ -73,18 +73,18 @@
    "page": 1
   },
   "total": {
-   "printed": "2 874,96",
-   "value": "2874.96",
+   "printed": "12 766,08",
+   "value": "12766.08",
    "page": 1
   },
   "amount_due": {
-   "printed": "2 874,96",
-   "value": "2874.96",
+   "printed": "12 766,08",
+   "value": "12766.08",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25170765",
-   "value": "OB25170765",
+   "printed": "OB25886985",
+   "value": "OB25886985",
    "page": 1
   },
   "reverse_charge": {
@@ -102,47 +102,47 @@
   {
    "cells": {
     "name": {
-     "printed": "Vivera kvapky do nosa 10 ml",
-     "value": "Vivera kvapky do nosa 10 ml"
+     "printed": "Medisan kvapky do nosa 10 ml",
+     "value": "Medisan kvapky do nosa 10 ml"
     },
     "quantity": {
-     "printed": "24",
-     "value": "24"
+     "printed": "96",
+     "value": "96"
     },
     "line_net": {
-     "printed": "2 874,96",
-     "value": "2874.96"
+     "printed": "12 766,08",
+     "value": "12766.08"
     },
     "ean": {
-     "printed": "8598818253104",
-     "value": "8598818253104"
+     "printed": "8584403638890",
+     "value": "8584403638890"
     },
     "unit_price": {
-     "printed": "119,79",
-     "value": "119.79"
+     "printed": "132,98",
+     "value": "132.98"
     },
     "origin": {
-     "printed": "CZ",
-     "value": "CZ"
+     "printed": "SK",
+     "value": "SK"
     },
     "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
+     "printed": "33049900",
+     "value": "33049900"
     }
    },
    "batches": [
     {
      "batch": {
-      "printed": "4E88598",
-      "value": "4E88598"
+      "printed": "1C61535",
+      "value": "1C61535"
      },
      "expiry": {
-      "printed": "01/28",
-      "value": "01/28"
+      "printed": "08/28",
+      "value": "08/28"
      },
      "quantity": {
-      "printed": "24",
-      "value": "24"
+      "printed": "96",
+      "value": "96"
      }
     }
    ],
@@ -154,6 +154,6 @@
  "findings": [],
  "pii": [
   "Zuzana Švecová",
-  "+420 954 329 329"
+  "+420 996 674 358"
  ]
 }

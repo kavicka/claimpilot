@@ -1,71 +1,72 @@
 {
  "invoice_id": "TE-D002",
  "split": "test",
- "layout": "sap",
+ "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "b55282ea6b0d84a005acdbde6cb5d506cdabdbf3f7288673f43305acf87ca108",
- "pages_total": 2,
- "pages_present": 2,
- "scan": false,
- "scan_dpi": null,
- "language": "sk",
- "duplicate_of": "TE-0008",
+ "sha256": "777d1d8cf80c1b50c3bf77c721817c7cac2de9cbe8b12288d813da052f32112d",
+ "pages_total": 1,
+ "pages_present": 1,
+ "scan": true,
+ "scan_dpi": 150,
+ "language": "en",
+ "duplicate_of": "TE-0020",
  "edge_cases": [
-  "dual_currency",
+  "batch_split",
   "duplicate_file",
   "reverse_charge",
-  "terms_page"
+  "scan",
+  "stamp"
  ],
  "vat_method": "per_rate",
- "supplier_key": "lumina",
+ "supplier_key": "novamed",
  "supplier_registered": true,
- "buyer_key": "retail",
+ "buyer_key": "central",
  "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
  "header": {
   "document_kind": {
-   "printed": "Faktúra",
+   "printed": "Invoice",
    "value": "invoice",
    "page": 1
   },
   "invoice_number": {
-   "printed": "290955409",
-   "value": "290955409",
+   "printed": "252390",
+   "value": "252390",
    "page": 1
   },
   "issue_date": {
-   "printed": "06.06.2025",
-   "value": "2025-06-06",
+   "printed": "19.07.2025",
+   "value": "2025-07-19",
    "page": 1
   },
   "supplier_name": {
-   "printed": "Lumina Cosmetics CZ s.r.o.",
-   "value": "Lumina Cosmetics CZ s.r.o.",
+   "printed": "Novamed Pharma CZ s.r.o.",
+   "value": "Novamed Pharma CZ s.r.o.",
    "page": 1
   },
   "supplier_ico": {
-   "printed": "95474463",
-   "value": "95474463",
+   "printed": "99900173",
+   "value": "99900173",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ95474463",
-   "value": "CZ95474463",
+   "printed": "CZ99900173",
+   "value": "CZ99900173",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ62 0100 0000 0058 2742 5761",
-   "value": "CZ6201000000005827425761",
+   "printed": "CZ29 0800 0000 0011 6177 5202",
+   "value": "CZ2908000000001161775202",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever Retail s.r.o.",
-   "value": "Lekárne Sever Retail s.r.o.",
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2992944152",
-   "value": "SK2992944152",
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
    "page": 1
   },
   "currency": {
@@ -74,93 +75,28 @@
    "page": 1
   },
   "total": {
-   "printed": "3.141,60",
-   "value": "3141.60",
-   "page": 1
-  },
-  "tax_point_date": {
-   "printed": "06.06.2025",
-   "value": "2025-06-06",
-   "page": 1
-  },
-  "due_date": {
-   "printed": "20.06.2025",
-   "value": "2025-06-20",
-   "page": 1
-  },
-  "supplier_dic": {
-   "printed": "CZ95474463",
-   "value": "CZ95474463",
-   "page": 1
-  },
-  "buyer_ico": {
-   "printed": "93533446",
-   "value": "93533446",
-   "page": 1
-  },
-  "buyer_dic": {
-   "printed": "2992944152",
-   "value": "2992944152",
-   "page": 1
-  },
-  "variable_symbol": {
-   "printed": "290955409",
-   "value": "290955409",
-   "page": 1
-  },
-  "constant_symbol": {
-   "printed": "0008",
-   "value": "0008",
-   "page": 1
-  },
-  "specific_symbol": {
-   "printed": "113129",
-   "value": "113129",
+   "printed": "6 661,56",
+   "value": "6661.56",
    "page": 1
   },
   "amount_due": {
-   "printed": "3.141,60",
-   "value": "3141.60",
-   "page": 1
-  },
-  "total_net": {
-   "printed": "3.141,60",
-   "value": "3141.60",
-   "page": 1
-  },
-  "total_vat": {
-   "printed": "0,00",
-   "value": "0.00",
+   "printed": "6 661,56",
+   "value": "6661.56",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25815454",
-   "value": "OB25815454",
-   "page": 1
-  },
-  "delivery_note_numbers": {
-   "printed": "29463435",
-   "value": "29463435",
-   "page": 1
-  },
-  "customer_number": {
-   "printed": "15616",
-   "value": "15616",
+   "printed": "OB25072487",
+   "value": "OB25072487",
    "page": 1
   },
   "reverse_charge": {
-   "printed": "Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.",
+   "printed": "Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).",
    "value": true,
    "page": 1
   },
-  "second_currency_total": {
-   "printed": "78.697,08",
-   "value": "78697.08",
-   "page": 1
-  },
-  "fx_rate": {
-   "printed": "25,05",
-   "value": "25.05",
+  "page_note": {
+   "printed": "Page: 1/1",
+   "value": "Page: 1/1",
    "page": 1
   }
  },
@@ -168,149 +104,190 @@
   {
    "cells": {
     "name": {
-     "printed": "Vivera sprchový gél s levanduľou 400 ml",
-     "value": "Vivera sprchový gél s levanduľou 400 ml"
+     "printed": "Kalmina kapsuly na trávenie 30 cps",
+     "value": "Kalmina kapsuly na trávenie 30 cps"
     },
     "quantity": {
-     "printed": "200",
-     "value": "200"
+     "printed": "12",
+     "value": "12"
     },
     "line_net": {
-     "printed": "2.214,00",
-     "value": "2214.00"
-    },
-    "vat_rate": {
-     "printed": "0",
-     "value": "0"
+     "printed": "214,68",
+     "value": "214.68"
     },
     "ean": {
-     "printed": "8590688535977",
-     "value": "8590688535977"
-    },
-    "supplier_code": {
-     "printed": "AU816459",
-     "value": "AU816459"
+     "printed": "8590179624555",
+     "value": "8590179624555"
     },
     "unit_price": {
-     "printed": "11,07",
-     "value": "11.07"
+     "printed": "17,89",
+     "value": "17.89"
     },
-    "net_unit_price": {
-     "printed": "11,07",
-     "value": "11.07"
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
     }
    },
-   "batches": [],
+   "batches": [
+    {
+     "batch": {
+      "printed": "3E68155",
+      "value": "3E68155"
+     },
+     "expiry": {
+      "printed": "01/29",
+      "value": "01/29"
+     },
+     "quantity": {
+      "printed": "12",
+      "value": "12"
+     }
+    }
+   ],
    "page": 1
   },
   {
    "cells": {
     "name": {
-     "printed": "Kalmina bandáž členku veľkosť M",
-     "value": "Kalmina bandáž členku veľkosť M"
+     "printed": "Medisan sirup na kašeľ 100 ml",
+     "value": "Medisan sirup na kašeľ 100 ml"
+    },
+    "quantity": {
+     "printed": "48",
+     "value": "48"
+    },
+    "line_net": {
+     "printed": "3 247,20",
+     "value": "3247.20"
+    },
+    "ean": {
+     "printed": "8591572125908",
+     "value": "8591572125908"
+    },
+    "unit_price": {
+     "printed": "67,65",
+     "value": "67.65"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "3N57928",
+      "value": "3N57928"
+     },
+     "expiry": {
+      "printed": "07/28",
+      "value": "07/28"
+     },
+     "quantity": {
+      "printed": "43",
+      "value": "43"
+     }
+    },
+    {
+     "batch": {
+      "printed": "3N57984",
+      "value": "3N57984"
+     },
+     "expiry": {
+      "printed": "07/28",
+      "value": "07/28"
+     },
+     "quantity": {
+      "printed": "5",
+      "value": "5"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana masť na hojenie rán 30 g",
+     "value": "Herbana masť na hojenie rán 30 g"
     },
     "quantity": {
      "printed": "24",
      "value": "24"
     },
     "line_net": {
-     "printed": "597,60",
-     "value": "597.60"
-    },
-    "vat_rate": {
-     "printed": "0",
-     "value": "0"
+     "printed": "3 199,68",
+     "value": "3199.68"
     },
     "ean": {
-     "printed": "4008222698025",
-     "value": "4008222698025"
-    },
-    "supplier_code": {
-     "printed": "LC184045",
-     "value": "LC184045"
+     "printed": "8597738871467",
+     "value": "8597738871467"
     },
     "unit_price": {
-     "printed": "27,07",
-     "value": "27.07"
+     "printed": "133,32",
+     "value": "133.32"
     },
-    "struct_discount_pct": {
-     "printed": "8,00%",
-     "value": "8"
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
     },
-    "net_unit_price": {
-     "printed": "24,90",
-     "value": "24.90"
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
     }
    },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Kalmina krém na ruky s panthenolom 100 ml",
-     "value": "Kalmina krém na ruky s panthenolom 100 ml"
+   "batches": [
+    {
+     "batch": {
+      "printed": "2L43969",
+      "value": "2L43969"
+     },
+     "expiry": {
+      "printed": "06/26",
+      "value": "06/26"
+     },
+     "quantity": {
+      "printed": "23",
+      "value": "23"
+     }
     },
-    "quantity": {
-     "printed": "60",
-     "value": "60"
-    },
-    "line_net": {
-     "printed": "330,00",
-     "value": "330.00"
-    },
-    "vat_rate": {
-     "printed": "0",
-     "value": "0"
-    },
-    "ean": {
-     "printed": "4003675427314",
-     "value": "4003675427314"
-    },
-    "supplier_code": {
-     "printed": "MB264204",
-     "value": "MB264204"
-    },
-    "unit_price": {
-     "printed": "5,50",
-     "value": "5.50"
-    },
-    "net_unit_price": {
-     "printed": "5,50",
-     "value": "5.50"
+    {
+     "batch": {
+      "printed": "2L43132",
+      "value": "2L43132"
+     },
+     "expiry": {
+      "printed": "06/26",
+      "value": "06/26"
+     },
+     "quantity": {
+      "printed": "1",
+      "value": "1"
+     }
     }
-   },
-   "batches": [],
+   ],
    "page": 1
   }
  ],
- "recap": [
-  {
-   "rate": {
-    "printed": "0",
-    "value": "0"
-   },
-   "base": {
-    "printed": "3.141,60",
-    "value": "3141.60"
-   },
-   "vat": {
-    "printed": "0,00",
-    "value": "0.00"
-   },
-   "page": 1
-  }
- ],
+ "recap": [],
  "fees": [],
  "findings": [
   {
    "kind": "duplicate",
    "line": null,
-   "detail": "TE-0008"
+   "detail": "TE-0020"
   }
  ],
  "pii": [
-  "Jaroslava Novotná",
-  "+420 955 891 364"
+  "Ivo Čech",
+  "+420 969 867 981"
  ]
 }

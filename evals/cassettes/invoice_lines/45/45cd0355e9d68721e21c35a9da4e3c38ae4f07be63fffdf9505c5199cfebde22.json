@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "b5dd98d4ccb31b542c4c487fa55a88ae503546ec4038292779d8eff3cf95f83c",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 1,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Kalmina kapsuly na trávenie 30 cps\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"200\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"17,89\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"3 578,00\"\n        },\n        {\n          \"field\": \"customs_code\",\n          \"value\": \"30049000\"\n        },\n        {\n          \"field\": \"origin\",\n          \"value\": \"CZ\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8590179624555\"\n        },\n        {\n          \"field\": \"batch\",\n          \"value\": \"3B59877\"\n        },\n        {\n          \"field\": \"expiry\",\n          \"value\": \"03/27\"\n        },\n        {\n          \"field\": \"batch_quantity\",\n          \"value\": \"200\"\n        }\n      ]\n    },\n    {\n      \"item\": 2,\n      \"values\": [\n        {\n          \"field\": \"name\",\n          \"value\": \"Kalmina sirup na kašel 100 ml\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"200\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"39,66\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"7932,00\"\n        },\n        {\n          \"field\": \"customs_code\",\n          \"value\": \"21069098\"\n        },\n        {\n          \"field\": \"origin\",\n          \"value\": \"SK\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8583867584231\"\n        },\n        {\n          \"field\": \"batch\",\n          \"value\": \"5A36491\"\n        },\n        {\n          \"field\": \"expiry\",\n          \"value\": \"08/27\"\n        },\n        {\n          \"field\": \"batch_quantity\",\n          \"value\": \"200\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1955,
+   "tokens_out": 528,
+   "latency_ms": 19453
+  },
+  "cached": false
+ }
+}

@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "461bd2aa65ea32fa48dd2ec2ae9c8a90cf86c9989a803cf9a3e3edf7acd107e0",
+ "sha256": "5ee61c80500aecf900dd98d56b4fa311ace6e962cc755f9cc5baf89bd53149f1",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "255546",
-   "value": "255546",
+   "printed": "250633",
+   "value": "250633",
    "page": 1
   },
   "issue_date": {
-   "printed": "25.01.2025",
-   "value": "2025-01-25",
+   "printed": "19.07.2025",
+   "value": "2025-07-19",
    "page": 1
   },
   "supplier_name": {
@@ -44,18 +44,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "90907841",
-   "value": "90907841",
+   "printed": "99900173",
+   "value": "99900173",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ90907841",
-   "value": "CZ90907841",
+   "printed": "CZ99900173",
+   "value": "CZ99900173",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ57 5500 0000 0018 6736 2483",
-   "value": "CZ5755000000001867362483",
+   "printed": "CZ29 0800 0000 0011 6177 5202",
+   "value": "CZ2908000000001161775202",
    "page": 1
   },
   "buyer_name": {
@@ -74,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "10 773,20",
-   "value": "10773.20",
+   "printed": "2 437,56",
+   "value": "2437.56",
    "page": 1
   },
   "amount_due": {
-   "printed": "10 773,20",
-   "value": "10773.20",
+   "printed": "2 437,56",
+   "value": "2437.56",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25641191",
-   "value": "OB25641191",
+   "printed": "OB25494800",
+   "value": "OB25494800",
    "page": 1
   },
   "reverse_charge": {
@@ -103,110 +103,61 @@
   {
    "cells": {
     "name": {
-     "printed": "Kalmina kapsuly na trávenie 30 cps",
-     "value": "Kalmina kapsuly na trávenie 30 cps"
+     "printed": "Nutrilek - kláštorný čaj na priedušky 20x2g",
+     "value": "Nutrilek - kláštorný čaj na priedušky 20x2g"
     },
     "quantity": {
-     "printed": "200",
-     "value": "200"
+     "printed": "24",
+     "value": "24"
     },
     "line_net": {
-     "printed": "2 918,00",
-     "value": "2918.00"
+     "printed": "1 460,64",
+     "value": "1460.64"
     },
     "ean": {
-     "printed": "8591434665122",
-     "value": "8591434665122"
+     "printed": "8589714433325",
+     "value": "8589714433325"
     },
     "unit_price": {
-     "printed": "14,59",
-     "value": "14.59"
-    },
-    "origin": {
-     "printed": "CZ",
-     "value": "CZ"
-    },
-    "customs_code": {
-     "printed": "33049900",
-     "value": "33049900"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "3E72934",
-      "value": "3E72934"
-     },
-     "expiry": {
-      "printed": "12/29",
-      "value": "12/29"
-     },
-     "quantity": {
-      "printed": "200",
-      "value": "200"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Nutrilek - čaj na pokojný spánok 20x2g",
-     "value": "Nutrilek - čaj na pokojný spánok 20x2g"
-    },
-    "quantity": {
-     "printed": "144",
-     "value": "144"
-    },
-    "line_net": {
-     "printed": "4 537,44",
-     "value": "4537.44"
-    },
-    "ean": {
-     "printed": "8584515204310",
-     "value": "8584515204310"
-    },
-    "unit_price": {
-     "printed": "31,51",
-     "value": "31.51"
+     "printed": "60,86",
+     "value": "60.86"
     },
     "origin": {
      "printed": "SK",
      "value": "SK"
     },
     "customs_code": {
-     "printed": "33049900",
-     "value": "33049900"
+     "printed": "30049000",
+     "value": "30049000"
     }
    },
    "batches": [
     {
      "batch": {
-      "printed": "4E24639",
-      "value": "4E24639"
+      "printed": "6N31691",
+      "value": "6N31691"
      },
      "expiry": {
-      "printed": "02/27",
-      "value": "02/27"
+      "printed": "08/29",
+      "value": "08/29"
      },
      "quantity": {
-      "printed": "137",
-      "value": "137"
+      "printed": "23",
+      "value": "23"
      }
     },
     {
      "batch": {
-      "printed": "4E24833",
-      "value": "4E24833"
+      "printed": "6N31285",
+      "value": "6N31285"
      },
      "expiry": {
-      "printed": "02/27",
-      "value": "02/27"
+      "printed": "08/29",
+      "value": "08/29"
      },
      "quantity": {
-      "printed": "7",
-      "value": "7"
+      "printed": "1",
+      "value": "1"
      }
     }
    ],
@@ -215,28 +166,28 @@
   {
    "cells": {
     "name": {
-     "printed": "Florea - cukríky s medom a šalviou 40g",
-     "value": "Florea - cukríky s medom a šalviou 40g"
+     "printed": "Kalmina sirup na kašeľ 100 ml",
+     "value": "Kalmina sirup na kašeľ 100 ml"
     },
     "quantity": {
-     "printed": "96",
-     "value": "96"
+     "printed": "12",
+     "value": "12"
     },
     "line_net": {
-     "printed": "3 317,76",
-     "value": "3317.76"
+     "printed": "475,92",
+     "value": "475.92"
     },
     "ean": {
-     "printed": "8595246841569",
-     "value": "8595246841569"
+     "printed": "8583867584231",
+     "value": "8583867584231"
     },
     "unit_price": {
-     "printed": "34,56",
-     "value": "34.56"
+     "printed": "39,66",
+     "value": "39.66"
     },
     "origin": {
-     "printed": "CZ",
-     "value": "CZ"
+     "printed": "SK",
+     "value": "SK"
     },
     "customs_code": {
      "printed": "21069098",
@@ -246,30 +197,65 @@
    "batches": [
     {
      "batch": {
-      "printed": "5L63585",
-      "value": "5L63585"
+      "printed": "6C30025",
+      "value": "6C30025"
      },
      "expiry": {
-      "printed": "12/29",
-      "value": "12/29"
+      "printed": "12/27",
+      "value": "12/27"
      },
      "quantity": {
-      "printed": "93",
-      "value": "93"
+      "printed": "12",
+      "value": "12"
      }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit sirup na kašeľ 100 ml",
+     "value": "Sanovit sirup na kašeľ 100 ml"
     },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "501,00",
+     "value": "501.00"
+    },
+    "ean": {
+     "printed": "8593913861124",
+     "value": "8593913861124"
+    },
+    "unit_price": {
+     "printed": "41,75",
+     "value": "41.75"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
     {
      "batch": {
-      "printed": "5L63168",
-      "value": "5L63168"
+      "printed": "2K59752",
+      "value": "2K59752"
      },
      "expiry": {
-      "printed": "12/29",
-      "value": "12/29"
+      "printed": "11/28",
+      "value": "11/28"
      },
      "quantity": {
-      "printed": "3",
-      "value": "3"
+      "printed": "12",
+      "value": "12"
      }
     }
    ],
@@ -280,7 +266,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Helena Čechová",
-  "+420 947 321 396"
+  "Ivo Čech",
+  "+420 969 867 981"
  ]
 }

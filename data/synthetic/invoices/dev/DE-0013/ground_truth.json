@@ -4,7 +4,7 @@
  "layout": "sap",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "f54606f488ade89308fd40c39fb4dc16e3e29e68e8e6fd3fd6965999a025d3ad",
+ "sha256": "9ebf95bd61e48beb617db77b85ed8a880bf4fefcb5cd4b20e8f5be6fa4adb3b9",
  "pages_total": 2,
  "pages_present": 2,
  "scan": false,
@@ -28,13 +28,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "290275231",
-   "value": "290275231",
+   "printed": "290037236",
+   "value": "290037236",
    "page": 1
   },
   "issue_date": {
-   "printed": "03.05.2025",
-   "value": "2025-05-03",
+   "printed": "23.01.2025",
+   "value": "2025-01-23",
    "page": 1
   },
   "supplier_name": {
@@ -43,18 +43,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94236011",
-   "value": "94236011",
+   "printed": "94947589",
+   "value": "94947589",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94236011",
-   "value": "CZ94236011",
+   "printed": "CZ94947589",
+   "value": "CZ94947589",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ89 2700 0000 0015 5974 2964",
-   "value": "CZ8927000000001559742964",
+   "printed": "CZ79 2700 0000 0031 8121 9976",
+   "value": "CZ7927000000003181219976",
    "page": 1
   },
   "buyer_name": {
@@ -73,23 +73,23 @@
    "page": 1
   },
   "total": {
-   "printed": "1.441,80",
-   "value": "1441.80",
+   "printed": "3.320,04",
+   "value": "3320.04",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "03.05.2025",
-   "value": "2025-05-03",
+   "printed": "23.01.2025",
+   "value": "2025-01-23",
    "page": 1
   },
   "due_date": {
-   "printed": "17.05.2025",
-   "value": "2025-05-17",
+   "printed": "06.02.2025",
+   "value": "2025-02-06",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "CZ94236011",
-   "value": "CZ94236011",
+   "printed": "CZ94947589",
+   "value": "CZ94947589",
    "page": 1
   },
   "buyer_ico": {
@@ -103,8 +103,8 @@
    "page": 1
   },
   "variable_symbol": {
-   "printed": "290275231",
-   "value": "290275231",
+   "printed": "290037236",
+   "value": "290037236",
    "page": 1
   },
   "constant_symbol": {
@@ -113,18 +113,18 @@
    "page": 1
   },
   "specific_symbol": {
-   "printed": "971083",
-   "value": "971083",
+   "printed": "633126",
+   "value": "633126",
    "page": 1
   },
   "amount_due": {
-   "printed": "1.441,80",
-   "value": "1441.80",
+   "printed": "3.320,04",
+   "value": "3320.04",
    "page": 1
   },
   "total_net": {
-   "printed": "1.441,80",
-   "value": "1441.80",
+   "printed": "3.320,04",
+   "value": "3320.04",
    "page": 1
   },
   "total_vat": {
@@ -133,18 +133,18 @@
    "page": 1
   },
   "order_number": {
-   "printed": "OB25721397",
-   "value": "OB25721397",
+   "printed": "OB25672777",
+   "value": "OB25672777",
    "page": 1
   },
   "delivery_note_numbers": {
-   "printed": "29626237",
-   "value": "29626237",
+   "printed": "2980032",
+   "value": "2980032",
    "page": 1
   },
   "customer_number": {
-   "printed": "80562",
-   "value": "80562",
+   "printed": "27533",
+   "value": "27533",
    "page": 1
   },
   "reverse_charge": {
@@ -153,8 +153,8 @@
    "page": 1
   },
   "second_currency_total": {
-   "printed": "36.117,09",
-   "value": "36117.09",
+   "printed": "83.167,00",
+   "value": "83167.00",
    "page": 1
   },
   "fx_rate": {
@@ -167,40 +167,40 @@
   {
    "cells": {
     "name": {
-     "printed": "Nutrilek manžeta k tlakomeru 22-42 cm",
-     "value": "Nutrilek manžeta k tlakomeru 22-42 cm"
+     "printed": "Nutrilek opaľovací krém SPF 50+ 50 ml",
+     "value": "Nutrilek opaľovací krém SPF 50+ 50 ml"
     },
     "quantity": {
-     "printed": "24",
-     "value": "24"
+     "printed": "200",
+     "value": "200"
     },
     "line_net": {
-     "printed": "140,64",
-     "value": "140.64"
+     "printed": "2.294,00",
+     "value": "2294.00"
     },
     "vat_rate": {
      "printed": "0",
      "value": "0"
     },
     "ean": {
-     "printed": "8587480109994",
-     "value": "8587480109994"
+     "printed": "3809157130281",
+     "value": "3809157130281"
     },
     "supplier_code": {
-     "printed": "MB748628",
-     "value": "MB748628"
+     "printed": "LC905494",
+     "value": "LC905494"
     },
     "unit_price": {
-     "printed": "6,37",
-     "value": "6.37"
+     "printed": "12,07",
+     "value": "12.07"
     },
     "struct_discount_pct": {
-     "printed": "8,00%",
-     "value": "8"
+     "printed": "5,00%",
+     "value": "5"
     },
     "net_unit_price": {
-     "printed": "5,86",
-     "value": "5.86"
+     "printed": "11,47",
+     "value": "11.47"
     }
    },
    "batches": [],
@@ -209,78 +209,166 @@
   {
    "cells": {
     "name": {
-     "printed": "DermaVita šampón proti lupinám 250 ml",
-     "value": "DermaVita šampón proti lupinám 250 ml"
-    },
-    "quantity": {
-     "printed": "144",
-     "value": "144"
-    },
-    "line_net": {
-     "printed": "835,20",
-     "value": "835.20"
-    },
-    "vat_rate": {
-     "printed": "0",
-     "value": "0"
-    },
-    "ean": {
-     "printed": "3006786769381",
-     "value": "3006786769381"
-    },
-    "supplier_code": {
-     "printed": "LC277515",
-     "value": "LC277515"
-    },
-    "unit_price": {
-     "printed": "5,80",
-     "value": "5.80"
-    },
-    "net_unit_price": {
-     "printed": "5,80",
-     "value": "5.80"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Florea teplomer digitálny",
-     "value": "Florea teplomer digitálny"
+     "printed": "DermaVita - cukríky s medom a šalviou 40g",
+     "value": "DermaVita - cukríky s medom a šalviou 40g"
     },
     "quantity": {
      "printed": "12",
      "value": "12"
     },
     "line_net": {
-     "printed": "413,88",
-     "value": "413.88"
+     "printed": "60,24",
+     "value": "60.24"
     },
     "vat_rate": {
      "printed": "0",
      "value": "0"
     },
     "ean": {
-     "printed": "4710325847193",
-     "value": "4710325847193"
+     "printed": "8588677287716",
+     "value": "8588677287716"
     },
     "supplier_code": {
-     "printed": "LC362754",
-     "value": "LC362754"
+     "printed": "MB942788",
+     "value": "MB942788"
     },
     "unit_price": {
-     "printed": "38,32",
-     "value": "38.32"
+     "printed": "5,46",
+     "value": "5.46"
     },
-    "promo_discount_pct": {
-     "printed": "10,00%",
-     "value": "10"
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
     },
     "net_unit_price": {
-     "printed": "34,49",
-     "value": "34.49"
+     "printed": "5,02",
+     "value": "5.02"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera bandáž členku veľkosť M",
+     "value": "Vivera bandáž členku veľkosť M"
+    },
+    "quantity": {
+     "printed": "36",
+     "value": "36"
+    },
+    "line_net": {
+     "printed": "248,04",
+     "value": "248.04"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8582973331531",
+     "value": "8582973331531"
+    },
+    "supplier_code": {
+     "printed": "MB935827",
+     "value": "MB935827"
+    },
+    "unit_price": {
+     "printed": "7,49",
+     "value": "7.49"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "6,89",
+     "value": "6.89"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek sprchový gél s levanduľou 400 ml",
+     "value": "Nutrilek sprchový gél s levanduľou 400 ml"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "419,52",
+     "value": "419.52"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8599555261926",
+     "value": "8599555261926"
+    },
+    "supplier_code": {
+     "printed": "LC765213",
+     "value": "LC765213"
+    },
+    "unit_price": {
+     "printed": "18,40",
+     "value": "18.40"
+    },
+    "struct_discount_pct": {
+     "printed": "5,00%",
+     "value": "5"
+    },
+    "net_unit_price": {
+     "printed": "17,48",
+     "value": "17.48"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita - cukríky s medom a šalviou 40g",
+     "value": "DermaVita - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "100",
+     "value": "100"
+    },
+    "line_net": {
+     "printed": "142,00",
+     "value": "142.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8587794502252",
+     "value": "8587794502252"
+    },
+    "supplier_code": {
+     "printed": "LC773597",
+     "value": "LC773597"
+    },
+    "unit_price": {
+     "printed": "1,49",
+     "value": "1.49"
+    },
+    "struct_discount_pct": {
+     "printed": "5,00%",
+     "value": "5"
+    },
+    "net_unit_price": {
+     "printed": "1,42",
+     "value": "1.42"
     }
    },
    "batches": [],
@@ -293,12 +381,12 @@
      "value": "Kalmina šampón proti lupinám 250 ml"
     },
     "quantity": {
-     "printed": "12",
-     "value": "12"
+     "printed": "36",
+     "value": "36"
     },
     "line_net": {
-     "printed": "52,08",
-     "value": "52.08"
+     "printed": "156,24",
+     "value": "156.24"
     },
     "vat_rate": {
      "printed": "0",
@@ -332,8 +420,8 @@
     "value": "0"
    },
    "base": {
-    "printed": "1.441,80",
-    "value": "1441.80"
+    "printed": "3.320,04",
+    "value": "3320.04"
    },
    "vat": {
     "printed": "0,00",
@@ -345,7 +433,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Květa Horváthová",
-  "+420 948 195 996"
+  "Marek Horák",
+  "+420 904 730 458"
  ]
 }

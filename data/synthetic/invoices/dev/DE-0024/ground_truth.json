@@ -4,7 +4,7 @@
  "layout": "sap",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "9e594f5ae2a8f80d478836d9eee314e87395da26957abb4b515176d521442a81",
+ "sha256": "60ec781bd4b6ee5dd6fa862af7d8f0f1366f61016b4e96e4cac5f4ecf612f5c4",
  "pages_total": 2,
  "pages_present": 2,
  "scan": false,
@@ -20,8 +20,8 @@
  "vat_method": "per_rate",
  "supplier_key": "lumina",
  "supplier_registered": true,
- "buyer_key": "retail",
- "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
  "header": {
   "document_kind": {
    "printed": "Faktúra",
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "291567958",
-   "value": "291567958",
+   "printed": "295640237",
+   "value": "295640237",
    "page": 1
   },
   "issue_date": {
-   "printed": "24.01.2025",
-   "value": "2025-01-24",
+   "printed": "19.02.2025",
+   "value": "2025-02-19",
    "page": 1
   },
   "supplier_name": {
@@ -44,28 +44,28 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "95474463",
-   "value": "95474463",
+   "printed": "92793100",
+   "value": "92793100",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ95474463",
-   "value": "CZ95474463",
+   "printed": "CZ92793100",
+   "value": "CZ92793100",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ62 0100 0000 0058 2742 5761",
-   "value": "CZ6201000000005827425761",
+   "printed": "CZ06 2010 0000 0025 8740 3104",
+   "value": "CZ0620100000002587403104",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever Retail s.r.o.",
-   "value": "Lekárne Sever Retail s.r.o.",
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2992944152",
-   "value": "SK2992944152",
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
    "page": 1
   },
   "currency": {
@@ -74,38 +74,38 @@
    "page": 1
   },
   "total": {
-   "printed": "832,00",
-   "value": "832.00",
+   "printed": "16.642,92",
+   "value": "16642.92",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "24.01.2025",
-   "value": "2025-01-24",
+   "printed": "19.02.2025",
+   "value": "2025-02-19",
    "page": 1
   },
   "due_date": {
-   "printed": "23.02.2025",
-   "value": "2025-02-23",
+   "printed": "21.03.2025",
+   "value": "2025-03-21",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "CZ95474463",
-   "value": "CZ95474463",
+   "printed": "CZ92793100",
+   "value": "CZ92793100",
    "page": 1
   },
   "buyer_ico": {
-   "printed": "93533446",
-   "value": "93533446",
+   "printed": "90882750",
+   "value": "90882750",
    "page": 1
   },
   "buyer_dic": {
-   "printed": "2992944152",
-   "value": "2992944152",
+   "printed": "2997673481",
+   "value": "2997673481",
    "page": 1
   },
   "variable_symbol": {
-   "printed": "291567958",
-   "value": "291567958",
+   "printed": "295640237",
+   "value": "295640237",
    "page": 1
   },
   "constant_symbol": {
@@ -114,18 +114,18 @@
    "page": 1
   },
   "specific_symbol": {
-   "printed": "967330",
-   "value": "967330",
+   "printed": "105089",
+   "value": "105089",
    "page": 1
   },
   "amount_due": {
-   "printed": "832,00",
-   "value": "832.00",
+   "printed": "16.642,92",
+   "value": "16642.92",
    "page": 1
   },
   "total_net": {
-   "printed": "832,00",
-   "value": "832.00",
+   "printed": "16.642,92",
+   "value": "16642.92",
    "page": 1
   },
   "total_vat": {
@@ -134,18 +134,18 @@
    "page": 1
   },
   "order_number": {
-   "printed": "OB25360328",
-   "value": "OB25360328",
+   "printed": "OB25553151",
+   "value": "OB25553151",
    "page": 1
   },
   "delivery_note_numbers": {
-   "printed": "29896985",
-   "value": "29896985",
+   "printed": "2998891",
+   "value": "2998891",
    "page": 1
   },
   "customer_number": {
-   "printed": "14418",
-   "value": "14418",
+   "printed": "90698",
+   "value": "90698",
    "page": 1
   },
   "reverse_charge": {
@@ -154,13 +154,13 @@
    "page": 1
   },
   "second_currency_total": {
-   "printed": "20.841,60",
-   "value": "20841.60",
+   "printed": "411.246,55",
+   "value": "411246.55",
    "page": 1
   },
   "fx_rate": {
-   "printed": "25,05",
-   "value": "25.05",
+   "printed": "24,71",
+   "value": "24.71",
    "page": 1
   }
  },
@@ -168,40 +168,250 @@
   {
    "cells": {
     "name": {
-     "printed": "Medisan krém na ruky s panthenolom 100 ml",
-     "value": "Medisan krém na ruky s panthenolom 100 ml"
+     "printed": "Nutrilek teplomer digitálny",
+     "value": "Nutrilek teplomer digitálny"
     },
     "quantity": {
-     "printed": "200",
-     "value": "200"
+     "printed": "144",
+     "value": "144"
     },
     "line_net": {
-     "printed": "832,00",
-     "value": "832.00"
+     "printed": "4.609,44",
+     "value": "4609.44"
     },
     "vat_rate": {
      "printed": "0",
      "value": "0"
     },
     "ean": {
-     "printed": "4005181322534",
-     "value": "4005181322534"
+     "printed": "8582698024190",
+     "value": "8582698024190"
     },
     "supplier_code": {
-     "printed": "AU650811",
-     "value": "AU650811"
+     "printed": "LC454408",
+     "value": "LC454408"
     },
     "unit_price": {
-     "printed": "4,52",
-     "value": "4.52"
+     "printed": "34,79",
+     "value": "34.79"
     },
     "struct_discount_pct": {
      "printed": "8,00%",
      "value": "8"
     },
     "net_unit_price": {
-     "printed": "4,16",
-     "value": "4.16"
+     "printed": "32,01",
+     "value": "32.01"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita - čaj na pokojný spánok 20x2g",
+     "value": "DermaVita - čaj na pokojný spánok 20x2g"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "796,32",
+     "value": "796.32"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8584098037046",
+     "value": "8584098037046"
+    },
+    "supplier_code": {
+     "printed": "LC688388",
+     "value": "LC688388"
+    },
+    "unit_price": {
+     "printed": "5,53",
+     "value": "5.53"
+    },
+    "net_unit_price": {
+     "printed": "5,53",
+     "value": "5.53"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana - cukríky s medom a šalviou 40g",
+     "value": "Herbana - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "36",
+     "value": "36"
+    },
+    "line_net": {
+     "printed": "83,16",
+     "value": "83.16"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8596964056808",
+     "value": "8596964056808"
+    },
+    "supplier_code": {
+     "printed": "MB581518",
+     "value": "MB581518"
+    },
+    "unit_price": {
+     "printed": "2,51",
+     "value": "2.51"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "2,31",
+     "value": "2.31"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek manžeta k tlakomeru 22-42 cm",
+     "value": "Nutrilek manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "100",
+     "value": "100"
+    },
+    "line_net": {
+     "printed": "3.367,00",
+     "value": "3367.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4717544974228",
+     "value": "4717544974228"
+    },
+    "supplier_code": {
+     "printed": "AU362941",
+     "value": "AU362941"
+    },
+    "unit_price": {
+     "printed": "40,66",
+     "value": "40.66"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "promo_discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "net_unit_price": {
+     "printed": "33,67",
+     "value": "33.67"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina bandáž členku veľkosť M",
+     "value": "Kalmina bandáž členku veľkosť M"
+    },
+    "quantity": {
+     "printed": "100",
+     "value": "100"
+    },
+    "line_net": {
+     "printed": "2.891,00",
+     "value": "2891.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8586785147175",
+     "value": "8586785147175"
+    },
+    "supplier_code": {
+     "printed": "LC441881",
+     "value": "LC441881"
+    },
+    "unit_price": {
+     "printed": "28,91",
+     "value": "28.91"
+    },
+    "net_unit_price": {
+     "printed": "28,91",
+     "value": "28.91"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan teplomer digitálny",
+     "value": "Medisan teplomer digitálny"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "4.896,00",
+     "value": "4896.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8585979755158",
+     "value": "8585979755158"
+    },
+    "supplier_code": {
+     "printed": "MB657459",
+     "value": "MB657459"
+    },
+    "unit_price": {
+     "printed": "29,56",
+     "value": "29.56"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "promo_discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "net_unit_price": {
+     "printed": "24,48",
+     "value": "24.48"
     }
    },
    "batches": [],
@@ -215,8 +425,8 @@
     "value": "0"
    },
    "base": {
-    "printed": "832,00",
-    "value": "832.00"
+    "printed": "16.642,92",
+    "value": "16642.92"
    },
    "vat": {
     "printed": "0,00",
@@ -229,12 +439,12 @@
  "findings": [
   {
    "kind": "short_delivery",
-   "line": 0,
+   "line": 5,
    "detail": "150 received"
   }
  ],
  "pii": [
-  "Jaroslava Novotná",
-  "+420 955 891 364"
+  "Ján Pavlíček",
+  "+420 921 676 707"
  ]
 }

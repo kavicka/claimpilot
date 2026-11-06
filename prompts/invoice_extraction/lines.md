@@ -1,5 +1,5 @@
 ---
-version: 2
+version: 3
 description: Line items of a supplier invoice, from the cells of its rebuilt item table
 ---
 ## system

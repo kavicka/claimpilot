@@ -13,7 +13,7 @@ from claimpilot_core_mock import erp
 from claimpilot_core_mock.ubl_rules import CBC
 from claimpilot_worker.export.ubl import Line, Party, UblInvoice, build
 
-SUPPLIER = Party("Medika Distribúcia a.s.", "98618881", "SK2918078559", "SK", "Pluhová 646")
+SUPPLIER = Party("Medika Distribúcia a.s.", "98618881", "SK2918078559", "SK", "Lenardova 254")
 BUYER = Party("Lekárne Sever s.r.o.", "90882750", "SK2997673481", "SK")
 IBAN = "SK44 5200 0000 0074 5333 0369"
 

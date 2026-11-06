@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "5db3dd8ebf1ca19cbbae0c350462069a83f9666ae403ccc2bcab2b2c260994ab",
+ "sha256": "4037ed4be608135e839fa3bed4f5dac5f667297da0ba31080f7e982df99ba0ae",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -20,7 +20,7 @@
  "vat_method": "per_rate",
  "supplier_key": "enzymo",
  "supplier_registered": true,
- "buyer_key": "retail",
+ "buyer_key": "central",
  "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
  "header": {
   "document_kind": {
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "256555",
-   "value": "256555",
+   "printed": "250886",
+   "value": "250886",
    "page": 1
   },
   "issue_date": {
-   "printed": "05.09.2025",
-   "value": "2025-09-05",
+   "printed": "07.10.2025",
+   "value": "2025-10-07",
    "page": 1
   },
   "supplier_name": {
@@ -44,28 +44,28 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94545154",
-   "value": "94545154",
+   "printed": "94999538",
+   "value": "94999538",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94545154",
-   "value": "CZ94545154",
+   "printed": "CZ94999538",
+   "value": "CZ94999538",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ12 6100 0000 0043 8138 6643",
-   "value": "CZ1261000000004381386643",
+   "printed": "CZ48 0100 0000 0059 4634 5297",
+   "value": "CZ4801000000005946345297",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever Retail s.r.o.",
-   "value": "Lekárne Sever Retail s.r.o.",
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2992944152",
-   "value": "SK2992944152",
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
    "page": 1
   },
   "currency": {
@@ -74,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "45 142,88",
-   "value": "45142.88",
+   "printed": "7 644,60",
+   "value": "7644.60",
    "page": 1
   },
   "amount_due": {
-   "printed": "45 142,88",
-   "value": "45142.88",
+   "printed": "7 644,60",
+   "value": "7644.60",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25852466",
-   "value": "OB25852466",
+   "printed": "OB25999171",
+   "value": "OB25999171",
    "page": 1
   },
   "reverse_charge": {
@@ -103,77 +103,28 @@
   {
    "cells": {
     "name": {
-     "printed": "DermaVita - cukríky s medom a šalviou 40g",
-     "value": "DermaVita - cukríky s medom a šalviou 40g"
+     "printed": "Herbana - čaj na pokojný spánok 20x2g",
+     "value": "Herbana - čaj na pokojný spánok 20x2g"
     },
     "quantity": {
-     "printed": "200",
-     "value": "200"
+     "printed": "12",
+     "value": "12"
     },
     "line_net": {
-     "printed": "17 412,00",
-     "value": "17412.00"
+     "printed": "529,56",
+     "value": "529.56"
     },
     "ean": {
-     "printed": "8589718954109",
-     "value": "8589718954109"
+     "printed": "8581226170392",
+     "value": "8581226170392"
     },
     "unit_price": {
-     "printed": "87,06",
-     "value": "87.06"
+     "printed": "44,13",
+     "value": "44.13"
     },
     "origin": {
      "printed": "SK",
      "value": "SK"
-    },
-    "customs_code": {
-     "printed": "33049900",
-     "value": "33049900"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "8L37321",
-      "value": "8L37321"
-     },
-     "expiry": {
-      "printed": "06/29",
-      "value": "06/29"
-     },
-     "quantity": {
-      "printed": "200",
-      "value": "200"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Nutrilek masť na hojenie rán 30 g",
-     "value": "Nutrilek masť na hojenie rán 30 g"
-    },
-    "quantity": {
-     "printed": "48",
-     "value": "48"
-    },
-    "line_net": {
-     "printed": "6 326,88",
-     "value": "6326.88"
-    },
-    "ean": {
-     "printed": "8598054595754",
-     "value": "8598054595754"
-    },
-    "unit_price": {
-     "printed": "131,81",
-     "value": "131.81"
-    },
-    "origin": {
-     "printed": "CZ",
-     "value": "CZ"
     },
     "customs_code": {
      "printed": "30049000",
@@ -183,30 +134,93 @@
    "batches": [
     {
      "batch": {
-      "printed": "8L71003",
-      "value": "8L71003"
+      "printed": "6E97901",
+      "value": "6E97901"
      },
      "expiry": {
-      "printed": "01/29",
-      "value": "01/29"
+      "printed": "03/26",
+      "value": "03/26"
      },
      "quantity": {
-      "printed": "46",
-      "value": "46"
+      "printed": "12",
+      "value": "12"
      }
     },
     {
      "batch": {
-      "printed": "8L71525",
-      "value": "8L71525"
+      "printed": "6E97247",
+      "value": "6E97247"
      },
      "expiry": {
-      "printed": "01/29",
-      "value": "01/29"
+      "printed": "03/26",
+      "value": "03/26"
      },
      "quantity": {
-      "printed": "2",
-      "value": "2"
+      "printed": "0",
+      "value": "0"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea kapsuly na trávenie 30 cps",
+     "value": "Florea kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "2 450,88",
+     "value": "2450.88"
+    },
+    "ean": {
+     "printed": "8598669297180",
+     "value": "8598669297180"
+    },
+    "unit_price": {
+     "printed": "17,02",
+     "value": "17.02"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "8K36347",
+      "value": "8K36347"
+     },
+     "expiry": {
+      "printed": "08/26",
+      "value": "08/26"
+     },
+     "quantity": {
+      "printed": "130",
+      "value": "130"
+     }
+    },
+    {
+     "batch": {
+      "printed": "8K36376",
+      "value": "8K36376"
+     },
+     "expiry": {
+      "printed": "08/26",
+      "value": "08/26"
+     },
+     "quantity": {
+      "printed": "14",
+      "value": "14"
      }
     }
    ],
@@ -219,57 +233,43 @@
      "value": "Herbana kvapky do nosa 10 ml"
     },
     "quantity": {
-     "printed": "200",
-     "value": "200"
+     "printed": "48",
+     "value": "48"
     },
     "line_net": {
-     "printed": "21 404,00",
-     "value": "21404.00"
+     "printed": "4 664,16",
+     "value": "4664.16"
     },
     "ean": {
-     "printed": "8582826557026",
-     "value": "8582826557026"
+     "printed": "8593115519595",
+     "value": "8593115519595"
     },
     "unit_price": {
-     "printed": "107,02",
-     "value": "107.02"
+     "printed": "97,17",
+     "value": "97.17"
     },
     "origin": {
-     "printed": "SK",
-     "value": "SK"
+     "printed": "CZ",
+     "value": "CZ"
     },
     "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
+     "printed": "33049900",
+     "value": "33049900"
     }
    },
    "batches": [
     {
      "batch": {
-      "printed": "4K57185",
-      "value": "4K57185"
+      "printed": "5L56266",
+      "value": "5L56266"
      },
      "expiry": {
-      "printed": "03/28",
-      "value": "03/28"
+      "printed": "11/29",
+      "value": "11/29"
      },
      "quantity": {
-      "printed": "194",
-      "value": "194"
-     }
-    },
-    {
-     "batch": {
-      "printed": "4K57523",
-      "value": "4K57523"
-     },
-     "expiry": {
-      "printed": "03/28",
-      "value": "03/28"
-     },
-     "quantity": {
-      "printed": "6",
-      "value": "6"
+      "printed": "48",
+      "value": "48"
      }
     }
    ],
@@ -281,6 +281,6 @@
  "findings": [],
  "pii": [
   "Zuzana Švecová",
-  "+420 954 329 329"
+  "+420 996 674 358"
  ]
 }

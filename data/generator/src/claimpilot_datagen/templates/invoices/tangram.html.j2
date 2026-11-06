@@ -42,16 +42,16 @@
  <tr class="b"><td>K ÚHRADE</td><td class="num">{{ h.amount_due.printed }} EUR</td></tr>
 </table></td></tr></table>
 {% if h.proforma_number %}<div class="small">Zúčtovaná záloha: {{ h.proforma_number.printed }}</div>{% endif %}
-<div class="muted">Režim DPH: A=Tuzemsko, B=Prenos daňovej povinnosti v tuzemsku, C=Prenos daňovej povinnosti v EÚ, D=Vývoz do tretích krajín</div>
+<div class="muted">Kód DPH: T = tuzemské plnenie, P = prenesenie daňovej povinnosti na odberateľa, E = dodanie do iného členského štátu, X = vývoz mimo EÚ</div>
 
 <table class="lines" style="margin-top:3mm">
  <thead><tr><th style="width:42%">Kód a názov tovaru{% if "header_note" in inv.quirks %}<br>Dodací list DL/1 01.01.2025 (SKLAD){% endif %}</th><th class="num">Množstvo</th><th class="num">Zľava</th><th class="num">Jednotková<br>cena bez DPH</th><th class="num">Jednotková<br>cena s DPH</th><th class="num">DPH</th><th class="num">Spolu<br>bez DPH</th></tr></thead>
  {% for ln in lines %}{% set c = ln.cells %}
- <tr class="nobreak"><td{{ mid|safe }}>{{ c.supplier_code.printed }} - {% if "wrapped_names" in inv.quirks %}{{ c.name.printed.split(" ")[:2]|join(" ") }}<br>{{ c.name.printed.split(" ")[2:]|join(" ") }}{% else %}{{ c.name.printed }}{% endif %}</td><td class="num"{{ mid|safe }}>{% if "pale_decimals" in inv.quirks %}{{ c.quantity.printed.rsplit(",", 1)[0] }}<span style="color:#e8e8e8">,{{ c.quantity.printed.rsplit(",", 1)[1] }}</span>{% else %}{{ c.quantity.printed }}{% endif %} {{ c.unit.printed }}</td><td{{ mid|safe }}></td><td class="num"{{ mid|safe }}>{{ c.unit_price.printed }}</td><td class="num"{{ mid|safe }}>{{ c.gross_unit_price.printed }}</td><td class="num"{{ mid|safe }}>A {{ c.vat_rate.printed }}</td><td class="num"{{ mid|safe }}>{{ c.line_net.printed }}</td></tr>
+ <tr class="nobreak"><td{{ mid|safe }}>{{ c.supplier_code.printed }} - {% if "wrapped_names" in inv.quirks %}{{ c.name.printed.split(" ")[:2]|join(" ") }}<br>{{ c.name.printed.split(" ")[2:]|join(" ") }}{% else %}{{ c.name.printed }}{% endif %}</td><td class="num"{{ mid|safe }}>{% if "pale_decimals" in inv.quirks %}{{ c.quantity.printed.rsplit(",", 1)[0] }}<span style="color:#e8e8e8">,{{ c.quantity.printed.rsplit(",", 1)[1] }}</span>{% else %}{{ c.quantity.printed }}{% endif %} {{ c.unit.printed }}</td><td{{ mid|safe }}></td><td class="num"{{ mid|safe }}>{{ c.unit_price.printed }}</td><td class="num"{{ mid|safe }}>{{ c.gross_unit_price.printed }}</td><td class="num"{{ mid|safe }}>T {{ c.vat_rate.printed }}</td><td class="num"{{ mid|safe }}>{{ c.line_net.printed }}</td></tr>
  {% endfor %}
  <tr class="b"><td>Spolu</td><td></td><td></td><td></td><td></td><td></td><td class="num">{{ h.total_net.printed }}</td></tr>
 </table>
-<div class="two" style="margin-top:8mm"><div>Za odberateľa (pečiatka, podpis):</div><div>Faktúru vyhotovil: {{ s.contact }}<br><span class="muted">{{ s.register }}</span></div></div>
+<div class="two" style="margin-top:8mm"><div>Prevzal (meno, podpis):</div><div>Faktúru vyhotovil: {{ s.contact }}<br><span class="muted">{{ s.register }}</span></div></div>
 
 {% if "duplicated_page" in inv.edge_cases %}
 <div class="pb"></div>

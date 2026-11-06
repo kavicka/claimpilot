@@ -4,7 +4,7 @@
  "layout": "pohoda",
  "kind": "credit_note",
  "file": "credit_note.pdf",
- "sha256": "ba09173edfa6f5a9136b7edfce7d011511384d63165a8b2681c2e5aa68cc4f52",
+ "sha256": "e4052d0880eb3d65439f037b164237911c13d4900d86cbc7ff7f7ed571293bfa",
  "pages_total": 1,
  "pages_present": 1,
  "scan": false,
@@ -27,13 +27,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "257878740",
-   "value": "257878740",
+   "printed": "250432953",
+   "value": "250432953",
    "page": 1
   },
   "issue_date": {
-   "printed": "20.01.2025",
-   "value": "2025-01-20",
+   "printed": "07.05.2025",
+   "value": "2025-05-07",
    "page": 1
   },
   "supplier_name": {
@@ -42,18 +42,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "96285575",
-   "value": "96285575",
+   "printed": "90579330",
+   "value": "90579330",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "SK2990936465",
-   "value": "SK2990936465",
+   "printed": "SK2964941837",
+   "value": "SK2964941837",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "SK42 7500 0000 0064 5899 9885",
-   "value": "SK4275000000006458999885",
+   "printed": "SK59 1111 0000 0075 1286 4779",
+   "value": "SK5911110000007512864779",
    "page": 1
   },
   "buyer_name": {
@@ -72,23 +72,23 @@
    "page": 1
   },
   "total": {
-   "printed": "-25,81",
-   "value": "-25.81",
+   "printed": "-5,78",
+   "value": "-5.78",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "18.01.2025",
-   "value": "2025-01-18",
+   "printed": "07.05.2025",
+   "value": "2025-05-07",
    "page": 1
   },
   "due_date": {
-   "printed": "21.03.2025",
-   "value": "2025-03-21",
+   "printed": "06.06.2025",
+   "value": "2025-06-06",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "2990936465",
-   "value": "2990936465",
+   "printed": "2964941837",
+   "value": "2964941837",
    "page": 1
   },
   "buyer_ico": {
@@ -102,8 +102,8 @@
    "page": 1
   },
   "variable_symbol": {
-   "printed": "257878740",
-   "value": "257878740",
+   "printed": "250432953",
+   "value": "250432953",
    "page": 1
   },
   "constant_symbol": {
@@ -112,28 +112,28 @@
    "page": 1
   },
   "amount_due": {
-   "printed": "-25,81",
-   "value": "-25.81",
+   "printed": "-5,78",
+   "value": "-5.78",
    "page": 1
   },
   "total_net": {
-   "printed": "-20,98",
-   "value": "-20.98",
+   "printed": "-4,85",
+   "value": "-4.85",
    "page": 1
   },
   "total_vat": {
-   "printed": "-4,83",
-   "value": "-4.83",
+   "printed": "-0,93",
+   "value": "-0.93",
    "page": 1
   },
   "original_invoice_number": {
-   "printed": "259703886",
-   "value": "259703886",
+   "printed": "257376468",
+   "value": "257376468",
    "page": 1
   },
   "page_note": {
-   "printed": "Strana 1 dokladu 257878740",
-   "value": "Strana 1 dokladu 257878740",
+   "printed": "Strana 1 dokladu 250432953",
+   "value": "Strana 1 dokladu 250432953",
    "page": 1
   }
  },
@@ -141,48 +141,98 @@
   {
    "cells": {
     "name": {
-     "printed": "Sanovit krém na ruky s panthenolom 100 ml",
-     "value": "Sanovit krém na ruky s panthenolom 100 ml"
+     "printed": "Medisan - čaj na pokojný spánok 20x2g",
+     "value": "Medisan - čaj na pokojný spánok 20x2g"
     },
     "quantity": {
-     "printed": "-1",
-     "value": "-1"
+     "printed": "-2",
+     "value": "-2"
     },
     "line_net": {
-     "printed": "-20,98",
-     "value": "-20.98"
+     "printed": "-2,35",
+     "value": "-2.35"
     },
     "vat_rate": {
-     "printed": "23%",
-     "value": "23"
+     "printed": "19%",
+     "value": "19"
     },
     "unit": {
      "printed": "ks",
      "value": "ks"
     },
     "ean": {
-     "printed": "3803511258574",
-     "value": "3803511258574"
+     "printed": "8596811253121",
+     "value": "8596811253121"
     },
     "supplier_code": {
-     "printed": "0023",
-     "value": "0023"
+     "printed": "0034",
+     "value": "0034"
     },
     "unit_price": {
-     "printed": "20,98",
-     "value": "20.98"
+     "printed": "1,47",
+     "value": "1.47"
     },
     "discount_pct": {
-     "printed": "0,00%",
-     "value": "0"
+     "printed": "20,00%",
+     "value": "20"
     },
     "vat_amount": {
-     "printed": "-4,83",
-     "value": "-4.83"
+     "printed": "-0,45",
+     "value": "-0.45"
     },
     "line_gross": {
-     "printed": "-25,81",
-     "value": "-25.81"
+     "printed": "-2,80",
+     "value": "-2.80"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea - cukríky s medom a šalviou 40g",
+     "value": "Florea - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "-1",
+     "value": "-1"
+    },
+    "line_net": {
+     "printed": "-2,50",
+     "value": "-2.50"
+    },
+    "vat_rate": {
+     "printed": "19%",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8592047502897",
+     "value": "8592047502897"
+    },
+    "supplier_code": {
+     "printed": "0013",
+     "value": "0013"
+    },
+    "unit_price": {
+     "printed": "3,13",
+     "value": "3.13"
+    },
+    "discount_pct": {
+     "printed": "20,00%",
+     "value": "20"
+    },
+    "vat_amount": {
+     "printed": "-0,48",
+     "value": "-0.48"
+    },
+    "line_gross": {
+     "printed": "-2,98",
+     "value": "-2.98"
     }
    },
    "batches": [],
@@ -192,16 +242,16 @@
  "recap": [
   {
    "rate": {
-    "printed": "23%",
-    "value": "23"
+    "printed": "19%",
+    "value": "19"
    },
    "base": {
-    "printed": "-20,98",
-    "value": "-20.98"
+    "printed": "-4,85",
+    "value": "-4.85"
    },
    "vat": {
-    "printed": "-4,83",
-    "value": "-4.83"
+    "printed": "-0,93",
+    "value": "-0.93"
    },
    "page": 1
   }
@@ -210,6 +260,6 @@
  "findings": [],
  "pii": [
   "Emanuel Slovák",
-  "+421 921 935 273"
+  "+421 982 607 745"
  ]
 }

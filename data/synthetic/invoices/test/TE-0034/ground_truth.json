@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "84f6e3cf72387ea8334f12001fb668a691e790592e59a3538a9302cbb50d5ab6",
+ "sha256": "1fb770ce96630bfe50744d740fa05eb96a0d50a5ca568fa45ccfa7c8122c2f4e",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -30,13 +30,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "255276",
-   "value": "255276",
+   "printed": "256706",
+   "value": "256706",
    "page": 1
   },
   "issue_date": {
-   "printed": "19.05.2025",
-   "value": "2025-05-19",
+   "printed": "22.09.2025",
+   "value": "2025-09-22",
    "page": 1
   },
   "supplier_name": {
@@ -45,18 +45,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "90907841",
-   "value": "90907841",
+   "printed": "99900173",
+   "value": "99900173",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ90907841",
-   "value": "CZ90907841",
+   "printed": "CZ99900173",
+   "value": "CZ99900173",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ69 2700 0000 0047 6825 0057",
-   "value": "CZ6927000000004768250057",
+   "printed": "CZ83 0100 0000 0022 6820 8748",
+   "value": "CZ8301000000002268208748",
    "page": 1
   },
   "buyer_name": {
@@ -75,18 +75,18 @@
    "page": 1
   },
   "total": {
-   "printed": "33 913,68",
-   "value": "33913.68",
+   "printed": "18 077,76",
+   "value": "18077.76",
    "page": 1
   },
   "amount_due": {
-   "printed": "33 913,68",
-   "value": "33913.68",
+   "printed": "18 077,76",
+   "value": "18077.76",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25888229",
-   "value": "OB25888229",
+   "printed": "OB25454933",
+   "value": "OB25454933",
    "page": 1
   },
   "reverse_charge": {
@@ -104,200 +104,39 @@
   {
    "cells": {
     "name": {
-     "printed": "Medisan vitamín C 500 mg 60 tbl",
-     "value": "Medisan vitamín C 500 mg 60 tbl"
-    },
-    "quantity": {
-     "printed": "144",
-     "value": "144"
-    },
-    "line_net": {
-     "printed": "20 204,64",
-     "value": "20204.64"
-    },
-    "ean": {
-     "printed": "8586091829437",
-     "value": "8586091829437"
-    },
-    "unit_price": {
-     "printed": "140,31",
-     "value": "140.31"
-    },
-    "origin": {
-     "printed": "SK",
-     "value": "SK"
-    },
-    "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "2C30163",
-      "value": "2C30163"
-     },
-     "expiry": {
-      "printed": "10/27",
-      "value": "10/27"
-     },
-     "quantity": {
-      "printed": "144",
-      "value": "144"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Florea kapsuly na trávenie 30 cps",
-     "value": "Florea kapsuly na trávenie 30 cps"
-    },
-    "quantity": {
-     "printed": "24",
-     "value": "24"
-    },
-    "line_net": {
-     "printed": "2 302,80",
-     "value": "2302.80"
-    },
-    "ean": {
-     "printed": "8583872747607",
-     "value": "8583872747607"
-    },
-    "unit_price": {
-     "printed": "95,95",
-     "value": "95.95"
-    },
-    "origin": {
-     "printed": "SK",
-     "value": "SK"
-    },
-    "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "2C77147",
-      "value": "2C77147"
-     },
-     "expiry": {
-      "printed": "12/28",
-      "value": "12/28"
-     },
-     "quantity": {
-      "printed": "23",
-      "value": "23"
-     }
-    },
-    {
-     "batch": {
-      "printed": "2C77400",
-      "value": "2C77400"
-     },
-     "expiry": {
-      "printed": "12/28",
-      "value": "12/28"
-     },
-     "quantity": {
-      "printed": "1",
-      "value": "1"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Kalmina kapsuly na trávenie 30 cps",
-     "value": "Kalmina kapsuly na trávenie 30 cps"
+     "printed": "Herbana vitamín C 500 mg 60 tbl",
+     "value": "Herbana vitamín C 500 mg 60 tbl"
     },
     "quantity": {
      "printed": "48",
      "value": "48"
     },
     "line_net": {
-     "printed": "5 313,60",
-     "value": "5313.60"
+     "printed": "3 270,72",
+     "value": "3270.72"
     },
     "ean": {
-     "printed": "8595744319119",
-     "value": "8595744319119"
+     "printed": "8585578342513",
+     "value": "8585578342513"
     },
     "unit_price": {
-     "printed": "110,70",
-     "value": "110.70"
-    },
-    "origin": {
-     "printed": "CZ",
-     "value": "CZ"
-    },
-    "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "5A35703",
-      "value": "5A35703"
-     },
-     "expiry": {
-      "printed": "04/27",
-      "value": "04/27"
-     },
-     "quantity": {
-      "printed": "48",
-      "value": "48"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "DermaVita detská výživa ovsená kaša 225 g",
-     "value": "DermaVita detská výživa ovsená kaša 225 g"
-    },
-    "quantity": {
-     "printed": "48",
-     "value": "48"
-    },
-    "line_net": {
-     "printed": "6 092,64",
-     "value": "6092.64"
-    },
-    "ean": {
-     "printed": "8580562937058",
-     "value": "8580562937058"
-    },
-    "unit_price": {
-     "printed": "126,93",
-     "value": "126.93"
+     "printed": "68,14",
+     "value": "68.14"
     },
     "origin": {
      "printed": "SK",
      "value": "SK"
     },
     "customs_code": {
-     "printed": "33049900",
-     "value": "33049900"
+     "printed": "21069098",
+     "value": "21069098"
     }
    },
    "batches": [
     {
      "batch": {
-      "printed": "2B62981",
-      "value": "2B62981"
+      "printed": "4N84305",
+      "value": "4N84305"
      },
      "expiry": {
       "printed": "03/27",
@@ -310,8 +149,8 @@
     },
     {
      "batch": {
-      "printed": "2B62916",
-      "value": "2B62916"
+      "printed": "4N84261",
+      "value": "4N84261"
      },
      "expiry": {
       "printed": "03/27",
@@ -320,6 +159,69 @@
      "quantity": {
       "printed": "2",
       "value": "2"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina - bylinný čaj na trávenie 20x1,5g",
+     "value": "Kalmina - bylinný čaj na trávenie 20x1,5g"
+    },
+    "quantity": {
+     "printed": "96",
+     "value": "96"
+    },
+    "line_net": {
+     "printed": "14 807,04",
+     "value": "14807.04"
+    },
+    "ean": {
+     "printed": "8594973480911",
+     "value": "8594973480911"
+    },
+    "unit_price": {
+     "printed": "154,24",
+     "value": "154.24"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "2L74001",
+      "value": "2L74001"
+     },
+     "expiry": {
+      "printed": "12/26",
+      "value": "12/26"
+     },
+     "quantity": {
+      "printed": "86",
+      "value": "86"
+     }
+    },
+    {
+     "batch": {
+      "printed": "2L74330",
+      "value": "2L74330"
+     },
+     "expiry": {
+      "printed": "12/26",
+      "value": "12/26"
+     },
+     "quantity": {
+      "printed": "10",
+      "value": "10"
      }
     }
    ],
@@ -336,7 +238,7 @@
   }
  ],
  "pii": [
-  "Helena Čechová",
-  "+420 947 321 396"
+  "Ivo Čech",
+  "+420 969 867 981"
  ]
 }

@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "ff23595f6722742c7d0231ec4c9c7673cc1b1721fe1061457e608fb80a2e0f60",
+ "sha256": "97b5e98a5c8e165fea71351a15684ff177c1070e863982a877da218821f95a88",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -20,8 +20,8 @@
  "vat_method": "per_rate",
  "supplier_key": "enzymo",
  "supplier_registered": true,
- "buyer_key": "central",
- "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "buyer_key": "retail",
+ "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
  "header": {
   "document_kind": {
    "printed": "Invoice",
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "255862",
-   "value": "255862",
+   "printed": "250577",
+   "value": "250577",
    "page": 1
   },
   "issue_date": {
-   "printed": "19.01.2025",
-   "value": "2025-01-19",
+   "printed": "02.06.2025",
+   "value": "2025-06-02",
    "page": 1
   },
   "supplier_name": {
@@ -44,28 +44,28 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94545154",
-   "value": "94545154",
+   "printed": "94999538",
+   "value": "94999538",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94545154",
-   "value": "CZ94545154",
+   "printed": "CZ94999538",
+   "value": "CZ94999538",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ12 6100 0000 0043 8138 6643",
-   "value": "CZ1261000000004381386643",
+   "printed": "CZ48 0100 0000 0059 4634 5297",
+   "value": "CZ4801000000005946345297",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever s.r.o.",
-   "value": "Lekárne Sever s.r.o.",
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2997673481",
-   "value": "SK2997673481",
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
    "page": 1
   },
   "currency": {
@@ -74,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "66 592,96",
-   "value": "66592.96",
+   "printed": "6 004,32",
+   "value": "6004.32",
    "page": 1
   },
   "amount_due": {
-   "printed": "66 592,96",
-   "value": "66592.96",
+   "printed": "6 004,32",
+   "value": "6004.32",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25875572",
-   "value": "OB25875572",
+   "printed": "OB25152136",
+   "value": "OB25152136",
    "page": 1
   },
   "reverse_charge": {
@@ -103,24 +103,87 @@
   {
    "cells": {
     "name": {
-     "printed": "Nutrilek masť na hojenie rán 30 g",
-     "value": "Nutrilek masť na hojenie rán 30 g"
+     "printed": "Herbana kvapky do nosa 10 ml",
+     "value": "Herbana kvapky do nosa 10 ml"
     },
     "quantity": {
-     "printed": "200",
-     "value": "200"
+     "printed": "24",
+     "value": "24"
     },
     "line_net": {
-     "printed": "26 362,00",
-     "value": "26362.00"
+     "printed": "2 332,08",
+     "value": "2332.08"
     },
     "ean": {
-     "printed": "8598054595754",
-     "value": "8598054595754"
+     "printed": "8593115519595",
+     "value": "8593115519595"
     },
     "unit_price": {
-     "printed": "131,81",
-     "value": "131.81"
+     "printed": "97,17",
+     "value": "97.17"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "8A20827",
+      "value": "8A20827"
+     },
+     "expiry": {
+      "printed": "06/29",
+      "value": "06/29"
+     },
+     "quantity": {
+      "printed": "23",
+      "value": "23"
+     }
+    },
+    {
+     "batch": {
+      "printed": "8A20467",
+      "value": "8A20467"
+     },
+     "expiry": {
+      "printed": "06/29",
+      "value": "06/29"
+     },
+     "quantity": {
+      "printed": "1",
+      "value": "1"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DermaVita kapsuly na trávenie 30 cps",
+     "value": "DermaVita kapsuly na trávenie 30 cps"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "3 672,24",
+     "value": "3672.24"
+    },
+    "ean": {
+     "printed": "8596168217579",
+     "value": "8596168217579"
+    },
+    "unit_price": {
+     "printed": "153,01",
+     "value": "153.01"
     },
     "origin": {
      "printed": "CZ",
@@ -134,187 +197,12 @@
    "batches": [
     {
      "batch": {
-      "printed": "7C59258",
-      "value": "7C59258"
+      "printed": "3A94793",
+      "value": "3A94793"
      },
      "expiry": {
-      "printed": "05/26",
-      "value": "05/26"
-     },
-     "quantity": {
-      "printed": "180",
-      "value": "180"
-     }
-    },
-    {
-     "batch": {
-      "printed": "7C59952",
-      "value": "7C59952"
-     },
-     "expiry": {
-      "printed": "05/26",
-      "value": "05/26"
-     },
-     "quantity": {
-      "printed": "20",
-      "value": "20"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Medisan detská výživa ovsená kaša 225 g",
-     "value": "Medisan detská výživa ovsená kaša 225 g"
-    },
-    "quantity": {
-     "printed": "48",
-     "value": "48"
-    },
-    "line_net": {
-     "printed": "7 559,52",
-     "value": "7559.52"
-    },
-    "ean": {
-     "printed": "8581297252171",
-     "value": "8581297252171"
-    },
-    "unit_price": {
-     "printed": "157,49",
-     "value": "157.49"
-    },
-    "origin": {
-     "printed": "SK",
-     "value": "SK"
-    },
-    "customs_code": {
-     "printed": "21069098",
-     "value": "21069098"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "8L79257",
-      "value": "8L79257"
-     },
-     "expiry": {
-      "printed": "08/28",
-      "value": "08/28"
-     },
-     "quantity": {
-      "printed": "47",
-      "value": "47"
-     }
-    },
-    {
-     "batch": {
-      "printed": "8L79234",
-      "value": "8L79234"
-     },
-     "expiry": {
-      "printed": "08/28",
-      "value": "08/28"
-     },
-     "quantity": {
-      "printed": "1",
-      "value": "1"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Herbana kvapky do nosa 10 ml",
-     "value": "Herbana kvapky do nosa 10 ml"
-    },
-    "quantity": {
-     "printed": "200",
-     "value": "200"
-    },
-    "line_net": {
-     "printed": "30 582,00",
-     "value": "30582.00"
-    },
-    "ean": {
-     "printed": "8593118919880",
-     "value": "8593118919880"
-    },
-    "unit_price": {
-     "printed": "152,91",
-     "value": "152.91"
-    },
-    "origin": {
-     "printed": "CZ",
-     "value": "CZ"
-    },
-    "customs_code": {
-     "printed": "21069098",
-     "value": "21069098"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "3K81864",
-      "value": "3K81864"
-     },
-     "expiry": {
-      "printed": "01/28",
-      "value": "01/28"
-     },
-     "quantity": {
-      "printed": "200",
-      "value": "200"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "DermaVita - cukríky s medom a šalviou 40g",
-     "value": "DermaVita - cukríky s medom a šalviou 40g"
-    },
-    "quantity": {
-     "printed": "24",
-     "value": "24"
-    },
-    "line_net": {
-     "printed": "2 089,44",
-     "value": "2089.44"
-    },
-    "ean": {
-     "printed": "8589718954109",
-     "value": "8589718954109"
-    },
-    "unit_price": {
-     "printed": "87,06",
-     "value": "87.06"
-    },
-    "origin": {
-     "printed": "SK",
-     "value": "SK"
-    },
-    "customs_code": {
-     "printed": "33049900",
-     "value": "33049900"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "7B18827",
-      "value": "7B18827"
-     },
-     "expiry": {
-      "printed": "09/27",
-      "value": "09/27"
+      "printed": "03/28",
+      "value": "03/28"
      },
      "quantity": {
       "printed": "24",
@@ -330,6 +218,6 @@
  "findings": [],
  "pii": [
   "Zuzana Švecová",
-  "+420 954 329 329"
+  "+420 996 674 358"
  ]
 }

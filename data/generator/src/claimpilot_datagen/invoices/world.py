@@ -41,8 +41,8 @@ SUPPLIERS = [
     ("enzymo", "Enzymo Health CZ s.r.o.", "CZ", Layout.SCAN_EN),
 ]
 BANKS = {
-    "SK": [("Banka Dunaj a.s.", "DUNASKBX"), ("Tatranská sporiteľňa a.s.", "TASPSKBX")],
-    "CZ": [("Vltava banka a.s.", "VLTBCZPP"), ("Moravská obchodní banka a.s.", "MOBACZPP")],
+    "SK": [("Banka Dunaj a.s.", "DUNASKBX"), ("Hronská banka a.s.", "HRONSKBX")],
+    "CZ": [("Vltava banka a.s.", "VLTBCZPP"), ("Bečva banka a.s.", "BECVCZPP")],
 }
 
 ORIGIN = {"858": "SK", "859": "CZ", "400": "DE", "380": "BG", "300": "FR", "471": "TW"}

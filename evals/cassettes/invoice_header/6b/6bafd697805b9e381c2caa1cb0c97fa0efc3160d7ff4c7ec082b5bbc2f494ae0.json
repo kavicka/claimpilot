@@ -1,0 +1,19 @@
+{
+ "step": "invoice_header",
+ "prompt_id": "invoice_extraction/header",
+ "prompt_hash": "9c8648cecf50d87336e8402aea9e433d878352aaa30f8712ec222fd19d0bc7b5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"amount_due\": {\"page\": 1, \"quote\": \"Total Due (EUR): | 3 185,76\", \"value\": \"3 185,76\"},\n  \"buyer_dic\": {\"page\": 1, \"quote\": \"VAT Reg.No. : SK2997673481\", \"value\": \"SK2997673481\"},\n  \"buyer_ico\": {\"page\": 1, \"quote\": \"ID : 94999538\", \"value\": \"94999538\"},\n  \"buyer_name\": {\"page\": 1, \"quote\": \"Lekárne Sever s.r.o.\", \"value\": \"Lekárne Sever s.r.o.\"},\n  \"buyer_vat_id\": {\"page\": 1, \"quote\": \"VAT Reg.No. : SK2997673481\", \"value\": \"SK2997673481\"},\n  \"constant_symbol\": {\"page\": 1, \"quote\": \"Constant symbol\", \"value\": null},\n  \"currency\": {\"page\": 1, \"quote\": \"Total (EUR): | 3 185,76\", \"value\": \"EUR\"},\n  \"customer_number\": {\"page\": 1, \"quote\": \"zákaznícke číslo\", \"value\": null},\n  \"delivery_note_numbers\": {\"page\": 1, \"quote\": \"Delivery note numbers\", \"value\": null},\n  \"due_date\": {\"page\": 1, \"quote\": \"Payment: | within 30 days from the invoice date\", \"value\": null},\n  \"fees\": [],\n  \"fx_rate\": {\"page\": 1, \"quote\": \"kurz\", \"value\": null},\n  \"invoice_number\": {\"page\": 1, \"quote\": \"Invoice No. 258095\", \"value\": \"258095\"},\n  \"issue_date\": {\"page\": 1, \"quote\": \"Date of issue: 09.03.2025\", \"value\": \"09.03.2025\"},\n  \"order_number\": {\"page\": 1, \"quote\": \"Order No.: | OB25304719\", \"value\": \"OB25304719\"},\n  \"original_invoice_number\": {\"page\": 1, \"quote\": \"Credit notes: number of the invoice being corrected\", \"value\": null},\n  \"proforma_number\": {\"page\": 1, \"quote\": \"Number of a settled advance\", \"value\": null},\n  \"proforma_settled\": {\"page\": 1, \"quote\": \"Settled advance amount\", \"value\": null},\n  \"recap\": [],\n  \"reverse_charge\": {\"page\": 1, \"quote\": \"Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).\", \"value\": \"Intra-Community supply: the place of performance is outside the supplier's territory. The recipient accounts for the VAT (reverse charge, Art. 196, VAT Directive 2006/112/EC).\"},\n  \"second_currency_total\": {\"page\": 1, \"quote\": \"Total in a second currency\", \"value\": null},\n  \"specific_symbol\": {\"page\": 1, \"quote\": \"Špecifický symbol\", \"value\": null},\n  \"supplier_dic\": {\"page\": 1, \"quote\": \"ID : 94999538\", \"value\": \"94999538\"},\n  \"supplier_iban\": {\"page\": 1, \"quote\": \"IBAN: CZ48 0100 0000 0059 4634 5297\", \"value\": \"CZ48 0100 0000 0059 4634 5297\"},\n  \"supplier_ico\": {\"page\": 1, \"quote\": \"ID : 94999538\", \"value\": \"94999538\"},\n  \"supplier_name\": {\"page\": 1, \"quote\": \"Enzymo Health CZ s.r.o.\", \"value\": \"Enzymo Health CZ s.r.o.\"},\n  \"supplier_vat_id\": {\"page\": 1, \"quote\": \"VAT ID: CZ94999538\", \"value\": \"CZ94999538\"},\n  \"tax_point_date\": {\"page\": 1, \"quote\": \"Dátum dodania / daňová povinnosť\", \"value\": null},\n  \"total\": {\"page\": 1, \"quote\": \"Total (EUR): | 3 185,76\", \"value\": \"3 185,76\"},\n  \"total_net\": {\"page\": 1, \"quote\": \"Total without VAT\", \"value\": null},\n  \"total_vat\": {\"page\": 1, \"quote\": \"Total VAT\", \"value\": null},\n  \"variable_symbol\": {\"page\": 1, \"quote\": \"Variabilný symbol\", \"value\": null}\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1909,
+   "tokens_out": 1188,
+   "latency_ms": 33218
+  },
+  "cached": false
+ }
+}

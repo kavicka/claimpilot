@@ -71,12 +71,12 @@ def test_a_name_wrapped_around_the_numbers_goes_to_the_nearest_item():
         *line(0.15, (0.05, "JABLKO/SEZAM 50g")),
         *line(0.17, (0.05, "7730415 - ZRNKO CELOZRNNA")),
         *line(0.18, (0.50, "15,000 ks"), (0.68, "0,927"), (0.89, "13,91")),
-        *line(0.19, (0.05, "CUCORIEDKA SUS.50g")),
+        *line(0.19, (0.05, "CUCORIEDKA 40g")),
     ]  # fmt: skip
     got = items(table_cells([words]))
     assert [g["Kód a názov tovaru"] for g in got] == [
         "7730417 - ZRNKO TYCINKA JABLKO/SEZAM 50g",
-        "7730415 - ZRNKO CELOZRNNA CUCORIEDKA SUS.50g",
+        "7730415 - ZRNKO CELOZRNNA CUCORIEDKA 40g",
     ]
     assert got[1]["Spolu"] == "13,91"
 

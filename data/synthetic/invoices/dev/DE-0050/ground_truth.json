@@ -4,7 +4,7 @@
  "layout": "sap",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "1fd48a987bdd41cbaa097de0d73c50db1cce087c0c4b26848a7e175c0812c233",
+ "sha256": "621f071f7ca64f1aaa07b0f3db66e993665487301644b3a212fbb8605da93d62",
  "pages_total": 2,
  "pages_present": 2,
  "scan": false,
@@ -19,7 +19,7 @@
  "vat_method": "per_rate",
  "supplier_key": "lumina",
  "supplier_registered": true,
- "buyer_key": "central",
+ "buyer_key": "retail",
  "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
  "header": {
   "document_kind": {
@@ -28,13 +28,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "292263719",
-   "value": "292263719",
+   "printed": "298383029",
+   "value": "298383029",
    "page": 1
   },
   "issue_date": {
-   "printed": "24.08.2025",
-   "value": "2025-08-24",
+   "printed": "27.02.2025",
+   "value": "2025-02-27",
    "page": 1
   },
   "supplier_name": {
@@ -43,28 +43,28 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "95474463",
-   "value": "95474463",
+   "printed": "92793100",
+   "value": "92793100",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ95474463",
-   "value": "CZ95474463",
+   "printed": "CZ92793100",
+   "value": "CZ92793100",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ62 0100 0000 0058 2742 5761",
-   "value": "CZ6201000000005827425761",
+   "printed": "CZ06 2010 0000 0025 8740 3104",
+   "value": "CZ0620100000002587403104",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever s.r.o.",
-   "value": "Lekárne Sever s.r.o.",
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2997673481",
-   "value": "SK2997673481",
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
    "page": 1
   },
   "currency": {
@@ -73,38 +73,38 @@
    "page": 1
   },
   "total": {
-   "printed": "780,00",
-   "value": "780.00",
+   "printed": "600,72",
+   "value": "600.72",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "22.08.2025",
-   "value": "2025-08-22",
+   "printed": "26.02.2025",
+   "value": "2025-02-26",
    "page": 1
   },
   "due_date": {
-   "printed": "23.09.2025",
-   "value": "2025-09-23",
+   "printed": "28.04.2025",
+   "value": "2025-04-28",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "CZ95474463",
-   "value": "CZ95474463",
+   "printed": "CZ92793100",
+   "value": "CZ92793100",
    "page": 1
   },
   "buyer_ico": {
-   "printed": "90882750",
-   "value": "90882750",
+   "printed": "93533446",
+   "value": "93533446",
    "page": 1
   },
   "buyer_dic": {
-   "printed": "2997673481",
-   "value": "2997673481",
+   "printed": "2992944152",
+   "value": "2992944152",
    "page": 1
   },
   "variable_symbol": {
-   "printed": "292263719",
-   "value": "292263719",
+   "printed": "298383029",
+   "value": "298383029",
    "page": 1
   },
   "constant_symbol": {
@@ -113,18 +113,18 @@
    "page": 1
   },
   "specific_symbol": {
-   "printed": "532071",
-   "value": "532071",
+   "printed": "805474",
+   "value": "805474",
    "page": 1
   },
   "amount_due": {
-   "printed": "780,00",
-   "value": "780.00",
+   "printed": "600,72",
+   "value": "600.72",
    "page": 1
   },
   "total_net": {
-   "printed": "780,00",
-   "value": "780.00",
+   "printed": "600,72",
+   "value": "600.72",
    "page": 1
   },
   "total_vat": {
@@ -133,18 +133,18 @@
    "page": 1
   },
   "order_number": {
-   "printed": "OB25694691",
-   "value": "OB25694691",
+   "printed": "OB25655535",
+   "value": "OB25655535",
    "page": 1
   },
   "delivery_note_numbers": {
-   "printed": "29623248",
-   "value": "29623248",
+   "printed": "29262830",
+   "value": "29262830",
    "page": 1
   },
   "customer_number": {
-   "printed": "1567",
-   "value": "1567",
+   "printed": "40814",
+   "value": "40814",
    "page": 1
   },
   "reverse_charge": {
@@ -153,8 +153,8 @@
    "page": 1
   },
   "second_currency_total": {
-   "printed": "19.273,80",
-   "value": "19273.80",
+   "printed": "14.843,79",
+   "value": "14843.79",
    "page": 1
   },
   "fx_rate": {
@@ -167,36 +167,86 @@
   {
    "cells": {
     "name": {
-     "printed": "Sanovit detská výživa ovsená kaša 225 g",
-     "value": "Sanovit detská výživa ovsená kaša 225 g"
+     "printed": "Nutrilek krém na ruky s panthenolom 100 ml",
+     "value": "Nutrilek krém na ruky s panthenolom 100 ml"
     },
     "quantity": {
-     "printed": "200",
-     "value": "200"
+     "printed": "24",
+     "value": "24"
     },
     "line_net": {
-     "printed": "780,00",
-     "value": "780.00"
+     "printed": "422,88",
+     "value": "422.88"
     },
     "vat_rate": {
      "printed": "0",
      "value": "0"
     },
     "ean": {
-     "printed": "8597621196165",
-     "value": "8597621196165"
+     "printed": "3802279169764",
+     "value": "3802279169764"
     },
     "supplier_code": {
-     "printed": "MB712569",
-     "value": "MB712569"
+     "printed": "MB526682",
+     "value": "MB526682"
     },
     "unit_price": {
-     "printed": "3,90",
-     "value": "3.90"
+     "printed": "19,58",
+     "value": "19.58"
+    },
+    "promo_discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
     },
     "net_unit_price": {
-     "printed": "3,90",
-     "value": "3.90"
+     "printed": "17,62",
+     "value": "17.62"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea vitamín C 500 mg 60 tbl",
+     "value": "Florea vitamín C 500 mg 60 tbl"
+    },
+    "quantity": {
+     "printed": "36",
+     "value": "36"
+    },
+    "line_net": {
+     "printed": "177,84",
+     "value": "177.84"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8589923611552",
+     "value": "8589923611552"
+    },
+    "supplier_code": {
+     "printed": "MB956373",
+     "value": "MB956373"
+    },
+    "unit_price": {
+     "printed": "5,97",
+     "value": "5.97"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "promo_discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
+    },
+    "net_unit_price": {
+     "printed": "4,94",
+     "value": "4.94"
     }
    },
    "batches": [],
@@ -210,8 +260,8 @@
     "value": "0"
    },
    "base": {
-    "printed": "780,00",
-    "value": "780.00"
+    "printed": "600,72",
+    "value": "600.72"
    },
    "vat": {
     "printed": "0,00",
@@ -223,7 +273,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Jaroslava Novotná",
-  "+420 955 891 364"
+  "Ján Pavlíček",
+  "+420 921 676 707"
  ]
 }

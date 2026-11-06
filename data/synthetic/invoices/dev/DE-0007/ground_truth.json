@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "a142e268b476da96761206ac9751f1ae649c9c01a5719d1dbb0f56cd1dba0cd1",
+ "sha256": "43d08720435cc427201e3ee65d5e4fd34edbf667141a8f5a6f2adff0a2d83513",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -21,7 +21,7 @@
  "supplier_key": "novamed",
  "supplier_registered": true,
  "buyer_key": "central",
- "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
  "header": {
   "document_kind": {
    "printed": "Invoice",
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "256865",
-   "value": "256865",
+   "printed": "254324",
+   "value": "254324",
    "page": 1
   },
   "issue_date": {
-   "printed": "08.05.2025",
-   "value": "2025-05-08",
+   "printed": "27.03.2025",
+   "value": "2025-03-27",
    "page": 1
   },
   "supplier_name": {
@@ -44,18 +44,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "90907841",
-   "value": "90907841",
+   "printed": "99900173",
+   "value": "99900173",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ90907841",
-   "value": "CZ90907841",
+   "printed": "CZ99900173",
+   "value": "CZ99900173",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ57 5500 0000 0018 6736 2483",
-   "value": "CZ5755000000001867362483",
+   "printed": "CZ29 0800 0000 0011 6177 5202",
+   "value": "CZ2908000000001161775202",
    "page": 1
   },
   "buyer_name": {
@@ -74,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "17 586,24",
-   "value": "17586.24",
+   "printed": "23 081,12",
+   "value": "23081.12",
    "page": 1
   },
   "amount_due": {
-   "printed": "17 586,24",
-   "value": "17586.24",
+   "printed": "23 081,12",
+   "value": "23081.12",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25253091",
-   "value": "OB25253091",
+   "printed": "OB25596003",
+   "value": "OB25596003",
    "page": 1
   },
   "reverse_charge": {
@@ -103,61 +103,61 @@
   {
    "cells": {
     "name": {
-     "printed": "DermaVita tablety proti bolesti 500 mg 20 tbl",
-     "value": "DermaVita tablety proti bolesti 500 mg 20 tbl"
+     "printed": "Nutrilek - cukríky s medom a šalviou 40g",
+     "value": "Nutrilek - cukríky s medom a šalviou 40g"
     },
     "quantity": {
-     "printed": "12",
-     "value": "12"
+     "printed": "200",
+     "value": "200"
     },
     "line_net": {
-     "printed": "685,20",
-     "value": "685.20"
+     "printed": "8 420,00",
+     "value": "8420.00"
     },
     "ean": {
-     "printed": "8597856203416",
-     "value": "8597856203416"
+     "printed": "8585659988401",
+     "value": "8585659988401"
     },
     "unit_price": {
-     "printed": "57,10",
-     "value": "57.10"
+     "printed": "42,10",
+     "value": "42.10"
     },
     "origin": {
-     "printed": "CZ",
-     "value": "CZ"
+     "printed": "SK",
+     "value": "SK"
     },
     "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
+     "printed": "21069098",
+     "value": "21069098"
     }
    },
    "batches": [
     {
      "batch": {
-      "printed": "5L90831",
-      "value": "5L90831"
+      "printed": "4K57185",
+      "value": "4K57185"
      },
      "expiry": {
-      "printed": "06/27",
-      "value": "06/27"
+      "printed": "03/28",
+      "value": "03/28"
      },
      "quantity": {
-      "printed": "11",
-      "value": "11"
+      "printed": "194",
+      "value": "194"
      }
     },
     {
      "batch": {
-      "printed": "5L90509",
-      "value": "5L90509"
+      "printed": "4K57523",
+      "value": "4K57523"
      },
      "expiry": {
-      "printed": "06/27",
-      "value": "06/27"
+      "printed": "03/28",
+      "value": "03/28"
      },
      "quantity": {
-      "printed": "1",
-      "value": "1"
+      "printed": "6",
+      "value": "6"
      }
     }
    ],
@@ -166,24 +166,87 @@
   {
    "cells": {
     "name": {
-     "printed": "Vivera kvapky do nosa 10 ml",
-     "value": "Vivera kvapky do nosa 10 ml"
+     "printed": "Herbana vitamín C 500 mg 60 tbl",
+     "value": "Herbana vitamín C 500 mg 60 tbl"
     },
     "quantity": {
-     "printed": "24",
-     "value": "24"
+     "printed": "144",
+     "value": "144"
     },
     "line_net": {
-     "printed": "3 431,28",
-     "value": "3431.28"
+     "printed": "9 812,16",
+     "value": "9812.16"
     },
     "ean": {
-     "printed": "8598491593009",
-     "value": "8598491593009"
+     "printed": "8585578342513",
+     "value": "8585578342513"
     },
     "unit_price": {
-     "printed": "142,97",
-     "value": "142.97"
+     "printed": "68,14",
+     "value": "68.14"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5A68384",
+      "value": "5A68384"
+     },
+     "expiry": {
+      "printed": "08/28",
+      "value": "08/28"
+     },
+     "quantity": {
+      "printed": "137",
+      "value": "137"
+     }
+    },
+    {
+     "batch": {
+      "printed": "5A68852",
+      "value": "5A68852"
+     },
+     "expiry": {
+      "printed": "08/28",
+      "value": "08/28"
+     },
+     "quantity": {
+      "printed": "7",
+      "value": "7"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek tablety proti bolesti 500 mg 20 tbl",
+     "value": "Nutrilek tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "96",
+     "value": "96"
+    },
+    "line_net": {
+     "printed": "2 847,36",
+     "value": "2847.36"
+    },
+    "ean": {
+     "printed": "8592521743808",
+     "value": "8592521743808"
+    },
+    "unit_price": {
+     "printed": "29,66",
+     "value": "29.66"
     },
     "origin": {
      "printed": "CZ",
@@ -197,16 +260,16 @@
    "batches": [
     {
      "batch": {
-      "printed": "5L29345",
-      "value": "5L29345"
+      "printed": "7C96931",
+      "value": "7C96931"
      },
      "expiry": {
-      "printed": "11/29",
-      "value": "11/29"
+      "printed": "02/27",
+      "value": "02/27"
      },
      "quantity": {
-      "printed": "24",
-      "value": "24"
+      "printed": "96",
+      "value": "96"
      }
     }
    ],
@@ -215,61 +278,47 @@
   {
    "cells": {
     "name": {
-     "printed": "Medisan vitamín C 500 mg 60 tbl",
-     "value": "Medisan vitamín C 500 mg 60 tbl"
+     "printed": "Kalmina tablety proti bolesti 500 mg 20 tbl",
+     "value": "Kalmina tablety proti bolesti 500 mg 20 tbl"
     },
     "quantity": {
-     "printed": "96",
-     "value": "96"
+     "printed": "24",
+     "value": "24"
     },
     "line_net": {
-     "printed": "13 469,76",
-     "value": "13469.76"
+     "printed": "2 001,60",
+     "value": "2001.60"
     },
     "ean": {
-     "printed": "8586091829437",
-     "value": "8586091829437"
+     "printed": "8596112606329",
+     "value": "8596112606329"
     },
     "unit_price": {
-     "printed": "140,31",
-     "value": "140.31"
+     "printed": "83,40",
+     "value": "83.40"
     },
     "origin": {
-     "printed": "SK",
-     "value": "SK"
+     "printed": "CZ",
+     "value": "CZ"
     },
     "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
+     "printed": "33049900",
+     "value": "33049900"
     }
    },
    "batches": [
     {
      "batch": {
-      "printed": "2E84310",
-      "value": "2E84310"
+      "printed": "6B90701",
+      "value": "6B90701"
      },
      "expiry": {
-      "printed": "08/27",
-      "value": "08/27"
+      "printed": "01/26",
+      "value": "01/26"
      },
      "quantity": {
-      "printed": "86",
-      "value": "86"
-     }
-    },
-    {
-     "batch": {
-      "printed": "2E84555",
-      "value": "2E84555"
-     },
-     "expiry": {
-      "printed": "08/27",
-      "value": "08/27"
-     },
-     "quantity": {
-      "printed": "10",
-      "value": "10"
+      "printed": "24",
+      "value": "24"
      }
     }
    ],
@@ -280,7 +329,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Helena Čechová",
-  "+420 947 321 396"
+  "Ivo Čech",
+  "+420 969 867 981"
  ]
 }

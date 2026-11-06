@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "55147c9977c2c6887100eec9dbef5e6788c2652cedc12e99b052ff056f638302",
+ "sha256": "57dabc809e66f07321754c0ff850e714cb6b28c6c55ebee2354cc80cc77adad1",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "255584",
-   "value": "255584",
+   "printed": "255956",
+   "value": "255956",
    "page": 1
   },
   "issue_date": {
-   "printed": "25.04.2025",
-   "value": "2025-04-25",
+   "printed": "03.06.2025",
+   "value": "2025-06-03",
    "page": 1
   },
   "supplier_name": {
@@ -44,18 +44,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94545154",
-   "value": "94545154",
+   "printed": "94999538",
+   "value": "94999538",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94545154",
-   "value": "CZ94545154",
+   "printed": "CZ94999538",
+   "value": "CZ94999538",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ12 6100 0000 0043 8138 6643",
-   "value": "CZ1261000000004381386643",
+   "printed": "CZ48 0100 0000 0059 4634 5297",
+   "value": "CZ4801000000005946345297",
    "page": 1
   },
   "buyer_name": {
@@ -74,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "19 190,64",
-   "value": "19190.64",
+   "printed": "736,80",
+   "value": "736.80",
    "page": 1
   },
   "amount_due": {
-   "printed": "19 190,64",
-   "value": "19190.64",
+   "printed": "736,80",
+   "value": "736.80",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25571670",
-   "value": "OB25571670",
+   "printed": "OB25107779",
+   "value": "OB25107779",
    "page": 1
   },
   "reverse_charge": {
@@ -103,91 +103,28 @@
   {
    "cells": {
     "name": {
-     "printed": "Medisan detská výživa ovsená kaša 225 g",
-     "value": "Medisan detská výživa ovsená kaša 225 g"
+     "printed": "Herbana masť na hojenie rán 30 g",
+     "value": "Herbana masť na hojenie rán 30 g"
     },
     "quantity": {
      "printed": "24",
      "value": "24"
     },
     "line_net": {
-     "printed": "3 779,76",
-     "value": "3779.76"
+     "printed": "736,80",
+     "value": "736.80"
     },
     "ean": {
-     "printed": "8581297252171",
-     "value": "8581297252171"
+     "printed": "8592540621880",
+     "value": "8592540621880"
     },
     "unit_price": {
-     "printed": "157,49",
-     "value": "157.49"
+     "printed": "30,70",
+     "value": "30.70"
     },
     "origin": {
-     "printed": "SK",
-     "value": "SK"
-    },
-    "customs_code": {
-     "printed": "21069098",
-     "value": "21069098"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "7C12380",
-      "value": "7C12380"
-     },
-     "expiry": {
-      "printed": "06/28",
-      "value": "06/28"
-     },
-     "quantity": {
-      "printed": "22",
-      "value": "22"
-     }
-    },
-    {
-     "batch": {
-      "printed": "7C12403",
-      "value": "7C12403"
-     },
-     "expiry": {
-      "printed": "06/28",
-      "value": "06/28"
-     },
-     "quantity": {
-      "printed": "2",
-      "value": "2"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Herbana kvapky do nosa 10 ml",
-     "value": "Herbana kvapky do nosa 10 ml"
-    },
-    "quantity": {
-     "printed": "144",
-     "value": "144"
-    },
-    "line_net": {
-     "printed": "15 410,88",
-     "value": "15410.88"
-    },
-    "ean": {
-     "printed": "8582826557026",
-     "value": "8582826557026"
-    },
-    "unit_price": {
-     "printed": "107,02",
-     "value": "107.02"
-    },
-    "origin": {
-     "printed": "SK",
-     "value": "SK"
+     "printed": "CZ",
+     "value": "CZ"
     },
     "customs_code": {
      "printed": "30049000",
@@ -197,30 +134,30 @@
    "batches": [
     {
      "batch": {
-      "printed": "8C21081",
-      "value": "8C21081"
+      "printed": "5B54703",
+      "value": "5B54703"
      },
      "expiry": {
-      "printed": "08/26",
-      "value": "08/26"
+      "printed": "11/26",
+      "value": "11/26"
      },
      "quantity": {
-      "printed": "140",
-      "value": "140"
+      "printed": "23",
+      "value": "23"
      }
     },
     {
      "batch": {
-      "printed": "8C21205",
-      "value": "8C21205"
+      "printed": "5B54118",
+      "value": "5B54118"
      },
      "expiry": {
-      "printed": "08/26",
-      "value": "08/26"
+      "printed": "11/26",
+      "value": "11/26"
      },
      "quantity": {
-      "printed": "4",
-      "value": "4"
+      "printed": "1",
+      "value": "1"
      }
     }
    ],
@@ -232,6 +169,6 @@
  "findings": [],
  "pii": [
   "Zuzana Švecová",
-  "+420 954 329 329"
+  "+420 996 674 358"
  ]
 }

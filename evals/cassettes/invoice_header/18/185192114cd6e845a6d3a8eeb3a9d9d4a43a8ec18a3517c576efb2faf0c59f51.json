@@ -1,0 +1,19 @@
+{
+ "step": "invoice_header",
+ "prompt_id": "invoice_extraction/header",
+ "prompt_hash": "9c8648cecf50d87336e8402aea9e433d878352aaa30f8712ec222fd19d0bc7b5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"amount_due\": {\"page\": 1, \"quote\": \"Celkom k platbe s DPH | 1.852,92 | EUR\", \"value\": \"1.852,92\"},\n  \"buyer_dic\": {\"page\": 1, \"quote\": \"DIČ : 2997673481\", \"value\": \"2997673481\"},\n  \"buyer_ico\": {\"page\": 1, \"quote\": \"IČO : 90882750\", \"value\": \"90882750\"},\n  \"buyer_name\": {\"page\": 1, \"quote\": \"Lekárne Sever s.r.o.\", \"value\": \"Lekárne Sever s.r.o.\"},\n  \"buyer_vat_id\": {\"page\": 1, \"quote\": \"IČ DPH : SK2997673481\", \"value\": \"SK2997673481\"},\n  \"constant_symbol\": {\"page\": 1, \"quote\": \"Konštantný symbol: 0008\", \"value\": \"0008\"},\n  \"currency\": {\"page\": 1, \"quote\": \"CZK/EUR\", \"value\": \"EUR\"},\n  \"customer_number\": {\"page\": 1, \"quote\": \"Číslo zákazníka : 31153\", \"value\": \"31153\"},\n  \"delivery_note_numbers\": {\"page\": 1, \"quote\": \"Číslo dodacieho listu | : 29636280\", \"value\": \"29636280\"},\n  \"due_date\": {\"page\": 1, \"quote\": \"Dátum splatnosti : 02.03.2025\", \"value\": \"02.03.2025\"},\n  \"fees\": [],\n  \"fx_rate\": {\"page\": 1, \"quote\": \"Kurz | 25,05 | CZK/EUR\", \"value\": \"25,05\"},\n  \"invoice_number\": {\"page\": 1, \"quote\": \"Faktúra č. 295345773\", \"value\": \"295345773\"},\n  \"issue_date\": {\"page\": 1, \"quote\": \"Dátum vystavenia : 31.01.2025\", \"value\": \"31.01.2025\"},\n  \"order_number\": {\"page\": 1, \"quote\": \"Vaša objednávka | : OB25146211\", \"value\": \"OB25146211\"},\n  \"original_invoice_number\": {\"page\": null, \"quote\": null, \"value\": null},\n  \"proforma_number\": {\"page\": null, \"quote\": null, \"value\": null},\n  \"proforma_settled\": {\"page\": null, \"quote\": null, \"value\": null},\n  \"recap\": [\n    {\n      \"base\": \"1.852,92\",\n      \"page\": 1,\n      \"quote\": \"Základ dane | 1.852,92 | EUR\",\n      \"rate\": \"0,00%\",\n      \"vat\": \"0,00\"\n    }\n  ],\n  \"reverse_charge\": {\"page\": 1, \"quote\": \"Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.\", \"value\": \"Dodanie tovaru oslobodené od dane podľa § 43 zákona o DPH - Intra-Community supply, Art. 138, VAT Directive 2006/112/EC.\"},\n  \"second_currency_total\": {\"page\": 1, \"quote\": \"Celkom k platbe s DPH | 46.415,65 | CZK\", \"value\": \"46.415,65\"},\n  \"specific_symbol\": {\"page\": 1, \"quote\": \"Špecifický symbol: 734667\", \"value\": \"734667\"},\n  \"supplier_dic\": {\"page\": 1, \"quote\": \"DIČ | : CZ94947589\", \"value\": \"CZ94947589\"},\n  \"supplier_iban\": {\"page\": 1, \"quote\": \"Číslo účtu | : IBAN CZ79 2700 0000 0031 8121 9976\", \"value\": \"CZ79 2700 0000 0031 8121 9976\"},\n  \"supplier_ico\": {\"page\": 1, \"quote\": \"IČ | : 94947589\", \"value\": \"94947589\"},\n  \"supplier_name\": {\"page\": 1, \"quote\": \"Aurelle Beauty CZ s.r.o.\", \"value\": \"Aurelle Beauty CZ s.r.o.\"},\n  \"supplier_vat_id\": {\"page\": 1, \"quote\": \"DIČ | : CZ94947589\", \"value\": \"CZ94947589\"},\n  \"tax_point_date\": {\"page\": 1, \"quote\": \"Daňová povinnosť : 30.01.2025\", \"value\": \"30.01.2025\"},\n  \"total\": {\"page\": 1, \"quote\": \"Celkom k platbe s DPH | 1.852,92 | EUR\", \"value\": \"1.852,92\"},\n  \"total_net\": {\"page\": 1, \"quote\": \"Základ dane | 1.852,92 | EUR\", \"value\": \"1.852,92\"},\n  \"total_vat\": {\"page\": 1, \"quote\": \"Daň | 0,00 | EUR\", \"value\": \"0,00\"},\n  \"variable_symbol\": {\"page\": 1, \"quote\": \"Variabilný symbol: 295345773\", \"value\": \"295345773\"}\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 3119,
+   "tokens_out": 1468,
+   "latency_ms": 44879
+  },
+  "cached": false
+ }
+}

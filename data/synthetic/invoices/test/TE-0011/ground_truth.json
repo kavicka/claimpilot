@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "73d6866472d1d331331bdb46a6ddb827e38a3d86dcdda34433cc741c3f80eac9",
+ "sha256": "13b7f3389c1fb35cc7cf3404658e75dd5c7ddcc3c1fef9a39ca17a27e1eb080a",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "254381",
-   "value": "254381",
+   "printed": "256110",
+   "value": "256110",
    "page": 1
   },
   "issue_date": {
-   "printed": "05.10.2025",
-   "value": "2025-10-05",
+   "printed": "28.03.2025",
+   "value": "2025-03-28",
    "page": 1
   },
   "supplier_name": {
@@ -44,18 +44,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "90907841",
-   "value": "90907841",
+   "printed": "99900173",
+   "value": "99900173",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ90907841",
-   "value": "CZ90907841",
+   "printed": "CZ99900173",
+   "value": "CZ99900173",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ57 5500 0000 0018 6736 2483",
-   "value": "CZ5755000000001867362483",
+   "printed": "CZ29 0800 0000 0011 6177 5202",
+   "value": "CZ2908000000001161775202",
    "page": 1
   },
   "buyer_name": {
@@ -74,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "11 984,64",
-   "value": "11984.64",
+   "printed": "34 555,52",
+   "value": "34555.52",
    "page": 1
   },
   "amount_due": {
-   "printed": "11 984,64",
-   "value": "11984.64",
+   "printed": "34 555,52",
+   "value": "34555.52",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25963817",
-   "value": "OB25963817",
+   "printed": "OB25807066",
+   "value": "OB25807066",
    "page": 1
   },
   "reverse_charge": {
@@ -103,24 +103,185 @@
   {
    "cells": {
     "name": {
-     "printed": "DermaVita tablety proti bolesti 500 mg 20 tbl",
-     "value": "DermaVita tablety proti bolesti 500 mg 20 tbl"
+     "printed": "Herbana masť na hojenie rán 30 g",
+     "value": "Herbana masť na hojenie rán 30 g"
+    },
+    "quantity": {
+     "printed": "96",
+     "value": "96"
+    },
+    "line_net": {
+     "printed": "12 798,72",
+     "value": "12798.72"
+    },
+    "ean": {
+     "printed": "8597738871467",
+     "value": "8597738871467"
+    },
+    "unit_price": {
+     "printed": "133,32",
+     "value": "133.32"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "3K91987",
+      "value": "3K91987"
+     },
+     "expiry": {
+      "printed": "02/29",
+      "value": "02/29"
+     },
+     "quantity": {
+      "printed": "96",
+      "value": "96"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana - cukríky s medom a šalviou 40g",
+     "value": "Herbana - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "96",
+     "value": "96"
+    },
+    "line_net": {
+     "printed": "14 452,80",
+     "value": "14452.80"
+    },
+    "ean": {
+     "printed": "8591605852535",
+     "value": "8591605852535"
+    },
+    "unit_price": {
+     "printed": "150,55",
+     "value": "150.55"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "8K21741",
+      "value": "8K21741"
+     },
+     "expiry": {
+      "printed": "04/29",
+      "value": "04/29"
+     },
+     "quantity": {
+      "printed": "86",
+      "value": "86"
+     }
+    },
+    {
+     "batch": {
+      "printed": "8K21550",
+      "value": "8K21550"
+     },
+     "expiry": {
+      "printed": "04/29",
+      "value": "04/29"
+     },
+     "quantity": {
+      "printed": "10",
+      "value": "10"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek - čaj na pokojný spánok 20x2g",
+     "value": "Nutrilek - čaj na pokojný spánok 20x2g"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "6 302,00",
+     "value": "6302.00"
+    },
+    "ean": {
+     "printed": "8584515204310",
+     "value": "8584515204310"
+    },
+    "unit_price": {
+     "printed": "31,51",
+     "value": "31.51"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "2L35391",
+      "value": "2L35391"
+     },
+     "expiry": {
+      "printed": "03/28",
+      "value": "03/28"
+     },
+     "quantity": {
+      "printed": "200",
+      "value": "200"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit sirup na kašeľ 100 ml",
+     "value": "Sanovit sirup na kašeľ 100 ml"
     },
     "quantity": {
      "printed": "24",
      "value": "24"
     },
     "line_net": {
-     "printed": "1 370,40",
-     "value": "1370.40"
+     "printed": "1 002,00",
+     "value": "1002.00"
     },
     "ean": {
-     "printed": "8597856203416",
-     "value": "8597856203416"
+     "printed": "8593913861124",
+     "value": "8593913861124"
     },
     "unit_price": {
-     "printed": "57,10",
-     "value": "57.10"
+     "printed": "41,75",
+     "value": "41.75"
     },
     "origin": {
      "printed": "CZ",
@@ -134,12 +295,12 @@
    "batches": [
     {
      "batch": {
-      "printed": "2B74433",
-      "value": "2B74433"
+      "printed": "7L39196",
+      "value": "7L39196"
      },
      "expiry": {
-      "printed": "08/27",
-      "value": "08/27"
+      "printed": "08/29",
+      "value": "08/29"
      },
      "quantity": {
       "printed": "23",
@@ -148,79 +309,16 @@
     },
     {
      "batch": {
-      "printed": "2B74724",
-      "value": "2B74724"
+      "printed": "7L39481",
+      "value": "7L39481"
      },
      "expiry": {
-      "printed": "08/27",
-      "value": "08/27"
+      "printed": "08/29",
+      "value": "08/29"
      },
      "quantity": {
       "printed": "1",
       "value": "1"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Florea - kláštorný čaj na priedušky 20x2g",
-     "value": "Florea - kláštorný čaj na priedušky 20x2g"
-    },
-    "quantity": {
-     "printed": "144",
-     "value": "144"
-    },
-    "line_net": {
-     "printed": "10 614,24",
-     "value": "10614.24"
-    },
-    "ean": {
-     "printed": "8588720726773",
-     "value": "8588720726773"
-    },
-    "unit_price": {
-     "printed": "73,71",
-     "value": "73.71"
-    },
-    "origin": {
-     "printed": "SK",
-     "value": "SK"
-    },
-    "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "4A68275",
-      "value": "4A68275"
-     },
-     "expiry": {
-      "printed": "03/27",
-      "value": "03/27"
-     },
-     "quantity": {
-      "printed": "140",
-      "value": "140"
-     }
-    },
-    {
-     "batch": {
-      "printed": "4A68715",
-      "value": "4A68715"
-     },
-     "expiry": {
-      "printed": "03/27",
-      "value": "03/27"
-     },
-     "quantity": {
-      "printed": "4",
-      "value": "4"
      }
     }
    ],
@@ -231,7 +329,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Helena Čechová",
-  "+420 947 321 396"
+  "Ivo Čech",
+  "+420 969 867 981"
  ]
 }

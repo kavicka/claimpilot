@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "a7b7d923526525c4961fdf8e211398087e9b6b0804e576f0f4bb3d37b12ab112",
+ "sha256": "768db38c6b260b67997f477219c6adedf72d563c548843c59f6b1df3c9cb1645",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -12,7 +12,6 @@
  "language": "en",
  "duplicate_of": null,
  "edge_cases": [
-  "batch_split",
   "reverse_charge",
   "scan",
   "stamp"
@@ -20,7 +19,7 @@
  "vat_method": "per_rate",
  "supplier_key": "novamed",
  "supplier_registered": true,
- "buyer_key": "retail",
+ "buyer_key": "central",
  "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
  "header": {
   "document_kind": {
@@ -29,13 +28,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "256293",
-   "value": "256293",
+   "printed": "251695",
+   "value": "251695",
    "page": 1
   },
   "issue_date": {
-   "printed": "03.05.2025",
-   "value": "2025-05-03",
+   "printed": "08.07.2025",
+   "value": "2025-07-08",
    "page": 1
   },
   "supplier_name": {
@@ -44,28 +43,28 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "90907841",
-   "value": "90907841",
+   "printed": "99900173",
+   "value": "99900173",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ90907841",
-   "value": "CZ90907841",
+   "printed": "CZ99900173",
+   "value": "CZ99900173",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ57 5500 0000 0018 6736 2483",
-   "value": "CZ5755000000001867362483",
+   "printed": "CZ29 0800 0000 0011 6177 5202",
+   "value": "CZ2908000000001161775202",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever Retail s.r.o.",
-   "value": "Lekárne Sever Retail s.r.o.",
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2992944152",
-   "value": "SK2992944152",
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
    "page": 1
   },
   "currency": {
@@ -74,18 +73,18 @@
    "page": 1
   },
   "total": {
-   "printed": "15 134,40",
-   "value": "15134.40",
+   "printed": "11 510,00",
+   "value": "11510.00",
    "page": 1
   },
   "amount_due": {
-   "printed": "15 134,40",
-   "value": "15134.40",
+   "printed": "11 510,00",
+   "value": "11510.00",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25056943",
-   "value": "OB25056943",
+   "printed": "OB25151579",
+   "value": "OB25151579",
    "page": 1
   },
   "reverse_charge": {
@@ -103,87 +102,24 @@
   {
    "cells": {
     "name": {
-     "printed": "Florea - cukríky s medom a šalviou 40g",
-     "value": "Florea - cukríky s medom a šalviou 40g"
+     "printed": "Kalmina kapsuly na trávenie 30 cps",
+     "value": "Kalmina kapsuly na trávenie 30 cps"
     },
     "quantity": {
      "printed": "200",
      "value": "200"
     },
     "line_net": {
-     "printed": "6 912,00",
-     "value": "6912.00"
+     "printed": "3 578,00",
+     "value": "3578.00"
     },
     "ean": {
-     "printed": "8595246841569",
-     "value": "8595246841569"
+     "printed": "8590179624555",
+     "value": "8590179624555"
     },
     "unit_price": {
-     "printed": "34,56",
-     "value": "34.56"
-    },
-    "origin": {
-     "printed": "CZ",
-     "value": "CZ"
-    },
-    "customs_code": {
-     "printed": "21069098",
-     "value": "21069098"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "5N22184",
-      "value": "5N22184"
-     },
-     "expiry": {
-      "printed": "06/28",
-      "value": "06/28"
-     },
-     "quantity": {
-      "printed": "190",
-      "value": "190"
-     }
-    },
-    {
-     "batch": {
-      "printed": "5N22804",
-      "value": "5N22804"
-     },
-     "expiry": {
-      "printed": "06/28",
-      "value": "06/28"
-     },
-     "quantity": {
-      "printed": "10",
-      "value": "10"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "DermaVita tablety proti bolesti 500 mg 20 tbl",
-     "value": "DermaVita tablety proti bolesti 500 mg 20 tbl"
-    },
-    "quantity": {
-     "printed": "144",
-     "value": "144"
-    },
-    "line_net": {
-     "printed": "8 222,40",
-     "value": "8222.40"
-    },
-    "ean": {
-     "printed": "8597856203416",
-     "value": "8597856203416"
-    },
-    "unit_price": {
-     "printed": "57,10",
-     "value": "57.10"
+     "printed": "17,89",
+     "value": "17.89"
     },
     "origin": {
      "printed": "CZ",
@@ -197,16 +133,65 @@
    "batches": [
     {
      "batch": {
-      "printed": "5K22490",
-      "value": "5K22490"
+      "printed": "3B59877",
+      "value": "3B59877"
      },
      "expiry": {
-      "printed": "09/29",
-      "value": "09/29"
+      "printed": "03/27",
+      "value": "03/27"
      },
      "quantity": {
-      "printed": "144",
-      "value": "144"
+      "printed": "200",
+      "value": "200"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina sirup na kašeľ 100 ml",
+     "value": "Kalmina sirup na kašeľ 100 ml"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "7 932,00",
+     "value": "7932.00"
+    },
+    "ean": {
+     "printed": "8583867584231",
+     "value": "8583867584231"
+    },
+    "unit_price": {
+     "printed": "39,66",
+     "value": "39.66"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "5A36491",
+      "value": "5A36491"
+     },
+     "expiry": {
+      "printed": "08/27",
+      "value": "08/27"
+     },
+     "quantity": {
+      "printed": "200",
+      "value": "200"
      }
     }
    ],
@@ -217,7 +202,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Helena Čechová",
-  "+420 947 321 396"
+  "Ivo Čech",
+  "+420 969 867 981"
  ]
 }

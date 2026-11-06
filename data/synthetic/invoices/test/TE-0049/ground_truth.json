@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "9699f57c7eebd04f5e98d60ff2072ad7c163e5c479f6b3f795f248625a29ab2d",
+ "sha256": "34614346331910fe67296ee6f97b224192fd2808a9ede1e5f402317e2ad55f45",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -12,6 +12,7 @@
  "language": "en",
  "duplicate_of": null,
  "edge_cases": [
+  "batch_split",
   "reverse_charge",
   "scan",
   "stamp"
@@ -19,7 +20,7 @@
  "vat_method": "per_rate",
  "supplier_key": "enzymo",
  "supplier_registered": true,
- "buyer_key": "retail",
+ "buyer_key": "central",
  "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
  "header": {
   "document_kind": {
@@ -28,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "255410",
-   "value": "255410",
+   "printed": "257077",
+   "value": "257077",
    "page": 1
   },
   "issue_date": {
-   "printed": "18.04.2025",
-   "value": "2025-04-18",
+   "printed": "05.10.2025",
+   "value": "2025-10-05",
    "page": 1
   },
   "supplier_name": {
@@ -43,28 +44,28 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94545154",
-   "value": "94545154",
+   "printed": "94999538",
+   "value": "94999538",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94545154",
-   "value": "CZ94545154",
+   "printed": "CZ94999538",
+   "value": "CZ94999538",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ12 6100 0000 0043 8138 6643",
-   "value": "CZ1261000000004381386643",
+   "printed": "CZ48 0100 0000 0059 4634 5297",
+   "value": "CZ4801000000005946345297",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever Retail s.r.o.",
-   "value": "Lekárne Sever Retail s.r.o.",
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2992944152",
-   "value": "SK2992944152",
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
    "page": 1
   },
   "currency": {
@@ -73,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "1 853,40",
-   "value": "1853.40",
+   "printed": "25 799,84",
+   "value": "25799.84",
    "page": 1
   },
   "amount_due": {
-   "printed": "1 853,40",
-   "value": "1853.40",
+   "printed": "25 799,84",
+   "value": "25799.84",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25961224",
-   "value": "OB25961224",
+   "printed": "OB25359039",
+   "value": "OB25359039",
    "page": 1
   },
   "reverse_charge": {
@@ -102,47 +103,222 @@
   {
    "cells": {
     "name": {
-     "printed": "Sanovit masť na hojenie rán 30 g",
-     "value": "Sanovit masť na hojenie rán 30 g"
+     "printed": "Herbana kvapky do nosa 10 ml",
+     "value": "Herbana kvapky do nosa 10 ml"
     },
     "quantity": {
-     "printed": "12",
-     "value": "12"
+     "printed": "144",
+     "value": "144"
     },
     "line_net": {
-     "printed": "1 853,40",
-     "value": "1853.40"
+     "printed": "13 992,48",
+     "value": "13992.48"
     },
     "ean": {
-     "printed": "8586069363710",
-     "value": "8586069363710"
+     "printed": "8593115519595",
+     "value": "8593115519595"
     },
     "unit_price": {
-     "printed": "154,45",
-     "value": "154.45"
+     "printed": "97,17",
+     "value": "97.17"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6B46044",
+      "value": "6B46044"
+     },
+     "expiry": {
+      "printed": "04/27",
+      "value": "04/27"
+     },
+     "quantity": {
+      "printed": "137",
+      "value": "137"
+     }
+    },
+    {
+     "batch": {
+      "printed": "6B46525",
+      "value": "6B46525"
+     },
+     "expiry": {
+      "printed": "04/27",
+      "value": "04/27"
+     },
+     "quantity": {
+      "printed": "7",
+      "value": "7"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana vitamín C 500 mg 60 tbl",
+     "value": "Herbana vitamín C 500 mg 60 tbl"
+    },
+    "quantity": {
+     "printed": "96",
+     "value": "96"
+    },
+    "line_net": {
+     "printed": "8 454,72",
+     "value": "8454.72"
+    },
+    "ean": {
+     "printed": "8590531189197",
+     "value": "8590531189197"
+    },
+    "unit_price": {
+     "printed": "88,07",
+     "value": "88.07"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "8L48898",
+      "value": "8L48898"
+     },
+     "expiry": {
+      "printed": "06/27",
+      "value": "06/27"
+     },
+     "quantity": {
+      "printed": "96",
+      "value": "96"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan - bylinný čaj na trávenie 20x1,5g",
+     "value": "Medisan - bylinný čaj na trávenie 20x1,5g"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "1 700,64",
+     "value": "1700.64"
+    },
+    "ean": {
+     "printed": "8588242710724",
+     "value": "8588242710724"
+    },
+    "unit_price": {
+     "printed": "70,86",
+     "value": "70.86"
     },
     "origin": {
      "printed": "SK",
      "value": "SK"
     },
     "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
+     "printed": "21069098",
+     "value": "21069098"
     }
    },
    "batches": [
     {
      "batch": {
-      "printed": "7A32648",
-      "value": "7A32648"
+      "printed": "1B55816",
+      "value": "1B55816"
      },
      "expiry": {
-      "printed": "09/27",
-      "value": "09/27"
+      "printed": "03/27",
+      "value": "03/27"
      },
      "quantity": {
-      "printed": "12",
-      "value": "12"
+      "printed": "24",
+      "value": "24"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan sirup na kašeľ 100 ml",
+     "value": "Medisan sirup na kašeľ 100 ml"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "1 652,00",
+     "value": "1652.00"
+    },
+    "ean": {
+     "printed": "8595843472074",
+     "value": "8595843472074"
+    },
+    "unit_price": {
+     "printed": "8,26",
+     "value": "8.26"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "33049900",
+     "value": "33049900"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "4N14377",
+      "value": "4N14377"
+     },
+     "expiry": {
+      "printed": "11/29",
+      "value": "11/29"
+     },
+     "quantity": {
+      "printed": "190",
+      "value": "190"
+     }
+    },
+    {
+     "batch": {
+      "printed": "4N14847",
+      "value": "4N14847"
+     },
+     "expiry": {
+      "printed": "11/29",
+      "value": "11/29"
+     },
+     "quantity": {
+      "printed": "10",
+      "value": "10"
      }
     }
    ],
@@ -154,6 +330,6 @@
  "findings": [],
  "pii": [
   "Zuzana Švecová",
-  "+420 954 329 329"
+  "+420 996 674 358"
  ]
 }

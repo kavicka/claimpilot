@@ -4,7 +4,7 @@
  "layout": "pohoda",
  "kind": "credit_note",
  "file": "credit_note.pdf",
- "sha256": "8fd1e6f03eadea0aba0ea91fa359eb793922d7f9bfa2835b453248502e7176df",
+ "sha256": "4d9bccb5cca87064b0525082e0a44b267fc543dc7266c978d3b77da4adc9b480",
  "pages_total": 1,
  "pages_present": 1,
  "scan": false,
@@ -27,13 +27,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "251155658",
-   "value": "251155658",
+   "printed": "253713960",
+   "value": "253713960",
    "page": 1
   },
   "issue_date": {
-   "printed": "11.02.2025",
-   "value": "2025-02-11",
+   "printed": "21.07.2025",
+   "value": "2025-07-21",
    "page": 1
   },
   "supplier_name": {
@@ -42,18 +42,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "96285575",
-   "value": "96285575",
+   "printed": "90579330",
+   "value": "90579330",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "SK2990936465",
-   "value": "SK2990936465",
+   "printed": "SK2964941837",
+   "value": "SK2964941837",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "SK42 7500 0000 0064 5899 9885",
-   "value": "SK4275000000006458999885",
+   "printed": "SK59 1111 0000 0075 1286 4779",
+   "value": "SK5911110000007512864779",
    "page": 1
   },
   "buyer_name": {
@@ -72,23 +72,23 @@
    "page": 1
   },
   "total": {
-   "printed": "-52,89",
-   "value": "-52.89",
+   "printed": "-18,22",
+   "value": "-18.22",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "11.02.2025",
-   "value": "2025-02-11",
+   "printed": "21.07.2025",
+   "value": "2025-07-21",
    "page": 1
   },
   "due_date": {
-   "printed": "25.02.2025",
-   "value": "2025-02-25",
+   "printed": "20.08.2025",
+   "value": "2025-08-20",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "2990936465",
-   "value": "2990936465",
+   "printed": "2964941837",
+   "value": "2964941837",
    "page": 1
   },
   "buyer_ico": {
@@ -102,8 +102,8 @@
    "page": 1
   },
   "variable_symbol": {
-   "printed": "251155658",
-   "value": "251155658",
+   "printed": "253713960",
+   "value": "253713960",
    "page": 1
   },
   "constant_symbol": {
@@ -112,28 +112,28 @@
    "page": 1
   },
   "amount_due": {
-   "printed": "-52,89",
-   "value": "-52.89",
+   "printed": "-18,22",
+   "value": "-18.22",
    "page": 1
   },
   "total_net": {
-   "printed": "-43,00",
-   "value": "-43.00",
+   "printed": "-15,31",
+   "value": "-15.31",
    "page": 1
   },
   "total_vat": {
-   "printed": "-9,89",
-   "value": "-9.89",
+   "printed": "-2,91",
+   "value": "-2.91",
    "page": 1
   },
   "original_invoice_number": {
-   "printed": "250232757",
-   "value": "250232757",
+   "printed": "259924378",
+   "value": "259924378",
    "page": 1
   },
   "page_note": {
-   "printed": "Strana 1 dokladu 251155658",
-   "value": "Strana 1 dokladu 251155658",
+   "printed": "Strana 1 dokladu 253713960",
+   "value": "Strana 1 dokladu 253713960",
    "page": 1
   }
  },
@@ -141,48 +141,98 @@
   {
    "cells": {
     "name": {
-     "printed": "Vivera teplomer digitálny",
-     "value": "Vivera teplomer digitálny"
+     "printed": "Medisan detská výživa ovsená kaša 225 g",
+     "value": "Medisan detská výživa ovsená kaša 225 g"
     },
     "quantity": {
-     "printed": "-1",
-     "value": "-1"
+     "printed": "-3",
+     "value": "-3"
     },
     "line_net": {
-     "printed": "-43,00",
-     "value": "-43.00"
+     "printed": "-9,27",
+     "value": "-9.27"
     },
     "vat_rate": {
-     "printed": "23%",
-     "value": "23"
+     "printed": "19%",
+     "value": "19"
     },
     "unit": {
      "printed": "ks",
      "value": "ks"
     },
     "ean": {
-     "printed": "4004594623696",
-     "value": "4004594623696"
+     "printed": "8599699303964",
+     "value": "8599699303964"
     },
     "supplier_code": {
-     "printed": "0017",
-     "value": "0017"
+     "printed": "0033",
+     "value": "0033"
     },
     "unit_price": {
-     "printed": "43,00",
-     "value": "43.00"
+     "printed": "3,09",
+     "value": "3.09"
     },
     "discount_pct": {
      "printed": "0,00%",
      "value": "0"
     },
     "vat_amount": {
-     "printed": "-9,89",
-     "value": "-9.89"
+     "printed": "-1,76",
+     "value": "-1.76"
     },
     "line_gross": {
-     "printed": "-52,89",
-     "value": "-52.89"
+     "printed": "-11,03",
+     "value": "-11.03"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina - čaj na pokojný spánok 20x2g",
+     "value": "Kalmina - čaj na pokojný spánok 20x2g"
+    },
+    "quantity": {
+     "printed": "-2",
+     "value": "-2"
+    },
+    "line_net": {
+     "printed": "-6,04",
+     "value": "-6.04"
+    },
+    "vat_rate": {
+     "printed": "19%",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8596996045641",
+     "value": "8596996045641"
+    },
+    "supplier_code": {
+     "printed": "0004",
+     "value": "0004"
+    },
+    "unit_price": {
+     "printed": "3,02",
+     "value": "3.02"
+    },
+    "discount_pct": {
+     "printed": "0,00%",
+     "value": "0"
+    },
+    "vat_amount": {
+     "printed": "-1,15",
+     "value": "-1.15"
+    },
+    "line_gross": {
+     "printed": "-7,19",
+     "value": "-7.19"
     }
    },
    "batches": [],
@@ -192,16 +242,16 @@
  "recap": [
   {
    "rate": {
-    "printed": "23%",
-    "value": "23"
+    "printed": "19%",
+    "value": "19"
    },
    "base": {
-    "printed": "-43,00",
-    "value": "-43.00"
+    "printed": "-15,31",
+    "value": "-15.31"
    },
    "vat": {
-    "printed": "-9,89",
-    "value": "-9.89"
+    "printed": "-2,91",
+    "value": "-2.91"
    },
    "page": 1
   }
@@ -210,6 +260,6 @@
  "findings": [],
  "pii": [
   "Emanuel Slovák",
-  "+421 921 935 273"
+  "+421 982 607 745"
  ]
 }

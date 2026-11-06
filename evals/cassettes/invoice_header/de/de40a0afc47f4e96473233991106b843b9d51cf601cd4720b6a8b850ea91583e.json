@@ -1,0 +1,19 @@
+{
+ "step": "invoice_header",
+ "prompt_id": "invoice_extraction/header",
+ "prompt_hash": "9c8648cecf50d87336e8402aea9e433d878352aaa30f8712ec222fd19d0bc7b5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"amount_due\": {\"page\": 1, \"quote\": \"SPOLU NA ÚHRADU | 1 765,52\", \"value\": \"1 765,52\"},\n  \"buyer_dic\": {\"page\": 1, \"quote\": \"DIČ: 2997673481\", \"value\": \"2997673481\"},\n  \"buyer_ico\": {\"page\": 1, \"quote\": \"IČO: 90882750\", \"value\": \"90882750\"},\n  \"buyer_name\": {\"page\": 1, \"quote\": \"Lekárne Sever s.r.o.\", \"value\": \"Lekárne Sever s.r.o.\"},\n  \"buyer_vat_id\": {\"page\": 1, \"quote\": \"IČ DPH: SK2997673481\", \"value\": \"SK2997673481\"},\n  \"constant_symbol\": {\"page\": 1, \"quote\": \"Konštantný symbol: | 0008\", \"value\": \"0008\"},\n  \"currency\": {\"page\": 1, \"quote\": \"EUR Celkom\", \"value\": \"EUR\"},\n  \"customer_number\": {\"page\": 1, \"quote\": \"zákaznícke číslo\", \"value\": null},\n  \"delivery_note_numbers\": {\"page\": 1, \"quote\": \"Dátum dodania tovaru/ služby:\", \"value\": null},\n  \"due_date\": {\"page\": 1, \"quote\": \"Dátum splatnosti: | 11.08.2025\", \"value\": \"11.08.2025\"},\n  \"fees\": [],\n  \"fx_rate\": {\"page\": 2, \"quote\": \"Prevzal: ______________\", \"value\": null},\n  \"invoice_number\": {\"page\": 1, \"quote\": \"FAKTÚRA č.250561521\", \"value\": \"250561521\"},\n  \"issue_date\": {\"page\": 1, \"quote\": \"Dátum vyhotovenia: | 12.07.2025\", \"value\": \"12.07.2025\"},\n  \"order_number\": {\"page\": 1, \"quote\": \"Objednávka č.: | OB25029555\", \"value\": \"OB25029555\"},\n  \"original_invoice_number\": {\"page\": 1, \"quote\": \"Fakturujeme Vám tovar podľa Vašej objednávky:\", \"value\": null},\n  \"proforma_number\": {\"page\": 1, \"quote\": \"Príkazom\", \"value\": null},\n  \"proforma_settled\": {\"page\": 1, \"quote\": \"Príkazom\", \"value\": null},\n  \"recap\": [\n    {\n      \"base\": \"145,68\",\n      \"page\": 2,\n      \"quote\": \"145,68 | 19% | 27,69 | 173,37\",\n      \"rate\": \"19%\",\n      \"vat\": \"27,69\"\n    },\n    {\n      \"base\": \"1 294,44\",\n      \"page\": 2,\n      \"quote\": \"1 294,44 | 23% | 297,71 | 1 592,15\",\n      \"rate\": \"23%\",\n      \"vat\": \"297,71\"\n    }\n  ],\n  \"reverse_charge\": {\"page\": 1, \"quote\": \"Dovoľujeme si Vás upozorniť\", \"value\": null},\n  \"second_currency_total\": {\"page\": 1, \"quote\": \"EUR Celkom\", \"value\": null},\n  \"specific_symbol\": {\"page\": 1, \"quote\": \"Variabilný symbol: | 250561521\", \"value\": null},\n  \"supplier_dic\": {\"page\": 1, \"quote\": \"DIČ: 2950868811\", \"value\": \"2950868811\"},\n  \"supplier_iban\": {\"page\": 1, \"quote\": \"IBAN: SK20 6500 0000 0043 3160 3767\", \"value\": \"SK20 6500 0000 0043 3160 3767\"},\n  \"supplier_ico\": {\"page\": 1, \"quote\": \"IČO: 93706502\", \"value\": \"93706502\"},\n  \"supplier_name\": {\"page\": 1, \"quote\": \"Rosalia Kozmetik s.r.o.\", \"value\": \"Rosalia Kozmetik s.r.o.\"},\n  \"supplier_vat_id\": {\"page\": 1, \"quote\": \"IČ DPH: SK2950868811\", \"value\": \"SK2950868811\"},\n  \"tax_point_date\": {\"page\": 1, \"quote\": \"Dátum dodania tovaru/ služby: | 12.07.2025\", \"value\": \"12.07.2025\"},\n  \"total\": {\"page\": 1, \"quote\": \"SPOLU NA ÚHRADU | 1 765,52\", \"value\": \"1 765,52\"},\n  \"total_net\": {\"page\": 2, \"quote\": \"Súčet položiek | 1 440,12 | 325,40 | 1 765,52\", \"value\": \"1 440,12\"},\n  \"total_vat\": {\"page\": 2, \"quote\": \"Súčet položiek | 1 440,12 | 325,40 | 1 765,52\", \"value\": \"325,40\"},\n  \"variable_symbol\": {\"page\": 1, \"quote\": \"Variabilný symbol: | 250561521\", \"value\": \"250561521\"}\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2339,
+   "tokens_out": 1475,
+   "latency_ms": 40790
+  },
+  "cached": false
+ }
+}

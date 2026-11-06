@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "3d2317a427fc26207b0fc83fbfe5501741bfc8ddafc9a001bccec631c27abfb8",
+ "sha256": "2ddaea0ce626946354c51d27a14f8ab52a8fcc747d8ca6dfbfc774d68edb3161",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -20,8 +20,8 @@
  "vat_method": "per_rate",
  "supplier_key": "enzymo",
  "supplier_registered": true,
- "buyer_key": "central",
- "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
  "header": {
   "document_kind": {
    "printed": "Invoice",
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "250102",
-   "value": "250102",
+   "printed": "258583",
+   "value": "258583",
    "page": 1
   },
   "issue_date": {
-   "printed": "13.02.2025",
-   "value": "2025-02-13",
+   "printed": "05.04.2025",
+   "value": "2025-04-05",
    "page": 1
   },
   "supplier_name": {
@@ -44,28 +44,28 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94545154",
-   "value": "94545154",
+   "printed": "94999538",
+   "value": "94999538",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94545154",
-   "value": "CZ94545154",
+   "printed": "CZ94999538",
+   "value": "CZ94999538",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ12 6100 0000 0043 8138 6643",
-   "value": "CZ1261000000004381386643",
+   "printed": "CZ48 0100 0000 0059 4634 5297",
+   "value": "CZ4801000000005946345297",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever s.r.o.",
-   "value": "Lekárne Sever s.r.o.",
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2997673481",
-   "value": "SK2997673481",
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
    "page": 1
   },
   "currency": {
@@ -74,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "18 940,32",
-   "value": "18940.32",
+   "printed": "29 886,40",
+   "value": "29886.40",
    "page": 1
   },
   "amount_due": {
-   "printed": "18 940,32",
-   "value": "18940.32",
+   "printed": "29 886,40",
+   "value": "29886.40",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25335209",
-   "value": "OB25335209",
+   "printed": "OB25812965",
+   "value": "OB25812965",
    "page": 1
   },
   "reverse_charge": {
@@ -100,6 +100,181 @@
   }
  },
  "lines": [
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek - kláštorný čaj na priedušky 20x2g",
+     "value": "Nutrilek - kláštorný čaj na priedušky 20x2g"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "23 686,00",
+     "value": "23686.00"
+    },
+    "ean": {
+     "printed": "8588540439044",
+     "value": "8588540439044"
+    },
+    "unit_price": {
+     "printed": "118,43",
+     "value": "118.43"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "6K92317",
+      "value": "6K92317"
+     },
+     "expiry": {
+      "printed": "06/28",
+      "value": "06/28"
+     },
+     "quantity": {
+      "printed": "190",
+      "value": "190"
+     }
+    },
+    {
+     "batch": {
+      "printed": "6K92925",
+      "value": "6K92925"
+     },
+     "expiry": {
+      "printed": "06/28",
+      "value": "06/28"
+     },
+     "quantity": {
+      "printed": "10",
+      "value": "10"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek sirup na kašeľ 100 ml",
+     "value": "Nutrilek sirup na kašeľ 100 ml"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "1 710,96",
+     "value": "1710.96"
+    },
+    "ean": {
+     "printed": "8593933476698",
+     "value": "8593933476698"
+    },
+    "unit_price": {
+     "printed": "71,29",
+     "value": "71.29"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "30049000",
+     "value": "30049000"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "1B18020",
+      "value": "1B18020"
+     },
+     "expiry": {
+      "printed": "02/27",
+      "value": "02/27"
+     },
+     "quantity": {
+      "printed": "23",
+      "value": "23"
+     }
+    },
+    {
+     "batch": {
+      "printed": "1B18390",
+      "value": "1B18390"
+     },
+     "expiry": {
+      "printed": "02/27",
+      "value": "02/27"
+     },
+     "quantity": {
+      "printed": "1",
+      "value": "1"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Medisan - bylinný čaj na trávenie 20x1,5g",
+     "value": "Medisan - bylinný čaj na trávenie 20x1,5g"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "1 232,64",
+     "value": "1232.64"
+    },
+    "ean": {
+     "printed": "8582316536319",
+     "value": "8582316536319"
+    },
+    "unit_price": {
+     "printed": "8,56",
+     "value": "8.56"
+    },
+    "origin": {
+     "printed": "SK",
+     "value": "SK"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "1B34845",
+      "value": "1B34845"
+     },
+     "expiry": {
+      "printed": "02/29",
+      "value": "02/29"
+     },
+     "quantity": {
+      "printed": "144",
+      "value": "144"
+     }
+    }
+   ],
+   "page": 1
+  },
   {
    "cells": {
     "name": {
@@ -134,128 +309,30 @@
    "batches": [
     {
      "batch": {
-      "printed": "4N51701",
-      "value": "4N51701"
+      "printed": "2K66805",
+      "value": "2K66805"
      },
      "expiry": {
-      "printed": "04/29",
-      "value": "04/29"
+      "printed": "05/29",
+      "value": "05/29"
      },
      "quantity": {
-      "printed": "24",
-      "value": "24"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Nutrilek sirup na kašeľ 100 ml",
-     "value": "Nutrilek sirup na kašeľ 100 ml"
-    },
-    "quantity": {
-     "printed": "48",
-     "value": "48"
-    },
-    "line_net": {
-     "printed": "3 421,92",
-     "value": "3421.92"
-    },
-    "ean": {
-     "printed": "8593933476698",
-     "value": "8593933476698"
-    },
-    "unit_price": {
-     "printed": "71,29",
-     "value": "71.29"
-    },
-    "origin": {
-     "printed": "CZ",
-     "value": "CZ"
-    },
-    "customs_code": {
-     "printed": "30049000",
-     "value": "30049000"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "3A68063",
-      "value": "3A68063"
-     },
-     "expiry": {
-      "printed": "04/29",
-      "value": "04/29"
-     },
-     "quantity": {
-      "printed": "46",
-      "value": "46"
+      "printed": "23",
+      "value": "23"
      }
     },
     {
      "batch": {
-      "printed": "3A68851",
-      "value": "3A68851"
+      "printed": "2K66207",
+      "value": "2K66207"
      },
      "expiry": {
-      "printed": "04/29",
-      "value": "04/29"
+      "printed": "05/29",
+      "value": "05/29"
      },
      "quantity": {
-      "printed": "2",
-      "value": "2"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Medisan tablety proti bolesti 500 mg 20 tbl",
-     "value": "Medisan tablety proti bolesti 500 mg 20 tbl"
-    },
-    "quantity": {
-     "printed": "144",
-     "value": "144"
-    },
-    "line_net": {
-     "printed": "12 261,60",
-     "value": "12261.60"
-    },
-    "ean": {
-     "printed": "8586633879128",
-     "value": "8586633879128"
-    },
-    "unit_price": {
-     "printed": "85,15",
-     "value": "85.15"
-    },
-    "origin": {
-     "printed": "SK",
-     "value": "SK"
-    },
-    "customs_code": {
-     "printed": "21069098",
-     "value": "21069098"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "3C91252",
-      "value": "3C91252"
-     },
-     "expiry": {
-      "printed": "09/29",
-      "value": "09/29"
-     },
-     "quantity": {
-      "printed": "144",
-      "value": "144"
+      "printed": "1",
+      "value": "1"
      }
     }
    ],
@@ -267,6 +344,6 @@
  "findings": [],
  "pii": [
   "Zuzana Švecová",
-  "+420 954 329 329"
+  "+420 996 674 358"
  ]
 }

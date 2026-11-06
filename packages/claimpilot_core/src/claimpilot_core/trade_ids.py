@@ -91,16 +91,19 @@ def normalize_gtin(printed: str) -> Gtin:
 
 
 def generate_ico(rng: random.Random) -> str:
-    first7 = f"{rng.randrange(10**6, 10**7):07d}"
+    """An IČO from the 9xxxxxxx range, which no Slovak company holds, so synthetic data never
+    names a real one."""
+    first7 = f"{rng.randrange(9 * 10**6, 10**7):07d}"
     return first7 + str(ico_check_digit(first7))
 
 
 def generate_sk_dic(rng: random.Random) -> str:
-    """A legal person's DIČ: starts with 20 or 21, divisible by 11."""
+    """A DIČ divisible by 11 from the unassigned 29xxxxxxxx range (real legal persons start with
+    20 to 22), so synthetic data never carries a real one."""
     while True:
-        n = rng.choice([20, 21]) * 10**8 + rng.randrange(10**8)
+        n = 29 * 10**8 + rng.randrange(10**8)
         n += -n % 11
-        if str(n)[:2] in ("20", "21"):
+        if str(n)[:2] == "29":
             return str(n)
 
 

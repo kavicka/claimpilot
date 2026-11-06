@@ -1,0 +1,19 @@
+{
+ "step": "invoice_header",
+ "prompt_id": "invoice_extraction/header",
+ "prompt_hash": "9c8648cecf50d87336e8402aea9e433d878352aaa30f8712ec222fd19d0bc7b5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"amount_due\": {\"page\": 1, \"quote\": \"SPOLU NA ÚHRADU | 1 135,41\", \"value\": \"1 135,41\"},\n  \"buyer_dic\": {\"page\": 1, \"quote\": \"DIČ: 2997673481\", \"value\": \"2997673481\"},\n  \"buyer_ico\": {\"page\": 1, \"quote\": \"IČO: 90882750\", \"value\": \"90882750\"},\n  \"buyer_name\": {\"page\": 1, \"quote\": \"Lekárne Sever s.r.o.\", \"value\": \"Lekárne Sever s.r.o.\"},\n  \"buyer_vat_id\": {\"page\": 1, \"quote\": \"IČ DPH: SK2997673481\", \"value\": \"SK2997673481\"},\n  \"constant_symbol\": {\"page\": 1, \"quote\": \"Konštantný symbol: | 0008\", \"value\": \"0008\"},\n  \"currency\": {\"page\": 1, \"quote\": \"EUR Celkom\", \"value\": \"EUR\"},\n  \"customer_number\": {\"page\": 1, \"quote\": \"zákaznícke číslo\", \"value\": null},\n  \"delivery_note_numbers\": {\"page\": 1, \"quote\": \"Dátum dodania tovaru/ služby:\", \"value\": null},\n  \"due_date\": {\"page\": 1, \"quote\": \"Dátum splatnosti: | 13.02.2025\", \"value\": \"13.02.2025\"},\n  \"fees\": [],\n  \"fx_rate\": {\"page\": 2, \"quote\": \"Prevzal: ______________\", \"value\": null},\n  \"invoice_number\": {\"page\": 1, \"quote\": \"FAKTÚRA č.257376468\", \"value\": \"257376468\"},\n  \"issue_date\": {\"page\": 1, \"quote\": \"Dátum vyhotovenia: | 14.01.2025\", \"value\": \"14.01.2025\"},\n  \"order_number\": {\"page\": 1, \"quote\": \"Objednávka č.: | OB25326190\", \"value\": \"OB25326190\"},\n  \"original_invoice_number\": {\"page\": 1, \"quote\": \"Fakturujeme Vám tovar podľa Vašej objednávky:\", \"value\": null},\n  \"proforma_number\": {\"page\": 1, \"quote\": \"Príkazom\", \"value\": null},\n  \"proforma_settled\": {\"page\": 1, \"quote\": \"Príkazom\", \"value\": null},\n  \"recap\": [\n    {\n      \"base\": \"102,69\",\n      \"page\": 2,\n      \"quote\": \"102,69 | 19% | 19,50 | 122,19\",\n      \"rate\": \"19%\",\n      \"vat\": \"19,50\"\n    },\n    {\n      \"base\": \"823,74\",\n      \"page\": 2,\n      \"quote\": \"823,74 | 23% | 189,48 | 1 013,22\",\n      \"rate\": \"23%\",\n      \"vat\": \"189,48\"\n    }\n  ],\n  \"reverse_charge\": {\"page\": 1, \"quote\": \"Dovoľujeme si Vás upozorniť\", \"value\": null},\n  \"second_currency_total\": {\"page\": 1, \"quote\": \"EUR Celkom\", \"value\": null},\n  \"specific_symbol\": {\"page\": 1, \"quote\": \"Variabilný symbol: | 257376468\", \"value\": null},\n  \"supplier_dic\": {\"page\": 1, \"quote\": \"DIČ: 2964941837\", \"value\": \"2964941837\"},\n  \"supplier_iban\": {\"page\": 1, \"quote\": \"IBAN: SK59 1111 0000 0075 1286 4779\", \"value\": \"SK59 1111 0000 0075 1286 4779\"},\n  \"supplier_ico\": {\"page\": 1, \"quote\": \"IČO: 90579330\", \"value\": \"90579330\"},\n  \"supplier_name\": {\"page\": 1, \"quote\": \"BioFlora s.r.o.\", \"value\": \"BioFlora s.r.o.\"},\n  \"supplier_vat_id\": {\"page\": 1, \"quote\": \"IČ DPH: SK2964941837\", \"value\": \"SK2964941837\"},\n  \"tax_point_date\": {\"page\": 1, \"quote\": \"Dátum dodania tovaru/ služby: | 14.01.2025\", \"value\": \"14.01.2025\"},\n  \"total\": {\"page\": 1, \"quote\": \"SPOLU NA ÚHRADU | 1 135,41\", \"value\": \"1 135,41\"},\n  \"total_net\": {\"page\": 2, \"quote\": \"Súčet položiek | 926,43 | 208,98 | 1 135,41\", \"value\": \"926,43\"},\n  \"total_vat\": {\"page\": 2, \"quote\": \"Súčet položiek | 926,43 | 208,98 | 1 135,41\", \"value\": \"208,98\"},\n  \"variable_symbol\": {\"page\": 1, \"quote\": \"Variabilný symbol: | 257376468\", \"value\": \"257376468\"}\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2326,
+   "tokens_out": 1459,
+   "latency_ms": 40604
+  },
+  "cached": false
+ }
+}

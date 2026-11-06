@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "4939a84c2086a3de9073f22c20c3d079fadd2425a9cc8b1c747cfdabfd7929d1",
+ "sha256": "97a1dc262c97d26a9465a7d6dbf43d17a8ef5158e23d5745f8d3aee6e6dcc0ec",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -21,7 +21,7 @@
  "supplier_key": "enzymo",
  "supplier_registered": true,
  "buyer_key": "retail",
- "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
  "header": {
   "document_kind": {
    "printed": "Invoice",
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "252409",
-   "value": "252409",
+   "printed": "257910",
+   "value": "257910",
    "page": 1
   },
   "issue_date": {
-   "printed": "20.06.2025",
-   "value": "2025-06-20",
+   "printed": "02.01.2025",
+   "value": "2025-01-02",
    "page": 1
   },
   "supplier_name": {
@@ -44,18 +44,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94545154",
-   "value": "94545154",
+   "printed": "94999538",
+   "value": "94999538",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94545154",
-   "value": "CZ94545154",
+   "printed": "CZ94999538",
+   "value": "CZ94999538",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ12 6100 0000 0043 8138 6643",
-   "value": "CZ1261000000004381386643",
+   "printed": "CZ48 0100 0000 0059 4634 5297",
+   "value": "CZ4801000000005946345297",
    "page": 1
   },
   "buyer_name": {
@@ -74,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "18 322,08",
-   "value": "18322.08",
+   "printed": "8 826,00",
+   "value": "8826.00",
    "page": 1
   },
   "amount_due": {
-   "printed": "18 322,08",
-   "value": "18322.08",
+   "printed": "8 826,00",
+   "value": "8826.00",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25069512",
-   "value": "OB25069512",
+   "printed": "OB25391393",
+   "value": "OB25391393",
    "page": 1
   },
   "reverse_charge": {
@@ -103,110 +103,61 @@
   {
    "cells": {
     "name": {
-     "printed": "Herbana - cukríky s medom a šalviou 40g",
-     "value": "Herbana - cukríky s medom a šalviou 40g"
+     "printed": "Herbana - čaj na pokojný spánok 20x2g",
+     "value": "Herbana - čaj na pokojný spánok 20x2g"
     },
     "quantity": {
-     "printed": "144",
-     "value": "144"
+     "printed": "200",
+     "value": "200"
     },
     "line_net": {
-     "printed": "17 115,84",
-     "value": "17115.84"
+     "printed": "8 826,00",
+     "value": "8826.00"
     },
     "ean": {
-     "printed": "8590577388714",
-     "value": "8590577388714"
+     "printed": "8581226170392",
+     "value": "8581226170392"
     },
     "unit_price": {
-     "printed": "118,86",
-     "value": "118.86"
+     "printed": "44,13",
+     "value": "44.13"
     },
     "origin": {
-     "printed": "CZ",
-     "value": "CZ"
+     "printed": "SK",
+     "value": "SK"
     },
     "customs_code": {
-     "printed": "33049900",
-     "value": "33049900"
+     "printed": "30049000",
+     "value": "30049000"
     }
    },
    "batches": [
     {
      "batch": {
-      "printed": "7L36731",
-      "value": "7L36731"
+      "printed": "1C51946",
+      "value": "1C51946"
      },
      "expiry": {
-      "printed": "07/29",
-      "value": "07/29"
+      "printed": "02/29",
+      "value": "02/29"
      },
      "quantity": {
-      "printed": "144",
-      "value": "144"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Herbana kapsuly na trávenie 30 cps",
-     "value": "Herbana kapsuly na trávenie 30 cps"
-    },
-    "quantity": {
-     "printed": "24",
-     "value": "24"
-    },
-    "line_net": {
-     "printed": "1 206,24",
-     "value": "1206.24"
-    },
-    "ean": {
-     "printed": "8592888500670",
-     "value": "8592888500670"
-    },
-    "unit_price": {
-     "printed": "50,26",
-     "value": "50.26"
-    },
-    "origin": {
-     "printed": "CZ",
-     "value": "CZ"
-    },
-    "customs_code": {
-     "printed": "33049900",
-     "value": "33049900"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "8C76639",
-      "value": "8C76639"
-     },
-     "expiry": {
-      "printed": "11/28",
-      "value": "11/28"
-     },
-     "quantity": {
-      "printed": "22",
-      "value": "22"
+      "printed": "190",
+      "value": "190"
      }
     },
     {
      "batch": {
-      "printed": "8C76153",
-      "value": "8C76153"
+      "printed": "1C51747",
+      "value": "1C51747"
      },
      "expiry": {
-      "printed": "11/28",
-      "value": "11/28"
+      "printed": "02/29",
+      "value": "02/29"
      },
      "quantity": {
-      "printed": "2",
-      "value": "2"
+      "printed": "10",
+      "value": "10"
      }
     }
    ],
@@ -218,6 +169,6 @@
  "findings": [],
  "pii": [
   "Zuzana Švecová",
-  "+420 954 329 329"
+  "+420 996 674 358"
  ]
 }

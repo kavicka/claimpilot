@@ -14,8 +14,8 @@
   },
   "injected_errors_caught": {
    "value": 1.0,
-   "num": 527,
-   "den": 527
+   "num": 521,
+   "den": 521
   },
   "false_alarms": {
    "value": 0.0,
@@ -66,7 +66,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -202,7 +204,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -314,7 +318,8 @@
     "line_math",
     "line_vat",
     "line_gross",
-    "recap_base"
+    "recap_base",
+    "recap_vat"
    ],
    "tags": [
     "injected"
@@ -339,7 +344,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -365,7 +372,8 @@
    "got": [
     "line_vat",
     "vat_rate",
-    "recap_base"
+    "recap_base",
+    "recap_vat"
    ],
    "tags": [
     "injected"
@@ -461,7 +469,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -511,7 +521,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -595,7 +605,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -899,7 +911,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -1034,19 +1048,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0009/line_dropped",
-   "ok": true,
-   "expected": "recap_base",
-   "got": [
-    "recap_base"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -1156,7 +1160,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -1206,7 +1212,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -1290,7 +1296,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -1424,7 +1432,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -1559,7 +1569,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -1696,7 +1708,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -1815,6 +1829,18 @@
    "detail": {}
   },
   {
+   "id": "DE-0015/line_dropped",
+   "ok": true,
+   "expected": "lines_total",
+   "got": [
+    "lines_total"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
    "id": "DE-0015/currency_gone",
    "ok": true,
    "expected": "currency",
@@ -1907,7 +1933,21 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0016/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -2019,7 +2059,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -2155,7 +2197,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -2277,7 +2321,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -2327,7 +2373,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -2569,7 +2615,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -2705,19 +2753,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0023/line_dropped",
-   "ok": true,
-   "expected": "recap_base",
-   "got": [
-    "recap_base"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -2828,7 +2866,21 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0024/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -2951,7 +3003,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3072,7 +3126,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3122,7 +3178,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -3183,8 +3239,7 @@
     "line_math",
     "line_vat",
     "line_gross",
-    "recap_base",
-    "recap_vat"
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -3209,7 +3264,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3221,8 +3278,7 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base",
-    "recap_vat"
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -3236,8 +3292,7 @@
    "got": [
     "line_vat",
     "vat_rate",
-    "recap_base",
-    "recap_vat"
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -3348,7 +3403,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3485,7 +3542,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3607,7 +3666,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3657,7 +3718,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -3743,7 +3804,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3867,7 +3930,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -3893,6 +3958,7 @@
    "got": [
     "line_vat",
     "vat_rate",
+    "recap_base",
     "recap_base"
    ],
    "tags": [
@@ -4004,7 +4070,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -4211,7 +4279,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -4261,7 +4331,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -4332,7 +4402,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -4382,7 +4454,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -4441,18 +4513,6 @@
    "expected": "line_math",
    "got": [
     "line_math",
-    "lines_total"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0038/line_dropped",
-   "ok": true,
-   "expected": "lines_total",
-   "got": [
     "lines_total"
    ],
    "tags": [
@@ -4623,7 +4683,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -4673,7 +4735,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -4829,7 +4891,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -4879,7 +4943,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -4950,7 +5014,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -5000,7 +5066,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -5169,7 +5235,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -5305,7 +5373,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -5442,7 +5512,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -5663,7 +5735,21 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
+   ],
+   "tags": [
+    "injected"
+   ],
+   "detail": {}
+  },
+  {
+   "id": "DE-0050/line_dropped",
+   "ok": true,
+   "expected": "recap_base",
+   "got": [
+    "recap_base"
    ],
    "tags": [
     "injected"
@@ -5786,7 +5872,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -5920,7 +6008,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -6056,19 +6146,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0053/line_dropped",
-   "ok": true,
-   "expected": "recap_base",
-   "got": [
-    "recap_base"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -6179,7 +6259,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -6301,7 +6383,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -6351,7 +6435,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -6422,7 +6506,9 @@
    "ok": true,
    "expected": "recap_base",
    "got": [
-    "recap_base"
+    "recap_base",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -6472,7 +6558,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -6544,7 +6630,8 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "recap_vat"
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -6594,7 +6681,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "amount_due"
+    "total"
    ],
    "tags": [
     "injected"
@@ -6678,7 +6765,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -6813,19 +6902,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-0059/line_dropped",
-   "ok": true,
-   "expected": "recap_base",
-   "got": [
-    "recap_base"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -6994,7 +7073,10 @@
    "expected": "line_math",
    "got": [
     "line_math",
-    "recap_base"
+    "line_vat",
+    "line_gross",
+    "recap_base",
+    "recap_vat"
    ],
    "tags": [
     "injected"
@@ -7006,8 +7088,7 @@
    "ok": true,
    "expected": "total",
    "got": [
-    "total",
-    "second_currency"
+    "total"
    ],
    "tags": [
     "injected"
@@ -7020,7 +7101,9 @@
    "expected": "recap_base",
    "got": [
     "recap_base",
-    "total_net"
+    "total_net",
+    "total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -7044,8 +7127,10 @@
    "ok": true,
    "expected": "vat_rate",
    "got": [
+    "line_vat",
     "vat_rate",
-    "recap_base"
+    "recap_base",
+    "recap_vat"
    ],
    "tags": [
     "injected"
@@ -7070,8 +7155,7 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "total",
-    "second_currency"
+    "total"
    ],
    "tags": [
     "injected"
@@ -7130,60 +7214,7 @@
    "expected": "line_math",
    "got": [
     "line_math",
-    "line_vat",
-    "line_gross",
-    "recap_base"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-D002/total+0.10",
-   "ok": true,
-   "expected": "total",
-   "got": [
-    "total"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-D002/recap_base+1",
-   "ok": true,
-   "expected": "recap_base",
-   "got": [
-    "recap_base",
-    "total_net"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-D002/line_dropped",
-   "ok": true,
-   "expected": "recap_base",
-   "got": [
-    "recap_base"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
-  },
-  {
-   "id": "DE-D002/vat_rate_99",
-   "ok": true,
-   "expected": "vat_rate",
-   "got": [
-    "line_vat",
-    "vat_rate",
-    "recap_base"
+    "lines_total"
    ],
    "tags": [
     "injected"
@@ -7208,7 +7239,8 @@
    "expected": "amount_sign",
    "got": [
     "amount_sign",
-    "total"
+    "lines_total",
+    "amount_due"
    ],
    "tags": [
     "injected"
@@ -7238,29 +7270,17 @@
     "injected"
    ],
    "detail": {}
-  },
-  {
-   "id": "DE-D002/due_before_issue",
-   "ok": true,
-   "expected": "date_order",
-   "got": [
-    "date_order"
-   ],
-   "tags": [
-    "injected"
-   ],
-   "detail": {}
   }
  ],
  "meta": {
-  "created": "20261020T144552Z",
+  "created": "20261106T000444Z",
   "git": {
-   "sha": "26fc48d",
+   "sha": "2ab9c95",
    "dirty": true
   },
   "dataset": "6bd4025701dc",
   "seed": 42,
-  "cassette_mode": "off",
+  "cassette_mode": "replay",
   "overrides": {},
   "options": {},
   "prompts": {},
@@ -7275,7 +7295,7 @@
   "tokens_per_item": 0.0,
   "latency_p50_ms": 0,
   "latency_p95_ms": 0,
-  "worker_peak_rss_mb": 527,
+  "worker_peak_rss_mb": 498,
   "models": []
  },
  "notes": [],

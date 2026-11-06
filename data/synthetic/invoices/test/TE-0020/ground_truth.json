@@ -4,7 +4,7 @@
  "layout": "scan_en",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "5a15a1d4dbf80c1a8fddc81bf55e67ff2436676b22f1f8d2c38db9cb5f037a06",
+ "sha256": "6ab44a7e59ae163987f8ec96087a33c613851f69aec379089ca62b83820a6be3",
  "pages_total": 1,
  "pages_present": 1,
  "scan": true,
@@ -12,6 +12,7 @@
  "language": "en",
  "duplicate_of": null,
  "edge_cases": [
+  "batch_split",
   "reverse_charge",
   "scan",
   "stamp"
@@ -19,8 +20,8 @@
  "vat_method": "per_rate",
  "supplier_key": "novamed",
  "supplier_registered": true,
- "buyer_key": "retail",
- "delivery_point": "Lekáreň Sever e-shop (hala 4), Logistická 9, 903 01 Senec",
+ "buyer_key": "central",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
  "header": {
   "document_kind": {
    "printed": "Invoice",
@@ -28,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "256630",
-   "value": "256630",
+   "printed": "252390",
+   "value": "252390",
    "page": 1
   },
   "issue_date": {
-   "printed": "21.06.2025",
-   "value": "2025-06-21",
+   "printed": "19.07.2025",
+   "value": "2025-07-19",
    "page": 1
   },
   "supplier_name": {
@@ -43,28 +44,28 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "90907841",
-   "value": "90907841",
+   "printed": "99900173",
+   "value": "99900173",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ90907841",
-   "value": "CZ90907841",
+   "printed": "CZ99900173",
+   "value": "CZ99900173",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ57 5500 0000 0018 6736 2483",
-   "value": "CZ5755000000001867362483",
+   "printed": "CZ29 0800 0000 0011 6177 5202",
+   "value": "CZ2908000000001161775202",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever Retail s.r.o.",
-   "value": "Lekárne Sever Retail s.r.o.",
+   "printed": "Lekárne Sever s.r.o.",
+   "value": "Lekárne Sever s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2992944152",
-   "value": "SK2992944152",
+   "printed": "SK2997673481",
+   "value": "SK2997673481",
    "page": 1
   },
   "currency": {
@@ -73,18 +74,18 @@
    "page": 1
   },
   "total": {
-   "printed": "24 578,88",
-   "value": "24578.88",
+   "printed": "6 661,56",
+   "value": "6661.56",
    "page": 1
   },
   "amount_due": {
-   "printed": "24 578,88",
-   "value": "24578.88",
+   "printed": "6 661,56",
+   "value": "6661.56",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25842930",
-   "value": "OB25842930",
+   "printed": "OB25072487",
+   "value": "OB25072487",
    "page": 1
   },
   "reverse_charge": {
@@ -102,73 +103,24 @@
   {
    "cells": {
     "name": {
-     "printed": "Herbana vitamín C 500 mg 60 tbl",
-     "value": "Herbana vitamín C 500 mg 60 tbl"
+     "printed": "Kalmina kapsuly na trávenie 30 cps",
+     "value": "Kalmina kapsuly na trávenie 30 cps"
     },
     "quantity": {
-     "printed": "24",
-     "value": "24"
+     "printed": "12",
+     "value": "12"
     },
     "line_net": {
-     "printed": "1 635,36",
-     "value": "1635.36"
+     "printed": "214,68",
+     "value": "214.68"
     },
     "ean": {
-     "printed": "8585578342513",
-     "value": "8585578342513"
+     "printed": "8590179624555",
+     "value": "8590179624555"
     },
     "unit_price": {
-     "printed": "68,14",
-     "value": "68.14"
-    },
-    "origin": {
-     "printed": "SK",
-     "value": "SK"
-    },
-    "customs_code": {
-     "printed": "21069098",
-     "value": "21069098"
-    }
-   },
-   "batches": [
-    {
-     "batch": {
-      "printed": "1A29127",
-      "value": "1A29127"
-     },
-     "expiry": {
-      "printed": "05/29",
-      "value": "05/29"
-     },
-     "quantity": {
-      "printed": "24",
-      "value": "24"
-     }
-    }
-   ],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Sanovit - čaj na pokojný spánok 20x2g",
-     "value": "Sanovit - čaj na pokojný spánok 20x2g"
-    },
-    "quantity": {
-     "printed": "48",
-     "value": "48"
-    },
-    "line_net": {
-     "printed": "3 591,36",
-     "value": "3591.36"
-    },
-    "ean": {
-     "printed": "8592380349913",
-     "value": "8592380349913"
-    },
-    "unit_price": {
-     "printed": "74,82",
-     "value": "74.82"
+     "printed": "17,89",
+     "value": "17.89"
     },
     "origin": {
      "printed": "CZ",
@@ -182,16 +134,16 @@
    "batches": [
     {
      "batch": {
-      "printed": "1K79390",
-      "value": "1K79390"
+      "printed": "3E68155",
+      "value": "3E68155"
      },
      "expiry": {
-      "printed": "03/26",
-      "value": "03/26"
+      "printed": "01/29",
+      "value": "01/29"
      },
      "quantity": {
-      "printed": "48",
-      "value": "48"
+      "printed": "12",
+      "value": "12"
      }
     }
    ],
@@ -200,28 +152,28 @@
   {
    "cells": {
     "name": {
-     "printed": "Nutrilek masť na hojenie rán 30 g",
-     "value": "Nutrilek masť na hojenie rán 30 g"
+     "printed": "Medisan sirup na kašeľ 100 ml",
+     "value": "Medisan sirup na kašeľ 100 ml"
     },
     "quantity": {
-     "printed": "144",
-     "value": "144"
+     "printed": "48",
+     "value": "48"
     },
     "line_net": {
-     "printed": "19 352,16",
-     "value": "19352.16"
+     "printed": "3 247,20",
+     "value": "3247.20"
     },
     "ean": {
-     "printed": "8581976832045",
-     "value": "8581976832045"
+     "printed": "8591572125908",
+     "value": "8591572125908"
     },
     "unit_price": {
-     "printed": "134,39",
-     "value": "134.39"
+     "printed": "67,65",
+     "value": "67.65"
     },
     "origin": {
-     "printed": "SK",
-     "value": "SK"
+     "printed": "CZ",
+     "value": "CZ"
     },
     "customs_code": {
      "printed": "21069098",
@@ -231,16 +183,93 @@
    "batches": [
     {
      "batch": {
-      "printed": "3K14511",
-      "value": "3K14511"
+      "printed": "3N57928",
+      "value": "3N57928"
      },
      "expiry": {
-      "printed": "11/27",
-      "value": "11/27"
+      "printed": "07/28",
+      "value": "07/28"
      },
      "quantity": {
-      "printed": "144",
-      "value": "144"
+      "printed": "43",
+      "value": "43"
+     }
+    },
+    {
+     "batch": {
+      "printed": "3N57984",
+      "value": "3N57984"
+     },
+     "expiry": {
+      "printed": "07/28",
+      "value": "07/28"
+     },
+     "quantity": {
+      "printed": "5",
+      "value": "5"
+     }
+    }
+   ],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana masť na hojenie rán 30 g",
+     "value": "Herbana masť na hojenie rán 30 g"
+    },
+    "quantity": {
+     "printed": "24",
+     "value": "24"
+    },
+    "line_net": {
+     "printed": "3 199,68",
+     "value": "3199.68"
+    },
+    "ean": {
+     "printed": "8597738871467",
+     "value": "8597738871467"
+    },
+    "unit_price": {
+     "printed": "133,32",
+     "value": "133.32"
+    },
+    "origin": {
+     "printed": "CZ",
+     "value": "CZ"
+    },
+    "customs_code": {
+     "printed": "21069098",
+     "value": "21069098"
+    }
+   },
+   "batches": [
+    {
+     "batch": {
+      "printed": "2L43969",
+      "value": "2L43969"
+     },
+     "expiry": {
+      "printed": "06/26",
+      "value": "06/26"
+     },
+     "quantity": {
+      "printed": "23",
+      "value": "23"
+     }
+    },
+    {
+     "batch": {
+      "printed": "2L43132",
+      "value": "2L43132"
+     },
+     "expiry": {
+      "printed": "06/26",
+      "value": "06/26"
+     },
+     "quantity": {
+      "printed": "1",
+      "value": "1"
      }
     }
    ],
@@ -251,7 +280,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Helena Čechová",
-  "+420 947 321 396"
+  "Ivo Čech",
+  "+420 969 867 981"
  ]
 }

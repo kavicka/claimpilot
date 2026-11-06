@@ -4,7 +4,7 @@
  "layout": "sap",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "8cc3377e93be5557d2d3209729c90c57396e187c59df8a594d9572bf043c8845",
+ "sha256": "a7291ee8ae68796c3ac224ec22133a2ac7f211f2f54faf07ae62593e10a996d4",
  "pages_total": 2,
  "pages_present": 2,
  "scan": false,
@@ -29,13 +29,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "294529988",
-   "value": "294529988",
+   "printed": "297380804",
+   "value": "297380804",
    "page": 1
   },
   "issue_date": {
-   "printed": "18.02.2025",
-   "value": "2025-02-18",
+   "printed": "05.06.2025",
+   "value": "2025-06-05",
    "page": 1
   },
   "supplier_name": {
@@ -44,18 +44,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94236011",
-   "value": "94236011",
+   "printed": "94947589",
+   "value": "94947589",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94236011",
-   "value": "CZ94236011",
+   "printed": "CZ94947589",
+   "value": "CZ94947589",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ89 2700 0000 0015 5974 2964",
-   "value": "CZ8927000000001559742964",
+   "printed": "CZ79 2700 0000 0031 8121 9976",
+   "value": "CZ7927000000003181219976",
    "page": 1
   },
   "buyer_name": {
@@ -74,23 +74,23 @@
    "page": 1
   },
   "total": {
-   "printed": "7.815,32",
-   "value": "7815.32",
+   "printed": "3.865,56",
+   "value": "3865.56",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "18.02.2025",
-   "value": "2025-02-18",
+   "printed": "03.06.2025",
+   "value": "2025-06-03",
    "page": 1
   },
   "due_date": {
-   "printed": "20.03.2025",
-   "value": "2025-03-20",
+   "printed": "19.06.2025",
+   "value": "2025-06-19",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "CZ94236011",
-   "value": "CZ94236011",
+   "printed": "CZ94947589",
+   "value": "CZ94947589",
    "page": 1
   },
   "buyer_ico": {
@@ -104,8 +104,8 @@
    "page": 1
   },
   "variable_symbol": {
-   "printed": "294529988",
-   "value": "294529988",
+   "printed": "297380804",
+   "value": "297380804",
    "page": 1
   },
   "constant_symbol": {
@@ -114,18 +114,18 @@
    "page": 1
   },
   "specific_symbol": {
-   "printed": "192780",
-   "value": "192780",
+   "printed": "197398",
+   "value": "197398",
    "page": 1
   },
   "amount_due": {
-   "printed": "7.815,32",
-   "value": "7815.32",
+   "printed": "3.865,56",
+   "value": "3865.56",
    "page": 1
   },
   "total_net": {
-   "printed": "7.815,32",
-   "value": "7815.32",
+   "printed": "3.865,56",
+   "value": "3865.56",
    "page": 1
   },
   "total_vat": {
@@ -134,18 +134,18 @@
    "page": 1
   },
   "order_number": {
-   "printed": "OB25851299",
-   "value": "OB25851299",
+   "printed": "OB25883970",
+   "value": "OB25883970",
    "page": 1
   },
   "delivery_note_numbers": {
-   "printed": "29689268",
-   "value": "29689268",
+   "printed": "2986348",
+   "value": "2986348",
    "page": 1
   },
   "customer_number": {
-   "printed": "48702",
-   "value": "48702",
+   "printed": "79785",
+   "value": "79785",
    "page": 1
   },
   "reverse_charge": {
@@ -154,8 +154,8 @@
    "page": 1
   },
   "second_currency_total": {
-   "printed": "193.116,56",
-   "value": "193116.56",
+   "printed": "95.517,99",
+   "value": "95517.99",
    "page": 1
   },
   "fx_rate": {
@@ -168,36 +168,124 @@
   {
    "cells": {
     "name": {
-     "printed": "Herbana detská výživa ovsená kaša 225 g",
-     "value": "Herbana detská výživa ovsená kaša 225 g"
+     "printed": "Kalmina detská výživa ovsená kaša 225 g",
+     "value": "Kalmina detská výživa ovsená kaša 225 g"
     },
     "quantity": {
-     "printed": "60",
-     "value": "60"
+     "printed": "12",
+     "value": "12"
     },
     "line_net": {
-     "printed": "219,00",
-     "value": "219.00"
+     "printed": "30,84",
+     "value": "30.84"
     },
     "vat_rate": {
      "printed": "0",
      "value": "0"
     },
     "ean": {
-     "printed": "8593774907344",
-     "value": "8593774907344"
+     "printed": "8592121913434",
+     "value": "8592121913434"
     },
     "supplier_code": {
-     "printed": "MB400226",
-     "value": "MB400226"
+     "printed": "LC518816",
+     "value": "LC518816"
     },
     "unit_price": {
-     "printed": "3,65",
-     "value": "3.65"
+     "printed": "2,71",
+     "value": "2.71"
+    },
+    "struct_discount_pct": {
+     "printed": "5,00%",
+     "value": "5"
     },
     "net_unit_price": {
-     "printed": "3,65",
-     "value": "3.65"
+     "printed": "2,57",
+     "value": "2.57"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Kalmina manžeta k tlakomeru 22-42 cm",
+     "value": "Kalmina manžeta k tlakomeru 22-42 cm"
+    },
+    "quantity": {
+     "printed": "60",
+     "value": "60"
+    },
+    "line_net": {
+     "printed": "707,40",
+     "value": "707.40"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4000031802341",
+     "value": "4000031802341"
+    },
+    "supplier_code": {
+     "printed": "LC267558",
+     "value": "LC267558"
+    },
+    "unit_price": {
+     "printed": "12,81",
+     "value": "12.81"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "11,79",
+     "value": "11.79"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Vivera náplasť elastická 10 ks",
+     "value": "Vivera náplasť elastická 10 ks"
+    },
+    "quantity": {
+     "printed": "60",
+     "value": "60"
+    },
+    "line_net": {
+     "printed": "2.411,40",
+     "value": "2411.40"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "4009181524486",
+     "value": "4009181524486"
+    },
+    "supplier_code": {
+     "printed": "AU332706",
+     "value": "AU332706"
+    },
+    "unit_price": {
+     "printed": "43,68",
+     "value": "43.68"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "40,19",
+     "value": "40.19"
     }
    },
    "batches": [],
@@ -210,12 +298,12 @@
      "value": "Herbana opaľovací krém SPF 50+ 50 ml"
     },
     "quantity": {
-     "printed": "24",
-     "value": "24"
+     "printed": "48",
+     "value": "48"
     },
     "line_net": {
-     "printed": "299,52",
-     "value": "299.52"
+     "printed": "630,72",
+     "value": "630.72"
     },
     "vat_rate": {
      "printed": "0",
@@ -233,13 +321,9 @@
      "printed": "13,14",
      "value": "13.14"
     },
-    "struct_discount_pct": {
-     "printed": "5,00%",
-     "value": "5"
-    },
     "net_unit_price": {
-     "printed": "12,48",
-     "value": "12.48"
+     "printed": "13,14",
+     "value": "13.14"
     }
    },
    "batches": [],
@@ -248,86 +332,36 @@
   {
    "cells": {
     "name": {
-     "printed": "Nutrilek - kláštorný čaj na priedušky 20x2g",
-     "value": "Nutrilek - kláštorný čaj na priedušky 20x2g"
+     "printed": "Vivera šampón proti lupinám 250 ml",
+     "value": "Vivera šampón proti lupinám 250 ml"
     },
     "quantity": {
      "printed": "24",
      "value": "24"
     },
     "line_net": {
-     "printed": "112,80",
-     "value": "112.80"
+     "printed": "85,20",
+     "value": "85.20"
     },
     "vat_rate": {
      "printed": "0",
      "value": "0"
     },
     "ean": {
-     "printed": "8587030270235",
-     "value": "8587030270235"
+     "printed": "8591997715067",
+     "value": "8591997715067"
     },
     "supplier_code": {
-     "printed": "MB470561",
-     "value": "MB470561"
+     "printed": "LC918274",
+     "value": "LC918274"
     },
     "unit_price": {
-     "printed": "5,11",
-     "value": "5.11"
-    },
-    "struct_discount_pct": {
-     "printed": "8,00%",
-     "value": "8"
+     "printed": "3,55",
+     "value": "3.55"
     },
     "net_unit_price": {
-     "printed": "4,70",
-     "value": "4.70"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Kalmina bandáž členku veľkosť M",
-     "value": "Kalmina bandáž členku veľkosť M"
-    },
-    "quantity": {
-     "printed": "200",
-     "value": "200"
-    },
-    "line_net": {
-     "printed": "7.184,00",
-     "value": "7184.00"
-    },
-    "vat_rate": {
-     "printed": "0",
-     "value": "0"
-    },
-    "ean": {
-     "printed": "8581693735018",
-     "value": "8581693735018"
-    },
-    "supplier_code": {
-     "printed": "LC125311",
-     "value": "LC125311"
-    },
-    "unit_price": {
-     "printed": "42,01",
-     "value": "42.01"
-    },
-    "struct_discount_pct": {
-     "printed": "5,00%",
-     "value": "5"
-    },
-    "promo_discount_pct": {
-     "printed": "10,00%",
-     "value": "10"
-    },
-    "net_unit_price": {
-     "printed": "35,92",
-     "value": "35.92"
+     "printed": "3,55",
+     "value": "3.55"
     }
    },
    "batches": [],
@@ -341,8 +375,8 @@
     "value": "0"
    },
    "base": {
-    "printed": "7.815,32",
-    "value": "7815.32"
+    "printed": "3.865,56",
+    "value": "3865.56"
    },
    "vat": {
     "printed": "0,00",
@@ -355,12 +389,12 @@
  "findings": [
   {
    "kind": "short_delivery",
-   "line": 3,
-   "detail": "150 received"
+   "line": 1,
+   "detail": "45 received"
   }
  ],
  "pii": [
-  "Květa Horváthová",
-  "+420 948 195 996"
+  "Marek Horák",
+  "+420 904 730 458"
  ]
 }

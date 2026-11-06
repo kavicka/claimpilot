@@ -4,7 +4,7 @@
  "layout": "sap",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "cdce1c2165b7a22cdb9d08319738b3dfdd7c7cbcc9f08b98f2530552cc4e6ae8",
+ "sha256": "169bab61c3bb7857eb52c09e1d9d427c086d2f02a80ee3586e302deece4f5589",
  "pages_total": 2,
  "pages_present": 2,
  "scan": false,
@@ -20,7 +20,7 @@
  "supplier_key": "aurelle",
  "supplier_registered": true,
  "buyer_key": "central",
- "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
+ "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
  "header": {
   "document_kind": {
    "printed": "Faktúra",
@@ -28,13 +28,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "295788927",
-   "value": "295788927",
+   "printed": "295991273",
+   "value": "295991273",
    "page": 1
   },
   "issue_date": {
-   "printed": "06.06.2025",
-   "value": "2025-06-06",
+   "printed": "16.02.2025",
+   "value": "2025-02-16",
    "page": 1
   },
   "supplier_name": {
@@ -43,18 +43,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "94236011",
-   "value": "94236011",
+   "printed": "94947589",
+   "value": "94947589",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ94236011",
-   "value": "CZ94236011",
+   "printed": "CZ94947589",
+   "value": "CZ94947589",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ89 2700 0000 0015 5974 2964",
-   "value": "CZ8927000000001559742964",
+   "printed": "CZ79 2700 0000 0031 8121 9976",
+   "value": "CZ7927000000003181219976",
    "page": 1
   },
   "buyer_name": {
@@ -73,23 +73,23 @@
    "page": 1
   },
   "total": {
-   "printed": "2.034,92",
-   "value": "2034.92",
+   "printed": "374,40",
+   "value": "374.40",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "06.06.2025",
-   "value": "2025-06-06",
+   "printed": "14.02.2025",
+   "value": "2025-02-14",
    "page": 1
   },
   "due_date": {
-   "printed": "06.07.2025",
-   "value": "2025-07-06",
+   "printed": "18.03.2025",
+   "value": "2025-03-18",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "CZ94236011",
-   "value": "CZ94236011",
+   "printed": "CZ94947589",
+   "value": "CZ94947589",
    "page": 1
   },
   "buyer_ico": {
@@ -103,8 +103,8 @@
    "page": 1
   },
   "variable_symbol": {
-   "printed": "295788927",
-   "value": "295788927",
+   "printed": "295991273",
+   "value": "295991273",
    "page": 1
   },
   "constant_symbol": {
@@ -113,18 +113,18 @@
    "page": 1
   },
   "specific_symbol": {
-   "printed": "761466",
-   "value": "761466",
+   "printed": "434228",
+   "value": "434228",
    "page": 1
   },
   "amount_due": {
-   "printed": "2.034,92",
-   "value": "2034.92",
+   "printed": "374,40",
+   "value": "374.40",
    "page": 1
   },
   "total_net": {
-   "printed": "2.034,92",
-   "value": "2034.92",
+   "printed": "374,40",
+   "value": "374.40",
    "page": 1
   },
   "total_vat": {
@@ -133,18 +133,18 @@
    "page": 1
   },
   "order_number": {
-   "printed": "OB25612594",
-   "value": "OB25612594",
+   "printed": "OB25724169",
+   "value": "OB25724169",
    "page": 1
   },
   "delivery_note_numbers": {
-   "printed": "29321837",
-   "value": "29321837",
+   "printed": "29807122",
+   "value": "29807122",
    "page": 1
   },
   "customer_number": {
-   "printed": "50589",
-   "value": "50589",
+   "printed": "29457",
+   "value": "29457",
    "page": 1
   },
   "reverse_charge": {
@@ -153,13 +153,13 @@
    "page": 1
   },
   "second_currency_total": {
-   "printed": "50.974,75",
-   "value": "50974.75",
+   "printed": "9.330,05",
+   "value": "9330.05",
    "page": 1
   },
   "fx_rate": {
-   "printed": "25,05",
-   "value": "25.05",
+   "printed": "24,92",
+   "value": "24.92",
    "page": 1
   }
  },
@@ -167,162 +167,40 @@
   {
    "cells": {
     "name": {
-     "printed": "Nutrilek dávkovač liekov týždenný",
-     "value": "Nutrilek dávkovač liekov týždenný"
+     "printed": "Florea náplasť elastická 10 ks",
+     "value": "Florea náplasť elastická 10 ks"
     },
     "quantity": {
-     "printed": "24",
-     "value": "24"
+     "printed": "60",
+     "value": "60"
     },
     "line_net": {
-     "printed": "611,28",
-     "value": "611.28"
+     "printed": "374,40",
+     "value": "374.40"
     },
     "vat_rate": {
      "printed": "0",
      "value": "0"
     },
     "ean": {
-     "printed": "8580323253984",
-     "value": "8580323253984"
+     "printed": "4004875286916",
+     "value": "4004875286916"
     },
     "supplier_code": {
-     "printed": "MB692645",
-     "value": "MB692645"
+     "printed": "LC666595",
+     "value": "LC666595"
     },
     "unit_price": {
-     "printed": "27,69",
-     "value": "27.69"
+     "printed": "6,78",
+     "value": "6.78"
     },
     "struct_discount_pct": {
      "printed": "8,00%",
      "value": "8"
     },
     "net_unit_price": {
-     "printed": "25,47",
-     "value": "25.47"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Herbana liekovka 300 ml s uzáverom",
-     "value": "Herbana liekovka 300 ml s uzáverom"
-    },
-    "quantity": {
-     "printed": "100",
-     "value": "100"
-    },
-    "line_net": {
-     "printed": "875,00",
-     "value": "875.00"
-    },
-    "vat_rate": {
-     "printed": "0",
-     "value": "0"
-    },
-    "ean": {
-     "printed": "8580908456892",
-     "value": "8580908456892"
-    },
-    "supplier_code": {
-     "printed": "MB681654",
-     "value": "MB681654"
-    },
-    "unit_price": {
-     "printed": "8,75",
-     "value": "8.75"
-    },
-    "net_unit_price": {
-     "printed": "8,75",
-     "value": "8.75"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Medisan sprchový gél s levanduľou 400 ml",
-     "value": "Medisan sprchový gél s levanduľou 400 ml"
-    },
-    "quantity": {
-     "printed": "48",
-     "value": "48"
-    },
-    "line_net": {
-     "printed": "348,48",
-     "value": "348.48"
-    },
-    "vat_rate": {
-     "printed": "0",
-     "value": "0"
-    },
-    "ean": {
-     "printed": "3804737254708",
-     "value": "3804737254708"
-    },
-    "supplier_code": {
-     "printed": "AU197073",
-     "value": "AU197073"
-    },
-    "unit_price": {
-     "printed": "7,89",
-     "value": "7.89"
-    },
-    "struct_discount_pct": {
-     "printed": "8,00%",
-     "value": "8"
-    },
-    "net_unit_price": {
-     "printed": "7,26",
-     "value": "7.26"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Medisan manžeta k tlakomeru 22-42 cm",
-     "value": "Medisan manžeta k tlakomeru 22-42 cm"
-    },
-    "quantity": {
-     "printed": "48",
-     "value": "48"
-    },
-    "line_net": {
-     "printed": "200,16",
-     "value": "200.16"
-    },
-    "vat_rate": {
-     "printed": "0",
-     "value": "0"
-    },
-    "ean": {
-     "printed": "8587952814661",
-     "value": "8587952814661"
-    },
-    "supplier_code": {
-     "printed": "AU576654",
-     "value": "AU576654"
-    },
-    "unit_price": {
-     "printed": "4,39",
-     "value": "4.39"
-    },
-    "struct_discount_pct": {
-     "printed": "5,00%",
-     "value": "5"
-    },
-    "net_unit_price": {
-     "printed": "4,17",
-     "value": "4.17"
+     "printed": "6,24",
+     "value": "6.24"
     }
    },
    "batches": [],
@@ -336,8 +214,8 @@
     "value": "0"
    },
    "base": {
-    "printed": "2.034,92",
-    "value": "2034.92"
+    "printed": "374,40",
+    "value": "374.40"
    },
    "vat": {
     "printed": "0,00",
@@ -349,7 +227,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Květa Horváthová",
-  "+420 948 195 996"
+  "Marek Horák",
+  "+420 904 730 458"
  ]
 }

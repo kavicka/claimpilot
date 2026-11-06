@@ -1,0 +1,19 @@
+{
+ "step": "invoice_header",
+ "prompt_id": "invoice_extraction/header",
+ "prompt_hash": "9c8648cecf50d87336e8402aea9e433d878352aaa30f8712ec222fd19d0bc7b5",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"amount_due\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"buyer_dic\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"buyer_ico\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"buyer_name\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"buyer_vat_id\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"constant_symbol\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"currency\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"customer_number\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"delivery_note_numbers\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"due_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"fees\": [],\n  \"fx_rate\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"invoice_number\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"issue_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"order_number\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"original_invoice_number\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"proforma_number\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"proforma_settled\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"recap\": [],\n  \"reverse_charge\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"second_currency_total\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"specific_symbol\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"supplier_dic\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"supplier_iban\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"supplier_ico\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"supplier_name\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"supplier_vat_id\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"tax_point_date\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"total\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"total_net\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"total_vat\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  },\n  \"variable_symbol\": {\n    \"page\": null,\n    \"quote\": null,\n    \"value\": null\n  }\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 1486,
+   "tokens_out": 810,
+   "latency_ms": 23725
+  },
+  "cached": false
+ }
+}

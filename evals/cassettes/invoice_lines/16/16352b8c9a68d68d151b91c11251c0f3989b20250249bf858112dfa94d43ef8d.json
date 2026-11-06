@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "b5dd98d4ccb31b542c4c487fa55a88ae503546ec4038292779d8eff3cf95f83c",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 1,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"MB526682\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"3802279169764\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Nutrilek krém na ruky s panthenolom 100 ml\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"24\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"Kusy\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"19,58\"\n        },\n        {\n          \"field\": \"promo_discount_pct\",\n          \"value\": \"10,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"422,88\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"0\"\n        }\n      ]\n    },\n    {\n      \"item\": 2,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"MB956373\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8589923611552\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Florea vitamín C 500 mg 60 tbl\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"36\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"Kusy\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"5,97\"\n        },\n        {\n          \"field\": \"struct_discount_pct\",\n          \"value\": \"8,00%\"\n        },\n        {\n          \"field\": \"promo_discount_pct\",\n          \"value\": \"10,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"177,84\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"0\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2013,
+   "tokens_out": 505,
+   "latency_ms": 21230
+  },
+  "cached": false
+ }
+}

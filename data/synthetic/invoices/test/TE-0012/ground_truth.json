@@ -4,7 +4,7 @@
  "layout": "sap",
  "kind": "invoice",
  "file": "invoice.pdf",
- "sha256": "a04af21464eddda5fb87460e21f8a5ab998de9ad541299370b782893a8c4f768",
+ "sha256": "222e30530fc027f974e5be69ba8962f4cc045ab1d8cadb7a2bc2eb0fdf557c84",
  "pages_total": 2,
  "pages_present": 2,
  "scan": false,
@@ -28,13 +28,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "292849967",
-   "value": "292849967",
+   "printed": "293720149",
+   "value": "293720149",
    "page": 1
   },
   "issue_date": {
-   "printed": "24.08.2025",
-   "value": "2025-08-24",
+   "printed": "26.02.2025",
+   "value": "2025-02-26",
    "page": 1
   },
   "supplier_name": {
@@ -43,18 +43,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "95474463",
-   "value": "95474463",
+   "printed": "92793100",
+   "value": "92793100",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "CZ95474463",
-   "value": "CZ95474463",
+   "printed": "CZ92793100",
+   "value": "CZ92793100",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "CZ62 0100 0000 0058 2742 5761",
-   "value": "CZ6201000000005827425761",
+   "printed": "CZ06 2010 0000 0025 8740 3104",
+   "value": "CZ0620100000002587403104",
    "page": 1
   },
   "buyer_name": {
@@ -73,23 +73,23 @@
    "page": 1
   },
   "total": {
-   "printed": "523,20",
-   "value": "523.20",
+   "printed": "4.259,32",
+   "value": "4259.32",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "24.08.2025",
-   "value": "2025-08-24",
+   "printed": "24.02.2025",
+   "value": "2025-02-24",
    "page": 1
   },
   "due_date": {
-   "printed": "23.09.2025",
-   "value": "2025-09-23",
+   "printed": "28.03.2025",
+   "value": "2025-03-28",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "CZ95474463",
-   "value": "CZ95474463",
+   "printed": "CZ92793100",
+   "value": "CZ92793100",
    "page": 1
   },
   "buyer_ico": {
@@ -103,8 +103,8 @@
    "page": 1
   },
   "variable_symbol": {
-   "printed": "292849967",
-   "value": "292849967",
+   "printed": "293720149",
+   "value": "293720149",
    "page": 1
   },
   "constant_symbol": {
@@ -113,18 +113,18 @@
    "page": 1
   },
   "specific_symbol": {
-   "printed": "195629",
-   "value": "195629",
+   "printed": "450287",
+   "value": "450287",
    "page": 1
   },
   "amount_due": {
-   "printed": "523,20",
-   "value": "523.20",
+   "printed": "4.259,32",
+   "value": "4259.32",
    "page": 1
   },
   "total_net": {
-   "printed": "523,20",
-   "value": "523.20",
+   "printed": "4.259,32",
+   "value": "4259.32",
    "page": 1
   },
   "total_vat": {
@@ -133,18 +133,18 @@
    "page": 1
   },
   "order_number": {
-   "printed": "OB25075900",
-   "value": "OB25075900",
+   "printed": "OB25543774",
+   "value": "OB25543774",
    "page": 1
   },
   "delivery_note_numbers": {
-   "printed": "29938701",
-   "value": "29938701",
+   "printed": "29161343",
+   "value": "29161343",
    "page": 1
   },
   "customer_number": {
-   "printed": "91685",
-   "value": "91685",
+   "printed": "77850",
+   "value": "77850",
    "page": 1
   },
   "reverse_charge": {
@@ -153,13 +153,13 @@
    "page": 1
   },
   "second_currency_total": {
-   "printed": "13.038,14",
-   "value": "13038.14",
+   "printed": "105.247,80",
+   "value": "105247.80",
    "page": 1
   },
   "fx_rate": {
-   "printed": "24,92",
-   "value": "24.92",
+   "printed": "24,71",
+   "value": "24.71",
    "page": 1
   }
  },
@@ -167,36 +167,36 @@
   {
    "cells": {
     "name": {
-     "printed": "Florea opaľovací krém SPF 50+ 50 ml",
-     "value": "Florea opaľovací krém SPF 50+ 50 ml"
+     "printed": "Sanovit opaľovací krém SPF 50+ 50 ml",
+     "value": "Sanovit opaľovací krém SPF 50+ 50 ml"
     },
     "quantity": {
-     "printed": "60",
-     "value": "60"
+     "printed": "48",
+     "value": "48"
     },
     "line_net": {
-     "printed": "476,40",
-     "value": "476.40"
+     "printed": "417,12",
+     "value": "417.12"
     },
     "vat_rate": {
      "printed": "0",
      "value": "0"
     },
     "ean": {
-     "printed": "3005754397274",
-     "value": "3005754397274"
+     "printed": "4006835247586",
+     "value": "4006835247586"
     },
     "supplier_code": {
-     "printed": "LC410850",
-     "value": "LC410850"
+     "printed": "AU179483",
+     "value": "AU179483"
     },
     "unit_price": {
-     "printed": "7,94",
-     "value": "7.94"
+     "printed": "8,69",
+     "value": "8.69"
     },
     "net_unit_price": {
-     "printed": "7,94",
-     "value": "7.94"
+     "printed": "8,69",
+     "value": "8.69"
     }
    },
    "batches": [],
@@ -205,36 +205,204 @@
   {
    "cells": {
     "name": {
-     "printed": "Sanovit detská výživa ovsená kaša 225 g",
-     "value": "Sanovit detská výživa ovsená kaša 225 g"
+     "printed": "Florea vitamín C 500 mg 60 tbl",
+     "value": "Florea vitamín C 500 mg 60 tbl"
     },
     "quantity": {
      "printed": "12",
      "value": "12"
     },
     "line_net": {
-     "printed": "46,80",
-     "value": "46.80"
+     "printed": "61,20",
+     "value": "61.20"
     },
     "vat_rate": {
      "printed": "0",
      "value": "0"
     },
     "ean": {
-     "printed": "8597621196165",
-     "value": "8597621196165"
+     "printed": "8589923611552",
+     "value": "8589923611552"
     },
     "supplier_code": {
-     "printed": "MB712569",
-     "value": "MB712569"
+     "printed": "MB956373",
+     "value": "MB956373"
     },
     "unit_price": {
-     "printed": "3,90",
-     "value": "3.90"
+     "printed": "5,97",
+     "value": "5.97"
+    },
+    "struct_discount_pct": {
+     "printed": "5,00%",
+     "value": "5"
+    },
+    "promo_discount_pct": {
+     "printed": "10,00%",
+     "value": "10"
     },
     "net_unit_price": {
-     "printed": "3,90",
-     "value": "3.90"
+     "printed": "5,10",
+     "value": "5.10"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana - cukríky s medom a šalviou 40g",
+     "value": "Herbana - cukríky s medom a šalviou 40g"
+    },
+    "quantity": {
+     "printed": "200",
+     "value": "200"
+    },
+    "line_net": {
+     "printed": "502,00",
+     "value": "502.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8596964056808",
+     "value": "8596964056808"
+    },
+    "supplier_code": {
+     "printed": "MB581518",
+     "value": "MB581518"
+    },
+    "unit_price": {
+     "printed": "2,51",
+     "value": "2.51"
+    },
+    "net_unit_price": {
+     "printed": "2,51",
+     "value": "2.51"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Nutrilek krém na ruky s panthenolom 100 ml",
+     "value": "Nutrilek krém na ruky s panthenolom 100 ml"
+    },
+    "quantity": {
+     "printed": "144",
+     "value": "144"
+    },
+    "line_net": {
+     "printed": "2.211,84",
+     "value": "2211.84"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8594462451446",
+     "value": "8594462451446"
+    },
+    "supplier_code": {
+     "printed": "MB467595",
+     "value": "MB467595"
+    },
+    "unit_price": {
+     "printed": "16,70",
+     "value": "16.70"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "15,36",
+     "value": "15.36"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Herbana šampón proti lupinám 250 ml",
+     "value": "Herbana šampón proti lupinám 250 ml"
+    },
+    "quantity": {
+     "printed": "12",
+     "value": "12"
+    },
+    "line_net": {
+     "printed": "47,16",
+     "value": "47.16"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "3804007881887",
+     "value": "3804007881887"
+    },
+    "supplier_code": {
+     "printed": "LC254294",
+     "value": "LC254294"
+    },
+    "unit_price": {
+     "printed": "4,27",
+     "value": "4.27"
+    },
+    "struct_discount_pct": {
+     "printed": "8,00%",
+     "value": "8"
+    },
+    "net_unit_price": {
+     "printed": "3,93",
+     "value": "3.93"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea pleťový krém na citlivú pleť 50 ml",
+     "value": "Florea pleťový krém na citlivú pleť 50 ml"
+    },
+    "quantity": {
+     "printed": "60",
+     "value": "60"
+    },
+    "line_net": {
+     "printed": "1.020,00",
+     "value": "1020.00"
+    },
+    "vat_rate": {
+     "printed": "0",
+     "value": "0"
+    },
+    "ean": {
+     "printed": "8597676126995",
+     "value": "8597676126995"
+    },
+    "supplier_code": {
+     "printed": "MB647171",
+     "value": "MB647171"
+    },
+    "unit_price": {
+     "printed": "17,00",
+     "value": "17.00"
+    },
+    "net_unit_price": {
+     "printed": "17,00",
+     "value": "17.00"
     }
    },
    "batches": [],
@@ -248,8 +416,8 @@
     "value": "0"
    },
    "base": {
-    "printed": "523,20",
-    "value": "523.20"
+    "printed": "4.259,32",
+    "value": "4259.32"
    },
    "vat": {
     "printed": "0,00",
@@ -261,7 +429,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Jaroslava Novotná",
-  "+420 955 891 364"
+  "Ján Pavlíček",
+  "+420 921 676 707"
  ]
 }

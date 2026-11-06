@@ -4,7 +4,7 @@
  "layout": "tangram",
  "kind": "proforma",
  "file": "proforma.pdf",
- "sha256": "ec1872224b6ad0d8fdc29e372383e80f15799ef5a8145f5a0bf8bbc511216186",
+ "sha256": "608dc26ec53aca852ccecdb4b9b177fe7f9ddb5be135b5c575a911c13bdb7d83",
  "pages_total": 1,
  "pages_present": 1,
  "scan": false,
@@ -27,13 +27,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "ZF202561988",
-   "value": "ZF202561988",
+   "printed": "ZF202565979",
+   "value": "ZF202565979",
    "page": 1
   },
   "issue_date": {
-   "printed": "04.07.2025",
-   "value": "2025-07-04",
+   "printed": "05.05.2025",
+   "value": "2025-05-05",
    "page": 1
   },
   "supplier_name": {
@@ -42,18 +42,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "92604994",
-   "value": "92604994",
+   "printed": "97435431",
+   "value": "97435431",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "SK2155120011",
-   "value": "SK2155120011",
+   "printed": "SK2930585097",
+   "value": "SK2930585097",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "SK71 3100 2093 7563 3717 8287",
-   "value": "SK7131002093756337178287",
+   "printed": "SK90 7500 0000 0093 5607 3286",
+   "value": "SK9075000000009356073286",
    "page": 1
   },
   "buyer_name": {
@@ -72,23 +72,23 @@
    "page": 1
   },
   "total": {
-   "printed": "2 983,31",
-   "value": "2983.31",
+   "printed": "4 564,95",
+   "value": "4564.95",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "04.07.2025",
-   "value": "2025-07-04",
+   "printed": "05.05.2025",
+   "value": "2025-05-05",
    "page": 1
   },
   "due_date": {
-   "printed": "02.09.2025",
-   "value": "2025-09-02",
+   "printed": "04.06.2025",
+   "value": "2025-06-04",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "2155120011",
-   "value": "2155120011",
+   "printed": "2930585097",
+   "value": "2930585097",
    "page": 1
   },
   "buyer_ico": {
@@ -102,8 +102,8 @@
    "page": 1
   },
   "variable_symbol": {
-   "printed": "202561988",
-   "value": "202561988",
+   "printed": "202565979",
+   "value": "202565979",
    "page": 1
   },
   "constant_symbol": {
@@ -112,28 +112,28 @@
    "page": 1
   },
   "amount_due": {
-   "printed": "2 983,31",
-   "value": "2983.31",
+   "printed": "4 564,95",
+   "value": "4564.95",
    "page": 1
   },
   "total_net": {
-   "printed": "2 689,05",
-   "value": "2689.05",
+   "printed": "3 772,45",
+   "value": "3772.45",
    "page": 1
   },
   "total_vat": {
-   "printed": "294,26",
-   "value": "294.26",
+   "printed": "792,50",
+   "value": "792.50",
    "page": 1
   },
   "order_number": {
-   "printed": "OB25632754",
-   "value": "OB25632754",
+   "printed": "OB25594324",
+   "value": "OB25594324",
    "page": 1
   },
   "delivery_note_numbers": {
-   "printed": "DL/939169",
-   "value": "DL/939169",
+   "printed": "DL/689287",
+   "value": "DL/689287",
    "page": 1
   },
   "page_note": {
@@ -146,16 +146,16 @@
   {
    "cells": {
     "name": {
-     "printed": "FLOREA KVAPKY DO NOSA 10 ML",
-     "value": "Florea kvapky do nosa 10 ml"
+     "printed": "FLOREA SIRUP NA KAŠEĽ 100 ML",
+     "value": "Florea sirup na kašeľ 100 ml"
     },
     "quantity": {
-     "printed": "5,000",
-     "value": "5"
+     "printed": "12,000",
+     "value": "12"
     },
     "line_net": {
-     "printed": "19,78",
-     "value": "19.78"
+     "printed": "105,91",
+     "value": "105.91"
     },
     "vat_rate": {
      "printed": "5%",
@@ -166,16 +166,16 @@
      "value": "ks"
     },
     "supplier_code": {
-     "printed": "9981069",
-     "value": "9981069"
+     "printed": "9914334",
+     "value": "9914334"
     },
     "unit_price": {
-     "printed": "3,955",
-     "value": "3.955"
+     "printed": "8,826",
+     "value": "8.826"
     },
     "gross_unit_price": {
-     "printed": "4,1528",
-     "value": "4.1528"
+     "printed": "9,2673",
+     "value": "9.2673"
     }
    },
    "batches": [],
@@ -184,130 +184,16 @@
   {
    "cells": {
     "name": {
-     "printed": "HERBANA MASŤ NA HOJENIE RÁN 30 G",
-     "value": "Herbana masť na hojenie rán 30 g"
+     "printed": "KALMINA DÁVKOVAČ LIEKOV TÝŽDENNÝ",
+     "value": "Kalmina dávkovač liekov týždenný"
     },
     "quantity": {
-     "printed": "40,000",
-     "value": "40"
+     "printed": "8,000",
+     "value": "8"
     },
     "line_net": {
-     "printed": "603,36",
-     "value": "603.36"
-    },
-    "vat_rate": {
-     "printed": "5%",
-     "value": "5"
-    },
-    "unit": {
-     "printed": "ks",
-     "value": "ks"
-    },
-    "supplier_code": {
-     "printed": "9929915",
-     "value": "9929915"
-    },
-    "unit_price": {
-     "printed": "15,084",
-     "value": "15.084"
-    },
-    "gross_unit_price": {
-     "printed": "15,8382",
-     "value": "15.8382"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "KALMINA KAPSULY NA TRÁVENIE 30 CPS",
-     "value": "Kalmina kapsuly na trávenie 30 cps"
-    },
-    "quantity": {
-     "printed": "15,000",
-     "value": "15"
-    },
-    "line_net": {
-     "printed": "85,86",
-     "value": "85.86"
-    },
-    "vat_rate": {
-     "printed": "5%",
-     "value": "5"
-    },
-    "unit": {
-     "printed": "ks",
-     "value": "ks"
-    },
-    "supplier_code": {
-     "printed": "9962414",
-     "value": "9962414"
-    },
-    "unit_price": {
-     "printed": "5,724",
-     "value": "5.724"
-    },
-    "gross_unit_price": {
-     "printed": "6,0102",
-     "value": "6.0102"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "MEDISAN KVAPKY DO NOSA 10 ML",
-     "value": "Medisan kvapky do nosa 10 ml"
-    },
-    "quantity": {
-     "printed": "20,000",
-     "value": "20"
-    },
-    "line_net": {
-     "printed": "216,48",
-     "value": "216.48"
-    },
-    "vat_rate": {
-     "printed": "5%",
-     "value": "5"
-    },
-    "unit": {
-     "printed": "ks",
-     "value": "ks"
-    },
-    "supplier_code": {
-     "printed": "9990795",
-     "value": "9990795"
-    },
-    "unit_price": {
-     "printed": "10,824",
-     "value": "10.824"
-    },
-    "gross_unit_price": {
-     "printed": "11,3652",
-     "value": "11.3652"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "VIVERA LIEKOVKA 300 ML S UZÁVEROM",
-     "value": "Vivera liekovka 300 ml s uzáverom"
-    },
-    "quantity": {
-     "printed": "20,000",
-     "value": "20"
-    },
-    "line_net": {
-     "printed": "243,14",
-     "value": "243.14"
+     "printed": "223,37",
+     "value": "223.37"
     },
     "vat_rate": {
      "printed": "23%",
@@ -318,16 +204,282 @@
      "value": "ks"
     },
     "supplier_code": {
-     "printed": "9998403",
-     "value": "9998403"
+     "printed": "9915515",
+     "value": "9915515"
     },
     "unit_price": {
-     "printed": "12,157",
-     "value": "12.157"
+     "printed": "27,921",
+     "value": "27.921"
     },
     "gross_unit_price": {
-     "printed": "14,9531",
-     "value": "14.9531"
+     "printed": "34,3428",
+     "value": "34.3428"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "KALMINA NÁPLASŤ ELASTICKÁ 10 KS",
+     "value": "Kalmina náplasť elastická 10 ks"
+    },
+    "quantity": {
+     "printed": "5,000",
+     "value": "5"
+    },
+    "line_net": {
+     "printed": "12,99",
+     "value": "12.99"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9922006",
+     "value": "9922006"
+    },
+    "unit_price": {
+     "printed": "2,597",
+     "value": "2.597"
+    },
+    "gross_unit_price": {
+     "printed": "3,1943",
+     "value": "3.1943"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "SANOVIT DÁVKOVAČ LIEKOV TÝŽDENNÝ",
+     "value": "Sanovit dávkovač liekov týždenný"
+    },
+    "quantity": {
+     "printed": "40,000",
+     "value": "40"
+    },
+    "line_net": {
+     "printed": "1 013,56",
+     "value": "1013.56"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9922906",
+     "value": "9922906"
+    },
+    "unit_price": {
+     "printed": "25,339",
+     "value": "25.339"
+    },
+    "gross_unit_price": {
+     "printed": "31,1670",
+     "value": "31.1670"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DERMAVITA BANDÁŽ ČLENKU VEĽKOSŤ M",
+     "value": "DermaVita bandáž členku veľkosť M"
+    },
+    "quantity": {
+     "printed": "5,000",
+     "value": "5"
+    },
+    "line_net": {
+     "printed": "194,06",
+     "value": "194.06"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9916639",
+     "value": "9916639"
+    },
+    "unit_price": {
+     "printed": "38,812",
+     "value": "38.812"
+    },
+    "gross_unit_price": {
+     "printed": "47,7388",
+     "value": "47.7388"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "DERMAVITA TELOVÉ MLIEKO S RUŽOVÝM OLEJOM 330 ML",
+     "value": "DermaVita telové mlieko s ružovým olejom 330 ml"
+    },
+    "quantity": {
+     "printed": "20,000",
+     "value": "20"
+    },
+    "line_net": {
+     "printed": "197,90",
+     "value": "197.90"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9968782",
+     "value": "9968782"
+    },
+    "unit_price": {
+     "printed": "9,895",
+     "value": "9.895"
+    },
+    "gross_unit_price": {
+     "printed": "12,1709",
+     "value": "12.1709"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "MEDISAN TEPLOMER DIGITÁLNY",
+     "value": "Medisan teplomer digitálny"
+    },
+    "quantity": {
+     "printed": "15,000",
+     "value": "15"
+    },
+    "line_net": {
+     "printed": "89,63",
+     "value": "89.63"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9927056",
+     "value": "9927056"
+    },
+    "unit_price": {
+     "printed": "5,975",
+     "value": "5.975"
+    },
+    "gross_unit_price": {
+     "printed": "7,3493",
+     "value": "7.3493"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "NUTRILEK TEPLOMER DIGITÁLNY",
+     "value": "Nutrilek teplomer digitálny"
+    },
+    "quantity": {
+     "printed": "10,000",
+     "value": "10"
+    },
+    "line_net": {
+     "printed": "381,54",
+     "value": "381.54"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9981383",
+     "value": "9981383"
+    },
+    "unit_price": {
+     "printed": "38,154",
+     "value": "38.154"
+    },
+    "gross_unit_price": {
+     "printed": "46,9294",
+     "value": "46.9294"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "NUTRILEK DÁVKOVAČ LIEKOV TÝŽDENNÝ",
+     "value": "Nutrilek dávkovač liekov týždenný"
+    },
+    "quantity": {
+     "printed": "10,000",
+     "value": "10"
+    },
+    "line_net": {
+     "printed": "246,40",
+     "value": "246.40"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9944108",
+     "value": "9944108"
+    },
+    "unit_price": {
+     "printed": "24,640",
+     "value": "24.640"
+    },
+    "gross_unit_price": {
+     "printed": "30,3072",
+     "value": "30.3072"
     }
    },
    "batches": [],
@@ -340,12 +492,12 @@
      "value": "Vivera tablety proti bolesti 500 mg 20 tbl"
     },
     "quantity": {
-     "printed": "10,000",
-     "value": "10"
+     "printed": "40,000",
+     "value": "40"
     },
     "line_net": {
-     "printed": "167,15",
-     "value": "167.15"
+     "printed": "135,96",
+     "value": "135.96"
     },
     "vat_rate": {
      "printed": "5%",
@@ -356,16 +508,16 @@
      "value": "ks"
     },
     "supplier_code": {
-     "printed": "9986579",
-     "value": "9986579"
+     "printed": "9987526",
+     "value": "9987526"
     },
     "unit_price": {
-     "printed": "16,715",
-     "value": "16.715"
+     "printed": "3,399",
+     "value": "3.399"
     },
     "gross_unit_price": {
-     "printed": "17,5508",
-     "value": "17.5508"
+     "printed": "3,5690",
+     "value": "3.5690"
     }
    },
    "batches": [],
@@ -374,36 +526,36 @@
   {
    "cells": {
     "name": {
-     "printed": "FLOREA SIRUP NA KAŠEĽ 100 ML",
-     "value": "Florea sirup na kašeľ 100 ml"
+     "printed": "NUTRILEK VITAMÍN C 500 MG 60 TBL",
+     "value": "Nutrilek vitamín C 500 mg 60 tbl"
     },
     "quantity": {
-     "printed": "5,000",
-     "value": "5"
+     "printed": "30,000",
+     "value": "30"
     },
     "line_net": {
-     "printed": "74,17",
-     "value": "74.17"
+     "printed": "112,41",
+     "value": "112.41"
     },
     "vat_rate": {
-     "printed": "5%",
-     "value": "5"
+     "printed": "19%",
+     "value": "19"
     },
     "unit": {
      "printed": "ks",
      "value": "ks"
     },
     "supplier_code": {
-     "printed": "9938957",
-     "value": "9938957"
+     "printed": "9988422",
+     "value": "9988422"
     },
     "unit_price": {
-     "printed": "14,834",
-     "value": "14.834"
+     "printed": "3,747",
+     "value": "3.747"
     },
     "gross_unit_price": {
-     "printed": "15,5757",
-     "value": "15.5757"
+     "printed": "4,4589",
+     "value": "4.4589"
     }
    },
    "batches": [],
@@ -412,130 +564,16 @@
   {
    "cells": {
     "name": {
-     "printed": "KALMINA ŠAMPÓN PROTI LUPINÁM 250 ML",
-     "value": "Kalmina šampón proti lupinám 250 ml"
-    },
-    "quantity": {
-     "printed": "15,000",
-     "value": "15"
-    },
-    "line_net": {
-     "printed": "188,48",
-     "value": "188.48"
-    },
-    "vat_rate": {
-     "printed": "23%",
-     "value": "23"
-    },
-    "unit": {
-     "printed": "ks",
-     "value": "ks"
-    },
-    "supplier_code": {
-     "printed": "9987070",
-     "value": "9987070"
-    },
-    "unit_price": {
-     "printed": "12,565",
-     "value": "12.565"
-    },
-    "gross_unit_price": {
-     "printed": "15,4550",
-     "value": "15.4550"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "KALMINA SIRUP NA KAŠEĽ 100 ML",
-     "value": "Kalmina sirup na kašeľ 100 ml"
+     "printed": "FLOREA LIEKOVKA 300 ML S UZÁVEROM",
+     "value": "Florea liekovka 300 ml s uzáverom"
     },
     "quantity": {
      "printed": "40,000",
      "value": "40"
     },
     "line_net": {
-     "printed": "614,04",
-     "value": "614.04"
-    },
-    "vat_rate": {
-     "printed": "5%",
-     "value": "5"
-    },
-    "unit": {
-     "printed": "ks",
-     "value": "ks"
-    },
-    "supplier_code": {
-     "printed": "9920633",
-     "value": "9920633"
-    },
-    "unit_price": {
-     "printed": "15,351",
-     "value": "15.351"
-    },
-    "gross_unit_price": {
-     "printed": "16,1186",
-     "value": "16.1186"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "VIVERA - BYLINNÝ ČAJ NA TRÁVENIE 20X1,5G",
-     "value": "Vivera - bylinný čaj na trávenie 20x1,5g"
-    },
-    "quantity": {
-     "printed": "20,000",
-     "value": "20"
-    },
-    "line_net": {
-     "printed": "41,88",
-     "value": "41.88"
-    },
-    "vat_rate": {
-     "printed": "19%",
-     "value": "19"
-    },
-    "unit": {
-     "printed": "ks",
-     "value": "ks"
-    },
-    "supplier_code": {
-     "printed": "9941784",
-     "value": "9941784"
-    },
-    "unit_price": {
-     "printed": "2,094",
-     "value": "2.094"
-    },
-    "gross_unit_price": {
-     "printed": "2,4919",
-     "value": "2.4919"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "VIVERA TELOVÉ MLIEKO S RUŽOVÝM OLEJOM 330 ML",
-     "value": "Vivera telové mlieko s ružovým olejom 330 ml"
-    },
-    "quantity": {
-     "printed": "20,000",
-     "value": "20"
-    },
-    "line_net": {
-     "printed": "384,90",
-     "value": "384.90"
+     "printed": "147,80",
+     "value": "147.80"
     },
     "vat_rate": {
      "printed": "23%",
@@ -546,16 +584,16 @@
      "value": "ks"
     },
     "supplier_code": {
-     "printed": "9948830",
-     "value": "9948830"
+     "printed": "9915104",
+     "value": "9915104"
     },
     "unit_price": {
-     "printed": "19,245",
-     "value": "19.245"
+     "printed": "3,695",
+     "value": "3.695"
     },
     "gross_unit_price": {
-     "printed": "23,6714",
-     "value": "23.6714"
+     "printed": "4,5449",
+     "value": "4.5449"
     }
    },
    "batches": [],
@@ -564,36 +602,150 @@
   {
    "cells": {
     "name": {
-     "printed": "KALMINA DETSKÁ VÝŽIVA OVSENÁ KAŠA 225 G",
-     "value": "Kalmina detská výživa ovsená kaša 225 g"
+     "printed": "DERMAVITA PLEŤOVÝ KRÉM NA CITLIVÚ PLEŤ 50 ML",
+     "value": "DermaVita pleťový krém na citlivú pleť 50 ml"
     },
     "quantity": {
-     "printed": "10,000",
-     "value": "10"
+     "printed": "30,000",
+     "value": "30"
     },
     "line_net": {
-     "printed": "49,81",
-     "value": "49.81"
+     "printed": "153,06",
+     "value": "153.06"
     },
     "vat_rate": {
-     "printed": "19%",
-     "value": "19"
+     "printed": "23%",
+     "value": "23"
     },
     "unit": {
      "printed": "ks",
      "value": "ks"
     },
     "supplier_code": {
-     "printed": "9913132",
-     "value": "9913132"
+     "printed": "9949248",
+     "value": "9949248"
     },
     "unit_price": {
-     "printed": "4,981",
-     "value": "4.981"
+     "printed": "5,102",
+     "value": "5.102"
     },
     "gross_unit_price": {
-     "printed": "5,9274",
-     "value": "5.9274"
+     "printed": "6,2755",
+     "value": "6.2755"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "FLOREA TEPLOMER DIGITÁLNY",
+     "value": "Florea teplomer digitálny"
+    },
+    "quantity": {
+     "printed": "15,000",
+     "value": "15"
+    },
+    "line_net": {
+     "printed": "607,14",
+     "value": "607.14"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9988975",
+     "value": "9988975"
+    },
+    "unit_price": {
+     "printed": "40,476",
+     "value": "40.476"
+    },
+    "gross_unit_price": {
+     "printed": "49,7855",
+     "value": "49.7855"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "FLOREA TABLETY PROTI BOLESTI 500 MG 20 TBL",
+     "value": "Florea tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "40,000",
+     "value": "40"
+    },
+    "line_net": {
+     "printed": "122,16",
+     "value": "122.16"
+    },
+    "vat_rate": {
+     "printed": "5%",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9972343",
+     "value": "9972343"
+    },
+    "unit_price": {
+     "printed": "3,054",
+     "value": "3.054"
+    },
+    "gross_unit_price": {
+     "printed": "3,2067",
+     "value": "3.2067"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "SANOVIT TABLETY PROTI BOLESTI 500 MG 20 TBL",
+     "value": "Sanovit tablety proti bolesti 500 mg 20 tbl"
+    },
+    "quantity": {
+     "printed": "8,000",
+     "value": "8"
+    },
+    "line_net": {
+     "printed": "28,56",
+     "value": "28.56"
+    },
+    "vat_rate": {
+     "printed": "5%",
+     "value": "5"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "supplier_code": {
+     "printed": "9930467",
+     "value": "9930467"
+    },
+    "unit_price": {
+     "printed": "3,570",
+     "value": "3.570"
+    },
+    "gross_unit_price": {
+     "printed": "3,7485",
+     "value": "3.7485"
     }
    },
    "batches": [],
@@ -607,12 +759,12 @@
     "value": "5"
    },
    "base": {
-    "printed": "1 780,84",
-    "value": "1780.84"
+    "printed": "392,59",
+    "value": "392.59"
    },
    "vat": {
-    "printed": "89,04",
-    "value": "89.04"
+    "printed": "19,63",
+    "value": "19.63"
    },
    "page": 1
   },
@@ -622,12 +774,12 @@
     "value": "19"
    },
    "base": {
-    "printed": "91,69",
-    "value": "91.69"
+    "printed": "112,41",
+    "value": "112.41"
    },
    "vat": {
-    "printed": "17,42",
-    "value": "17.42"
+    "printed": "21,36",
+    "value": "21.36"
    },
    "page": 1
   },
@@ -637,12 +789,12 @@
     "value": "23"
    },
    "base": {
-    "printed": "816,52",
-    "value": "816.52"
+    "printed": "3 267,45",
+    "value": "3267.45"
    },
    "vat": {
-    "printed": "187,80",
-    "value": "187.80"
+    "printed": "751,51",
+    "value": "751.51"
    },
    "page": 1
   }
@@ -651,6 +803,6 @@
  "findings": [],
  "pii": [
   "Laura Masaryková",
-  "+421 940 807 771"
+  "+421 970 954 435"
  ]
 }

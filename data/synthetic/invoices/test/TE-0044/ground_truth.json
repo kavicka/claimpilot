@@ -4,7 +4,7 @@
  "layout": "pohoda",
  "kind": "credit_note",
  "file": "credit_note.pdf",
- "sha256": "842d450d43dcf7d96be2e9dcb2dcff9a8a71c9b915878958cad115fe7307eeb2",
+ "sha256": "34395b0d49139d861f41bbe3f921e2f6a1c2bb836152b7c6ea8f7f05ae0f7bd4",
  "pages_total": 1,
  "pages_present": 1,
  "scan": false,
@@ -19,7 +19,7 @@
  "supplier_key": "herbana",
  "supplier_registered": true,
  "buyer_key": "retail",
- "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
  "header": {
   "document_kind": {
    "printed": "OPRAVNÁ FAKTÚRA - DOBROPIS",
@@ -27,13 +27,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "255785966",
-   "value": "255785966",
+   "printed": "256264960",
+   "value": "256264960",
    "page": 1
   },
   "issue_date": {
-   "printed": "23.02.2025",
-   "value": "2025-02-23",
+   "printed": "24.01.2025",
+   "value": "2025-01-24",
    "page": 1
   },
   "supplier_name": {
@@ -42,18 +42,18 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "92414478",
-   "value": "92414478",
+   "printed": "97189448",
+   "value": "97189448",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "SK2993547293",
-   "value": "SK2993547293",
+   "printed": "SK2975818340",
+   "value": "SK2975818340",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "SK79 7500 0000 0099 5777 8549",
-   "value": "SK7975000000009957778549",
+   "printed": "SK66 1111 2990 7327 5846 2507",
+   "value": "SK6611112990732758462507",
    "page": 1
   },
   "buyer_name": {
@@ -72,23 +72,23 @@
    "page": 1
   },
   "total": {
-   "printed": "-108,52",
-   "value": "-108.52",
+   "printed": "-68,48",
+   "value": "-68.48",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "23.02.2025",
-   "value": "2025-02-23",
+   "printed": "24.01.2025",
+   "value": "2025-01-24",
    "page": 1
   },
   "due_date": {
-   "printed": "24.04.2025",
-   "value": "2025-04-24",
+   "printed": "25.03.2025",
+   "value": "2025-03-25",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "2993547293",
-   "value": "2993547293",
+   "printed": "2975818340",
+   "value": "2975818340",
    "page": 1
   },
   "buyer_ico": {
@@ -102,8 +102,8 @@
    "page": 1
   },
   "variable_symbol": {
-   "printed": "255785966",
-   "value": "255785966",
+   "printed": "256264960",
+   "value": "256264960",
    "page": 1
   },
   "constant_symbol": {
@@ -112,28 +112,28 @@
    "page": 1
   },
   "amount_due": {
-   "printed": "-108,52",
-   "value": "-108.52",
+   "printed": "-68,48",
+   "value": "-68.48",
    "page": 1
   },
   "total_net": {
-   "printed": "-88,23",
-   "value": "-88.23",
+   "printed": "-55,98",
+   "value": "-55.98",
    "page": 1
   },
   "total_vat": {
-   "printed": "-20,29",
-   "value": "-20.29",
+   "printed": "-12,50",
+   "value": "-12.50",
    "page": 1
   },
   "original_invoice_number": {
-   "printed": "253793208",
-   "value": "253793208",
+   "printed": "253378473",
+   "value": "253378473",
    "page": 1
   },
   "page_note": {
-   "printed": "Strana 1 dokladu 255785966",
-   "value": "Strana 1 dokladu 255785966",
+   "printed": "Strana 1 dokladu 256264960",
+   "value": "Strana 1 dokladu 256264960",
    "page": 1
   }
  },
@@ -141,116 +141,16 @@
   {
    "cells": {
     "name": {
-     "printed": "Herbana pleťový krém na citlivú pleť 50 ml",
-     "value": "Herbana pleťový krém na citlivú pleť 50 ml"
-    },
-    "quantity": {
-     "printed": "-4",
-     "value": "-4"
-    },
-    "line_net": {
-     "printed": "-19,01",
-     "value": "-19.01"
-    },
-    "vat_rate": {
-     "printed": "23%",
-     "value": "23"
-    },
-    "unit": {
-     "printed": "ks",
-     "value": "ks"
-    },
-    "ean": {
-     "printed": "8595117509963",
-     "value": "8595117509963"
-    },
-    "supplier_code": {
-     "printed": "0004",
-     "value": "0004"
-    },
-    "unit_price": {
-     "printed": "5,59",
-     "value": "5.59"
-    },
-    "discount_pct": {
-     "printed": "15,00%",
-     "value": "15"
-    },
-    "vat_amount": {
-     "printed": "-4,37",
-     "value": "-4.37"
-    },
-    "line_gross": {
-     "printed": "-23,38",
-     "value": "-23.38"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Nutrilek krém na ruky s panthenolom 100 ml",
-     "value": "Nutrilek krém na ruky s panthenolom 100 ml"
-    },
-    "quantity": {
-     "printed": "-3",
-     "value": "-3"
-    },
-    "line_net": {
-     "printed": "-35,73",
-     "value": "-35.73"
-    },
-    "vat_rate": {
-     "printed": "23%",
-     "value": "23"
-    },
-    "unit": {
-     "printed": "ks",
-     "value": "ks"
-    },
-    "ean": {
-     "printed": "3808467733427",
-     "value": "3808467733427"
-    },
-    "supplier_code": {
-     "printed": "0015",
-     "value": "0015"
-    },
-    "unit_price": {
-     "printed": "14,01",
-     "value": "14.01"
-    },
-    "discount_pct": {
-     "printed": "15,00%",
-     "value": "15"
-    },
-    "vat_amount": {
-     "printed": "-8,22",
-     "value": "-8.22"
-    },
-    "line_gross": {
-     "printed": "-43,95",
-     "value": "-43.95"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Vivera telové mlieko s ružovým olejom 330 ml",
-     "value": "Vivera telové mlieko s ružovým olejom 330 ml"
+     "printed": "DermaVita náplasť elastická 10 ks",
+     "value": "DermaVita náplasť elastická 10 ks"
     },
     "quantity": {
      "printed": "-2",
      "value": "-2"
     },
     "line_net": {
-     "printed": "-33,49",
-     "value": "-33.49"
+     "printed": "-34,41",
+     "value": "-34.41"
     },
     "vat_rate": {
      "printed": "23%",
@@ -261,28 +161,128 @@
      "value": "ks"
     },
     "ean": {
-     "printed": "3004881298508",
-     "value": "3004881298508"
+     "printed": "8587827570180",
+     "value": "8587827570180"
     },
     "supplier_code": {
-     "printed": "0007",
-     "value": "0007"
+     "printed": "0024",
+     "value": "0024"
     },
     "unit_price": {
-     "printed": "19,70",
-     "value": "19.70"
+     "printed": "20,24",
+     "value": "20.24"
     },
     "discount_pct": {
      "printed": "15,00%",
      "value": "15"
     },
     "vat_amount": {
-     "printed": "-7,70",
-     "value": "-7.70"
+     "printed": "-7,91",
+     "value": "-7.91"
     },
     "line_gross": {
-     "printed": "-41,19",
-     "value": "-41.19"
+     "printed": "-42,32",
+     "value": "-42.32"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Florea liekovka 300 ml s uzáverom",
+     "value": "Florea liekovka 300 ml s uzáverom"
+    },
+    "quantity": {
+     "printed": "-1",
+     "value": "-1"
+    },
+    "line_net": {
+     "printed": "-12,21",
+     "value": "-12.21"
+    },
+    "vat_rate": {
+     "printed": "23%",
+     "value": "23"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "4002897690100",
+     "value": "4002897690100"
+    },
+    "supplier_code": {
+     "printed": "0030",
+     "value": "0030"
+    },
+    "unit_price": {
+     "printed": "15,26",
+     "value": "15.26"
+    },
+    "discount_pct": {
+     "printed": "20,00%",
+     "value": "20"
+    },
+    "vat_amount": {
+     "printed": "-2,81",
+     "value": "-2.81"
+    },
+    "line_gross": {
+     "printed": "-15,02",
+     "value": "-15.02"
+    }
+   },
+   "batches": [],
+   "page": 1
+  },
+  {
+   "cells": {
+    "name": {
+     "printed": "Sanovit - kláštorný čaj na priedušky 20x2g",
+     "value": "Sanovit - kláštorný čaj na priedušky 20x2g"
+    },
+    "quantity": {
+     "printed": "-2",
+     "value": "-2"
+    },
+    "line_net": {
+     "printed": "-9,36",
+     "value": "-9.36"
+    },
+    "vat_rate": {
+     "printed": "19%",
+     "value": "19"
+    },
+    "unit": {
+     "printed": "ks",
+     "value": "ks"
+    },
+    "ean": {
+     "printed": "8583125501222",
+     "value": "8583125501222"
+    },
+    "supplier_code": {
+     "printed": "0033",
+     "value": "0033"
+    },
+    "unit_price": {
+     "printed": "4,68",
+     "value": "4.68"
+    },
+    "discount_pct": {
+     "printed": "0,00%",
+     "value": "0"
+    },
+    "vat_amount": {
+     "printed": "-1,78",
+     "value": "-1.78"
+    },
+    "line_gross": {
+     "printed": "-11,14",
+     "value": "-11.14"
     }
    },
    "batches": [],
@@ -292,16 +292,31 @@
  "recap": [
   {
    "rate": {
+    "printed": "19%",
+    "value": "19"
+   },
+   "base": {
+    "printed": "-9,36",
+    "value": "-9.36"
+   },
+   "vat": {
+    "printed": "-1,78",
+    "value": "-1.78"
+   },
+   "page": 1
+  },
+  {
+   "rate": {
     "printed": "23%",
     "value": "23"
    },
    "base": {
-    "printed": "-88,23",
-    "value": "-88.23"
+    "printed": "-46,62",
+    "value": "-46.62"
    },
    "vat": {
-    "printed": "-20,29",
-    "value": "-20.29"
+    "printed": "-10,72",
+    "value": "-10.72"
    },
    "page": 1
   }
@@ -310,6 +325,6 @@
  "findings": [],
  "pii": [
   "Emil Pavlo",
-  "+421 917 478 120"
+  "+421 981 777 953"
  ]
 }

@@ -54,7 +54,7 @@
 </table>
 
 <div class="nobreak" style="margin-top:3mm">
-{% for fee in fees if fee.included %}<div>* Na faktúre sa nachádza tovar podliehajúci recyklačným poplatkom. {{ fee.label.printed }} zahrnutý v cene: &nbsp; {{ fee.net.printed }}</div>{% endfor %}
+{% for fee in fees if fee.included %}<div>* Cena položiek obsahuje poplatok za recykláciu. {{ fee.label.printed }}, z toho v cene: &nbsp; {{ fee.net.printed }}</div>{% endfor %}
 {% if h.delivery_note_numbers %}<div>Dodacie listy: {{ h.delivery_note_numbers.printed }}</div>{% endif %}
 <table class="recap" style="width:60%;margin-left:40%;margin-top:2mm">
  {% for r in recap %}

@@ -4,7 +4,7 @@
  "layout": "pohoda",
  "kind": "credit_note",
  "file": "credit_note.pdf",
- "sha256": "be5da7079223750180290a16e92d95864cedf176c438d998b9717e97ff3a75a1",
+ "sha256": "3db972b49038c24591c93d99efeef3eff887454e39ad900a4edb458107862587",
  "pages_total": 1,
  "pages_present": 1,
  "scan": false,
@@ -18,8 +18,8 @@
  "vat_method": "per_line",
  "supplier_key": "rosalia",
  "supplier_registered": true,
- "buyer_key": "central",
- "delivery_point": "Lekárne Sever – sklad Košice, Priemyselná 3, 040 17 Košice",
+ "buyer_key": "retail",
+ "delivery_point": "Lekárne Sever – sklad Senec, Logistická 7, 903 01 Senec",
  "header": {
   "document_kind": {
    "printed": "OPRAVNÁ FAKTÚRA - DOBROPIS",
@@ -27,13 +27,13 @@
    "page": 1
   },
   "invoice_number": {
-   "printed": "254614727",
-   "value": "254614727",
+   "printed": "250673828",
+   "value": "250673828",
    "page": 1
   },
   "issue_date": {
-   "printed": "13.10.2025",
-   "value": "2025-10-13",
+   "printed": "21.09.2025",
+   "value": "2025-09-21",
    "page": 1
   },
   "supplier_name": {
@@ -42,28 +42,28 @@
    "page": 1
   },
   "supplier_ico": {
-   "printed": "91397162",
-   "value": "91397162",
+   "printed": "93706502",
+   "value": "93706502",
    "page": 1
   },
   "supplier_vat_id": {
-   "printed": "SK2998374071",
-   "value": "SK2998374071",
+   "printed": "SK2950868811",
+   "value": "SK2950868811",
    "page": 1
   },
   "supplier_iban": {
-   "printed": "SK12 7500 2475 8837 4754 6308",
-   "value": "SK1275002475883747546308",
+   "printed": "SK20 6500 0000 0043 3160 3767",
+   "value": "SK2065000000004331603767",
    "page": 1
   },
   "buyer_name": {
-   "printed": "Lekárne Sever s.r.o.",
-   "value": "Lekárne Sever s.r.o.",
+   "printed": "Lekárne Sever Retail s.r.o.",
+   "value": "Lekárne Sever Retail s.r.o.",
    "page": 1
   },
   "buyer_vat_id": {
-   "printed": "SK2997673481",
-   "value": "SK2997673481",
+   "printed": "SK2992944152",
+   "value": "SK2992944152",
    "page": 1
   },
   "currency": {
@@ -72,38 +72,38 @@
    "page": 1
   },
   "total": {
-   "printed": "-48,63",
-   "value": "-48.63",
+   "printed": "-11,65",
+   "value": "-11.65",
    "page": 1
   },
   "tax_point_date": {
-   "printed": "13.10.2025",
-   "value": "2025-10-13",
+   "printed": "19.09.2025",
+   "value": "2025-09-19",
    "page": 1
   },
   "due_date": {
-   "printed": "12.11.2025",
-   "value": "2025-11-12",
+   "printed": "20.11.2025",
+   "value": "2025-11-20",
    "page": 1
   },
   "supplier_dic": {
-   "printed": "2998374071",
-   "value": "2998374071",
+   "printed": "2950868811",
+   "value": "2950868811",
    "page": 1
   },
   "buyer_ico": {
-   "printed": "90882750",
-   "value": "90882750",
+   "printed": "93533446",
+   "value": "93533446",
    "page": 1
   },
   "buyer_dic": {
-   "printed": "2997673481",
-   "value": "2997673481",
+   "printed": "2992944152",
+   "value": "2992944152",
    "page": 1
   },
   "variable_symbol": {
-   "printed": "254614727",
-   "value": "254614727",
+   "printed": "250673828",
+   "value": "250673828",
    "page": 1
   },
   "constant_symbol": {
@@ -112,28 +112,28 @@
    "page": 1
   },
   "amount_due": {
-   "printed": "-48,63",
-   "value": "-48.63",
+   "printed": "-11,65",
+   "value": "-11.65",
    "page": 1
   },
   "total_net": {
-   "printed": "-39,54",
-   "value": "-39.54",
+   "printed": "-9,47",
+   "value": "-9.47",
    "page": 1
   },
   "total_vat": {
-   "printed": "-9,09",
-   "value": "-9.09",
+   "printed": "-2,18",
+   "value": "-2.18",
    "page": 1
   },
   "original_invoice_number": {
-   "printed": "254997675",
-   "value": "254997675",
+   "printed": "250561521",
+   "value": "250561521",
    "page": 1
   },
   "page_note": {
-   "printed": "Strana 1 dokladu 254614727",
-   "value": "Strana 1 dokladu 254614727",
+   "printed": "Strana 1 dokladu 250673828",
+   "value": "Strana 1 dokladu 250673828",
    "page": 1
   }
  },
@@ -141,16 +141,16 @@
   {
    "cells": {
     "name": {
-     "printed": "Sanovit opaľovací krém SPF 50+ 50 ml",
-     "value": "Sanovit opaľovací krém SPF 50+ 50 ml"
+     "printed": "Medisan telové mlieko s ružovým olejom 330 ml",
+     "value": "Medisan telové mlieko s ružovým olejom 330 ml"
     },
     "quantity": {
-     "printed": "-2",
-     "value": "-2"
+     "printed": "-1",
+     "value": "-1"
     },
     "line_net": {
-     "printed": "-24,92",
-     "value": "-24.92"
+     "printed": "-9,47",
+     "value": "-9.47"
     },
     "vat_rate": {
      "printed": "23%",
@@ -161,78 +161,28 @@
      "value": "ks"
     },
     "ean": {
-     "printed": "8596724931871",
-     "value": "8596724931871"
+     "printed": "3802041968670",
+     "value": "3802041968670"
     },
     "supplier_code": {
-     "printed": "0019",
-     "value": "0019"
+     "printed": "0016",
+     "value": "0016"
     },
     "unit_price": {
-     "printed": "14,66",
-     "value": "14.66"
+     "printed": "11,14",
+     "value": "11.14"
     },
     "discount_pct": {
      "printed": "15,00%",
      "value": "15"
     },
     "vat_amount": {
-     "printed": "-5,73",
-     "value": "-5.73"
+     "printed": "-2,18",
+     "value": "-2.18"
     },
     "line_gross": {
-     "printed": "-30,65",
-     "value": "-30.65"
-    }
-   },
-   "batches": [],
-   "page": 1
-  },
-  {
-   "cells": {
-    "name": {
-     "printed": "Herbana krém na ruky s panthenolom 100 ml",
-     "value": "Herbana krém na ruky s panthenolom 100 ml"
-    },
-    "quantity": {
-     "printed": "-4",
-     "value": "-4"
-    },
-    "line_net": {
-     "printed": "-14,62",
-     "value": "-14.62"
-    },
-    "vat_rate": {
-     "printed": "23%",
-     "value": "23"
-    },
-    "unit": {
-     "printed": "ks",
-     "value": "ks"
-    },
-    "ean": {
-     "printed": "4009915569783",
-     "value": "4009915569783"
-    },
-    "supplier_code": {
-     "printed": "0024",
-     "value": "0024"
-    },
-    "unit_price": {
-     "printed": "4,57",
-     "value": "4.57"
-    },
-    "discount_pct": {
-     "printed": "20,00%",
-     "value": "20"
-    },
-    "vat_amount": {
-     "printed": "-3,36",
-     "value": "-3.36"
-    },
-    "line_gross": {
-     "printed": "-17,98",
-     "value": "-17.98"
+     "printed": "-11,65",
+     "value": "-11.65"
     }
    },
    "batches": [],
@@ -246,12 +196,12 @@
     "value": "23"
    },
    "base": {
-    "printed": "-39,54",
-    "value": "-39.54"
+    "printed": "-9,47",
+    "value": "-9.47"
    },
    "vat": {
-    "printed": "-9,09",
-    "value": "-9.09"
+    "printed": "-2,18",
+    "value": "-2.18"
    },
    "page": 1
   }
@@ -259,7 +209,7 @@
  "fees": [],
  "findings": [],
  "pii": [
-  "Belo Kríž",
-  "+421 924 858 765"
+  "Beáta Máčiková",
+  "+421 940 618 154"
  ]
 }

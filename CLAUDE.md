@@ -87,7 +87,8 @@ two large models plus Docker do not fit in 48 GB.
 - **Tests first for deterministic code**: validators, payout engine, routing rules, state machine,
   fact checker, generator invariants.
 - **Rules before LLM** in routing and document typing.
-- **Synthetic data only.** No real customer data, no real insurer names or branding.
+- **Synthetic data only.** No real customer data, no real company names, identifiers or branding,
+  and no values copied from real documents (amounts, IDs, product codes) into tests, prompts or templates.
 - Code, docs and README in English. Client-facing outputs in Slovak (formal, vykanie) and German.
 - UI copy and docs follow the `no-ai-slop` skill: plain, specific, no filler.
 - **UI uses the design system only.** Colours, text styles, radii and shadows come from `@crm-ui/react`

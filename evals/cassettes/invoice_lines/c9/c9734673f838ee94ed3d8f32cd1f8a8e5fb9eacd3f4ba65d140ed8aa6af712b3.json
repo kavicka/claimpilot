@@ -1,0 +1,19 @@
+{
+ "step": "invoice_lines",
+ "prompt_id": "invoice_extraction/lines",
+ "prompt_hash": "b5dd98d4ccb31b542c4c487fa55a88ae503546ec4038292779d8eff3cf95f83c",
+ "model": "ollama:qwen3:30b-a3b-instruct-2507-q4_K_M",
+ "response": {
+  "text": "{\n  \"items\": [\n    {\n      \"item\": 1,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"MB680787\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8595421214058\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Medisan - bylinný čaj na trávenie 20x1,5g\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"60\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"Kusy\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"1,55\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"93,00\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"0\"\n        }\n      ]\n    },\n    {\n      \"item\": 2,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"LC967797\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"4008621757132\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Vivera pleťový krém na citlivú pleť 50 ml\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"100\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"Kusy\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"8,43\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"843,00\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"0\"\n        }\n      ]\n    },\n    {\n      \"item\": 3,\n      \"values\": [\n        {\n          \"field\": \"supplier_code\",\n          \"value\": \"MB692645\"\n        },\n        {\n          \"field\": \"ean\",\n          \"value\": \"8580323253984\"\n        },\n        {\n          \"field\": \"name\",\n          \"value\": \"Nutrilek dávkovač liekov týždenný\"\n        },\n        {\n          \"field\": \"quantity\",\n          \"value\": \"36\"\n        },\n        {\n          \"field\": \"unit\",\n          \"value\": \"Kusy\"\n        },\n        {\n          \"field\": \"unit_price\",\n          \"value\": \"27,69\"\n        },\n        {\n          \"field\": \"struct_discount_pct\",\n          \"value\": \"8,00%\"\n        },\n        {\n          \"field\": \"line_net\",\n          \"value\": \"916,92\"\n        },\n        {\n          \"field\": \"vat_rate\",\n          \"value\": \"0\"\n        }\n      ]\n    }\n  ]\n}",
+  "thinking": null,
+  "tool_calls": [],
+  "model": "qwen3:30b-a3b-instruct-2507-q4_K_M",
+  "provider": "ollama",
+  "usage": {
+   "tokens_in": 2118,
+   "tokens_out": 673,
+   "latency_ms": 23225
+  },
+  "cached": false
+ }
+}

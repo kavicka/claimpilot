@@ -180,13 +180,13 @@
    "detail": {}
   },
   {
-   "id": "DE-0012/price_diff/11",
+   "id": "DE-0012/price_diff/7",
    "ok": true,
    "expected": "price_diff",
    "got": [
     [
      "price_diff",
-     11
+     7
     ]
    ],
    "tags": [
@@ -200,13 +200,13 @@
    "expected": [
     [
      "price_diff",
-     11
+     7
     ]
    ],
    "got": [
     [
      "price_diff",
-     11
+     7
     ]
    ],
    "tags": [
@@ -375,13 +375,13 @@
    "detail": {}
   },
   {
-   "id": "DE-0024/short_delivery/0",
+   "id": "DE-0024/short_delivery/5",
    "ok": true,
    "expected": "short_delivery",
    "got": [
     [
      "short_delivery",
-     0
+     5
     ]
    ],
    "tags": [
@@ -395,13 +395,13 @@
    "expected": [
     [
      "short_delivery",
-     0
+     5
     ]
    ],
    "got": [
     [
      "short_delivery",
-     0
+     5
     ]
    ],
    "tags": [
@@ -440,13 +440,13 @@
    "detail": {}
   },
   {
-   "id": "DE-0028/short_delivery/12",
+   "id": "DE-0028/short_delivery/4",
    "ok": true,
    "expected": "short_delivery",
    "got": [
     [
      "short_delivery",
-     12
+     4
     ]
    ],
    "tags": [
@@ -460,13 +460,13 @@
    "expected": [
     [
      "short_delivery",
-     12
+     4
     ]
    ],
    "got": [
     [
      "short_delivery",
-     12
+     4
     ]
    ],
    "tags": [
@@ -560,13 +560,13 @@
    "detail": {}
   },
   {
-   "id": "DE-0035/price_diff/3",
+   "id": "DE-0035/price_diff/15",
    "ok": true,
    "expected": "price_diff",
    "got": [
     [
      "price_diff",
-     3
+     15
     ]
    ],
    "tags": [
@@ -580,13 +580,13 @@
    "expected": [
     [
      "price_diff",
-     3
+     15
     ]
    ],
    "got": [
     [
      "price_diff",
-     3
+     15
     ]
    ],
    "tags": [
@@ -790,13 +790,13 @@
    "detail": {}
   },
   {
-   "id": "DE-0055/short_delivery/24",
+   "id": "DE-0055/short_delivery/2",
    "ok": true,
    "expected": "short_delivery",
    "got": [
     [
      "short_delivery",
-     24
+     2
     ]
    ],
    "tags": [
@@ -810,13 +810,13 @@
    "expected": [
     [
      "short_delivery",
-     24
+     2
     ]
    ],
    "got": [
     [
      "short_delivery",
-     24
+     2
     ]
    ],
    "tags": [
@@ -825,13 +825,13 @@
    "detail": {}
   },
   {
-   "id": "DE-0056/price_diff/5",
+   "id": "DE-0056/price_diff/22",
    "ok": true,
    "expected": "price_diff",
    "got": [
     [
      "price_diff",
-     5
+     22
     ]
    ],
    "tags": [
@@ -845,13 +845,13 @@
    "expected": [
     [
      "price_diff",
-     5
+     22
     ]
    ],
    "got": [
     [
      "price_diff",
-     5
+     22
     ]
    ],
    "tags": [
@@ -921,14 +921,14 @@
   }
  ],
  "meta": {
-  "created": "20261016T160841Z",
+  "created": "20261106T000447Z",
   "git": {
-   "sha": "0509093",
+   "sha": "2ab9c95",
    "dirty": true
   },
   "dataset": "6bd4025701dc",
   "seed": 42,
-  "cassette_mode": "off",
+  "cassette_mode": "replay",
   "overrides": {},
   "options": {},
   "prompts": {},
