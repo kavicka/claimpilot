@@ -63,14 +63,17 @@ jobs:
         # PREFETCH=0: the unit tests need no model files; the deploy builds with them.
         run: docker build --build-arg PREFETCH=0 -f services/worker/Dockerfile -t claimpilot-worker:ci .
       - name: Unit tests inside the image
-        # Export tests need the core mock and the api package, which the worker image does not ship;
-        # the checks job runs them.
+        # Export tests need the core mock and the api package, and two tests need the data generator
+        # and the synthetic manifests; the worker image ships none of them. The checks job runs them.
         run: |
           docker run --rm -v "$PWD/tests:/app/tests:ro" -v "$PWD/pyproject.toml:/app/pyproject.toml:ro" \
             claimpilot-worker:ci sh -c "uv pip install --python /app/.venv/bin/python pytest pytest-asyncio respx hypothesis && \
             /app/.venv/bin/python -m pytest tests/core tests/worker -m 'not smoke and not live and not db' -q \
             --ignore tests/worker/test_erp_export.py --ignore tests/worker/test_invoice_export_db.py \
-            --ignore tests/worker/test_ubl_export.py"
+            --ignore tests/worker/test_ubl_export.py \
+            --deselect tests/worker/test_tables.py::test_every_line_cell_of_the_synthetic_layouts_is_found \
+            --deselect tests/worker/test_tables.py::test_print_quirks_of_the_real_layouts_keep_every_cell \
+            --deselect tests/worker/test_injection_signals.py::test_generated_claims_raise_signals_only_where_an_injection_was_planted"
 
   infra:
     # Terraform for the AWS deployment, checked without an AWS account: mocked providers only.

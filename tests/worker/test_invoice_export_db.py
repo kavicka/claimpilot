@@ -106,7 +106,13 @@ async def approved_invoice(tmp_path, monkeypatch) -> tuple[uuid.UUID, dict]:
             )
         )
     iid = await new_invoice(data, tmp_path)
-    ctx = {"job_try": 1, "settings": get_settings(), "gateway": GtGateway(gt)}
+    # Matching reads the ERP too: the mock app in process, so no erp_mock container is needed.
+    ctx = {
+        "job_try": 1,
+        "settings": get_settings(),
+        "gateway": GtGateway(gt),
+        "erp_client": Recorder().client,
+    }
     for expected in ("PARSED", "REDACTED", "EXTRACTED", "VALIDATED", "MATCHED", "ROUTED"):
         assert await pipeline.advance(ctx, str(iid)) == expected
     assert await pipeline.advance(ctx, str(iid)) == "IN_REVIEW"
