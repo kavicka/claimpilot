@@ -38,13 +38,8 @@ jobs:
           uv run ruff format --check .
       - name: Types
         run: uv run pyright
-      - name: Database for the api
-        # ui/playwright.config.ts points the api at claimpilot_e2e; it must exist before the api
-        # starts. The seed (tests/e2e/seed.py) connects to claimpilot as its admin database.
-        run: |
-          PGPASSWORD=claimpilot psql -h 127.0.0.1 -p 5438 -U claimpilot -d claimpilot \
-            -c 'CREATE DATABASE claimpilot_e2e'
-          uv run alembic upgrade head
+      - name: Migrations
+        run: uv run alembic upgrade head
       - name: Unit tests
         run: uv run pytest
       - name: Database tests
