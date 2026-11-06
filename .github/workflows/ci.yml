@@ -19,6 +19,8 @@ jobs:
           --health-cmd "pg_isready -U claimpilot" --health-interval 5s --health-retries 20
     env:
       CLAIMPILOT_DATABASE_URL: postgresql+psycopg://claimpilot:claimpilot@127.0.0.1:5438/claimpilot_test
+      # A throwaway key for the test vault; it protects nothing.
+      CLAIMPILOT_PII_VAULT_KEY: 2ip5tbrSDe9R1RPhk80c84uRJ2nNDpTOAZH48YUGUTk=
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
@@ -61,10 +63,14 @@ jobs:
         # PREFETCH=0: the unit tests need no model files; the deploy builds with them.
         run: docker build --build-arg PREFETCH=0 -f services/worker/Dockerfile -t claimpilot-worker:ci .
       - name: Unit tests inside the image
+        # Export tests need the core mock and the api package, which the worker image does not ship;
+        # the checks job runs them.
         run: |
           docker run --rm -v "$PWD/tests:/app/tests:ro" -v "$PWD/pyproject.toml:/app/pyproject.toml:ro" \
             claimpilot-worker:ci sh -c "uv pip install --python /app/.venv/bin/python pytest pytest-asyncio respx hypothesis && \
-            /app/.venv/bin/python -m pytest tests/core tests/worker -m 'not smoke and not live and not db' -q"
+            /app/.venv/bin/python -m pytest tests/core tests/worker -m 'not smoke and not live and not db' -q \
+            --ignore tests/worker/test_erp_export.py --ignore tests/worker/test_invoice_export_db.py \
+            --ignore tests/worker/test_ubl_export.py"
 
   infra:
     # Terraform for the AWS deployment, checked without an AWS account: mocked providers only.
