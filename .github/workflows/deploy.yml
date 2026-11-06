@@ -10,6 +10,8 @@ name: deploy
 #   ALLOWED_CIDRS        JSON list, e.g. ["203.0.113.10/32"]
 #   ALERT_EMAIL          budget alerts
 #   CERTIFICATE_ARN      optional ACM certificate for HTTPS
+#   CRM_UI_REPOSITORY    owner/name of the design system repository (also used by ci)
+# Secret CRM_UI_TOKEN: read access to that repository (not needed if it is public).
 # No AWS keys are stored in GitHub: the job assumes the role through OIDC.
 
 on:
@@ -31,6 +33,13 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+      # deploy.sh builds the review UI with the design system (@crm-ui/react) from ../crm-ui.
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.CRM_UI_REPOSITORY || 'kavicka/crm-ui' }}
+          token: ${{ secrets.CRM_UI_TOKEN || github.token }}
+          path: crm-ui
+      - run: mv crm-ui ../crm-ui
       - uses: aws-actions/configure-aws-credentials@v5
         with:
           role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}

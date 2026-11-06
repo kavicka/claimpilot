@@ -27,7 +27,7 @@ PERSONAL_FIELDS = re.compile(r"name|iban|birth|phone|email|address|passport|plat
 
 
 def _ocr(image_b64: str) -> str:
-    from ocrmac import ocrmac  # Apple Vision; macOS only
+    from ocrmac import ocrmac  # pyright: ignore[reportMissingImports]  # Apple Vision; macOS only
     from PIL import Image
 
     img = Image.open(io.BytesIO(base64.b64decode(image_b64)))

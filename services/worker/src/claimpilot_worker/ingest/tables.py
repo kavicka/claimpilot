@@ -455,7 +455,7 @@ def deskew(words: list[Word], aspect: float) -> list[Word]:
 
 
 def _ocr_mac(img) -> list[Word]:
-    from ocrmac.ocrmac import OCR
+    from ocrmac.ocrmac import OCR  # pyright: ignore[reportMissingImports]  # macOS only
 
     out = []
     for text, _conf, (x, y, w, h) in OCR(
