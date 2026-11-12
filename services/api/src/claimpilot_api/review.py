@@ -246,6 +246,7 @@ async def claim_detail(claim_id: uuid.UUID, user: User_, session: Session) -> di
                     f"/api/review/documents/{d.id}/pages/{n}"
                     for n in range(1, (d.page_count or 0) + 1)
                 ],
+                "masking": masking(d.id, d.page_count or 0),
                 "fields": [
                     {
                         "id": f.id,
@@ -330,13 +331,39 @@ async def claim_detail(claim_id: uuid.UUID, user: User_, session: Session) -> di
     }
 
 
+def masking(document_id: uuid.UUID, page_count: int) -> dict[str, Any] | None:
+    """What masking left for the viewer's Masked view: the masked page urls with counts, or the
+    reason it refused. None until the worker wrote it (the extract step or the backfill)."""
+    manifest = get_settings().storage_dir / "renders" / str(document_id) / "mask.json"
+    try:
+        report = json.loads(manifest.read_text())
+    except (OSError, ValueError):
+        return None
+    refused = report.get("refused")
+    return {
+        "pages": []
+        if refused
+        else [
+            f"/api/review/documents/{document_id}/pages/{n}?masked=true"
+            for n in range(1, page_count + 1)
+        ],
+        "masked_blocks": report.get("masked_blocks", 0),
+        "unread_lines": report.get("unread_lines", 0),
+        "refused": refused,
+    }
+
+
 @router.get("/review/documents/{document_id}/pages/{page}")
-async def page_image(document_id: uuid.UUID, page: int, user: User_) -> FileResponse:
+async def page_image(
+    document_id: uuid.UUID, page: int, user: User_, masked: bool = False
+) -> FileResponse:
+    """A page render; `masked=true` gives the copy a cloud model would receive (ADR-010)."""
     if user.role == "agent":
         raise HTTPException(
             403, "page images show personal data; the service account cannot read them"
         )
-    path = get_settings().storage_dir / "renders" / str(document_id) / f"p{page}.png"
+    name = f"m{page}.png" if masked else f"p{page}.png"
+    path = get_settings().storage_dir / "renders" / str(document_id) / name
     if not path.exists():
         raise HTTPException(404, "no render for this page")
     return FileResponse(path, media_type="image/png")
