@@ -80,12 +80,21 @@ export interface HiddenText {
   text: string | null;
 }
 
+/** Page images as a cloud model would receive them (ADR-010); null until the worker wrote them. */
+export interface Masking {
+  pages: string[];
+  masked_blocks: number;
+  unread_lines: number;
+  refused: string | null;
+}
+
 export interface ClaimDocument {
   id: string;
   filename: string;
   doc_type: string | null;
   language: string | null;
   pages: string[];
+  masking?: Masking | null;
   fields: Field[];
   hidden_text?: HiddenText[];
 }

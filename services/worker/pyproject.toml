@@ -20,6 +20,7 @@ dependencies = [
 [project.scripts]
 claimpilot-worker = "claimpilot_worker.supervise:main"
 claimpilot-prefetch = "claimpilot_worker.prefetch:main"
+claimpilot-mask-backfill = "claimpilot_worker.mask_backfill:main"
 
 [tool.uv.sources]
 claimpilot-core = { workspace = true }

@@ -1,5 +1,7 @@
 """REDACTED -> EXTRACTED: grounded extraction per document, then cross-document checks."""
 
+import asyncio
+from pathlib import Path
 from typing import Any
 
 import structlog
@@ -20,6 +22,7 @@ from claimpilot_worker.extraction.extract import (
     extract_document_vision,
 )
 from claimpilot_worker.ingest.mask import has_personal_data, mask_pages
+from claimpilot_worker.ingest.mask_preview import write_masked_renders
 from claimpilot_worker.ingest.renders import page_png_b64
 from claimpilot_worker.pipeline import register
 
@@ -47,6 +50,21 @@ def _parsed(doc: Document, rows: list[DocBlock]) -> tuple[ParsedDocument, dict[i
     return parsed, {r.seq: r.text_redacted or "" for r in rows}
 
 
+async def _mask_previews(
+    parsed_docs: dict[Any, ParsedDocument], redactor: ClaimRedactor, storage: Path
+) -> None:
+    """Masked page renders for the review UI's Masked view. Best effort: a failure here only
+    leaves the view without masked pages, it never stops the claim."""
+    detect = has_personal_data(redactor)
+    for doc_id, parsed in parsed_docs.items():
+        try:
+            await asyncio.to_thread(
+                write_masked_renders, storage / "renders" / str(doc_id), parsed, detect
+            )
+        except Exception as exc:
+            log.warning("mask_preview.failed", document=str(doc_id), error=type(exc).__name__)
+
+
 @register(S.REDACTED, PipelineStep.EXTRACT)
 async def extract(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S:
     gateway: LLMGateway = ctx["gateway"]
@@ -68,6 +86,7 @@ async def extract(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S
 
     docs = (await session.scalars(select(Document).where(Document.case_id == claim.id))).all()
     extractions: dict[Any, Extraction] = {}
+    parsed_docs: dict[Any, ParsedDocument] = {}
     for doc in docs:
         rows = (
             await session.scalars(
@@ -75,6 +94,7 @@ async def extract(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S
             )
         ).all()
         parsed, redacted = _parsed(doc, list(rows))
+        parsed_docs[doc.id] = parsed
         images: list[str] | None = None
         if vision and any(r.ocr for r in rows):
             redactor = redactor or ClaimRedactor.from_mapping(entries)
@@ -108,6 +128,9 @@ async def extract(session: AsyncSession, claim: Claim, ctx: dict[str, Any]) -> S
         extractions[doc.id] = ex
     if redactor is not None and len(redactor.entities) > len(entries):
         await vault.store(session, claim.id, redactor.mapping())  # values only the image showed
+    await _mask_previews(
+        parsed_docs, redactor or ClaimRedactor.from_mapping(entries), settings.storage_dir
+    )
     cross_document_checks(list(extractions.values()))
     await session.execute(delete(ExtractedField).where(ExtractedField.case_id == claim.id))
     for doc_id, ex in extractions.items():

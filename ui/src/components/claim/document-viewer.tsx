@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, EmptyState, IconButton, Tooltip, useSwapDirection } from "@crm-ui/react";
+import { Alert, EmptyState, IconButton, SegmentedControl, Tooltip, useSwapDirection } from "@crm-ui/react";
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 
 import { cn } from "@/lib/cn";
@@ -44,6 +44,7 @@ export function DocumentViewer({
   const scroller = useRef<HTMLDivElement>(null);
   const [zoomIndex, setZoomIndex] = useState(0);
   const [showAll, setShowAll] = useState(false);
+  const [view, setView] = useState<"original" | "masked">("original");
   const [broken, setBroken] = useState<Record<string, true>>({});
   const doc = documents.find((d) => d.id === activeDocId) ?? documents[0] ?? null;
   const zoom = ZOOMS[zoomIndex] ?? 1;
@@ -93,6 +94,21 @@ export function DocumentViewer({
     );
   }
 
+  const masking = doc.masking ?? null;
+  const masked = view === "masked";
+  const pages = masked ? (masking?.pages ?? []) : doc.pages;
+  const maskNotice = !masked
+    ? null
+    : !masking
+      ? "No masked copy of this document yet. It is written when the claim is extracted."
+      : masking.refused
+        ? `Masking refused (${masking.refused}). A cloud model would get this document as redacted text only, never as an image.`
+        : null;
+  const maskSummary =
+    masked && masking && !masking.refused
+      ? `What a cloud model would see: ${masking.masked_blocks} text ${masking.masked_blocks === 1 ? "block" : "blocks"} with personal data${masking.unread_lines ? ` and ${masking.unread_lines} unread ${masking.unread_lines === 1 ? "line" : "lines"}` : ""} blacked out.`
+      : null;
+
   const notice =
     target && target.page === null
       ? "This field has no position in the document."
@@ -126,6 +142,15 @@ export function DocumentViewer({
           })}
         </div>
         <div className="flex shrink-0 items-center gap-12">
+          <SegmentedControl
+            aria-label="Page images"
+            value={view}
+            onValueChange={(v) => setView(v as "original" | "masked")}
+            options={[
+              { value: "original", label: "Original", icon: "eye" },
+              { value: "masked", label: "Masked", icon: "lock" },
+            ]}
+          />
           <Tooltip content={showAll ? "Hide field boxes" : "Show every field box on the page"} side="bottom">
             <IconButton
               variant="toolbar"
@@ -163,6 +188,16 @@ export function DocumentViewer({
         </div>
       </div>
 
+      {maskNotice ? (
+        <Alert tone="warning" className="rounded-none">
+          {maskNotice}
+        </Alert>
+      ) : null}
+      {maskSummary ? (
+        <Alert tone="info" className="rounded-none">
+          {maskSummary}
+        </Alert>
+      ) : null}
       {notice ? (
         <Alert tone="warning" className="rounded-none">
           {notice}
@@ -176,11 +211,11 @@ export function DocumentViewer({
         aria-label="Document pages"
         className="viewer-bg pane-scroll relative min-h-0 flex-1 overflow-auto focus-visible:-outline-offset-2"
       >
-        {doc.pages.length === 0 ? (
-          <EmptyState icon="image-off" title="No page images for this document." />
+        {pages.length === 0 ? (
+          <EmptyState icon="image-off" title={masked ? "No masked page images." : "No page images for this document."} />
         ) : (
-          <div key={doc.id} className={cn("flex flex-col items-center gap-20 px-16 py-20", docSwap && "cp-swap-up")} style={{ width: zoom > 1 ? `${zoom * 100}%` : undefined }}>
-            {doc.pages.map((src, i) => {
+          <div key={`${doc.id}-${view}`} className={cn("flex flex-col items-center gap-20 px-16 py-20", docSwap && "cp-swap-up")} style={{ width: zoom > 1 ? `${zoom * 100}%` : undefined }}>
+            {pages.map((src, i) => {
               const n = i + 1;
               const onPage = doc.fields.filter((f) => f.page === n && f.bbox);
               const seen = new Set<string>();
@@ -197,7 +232,7 @@ export function DocumentViewer({
                 <div key={src} className="w-full max-w-[56.25rem]" style={zoom > 1 ? { maxWidth: "none" } : undefined}>
                   <div className="cp-text-meta mb-6 flex items-center justify-between text-ink-subtle">
                     <span>
-                      Page {n} of {doc.pages.length}
+                      Page {n} of {pages.length}
                     </span>
                     {i === 0 && doc.language ? <span className="uppercase">{doc.language}</span> : null}
                   </div>
